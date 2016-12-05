@@ -1,0 +1,52 @@
+\documentclass{article}
+\usepackage[latin]{babel}
+\usepackage[svgnames]{xcolor}
+\usepackage[framemethod=tikz]{mdframed}
+\usepackage{tikz}
+\usetikzlibrary{shadows,calc}
+\usepackage{lipsum}
+
+\definecolor{myblue}{RGB}{40,96,139}
+
+\makeatletter
+\newenvironment{MiBlock}[2][\linewidth]
+  {\begin{mdframed}[
+  skipabove=\topsep,
+  skipbelow=\topsep,
+  roundcorner=5pt,
+  shadow=true,
+  shadowsize=4pt,
+  frametitle=\phantom{#2},
+  frametitlebelowskip=15pt,
+  font=\sffamily,
+  innerleftmargin=12pt,
+  innerrightmargin=12pt,
+  frametitlefont=\Large\sffamily\bfseries\color{white},
+  singleextra={
+  \path[top color=myblue!30,bottom color=myblue!0.5,rounded corners]
+    ([xshift=\pgflinewidth,yshift=-\pgflinewidth]O|-P) rectangle
+    ([xshift=-\pgflinewidth,yshift=-20pt]P) -- cycle;
+  \path[fill=myblue]
+    ([xshift=5pt,yshift=-\pgflinewidth]O|-P.north west) to[out=0,in=180]
+    ([xshift=20pt,yshift=-25pt]O|-P.north west) --
+    ([xshift=-20pt,yshift=-25pt]P.south east) to[out=0,in=180]
+    ([xshift=-5pt,yshift=-\pgflinewidth]P.north east) -- cycle;
+  \path let \p1=(P), \p2= (O) in 
+    node at ([yshift=-12pt]0.5*\x1+0.5*\x2,\y1) {\parbox{\dimexpr\mdf@userdefinedwidth@length-40pt\relax
+}{\centering\mdf@frametitlefont#2}};
+  },
+  userdefinedwidth=#1]}
+  {\end{mdframed}}
+\makeatother
+
+\begin{document}
+
+\begin{MiBlock}{Some Variable Width Block}
+\lipsum[2]
+\end{MiBlock}
+
+\begin{MiBlock}[0.5\linewidth]{Some Title}
+\lipsum[2]
+\end{MiBlock}
+
+\end{document}

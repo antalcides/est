@@ -1,0 +1,27 @@
+\documentclass{article}
+\usepackage{lipsum,graphicx,xcolor,caption,varwidth}
+
+\newcommand{\captionbackgroundcolor}[1]{\colorlet{cpbgcol}{#1}}
+\DeclareCaptionFont{white}{\color{white}}
+\captionbackgroundcolor{black!50}
+\DeclareCaptionFormat{overlay}{\colorbox{cpbgcol}{\centering%
+  \begin{varwidth}{\dimexpr\captionwidth-2\fboxsep-2\fboxrule}
+    #1#2#3
+  \end{varwidth}}}
+\captionsetup{format=overlay,font=white}
+
+\begin{document}
+
+\lipsum[1]
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.7\textwidth]{example-image}
+  \setlength{\captionwidth}{0.7\textwidth}%
+  \caption{How many factors are there in a set of 12?
+           How many factors are there in a set of 12?
+           How many factors are there in a set of 12?}
+\end{figure}
+
+\lipsum[2]
+\end{document}

@@ -1,0 +1,203 @@
+\begin{theindex}
+
+  \item \'Indice
+    \subitem Intercuart\IeC {\'\i }lico, \hyperpage{43}
+
+  \indexspace
+
+  \item Amplitud de los intervalos, \hyperpage{10}
+  \item Asim\'etria
+    \subitem Negativa, \hyperpage{43}
+    \subitem Positiva, \hyperpage{43}
+  \item Asimetr\IeC {\'\i }a, \hyperpage{42}
+
+  \indexspace
+
+  \item Cambio de variable, \hyperpage{103}
+  \item Caracteres, \hyperpage{5}
+  \item Clases, \hyperpage{5}, \hyperpage{10}
+  \item Coeficiente de variaci\'on, \hyperpage{40}
+  \item \selectlanguage{english}% Coeficiente multinomial\selectlanguage{spanish}% , 
+		\hyperpage{66}
+  \item \selectlanguage{english}% Combinaci\'on\selectlanguage{spanish}% , 
+		\hyperpage{66}
+  \item Conjunto
+    \subitem Numeraldeun, \hyperpage{57}
+  \item Correlaci\'on, \hyperpage{114}
+    \subitem Interpretaci\'on geom\'etrica, \hyperpage{114}
+  \item Covarianza, \hyperpage{114}
+    \subitem Interpretaci\'on geom\'etrica, \hyperpage{114}
+  \item Curtosis, \hyperpage{47}
+
+  \indexspace
+
+  \item Deciles, \hyperpage{33}
+  \item Desviaci\'on media, \hyperpage{36}
+  \item Desviaci\'on t\IeC {\'\i }pica, \hyperpage{37}
+  \item desviaciones, \hyperpage{26}
+  \item Diagrama
+    \subitem De puntos, \hyperpage{14}
+    \subitem De tallo y hoja, \hyperpage{14}
+  \item \selectlanguage{english}% Diagrama de \'arbol\selectlanguage{spanish}% , 
+		\hyperpage{63}
+  \item Diagramas
+    \subitem Circulares, \hyperpage{14}
+    \subitem Diferenciales, \hyperpage{15}
+    \subitem Integrales, \hyperpage{15}
+  \item Diagramas de barra, \hyperpage{12}
+  \item Distribuci\'on
+    \subitem Binomial, \hyperpage{129}
+    \subitem De Bernoulli, \hyperpage{128}
+    \subitem Exponencial, \hyperpage{135}
+    \subitem Gaussiana, \hyperpage{136}
+    \subitem Geom\'etrica, \hyperpage{130}
+    \subitem Hipergeom\'etrica, \hyperpage{131}
+    \subitem Multinomial, \hyperpage{133}
+    \subitem Normal, \hyperpage{136}
+    \subitem Uniforme discreta, \hyperpage{127}
+  \item Distribuci\'on de frecuencia, \hyperpage{7}
+  \item Distribucion
+    \subitem De Poisson, \hyperpage{132}
+  \item Distribuciones
+    \subitem Condicionales
+      \subsubitem Discretas, \hyperpage{101}
+    \subitem Discretas, \hyperpage{101}
+    \subitem Marginales, \hyperpage{98}
+  \item Distribuciones de probabilidad
+    \subitem Conjuntas, \hyperpage{94}
+  \item Distribuciones de probailidad, \hyperpage{94}
+  \item Distribuciones especiales, \hyperpage{127}
+
+  \indexspace
+
+  \item Elementos, \hyperpage{5}
+  \item Esperanza Matem\'atica, \hyperpage{107}
+  \item Esperanza matem\'atica
+    \subitem Proiedades, \hyperpage{109}
+  \item Estadistica
+    \subitem desciptiva, \hyperpage{4}
+    \subitem Inferencial, \hyperpage{5}
+  \item Estad\IeC {\'\i }stica, \hyperpage{3}
+  \item evento
+    \subitem complemento de un, \hyperpage{56}
+  \item Evento seguro, \hyperpage{58}
+  \item Eventos, \hyperpage{54}
+    \subitem Disyuntos, \hyperpage{55}
+    \subitem Operaciones, \hyperpage{54}
+  \item \selectlanguage{english}% Eventos
+    \subitem Independencia\selectlanguage{spanish}% , \hyperpage{69}
+
+  \indexspace
+
+  \item Frecencia
+    \subitem Absoluta, \hyperpage{7}
+  \item Frecuencia
+    \subitem Absoluta
+      \subsubitem Acumulada, \hyperpage{7}
+    \subitem Relativa, \hyperpage{7}
+      \subsubitem Acumulada, \hyperpage{8}
+  \item Funci\'on
+    \subitem De densidad, \hyperpage{90}
+  \item Funci\'on de
+    \subitem Probabilidad, \hyperpage{88}
+
+  \indexspace
+
+  \item Grados de libertad, \hyperpage{39}
+
+  \indexspace
+
+  \item Histogramas, \hyperpage{17}
+
+  \indexspace
+
+  \item Individuos, \hyperpage{5}
+
+  \indexspace
+
+  \item Media aritm\'etica, \hyperpage{25}
+  \item Media arm\'onica, \hyperpage{28}
+  \item Media cuadr\'atica, \hyperpage{28}
+  \item Media geom\'etrica, \hyperpage{27}
+  \item mediadas
+    \subitem Apuntamiemto, \hyperpage{47}
+  \item Mediana, \hyperpage{28}
+  \item Medidas de posici\'on, \hyperpage{32}
+  \item Medidas de tendencia central, \hyperpage{25}
+  \item Medidas de variabilidad o dispersi\'on, \hyperpage{36}
+  \item Medidas descriptivas, \hyperpage{25}
+  \item Moda, \hyperpage{30}
+  \item Modalidades, \hyperpage{5}
+  \item Muestra, \hyperpage{5}
+  \item \selectlanguage{english}% Muestreo
+    \subitem Con reemplazo\selectlanguage{spanish}% , \hyperpage{66}
+    \subitem Sin reemplazo\selectlanguage{spanish}% , \hyperpage{65}
+
+  \indexspace
+
+  \item Numeraldeunconjunto, \hyperpage{57}
+
+  \indexspace
+
+  \item Partes de S, \hyperpage{58}
+  \item Percentil, \hyperpage{32}
+  \item \selectlanguage{english}% Permutaciones\selectlanguage{spanish}% , 
+		\hyperpage{65}
+  \item Pictograma, \hyperpage{14}
+  \item pobabilidad
+    \subitem Laplace, \hyperpage{57}
+  \item Poblaci\'on, \hyperpage{5}
+  \item probabiliad
+    \subitem Axiomas, \hyperpage{57}
+  \item Probabilidad, \hyperpage{53}, \hyperpage{57}
+    \subitem Estocastica, \hyperpage{57}
+  \item \selectlanguage{english}% Probabilidad
+    \subitem condicionada\selectlanguage{spanish}% , \hyperpage{68}
+
+  \indexspace
+
+  \item Quartiles, \hyperpage{33}
+
+  \indexspace
+
+  \item Rango de la muestra, \hyperpage{10}
+  \item \selectlanguage{english}% Reglas multiplicativas\selectlanguage{spanish}% , 
+		\hyperpage{69}
+
+  \indexspace
+
+  \item Sesgo, \hyperpage{42}
+  \item Sucesos aleatorios, \hyperpage{54}
+
+  \indexspace
+
+  \item \selectlanguage{english}% T\'ecnicas de conteo\selectlanguage{spanish}% , 
+		\hyperpage{63}
+  \item Tabla de frecuencias, \hyperpage{8}
+  \item \selectlanguage{english}% Teorema
+    \subitem Bayes\selectlanguage{spanish}% , \hyperpage{71}
+  \item Tipificaci\'on de una variable, \hyperpage{40}
+
+  \indexspace
+
+  \item Valor esperado, \hyperpage{109}
+  \item Variabilidad, \hyperpage{5}
+  \item Variable
+    \subitem Aleatoria
+      \subsubitem continua, \hyperpage{86}
+      \subsubitem Discreta, \hyperpage{86}
+  \item Variables
+    \subitem cuantitativas, \hyperpage{6}
+    \subitem Cuasicuantitativas, \hyperpage{6}
+  \item Discretas, \hyperpage{6}
+  \item Variables Aleatorias, \hyperpage{85}
+  \item Variables aleatorias
+    \subitem Continuas, \hyperpage{90}
+    \subitem Discretas, \hyperpage{88}
+  \item Variables estad\IeC {\'\i }sticas, \hyperpage{5}
+  \item Varianza, \hyperpage{36}, \hyperpage{111}
+    \subitem Propiedades, \hyperpage{111}
+  \item Varibles
+    \subitem cualitativas, \hyperpage{6}
+
+\end{theindex}

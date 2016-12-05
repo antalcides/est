@@ -1,0 +1,209 @@
+#% Do not delete the line below; configure depends on this
+#  \DeclareLaTeXClass{Programa de Matemáticas de la UDEA (MSC) Tesis}
+#  \DeclareCategory{Books}
+# Autor Antalcides Olivo < antalcides@gmail.com>
+
+
+Format 49
+
+Columns                 1
+Sides                   2
+PageStyle               Headers
+
+Provides amsmath         1
+Provides makeidx         1
+
+ClassOptions
+	FontSize   8|9|10|11|12
+End
+
+DefaultModule theorems-matua
+DefaultModule eqs-within-sections
+DefaultModule figs-within-sections
+
+Style Standard
+	Category       MainText
+	Margin         Static
+	LatexType      Paragraph
+	LatexName      dummy
+	ParIndent      MM
+	ParSkip        0.4
+	Align          Block
+	AlignPossible  Block, Left, Right, Center
+	LabelType      No_Label
+End
+
+
+Preamble
+\batchmode
+\makeatletter
+\def\input@path{{style/}{sections/}}
+\makeatother
+\renewcommand*{\LettrineTextFont}{\normalfont}
+\renewcommand{\LettrineFontHook}{\color{ptctitle}}
+\newcommand{\Hrule}{\rule{\linewidth}{1mm}}
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\newcommand{\CC}{\mathbb{C}}
+%\newcommand{\NN}{\mathbb{N}}
+\newcommand{\PP}{\mathbb{P}}
+\newcommand{\HH}{\mathbb{H}}
+\newcommand{\pp}{\mathbb{\overline{P}}}
+\newcommand{\DD}{\mathbb{D}}
+\newcommand{\QQ}{\mathbb{Q}}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\ZZ}{\mathbb{Z}}
+\newcommand{\EE}{\mathbb{E}}
+\newcommand{\TT}{\mathbb{T}}
+\newcommand{\XX}{\mathbb{X}}
+
+\newcommand{\II}{\mathbb{I}}
+
+\newcommand{\der}{\mathcal{D}}
+\newcommand{\kk}{\mathcal{K}}
+\newcommand{\mm}[1]{{\mathcal{M}\/}(#1)}
+\newcommand{\nequiv}{{\equiv \hspace*{-3.7mm}/}}
+\newcommand{\capa}[1]{\mbox{{\em Cap\/}}(#1)}
+\newcommand{\gra}[1]{\mbox{{\em grad\/}}(#1)}
+\newcommand{\sop}[1]{\mbox{{\em supp\/}}(#1)}
+\newcommand{\esup}[1]{{\mbox{\rm ess\,sup\/}}#1}
+\newcommand{\lqqd}{\hfill $\blacksquare$}
+
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\newcommand{\ca}[1]{{\em card\/}(#1)}
+\newcommand{\dis}[1]{{\em dist\/}(#1)}
+\newcommand{\imm}[1]{{\em Im\/}#1}
+\newcommand{\ree}[1]{{\em Re\/}#1}
+\newcommand{\conv}[1]{{\em conv\/}(#1)}
+\newcommand{\uni}{\; \; \overrightarrow{\longrightarrow}\; \;}
+\newcommand{\unin}{\overrightarrow{\longrightarrow}}
+\newenvironment{ob}{\begin{obs}{\rm} \end{obs}}
+
+\def\bbuildrel#1_#2^#3{\mathrel{
+ \mathop{\kern 0pt#1}\limits_{#2}^{#3}}}
+\def\bbbuildrel#1_#2{\mathrel{
+ \mathop{\kern 0pt#1}\limits_{#2}}}
+\def\limsup{\mathop{\overline{\rm lim}}}
+\def\liminf{\mathop{\underline{\rm lim}}}
+
+\newenvironment{prueba}[1][Demostraci\'on]{\noindent\textbf{#1.} }{\ $\hfill\blacksquare$\linebreak}
+
+\def\bbuildrel#1_#2^#3{\mathrel{
+ \mathop{\kern 0pt#1}\limits_{#2}^{#3}}}
+\def\bbbuildrel#1_#2{\mathrel{
+ \mathop{\kern 0pt#1}\limits_{#2}}}
+\def\limsup{\mathop{\overline{\rm lim}}}
+\def\liminf{\mathop{\underline{\rm lim}}}
+	\numberwithin{section}{chapter}
+EndPreamble
+
+
+Input stdsections-matua.inc
+Input stdinsets.inc
+Input numreport.inc
+
+
+Style Sección
+	Align          Center
+	Font
+	  Series       Bold
+	  Size         Large
+	EndFont
+	TocLevel 1
+End
+
+
+Style Subsección
+	Font
+	  Series       Bold
+	  Size         Normal
+	EndFont
+	TocLevel 2
+End
+
+
+Style Subsubsección
+	Font
+	  Shape        Italic
+	  Size         Normal
+	EndFont
+	TocLevel 3
+End
+
+Input stdstarsections-matua.inc
+
+Style Sección*
+	Align          Center
+	Font
+	  Series       Bold
+	  Size         Large
+	EndFont
+End
+
+
+Style Subsección*
+	Font
+	  Series       Bold
+	  Size         Normal
+	EndFont
+End
+
+
+Style Subsubsección*
+	Font
+	  Shape        Italic
+	  Size         Normal
+	EndFont
+End
+
+
+Input lyxmacros.inc
+Input stdlayouts.inc
+Input stdlists.inc
+Input stdfloats-matua.inc
+Input stdcounters-matua.inc
+Input amsdefs-matua.inc
+
+# Unwanted styles from the includes
+NoStyle Verse
+
+# Chapter is _not_ prepended
+# JSpitz: this seems to be not true (anymore?)
+#Style Section
+#	LabelString          "\arabic{section}"
+#	LabelStringAppendix  "\arabic{section}"
+#End
+
+
+Style Páragrafo
+	Font
+	  Series       Medium
+	EndFont
+	TocLevel 4
+End
+
+
+# End-of Chapter exercises  I need a way to do this.
+Style Capítulo_Ejercicios
+	Margin                First_Dynamic
+	LatexType             Item_Environment
+	LatexName             lyxxcb
+	NextNoIndent          1
+	LeftMargin            MMN
+	LabelSep              xx
+	ParSkip               0.0
+	ItemSep               0.2
+	TopSep                0.7
+	BottomSep             0.7
+	ParSep                0.3
+	Align                 Block
+	AlignPossible         Block, Left
+	LabelType             Static
+	LabelFont
+	  Shape               Up
+	  Series              Bold
+	EndFont
+	Preamble
+	  \newenvironment{lyxxcb}{\begin{xcb}{Ejercicios}\begin{enumerate}}
+	                     {\end{enumerate}\end{xcb}}
+	EndPreamble
+End

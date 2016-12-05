@@ -1,0 +1,43 @@
+\documentclass[a5paper]{article}
+\usepackage{lipsum}   % To generate test text 
+\usepackage[breakable,skins]{tcolorbox}
+
+% Define Colour Styles
+\definecolor{Border}{HTML}{204C82}
+\definecolor{Background}{HTML}{D2DBE6}
+
+\newtcolorbox{parchment}[2][]{%
+    breakable,
+    enhanced,
+    colback=Background,
+    colframe=Border,
+    top=4mm,
+    enlarge top by=\baselineskip/2+1mm,
+    pad at break=\baselineskip,
+    fontupper=\normalsize,
+    overlay unbroken and first={%
+        \node[rectangle, rounded corners, 
+              draw=Border, fill=Background,
+             inner sep=1mm, anchor=west, font=\small]
+       at ([xshift=4.5mm]frame.north west) {\strut\textbf{#2}};},
+    overlay middle and last={%
+       \node[rectangle, rounded corners, 
+             draw=Border, fill=Background,
+             inner sep=1mm, anchor=west, font=\small]
+       at ([xshift=4.5mm]frame.north west)
+          {\strut\textbf{Continue from previous page}};},
+#1}%
+
+\begin{document}
+\begin{parchment}{Short text}
+  \lipsum[11]
+\end{parchment}
+\lipsum[11]
+\begin{parchment}{Long text spanning over pages}
+\lipsum[11]
+  \begin{itemize}
+    \item \lipsum[14]
+  \end{itemize}
+\lipsum
+\end{parchment}
+\end{document}

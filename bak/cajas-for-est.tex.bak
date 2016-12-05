@@ -1,0 +1,685 @@
+\newtcbox{\mylib}{enhanced,nobeforeafter,tcbox raise base,boxrule=0.4pt,top=0mm,bottom=0mm,
+  right=0mm,left=4mm,arc=1pt,boxsep=2pt,before upper={\vphantom{dlg}},
+  colframe=green!50!black,coltext=green!25!black,colback=green!10!white,
+  overlay={\begin{tcbclipinterior}\fill[green!75!blue!50!white] (frame.south west)
+    rectangle node[text=white,font=\sffamily\bfseries\tiny,rotate=90] {LIB} ([xshift=4mm]frame.north west);\end{tcbclipinterior}}}
+
+\robustify{\mylib}
+
+\pdfstringdefDisableCommands{%
+  \def\mylib#1{'#1'}%
+}
+nota:
+\newtcolorbox{marker}[1][]{enhanced,
+  before skip=2mm,after skip=3mm,
+  boxrule=0.4pt,left=5mm,right=2mm,top=1mm,bottom=1mm,
+  colback=yellow!50,
+  colframe=yellow!20!black,
+  sharp corners,rounded corners=southeast,arc is angular,arc=3mm,
+  underlay={%
+    \path[fill=tcbcol@back!80!black] ([yshift=3mm]interior.south east)--++(-0.4,-0.1)--++(0.1,-0.2);
+    \path[draw=tcbcol@frame,shorten <=-0.05mm,shorten >=-0.05mm] ([yshift=3mm]interior.south east)--++(-0.4,-0.1)--++(0.1,-0.2);
+    \path[fill=yellow!50!black,draw=none] (interior.south west) rectangle node[white]{\Huge\bfseries !} ([xshift=4mm]interior.north west);
+    },
+  drop fuzzy shadow,#1}
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+  \newtcbexternalizetcolorbox{exdispExample}{dispExample}{environment with percent=false,minipage}{beforeafter example}
+
+\newtcbexternalizetcolorbox{exdispExample*}{dispExample*}{environment with percent=false,minipage}{beforeafter example}
+
+%%%------------------------------------------------------
+  %%%%--------- cajas diseñadas por Walter Mora wmora2@gmail.com
+  %---------------------------------------------------------------------------------
+%  Entornos:  Ejemplo, teorema, proposición, lema, lista de ejercicios, 
+%             caja interludio, caja simple  CON PAQUETE TCOLORBOX
+%---------------------------------------------------------------------------------
+
+%  Cajas con el paquete  tcolorbox 
+%  CONTADORES: ejemplo, definicion, lema, teorema, corolario, proposicion,ejercicio 
+\newcounter{tcbteo}[section]
+\renewcommand{\thetcbteo}{\thesection.\arabic{tcbteo}}
+
+\newcounter{tcbdefi}[section]
+\renewcommand{\thetcbdefi}{\thesection.\arabic{tcbdefi}}
+
+\newcounter{tcblema}[section]
+\renewcommand{\thetcblema}{\thesection.\arabic{tcblema}}
+
+\newcounter{tcbcoro}[section]
+\renewcommand{\thetcbcoro}{\thesection.\arabic{tcbcoro}}
+
+%  \newcounter{tcbListaEjercicios}[section]
+%  \renewcommand{\thetcbListaEjercicios}{\thesection.\arabic{tcbListaEjercicios}}
+
+\newcounter{tcbpropo}[section]
+\renewcommand{\thetcbpropo}{\thesection.\arabic{tcbpropo}}
+
+\newcounter{tcbvoca}[section]
+\renewcommand{\thetcbvoca}{\thesection.\arabic{tcbvoca}}
+%%%%%%%%%%% cajas transparentes------------
+\tikzfading[name=fade up,top color=transparent!0, bottom color=transparent!80]
+
+\tikzfading[name=fade right,
+  left color=transparent!0, right color=transparent!80]
+
+
+%%%%%%%%%%%%------------------------------------
+
+\newlength{\examlen}
+\tikzset{
+    wnodeTeorema/.style={%
+         rectangle,  top color=gray!5, bottom color=gray!5, path fading=fade right,
+         inner sep=1mm,anchor=west,font=\small\bf\sffamily},
+   wnodeminimo/.style={%
+         rectangle,  top color=white, bottom color=white,path fading=fade right,
+         text=azulF,inner sep=1mm,anchor=west,font=\small\bf\sffamily}      
+}
+
+
+
+%\begin{teorema}  o \begin{teorema}[de tal] o \begin{teorema}[][ref]
+% Teorema -----------------------------------------------------
+\newtcolorbox{wwteo}[3][]{%
+arc=0mm,breakable,enhanced,colback=gray!5,boxrule=0pt,top=7mm,enhanced jigsaw,opacityback=0.35,
+fontupper=\normalsize,step and label={tcbpropo}{#3},
+overlay unbroken ={
+\draw[color=colordominante,line width=0.2pt] (frame.north west)--([xshift=0pt]frame.north east);
+%Caja de Título: propo --
+\node[wnodeTeorema](titulopropo) at ([xshift=0pt, yshift=-4mm]frame.north west)
+{\textbf{\color{colordominante} Teorema \thetcbteo\;#2}};
+%Borde superior --
+\draw[colordominante,line width=2.5cm] ([xshift=1.25cm, yshift=0cm]frame.north west)-- +(\examlen,3pt);
+}, %overlay
+overlay first ={
+\draw[color=colordominante,line width=0.2pt] (frame.north west)--([xshift=0pt]frame.north east);
+%Caja de Título: propo --
+\node[wnodeTeorema](titulopropo) at ([xshift=0pt, yshift=-4mm]frame.north west)
+{\textbf{\color{colordominante} Teorema \thetcbteo\;#2}};
+%Borde superior --
+\draw[colordominante,line width=2.5cm] ([xshift=1.25cm, yshift=0cm]frame.north west)-- +(\examlen,3pt);
+}, %overlay
+% Mantener borde en cambio de página 
+overlay last ={\draw[color=colordominante,line width=0.2pt] (frame.north west)--([xshift=0pt]frame.north east);
+        },
+#1}
+%-
+\NewDocumentEnvironment{teorema}{O{} O{} O{}}{\smallskip\begin{wwteo}{#1}{#2}%
+ #3}{\end{wwteo}\smallskip }
+ 
+% TEOREMA---------------------------------------------------------
+\newcommand*{\theorembreak}{\usebeamertemplate{theorem end}\framebreak\usebeamertemplate{theorem begin}}
+% TEOREMA---------------------------------------------------------
+
+
+
+%\begin{proposicion}  o \begin{proposicion}[de tal] o \begin{proposicion}[][ref]
+% Proposición-----------------------------------------------------
+\newtcolorbox{wwpropo}[3][]{%
+arc=0mm,breakable,enhanced,colback=gray!5,boxrule=0pt,top=7mm,enhanced jigsaw,opacityback=0.35,
+fontupper=\normalsize,step and label={tcbpropo}{#3},
+overlay unbroken ={
+\draw[color=colordominante,line width=0.2pt] (frame.north west)--([xshift=0pt]frame.north east);
+%Caja de Título: propo --
+\node[wnodeTeorema](titulopropo) at ([xshift=0pt, yshift=-4mm]frame.north west)
+{\textbf{\color{colordominante} Proposición \thetcbpropo\;#2}};
+%Borde superior --
+\draw[colordominante,line width=2.5cm] ([xshift=1.25cm, yshift=0cm]frame.north west)-- +(\examlen,3pt);
+}, %overlay
+overlay first ={
+\draw[color=colordominante,line width=0.2pt] (frame.north west)--([xshift=0pt]frame.north east);
+%Caja de Título: propo --
+\node[wnodeTeorema](titulopropo) at ([xshift=0pt, yshift=-4mm]frame.north west)
+{\textbf{\color{colordominante} Proposición \thetcbpropo\;#2}};
+%Borde superior --
+\draw[colordominante,line width=2.5cm] ([xshift=1.25cm, yshift=0cm]frame.north west)-- +(\examlen,3pt);
+}, %overlay
+% Mantener borde en cambio de página 
+overlay last ={\draw[color=colordominante,line width=0.2pt] (frame.north west)--([xshift=0pt]frame.north east);
+        },
+#1}
+%-
+\NewDocumentEnvironment{proposicion}{O{} O{} O{}}{\smallskip\begin{wwpropo}{#1}{#2}%
+ #3}{\end{wwpropo}\smallskip }
+% ---------------------------------------------------------
+
+
+
+% LEMA -----------------------------------------------------------
+ \newtcolorbox{wwlema}[3][]{%
+arc=0mm,breakable,enhanced,colback=gray!5,boxrule=0pt,enhanced jigsaw,opacityback=0.35,
+top=1mm, left=3pt,
+step and label={tcblema}{#3},
+fontupper={\small\bf\sffamily {\color{azulF}Lema \thetcblema \;#2}}~\normalfont, %"Lema..."+texto del cuerpo
+overlay unbroken  = {%barra vertical
+\draw[color=colordominante,line width=3pt] ([xshift=2pt] frame.north west)--([xshift=2pt] frame.south west);              
+         },%
+overlay first  = {%barra vertical
+\draw[color=colordominante,line width=3pt] ([xshift=2pt] frame.north west)--([xshift=2pt] frame.south west);              
+         },%
+% Mantener borde en cambio de página     
+overlay last ={\draw[color=gray,line width=3pt] ([xshift=2pt] frame.north west)--([xshift=2pt] frame.south west);   },    
+#1}
+%-
+\NewDocumentEnvironment{lema}{O{} O{} O{}}{\smallskip\begin{wwlema}{#1}{#2}%
+#3}{\end{wwlema}\smallskip }
+%LEMA--------------------------------------------------------------
+
+
+% % Corolario -------------------------------------------------------
+\newtcolorbox{wwcoro}[2][]{%
+arc=0mm,breakable,enhanced,colback=gray!5,boxrule=0pt,enhanced jigsaw,opacityback=0.35,
+top=1mm,left=3pt,
+fontupper={\small\bf\sffamily {\color{azulF}Corolario \thetcbcoro}\;}~\normalfont, 
+step and label={tcbcoro}{#2},
+overlay unbroken  = {%barra vertical
+\draw[color=colordominante,line width=3pt] ([xshift=2pt] frame.north west)--([xshift=2pt] frame.south west);               
+        },%
+overlay first  = {%barra vertical
+\draw[color=colordominante,line width=3pt] ([xshift=2pt] frame.north west)--([xshift=2pt] frame.south west);               
+        },%
+% Mantener borde en cambio de página     
+overlay last ={\draw[color=gray,line width=3pt] 
+                     ([xshift=2pt] frame.north west)--([xshift=2pt] frame.south west);
+              }     
+#1}
+%-
+\NewDocumentEnvironment{corolario}{O{} O{}}{\smallskip\begin{wwcoro}{#1}%
+}{\end{wwcoro}\smallskip }
+% Corolario------------------------------------------------------
+
+
+% % Definición---------------------------------------------------
+\newtcolorbox{wwdefinicion}[3][]{%
+arc=0mm,breakable,enhanced,colback=gray!5,boxrule=0pt,enhanced jigsaw,opacityback=0.35,
+top=6mm,fontupper=\normalsize,step and label={tcbdefi}{#3},
+overlay unbroken  = {
+%borde
+\draw[color=gray!20,line width=0.2pt] (frame.north west)
+  --([xshift=0pt]frame.north east)
+  --([xshift=0pt]frame.south east);
+%  --([xshift=0pt]frame.south west)--(frame.north west);
+%barra vertical
+\draw[color=colordominante,line width=3pt] ([xshift=2pt] frame.north west)--([xshift=2pt] frame.south west);          
+%Caja de Título: defi --
+\node[wnodeTeorema](titulodefi) at ([xshift=4.5pt, yshift=-3mm]frame.north west)
+{\textbf{Definición \thetcbdefi \;#2}};
+                }, %overlay
+overlay first  = {
+%borde
+\draw[color=gray!20,line width=0.2pt] (frame.north west)
+  --([xshift=0pt]frame.north east)
+  --([xshift=0pt]frame.south east);
+%  --([xshift=0pt]frame.south west)--(frame.north west);
+%barra vertical
+\draw[color=colordominante,line width=3pt] ([xshift=2pt] frame.north west)--([xshift=2pt] frame.south west);          
+%Caja de Título: defi --
+\node[wnodeTeorema](titulodefi) at ([xshift=4.5pt, yshift=-3mm]frame.north west)
+{\textbf{Definición \thetcbdefi \;#2}};
+                }, %overlay
+% Mantener borde en cambio de página
+overlay last    = {
+%borde
+\draw[color=gray!20,line width=0.2pt] (frame.north west)
+  --([xshift=0pt]frame.north east)
+  --([xshift=0pt]frame.south east);
+%  --([xshift=0pt]frame.south west)--(frame.north west);
+%barra vertical
+\draw[color=colordominante,line width=3pt] ([xshift=2pt] frame.north west)--([xshift=2pt] frame.south west);}
+#1}
+%-
+\NewDocumentEnvironment{definicion}{O{} O{} O{}}{\smallskip\begin{wwdefinicion}{#1}{#2}%
+ #3}{\end{wwdefinicion}\smallskip }
+% %DEFINICION---------------------------------------------------------
+
+
+% Caja para Ejemplo --------------------------------------------------
+\newcounter{tcbejem}[section]
+\renewcommand{\thetcbejem}{\thesection.\arabic{tcbejem}}
+\colorlet{colorfondoejemplo}{gray!5}
+\definecolor{colorejemplo}{rgb}{.0,.0,.3}
+% Ejemplo
+\newtcolorbox{wwejemplo}[3][]{%
+arc=0mm,
+breakable,%drop fuzzy shadow,
+enhanced,enhanced jigsaw,opacityback=0.35,
+colback=colorfondoejemplo,
+boxrule=0pt,
+top=8mm, %Separación vertical - inicia texto
+enlarge top by=\baselineskip/2+1mm,
+enlarge top at break by=0mm,pad at break=2mm,
+fontupper=\normalsize,
+step and label={tcbejem}{#3},
+overlay unbroken = {%
+%barra vertical
+\draw[color=azulua,line width=3pt] ([xshift=2pt] frame.north west)--([xshift=2pt] frame.south west);           
+% Caja de imagen Ejemplo
+\node[rectangle, 
+         text=black, 
+         inner sep=1mm,anchor=west,font=\small\bf\sffamily] at ([xshift=-14.3pt,yshift=-4.1mm]frame.north west)%
+{\includegraphics{logos/nodoejemploC.pdf}};
+% Caja numeración y descripción
+\node[rectangle, 
+ text=black, 
+ inner sep=1mm,
+ anchor=west,
+ font=\normalsize] at ([xshift=1.1cm,yshift=-2.9mm]frame.north west)%
+ {\fhvb{10}{\;\thetcbejem \hspace{5pt}\;\;\;#2}};
+     }, % overlay
+overlay first  = {%
+%barra vertical
+\draw[color=azulua,line width=3pt] ([xshift=2pt] frame.north west)--([xshift=2pt] frame.south west);           
+% Caja de imagen Ejemplo
+\node[rectangle, 
+         text=black, 
+         inner sep=1mm,anchor=west,font=\small\bf\sffamily] at ([xshift=-14.3pt,yshift=-4.1mm]frame.north west)%
+{\includegraphics{logos/nodoejemploC.pdf}};
+% Caja numeración y descripción
+\node[rectangle, 
+ text=black, 
+ inner sep=1mm,
+ anchor=west,
+ font=\normalsize] at ([xshift=1.1cm,yshift=-2.9mm]frame.north west)%
+ {\fhvb{10}{\;\thetcbejem \hspace{5pt}\;\;\;#2}};
+     }, % overlay
+%Borde cambio de páginas
+overlay middle={\draw[color=azulua,line width=3pt] ([xshift=3pt] frame.north west)--([xshift=2pt] frame.south west);},
+overlay last={\draw[color=gray,line width=3pt] ([xshift=3pt] frame.north west)--([xshift=2pt] frame.south west);}
+#1}
+%-
+\NewDocumentEnvironment{ejemplo}{O{} O{} O{}}{\smallskip\begin{wwejemplo}{#1}{#2}%
+ #3}{\end{wwejemplo}\smallskip }
+%EJEMPLO-----------------------------------------------------------------
+
+
+
+% CAJA de comentario-----------------------------------------------------
+\definecolor{colrnodocaja}{RGB}{44,91,144}
+\definecolor{colrfondocaja}{RGB}{241,241,227}
+%CAJA de comentario ------------------------------------------------------
+\newtcolorbox{wwcaja}[2][]{%
+arc=0mm,breakable,%drop fuzzy shadow,
+enhanced,colback=gray!4,enhanced jigsaw,opacityback=0.5,
+boxrule=0pt,
+top=3mm, %Separación vertical - inicia texto
+enlarge top by=\baselineskip/2+1mm,
+enlarge top at break by=0mm,pad at break=2mm,
+fontupper=\normalsize,
+%step and label={tcbca}{#3},
+%Borde
+overlay unbroken={\draw[color=gray!2,line width=0.2pt] (frame.north west)
+  --([xshift=0pt]frame.north east)
+  --([xshift=0pt]frame.south east)
+  --([xshift=0pt]frame.south west)--(frame.north west);
+% Caja de Título CAJA
+\node[ rectangle, %minimum width=0cm, minimum height=0.0cm,
+         top color=azulua, bottom color=azulua,
+         inner sep=0.5mm,anchor=west,font=\normalsize]at ([xshift=-0.5pt,  yshift=2.30mm]frame.north west){\fhvb{10}{\color{white} #2}};
+         },
+%Borde
+overlay first={\draw[color=gray!2,line width=0.2pt] (frame.north west)
+  --([xshift=0pt]frame.north east)
+  --([xshift=0pt]frame.south east)
+  --([xshift=0pt]frame.south west)--(frame.north west);
+% Caja de Título CAJA
+\node[ rectangle, %minimum width=0cm, minimum height=0.0cm,
+         top color=azulua, bottom color=azulua,
+         inner sep=0.5mm,anchor=west,font=\normalsize]at ([xshift=-0.5pt,  yshift=2.30mm]frame.north west){\fhvb{10}{\color{white} #2}};
+         },
+%Borde cambio de página
+overlay last={\draw[color=gray!2,line width=0.2pt] (frame.north west)
+  --([xshift=0pt]frame.north east)
+  --([xshift=0pt]frame.south east)
+  --([xshift=0pt]frame.south west)--(frame.north west);}
+#1}
+%-
+\NewDocumentEnvironment{caja}{O{} O{}}{\smallskip\begin{wwcaja}{#1}%
+ #2}{\end{wwcaja}\smallskip }
+% CAJA de comentario
+
+%CAJA simple---------------------------------------------------------------------
+\newtcolorbox{wwbox}[1][]{%
+arc=0mm,breakable,drop fuzzy shadow,
+enhanced,colback=grisamarillo,enhanced jigsaw,opacityback=0.35,
+boxrule=0pt,
+top=3mm, %Separación vertical - inicia texto
+enlarge top by=\baselineskip/2+1mm,
+enlarge top at break by=0mm,pad at break=2mm,
+fontupper=\normalsize,
+%step and label={tcbca}{#3},
+%Borde
+overlay unbroken={\draw[color=azulua,line width=0.5pt] (frame.north west)
+  --([xshift=0pt]frame.north east)
+  --([xshift=0pt]frame.south east)
+  --([xshift=0pt]frame.south west)--(frame.north west);
+        },
+%Borde
+overlay first={\draw[color=azulua,line width=0.5pt] (frame.north west)
+  --([xshift=0pt]frame.north east)
+  --([xshift=0pt]frame.south east)
+  --([xshift=0pt]frame.south west)--(frame.north west);
+        },
+%Borde cambio de página
+overlay last={\draw[color=azulua,line width=0.5pt] (frame.north west)
+  --([xshift=0pt]frame.north east)
+  --([xshift=0pt]frame.south east)
+  --([xshift=0pt]frame.south west)--(frame.north west);}
+#1}
+
+ \newenvironment{scaja}[1][]{\bigskip\begin{wwbox}%
+ #1}{\end{wwbox}}	
+% Fin CAJA simple
+
+%CAJA vocabulario----------------------------------------------------------------
+ \newtcolorbox{vocabox}[3][]{%
+arc=0mm,breakable,enhanced,colback=white,boxrule=0pt,
+top=1mm, left=3pt,enhanced jigsaw,opacityback=0.35,
+step and label={tcbvoca}{#3},
+fontupper={\small\bf\sffamily {\color{azulF}Vocabulario \thetcbvoca \;#2}}~\normalfont, %"Lema..."+texto del cuerpo
+overlay unbroken  = {%barra vertical
+\draw[color=white,line width=3pt] ([xshift=2pt] frame.north west)--([xshift=2pt] frame.south west);             
+         },%
+overlay first  = {%barra vertical
+\draw[color=white,line width=3pt] ([xshift=2pt] frame.north west)--([xshift=2pt] frame.south west);             
+         },%
+% Mantener borde en cambio de página     
+overlay last ={\draw[color=white,line width=3pt] ([xshift=2pt] frame.north west)--([xshift=2pt] frame.south west);   },    
+#1}
+%-
+\NewDocumentEnvironment{vocabulario}{O{} O{} O{}}{\smallskip\begin{vocabox}{#1}{#2}%
+#3}{\end{vocabox}\smallskip }
+	
+% Fin vocabulario
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%% Cajas/cajas con marcos %%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newtheoremstyle{colordominantenumbox}%  nombre del estilo (theorem)
+{0pt}% Espacio arriba
+{0pt}% Espacio abajo
+{\normalfont}% % fuente del cuerpo
+{}% cantidad de identación
+{\small\bf\sffamily\color{colordominante}}%  Fuente del encabezado
+{\;}% Puntuacion después del encabezado del teorema
+{0.25em}% Espacio después del encabezado del teorema
+{\small\sffamily\color{colordominante}\thmname{#1}\nobreakspace\thmnumber{\@ifnotempty{#1}{}\@upn{#2}}% texto encabezado: (e.g. Teorema 2.1)
+\thmnote{\nobreakspace\the\thm@notefont\sffamily\bfseries\color{black}---\nobreakspace#3.}} % Descripción del teorema
+\renewcommand{\qedsymbol}{$\blacksquare$}% Optional qed square
+
+\newtheoremstyle{blacknumex}% nombre del estilo (theorem)
+{5pt}% Espacio arriba
+{5pt}% Espacio abajo
+{\normalfont}% fuente del cuerpo
+{} % Indent amount
+{\small\bf\sffamily}% Fuente del encabezado
+{\;}% Puntuacion después del encabezado del teorema
+{0.25em}% Espacio después del encabezado del teorema
+{\small\sffamily{\tiny\ensuremath{\blacksquare}}\nobreakspace\thmname{#1}\nobreakspace\thmnumber{\@ifnotempty{#1}{}\@upn{#2}}% texto encabezado: (e.g. Teorema 2.1)
+\thmnote{\nobreakspace\the\thm@notefont\sffamily\bfseries---\nobreakspace#3.}}% opcional: Descripción del teorema
+
+\newtheoremstyle{blacknumbox} % Theorem style name
+{0pt}% Space above
+{0pt}% Space below
+{\normalfont}% Body font
+{}% Indent amount
+{\small\bf\sffamily}% Theorem head font
+{\;}% Punctuation after theorem head
+{0.25em}% Space after theorem head
+{\small\sffamily\thmname{#1}\nobreakspace\thmnumber{\@ifnotempty{#1}{}\@upn{#2}}% Theorem text (e.g. Theorem 2.1)
+\thmnote{\nobreakspace\the\thm@notefont\sffamily\bfseries---\nobreakspace#3.}}% Optional theorem note
+
+\newtheoremstyle{especialnumbox} % Theorem style name
+{0pt}% Space above
+{0pt}% Space below
+{\normalfont}% Body font
+{}% Indent amount
+{\small\bf\sffamily}% Theorem head font
+{\;}% Punctuation after theorem head
+{0.25em}% Space after theorem head
+{\small\sffamily\color{beamer@barcolor}\thmname{#1}\nobreakspace\thmnumber{\@ifnotempty{#1}{}\@upn{#2}}% Theorem text (e.g. Theorem 2.1)
+\thmnote{\nobreakspace\the\thm@notefont\sffamily\bfseries---\nobreakspace#3.}}% Optional theorem note
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%% Cajas/cajas sin marcos %%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newtheoremstyle{colordominantenum}% % Theorem style name
+{5pt}% Space above
+{5pt}% Space below
+{\normalfont}% % Body font
+{}% Indent amount
+{\small\bf\sffamily\color{colordominante}}% % Theorem head font
+{\;}% Punctuation after theorem head
+{0.25em}% Space after theorem head
+{\small\sffamily\color{colordominante}\thmname{#1}\nobreakspace\thmnumber{\@ifnotempty{#1}{}\@upn{#2}}% Theorem text (e.g. Theorem 2.1)
+\thmnote{\nobreakspace\the\thm@notefont\sffamily\bfseries\color{black}---\nobreakspace#3.}} % Optional theorem note
+\renewcommand{\qedsymbol}{$\blacksquare$}% Optional qed square
+\makeatother
+
+% Defines the theorem text style for each type of theorem to one of the three styles above
+\newcounter{dummy} 
+\numberwithin{dummy}{section}
+\theoremstyle{colordominantenumbox}
+\newtheorem{theoremeT}[dummy]{Teorema}
+\newtheorem{problema}{Problema}[section]
+\newtheorem{exerciseT}{Ejercicio}[section]
+\theoremstyle{blacknumex}
+%\newtheorem{exampleT}{Example}[section]
+\theoremstyle{blacknumbox}
+%\newtheorem{vocabulario}{Vocabulario}[section]
+\newtheorem{definitionT}{Definición}[section]
+\newtheorem{corollaryT}[dummy]{Corolario}
+\theoremstyle{especialnumbox}
+\newtheorem{ejerciciosT}{{\fhvb{12}{Ejercicios}\;}}[section]
+
+% Fin mis entornos---------------------------------------------------------------
+\usepackage{listings}
+%%%%% Definicion de listing===========
+%% % % % % %listing
+     \lstdefinestyle{Source}{
+   basicstyle=\small\ttfamily\bf,language={[LaTeX]TeX}, numbersep=5mm, numbers=left, numberstyle=\tiny, % number style
+   breaklines=true,framexleftmargin=10mm, xleftmargin=10mm,
+   backgroundcolor=\color{azulua!20!white},frameround=fttt,escapeinside=??,
+   rulecolor=\color{ptctitle},
+   morekeywords={% Give key words here                                         % keywords
+       maketitle},
+   keywordstyle=\color[rgb]{0,0,1},                    % keywords
+           commentstyle=\color[rgb]{0.133,0.545,0.133},    % comments
+           stringstyle=\color[rgb]{0.627,0.126,0.941},  % strings
+   %columns=fullflexible  
+   extendedchars=\true,
+inputencoding=utf8x }
+%   % % % % % %
+\usepackage{caption}
+\DeclareCaptionFont{white}{\color{white}}
+\DeclareCaptionFormat{listing}{\colorbox{gray!20}{\parbox{\dimexpr\textwidth-2\fboxsep\relax}{\color{white}C\'odigo \thesection .\ 
+\thesource\ #3}}}
+\captionsetup[source]{format=listing,labelfont=white,textfont=white, singlelinecheck=false, margin=0pt, font={bf,footnotesize}}
+\newcounter{source}[section]
+\lstnewenvironment{source}[2][]
+{\refstepcounter{source}
+\captionsetup{options=source}
+\lstset{%
+basicstyle=\tiny\ttfamily\bf,language={[LaTeX]TeX},caption=#1,label=#2,  
+numbersep=5mm, numbers=left, numberstyle=\tiny, % number style
+breaklines=true,framexleftmargin=10mm, xleftmargin=10mm,
+%backgroundcolor=\color{azulua!20!white},frameround=fttt
+,escapeinside=??,
+rulecolor=\color{ptctitle},
+morekeywords={% Give key words here                                         % keywords
+    maketitle},
+keywordstyle=\color[rgb]{0,0,1},                    % keywords
+        commentstyle=\color[rgb]{0.133,0.545,0.133},    % comments
+        stringstyle=\color[rgb]{0.627,0.126,0.941},  % strings
+%columns=fullflexible 
+extendedchars=\true,
+inputencoding=utf8x  
+}
+        }
+{}
+%%%%%%%%%%%%%%%%%%%%%------------------------------------------------------------
+\usepackage[framemethod=default]{mdframed} % Se requiere para la creación de las cajas teorema, definición, ejercicios y corolario
+% Exercise box	  
+\newmdenv[skipabove=7pt,
+skipbelow=7pt,
+rightline=false,
+leftline=true,
+topline=false,
+bottomline=false,
+backgroundcolor=colordominante!10,
+linecolor=colordominante,
+innerleftmargin=5pt,
+innerrightmargin=5pt,
+innertopmargin=5pt,
+innerbottommargin=5pt,
+leftmargin=0cm,
+rightmargin=0cm,
+linewidth=4pt]{eBox}	
+
+% Caja de ejercicios
+\newmdenv[skipabove=7pt,
+skipbelow=7pt,
+rightline=false,
+leftline=false,
+topline=false,
+bottomline=false,
+linecolor=gray,
+backgroundcolor=black!2,
+innerleftmargin=5pt,
+innerrightmargin=5pt,
+innertopmargin=5pt,
+leftmargin=0cm,
+rightmargin=0cm,
+linewidth=4pt,
+innerbottommargin=5pt]{ejerBox}	
+		  
+
+% Crea un ambiente para cada tipo de teorema y le asigna un estilo de texto
+% de la sección "Estilos:..." 
+
+\newenvironment{ejercicioT}{\begin{eBox}\begin{exerciseT}}{\hfill{\color{colordominante}\tiny\ensuremath{\blacksquare}}\end{exerciseT}\end{eBox}}				  % Entorno para notas 
+\newenvironment{nota}{\par\vskip10pt\small % Espacio vertical blanco, por encima de la observación y fuente de menor tamaño.
+\begin{list}{}{
+\leftmargin=35pt % Indentación a la izquierda
+\rightmargin=25pt}\item\ignorespaces % Indentación a la derecha
+\makebox[-2.5pt]{\begin{tikzpicture}[overlay]
+\node[draw=colordominanteF,line width=1pt,circle,fill=colordominante!25,font=\sffamily\bfseries,inner sep=2pt,outer sep=0pt] at (-15pt,0pt){\textcolor{colordominanteF}{N}};\end{tikzpicture}} % ! Orange, en el círculo
+\advance\baselineskip -1pt}{\end{list}\vskip5pt} % Interlineado más apretada y un espacio en blanco después de la observación
+
+
+%----------------------------------------------------------------------------------------
+% Listas de ejercicios con el paquete answers
+% \begin{ejercicios} --- \end{ejercicios} para listas simples
+% Requiere usar un entorno amsthm porque se estableció así para estas listas arriba
+%----------------------------------------------------------------------------------------
+\usepackage{answers}
+\newtheorem{exer}{}[section]
+\newenvironment{ejer}{\begin{exer}\normalfont}{\end{exer}}
+\Newassociation{solu}{Soln}{ans}
+
+% Entorno personalizado---------------------------------------------------
+
+%\strut es un ensanchamiento para habilitar el título "Ejercicios"
+\newenvironment{ejercicios}{\begin{ejerBox}\begin{ejerciciosT}\strut\smallskip
+}{\end{ejerciciosT}\end{ejerBox}}	
+
+% Soluciones al final del documento
+\def\soluciones{%
+\expandafter\ifx\csname Closesolutionfile\endcsname \relax\else
+\Closesolutionfile{ans}\fi
+}
+\def\solucionesCap#1{\section*{Soluciones de la Secci\'on #1}\input{ans#1}}
+
+% Entorno con Caja para ejercicios-----------------------------------------
+%\begin{cajaejercicios}  o \begin{cajaejercicios}[de tal] 
+%                        o \begin{cajaejercicios}[][ref]
+% Entorno personalizado---------------------------------------------------
+\definecolor{colorejercicios}{RGB}{99,42,134}
+ \definecolor{beamer@barcolor}{RGB}{21,46,128}%azul
+  \definecolor{beamer@headercolor}{RGB}{226,107,59}%naranja
+\newcounter{tcbejer}[section]
+\renewcommand{\thetcbejer}{\thesection.\arabic{tcbejer}}
+
+\newtcolorbox{wwejercicios}[3][]{%
+enhanced jigsaw,opacityback=0.35,arc=0mm,breakable,%drop fuzzy shadow,
+colback=gray!5,boxrule=0pt,top=7mm,
+fontupper=\normalsize,step and label={tcbejer}{#3},
+overlay unbroken = {
+%Borde grueso superior
+\draw[color=beamer@headercolor,line width=3pt] (frame.north west)--([xshift=0pt]frame.north east);
+%Caja de Título: Ejer --
+\node[rounded corners=3pt,  draw=beamer@headercolor, top color=white, bottom color=white, thick,inner sep=1mm,anchor=west, font=\small\bf\sffamily](tituloejer) at ([xshift=5mm, yshift=0mm]frame.north west)
+{\textbf{\color{beamer@barcolor}  Ejercicios \thetcbejer \;#2}};
+%borde línea inferior
+ \draw[color=beamer@headercolor,line width=0.2pt] (frame.south west)--([xshift=0pt]frame.south east); 
+},%overlay
+overlay first = {
+%Borde grueso superior
+\draw[color=beamer@headercolor,line width=3pt] (frame.north west)--([xshift=0pt]frame.north east);
+%Caja de Título: Ejer --
+\node[rounded corners=3pt,  draw=beamer@headercolor, top color=white, bottom color=white, thick,inner sep=1mm,anchor=west, font=\small\bf\sffamily](tituloejer) at ([xshift=5mm, yshift=0mm]frame.north west)
+{\textbf{\color{beamer@barcolor}  Ejercicios \thetcbejer \;#2}};
+%borde línea inferior
+ \draw[color=beamer@headercolor,line width=0.2pt] (frame.south west)--([xshift=0pt]frame.south east); 
+},%overlay
+% % Mantener borde en cambio de página 
+% overlay middle = {\draw[color=colordominante,line width=0.2pt] (frame.north west)--([xshift=0pt]frame.north east);
+%                 } 
+overlay middle ={},
+overlay last = { %borde línea inferior
+ \draw[color=beamer@headercolor,line width=0.2pt] (frame.south west)--([xshift=0pt]frame.south east); 
+                } 
+#1}
+%-
+\NewDocumentEnvironment{cajaejercicios}{O{} O{} O{}}{\smallskip\begin{wwejercicios}{#1}{#2}%
+ #3}{\end{wwejercicios}\smallskip }
+% ejercicios---------------------------------------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcounter{tcbejerc}[section]
+\renewcommand{\thetcbejerc}{\thesection.\arabic{tcbejerc}}
+
+\newtcolorbox{wwejercicio}[3][]{%
+enhanced jigsaw,opacityback=0.35,arc=0mm,breakable,%drop fuzzy shadow,
+colback=gray!5,boxrule=0pt,top=7mm,
+fontupper=\normalsize,step and label={tcbejerc}{#3},
+overlay unbroken = {
+%Borde grueso superior
+\draw[color=beamer@headercolor,line width=3pt] (frame.north west)--([xshift=0pt]frame.north east);
+%Caja de Título: Ejer --
+\node[rounded corners=3pt,  draw=beamer@headercolor, top color=white, bottom color=white, thick,inner sep=1mm,anchor=west, font=\small\bf\sffamily](tituloejer) at ([xshift=5mm, yshift=0mm]frame.north west)
+{\textbf{\color{beamer@barcolor}  Ejercicio \thetcbejerc \;#2}};
+%borde línea inferior
+ \draw[color=beamer@headercolor,line width=0.2pt] (frame.south west)--([xshift=0pt]frame.south east); 
+},%overlay
+overlay first = {
+%Borde grueso superior
+\draw[color=beamer@headercolor,line width=3pt] (frame.north west)--([xshift=0pt]frame.north east);
+%Caja de Título: Ejer --
+\node[rounded corners=3pt,  draw=beamer@headercolor, top color=white, bottom color=white, thick,inner sep=1mm,anchor=west, font=\small\bf\sffamily](tituloejer) at ([xshift=5mm, yshift=0mm]frame.north west)
+{\textbf{\color{beamer@barcolor}  Ejercicio \thetcbejerc \;#2}};
+%borde línea inferior
+ \draw[color=beamer@headercolor,line width=0.2pt] (frame.south west)--([xshift=0pt]frame.south east); 
+},%overlay
+% % Mantener borde en cambio de página 
+% overlay middle = {\draw[color=colordominante,line width=0.2pt] (frame.north west)--([xshift=0pt]frame.north east);
+%                 } 
+overlay middle ={},
+overlay last = { %borde línea inferior
+ \draw[color=beamer@headercolor,line width=0.2pt] (frame.south west)--([xshift=0pt]frame.south east); 
+                } 
+#1}
+%-
+\NewDocumentEnvironment{ejercicio}{O{} O{} O{}}{\smallskip\begin{wwejercicio}{#1}{#2}%
+ #3}{\end{wwejercicio}\smallskip }
+% ejercicios---------------------------------------------------------
+
+% Comandos para paquete answers
+% pregunta-solución
+\newcommand{\exersol}[2]{
+\begin{ejer} 
+#1\\ \scantokens{\begin{solu}#2\end{solu}}
+\end{ejer}}
+% listas \item pregunta-solución
+\newcommand{\itemps}[2]{\item #1\scantokens{\begin{solu}#2\end{solu}}}
+%\usepackage[shortlabels]{enumitem}
+\newcommand{\bex}{\scantokens{\begin{solu} \end{solu}}\begin{enumerate}[label=\alph*.)]}
+\newcommand{\eex}{\end{enumerate}}
+%\begin{sol} \end{sol}
+%%% pagina 170 del manual,258,285, 300,311,399

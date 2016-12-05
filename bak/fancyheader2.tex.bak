@@ -1,0 +1,17 @@
+\documentclass{book}
+\usepackage{fancyhdr}
+\usepackage{tikz,lipsum}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE]{\hspace*{-0.2\headwidth}\colorbox{green!20}{\makebox[\dimexpr0.2\headwidth-2\fboxsep][c]{\strut\thepage}}%
+               \colorbox{green}{\makebox[\dimexpr\headwidth-2\fboxsep][l]{\strut\rightmark}}}
+\fancyhead[LO]{\colorbox{green}{\makebox[\dimexpr\headwidth-2\fboxsep][r]{\strut\rightmark}}%
+                \colorbox{green!20}{\makebox[\dimexpr0.2\headwidth-2\fboxsep][c]{\strut\thepage}}}
+\renewcommand{\headrulewidth}{0pt}
+\begin{document}
+\chapter{Chapter Title here}
+\lipsum[1]
+\section{A Level Head}
+\lipsum[2-3]
+\lipsum[4-12]
+\end{document}

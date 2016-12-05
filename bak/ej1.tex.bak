@@ -1,0 +1,70 @@
+\documentclass[
+  11pt,
+  pagesize=auto,
+  version=last,
+  chapterprefix=true
+  ]{scrbook}
+\usepackage[frenchb]{babel}
+\usepackage[babel=true]{csquotes}
+\usepackage[T1]{fontenc}
+\usepackage[explicit]{titlesec}
+\usepackage{xcolor}
+\usepackage{charter}
+\definecolor{titlebgdark}{RGB}{0,163,243}
+\definecolor{titlebglight}{RGB}{191,233,251}
+\definecolor{mybluei}{RGB}{28,138,207}
+\definecolor{myblueii}{RGB}{131,197,231}
+
+\newcommand\ChapterFont{\usefont{T1}{qhv}{b}{n}\selectfont\huge}
+\newcommand\SectionFont{\usefont{T1}{qhv}{b}{n}\selectfont}
+
+\titleformat{\chapter}[display]
+  {\normalfont\ChapterFont\huge\color{myblueii}}
+  {}
+  {0pt}
+  {\parbox[b]{70pt}{\mbox{}}%
+    \parbox[b]{50pt}{\colorbox{mybluei}{%
+      \parbox[b][60pt][t]{45pt}{\centering%
+        \color{white}%
+        {\itshape\rmfamily\small\chaptertitlename}%
+        \vfill{\fontsize{50}{120}\selectfont\thechapter}%
+        }%
+      }%
+    }\hspace{15pt}%
+    \parbox[b]{\dimexpr\textwidth-150pt}{%
+      \raggedright\scshape#1\vskip6pt%
+    }%
+  }
+
+\titleformat{name=\chapter,numberless}[display]
+  {\normalfont\ChapterFont\huge\color{myblueii}}
+  {}
+  {0pt}
+  {\parbox[b]{70pt}{\mbox{}}%
+    \hspace{15pt}%
+    \parbox[b]{\dimexpr\textwidth-150pt}{%
+      \raggedright\scshape#1\vskip6pt%
+    }%
+  }
+
+\titleformat{\section}
+  {\normalfont\small\sffamily\SectionFont\color{titlebgdark}}
+  {\colorbox{titlebgdark}{%
+    \parbox[c][16pt][c]{40pt}{%
+      \centering\textcolor{white}{\SectionFont\Large\rmfamily\thesection}%
+      }%
+    }%
+  }
+  {1em}
+  {#1}
+  [\vspace{-1.2\baselineskip}%
+    \color{titlebgdark}\hspace*{\dimexpr40pt+2\fboxsep\relax}%
+    \rule{\dimexpr\textwidth-40pt-2\fboxsep\relax}{1pt}%
+  ]
+
+\begin{document}
+
+\chapter{Preliminaries}
+\section{Test section}
+
+\end{document}

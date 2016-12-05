@@ -1,0 +1,31 @@
+#!/bin/bash
+
+rm *.err *.nav *.snm *.out *.vrb *.py *.dvi *.ps *.eps */*.eps *.aux */*.aux *.log *.toc *.mtc* *.synctex.gz *.ptc *.idx *.maf *.bbl *.thm *.dep *.gz *.listing *concordance.tex &> /dev/null
+rm -R _minted-listingbox* &> /dev/null
+if [ -d ./pdf/ ];
+
+then
+
+echo "Sí, sí existe."
+
+else
+
+mkdir ./pdf
+
+fi
+
+if [ -d ./bak/ ];
+
+then
+
+echo "Sí, sí existe."
+
+else
+
+mkdir ./bak
+
+fi
+
+
+ find . -type f -name "*.pdf" -exec mv -f {} ./pdf \;
+ find . -type f -name "*.bak" -exec mv -f {} ./bak \;

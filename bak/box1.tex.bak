@@ -1,0 +1,88 @@
+\documentclass[svgnames,x11names,x11names,HTML,twoside]{article}
+
+\usepackage[most]{tcolorbox}
+\tcbuselibrary{most,documentation}
+%\usepackage{tcolorbox.doc.s_main}
+\tcbEXTERNALIZE
+%\usepackage{tcolorbox.doc.s_snippet}
+\tcbset{external/PassOptionsToPackage={cache=false}{minted}}
+\immediate\write18{mkdir external}
+\immediate\write18{mkdir solutions}
+
+\RequirePackage{csquotes}
+\usepackage{marco}
+\usepackage{lipsum-es}
+\newtcbox{\dashedbox}[1][]{
+  math upper,
+  baseline=0.4\baselineskip,
+  equal height group=dashedbox,
+  nobeforeafter,
+  colback=white,
+  boxrule=0pt,
+  enhanced jigsaw,
+  boxsep=0pt,
+  top=2pt,
+  bottom=2pt,
+  left=12pt,
+  right=2pt,
+  %borderline horizontal={0.5pt}{0pt}{dashed},
+  %borderline vertical={0.5pt}{0pt}{dashed},
+  %drop lifted shadow,
+  colback=green!10!white,
+       overlay={\begin{tcbclipinterior}\fill[green!75!blue!50!white] (frame.south west)
+            rectangle node[text=white,
+            font=\sffamily\bfseries\tiny,rotate=90] {Obs}([xshift=4mm]frame.north west);
+            \end{tcbclipinterior}}, 
+  #1
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newtcolorbox{marker}[1][]{enhanced,
+  before skip=2mm,after skip=3mm,
+  boxrule=0.4pt,left=5mm,right=2mm,top=1mm,bottom=1mm,
+  colback=yellow!50,
+  colframe=yellow!20!black,
+  sharp corners,rounded corners=southeast,arc is angular,arc=3mm,
+  underlay={%
+    \path[fill=tcbcol@back!80!black] ([yshift=3mm]interior.south east)--++(-0.4,-0.1)--++(0.1,-0.2);
+    \path[draw=tcbcol@frame,shorten <=-0.05mm,shorten >=-0.05mm] ([yshift=3mm]interior.south east)--++(-0.4,-0.1)--++(0.1,-0.2);
+    \path[fill=yellow!50!black,draw=none] (interior.south west) rectangle node[white]{\Huge\bfseries !} ([xshift=4mm]interior.north west);
+    },
+  drop fuzzy shadow,#1}
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \newtcbexternalizetcolorbox{exdispExample}{dispExample}{environment with percent=false,minipage}{beforeafter example}
+
+\newtcbexternalizetcolorbox{exdispExample*}{dispExample*}{environment with percent=false,minipage}{beforeafter example}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+
+\begin{document}
+Einstein said: $\dashedbox{E=mc^2}$ \; $\dashedbox[colback=yellow]{E^2=(mc^2)^2 + (pc)^2}$\\
+\begin{marker}
+\lipsum[1]
+\end{marker}
+%%%%%%%%%%%%%%%%%%%%%%%
+\begin{dispExample}
+\tcbset{enhanced,equal height group=fakedbreak,
+  colback=LightGreen,colframe=DarkGreen,
+  width=(\linewidth-6mm)/3,nobeforeafter,
+  left=1mm,right=1mm,top=1mm,bottom=1mm,middle=1mm}
+%
+\begin{tcolorbox}[title=My broken box,skin=enhancedfirst]
+This is a box which breaks from one column to another
+\end{tcolorbox}\hfill
+\begin{tcolorbox}[skin=enhancedmiddle]
+column. I am sorry to say that this is a trick.
+Nevertheless, you may use this trick for your
+\end{tcolorbox}\hfill
+\begin{tcolorbox}[skin=enhancedlast]
+own purposes.
+\end{tcolorbox}
+\end{dispExample}
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+\begin{dispExample}
+Einstein said: $\dashedbox{E=mc^2}$ \; $\dashedbox[colback=yellow]{E^2=(mc^2)^2 + (pc)^2}$
+\end{dispExample}
+% % % % % % % % % % % % % % % %
+\begin{dispExample*}{sidebyside}
+Einstein said: $\dashedbox{E=mc^2}$
+\end{dispExample*}
+\end{document}

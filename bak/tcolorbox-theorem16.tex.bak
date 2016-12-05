@@ -1,0 +1,46 @@
+\documentclass{article}
+\usepackage[svgnames]{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{shadows,calc}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins,theorems,breakable}
+\usepackage{lipsum}
+
+\definecolor{myblue}{RGB}{40,96,139}
+
+
+\tcbset{
+mybox/.style={
+  breakable,
+  enhanced standard,
+  boxrule=0.4pt,titlerule=-0.2pt,drop fuzzy shadow,
+  width=\linewidth,
+  title style={top color=myblue!30,bottom color=myblue!0.5},
+  overlay unbroken and first={
+    \path[fill=myblue]
+    ([xshift=5pt,yshift=-\pgflinewidth]frame.north west) to[out=0,in=180] ([xshift=20pt,yshift=-5pt]title.south west) -- ([xshift=-20pt,yshift=-5pt]title.south east) to[out=0,in=180] ([xshift=-5pt,yshift=-\pgflinewidth]frame.north east) -- cycle;
+  },
+  fonttitle=\Large\bfseries\sffamily,
+  fontupper=\sffamily,
+  fontlower=\sffamily,
+  before=\par\medskip\noindent,
+  after=\par\medskip,
+  center title,
+  toptitle=3pt,
+  top=11pt,topsep at break=-5pt,
+  colback=white
+}}
+
+\newtcolorbox{MyBlock}[2][\linewidth]{mybox,width=#1,title=#2}
+
+\begin{document}
+
+\begin{MyBlock}{Some Variable Width Block}
+\lipsum[4]
+\end{MyBlock}
+
+\begin{MyBlock}[.5\linewidth]{Some Title}
+\lipsum[4]
+\end{MyBlock}
+
+\end{document}

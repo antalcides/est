@@ -1,0 +1,2233 @@
+
+\chapter{Teoría de probabilidades}
+
+\PartialToc
+
+\index{Probabilidad}
+
+
+\section{Introducción}
+
+Si el único propósito del investigador es describir los resultados
+de un experimento concreto, los métodos descriptivos analizados en
+los capítulos anteriores pueden considerarse suficientes. No obstante,
+si lo que se pretende es utilizar la información obtenida para extraer
+conclusiones generales sobre todos aquellos objetos del tipo de los
+que han sido estudiados, entonces estos métodos constituyen sólo el
+principio del análisis, y debe recurrirse a métodos de inferencia
+estadística, los cuales implican el uso de una de las ramas de la
+matemática, llamada teoría de la probabilidad.
+
+Analizaremos en este párrafo la noción de probabilidad y la terminología
+subyacente a esta área de las matemáticas, ya que la probabilidad
+constituye por sí misma un concepto básico que refleja su relación
+con la faceta del mundo exterior que pretende estudiar: los fenómenos
+aleatorios, los cuales obedecen unas ciertas reglas de comportamiento.
+
+El concepto de probabilidad es importante cuando se estudian procesos
+físicos, biológicos, químicos, sociales que generan observaciones
+que no es fácil o factible predecir con exactitud, pero se puede determinar
+la frecuencia relativa con que ocurren con cierta precisión, si realizamos
+un gran número de observaciones.
+
+Los eventos que poseen esta propiedad se denominan eventos aleatorios
+estocásticos y la frecuencia relativa con que ocurren es una interpretación
+intuitiva de la probabilidad, pero no nos proporciona una definición
+exacta de ella.
+
+En su definición y en sus aplicaciones nos dedicaremos en este capítulo.
+
+
+\section{Experimentos y sucesos aleatorios}
+
+\begin{defi}{}{}\index{Sucesos aleatorios}Diremos que un experimento
+es aleatorio si se veri\-fican las siguientes condiciones,\textbackslash{}
+\begin{enumerate}
+\item Se puede repetir indefinidamente, siempre con las mismas condiciones.
+\item Antes de realizarlo no se puede predecir el resultado.
+\item El resultado ''$e"$ que se obtiene pertenece a un conjunto de resultados
+posibles conocido previamente el cual llamaremos espacio muestral
+y lo denotaremos con la letra $\Omega\;o\;S$. Los elementos del espacio
+muestral se denominan sucesos elementales. 
+\end{enumerate}
+\end{defi}
+
+Es decir si $e_{1},e_{2}\in S\Longrightarrow e_{1},e_{2}$ son sucesos
+elementales o puntos muestrales. En otras palabras: Un suceso es elemental
+si su ocu\-rrencia o no ocurrencia no está relacionada con ningún
+otro suceso.
+
+Cualquier subconjunto $A$ de $S$ se denomina suceso o evento aleatorio.
+
+El espacio muestral puede ser de dos tipos:
+\begin{itemize}
+\item Discreto si está formado por un conjunto finito o numerable de resultados.
+\item Continuo si está compuesto por un conjunto no numerable de elementos. 
+\end{itemize}
+\begin{defi}{}{} {[}Suceso determinista{]}Se denomina experimento
+determinista a el experimento que al realizarlo varias veces con las
+mismas condiciones iniciales obtenemos siempre el mismo resultado
+\end{defi}
+
+\begin{ejemplo}[] Si dejamos caer dos cuerpos de diferentes masas
+y a la misma altura en el vacío, los dos cuerpos caerán al mismo tiempo.
+\end{ejemplo}
+
+Cuando en un experimento no se puede predecir el resultado final,
+decimos que el experimento es aleatorio
+
+\begin{ejemplo}[] En una ruleta legal no se sabe que número va a
+salir \end{ejemplo}
+
+
+\subsection{Tipos de eventos}
+\begin{enumerate}
+\item \index{Eventos}\index{Eventos!Operaciones}Evento seguro es aquel
+que siempre se verifica después del experimento aleatorio, es decir
+$S.$
+\item Evento imposible es aquel que nunca se verifica como resultado del
+experimento aleatorio y como un evento debe ser un subconjunto de
+$S$ el suceso imposible es el conjunto vacío $\phi.$
+\item Evento complementario. Se denomina suceso complementario de un suceso
+$A$ \ al que se verifica si no se verifica $A$ es decir El complemento
+de $A$ con respecto a $S$ es el conjunto de todos los elementos
+de $S$ que no están en $A.$ Denotaremos el complemento del conjunto
+$A$ como $A^{^{\prime}}$ 
+\end{enumerate}
+\begin{figure}
+
+
+\caption{Evento complementario}
+
+
+\includegraphics[scale=0.4]{41_home_antalcides_Escritorio_est_libros-est_pdf_Dibujo2.pdf}
+
+\end{figure}
+
+
+\begin{ejemplo}[] Si realizamos el experimento aleatorio de lanzar
+un dado al aire. Determinar el conjunto de eventos posibles \end{ejemplo}
+
+\begin{solucion} En este caso tenemos \ el espacio muestral es\\
+$S=\{1,2,3,4,5,6\}$ \\
+y los sucesos elementales son \\
+$\{1\},\{2\},\{3\},\{4\},\{5\},\{6\}$\linebreak{}
+El conjunto de eventos posibles es $\mathcal{A}=\left\{ \begin{tabular}{l}
+ \ensuremath{\phi} suceso imposible\\
+ \ensuremath{S} suceso seguro\\
+ \ensuremath{\{1,2,3\}}\\
+ \ensuremath{\{4,5\}}\\
+ \ensuremath{\{2,4,6\}=\{1,2,3\}^{\prime}}\\
+ \ensuremath{\vdots} 
+\end{tabular}\right.$ \end{solucion}
+
+
+\section{Operaciones básicas con eventos ale\-atorios}
+
+Como los eventos son en realidad conjuntos podemos aplicarles el álgebra
+de conjuntos tratada en su curso de álgebra elemental visto en I semestre.
+\begin{enumerate}
+\item Intersección. La intersección de dos eventos $A$ y $B\subset S$
+que se representa $A\cap B$, es el evento que contiene a todos los
+sucesos elementales comunes de $A$ y $B,$ es decir 
+\[
+A\cap B=\{e\in S:e\in A\wedge e\in B\}
+\]
+
+\item \index{Eventos!Disyuntos}Dos eventos son mutuamente excluyentes o
+disjuntos si \\
+$A\cap B=\phi$, esto es si $A$ y $B\subset S$ no tienen elementos
+comunes.
+
+
+\begin{center}
+\includegraphics[scale=0.4]{42_home_antalcides_Escritorio_est_libros-est_pdf_Dibujo3.pdf}\\
+ Eventos disjuntos 
+\par\end{center}
+
+\item La unión. \ Dados dos sucesos aleatorios $A$ y $B$, se denomina
+suceso unión de $A$ y $B\subset S$ al evento formado por todos los
+sucesos elementales que pertenecen a $A$ o bien a $B,$ es decir
+\[
+A\cup B=\{e\in S:e\in A\vee e\in B\}
+\]
+
+\item Dados dos sucesos aleatorios $A,B\subset S$, se llama diferencia
+de $A$ y $B$, y se representa $A-B$ o $A\backslash B$, al suceso
+aleatorio formado por todos los sucesos elementales que pertenecen
+a $A,$ pero no a $B$, es decir 
+\[
+A\backslash B=\{e\in S:e\in A\wedge e\notin B\}=A\cap B^{\prime}
+\]
+ \\
+Donde a $B^{\prime}$ se le llama complemento de $B$ y se define
+$S\backslash B$ \index{evento!complemento de un}
+\item Diferencia simétrica. Si $A,B\subset S$ se denomina evento dife\-rencia
+simétrica de $A$ y $B$ y se denota por $A\bigtriangleup B$ al evento
+formado por todos los sucesos elementales que pertenecen a $A$ y
+no a $B,$ y los que están en $B$ y no en $A$ es decir, 
+\[
+A\bigtriangleup B=\{e\in S:e\in(A\cup B)\wedge e\notin(A\cap B)\}
+\]
+
+\end{enumerate}
+\begin{center}
+\includegraphics[scale=0.4]{43_home_antalcides_Escritorio_est_libros-est_pdf_image7.pdf}\\
+ Dados dos eventos $A,B\subset S$ se presenta en: (a) $A\cup B;$
+en (b)$\;A\cap B;$ en (c) $A-B;$ en (d) $A\bigtriangleup B.\;$
+\par\end{center}
+
+Hay algunas propiedades importantes que valen la pena recordar
+\begin{itemize}
+\item Leyes de Morgan \end{itemize}
+\begin{description}
+\item [{i}] $\left(A\cup B\right)^{\prime}=A^{\prime}\cap B^{\prime}$
+\item [{ii}] $\left(A\cap B\right)^{\prime}=A^{\prime}\cup B^{\prime}$ \end{description}
+\begin{itemize}
+\item $A\bigtriangleup B=\left(A\backslash B\right)\cup\left(B\backslash A\right)=\left(A\cup B\right)\backslash\left(A\cap B\right)$
+\item $A\cap A^{\prime}=\phi$
+\item $A\cap B^{\prime}=A\backslash B$
+\item $A^{\prime}=S\backslash A$
+\item $A\cup A^{\prime}=S$ 
+\end{itemize}
+\begin{defi}{}{} Sea $A_{1},A_{2},A_{3},\cdots A_{n}$ una serie
+de eventos se tiene,\\
+$\circ$ El evento formado por todos los sucesos comunes y no comunes
+de la serie es, 
+\[
+A_{1}\cup A_{2}\cup A_{3}\cdots\cup A_{n}=\cup_{i=1}^{n}A_{i}
+\]
+ \linebreak{}
+$\circ$ El evento formado por los sucesos comunes entre los eventos
+de la serie es el evento, 
+\[
+A_{1}\cap A_{2}\cap A_{3}\cdots\cap A_{n}=\cap_{i=1}^{n}A_{i}
+\]
+
+
+\end{defi}
+
+\begin{defi}{}{} Sea $A\index{Conjunto!Numeraldeun}$ un conjunto
+finito o enumerable, Se le denomina $n\left(A\right),\index{Numeraldeunconjunto}$
+al cardinal de $A$, es decir el número de elementos que posee el
+conjunto $A.$ \end{defi}
+
+
+\section{Probabilidad}
+
+
+\subsection{Probabilidad estocástica}
+
+\index{Probabilidad}\index{Probabilidad!Estocastica}En los experimentos
+aleatorios observamos que si conservamos las mismas condiciones iniciales
+al aumentar el números de ensayos la frecuencia relativa con la que
+ocurre el suceso $A$ es, 
+\[
+f_{n}\left(A\right)=\frac{n\acute{u}mero\,de\,veces\,que\,ocurre\,A}{n}
+\]
+
+
+y tiende a converger hacia un valor, el cual se denomina probabilidad
+de $A$
+\[
+P\left(A\right)=\lim_{n\rightarrow\infty}f_{n}\left(A\right)
+\]
+
+
+Esta noción de probabilidad no se puede aplicar en la práctica ya
+que:
+\begin{itemize}
+\item Se requiere realizar un número infinito de veces el experimento para
+calcular la probabilidad
+\item Los experimentos aleatorios a veces no pueden ser realizados en la
+práctica por ejemplo. Si se quiere saber cuantas personas mueren al
+fumigar con un tóxico 
+\end{itemize}
+
+\subsection{Probabilidad de laplace}
+
+\index{pobabilidad!Laplace}\index{probabiliad!Axiomas}Si un experimento
+cualquiera se puede repetir obteniendo un número finito de resultados
+posibles y no existe ninguna razón para pensar que un resultado tiene
+privilegios sobre otro, se calcula la probabi\-lidad del suceso $A$
+según la regla de Laplace 
+\[
+P\left(A\right)=\frac{n\acute{u}mero\,de\,casos\,favorables\,para\,A}{n\acute{u}mero\,de\,casos\,posibles}=\frac{n\left(A\right)}{n\left(S\right)}
+\]
+
+
+\begin{ejemplo}[] Calcular la probabilidad de que al lanzar un dado
+se obtenga un número par \end{ejemplo}
+
+\begin{solucion} El espacio muestral es $S=\{1,2,3,4,5,6\}$ llamaremos
+$A$ al suceso que da como resultado un número par el lanzamiento
+del dado, $A=\{2,4,6\},$ si suponemos que el dado es legal, es decir
+ninguna cara tiene privilegio sobre otra para salir, entonces 
+\[
+P\left(A\right)=\frac{n\left(A\right)}{n\left(S\right)}=\frac{3}{6}=\frac{1}{2}
+\]
+
+
+\end{solucion}
+
+
+\subsection{Definición axiomática de la probabilidad}
+
+Como en toda rama de las matemáticas debemos establecer una serie
+de axiomas y definiciones básicas
+
+\begin{defi}{}{} Sea $\mathcal{A}$ una clase no vacía formada por
+subconjuntos de $S$, diremos que la clase $\mathcal{A}$ es un $\sigma-\acute{a}lgebra\,$de\,eventos
+si los eventos complementarios de cada \-elemento de $\mathcal{A}$
+está también en $\mathcal{A}$ y además las uniones numerables de
+eventos de $\mathcal{A}$ es elemento de $\mathcal{A}$ es decir.\\
+Se dice que una clase $\mathcal{A}$\ no vacía de subconjuntos de
+$S$\  es una $\sigma-\acute{a}lgebra$ si y sólo si\ cumple las
+siguientes propiedades 
+\begin{align*}
+S & \in\mathcal{A}\ \\[0.15cm]
+\forall A & \in\mathcal{A\Longrightarrow}A^{\prime}\in\mathcal{A}\\
+\forall A_{1},A_{2},A_{3},\cdots & \in\mathcal{A\Longrightarrow}\bigcup_{i=1}^{\infty}A_{i}\in\mathcal{A}
+\end{align*}
+
+
+\end{defi}
+
+\begin{defi}{}{} \textbf{Definición axiomática de probabilidad}\\
+Dado un espacio muestral $S$, y una $\sigma-\acute{a}lgebra$ de
+sucesos $\mathcal{A}$ sobre él, diremos que $P$ es una probabilidad
+sobre $\mathcal{A}$ si cumple las siguientes propiedades
+\begin{description}
+\item [{A$_{1}$}] La probabilidad es una función definida sobre $\ \mathcal{A}$,
+que toma solo valores positivos comprendidos entre 0 y 1, es decir
+\[
+\begin{array}{ccc}
+P:\mathcal{A} & \rightarrow & [0,1]\subset IR\\
+A\in\mathcal{A} & \mapsto & 1\geq P\left(A\right)\geq0
+\end{array}
+\]
+
+\item [{A$_{2}$}] \index{Evento seguro}La probabilidad del suceso seguro
+es 1 
+\[
+P\left(S\right)=1
+\]
+
+\item [{A$_{3}$}] Para cualquier sucesión infinita $A_{1},A_{2},A_{3},\cdots$
+de sucesos disjuntos de $\mathcal{A}$ se tiene que la probabilidad
+de el evento $\bigcup_{i=1}^{\infty}A_{i}$ es la serie infinita de
+las probabilidades, es decir 
+\end{description}
+\end{defi}
+\[
+P\left(\bigcup_{i=1}^{\infty}A_{i}\right)=\sum_{i=1}^{\infty}P\left(A_{i}\right)
+\]
+
+
+\begin{ejemplo}[] Cuando el conjunto $S$ formado por todos los posibles
+resultados de un experimento es finito o infinito enumerable podemos
+considerar que la clase $\mathcal{A}$ es \index{Partes de S}el conjunto
+denominado \textbf{partes de} $S$
+\[
+\mathbb{P}\left(S\right)=\left\{ A|A\subseteq S\right\} 
+\]
+ el cual es un $\sigma-\acute{a}lgebra.$ \end{ejemplo}
+
+\begin{ejemplo}[] Consideremos el experimento de lanzamiento de un
+dado, entonces 
+\begin{align*}
+S & =\{1,2,3,4,5,6\}\\
+\mathbb{P}\left(S\right) & =\{\phi,S,\{1\},\{2\},\cdots,\{6\},\{1,2\},\{1,3\},...\}
+\end{align*}
+
+
+Es decir $\mathbb{P}\left(S\right)$ tiene $2^{6}=$ $64$ elementos
+\end{ejemplo}
+
+\begin{ejemplo}[] Cuando $S$ es infinito no enumerable por ejemplo
+que\-remos realizar el experimento de esperar el tiempo necesario
+para que el polietileno se desintegre naturalmente, observamos que
+$S=I\,R{+}$ y consideramos $\mathcal{A}$ como el conjunto de intervalos
+abiertos o cerrados, y sus uniones finitas, es decir 
+\[
+\mathcal{A}=\{\phi,I\,R^{+},[2,2],\left(2,3\right),(4,5]\cup\lbrack8,+\infty),...\}
+\]
+
+
+\end{ejemplo}
+
+De acuerdo con el nivel de estas notas no trabajaremos con $\sigma-\acute{a}lgebras$
+diferentes a las indicadas en los ejemplos 3.6 y 3.7\footnote{El lector interesado en $\sigma-\acute{a}\lg ebras$ puede remitirse
+a Real Analysis probability de Robert B. Ash}, por lo que de aquí en adelante suponemos que estas son las clases
+$\mathcal{A}$
+
+
+
+\begin{teo}{Probabilidad del vac\'io}\protect $P(\varPhi)=0$ \end{teo}
+
+\begin{prueba} consideremos la sucesión infinita de eventos $A_{1},A_{2},A_{3},\cdots\in\mathcal{A}$
+los cuales son todos vacíos y además disjuntos ya que $\phi\cap\phi=\phi,\;$de
+acuerdo con esto tenemos que $\bigcup_{i=1}^{\infty}A_{i}=\phi$ al
+aplicar A$_{3}$ tenemos 
+\[
+P\left(\phi\right)=P\left(\bigcup_{i=1}^{\infty}A_{i}\right)=\sum_{i=1}^{\infty}P\left(A_{i}\right)
+\]
+ y el único real que cumple esta propiedad es el cero por lo que $P\left(\phi\right)=0$
+\end{prueba}
+
+\begin{teo}{} Para cualquier sucesión finita de $n$ eventos disjuntos
+$A_{1},A_{2},A_{3},\cdots A_{n}\in\mathcal{A}$ 
+\[
+P\left(\bigcup_{i=1}^{n}A_{i}\right)=\sum_{i=1}^{n}P\left(A_{i}\right)
+\]
+
+
+\end{teo}
+
+\begin{prueba} Consideremos la sucesión infinita de eventos $A_{1},A_{2},A_{3},\cdots\in\mathcal{A}$
+en los cuales hay $A_{1},A_{2},A_{3},\cdots A_{n}$ eventos disjuntos
+y los $A_{n+1},A_{n+2},A_{n+3},\cdots$ son vacíos. Entonces $\bigcup_{i=1}^{\infty}A_{i}=\bigcup_{i=1}^{n}A_{i}$.
+Por A$_{3}$ tenemos 
+\begin{align*}
+P\left(\bigcup_{i=1}^{n}A_{i}\right) & =P\left(\bigcup_{i=1}^{\infty}A_{i}\right)\\
+ & =\sum_{i=1}^{n}P\left(A_{i}\right)+\sum_{i=n+1}^{\infty}P\left(A_{i}\right)\\
+ & \sum_{i=1}^{n}P\left(A_{i}\right)+0\\
+ & \sum_{i=1}^{n}P\left(A_{i}\right)
+\end{align*}
+
+
+\end{prueba}
+
+\begin{teo}{} para cualquier suceso $A\in\mathcal{A}$ se tiene que
+$P\left(A^{\prime}\right)=1-P\left(A\right)$ \end{teo} 
+
+\begin{prueba} Como $A\in\mathcal{A}\Longrightarrow A^{\prime}\in\mathcal{A}$
+y además $A\cup A^{\prime}=S$ y $P\left(S\right)=1$ tenemos por
+el teorema 4 que 
+\[
+P\left(A\cup A^{\prime}\right)=P\left(A\right)+P\left(A^{\prime}\right)=P\left(S\right)
+\]
+ pero de acuerdo con A$_{2}$ $P\left(S\right)=1,$ entonces 
+\begin{align*}
+P\left(A\right)+P\left(A^{\prime}\right) & =1\\
+P\left(A^{\prime}\right) & =1-P\left(A\right)
+\end{align*}
+
+
+\end{prueba}
+
+\begin{teo}{} Si $A,B\in\mathcal{A}$ y $A\subset B$, entonces $P\left(B\right)\geq P\left(A\right)$
+\end{teo}
+
+\begin{prueba} Como se ilustra en la fig 3.1 El evento $B$ lo podemos
+escribir como $B=A\cup\left(B\cap A^{\prime}\right)$ entonces 
+\begin{align*}
+P\left(B\right) & =P\left(A\cup\left(B\cap A^{\prime}\right)\right)\\
+ & =P\left(A\right)+P\left(B\cap A^{\prime}\right)
+\end{align*}
+ y del A$_{1}$ $P\left(B\cap A^{\prime}\right)\geq0$ de lo que se
+deduce $P\left(B\right)\geq P\left(A\right)$ \end{prueba}
+
+\begin{figure}
+
+
+\caption{aaaa}
+\includegraphics[scale=0.4]{44_home_antalcides_Escritorio_est_libros-est_pdf_fig3_2.pdf}
+
+\end{figure}
+
+
+Para dos sucesos cualesquiera $A,B\subset\mathcal{A}$ cualesquiera
+\[
+P\left(A\cup B\right)=P\left(A\right)+P\left(B\right)-P\left(A\cap B\right)
+\]
+ Como se ilustra en la fig 3.2 
+\[
+A\cup B=\left(A\cap B^{\prime}\right)\cup\left(A\cap B\right)\cup\left(A^{\prime}\cap B\right)
+\]
+ como los eventos $\left(A^{\prime}\cap B\right),\left(A\cap B^{\prime}\right)$
+y $\left(A\cap B\right)$ son disjuntos podemos aplicar el teorema
+3.1 
+\begin{align*}
+P\left(A\cup B\right) & =\\
+ & P\left(A\cap B^{\prime}\right)+P\left(A\cap B\right)+P\left(A^{\prime}\cap B\right)
+\end{align*}
+ pero en la gráfica se observa que 
+\begin{align*}
+A & =(A\cap B\acute{})\cup(A\cap B)\\
+ & \;\;\;\;\;\;\;\;y\\
+B & =\left(A\cap B\right)\cup(A\acute{}\cap B)
+\end{align*}
+ al aplicar el teorema 5 queda 
+\begin{align*}
+P\left(A\right) & =P\left(A\cap B^{\prime}\right)+P\left(A\cap B\right)\\
+P\left(B\right) & =P\left(A\cap B\right)+P\left(A^{\prime}\cap B\right)
+\end{align*}
+ al despejar y sustituir obtenemos lo que queremos 
+
+\begin{center}
+$B=A\cup\left(B\cap A^{\prime}\right)$ donde $C=$ \raisebox{--0.1565in}{%
+\parbox[b]{2.9291in}{%
+\begin{center}
+\includegraphics[scale=0.4]{45_media_antalcides_Antalcides-EXT1_est_bak_est_pdf_fig3_1.pdf}\\
+ Figura 3.1 $B=A\cup\left(B\cap A^{\prime}\right)$ donde $C=\left(B\cap A^{\prime}\right)$ 
+\par\end{center}%
+}}
+\par\end{center}
+
+\begin{teo}{} Para dos sucesos $A,B\subset\mathcal{A}$ cualesquiera
+\[
+P\left(A\cup B\right)=P\left(A\right)+P\left(B\right)-P\left(A\cap B\right)
+\]
+Como se ilustra en la fig 3.2 
+\[
+A\cup B=\left(A\cap B^{\prime}\right)\cup\left(A\cap B\right)\cup\left(A^{\prime}\cap B\right)
+\]
+como los eventos $\left(A^{\prime}\cap B\right),\left(A\cap B^{\prime}\right)$
+y $\left(A\cap B\right)$ son disjuntos podemos aplicar el teorema
+3.1 
+\begin{align*}
+P\left(A\cup B\right) & =\\
+ & P\left(A\cap B^{\prime}\right)+P\left(A\cap B\right)+P\left(A^{\prime}\cap B\right)
+\end{align*}
+pero en la gráfica se observa que 
+\begin{align*}
+A & =(A\cap B%TCIMACRO{\U{b4}}%
+%BeginExpansion
+\acute{}%EndExpansion
+)\cup(A\cap B)\\
+ & \;\;\;\;\;\;\;\;y\\
+B & =\left(A\cap B\right)\cup(A\acute{}\cap B)
+\end{align*}
+al aplicar el teorema 5 queda 
+\begin{align*}
+P\left(A\right) & =P\left(A\cap B^{\prime}\right)+P\left(A\cap B\right)\\
+P\left(B\right) & =P\left(A\cap B\right)+P\left(A^{\prime}\cap B\right)
+\end{align*}
+al despejar y sustituir obtenemos lo que queremos \end{teo}
+
+\begin{center}
+\includegraphics[scale=0.4]{46_media_antalcides_Antalcides-EXT1_est_bak_est_pdf_fig3_2.pdf}\\
+ Figura 3.2 Partición de $A\cup B$
+\par\end{center}
+
+\begin{teo}{} Sean $A_{1},A_{2},A_{3},\cdots A_{n}\in\mathcal{A}$
+una sucesión finita de eventos se tiene 
+\begin{align*}
+P\left(\bigcup_{i=1}^{n}A_{i}\right) & =\sum_{i=1}^{n}P\left(A_{i}\right)-\sum_{i<j=2}^{n}P\left(A_{i}\cap A_{j}\right)+\\
+ & +\sum_{i<j<r=3}^{n}P\left(A_{i}\cap A_{j}\cap A_{r}\right)+\\
+ & +\cdots+\left(-1\right)^{n-1}P\left(\bigcap_{i=1}^{n}A_{i}\right)
+\end{align*}
+
+
+\end{teo}
+
+\begin{ejemplo}[] Un estudiante de clase puede ser hombre o mujer.
+Si la probabilidad de que un hombre sea seleccionado es 0.3 ¿Cuál
+es la probabilidad de que sea seleccionada una mujer?
+
+\begin{solucion} Sea $A$ el evento de que se seleccione un hombre
+de la clase y sea $B$ el evento de seleccionar una mujer, entonces
+es obvio que $S=A\cup B,$ y además $A\cap B=\phi,$ aplicando el
+teorema 7 
+\[
+P\left(A\cup B\right)=P\left(A\right)+P\left(B\right)-P\left(A\cap B\right)
+\]
+y de los teorema 4 y A$_{2}$ obtenemos 
+\begin{align*}
+1 & =P\left(A\right)+P\left(B\right)\\
+1 & =0,3+P\left(B\right)\\
+P\left(B\right) & =0,7
+\end{align*}
+
+
+\end{solucion} \end{ejemplo}
+
+\begin{ejemplo}[] Se selecciona una bola de una urna que contiene
+bolas rojas, blancas, azules, amarillas y verdes. Si la probabilidad
+de seleccionar una bola roja es $\frac{1}{5}$ y la de seleccionar
+una blanca es $\frac{2}{5}$ ¿Cuál es la probabilidad de seleccionar
+una bola azul, amarilla o blanca? \end{ejemplo}
+
+\begin{solucion} Sean $A_{1},A_{2},A_{3},A_{4},A_{5},A_{6}$ los
+eventos de seleccionar de la urna una bola roja, blanca, azul, amarilla
+y verde respectivamente. Nos dicen que $P\left(A_{1}\right)=$ $\frac{1}{5}$
+y $P\left(A_{2}\right)=\frac{2}{5}$, entonces 
+\[
+P\left(A_{3}\cup A_{4}\cup A_{5}\cup A_{6}\right)=P\left(B\right)=?
+\]
+Como los eventos son disjuntos 
+\[
+S=A_{1}\cup A_{2}\cup A_{3}\cup A_{4}\cup A_{5}\cup A_{6}
+\]
+y por A$_{2}$ y el th.3 
+\begin{align*}
+1 & =P\left(A_{1}\right)+P\left(A_{2}\right)+P\left(B\right)\\
+P\left(B\right) & =1-\frac{1}{5}-\frac{2}{5}=\frac{2}{5}
+\end{align*}
+
+
+\end{solucion}
+
+\begin{ejemplo}[] Si la probabilidad de que un estudiante A pierda
+un examen de estadística es de 0,5, la probabilidad de que un estudiante
+B pierda el mismo examen es de 0,2 y la probabilidad de que ambos
+pierdan el examen es de 0,1 \end{ejemplo}
+\begin{enumerate}
+\item \textit{¿Cuál es la probabilidad de que al menos uno de estos estudiantes
+gane el examen?}
+\item \textit{¿Cuál es la probabilidad de de que ninguno de los dos pierda
+el examen?} 
+\end{enumerate}
+\begin{solucion} Sea $A$ el evento que el estudiante A pierda el
+examen y sea $B$ el evento de que el estudiante B pierda el examen
+de estadística \end{solucion}
+\begin{description}
+\item [{\textit{Nos}}] \textit{piden la probabilidad de que uno de los
+dos gane el examen pero no los dos, es decir si }$C$ \textit{es}
+\textit{este evento} 
+\begin{align*}
+P\left(C\right) & =P\left(A^{\prime}\right)+P\left(B^{\prime}\right)-P\left(A^{\prime}\cap B^{\prime}\right)\\
+P\left(A^{\prime}\right) & =1-P\left(A\right)=1-0,5=0,5\\
+P\left(B^{\prime}\right) & =1-P\left(B\right)=1-0,2=0,8\\
+A^{\prime}\cap B^{\prime} & =\left(A\cup B\right)^{\prime}\\
+P\left(A^{\prime}\cap B^{\prime}\right) & =1-P\left(A\cup B\right)
+\end{align*}
+\textit{Pero} 
+\begin{align*}
+P\left(A\cup B\right) & =P\left(A\right)+P\left(B\right)-P\left(A\cap B\right)=0,6\\
+P\left(A^{\prime}\cap B^{\prime}\right) & =0,4
+\end{align*}
+\textit{entonces} 
+\[
+P\left(C\right)=0,5+0,8-0,4=0,9
+\]
+
+\item [{$P\left(A^{\prime}\cap B^{\prime}\right)=0,4$}]~
+\end{description}
+
+\section{Técnica para la enumeración de puntos muestrales}
+
+\index{%
+Técnicas de conteo%
+}Cuando $S$ o cualquiera de sus subconjuntos tiene muchos eventos
+elementales describirlo por extensión para determinar los casos favorables
+y casos posibles se hace engorroso por lo que en esta se\-cción utilizaremos
+el análisis combinatorio para determinar los casos favorables y posibles
+de una manera más simple.
+
+
+\subsection{Diagrama de árbol}
+
+\index{%
+Diagrama de árbol%
+}En experimentos simples es muy útil utilizar un método llamado diagrama
+de árbol el cual explicaré con un ejemplo.
+
+\begin{ejemplo}[] Si se lanza una moneda legal tres veces ¿Cuál es
+la probabilidad de que \ en la primera y la ultima lanzada salga
+cara?. \end{ejemplo}
+
+\begin{solucion} En el diagrama observamos que para el primer lanzamiento
+hay dos posibilidades sello ($S$) y cara ($C$) en el segundo lanzamiento
+para cada posibilidad anterior hay dos nuevas posibilidades y en el
+tercer se da lo mismo por lo que al final hay 8 casos posibles y dos
+casos favorables de acuerdo con Laplace, entonces si $A$ es el evento
+que sale cara en el primer y último lanzamiento 
+\[
+P\left(A\right)=\frac{2}{8}=\frac{1}{4}
+\]
+
+
+\end{solucion}
+
+\begin{center}
+\includegraphics[scale=0.4]{47_home_antalcides_Escritorio_est_libros-est_pdf_g11ir300.pdf}\\
+ Diagrama de árbol 
+\par\end{center}
+
+\begin{teo}{} Considérese un experimento que tiene las dos cara\-cterísticas
+siguientes \end{teo}
+\begin{itemize}
+\item \textit{El experimento se realiza en dos partes }
+\item \textit{La primera parte del experimento tiene }$m$ \textit{resultados
+posibles }$x_{1},x_{2},x_{3},\cdots,x_{m}$ \textit{independientemente
+del resultado} $x_{i}$ \textit{obtenido la segunda parte del experimento
+tiene }$n$\textit{\ resultados posibles }$y_{1},y_{2},y_{3},\cdots,y_{n}$\textit{.}\\
+\textit{Cada resultado del espacio muestral S del experimento será
+por tanto, un par de la forma }$\left(x_{i},y_{j}\right)$\textit{\ es
+decir } 
+\begin{align*}
+S & =\left\{ \left(x_{i},y_{j}\right)|i=1,2,3,\cdots m;j=1,2,3\cdots n\right\} \\
+n\left(S\right) & =mn
+\end{align*}
+
+\end{itemize}
+Este teorema puede generalizarse de la siguiente forma
+
+Si un experimento \ puede realizarse con las siguientes características
+\begin{itemize}
+\item El experimento se realiza en $k$ partes
+\item la primera parte puede realizarse con $n_{1}$ resultados posibles
+$x_{11},x_{12},x_{13},\cdots,x_{1n_{1}}$ e independientemente del
+resultado $x_{1i}$ se pueden realizar la segunda parte con $n_{2}$
+resultados posibles $x_{21},x_{22},x_{23},\cdots,x_{2n_{2}}$ y así
+sucesivamente cada parte del experimento puede realizarse de $n_{l}$
+formas, $l=1,2,3,\cdots k$ obteniéndose un espacio muestral de la
+forma 
+\begin{align*}
+S & =\{(x_{1i},x_{2j},x_{3r},\cdots,x_{km})\}\\
+n\left(S\right) & =n_{1}\cdot n_{2}\cdot n_{3}\cdot\cdots\cdot n_{k}
+\end{align*}
+
+\end{itemize}
+Ahora enunciamos este teorema de una manera diferente.
+
+\begin{teo}{Fundamental}. Si una acción puede efectuarse de una de
+$p$ maneras diferentes, y si después de que esta acción ha sido efectuada
+de una de esas maneras, una segunda acción puede efectuarse de una
+de $q$ maneras diferentes, entonces el número total de maneras diferentes
+en que las acciones pueden efectuarse sigui\-endo el orden mencionado
+es $pq.$ \end{teo}
+
+\begin{coro} Si una acción puede efectuarse de $p$ maneras dife\-rentes,
+y una segunda acción puede efectuarse de $q$ maneras dife\-rentes,
+y una tercera acción puede efectuarse de $r$ maneras dife\-rentes,
+y así sucesivamente, entonces el número total de maneras diferentes
+en que pueden realizarse todas estas acciones en el orden mencionado
+es $pqr...$ \end{coro}
+
+\begin{coro} Si $r$ acciones pueden efectuarse sucesivamente de
+$p$ maneras diferentes cada una, entonces el número total de maneras
+diferentes en que pueden efectuarse las $r$ acciones sucesivamente
+es $p^{r}.$ \end{coro}
+
+
+\section{Permutaciones}
+
+\begin{defi}{}{}\index{%
+Permutaciones%
+}Una permutación es un arreglo de objetos distintos de tal manera que
+una permutación difiere de otra si el orden del arreglo o su contenido
+difieren \end{defi}
+
+Conviene observar que el orden es una característica de especial importancia
+en una permutación. Cuando cambiamos el orden de los elementos de
+este arreglo, se dice que permutamos dichos elementos
+
+
+\subsection{Muestreo sin reemplazo}
+
+\index{%
+Muestreo!Sin reemplazo%
+}Consideremos un experimento en el cual se selecciona un objeto de
+$n$ objetos distintos, y luego se selecciona un segundo objeto de
+los $n-1$ objetos restantes, y así sucesivamente hasta seleccionar
+el último objeto Este proceso \ se llama muestreo sin reemplazo\ de
+acuerdo con el teorema anterior los $n$ objetos se pueden seleccionar
+de $n\left(n-1\right)\left(n-2\right)\cdots3\cdot2\cdot1$ $=n!$
+formas diferentes\
+ Ahora si no se escogen todos los objetos, si no $k$ objetos, los
+$k$ objetos se pueden seleccionar 
+\begin{align*}
+p_{n,k} & =n\left(n-1\right)\left(n-2\right)\cdots\left(n-k+1\right)=\frac{n!}{\left(n-k\right)!}\;\;r\leq n\\
+0! & =1\\
+1! & =1\\
+p_{n,n} & =n\left(n-1\right)\left(n-2\right)\cdots1=n!
+\end{align*}
+
+
+\begin{ejemplo}[] Supongamos que se necesitan dos representantes
+del grupo 02 de estadística I-ad para asistir a un congreso \end{ejemplo}
+
+\begin{solucion} Como el grupo 02 de estadística tiene 40 alumnos
+y se necesitan dos, eso quiere decir que que escogen 2 de 40 
+\[
+p_{40,2}=\frac{40!}{\left(40-2\right)!}=1560
+\]
+
+
+\end{solucion}
+
+\begin{ejemplo}[] Se necesita colocar 7 libros en un estante ¿De
+cuantas formas posibles se pueden colocar? \end{ejemplo}
+
+\begin{solucion} Como se escogerán 7 de 7 entonces 
+\[
+p_{7,7}=7!=5040
+\]
+
+
+\end{solucion}
+
+
+\subsection{Muestreo con reemplazo}
+
+\index{%
+Muestreo!Con reemplazo%
+}Si suponemos que tenemos una urna con $n$ objetos numerados del $1$
+al $n$ y se selecciona un objeto de la urna y se anota su número,
+y luego se coloca nuevamente en la urna, luego se selecciona otro
+objeto el cual pude ser el primero y así sucesivamente se pueden seleccionar
+tantos objetos como se quieran. Este proceso se denomina muestreo
+con reemplazo.
+
+Si queremos realizar un total de $k$ selecciones distintas, se nos
+presentan dos posibilidades
+\begin{itemize}
+\item Si $k>n$, es imposible ya que hay $n$ números posibles y no están
+repetidos.
+\item Si $n\geq k$ Entonces existen $n^{k}$ posibles formas de escoger
+los \ $k$ objetos 
+\end{itemize}
+\begin{ejemplo}[] Si se colocan al azar 12 bolas en 20 urnas, ¿Cuál
+es la probabilidad de que ninguna urna contenga más de una bola \end{ejemplo}
+
+\begin{solucion} Como hay 20 urnas y 12 bolas entonces podemos escoger
+12 de 20 posibilidades de colocar las bolas, pero hay 20$^{12}$,
+posibles formas de escoger una urna con una bola 
+\[
+p=\frac{20!}{8!\ast20^{12}}=\frac{235\,702\,467}{16\,\allowbreak000\,000\,000}
+\]
+
+
+\end{solucion}
+
+
+\paragraph{Coeficiente multinomial}
+
+\index{%
+Coeficiente multinomial%
+}El número de formas en las que se pueden asignar $n$ objetos distintos
+de $k$ grupos diferentes que contienen $n_{1},n_{2},n_{3},\cdots,n_{k}$
+objetos respectivamente es 
+\begin{align*}
+N & =\frac{n!}{n_{1}!n_{2}!n_{3}!\cdots n_{k}!}=\left(\begin{array}{c}
+n\\
+n_{1}n_{2}n_{3}\cdots n_{k}
+\end{array}\right)\\
+\text{ donde }n & =\sum_{i=1}^{k}n_{i}
+\end{align*}
+
+
+
+\subsection{Combinación}
+
+\index{%
+Combinación%
+}Una combinación es un arreglo de objetos distintos donde una combinación
+difiere de otra si difiere el contenido del arreglo. Si nos interesa
+determinar el número de combinaciones cuando en $n$ objetos distintos
+deben seleccionarse $r$ a la vez entonces 
+\[
+C_{n,r}=\frac{p_{n,r}}{r!}=\left(\begin{array}{c}
+n\\
+r
+\end{array}\right)\;\;r\leq n
+\]
+ya que el numerador es el número de permutaciones al escoger $r$
+objetos de $n$ posibles, pero hay que descontar los casos en que
+el orden determina para la combinación el mismo elemento, que es exactamente
+$r!.$
+
+
+\subsubsection{Propiedades}
+\begin{itemize}
+\item $\left(\begin{array}{c}
+n\\
+0
+\end{array}\right)=\left(\begin{array}{c}
+n\\
+n
+\end{array}\right)=1$
+\item $\left(\begin{array}{c}
+n\\
+k
+\end{array}\right)=\left(\begin{array}{c}
+n\\
+n-k
+\end{array}\right)$
+\item $\left(\begin{array}{c}
+n\\
+k
+\end{array}\right)+\left(\begin{array}{c}
+n\\
+k-1
+\end{array}\right)=\left(\begin{array}{c}
+n+1\\
+k
+\end{array}\right)$
+\item $C_{n,r}=C_{n-1,r-1}+C_{n-1,r}$
+\item El número de maneras en que $mn$ objetos diferentes pueden dividirse
+en $m$ grupos de $n$ objetos cada uno, en donde el orden de los
+objetos en cada grupo no se toma en consi\-deración, es \\
+$\frac{\left(mn\right)!}{\left(n!\right)^{m}},$ considerando el orden
+en que se forman los grupos,\\
+$\frac{\left(mn\right)!}{\left(n!\right)^{m}m!},$ sin considerar
+el orden en que se forman los grupos. 
+\end{itemize}
+\begin{ejemplo}[] Calcular el número de maneras distintas en que
+15 libros diferentes pueden dividirse en tres grupos de 9, 4 y 2 libros
+respectivamente.
+
+\begin{solucion} En este caso 
+\[
+N_{m}=\frac{15!}{9!4!2!}=75075.
+\]
+
+
+\end{solucion} \end{ejemplo}
+
+\begin{ejemplo}[] Se tiene una baraja\footnote{Muchos problemas de probabilidad están relacionados con cartas, y
+aunque algunos estudiantes están relacionados con este juego, lo describiremos
+brevemente para que los problemas sean entendidos con claridad. 
+
+Una baraja ordinaria tiene 52 cartas divididas en cuatro grupos o
+palos con trece cartas cada uno. Los nombres de los palos y sus colores
+son los siguientes: 
+
+Bastos(negros), diamantes(rojos), corazones(rojos) y espadas(negras. 
+
+Cada palo consiste de 9 cartas numeradas del 2 al 10 inclusive y 4
+cartas más llamadas as, rey, reina y sota (ordenadas en valor descendente).
+La expresión de que una carta se escoge o saca al azar, significa
+que la carta se toma de una baraja bien mezclada del modo que todas
+las cartas tengan igual oportunidad de ser escogida.} de 52 cartas diferentes. \end{ejemplo}
+
+Encontrar
+\begin{enumerate}
+\item El número de maneras en que pueden repartirse las cuatro manos de
+13 cartas a cuatro jugadores de bridge
+\item El número de maneras en que las 52 cartas pueden dividirse en cuatro
+grupos de 13 cartas cada uno. 
+\end{enumerate}
+
+\begin{enumerate}
+\item En el juego de bridge cada distribución diferente de las manos entre
+los jugadores constituye una división diferente. Por tanto, en este
+caso, los grupos aparecen permutados, y por lo tanto, el número de
+maneras diferentes es 
+\begin{align*}
+\frac{52!}{\left(13!\right)^{4}} & =\\
+ & 53\,\allowbreak644\,737\,765\,\allowbreak488\,792\,839\,\allowbreak237\,440\,000
+\end{align*}
+
+\item En este caso, no importa el orden de los grupos, así el número de
+maneras es 
+\begin{align*}
+\frac{52!}{\left(13!\right)^{4}4!} & =\\
+ & 2235\,197\,406\,\allowbreak895\,366\,368\,\allowbreak301\,560\,000
+\end{align*}
+
+\end{enumerate}
+\begin{ejemplo}[] Una moneda se tira 10 veces.\ Calcular la probabi\-lidad
+de que aparezcan exactamente 7 caras \end{ejemplo}
+
+\begin{solucion} Ya que la moneda tiene dos formas diferentes de
+aparecer en cada tiro, en 10 sería $2^{10}$ formas. Y de las 10 caras
+vamos a seleccionar 7 caras, por lo que serían $C_{10,7}$ formas
+diferentes, por lo que la probabilidad buscada es 
+\[
+P=\frac{\binom{10}{7}}{2^{10}}=\frac{15}{128}
+\]
+
+
+\end{solucion}
+
+\begin{ejemplo}[] Si se sacan $3$ cartas al azar de una baraja de
+$52$ cartas, calcular la probabilidad de que sean as, rey y reina.
+\end{ejemplo}
+
+\begin{solucion} Se pueden seleccionar $3$ cartas al azar entre
+$52$, por lo que hay $C_{52,3}\;$formas diferentes. Y como hay $4$palos
+y en cada palo hay un as, un rey y una reina, entonces resulta que
+estas barajas pueden obtenerse de $4\times4\times4$ formas diferentes
+.Por lo que la probabilidad buscada es 
+\[
+\frac{4^{3}}{\binom{52}{3}}=\frac{16}{5525}=2.\,\allowbreak895\,9\times10^{-3}
+\]
+
+
+\end{solucion}
+
+\begin{ejemplo}[] De una bolsa que que contiene 4 bolas blancas,
+2 negras y 3 rojas, se sacan 5 al azar. Calcular la probabilidad de
+que 2 sean blancas 1 negra y 2 rojas. \end{ejemplo}
+
+\begin{solucion} Del total de $4+2+3=9$ bolas se pueden seleccionar
+5 bolas en $C_{9,5}$ formas diferentes. Ahora entre las 4 bolas blancas
+2 de ellas pueden seleccionarse $C_{4,2}$, entre las 2 blancas $C_{2,1}$
+y entre las 3 rojas $C_{3,2}$ formas por lo que el total de casos
+favorables es $C_{4,2}C_{2,1}C_{3,2}$, así 
+\[
+P=\frac{\binom{4}{2}\binom{2}{1}\binom{3}{2}}{\binom{9}{5}}=\frac{2}{7}
+\]
+
+
+\end{solucion}
+
+
+\section{Probabilidad condicionada e independencia de eventos}
+
+\begin{defi}{}{}\index{%
+Probabilidad!condicionada%
+}Sean $A,B\in\mathcal{A}$ y sea $B$ un evento de probabilidad no
+nula para el evento $A$, llamamos probabilidad condicionada de $A$
+a $B$ a la cantidad que representamos $P\left(A|B\right)$ y que
+definimos 
+\[
+P\left(A|B\right)=\frac{P\left(AB\right)}{P\left(B\right)},
+\]
+la cantidad $P\left(A|B\right)$ se lee la probabilidad de $A$ dada
+la ocu\-rrencia de $B$ \end{defi}
+
+\begin{ejemplo}[]\index{%
+Eventos!Independencia%
+}Se lanza al aire un dado ¿Cuál es la probabilidad de que salga el
+número 4? si sabemos que el resultado ha sido par \end{ejemplo}
+
+\begin{solucion} Sea $A=\{4\}$, entonces $P\left(A\right)=\frac{1}{6},$\\
+$B=\{2,4,6\},$ \ entonces $P\left(B\right)=\frac{3}{6}=\frac{1}{2}$\\
+por tanto 
+\[
+P\left(A|B\right)=\frac{P\left(AB\right)}{P\left(B\right)}=\frac{\frac{1}{6}}{\frac{1}{2}}=\frac{1}{3}
+\]
+
+
+\end{solucion}
+
+\begin{defi}{}{} Sean $A,B\in\mathcal{A}$ dos eventos de probabilidad
+no nula se dice que son independientes si y solo si 
+\[
+P\left(AB\right)=P\left(A\right)P\left(B\right)
+\]
+
+
+\end{defi}
+
+\begin{ejemplo}[] Para cierta población de empleados, los porcentajes
+de quienes aprueban un examen de aptitud para un trabajo, especificados
+según el sexo, se muestran en la tabla. Es decir todas las personas
+que presentan el examen el 24\% cae en la categoría de hombre aprobado,
+el 16\% en la categoría de de hombre reprobado, y así sucesivamente.
+Se selecciona al azar un empleado de esta población. Sea $A$ el evento
+de que el empleado aprueba el examen y $H$ el evento de que se selecciona
+un hombre ¿Son independientes los eventos $A$ y $H$ ? 
+\[
+\begin{tabular}{|c|c|}
+\hline   &  sexo\\
+\hline  \begin{tabular}{l}
+ Resultado\\
+ Aprueba \ensuremath{\left(A\right)}\\
+ Reprueba\ensuremath{\left(A^{\prime}\right)}\\
+ Total 
+\end{tabular}  &  \begin{tabular}{lll}
+ Mujer\ensuremath{\left(M\right)}  &  Hombre\ensuremath{\left(H\right)}  &  Total\\
+ 24  &  36  &  60\\
+ 16  &  24  &  40\\
+ 40  &  60  &  100 
+\end{tabular} 
+\\\hline \end{tabular}
+\]
+
+
+\begin{solucion} Determinemos 
+\begin{align*}
+P\left(A|H\right) & =\frac{{}}{{}}\\
+ & =\_\_\_\_\_\_\\
+ & =\_\_\_\_\_\_\\
+ & =\_\_\_\_\_\_\_
+\end{align*}
+
+
+\end{solucion} \end{ejemplo}
+
+
+\subsection{Reglas multiplicativas}
+
+\index{%
+Reglas multiplicativas%
+}
+
+\begin{teo}{} Sea $A_{1},A_{2},A_{3},\cdots A_{n}\in\mathcal{A}$
+una sucesión de eventos aleatorios, entonces 
+\[
+P\left(\bigcap_{i=1}^{n}A_{i}\right)=P\left(A_{1}\right)P\left(A_{2}|A_{1}\right)P\left(A_{3}|A_{1}A_{2}\right)\cdots P\left(A_{n}|\bigcap_{i=1}^{n-1}A_{i}\right)
+\]
+
+
+\end{teo}
+
+\begin{defi}{}{} Se dice que una colección de eventos independientes
+$A_{1},A_{2},A_{3},\cdots A_{n}\in\mathcal{A}$ es un evento exhaustivo
+y excluyente de sucesos, si se verifican las siguientes condiciones
+\begin{align*}
+\bigcup_{i=1}^{n}A_{i} & =S\\
+A_{i}\cap A_{j} & =\phi\qquad\forall i\neq j
+\end{align*}
+
+
+\end{defi}
+\begin{figure}[ptbh]
+\centering{}\includegraphics[scale=0.4]{48_media_antalcides_Antalcides-EXT1_est_bak_est_pdf_Image1.pdf}\caption{%
+$A_{1},A_{2},A_{3},A_{4}$ y $A_{5}$ forman un sistema exhaustivo
+y excluyente de sucesos%
+}
+\label{fig 3.5}
+\end{figure}
+
+
+\begin{teo}{} sea $A_{1},A_{2},A_{3},\cdots A_{n}\in\mathcal{A}$
+un sistema exhaustivo y excluyente de sucesos. Entonces 
+\[
+\forall B\subset\mathcal{A},\Longrightarrow P\left(B\right)=\sum_{i=1}^{n}P\left(B|A_{i}\right)P\left(A_{i}\right)
+\]
+
+
+\end{teo}
+
+\begin{figure}[ptbh]
+\centering{}\includegraphics[scale=0.4]{49_media_antalcides_Antalcides-EXT1_est_bak_est_pdf_particion.pdf}\caption{%
+Si $A_{1},A_{2},A_{3},A_{4}$ forman un sistema exhaustivo y excluyente
+de sucesos , podemos calcular la probabilidad de $B$ a partir de
+las cantidades $P\left(B\cap A_{i}\right)$%
+}
+\label{fig 3.6}
+\end{figure}
+
+
+\begin{prueba} Como $B\subset S$ podemos decir 
+\begin{align*}
+P\left(B\right) & =P\left(B\cap\left(\bigcup_{i=1}^{n}A_{i}\right)\right)\\
+ & =P\left(\bigcup_{i=1}^{n}\left(B\cap A_{i}\right)\right)\\
+ & =\sum_{i=1}^{n}P\left(B\cap A_{i}\right)\\
+ & =\sum_{i=1}^{n}P\left(B|A_{i}\right)P\left(A_{i}\right)
+\end{align*}
+
+
+\begin{ejemplo}[] Se tienen dos urnas, y cada una de ellas contiene
+un número diferente de bolas blancas y rojas: \end{ejemplo} \end{prueba}
+\begin{itemize}
+\item \textit{primera urna }$U_{1}\mathit{:}$ \textit{3 bolas blancas y
+2 roja}s
+\item \textit{Segunda urna }$U_{2}$\textit{\ 4 bolas blancas y 2 rojas} 
+\end{itemize}
+\textit{Se realiza el siguiente experimento :}
+
+\textit{Se tira una moneda al aire y si sale cara se elige una bola
+de la primera urna y si sale sello se escoge una bola de la segunda
+urna.}
+
+\textit{¿Cuál es la probabilidad de que salga una bola blanca?}
+
+\begin{solucion} La situación que tenemos la podemos esquematizar
+de la siguiente manera\\
+Si $B$: es el evento de sacar una bola blanca y $R$ : el evento
+de sacar una bola roja, entonces 
+\begin{align*}
+P\left(U_{1}\right) & =\frac{1}{2}\\
+P\left(B|U_{1}\right) & =\frac{3}{5}\\
+P\left(U_{2}\right) & =\frac{1}{2}\\
+P\left(B|U_{2}\right) & =\frac{4}{6}
+\end{align*}
+Como $U_{1}$ y $U_{2}$ forman un sistema exhaustivo y excluyente
+de sucesos aplicando el teorema de la probabilidad total podemos afirmar
+que, 
+\begin{align*}
+P\left(B\right) & =P\left(B|U_{1}\right)P\left(U_{1}\right)+P\left(B|U_{2}\right)P\left(U_{2}\right)\\
+ & =\frac{3}{5}\cdot\frac{1}{2}+\frac{4}{6}\cdot\frac{1}{2}=\frac{19}{30}
+\end{align*}
+
+
+\end{solucion}
+
+\begin{teo}{} (Bayes) Sea $A_{1},A_{2},A_{3},\cdots A_{n}\in\mathcal{A}$
+un sistema exhaustivo y excluyente de eventos. \index{%
+Teorema!Bayes%
+}Sea $B\subset\mathcal{A}$ un suceso del que conocemos todas las cantidades
+\[
+P\left(B|A_{i}\right),i=1,2,3,\cdots,n
+\]
+a las que denominamos verosimilitudes, entones se verifica 
+\[
+\forall j=1,2,3,\cdots,n,\qquad P\left(A_{j}|B\right)=\frac{P\left(B|A_{j}\right)P\left(A_{j}\right)}{\sum_{i=1}^{n}P\left(B|A_{i}\right)P\left(A_{i}\right)}
+\]
+
+
+\end{teo}\begin{prueba} Es consecuencia de la definición de probabilidad
+condicionada en términos de la intersección, y del teorema de la probabilidad
+total 
+\begin{align*}
+P\left(A_{j}|B\right) & =\frac{P\left(A_{j}\cap B\right)}{P\left(B\right)}\\
+ & =\frac{P\left(B|A_{j}\right)P\left(A_{j}\right)}{\sum_{i=1}^{n}P\left(B|A_{i}\right)P\left(A_{i}\right)}
+\end{align*}
+
+
+\end{prueba}
+
+\begin{ejemplo}[] Se tienen tres urnas. Cada una de ellas contiene
+un número diferente de bolas blancas y rojas. La primera urna tiene
+3 bolas blancas y 2 rojas, la segunda 4 bolas blancas y 2 rojas y
+la tercera 3 bolas rojas.\\
+Se realiza el siguiente experimento:\\
+Alguién elije al azar y con la misma probabilidad una de las tres
+urnas, saca una bola.\\
+Si el resultado del experimento ha sido sacar una bola blanca ¿Cuál
+es la probabilidad de que provenga de la primera urna? Calcular lo
+mismo para las otras dos urnas. \end{ejemplo}
+
+\begin{solucion} Si $B$: es el evento de sacar una bola blanca y
+$R$: el evento de sacar una bola roja, entonces como \\
+\begin{tabular}{ll}
+$U_{1}:$  &
+3 bolas blancas y 2 rojas\tabularnewline
+$U_{2}:$  &
+4 bolas blancas y 2 rojas\tabularnewline
+$U_{3}:$  &
+3 bolas rojas \tabularnewline
+\end{tabular}\\
+tenemos 
+\begin{align*}
+P\left(U_{1}\right) & =\frac{1}{3}\\
+P\left(U_{2}\right) & =\frac{1}{3}\\
+P\left(U_{3}\right) & =\frac{1}{3}\\
+P\left(B|U_{1}\right) & =\frac{3}{5}\\
+P\left(B|U_{2}\right) & =\frac{4}{6}\\
+P\left(B|U_{3}\right) & =0
+\end{align*}
+En este caso $U_{1},U_{2},U_{3}$ forman un sistema incompatible y
+excluyente de eventos, por lo que es posible aplicar el teorema de
+Bayes 
+\begin{align*}
+P\left(U_{1}|B\right) & =\frac{P\left(B|U_{1}\right)P\left(U_{1}\right)}{P\left(B|U_{1}\right)P\left(U_{1}\right)+P\left(B|U_{2}\right)P\left(U_{2}\right)+P\left(B|U_{3}\right)P\left(U_{3}\right)}\\
+ & =\frac{\left(\frac{3}{5}\right)\left(\frac{1}{3}\right)}{\left(\frac{3}{5}\right)\left(\frac{1}{3}\right)+\left(\frac{4}{6}\right)\left(\frac{1}{3}\right)+0\left(\frac{1}{3}\right)}\\
+ & =\frac{9}{19}
+\end{align*}
+\\
+Para los otros dos casos resulta de manera equivalente 
+\begin{align*}
+P\left(U_{2}|B\right) & =\frac{P\left(B|U_{2}\right)P\left(U_{2}\right)}{P\left(B|U_{1}\right)P\left(U_{1}\right)+P\left(B|U_{2}\right)P\left(U_{2}\right)+P\left(B|U_{3}\right)P\left(U_{3}\right)}\\
+ & =\frac{10}{19}
+\end{align*}
+\begin{align*}
+P\left(U_{3}|B\right) & =\frac{P\left(B|U_{3}\right)P\left(U_{3}\right)}{P\left(B|U_{1}\right)P\left(U_{1}\right)+P\left(B|U_{2}\right)P\left(U_{2}\right)+P\left(B|U_{3}\right)P\left(U_{3}\right)}\\
+ & =0
+\end{align*}
+
+
+\end{solucion}
+
+\begin{ejemplo}[] En la segunda guerra mundial, uno de los primeros
+intentos de investigación de operaciones en la Gran Bretaña se orientaba
+en establecer patrones de búsqueda de submarinos desde vuelos de escuadrones
+o mediante un sólo avión. Por algún tiempo, la tendencia fue concentrar
+los vuelos en la costa, pues se pensaba que le mayor número de avistamientos
+que ocurrían ahí. El grupo de investigación registró 1000 vuelos de
+un solo avión con los sigui\-entes resultados( Los datos no son reales)\\
+\\
+\begin{tabular}{|l|l|l|l|}
+\hline 
+ &
+En la playa  &
+Fuera de la costa  &
+Total\tabularnewline
+\hline 
+Observación  &
+80  &
+20  &
+100\tabularnewline
+\hline 
+No observación  &
+820  &
+80  &
+900\tabularnewline
+\hline 
+Total de salidas  &
+900  &
+100  &
+1000\tabularnewline
+\hline 
+\end{tabular}\\
+sea\\
+\begin{tabular}{ll}
+$S_{1}$  &
+Hubo un avistamiento\tabularnewline
+$S_{2}$  &
+No hubo avistamiento\tabularnewline
+$B_{1}$  &
+Salida a la costa\tabularnewline
+$B_{2}$  &
+Salida en altamar \tabularnewline
+\end{tabular}\\
+Vemos de inmediato que 
+\begin{align*}
+P\left(S_{1}|B_{1}\right) & =\frac{80}{900}=\frac{4}{45}=8.\,\allowbreak888\,9\times10^{-2}\\
+P\left(S_{2}|B_{2}\right) & =\frac{20}{100}=0.\,\allowbreak2
+\end{align*}
+lo cual indica una estrategia de búsqueda es contraria a la primera
+práctica. \end{ejemplo}
+
+\begin{ejemplo}[] Supóngase que se va a seleccionar una muestra ale\-atoria
+de tamaño 2 de un lotes de tamaño 100, y que se sabe que 98 de los
+100 artículos se encuentran en buen estado. La muestra se toma de
+manera tal que el primer artículo se observa y se regresa antes de
+seleccionar el segundo artículo \end{ejemplo}
+
+\begin{solucion} . Si aceptamos \ que \\
+$A$ : El primer artículo observado está en buen estado \\
+$B$ : El segundo artículo observado está en buen estado \\
+Y si deseamos determinar la probabilidad de que ambos artículos estén
+en buen estado, entonces 
+\[
+P\left(A\cap B\right)=P\left(A\right)P\left(B\right)=\left(\frac{98}{100}\right)\left(\frac{98}{100}\right)=0.\,\allowbreak960\,4
+\]
+Si se selecciona el artículo sin reemplazo de modo que que el primer
+artículo no se regresa antes de seleccionar el segundo, entonces 
+\[
+P\left(A\cap B\right)=P\left(A\right)P\left(B|A\right)=\frac{98}{100}\cdot\frac{97}{99}=0.9602
+\]
+Los resultados son muy parecidos por lo que generalmente suponemos
+que los eventos son independientes cuando la fracción de muestreo
+(tamaño de la muestra/tamaño de la población) es menor que 0.1 \end{solucion}
+
+\begin{ejemplo}[] Tres industrias suministran microprocesadores a
+un fabricante de equipos de telemetría. Todos se elaboran supuestamente
+con las mismas especificaciones. No obstante, el fabricante ha probado
+durante varios años los microprocesadores, y los re\-gis\-tros indican
+la siguiente información\\
+\begin{tabular}{|l|l|l|}
+\hline 
+Industria  &
+Fracción de defectos  &
+Fracción suministrada por\tabularnewline
+\hline 
+1  &
+0.02  &
+0.15\tabularnewline
+\hline 
+2  &
+0.01  &
+0.80\tabularnewline
+\hline 
+3  &
+0.03  &
+0.05\tabularnewline
+\hline 
+\end{tabular}\\
+EL fabricante ha interrumpido las pruebas por causa de los costos
+involucrados, y puede ser razonable suponer que la proporción defectuosa
+y la mezcla de inventarios son las mismas que durante el periodo en
+el que se efectuaron los registros. El director de manu\-factura
+selecciona un microprocesador al azar, lo lleva al de\-par\-tamento
+de pruebas y descubre que está defectuoso. Determinar la probabilidad
+que el artículo proviene de la industria 3\\
+Sea $A$ el evento de que el artículo es defectuoso y $B_{i}\;i=1,2,3$
+es el evento que el artículo proviene de la empresa $i$ 
+\begin{align*}
+P\left(B_{3}|A\right) & =\frac{P\left(A|B_{2}\right)P\left(B_{2}\right)}{P\left(A|B_{1}\right)P\left(B_{1}\right)+P\left(A|B_{2}\right)P\left(B_{2}\right)+P\left(A|B_{3}\right)P\left(B_{3}\right)}\\
+ & =\frac{\left(0.05\right)\left(0.03\right)}{\left(0.15\right)\left(0.02\right)+\left(0.8\right)\left(0.01\right)+\left(0.05\right)\left(0.03\right)}=0.\,\allowbreak12
+\end{align*}
+
+
+\end{ejemplo}
+
+\begin{ejemplo}[] Una caja contiene 8 bolas rojas, 3 bolas blancas
+y nueve azules. Si se sacan 3 bolas al azar, determinar la proba\-bili\-dad
+de que \end{ejemplo}
+\begin{enumerate}
+\item[\foreignlanguage{english}{a.}] \textit{\ Las 3 sea rojas}
+\item[\foreignlanguage{english}{b.}] \textit{\ Las tres sean blancas}
+\item[\foreignlanguage{english}{c.}] \textit{2 sean rojas}
+\item[\foreignlanguage{english}{d.}] \textit{\ Al menos una blanca}
+\item[\foreignlanguage{english}{e.}] \textit{\ Sea una de cada color}
+\item[\foreignlanguage{english}{f.}] \textit{Salgan en el orden roja,blanca y azul} 
+\end{enumerate}
+\begin{solucion} \textit{\ Denotaremos por }$R_{i}\;i=1,2,3$\textit{\ los
+eventos que la primera, la segunda y la tercera bola sean rojas respectivamente.
+Denotaremos por }$B_{i}\;i=1,2,3$ los eventos que la primera, la
+segunda y la tercera bola sean blancas respectivamente, y\textit{\ denotaremos
+por }$A_{i}\;i=1,2,3$\textit{\ los eventos que la primera, la segunda
+y la tercera bola sean rojas respectivamente, entonces} \end{solucion}
+\begin{enumerate}
+\item[\foreignlanguage{english}{a.}] 
+\[
+P\left(\bigcap_{i=1}^{3}R_{i}\right)=\frac{\left(\begin{array}{c}
+8\\
+3
+\end{array}\right)}{\left(\begin{array}{c}
+20\\
+3
+\end{array}\right)}=\frac{14}{285}
+\]
+\end{enumerate}
+\begin{description}
+\item [{b.}] 
+\[
+P\left(\bigcap_{i=1}^{3}B_{i}\right)=\frac{\left(\begin{array}{c}
+3\\
+3
+\end{array}\right)}{\left(\begin{array}{c}
+20\\
+3
+\end{array}\right)}=\frac{1}{1140}
+\]
+
+\item [{c.}] 
+\[
+P\left(\bigcap_{i=1}^{2}R_{i}\cap B\right)=\frac{\left(\begin{array}{c}
+8\\
+2
+\end{array}\right)}{\left(\begin{array}{c}
+20\\
+3
+\end{array}\right)}=\frac{\_}{\_}
+\]
+
+\item [{d.}] 
+\[
+P\left(\text{ninguna es blanca}\right)=\frac{\left(\begin{array}{c}
+17\\
+3
+\end{array}\right)}{\left(\begin{array}{c}
+20\\
+3
+\end{array}\right)}=\frac{\_}{\_}
+\]
+
+\item [{e.}] 
+\[
+P\left(\text{sacar una de cada color}\right)=\frac{\left(\begin{array}{c}
+8\\
+1
+\end{array}\right)\left(\begin{array}{c}
+3\\
+1
+\end{array}\right)\left(\begin{array}{c}
+9\\
+1
+\end{array}\right)}{\left(\begin{array}{c}
+20\\
+3
+\end{array}\right)}=\frac{\_}{\_}
+\]
+
+\item [{f.}] 
+\begin{align*}
+ & P\left(\text{bolas en el orden R, B,A}\right)\\
+ & =\frac{1}{3!}P\left(\text{una de cada colore}\right)=\frac{3}{95}
+\end{align*}
+
+\end{description}
+\begin{ejemplo}[] De una baraja de 52 naipes \ bien mezclada se
+sacan 5 naipes. Hallar la probabilidad de que 3 sean de un palo y
+2 de otro \end{ejemplo}
+
+\begin{solucion}
+\begin{align*}
+P\left(\text{3 de cualquier figura y 2 de otra}\right) & =\\
+ & =\frac{4\binom{13}{3}\cdot3\binom{13}{2}}{\binom{52}{5}}\\
+ & =0.\,\allowbreak103
+\end{align*}
+
+
+\end{solucion}
+
+\begin{ejemplo}[] Supóngase que se lanzan 12 dados. Se determina
+la probabilidad $p$ de que cada uno de los seis números distintos
+aparezca dos veces \end{ejemplo}
+
+\begin{solucion} tenemos que $S$ es el conjunto formado por la sucesión
+de 12-tupla donde la i-ésimo valor de la sucesión es el resultado
+i-ésimo lanzamiento, de lo que se deduce que $n\left(S\right)=6^{12}$
+donde todos los $6^{12}$ resultados posibles son igualmente probables,
+ahora podemos considerar los seis valores posibles que se puede dar
+en cada dado como seis casillas las cuales \ se le pueden asignar
+solo dos posibilidades. Por lo que al utilizar el coeficiente multinomial
+para determinar los casos favorables tenemos 
+\begin{align*}
+n & =12\\
+k & =6\\
+n_{1} & =n_{2}=\cdots=n_{6}=2\\
+N & =\frac{12!}{\left(2!\right)\left(2!\right)\cdots\left(2!\right)}=\frac{12!}{\left(2!\right)^{6}}
+\end{align*}
+Por lo que la probabilidad buscada es\\
+$P=\frac{12!}{2^{6}6^{12}}$ $=$ $\frac{1925}{559\,872}=$ $3.\,\allowbreak438\,3\times10^{-3}$
+\end{solucion}
+
+\begin{ejemplo}[] Una baraja de 52 cartas contiene 13 corazones.
+Su\-póngase que se barajan las cartas y se distribuyen entre cuatro
+jugadores A,B,C y D de tal manera que a cada jugador le corres\-pondan
+13 cartas, Se determinará la probabilidad $P$ de que cada jugador
+reciba 6, 4, 2 y 1 \ corazones respectivamente \end{ejemplo}
+
+\begin{solucion} El número de combinaciones distintas posibles de
+las 13 posiciones ocupadas en la baraja por los corazones es $\binom{52}{13}$.
+Si el jugador A recibe 6 corazones, hay $\binom{13}{6}$ combinaciones
+posibles de las 6 posiciones que ocupan estos corazones entre las
+13 cartas que recibe el jugador A. De la misma manera podemos establecer
+las combinaciones posibles de cada jugador entre las 13 cartas que
+recibe cada uno como $\binom{13}{4},\binom{13}{2}$ y $\binom{13}{1}$
+respectivamente para B,C y D. Por tanto como los eventos A,B,C y D
+son independientes 
+\[
+P\left(ABCD\right)=\frac{\binom{13}{6}\binom{13}{4}\binom{13}{2}\binom{13}{1}}{\binom{52}{13}}=1.\,\allowbreak9592\times10^{-3}
+\]
+
+
+\end{solucion}
+
+\begin{ejemplo}[] Supóngase que una moneda equilibrada va a ser lanzada
+diez veces y se desea determinar \end{ejemplo}
+\begin{description}
+\item [{a.}] \textit{\ la probabilidad }$P$\textit{\ de obtener exactamente
+3 caras}
+\item [{b.}] \textit{\ La probabilidad }$P$\textit{\ de obtener a lo
+sumo tres caras} 
+\end{description}
+\begin{solucion} \qquad{}\qquad{}\end{solucion}
+\begin{enumerate}
+\item[\foreignlanguage{english}{a.}] El número total de posibles combinaciones distintas de 10 caras y
+sellos es $2^{10}$ y se puede suponer que todas estas combinaciones
+son igualmente probables y el número de casos favorables \ es \ $\binom{10}{3}$
+por lo que 
+\[
+p=\frac{\binom{10}{3}}{2^{10}}=0.\,\allowbreak117\,19
+\]
+
+\end{enumerate}
+\begin{solucion} 
+\begin{description}
+\item [{b.}] Puesto que lo que me piden es la union de los eventos $A_{i}$
+: obte\-ner 0,1,2 y 3 caras \ $i=0,1,2,3$, y como estos eventos
+son disjuntos tenemos que 
+\[
+P\left(\bigcup_{i=0}^{3}A_{i}\right)=\frac{\binom{10}{0}+\binom{10}{1}+\binom{10}{2}+\binom{10}{3}}{2^{10}}=0.\,\allowbreak171\,88
+\]
+
+\end{description}
+\end{solucion}
+
+\begin{ejemplo}[] Supóngase que en una clase hay 15 hombres y 30
+mujeres, y que se van a seleccionar al azar 10 estudiantes para una
+tarea especial. se determinará la probabilidad $P$ de seleccionar
+exactamente 3 hombres \end{ejemplo}
+
+\begin{solucion} el número de combinaciones distintas que se pu\-eden
+formar con 45 estudiantes para obtener una muestra de 10 es $\binom{45}{10},$
+y como el muestreo es al azar y sin reemplazo entonces todas estas
+combinaciones son igualmente posibles por lo que hay que determinar
+el números de combinaciones \ distintas que se pueden seleccionar
+con 3 hombres y 7 mujeres, entonces con los hombres se pueden realizar
+$\binom{15}{3}$ y con las mujeres $\binom{30}{7}$ por lo que 
+\[
+P=\frac{\binom{15}{3}\binom{30}{7}}{\binom{45}{10}}=\frac{3958\,500}{13\,633\,279}=0.\,\allowbreak290\,36
+\]
+
+
+\end{solucion}
+
+\begin{ejemplo}[] Supóngase que se baraja un naipe de 52 cartas que
+contiene 4 ases y que las cartas se reparten entre cuatro jugadores,
+de forma que cada una reciba 13 cartas. se determinará la proba\-bilidad
+de que cada jugador reciba un as. \end{ejemplo}
+
+\begin{solucion} El número de combinaciones diferentes es $\binom{52}{4}.$
+Y podemos suponer que todas estas combinaciones son igualmente probables.
+si cada jugador recibe un as entonces debe haber un as entre las 13
+cartas que recibe por ejemplo el primer jugador y un as recibirá cada
+uno de los jugadores de las 13 cartas que recibirán, es decir hay
+13 posiciones posibles para el as que recibe cada jugador por lo que
+los casos favorables será $13^{4},$ entonces 
+\[
+P=\frac{13^{4}}{\binom{52}{4}}=\frac{2197}{20\,825}=0.\,\allowbreak105\,5
+\]
+
+
+\end{solucion}
+
+\begin{ejemplo}[] Supóngase que una máquina produce un artículo defectuoso
+con probabilidad $p=0.4$ y produce un artículo no defectuoso con
+una probabilidad $q=0,6$. Supóngase además que se seleccionan aleatoriamente
+para su control seis de los artículos producidos por la máquina y
+que los resultados de control son independientes para estos seis artículos.
+Se determinará la probabilidad de que exactamente dos de los seis
+artículos sean defectuosos \end{ejemplo}
+
+\begin{solucion} Si consideramos los eventos $D_{i}$ el evento del
+que el $i-\acute{e}simo$ artículo sea defectuoso y $N_{j}$ el evento
+de que el $\ i-\acute{e}simo$ artículo sea no defectuoso para, $i=1,2,3,4,5,6,$
+como los eventos son independientes entonces por ejemplo 
+\[
+P\left(N_{1}N_{3}D_{2}D_{4}D_{5}D_{6}\right)=qqpppp
+\]
+como esta es una de las posibles combinaciones hay que determinar
+las otras que no es más que $\binom{6}{2}$ combinaciones distintas
+y por el th 3.13 tenemos 
+\[
+P=\binom{6}{2}\left(0.4\right)^{2}\left(0.6\right)^{4}=0.\,\allowbreak311\,04
+\]
+
+
+\end{solucion}
+
+\begin{ejemplo}[] considérese una máquina que produce un artículo
+defectuoso con una probabilidad $p=0.4$ y uno no defectuoso con probabilidad
+$q=0.6$. Supóngase que el control se realiza seleccionando artículos
+al azar y de uno en uno hasta obtener exactamente cinco artículos
+defectuosos. Se determinará \ la probabilidad $P$ de que deban ser
+seleccionados 20 artículos para obtener 5 defectuosos \end{ejemplo}
+
+\begin{solucion} El quinto artículo defectuoso será el $n-\acute{e}simo$
+controlado si, y sólo si, hay exactamente cuatro defectuosos entre
+los primeros $\ n-1$ artículos y el $n-\acute{e}simo$ es defectuoso
+entonces por el th 3.13 tenemos que 
+\begin{align*}
+P & =\binom{n-1}{4}p^{5}q^{n-5}=\binom{19}{4}\left(0.4\right)^{5}\left(0.6\right)^{15}\\
+ & =1.\,\allowbreak866\,2\times10^{-2}
+\end{align*}
+
+
+\end{solucion}
+
+\begin{ejemplo}[] Supóngase que se van a extraer dos bolas aleatoriamente
+y sin reemplazo, de una urna que contiene 8 bolas rojas y 10 bolas
+azules. Se determinará la probabilidad $P$ de obtener la primera
+bola roja y la segunda azul \end{ejemplo}
+
+\begin{solucion} Sea A el evento de que la primera bola sea roja
+y B de que la segunda bola sea azul, entonces $P\left(A\right)=\frac{8}{18}=0.\,\allowbreak444\,44$,
+además si el suceso A ha ocurrido, entonces se ha obtenido una bola
+roja de la urna en la primera extracción por lo que la probabilidad
+de obtener una bola azul en la segunda extracción es 
+\[
+P\left(B|A\right)=\frac{10}{17}=0.\,\allowbreak588\,24
+\]
+entonces 
+\[
+P\left(AB\right)=\left(0.\,\allowbreak444\,44\right)\left(0.\,\allowbreak588\,24\right)=0.\,\allowbreak261\,44
+\]
+
+
+\end{solucion}
+
+\begin{ejemplo}[] Para la fabricación de un gran lote de artículos
+similares se utilizaron tres máquinas $M_{1},M_{2}$ y $M_{3}$. Supóngase
+que el 20\% de los artículos fueron fabricados por la máquina $M_{1}$,
+el 30\% por la máquina $M_{2}$ y el 50\% por la máquina $M_{3}$
+Suponemos además que el 1\% de los artículos fabricados por la máquina
+$M_{1}$ son defectuosos y así respectivamente 2\% y 3\% de los artículos
+fa\-bricados por la máquinas $M_{2}$ y $M_{3}$. Se quiere seleccionar
+al azar uno de los artículos del lote que resultan defectuosos. Determine
+la probabilidad de que el artículo haya sido fabricado por la máquina
+$M_{2}$. \end{ejemplo}
+
+\begin{solucion} Sea $A_{i}$ el evento de que el artículo haya sido
+fa\-bricado por la máquina $M_{i},i=1,2,3,$ y sea B el suceso de
+que el artículo seleccionado sea defectuoso, de acuerdo con esto hay
+que determinar $P\left(A_{2}|B\right)$, entonces 
+\begin{align*}
+P\left(A_{1}\right) & =0.2\\
+P\left(A_{2}\right) & =0.3\\
+P\left(A_{3}\right) & =0.5\\
+P\left(B|A_{1}\right) & =0.01\\
+P\left(B|A_{2}\right) & =0.02\\
+P\left(B|A_{3}\right) & =0.03
+\end{align*}
+aplicando el teorema de Bayes 
+\[
+P\left(A_{2}|B\right)=\frac{P\left(A_{2}\right)P\left(B|A_{2}\right)}{\sum_{i=1}^{3}P\left(A_{i}\right)P\left(B|A_{i}\right)}=0.26
+\]
+
+
+\end{solucion}
+
+\problemas{ 
+\begin{enumerate}
+\item Tres clases diferentes tienen 20, 18 y 25 estudiantes, respectivamente,
+y cada estudiante pertenece a una sola clase. Si se forma un equipo
+con un estudiante de cada una de estas tres clases, ¿de cuántas maneras
+distintas se pueden seleccionar los miembros del equipo?
+\item ¿De cuántas maneras distintas se pueden ordenar cinco letras a, b,
+c, d y e?
+\item Si un hombre tiene seis camisas distintas y cuatro pares distintos
+de pantalones, ¿de cuántas formas distintas se puede vestir combinando
+esas prendas?
+\item Si se lanzan cuatro dados, ¿cuál es la probabilidad de que los cuatro
+números que aparecen sean distintos?
+\item Si se lanzan seis dados, ¿cuál es la probabilidad de que cada uno
+de los seis números posibles aparezcan exactamente una vez?
+\item Si se colocan al azar 12 bolas en 20 urnas, ¿cuál es la probabilidad
+de que ninguna urna contenga más de una bola?
+\item El ascensor de un edificio empieza a subir con cinco personas y para
+en siete pisos. Si la probabilidad de que cualquier pasajero salga
+del ascensor en un piso concreto es igual para todos los pisos y los
+pasajeros salen independientemente unos de otros, ¿cuál es la probabilidad
+de que no haya dos pasajeros que salgan en el mismo piso?
+\item Si $k$ personas se sientan aleatoriamente en una fila de $n$ asientos
+$(n>k)$, ¿cuál es la probabilidad de que ocupen $k$ asientos contiguos
+en la fila?
+\item Si$k$ personas se sientan aleatoriamente en $n$ sillas dispuestas
+en círculo $(n>k)$, ¿cuál es la probabilidad de que ocupen $k$ sillas
+contiguas del círculo?
+\item Si $n$ personas se sientan aleatoriamente en una fila de $2n$ asientos,
+¿cuál es la probabilidad de que no haya dos personas sentadas en asientos
+contiguos?
+\item Una caja contiene 24 bombillas, de las cuales 2 son defectuosas. Sí
+una persona selecciona 10 bombillas al azar, sin reemplazo, ¿cuál
+es la probabilidad de seleccionar las 2 bombillas defectuosas?
+\item Supóngase que se ha de seleccionar un comité de 12 personas aleatoriamente
+escogidas entre un grupo de 100. Determínese la probabilidad de que
+dos personas concretas, A y B, sean seleccionadas.
+\item Supóngase que 35 personas se dividen aleatoriamente en dos equipos
+de manera que uno de los equipos consta de 10 personas y el otro de
+25. ¿Cuál es la probabilidad de que dos personas concretas, A y B,
+estén en el mismo equipo?
+\item Una caja contiene 24 bombillas, de las cuales 4 son defectuosas. Si
+una persona selecciona aleatoriamente 10 bombillas de la caja, y una
+segunda persona toma entonces las 14 bombillas restantes, ¿cuál es
+la probabilidad de que la misma persona seleccione las 4 bombillas
+defectuosas?
+\item Demuéstrese que, para cualquier entero positivo $n$ y $k$ ($n>k),$
+\[
+\binom{n}{k}+\binom{n}{k-1}=\binom{n+1}{k}
+\]
+
+\item Demuéstrese que 
+\[
+\binom{n}{0}+\binom{n}{1}+\binom{n}{2}+\cdots+\binom{n}{n}=2^{n}
+\]
+
+\item El Senado de Estados Unidos está constituido por dos senado\-res
+de cada uno de los 50 estados,
+
+\begin{enumerate}
+\item Si se selecciona aleatoriamente un comité de 8 senadores, ¿cuál es
+la probabilidad de que contenga al menos uno de los dos senadores
+de un estado concreto?
+\item ¿Cuál es la probabilidad de que un grupo de 50 senadores seleccionados
+aleatoriamente contenga un senador de cada estado? 
+\end{enumerate}
+\item Supóngase que$A$ es un suceso tal que $P(A)=0$ y que $B$\ es cualquier
+otro suceso. Demuéstrese que $A$ y$B$ son sucesos independientes.
+\item Supóngase que una persona lanza tres veces dos dados equilibrados.
+Determínese la probabilidad de que en cada uno de los tres lanzamientos
+la suma de los dos números que aparecen sea 7.
+\item Supóngase que la probabilidad de que el sistema de control utilizado
+en una nave espacial no funcione en un vuelo concreto es 0.001. Supóngase
+además que la nave también tiene instalado un segundo sistema de control
+idéntico, pero completamente independiente del primero, que toma el
+control cuando el primero falla. Determínese la probabilidad de que
+en un vuelo concreto la nave espacial esté bajo control, ya sea del
+sistema original o del sistema duplicado.
+\item Supóngase que una lotería consta de 10 000 boletos y que otra lotería
+consta de 5000. Si una persona compra 100 boletos de cada lotería,
+¿cuál es la probabilidad de que gane al menos un primer premio?
+\item Dos estudiantes A y B están inscritos en un curso. Si el estudiante
+A asiste a las clases el 80\% de las veces y el estudiante B el 60\%,
+y si las ausencias de los dos estudiantes son independientes, ¿cuál
+es la probabilidad de que al menos uno de los dos estudiantes esté
+en clase un día concreto?
+\item Si se lanzan tres dados equilibrados, ¿cuál es la probabilidad de
+que los tres números que aparecen sean iguales?
+\item Considérese un experimento en el cual se lanza una moneda equilibrada
+hasta que aparece una cara por primera vez. Si este experimento se
+repite tres veces, ¿cuál es la probabilidad de que se necesite exactamente
+el mismo número de lanzamientos para cada una de las tres repeticiones?
+\item Supóngase que $A$, $B$ y $C$ son tres sucesos independientes tales
+que $P(A)=\frac{1}{4},\;P(B)=\frac{1}{3},\;$y $P(C)=\frac{1}{2}$
+.
+
+\begin{enumerate}
+\item Determínese la probabilidad de que ninguno de estos tres sucesos ocurra
+\item Determínese la probabilidad de que ocurra exactamente uno de estos
+tres sucesos. 
+\end{enumerate}
+\item Supóngase que la probabilidad de que una partícula emitida por un
+material radiactivo penetre en cierto campo es 0.01. Si se emiten
+diez partículas,
+
+\begin{enumerate}
+\item ¿cuál es la probabilidad de que exactamente una de ellas penetre en
+el campo?
+\item Si se emiten diez partículas, ¿cuál es la probabilidad de que al menos
+una de ellas penetre en el campo?
+\item ¿Cuántas partículas tienen que ser emitidas para que la probabilidad
+de que al menos una partícula penetre en el campo sea al menos 0.8? 
+\end{enumerate}
+\item En la Serie Mundial de Béisbol, dos equipos A y B juegan una serie
+de partidos uno contra otro y el primer equipo que gana un total de
+cuatro partidos es el ganador de la Serie Mundial. Si la probabilidad
+de que el equipo A gane un partido contra el equipo B es $\frac{1}{3}$,
+¿cuál es la probabilidad de que el equipo A gane la Serie Mundial?
+\item 15. El Senado de Estados Unidos está constituido por dos senadores
+de cada uno de los 50 estados, (a) Si se selecciona aleatoriamente
+un comité de 8 senadores, ¿cuál es la probabilidad de que contenga
+al menos uno de los dos senadores de un estado concreto? (b) ¿Cuál
+es la probabilidad de que un grupo de 50 senadores seleccionados aleatoriamente
+contenga un senador de cada estado?
+\item La probabilidad de que una persona nade es de 0.45 y la probabilidad
+de que una persona cace es de 0.58. Si la probabilidad de que una
+persona cace sabiendo que también caza es 0.21, encuentre la probabilidad
+de que:
+
+\begin{enumerate}
+\item Cace y nade
+\item Cace si también nada
+\item Cace y no nade
+\item Cace o nade 
+\end{enumerate}
+\item La tabla adjunta muestra las frecuencias relativas para el daltonismo
+en hombres y mujeres, donde H representa hombres, M mujeres, D daltónico
+y ND no daltónico 
+\[
+\begin{tabular}{l|ll}
+  &  H  &  M\\
+\hline  D  &  0.042  &  0.007\\
+ ND  &  0.485  &  0.466 
+\end{tabular}
+\]
+Si se escoge a una persona al azar, use la tabla para determinar las
+probabilidades siguientes:
+
+\begin{enumerate}
+\item $P\left(H\right)$
+\item $P\left(H\cap D\right)$
+\item $P\left(D\right)$
+\item $P\left(H\cap ND\right)$ 
+\end{enumerate}
+\item Si $P\left(E\right)=0.2$ y $P\left(F\right)=0.3.$ Responda si puede
+ser cierto en cada una de las preguntas dadas y si es posible plantee
+un ejemplo.
+
+\begin{enumerate}
+\item ¿$P\left(E\cup F\right)=0.5?$
+\item ¿$P\left(E\cup F\right)=0.7?$
+\item ¿$P\left(E\cup F\right)=0.4?$
+\item ¿$P\left(E\cap F\right)=0.2?$
+\item ¿$P\left(E\cap F\right)=0.3?$
+\item ¿$P\left(E\cap F\right)=0.1?$
+\item ¿$P\left(E\cap F\right)=0.4?$ 
+\end{enumerate}
+\item Si cuatro hombres y cuatro mujeres se colocan en fila, ¿Cuál es la
+probabilidad de que un arreglo aleatorio de los ocho individuos tenga
+
+\begin{enumerate}
+\item hombres y mujeres alternados?
+\item A los hombres todos juntos? 
+\end{enumerate}
+\item De un conteo de tarjetas numeradas dei 1 al 10000. ¿Cuál es la probabilidad
+de que el número que te toque sea divisible exactamente por 5?
+\item Un especialista en alergias alega que el 50\% de sus pacientes sufre
+de alergia ¿Cuál es la probabilidad de que
+
+\begin{enumerate}
+\item de que 3 de sus siguientes cuatro pacientes sufran de alergia?
+\item Ninguno de los cuatro pacientes sufran de alergias? 
+\end{enumerate}
+\item De una caja que contiene 6 pelotas negras y 4 verdes, se sacan 3 en
+sucesión, reemplazándose cada una en la caja antes de extraer la siguiente.
+¿Cuál es la probabilidad de que
+
+\begin{enumerate}
+\item las 3 sen del mismo color
+\item sea al menos una de cada color 
+\end{enumerate}
+\item Un embarque de 12 televisores contiene 3 defectuosos. ¿En cuantas
+formas puede un hotel comprar 5 y recibir al menos 2 de los defectuosos?
+\item En una cierta ciudad, 40\% de los votantes son Liberales y el 60\%
+son conservadores; 70\% de los republicanos y el 80\% de los demócratas
+están a favor de una de una consulta popular. al seleccionar al azar
+un votante de la ciudad, ¿Cuál es la probabilidad de qué está a favor
+\ de la consulta ?
+\item ¿Cuántas manos de bridge que contengan 4 espadas, 6 diamantes, 1 de
+bastos y 2 de corazones son posibles?
+\item Una empresa industrial grande utiliza 3 hoteles locales para proporcionar
+alojamiento a sus clientes durante la noche. De pasadas experiencias
+se sabe que al 20\% de ellos se les asigna habitación en \ el hotel
+de Santa Marta, el 50\% en Cartagena y al 30\% en Tolú. Si existe
+una falla en el servicio de plomería en el 5\% de la habitaciones
+en Santa Marta , en el 4\% en Cartagena y del 8\% en Tolú. ¿Cuál es
+la probabilidad de que
+
+\begin{enumerate}
+\item a un cliente se le asigne un cuarto con problemas en plomería ?
+\item a una persona con un problema en plomería se asigne el hotel en Cartagena? 
+\end{enumerate}
+\item Un espacio muestral de 200 adultos se clasifica de acuerdo con su
+sexo y nivel de educación 
+\[
+\begin{tabular}{|l|l|l|}
+\hline  Educación  &  Hombre  &  Mujer\\
+\hline  Primaria  &  38  &  45\\
+\hline  Secundaria  &  28  &  50\\
+\hline  Bachillerato  &  22  &  17 
+\\\hline \end{tabular}
+\]
+Si se selecciona aleatoriamente a una persona de ese grupo, encuentre
+la probabilidad de que
+
+\begin{enumerate}
+\item no tenga grado de profesional dado de que sea mujer
+\item sea hombre dado que tiene educación superior 
+\end{enumerate}
+\item Se lanzan un par de dados, si se sabe que uno de ellos resulta en
+un 4, ¿cuál es la probabilidad de que
+
+\begin{enumerate}
+\item el otro caiga en 6
+\item el total de ambos sea 9 
+\end{enumerate}
+\item Supongamos que se selecciona al azar un individuo de la pobla\-ción
+de todos los adultos hombres que en los Estados Unidos. Sea a el evento
+en que el individuo seleccionado tenga una estatura de más de 6 pies,
+y B el evento de que el individuo seleccionado sea un jugador profesional
+de baloncesto. ¿Cuál considera que sea mayor $P\left(B|A\right)$
+o $P\left(A|B\right)?.$ ¿Por qué?
+\item Un circuito flexible se selecciona al azar de una corrida de producción
+de 1000 circuitos. Los defectos de manufactura se clasifican en tres
+diferentes tipos, denominados A. B y C. Los defectos de tipo A ocurren
+el 2 por ciento de las veces, los del tipo B, el 1 por ciento, y los
+de tipo C, el 1.5 por ciento. Además, se sabe que el 0.5 por ciento
+tienen los defectos de tipo A y B, el 0.6 por ciento, los defectos
+B y C, y el 0.4 por ciento presenta los defectos B y C, en tanto que
+el 0.2 por ciento tiene los tres defectos. ¿Cuál es la probabilidad
+de que el circuito flexible seleccionado tenga al menos uno de los
+tres tipos de defectos?
+\item En un laboratorio de factores humanos, se miden tiempos de reacción,
+por ejemplo, el tiempo que transcurre desde el instante en que se
+despliega un número de posición en un tablero digital hasta que el
+sujeto presiona un botón localizado en la posición indicada. Participan
+dos sujetos, midiéndose el tiempo en segundos para cada individuo
+$\left(t_{1},t_{2}\right).$ ¿Cuál es el espacio muestral para este
+experimento? Presente los siguientes eventos como subconjuntos y márquelos
+sobre un diagrama: 
+\[
+\left(\frac{t_{1}+t_{2}}{2}\right)\leq0.15,\;\max\left(t_{1},t_{2}\right)\leq0.15,\;\left|t_{1}-t_{2}\right|<0.6.
+\]
+
+\item Durante un periodo de 24 horas se entrará a un procesamiento computarizado.
+En un tiempo X y se saldrá en tiempo Y $\geq$ X. Considérense X y
+Y medido en horas en la linea del tiempo con el inicio del periodo
+de 24 horas como el origen. El experimento consiste en observar X
+y Y, (X, Y).
+
+\begin{enumerate}
+\item Describa el espacio muestral $S$.
+\item Dibuje los siguientes eventos en el plano X, Y.
+
+\begin{enumerate}
+\item El tiempo de utilización es una hora o menos
+\item El acceso es antes de $t_{1}$ y la salida después de $t_{2}$, donde
+$0\leq t_{1}\leq t_{2}\leq24$
+\item El tiempo de utilización es menor que el 20 por ciento del periodo. 
+\end{enumerate}
+\end{enumerate}
+\item Se prueban diodos de un lote uno a la vez y se marcan ya sea como
+defectuosos o como no defectuosos. Esto continúa hasta encontrar dos
+artículos defectuosos o cuando se han probado cinco artículos. Describa
+el espacio muestral para este experimento.
+\item Un conjunto tiene cuatro elementos $A=\{a,b,c,d\}$. Describa el conjunto
+partes de $A$ .
+\item Describa el espacio muestral para cada uno de los siguientes experimentos:
+
+\begin{enumerate}
+\item Un lote de 120 tapas de baterías para celdas de marcapasos contiene
+varias defectuosas debido a un problema con el material de barrera
+que se aplica en el sistema de alimentación. Se seleccionan tres tapas
+al azar (sin reemplazo) y se inspeccionan con cuidado siguiendo una
+reducción.
+\item Una paleta de 10 piezas fundidas contiene una unidad defectuosa y
+nueve en buen estado. Se seleccionan cuatro piezas al azar (sin reemplazo)
+y se inspeccionan. 
+\end{enumerate}
+\item El gerente de producción de cierta compañía está interesado en probar
+un producto terminado, que se encuentra disponible en lotes de tamaño
+50. A él le gustaría volver a elaborar un lote si tiene la completa
+seguridad de que el 10 por ciento de los artículos son defectuosos.
+Decide seleccionar una muestra al azar de 10 artículos sin reemplazo
+y volver a producir el lote si éste contiene uno o más artículos defectuosos.
+¿Este procedimiento parece razonable?
+\item Una firma de transporte tienen un contrato para enviar una carga de
+mercancías de la ciudad W a la ciudad Z. No hay rutas directas que
+enlacen W con Z, pero hay seis carreteras de W a X y cinco de X a
+Z. ¿Cuántas rutas en total deben considerarse?
+\item Un estado tienen un millón de vehículos registrados y está considerando
+emplear placas de licencia con seis símbolos en los que los primeros
+tres sean letras y los últimos tres, dígitos. ¿Es éste esquema factible?
+\item El gerente de una pequeña planta desea determinar el número de maneras
+en que puede asignar trabajadores al primer turno. Cuenta con 15 hombres
+que pueden servir como operadores del equipo de producción, 8 que
+pueden desempeñarse como personal de mantenimiento y 4 que pueden
+ser supervisores. Si el turno requiere 6 operadores, 2 trabajadores
+de mantenimiento, y 1 supervisor, ¿de cuántas maneras puede integrarse
+el primer turno?
+\item Un lote de producción tiene 100 unidades de las cuales 20 se sabe
+que están defectuosas. Una muestra aleatoria de 4 unidades se selecciona
+sin reemplazo. ¿Cuál es la probabilidad de que la muestra no contenga
+más de 2 unidades defectuosas?
+\item En la inspección de lotes de mercancías que están por recibirse, se
+emplea la siguiente regla de inspección en lotes que contienen 300
+unidades; se selecciona una muestra al azar de 10 artículos. Si no
+hay más que un artículo defectuoso en la muestra, se acepta el lote.
+De otro modo se regresa al vendedor. Si la fracción defectuosa en
+el lote original es $p^{\prime}$, determinar la probabilidad de aceptar
+el lote como una función de $p^{\prime}$
+\item En una planta de plásticos, 12 tubos vacían diferentes químicos en
+un tanque de mezcla. Cada tubo tienen una válvula de cinco posiciones
+que mide el flujo dentro del tanque. Un día, mientras se experimenta
+con diferentes mezclas, se obtiene una solución que emite un gas venenoso,
+no habiéndose registrado los valores en las válvulas. ¿Cuál es la
+probabilidad de obtener esta misma solución cuando se experimenta
+de nuevo de manera aleatoria?
+\item Ocho hombres y ocho mujeres con las mismas habilidades solicitan dos
+empleos. Debido a que los dos nuevos empleados deben trabajar estrechamente,
+sus personalidades deben ser compatibles. Para lograr esto, el administrador
+de personal ha aplicado una prueba y debe comparar las calificaciones
+para cada posibilidad. ¿Cuántas comparaciones debe efectuar el administrador?
+\item En forma casual, un químico combinó dos sustancias de laboratorios
+que produjeron un producto conveniente. Desafortunadamente, su asistente
+no registró los nombres de los ingredientes. Hay cuarenta sustancias
+disponibles en el laboratorio. Si las dos en cuestión deben encontrarse
+mediante experimentos sucesivos de ensayo y error, ¿cuál es el número
+máximo de pruebas que pueden realizarse?
+\item Un prisionero político será enviado a Siberia o a los Urales. Las
+probabilidades de que lo envíen a estos dos lugares son 0.6 y 0.4,
+respectivamente. Se sabe además que si un residente de Siberia se
+elige al azar hay una probabilidad de 0.5 de que lleve un abrigo de
+piel, en tanto que la probabilidad para lo mismos es de 0.7 en el
+caso de un residente de los Urales. Al llegar al exilio, la primera
+persona que ve el prisionero no lleva un abrigo de piel. ¿Cuál es
+la probabilidad de que esté en Siberia?
+\item Se diseña un dispositivo de frenado para evitar que un automóvil patine
+en el que incluye un.sistema electrónico e hidrá\-ulico. El sistema
+completo puede descomponerse en tres subsistemas en serie que operan
+de manera independiente: un sistema electrónico, un sistema hidráulico
+y un accionador mecánico. En un frenado particular, las confiabilidades
+de estas unidades son aproximadamente 0.995, 0.993 y 0.994, respectivamente.
+Estime la confiabilidad del sistema.
+\item Dos bolas se extraen de una urna que contiene $m$ bolas numeradas
+del 1 a $m$. Se conserva la primera bola si tiene el número 1, y
+se regresa en caso contrario. ¿Cuál es la probabilidad de que la segunda
+bola extraída tenga el número 2?
+\item Se eligen dos dígitos al azar de los dígitos del 1 al 9 y la selección
+es sin reemplazo (el mismo dígito no puede escogerse en ambas selecciones).
+Si la suma de los dígitos es par, encuentre la probabilidad de que
+ambos dígitos sean impares.
+\item En cierta universidad 20 por ciento de los hombre y 1 por ciento de
+las mujeres miden más de dos metros de altura. Asimismo, 40 por ciento
+de los estudiantes son mujeres. Si se selecciona un estudiante al
+azar y se observa que mide más de dos metros de altura, ¿Cuál es la
+probabilidad de que sea mujer?
+\item En un centro de maquinaria hay cuatro máquinas automáticas que producen
+tornillos. Un análisis de los registros de inspección anteriores produce
+los siguientes datos: 
+\[
+\begin{tabular}{|l|l|l|}
+\hline  \begin{tabular}{l}
+ \\
+ Máquina 
+\end{tabular}  &  \begin{tabular}{l}
+ Porcentaje de\\
+ \multicolumn{1}{c}{producción} 
+\end{tabular}  &  \begin{tabular}{c}
+ Porcentaje de\\
+ \multicolumn{1}{l}{defectos producidos} 
+\end{tabular} \\
+\hline  1  &  15  &  4\\
+\hline  2  &  30  &  3\\
+\hline  3  &  20  &  5\\
+\hline  4  &  35  &  2 
+\\\hline \end{tabular}
+\]
+Las máquinas 2 y 4 son más nuevas y se les ha asignado más producción
+que a las máquinas 1 y 3. Suponga que la combinación de inventarios
+refleja los porcentajes de producción indicados.
+
+\begin{enumerate}
+\item Si se elige un tornillo al azar del inventario, ¿cuál es la probabilidad
+de que esté defectuoso?
+\item Si se elige un tornillo y se encuentra que está defectuoso, ¿cuál
+es la probabilidad de que se haya producido en la máquina 3? 
+\end{enumerate}
+\item Supóngase que $A\subset B$. Demuéstrese que $B^{\prime}\subset A^{\prime}.$
+\item Para tres sucesos cualesquiera A, B y C, demuéstrese que 
+\[
+A(B\cup C)=(A\cap B)\cup(A\cap C).
+\]
+
+\item Para dos sucesos cualesquiera A y B, demuéstrese que 
+\[
+(A\cup B)^{\prime}=A^{\prime}\cap B^{\prime}\;\text{y}\;(A\cap B)^{\prime}=A^{\prime}\cup B^{\prime}.
+\]
+
+\item 4. Para cualquier conjunto de sucesos $A_{i}(i\in I)$, demuéstrese
+que
+
+\begin{enumerate}
+\item $\left(\bigcup_{i\in I}A_{i}\right)^{\prime}=\bigcap_{i\in I}A_{i}^{\prime}$
+\item $\left(\bigcap_{i\in I}A_{i}\right)^{\prime}=\bigcup_{i\in I}A_{i}^{\prime}$ 
+\end{enumerate}
+\item 5. Supóngase que se selecciona una carta de una baraja de veinte cartas
+que contiene diez cartas rojas numeradas del 1 al 10 y diez cartas
+azules numeradas del 1 al 10. Sea A el suceso de seleccionar una carta
+con un número par, sea B el suceso de seleccionar una carta azul y
+sea C el suceso de seleccionar una carta con un número menor que 5.
+Descríbanse el espacio muestral $S$ y cada uno de los siguientes
+sucesos en palabras y en subconjuntos de $S$:
+
+\begin{enumerate}
+\item $A\cap B\cap C$.
+\item $B\cap C^{\prime.}$
+\item $A\cup B\cup C.$
+\item $A\cap(B\cup C).$
+\item $A^{\prime}\cap B^{\prime}\cap C^{\prime}.$ 
+\end{enumerate}
+\item Un estudiante seleccionado de una clase puede ser chico o chica. Si
+la probabilidad de que un chico sea seleccionado es 0.3, ¿cuál es
+la probabilidad de que sea seleccionada una chica?
+\item Se selecciona una bola de una urna que contiene bolas rojas, blancas,
+azules, amarillas y verdes. Si la probabilidad de seleccionar una
+bola roja es $\frac{1}{5}$ y la de seleccionar una blanca es $\frac{2}{5}$
+¿cuál es la probabilidad de seleccionar una bola azul, amarilla o
+verde?
+\item Si la probabilidad de que un estudiante A suspenda un cierto examen
+de estadística es 0.5, la probabilidad de que un estudiante B suspenda
+el examen es 0.2 y la probabilidad de que ambos estudiantes A y B
+suspendan el examen es 0.1,
+
+\begin{enumerate}
+\item ¿cuál es la probabilidad de que al menos uno de estos dos estudiantes
+suspenda el examen?
+\item ¿cuál es la probabilidad de que ni el estudiante A ni el B suspendan
+el examen?
+\item ¿cuál es la probabilidad de que exactamente uno de los dos estudiantes
+suspenda el examen? 
+\end{enumerate}
+\item Considérense dos sucesos $A$y $B$ tales que $P(A)=\frac{1}{3}$
+y $P(B)=\frac{1}{2}$. Determínese el valor de $P(B\cap A^{\prime})$
+para cada una de las siguientes condiciones:
+
+\begin{enumerate}
+\item $A$ y $B$ son disjuntos
+\item $A\subset B$
+\item $P(A\cap B)=\frac{1}{8}$ 
+\end{enumerate}
+\item Si el 50\% de las familias de cierta ciudad están suscritas al periódico
+matinal, el 65\% de las familias al periódico vespertino y el 85\%
+al menos a uno de los dos periódicos, ¿\ cuál es la proporción de
+familias que están suscritas a los dos periódicos?
+\item Considérense dos sucesos $A$ y $B$ con $P(A)=0.4$ y $P(B)=$ $0.7$.
+Determínense los posibles valores máximo y mínimo de $P(A\cap B)$
+y las condiciones en las cuales se consigue cada uno de estos valores.
+\item Demuéstrese que para dos sucesos $A$ y $B$ cualesquiera, la pro\-babilidad
+de que exactamente uno de los dos sucesos ocurra está dada por la
+expresión 
+\[
+P(A)+P(B)-2P(A\cap B).
+\]
+
+\item Se selecciona un punto $(x,y)$ del cuadrado $S$ que contiene todos
+los puntos $(x,y)$ tales que $0\leq x\leq1$ y $0\leq y\leq1.$ Supóngase
+que la probabilidad de que el punto seleccionado pertenezca a cualquier
+subconjunto específico de $S$ es igual al área de ese subconjunto.
+Determínese la probabilidad de cada uno de los siguientes subconjuntos:
+
+\begin{enumerate}
+\item el subconjunto de puntos tales que $(x-\frac{1}{2})^{2}+(y-\frac{1}{2})^{2}>\frac{1}{4}$
+\item el subconjunto de puntos tales que $\frac{1}{2}<x+y<\frac{3}{2}$
+\item el subconjunto de puntos tales que $y<1-x^{2}$
+\item el subconjunto de puntos tales que $x=y.$ 
+\end{enumerate}
+\item Sea $A_{1},A_{2},A_{3},\cdots$ una serie numerable de eventos y sea
+\\
+$B_{1},B_{2},B_{3},\cdots$otra serie numerable de eventos tal que
+\[
+B_{1}=A_{1},\;B_{2}=A_{1}^{\prime}\cap A_{2},\;B_{3}=A_{1}^{\prime}\cap A_{2}^{\prime}\cap A_{3}...
+\]
+Demuéstrese que
+
+\begin{enumerate}
+\item $P(\bigcup_{i=1}^{\infty}A_{i})=\sum_{i=1}^{\infty}P\left(B_{i}\right)$
+\item $P(\bigcup_{i=1}^{n}A_{i})=\sum_{i=1}^{n}P\left(B_{i}\right)\;$para
+$n=1,2,3,...$ 
+\end{enumerate}
+\item Sea $A_{1},A_{2},A_{3},\cdots A_{n}$ una serie cualquiera de eventos,
+demostrar que 
+\[
+P\left(\bigcup_{i=1}^{n}A_{i}\right)\leq\sum_{i=1}^{n}P\left(A_{i}\right)
+\]
+
+\item Supóngase que una urna contiene una carta azul y cuatro cartas rojas.
+A, B, C y D. Supóngase también que dos de estas cinco cartas se extraen
+al azar sin reemplazo
+
+\begin{enumerate}
+\item Si se sabe que se ha extraído la carta A, ¿cuál es la probabilidad
+de que ambas cartas sean rojas?
+\item Si se sabe que se ha extraído una carta roja, ¿cuál es la probabilidad
+de que ambas cartas sean rojas? 
+\end{enumerate}
+\item La probabilidad de que cualquier niño de una familia determinada tenga
+ojos azules es 1/4, y esta característica es heredada por cada niño
+de la familia independientemente de los demás. Si hay cinco niños
+en la familia y se sabe que al menos uno de estos niños tiene ojos
+azules,
+
+\begin{enumerate}
+\item ¿cuál es la probabilidad de que al menos tres de los niños tengan
+ojos azules?
+\item Considérese la familia de cinco nios
+
+\begin{enumerate}
+\item Si se sabe que el niño más pequeño de la familia tiene los ojos azules,
+¿cuál es la probabilidad de que al menos tres de los niños tengan
+ojos azules?
+\item Explíquese por qué la respuesta es diferente de la respuesta de la
+parte (a) 
+\end{enumerate}
+\end{enumerate}
+\item Considérese la siguiente versión del juego de dados: El jugador lanza
+dos dados. SÍ la suma en el primer lanzamiento es 7 u 11, el jugador
+gana el juego. Si la suma en el primer lanzamiento es 2, 3 ó 12, el
+jugador pierde. Sin embargo, si la suma en el primer lanzamiento es
+4, 5, 6, 8, 9 ó 10, entonces se lanzan los dos dados una y otra vez
+hasta que la suma sea 7, lío el valor original. Si el valor original
+se obtiene por segunda vez antes de obtener 7 u 11, entonces el jugador
+gana. Si se obtiene un total de 7 o de 11 antes de obtener el valor
+original por segunda vez, entonces el jugador pierde. Determínese
+la probabilidad de que el jugador gane este juego.
+\item En una ciudad determinada, el 30\% de las personas son conservadores,
+el 50\% son liberales y el 20\% son independientes. Los registros
+muestran que en unas elecciones concretas, vota\-ron el 65\% de los
+conservadores, el 82\% de los liberales y el 50\% de los independientes.
+Si se selecciona al azar una persona de la ciudad y se sabe que no
+votó en las elecciones pasadas, ¿\ cuál es la probabilidad de que
+sea un liberal?
+\item Supóngase que cuando una máquina está correctamente ajustada, el 50\%
+de los artículos que produce son de alta calidad y el otro 50\% son
+de calidad media. Supóngase, sin embargo, que la máquina está mal
+ajustada durante el 10\% del tiempo y que, en estas condiciones, el
+25\% de los artículos producidos por ella son de alta calidad y el
+75\% de los artículos son de calidad media.
+
+\begin{enumerate}
+\item Supóngase que cinco artículos producidos por la máquina en un tiempo
+determinado son seleccionados al azar e inspeccionados. Si cuatro
+de estos artículos son de alta calidad y uno es de calidad media,
+¿cuál es la probabilidad de que la máquina estuviera correctamente
+ajustada durante ese tiempo?
+\item Supóngase que se selecciona un artículo adicional, que fue producido
+por la máquina al mismo tiempo que los otros cinco, y resulta ser
+de calidad media. ¿Cuál es la nueva probabilidad final de que la máquina
+estuviera correctamente ajustada? 
+\end{enumerate}
+\item Supóngase que una caja contiene cinco monedas y que la probabilidad
+de obtener cara en un lanzamiento es distinta para cada moneda. Sea
+$p_{i}$ la probabilidad de obtener cara al lanzar la $i-\acute{e}sima$
+moneda $(i=1,...,5)$ y Supóngase que $p_{1}=0$, $p_{1}=\frac{1}{4}$,
+$p_{3}=1/2$, $p_{4}=3/4$ y $p_{5}=1$. Si se selecciona una moneda
+de la caja al azar y que al lanzarla una vez se obtiene una cara.
+¿Cuál es la probabilidad final de que se haya seleccionado la $i-\acute{e}sima$
+moneda $(i=1,...,5)$? 
+\end{enumerate}
+}

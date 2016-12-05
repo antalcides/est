@@ -1,0 +1,23 @@
+\documentclass{article}
+\usepackage[most]{tcolorbox}
+\usepackage{cleveref}
+
+\makeatletter
+\crefformat{tcb@cnt@Example}{example~#2#1#3}
+\Crefformat{tcb@cnt@Example}{Example~#2#1#3}
+\makeatother
+\newtcbtheorem[auto counter, number within = section]
+{Example}{Exam\smash{p}le}{%                                                        
+  breakable,
+  fonttitle = \bfseries,
+  colframe = blue!75!black,
+  colback = blue!10
+}{exa}
+\begin{document}
+\begin{Example}{Example}{exam}
+  Some example
+\end{Example}
+\noindent
+\Cref{exa:exam} and~\cref{exa:exam}
+
+\end{document}

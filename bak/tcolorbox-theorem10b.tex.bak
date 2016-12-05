@@ -1,0 +1,18 @@
+\documentclass{article}
+\usepackage{lipsum}
+\usepackage[many]{tcolorbox}
+\makeatletter
+\newtcolorbox{mybox}[2][]{enhanced jigsaw,
+boxsep=0pt,bottom=3mm,left=3mm,right=3mm,top=3mm,boxrule=1pt,colframe=red,arc=0pt,
+overlay={%
+      \node[anchor=north,text width=\tcb@width-4\pgflinewidth-6mm,fill=olive,inner xsep=3mm]
+        (a) at ([yshift=2mm]frame.south) {#2};
+      \draw[red,line width=1pt] (a.north west) -- (a.south west) -| (a.north east);
+  },
+#1}
+\makeatother
+\begin{document}
+  \begin{mybox}{My title My title My title My title My title My title My title My title My title}
+\lipsum[2]
+\end{mybox}
+\end{document}

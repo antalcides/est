@@ -1,0 +1,168 @@
+\documentclass[14pt,twoside]{book}
+
+\usepackage{extsizes}
+
+\usepackage{amsmath,amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{array}
+\usepackage[total={165mm,235mm},centering,twoside]{geometry}% 
+
+\usepackage{polyglossia}
+\setmainlanguage[numerals=maghrib]{arabic}
+\setotherlanguage{english}
+\newfontfamily\arabicfont[Script=Arabic,Scale=1.2,AutoFakeSlant=-0.02]{Scheherazade}
+\setmonofont{DejaVu Sans Mono}
+\let\arabicfonttt\ttfamily
+\setsansfont[Script=Arabic,Scale=1.5]{Scheherazade}
+
+\tikzstyle{whitebox} =
+[draw=white, thick, scale=.707, fill=white,% 
+line width=0.3pt, text=black, rectangle,
+font=\Large,
+left, minimum height=.5cm, minimum width=1.9cm]
+
+\newcounter{example}
+
+\newtcolorbox[auto counter, 
+number within=section,
+number freestyle={\noexpand\arabic{\tcbcounter}}]{example}[2][]{%
+enhanced,
+left=-5pt,
+right=-5pt,
+colback=white,
+colframe=white,
+top=5pt,
+bottom=5pt,
+enlarge top by=\baselineskip/2+1mm,
+enlarge top at break by=0mm,pad at break=2mm,
+fontupper=\normalsize,
+label={#2},
+overlay unbroken and first={%
+\node[whitebox]
+at ([xshift=1.5cm,yshift=-1cm]frame.north east)
+{\strut\RL{\setlength{\extrarowheight}{-30.5pt}\textbf{
+$\begin{array}{c}
+\hline
+\rule{0pt}{2ex}
+\mbox{Ex}
+\\
+\mbox{\large\thetcbcounter}
+\rule{0pt}{1.5ex}
+\end{array}$}}};},
+breakable,
+before=\par\smallskip\centering,
+width=\textwidth,       %%% change the width here.
+arc=0pt,outer arc=0pt,
+extrude right by=5pt,
+extrude left by=5pt,
+#1}%
+
+
+\newtcolorbox[use counter from=example]{texample}[3][]{%
+enhanced,
+left=-5pt,
+right=-5pt,
+coltitle=black,
+colbacktitle=gray!40,
+title=\mbox{\hspace*{5pt}\RL{\strut\textbf{#2}\strut}},
+colback=white,
+boxrule=0pt,
+minipage boxed title=0.5\textwidth,
+attach boxed title to top right,
+boxed title style={
+  enhanced,
+  arc=0pt,
+  outer arc=0pt,
+  colbacktitle=gray!40,
+  colframe=red,
+  },
+top=0mm,
+bottom=5pt,
+enlarge top by=\baselineskip/2+1mm,
+enlarge top at break by=0mm,pad at break=2mm,
+enlarge top  by=-2mm,
+fontupper=\normalsize,
+label={#3},
+  overlay unbroken and first={%
+\pgfdeclarelayer{background}
+\pgfsetlayers{background,main}
+\node[whitebox] (B)
+  at ([xshift=1.5cm,yshift=-1cm]frame.north east|-title.north east)
+  {\strut\RL{\setlength{\extrarowheight}{-30.5pt}\textbf{
+ $\begin{array}{c}
+\hline
+\rule{0pt}{2ex}
+\mbox{Ex}
+\\
+\mbox{\large\thetcbcounter}
+\rule{0pt}{1.5ex}
+\end{array}$}}};},
+breakable,
+before=\par\smallskip\centering,
+width=\textwidth,       %%% change the width here.
+arc=0pt,outer arc=0pt,
+  extrude right by=5pt,
+  extrude left by=5pt,
+  enlarge top at break by=0mm,pad at break=2mm,
+  #1%
+}%
+
+\newtcolorbox[use counter from=example]{teaexample}[4][]{%
+enhanced,
+left=-5pt,
+right=-5pt,
+coltitle=black,
+colbacktitle=gray!40,
+title=\hspace*{5pt}\RL{\strut\textbf{#2}}\hfill\begin{english}\LR{\textbf{#3}\strut}\end{english},
+colback=white,
+boxrule=0pt,
+minipage boxed title=\textwidth,
+attach boxed title to top right,
+boxed title style={
+  enhanced,
+  arc=0pt,
+  outer arc=0pt,
+  colbacktitle=gray!40,
+  colframe=red,
+  },
+enlarge top by=\baselineskip/2+1mm,
+enlarge top at break by=0mm,pad at break=2mm,
+fontupper=\normalsize,
+label={#4},
+  overlay unbroken and first={%
+\node[whitebox] (B)
+  at ([xshift=1.5cm,yshift=-1cm]frame.north east|-title.north east)
+  {\strut\RL{\setlength{\extrarowheight}{-30.5pt}\textbf{
+$\begin{array}{c}
+\hline
+\rule{0pt}{2ex}
+\mbox{Ex}
+\\
+\mbox{\large\thetcbcounter}
+\rule{0pt}{1.5ex}
+\end{array}$}}};},
+breakable,
+before=\par\smallskip\centering,
+width=\textwidth,       %%% change the width here.
+arc=0pt,outer arc=0pt,
+  extrude right by=5pt,
+  extrude left by=5pt,
+  enlarge top at break by=0mm,pad at break=2mm,
+  #1%
+}%
+
+
+\begin{document}
+
+
+\begin{example}{l1}
+\LR{The text of the example (labeled here Ex) is usually in arabic, in RightToLeft mode}
+\end{example}
+
+\begin{texample}{\LR{Arabic title1}}{l2} 
+\LR{Text of another example}
+\end{texample}
+\begin{teaexample}{\LR{Arabic title2}}{English title}{l3} 
+\LR{Another text of another example}
+\end{teaexample}
+\end{document}

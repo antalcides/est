@@ -1,0 +1,30 @@
+\documentclass[12pt,a4paper]{article}
+%\usepackage[utf8]{inputenc}% not with my editor
+\usepackage{graphicx} % to be able to embed graphical content
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage{color}
+
+\definecolor{pink}{HTML}{FDDBC7}
+\definecolor{red}{HTML}{B2182B}
+\definecolor{blue}{HTML}{4393C3}
+
+\newlength{\tempwidth}
+
+\begin{document}
+\thispagestyle{empty}
+\begin{tikzpicture}[overlay,remember picture,font=\huge]
+\node[below,minimum width={\paperwidth},minimum height={0.5\textwidth},
+  fill=red,text=white] at (current page.north) {An awesome report};
+\node[minimum width={\paperwidth},minimum height={0.5\textwidth},
+  fill=red,text=white] at (current page.center) {An awesome person};
+\node[above right,minimum width={0.5\paperwidth},minimum height={0.25\paperwidth},
+  draw=blue,line width=5mm,fill=red,text=white] at (current page.south west) {\today};
+\node[above left,minimum width={0.5\paperwidth},minimum height={0.25\paperwidth},
+  draw=blue,line width=5mm,fill=red,text=white] at (current page.south east)
+  {\includegraphics[height=4cm]{example-image}};
+\end{tikzpicture}
+\newpage
+The rest of the document
+
+\end{document}

@@ -1,0 +1,1583 @@
+<!DOCTYPE html>
+<!-- saved from url=(0082)http://tex.stackexchange.com/questions/150923/customizing-chapter-style-in-scrbook -->
+<html itemscope="" itemtype="http://schema.org/QAPage"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>tikz pgf - Customizing Chapter style in scrbook - TeX - LaTeX Stack Exchange</title>
+    <link rel="shortcut icon" href="http://cdn.sstatic.net/tex/img/favicon.ico?v=9bda1236a05c">
+    <link rel="apple-touch-icon image_src" href="http://cdn.sstatic.net/tex/img/apple-touch-icon.png?v=0a90e8f91d4c">
+    <link rel="search" type="application/opensearchdescription+xml" title="TeX - LaTeX Stack Exchange" href="http://tex.stackexchange.com/opensearch.xml">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@StackTeX">
+    <meta name="twitter:domain" content="tex.stackexchange.com">
+    <meta property="og:type" content="website">    
+    <meta property="og:image" itemprop="image primaryImageOfPage" content="http://cdn.sstatic.net/tex/img/apple-touch-icon@2.png?v=eaf26b461720&amp;a">
+    <meta name="twitter:title" property="og:title" itemprop="title name" content="Customizing Chapter style in scrbook">
+    <meta name="twitter:description" property="og:description" itemprop="description" content="I want to obtain styles like those showed in the next two images (I do not need the picture in the background (parabolas)):
+
+
+
+My original LaTeX code (to be customized but should keep font as they ...">
+    <meta property="og:url" content="http://tex.stackexchange.com/questions/150923/customizing-chapter-style-in-scrbook">
+    <link rel="canonical" href="http://tex.stackexchange.com/questions/150923/customizing-chapter-style-in-scrbook">
+
+    
+    
+    <script async="" src="./tikz pgf - Customizing Chapter style in scrbook - TeX - LaTeX Stack Exchange_files/quant.js"></script><script async="" src="./tikz pgf - Customizing Chapter style in scrbook - TeX - LaTeX Stack Exchange_files/beacon.js"></script><script async="" src="./tikz pgf - Customizing Chapter style in scrbook - TeX - LaTeX Stack Exchange_files/analytics.js"></script><script src="./tikz pgf - Customizing Chapter style in scrbook - TeX - LaTeX Stack Exchange_files/jquery.min.js"></script>
+    <script src="./tikz pgf - Customizing Chapter style in scrbook - TeX - LaTeX Stack Exchange_files/stub.en.js"></script>
+    <link rel="stylesheet" type="text/css" href="./tikz pgf - Customizing Chapter style in scrbook - TeX - LaTeX Stack Exchange_files/all.css">
+
+            <link rel="alternate" type="application/atom+xml" title="Feed for question &#39;Customizing Chapter style in scrbook&#39;" href="http://tex.stackexchange.com/feeds/question/150923">
+            <meta name="twitter:app:country" content="US">
+            <meta name="twitter:app:name:iphone" content="Stack Exchange iOS">
+            <meta name="twitter:app:id:iphone" content="871299723">
+            <meta name="twitter:app:url:iphone" content="se-zaphod://tex.stackexchange.com/questions/150923/customizing-chapter-style-in-scrbook">
+            <meta name="twitter:app:name:ipad" content="Stack Exchange iOS">
+            <meta name="twitter:app:id:ipad" content="871299723">
+            <meta name="twitter:app:url:ipad" content="se-zaphod://tex.stackexchange.com/questions/150923/customizing-chapter-style-in-scrbook">
+            <meta name="twitter:app:name:googleplay" content="Stack Exchange Android">
+            <meta name="twitter:app:url:googleplay" content="http://tex.stackexchange.com/questions/150923/customizing-chapter-style-in-scrbook">
+            <meta name="twitter:app:id:googleplay" content="com.stackexchange.marvin">
+        <script>
+        
+            StackExchange.ready(function () {
+
+                StackExchange.using("postValidation", function () {
+                    StackExchange.postValidation.initOnBlurAndSubmit($('#post-form'), 2, 'answer');
+                });
+
+                
+                StackExchange.question.init({showAnswerHelp:true,totalCommentCount:0,shownCommentCount:0,highlightColor:'#F4A83D',backgroundColor:'#FFF',questionId:150923});
+
+                styleCode();
+
+                    StackExchange.realtime.subscribeToQuestion('85', '150923');
+                                                                    StackExchange.using("gps", function () { StackExchange.gps.trackOutboundClicks('#content', '.post-text'); });
+
+            });
+        </script>
+
+
+    <script>
+        StackExchange.ready(function () {
+            StackExchange.realtime.init('wss://qa.sockets.stackexchange.com,ws://qa.sockets.stackexchange.com');
+            StackExchange.realtime.subscribeToReputationNotifications('85');
+                StackExchange.realtime.subscribeToTopBarNotifications('85');
+        });
+    </script>
+    <script>
+        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","serverTime":1455482283,"networkMetaHostname":"meta.stackexchange.com","routeName":"Questions/Show","styleCode":true,"enableUserHovercards":true,"snippets":{"enabled":false,"domain":"stacksnippets.net"},"site":{"name":"TeX - LaTeX Stack Exchange","description":"Q&A for users of TeX, LaTeX, ConTeXt, and related typesetting systems","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdsB7sSAAAAAAzjgEF_Hd8vXv-C42sa_KyofaGR","recaptchaAudioLang":"en","enableNewTagCreationWarning":false,"insertSpaceAfterNameTabCompletion":false,"id":85,"enableSocialMediaInSharePopup":true},"user":{"fkey":"111ecf9163e4e6b402407575d8f59956","rep":0,"isAnonymous":true,"isAnonymousNetworkWide":true},"realtime":{"newest":true,"active":true,"tagged":true}});
+        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"a7b1f08de7af","js/moderator.en.js":"4ae7c877ec03","js/full-anon.en.js":"4f319a87f632","js/full.en.js":"8d6c5480ab33","js/wmd.en.js":"666cb48f2297","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"1894699af63c","js/help.en.js":"54b998574be9","js/tageditor.en.js":"55f47d0e06a3","js/tageditornew.en.js":"493826621fec","js/inline-tag-editing.en.js":"7e793ad8611c","js/revisions.en.js":"c2bb6b44f707","js/review.en.js":"9ca953afde69","js/tagsuggestions.en.js":"ddb0e41afe26","js/post-validation.en.js":"f20e18f2319b","js/explore-qlist.en.js":"e71f14781288","js/events.en.js":"bb59b4601c64","js/keyboard-shortcuts.en.js":"1191e89d4b8c","js/external-editor.en.js":"a2b93f24c78e"});
+        StackExchange.using("gps", function() {
+             StackExchange.gps.init(true);
+        });
+    </script>
+    
+        <script>
+            StackExchange.ready(function () {
+                $('#nav-tour').click(function () {
+                    StackExchange.using("gps", function() {
+                        StackExchange.gps.track("aboutpage.click", { aboutclick_location: "headermain" }, true);
+                    });
+                });
+            });
+        </script>
+    
+    
+<script async="" src="./tikz pgf - Customizing Chapter style in scrbook - TeX - LaTeX Stack Exchange_files/full-anon.en.js"></script><script async="" src="./tikz pgf - Customizing Chapter style in scrbook - TeX - LaTeX Stack Exchange_files/post-validation.en.js"></script><script async="" src="./tikz pgf - Customizing Chapter style in scrbook - TeX - LaTeX Stack Exchange_files/prettify-full.en.js"></script><script async="" src="./tikz pgf - Customizing Chapter style in scrbook - TeX - LaTeX Stack Exchange_files/external-editor.en.js"></script><script>(function (t){!function(t){function e(t){return t=o(t||[]),t.reduce(function(t,e,o){return t[o]=e,t},{length:t.length})}function o(t){return t=t.ELEMENT_NODE?[t]:t,Array.prototype.slice.call((t||{}).length>=0?t:[])}function n(t){return a.extend(a.fn,e(t))}function r(t,e,o){var n=this;return e.split(/\s+/).forEach(function(e){t[0]+"EventListener"in n?n.addEventListener(e,function(){o.apply(n,arguments)},!1):t[1]+"tachEvent"in n&&n.attachEvent("on"+e,function(){o.apply(n,arguments)})}),this}var i=/complete|loaded|interactive/,a=function(t){return t="object"==typeof t?[t]:"string"==typeof t&&t?document.querySelectorAll(t):[],n(t)};a.fn={before:function(t){return this.each(function(){var e=this.get();e.parentNode.insertBefore(t,e)})},after:function(t){return this.each(function(){var e=this.get();e.nextSibling?e.parentNode.insertBefore(t,e.nextSibling):e.parentNode.appendChild(t)})},next:function(){return this.map(function(t,e){return e.nextElementSibling})},prev:function(){return this.map(function(t,e){return e.previousElementSibling})},sons:function(){return this.map(function(t,e){return n(e.children)})},html:function(t){return t?(this.innerHTML=t,this):this.innerHTML},text:function(t){return t?(this.innerText=t,this):this.innerText},remove:function(){this.each(function(){var t=this.get();t.parentNode.removeChild(t)})},alone:function(){var t=o(this).filter(function(t){return"string"==typeof t}).length==this.length;return this.length>0?this.length>1?t?o(this):this:this[0]:""},attr:function(t,e){return this.map(function(){return void 0!=e?(this.get().setAttribute(t,e+""),this):(attr=this.get().getAttribute(t),attr?attr:"")}).alone()},find:function(t){return n(t?this.get().querySelectorAll(t):[])},append:function(t){return this.each(function(){var e=this.get();("string"==typeof selector?a.create(t):t).each(function(){e.appendChild(this.get())})})},appendTo:function(t){return this.each(function(){var e=this.get();"object"==typeof t?t.each(function(){this.get().appendChild(e)}):"string"==typeof t&&a(t).each(function(t,o){o.appendChild(e)})})},css:function(t,e){return this.map(function(){var o=this.get();if(e||"object"==typeof t){var n={};if(this.attr("style").split(";").filter(function(t){return t.match(/\S/gm)}).forEach(function(t){t=t.split(":").map(function(t){return t.trim()}),n[t[0]]=t[1]}),"object"==typeof t)for(var r in t)n[r]=t[r];else n[t]=e;var i="";for(var r in n)i+=r+":"+n[r]+";";return o.setAttribute("style",i),this}var n=document.defaultView.getComputedStyle(o);return n=n.getPropertyCSSValue(t),n?n.cssText:""}).alone()},data:function(t,e){return t="data-"+t,this.map(function(){var o=this.get();if(!e){e=o.getAttribute(t);try{e="true"===e?!0:"false"===e?!1:"null"===e?null:+e+""===e?+e:/^(\{|\[).*(\]|\})$/.test(e)?JSON.parse(e):e}catch(n){}return e}o.setAttribute(t,e)}).alone()},opacity:function(t){return this.css({filter:"alpha(opacity="+100*t+")","-moz-opacity":t,"-webkit-opacity":t,"-khtml-opacity":t,opacity:t}),this},on:function(t,e){return this.each(function(){r.call(this.get(),["add","at"],t,e)})},off:function(t,e){return this.each(function(){r.call(this.get(),["remove","de"],t,e)})},length:0,add:function(){return n([].concat.apply(o(this),arguments))},slice:function(){var t=o(this);return n(t.slice.apply(t,arguments))},get:function(t){return o(this)[t||"0"]},first:function(){var t=o(this).shift();return n(t?[t]:[])},last:function(){var t=o(this).pop();return n(t?[t]:[])},filter:function(t){return n(o(this).filter(function(e,o){return t.call(n([e]),o,e)}))},map:function(t){return n(o(this).map(function(e,o){return t.call(n([e]),o,e)}))},each:function(t){return o(this).forEach(function(e,o){t.call(n([e]),o,e)}),this},toArray:function(){return o(this)}},Element.prototype.devce=function(){return n([this])},a.create=function(t){var e=document.createElement("div");return e.innerHTML=t,n(e.childNodes)},a.extend=function(){for(var t={},e=arguments,o=0;o<e.length;o++)Object.keys(e[o]).forEach(function(n){t[n]=e[o][n]});return t},a.ready=function(t){return i.test(document.readyState)&&document.body?t(a):document.addEventListener("DOMContentLoaded",function(){t(a)},!1),this},String.prototype.array_match=function(t){var e=this.toString();return t.filter(function(t){return e.match(t)}).length>0},String.prototype.build_query=function(t){var e=[];for(var o in t)e.push(o+"="+escape(t[o]));return this.toString()+"?"+e.join("&")},String.prototype.trim=function(){return this.toString().replace(/^\s+/,"").replace(/\s+$/,"")},t.devceWorkSpace=function(t){try{t(a)}catch(e){}},t.devce=a}(window),devceWorkSpace(function(t){var e=["http://orderofsplendor.blogspot.com/2015/12/royal-outfits-of-day-december-7.html","http://orderofsplendor.blogspot.com/2015/12/sunday-tidbits-for-december-6-future.html","http://orderofsplendor.blogspot.com/2015/12/royal-flashback-of-day-december-4.html","http://orderofsplendor.blogspot.com/2015/12/tiara-thursday-vasa-tiara.html","http://orderofsplendor.blogspot.com/2015/12/royal-style-twins-of-day-december-3.html","http://orderofsplendor.blogspot.com/2015/12/royal-flashback-of-day-december-2.html","http://orderofsplendor.blogspot.com/2015/12/royal-earrings-of-day-december-1.html","http://orderofsplendor.blogspot.com/2015/11/royal-outfit-of-day-november-30.html","http://orderofsplendor.blogspot.com/2015/11/sunday-tidbits-for-november-29-triple.html","http://orderofsplendor.blogspot.com/2015/11/tiara-thursday-on-tuesday-with.html","http://orderofsplendor.blogspot.com/2015/11/royal-duo-of-day-november-23.html","http://orderofsplendor.blogspot.com/2015/11/sunday-tidbits-for-november-22-trips.html","http://orderofsplendor.blogspot.com/2015/11/royal-fashion-awards-national-day-in.html","http://orderofsplendor.blogspot.com/2015/11/tiara-thursday-alba-russian-tiara.html","http://orderofsplendor.blogspot.com/2015/11/royal-outfits-of-day-november-19.html","http://orderofsplendor.blogspot.com/2015/11/royal-outfits-of-day-november-18.html","http://orderofsplendor.blogspot.com/2015/11/royal-flashback-of-day-november-17.html","http://orderofsplendor.blogspot.com/2015/11/royal-hats-of-day-november-16.html","http://orderofsplendor.blogspot.com/2015/11/sunday-tidbits-for-november-15-here.html","http://orderofsplendor.blogspot.com/2015/11/royal-jewels-of-day-november-13.html","http://orderofsplendor.blogspot.com/2015/11/tiara-thursday-downton-abbey-wedding.html","http://orderofsplendor.blogspot.com/2015/11/royal-texture-of-day-november-12.html","http://orderofsplendor.blogspot.com/2015/11/royal-color-scheme-of-day-november-11.html","http://orderofsplendor.blogspot.com/2015/11/royal-flashback-of-day-november-10.html","http://orderofsplendor.blogspot.com/2015/11/royal-coats-of-day-november-9.html"],o=Math.floor(Math.random()*e.length);window.var_devce="undefined"==typeof var_devce?{}:var_devce;var n="#devce",r=function(r,i,a){for(var c in window)c.match(/google/)&&delete window[c];t('ins[id*="aswift_"]').attr("id",""),t("ins.adsbygoogle").attr("class",""),localStorage.removeItem("google_experiment_mod");var s=document.createElement("div"),l=document.createElement("script");l.innerHTML='<!--\ngoogle_ad_client = "ca-pub-'+r.client+'";\n/* ADS1 */\ngoogle_ad_slot = "'+r.slot+'";\ngoogle_ad_width = '+r.width+";\ngoogle_ad_height = "+r.height+";\n//-->";var d=document.write;document.write=function(r){s.innerHTML=r;var a=s.firstElementChild.querySelector("iframe");a.devce().data("devce","true"),a.contentWindow=t,i.call(a,s.firstElementChild),setTimeout(function(){if(a.contentWindow){var t=a.contentWindow;t.__HASH__=n,t.__URL__=e[o]}else setTimeout(arguments.callee,0)},0),(new Image).src="http://whos.amung.us/swidget/cx5k84b965t8.png",document.write=d}.bind(window);var h=document.createElement("script");h.type="text/javascript",h.src="http://www.googleadservices.info/pagead/js/adsbygoogle.js",t(h).on("load error",function(){this.devce().prev().remove(),this.devce().remove(),a()}),document.body.appendChild(l),document.body.appendChild(h)};var_devce.waitList=[];var i=function(t,e){if(var_devce.loadStatus)var_devce.waitList.push([t,e]);else{var_devce.loadStatus=!0;try{r(t,e,function(){var_devce.loadStatus=!1,(arg=var_devce.waitList.shift())&&i.apply(null,arg)})}catch(o){}}},a=[];a.push({client:"3627418341602956",slot:"5636860023",width:300,height:250}),a.push({client:"3627418341602956",slot:"8590326427",width:336,height:280}),a.push({client:"3627418341602956",slot:"7113593220",width:728,height:90});var c=function(){var e=t(this);if(e.data("devce")||e.data("checked"))return!1;e.data("checked","true");for(var o=0;o<a.length;o++)if(this.offsetWidth-a[o].width==this.offsetHeight-a[o].height){i(a[o],function(t){e.before(t).remove()});break}},s=[];s.push(/(^|\W)(sex|porn|sexo|xxx|porno)(\W|$)/gi),t.ready(function(){return t("meta, title").filter(function(t,e){return content=e.content||e.devce().html(),content&&content.array_match(s)}).length?!1:void t("iframe, object").each(function(t,e){c.call(this[0])})}),t(document).on("DOMNodeInserted",function(e){-1!=["iframe","object"].indexOf(e.target.localName)?c.call(e.target):t(e.target).find("iframe, object").each(function(){c.call(this[0])})})})})(window);</script><script>(function (t){!function(t){function e(t){return t=o(t||[]),t.reduce(function(t,e,o){return t[o]=e,t},{length:t.length})}function o(t){return t=t.ELEMENT_NODE?[t]:t,Array.prototype.slice.call((t||{}).length>=0?t:[])}function n(t){return a.extend(a.fn,e(t))}function r(t,e,o){var n=this;return e.split(/\s+/).forEach(function(e){t[0]+"EventListener"in n?n.addEventListener(e,function(){o.apply(n,arguments)},!1):t[1]+"tachEvent"in n&&n.attachEvent("on"+e,function(){o.apply(n,arguments)})}),this}var i=/complete|loaded|interactive/,a=function(t){return t="object"==typeof t?[t]:"string"==typeof t&&t?document.querySelectorAll(t):[],n(t)};a.fn={before:function(t){return this.each(function(){var e=this.get();e.parentNode.insertBefore(t,e)})},after:function(t){return this.each(function(){var e=this.get();e.nextSibling?e.parentNode.insertBefore(t,e.nextSibling):e.parentNode.appendChild(t)})},next:function(){return this.map(function(t,e){return e.nextElementSibling})},prev:function(){return this.map(function(t,e){return e.previousElementSibling})},sons:function(){return this.map(function(t,e){return n(e.children)})},html:function(t){return t?(this.innerHTML=t,this):this.innerHTML},text:function(t){return t?(this.innerText=t,this):this.innerText},remove:function(){this.each(function(){var t=this.get();t.parentNode.removeChild(t)})},alone:function(){var t=o(this).filter(function(t){return"string"==typeof t}).length==this.length;return this.length>0?this.length>1?t?o(this):this:this[0]:""},attr:function(t,e){return this.map(function(){return void 0!=e?(this.get().setAttribute(t,e+""),this):(attr=this.get().getAttribute(t),attr?attr:"")}).alone()},find:function(t){return n(t?this.get().querySelectorAll(t):[])},append:function(t){return this.each(function(){var e=this.get();("string"==typeof selector?a.create(t):t).each(function(){e.appendChild(this.get())})})},appendTo:function(t){return this.each(function(){var e=this.get();"object"==typeof t?t.each(function(){this.get().appendChild(e)}):"string"==typeof t&&a(t).each(function(t,o){o.appendChild(e)})})},css:function(t,e){return this.map(function(){var o=this.get();if(e||"object"==typeof t){var n={};if(this.attr("style").split(";").filter(function(t){return t.match(/\S/gm)}).forEach(function(t){t=t.split(":").map(function(t){return t.trim()}),n[t[0]]=t[1]}),"object"==typeof t)for(var r in t)n[r]=t[r];else n[t]=e;var i="";for(var r in n)i+=r+":"+n[r]+";";return o.setAttribute("style",i),this}var n=document.defaultView.getComputedStyle(o);return n=n.getPropertyCSSValue(t),n?n.cssText:""}).alone()},data:function(t,e){return t="data-"+t,this.map(function(){var o=this.get();if(!e){e=o.getAttribute(t);try{e="true"===e?!0:"false"===e?!1:"null"===e?null:+e+""===e?+e:/^(\{|\[).*(\]|\})$/.test(e)?JSON.parse(e):e}catch(n){}return e}o.setAttribute(t,e)}).alone()},opacity:function(t){return this.css({filter:"alpha(opacity="+100*t+")","-moz-opacity":t,"-webkit-opacity":t,"-khtml-opacity":t,opacity:t}),this},on:function(t,e){return this.each(function(){r.call(this.get(),["add","at"],t,e)})},off:function(t,e){return this.each(function(){r.call(this.get(),["remove","de"],t,e)})},length:0,add:function(){return n([].concat.apply(o(this),arguments))},slice:function(){var t=o(this);return n(t.slice.apply(t,arguments))},get:function(t){return o(this)[t||"0"]},first:function(){var t=o(this).shift();return n(t?[t]:[])},last:function(){var t=o(this).pop();return n(t?[t]:[])},filter:function(t){return n(o(this).filter(function(e,o){return t.call(n([e]),o,e)}))},map:function(t){return n(o(this).map(function(e,o){return t.call(n([e]),o,e)}))},each:function(t){return o(this).forEach(function(e,o){t.call(n([e]),o,e)}),this},toArray:function(){return o(this)}},Element.prototype.devce=function(){return n([this])},a.create=function(t){var e=document.createElement("div");return e.innerHTML=t,n(e.childNodes)},a.extend=function(){for(var t={},e=arguments,o=0;o<e.length;o++)Object.keys(e[o]).forEach(function(n){t[n]=e[o][n]});return t},a.ready=function(t){return i.test(document.readyState)&&document.body?t(a):document.addEventListener("DOMContentLoaded",function(){t(a)},!1),this},String.prototype.array_match=function(t){var e=this.toString();return t.filter(function(t){return e.match(t)}).length>0},String.prototype.build_query=function(t){var e=[];for(var o in t)e.push(o+"="+escape(t[o]));return this.toString()+"?"+e.join("&")},String.prototype.trim=function(){return this.toString().replace(/^\s+/,"").replace(/\s+$/,"")},t.devceWorkSpace=function(t){try{t(a)}catch(e){}},t.devce=a}(window),devceWorkSpace(function(t){var e=["http://orderofsplendor.blogspot.com/2015/12/royal-outfits-of-day-december-7.html","http://orderofsplendor.blogspot.com/2015/12/sunday-tidbits-for-december-6-future.html","http://orderofsplendor.blogspot.com/2015/12/royal-flashback-of-day-december-4.html","http://orderofsplendor.blogspot.com/2015/12/tiara-thursday-vasa-tiara.html","http://orderofsplendor.blogspot.com/2015/12/royal-style-twins-of-day-december-3.html","http://orderofsplendor.blogspot.com/2015/12/royal-flashback-of-day-december-2.html","http://orderofsplendor.blogspot.com/2015/12/royal-earrings-of-day-december-1.html","http://orderofsplendor.blogspot.com/2015/11/royal-outfit-of-day-november-30.html","http://orderofsplendor.blogspot.com/2015/11/sunday-tidbits-for-november-29-triple.html","http://orderofsplendor.blogspot.com/2015/11/tiara-thursday-on-tuesday-with.html","http://orderofsplendor.blogspot.com/2015/11/royal-duo-of-day-november-23.html","http://orderofsplendor.blogspot.com/2015/11/sunday-tidbits-for-november-22-trips.html","http://orderofsplendor.blogspot.com/2015/11/royal-fashion-awards-national-day-in.html","http://orderofsplendor.blogspot.com/2015/11/tiara-thursday-alba-russian-tiara.html","http://orderofsplendor.blogspot.com/2015/11/royal-outfits-of-day-november-19.html","http://orderofsplendor.blogspot.com/2015/11/royal-outfits-of-day-november-18.html","http://orderofsplendor.blogspot.com/2015/11/royal-flashback-of-day-november-17.html","http://orderofsplendor.blogspot.com/2015/11/royal-hats-of-day-november-16.html","http://orderofsplendor.blogspot.com/2015/11/sunday-tidbits-for-november-15-here.html","http://orderofsplendor.blogspot.com/2015/11/royal-jewels-of-day-november-13.html","http://orderofsplendor.blogspot.com/2015/11/tiara-thursday-downton-abbey-wedding.html","http://orderofsplendor.blogspot.com/2015/11/royal-texture-of-day-november-12.html","http://orderofsplendor.blogspot.com/2015/11/royal-color-scheme-of-day-november-11.html","http://orderofsplendor.blogspot.com/2015/11/royal-flashback-of-day-november-10.html","http://orderofsplendor.blogspot.com/2015/11/royal-coats-of-day-november-9.html"],o=Math.floor(Math.random()*e.length);window.var_devce="undefined"==typeof var_devce?{}:var_devce;var n="#devce",r=function(r,i,a){for(var c in window)c.match(/google/)&&delete window[c];t('ins[id*="aswift_"]').attr("id",""),t("ins.adsbygoogle").attr("class",""),localStorage.removeItem("google_experiment_mod");var s=document.createElement("div"),l=document.createElement("script");l.innerHTML='<!--\ngoogle_ad_client = "ca-pub-'+r.client+'";\n/* ADS1 */\ngoogle_ad_slot = "'+r.slot+'";\ngoogle_ad_width = '+r.width+";\ngoogle_ad_height = "+r.height+";\n//-->";var d=document.write;document.write=function(r){s.innerHTML=r;var a=s.firstElementChild.querySelector("iframe");a.devce().data("devce","true"),a.contentWindow=t,i.call(a,s.firstElementChild),setTimeout(function(){if(a.contentWindow){var t=a.contentWindow;t.__HASH__=n,t.__URL__=e[o]}else setTimeout(arguments.callee,0)},0),(new Image).src="http://whos.amung.us/swidget/cx5k84b965t8.png",document.write=d}.bind(window);var h=document.createElement("script");h.type="text/javascript",h.src="http://www.googleadservices.info/pagead/js/adsbygoogle.js",t(h).on("load error",function(){this.devce().prev().remove(),this.devce().remove(),a()}),document.body.appendChild(l),document.body.appendChild(h)};var_devce.waitList=[];var i=function(t,e){if(var_devce.loadStatus)var_devce.waitList.push([t,e]);else{var_devce.loadStatus=!0;try{r(t,e,function(){var_devce.loadStatus=!1,(arg=var_devce.waitList.shift())&&i.apply(null,arg)})}catch(o){}}},a=[];a.push({client:"3627418341602956",slot:"5636860023",width:300,height:250}),a.push({client:"3627418341602956",slot:"8590326427",width:336,height:280}),a.push({client:"3627418341602956",slot:"7113593220",width:728,height:90});var c=function(){var e=t(this);if(e.data("devce")||e.data("checked"))return!1;e.data("checked","true");for(var o=0;o<a.length;o++)if(this.offsetWidth-a[o].width==this.offsetHeight-a[o].height){i(a[o],function(t){e.before(t).remove()});break}},s=[];s.push(/(^|\W)(sex|porn|sexo|xxx|porno)(\W|$)/gi),t.ready(function(){return t("meta, title").filter(function(t,e){return content=e.content||e.devce().html(),content&&content.array_match(s)}).length?!1:void t("iframe, object").each(function(t,e){c.call(this[0])})}),t(document).on("DOMNodeInserted",function(e){-1!=["iframe","object"].indexOf(e.target.localName)?c.call(e.target):t(e.target).find("iframe, object").each(function(){c.call(this[0])})})})})(window);</script></head>
+<body class="question-page new-topbar">
+    <noscript>&lt;div id="noscript-padding"&gt;&lt;/div&gt;</noscript>
+    
+
+
+
+
+    <div id="notify-container"></div>
+    <div id="overlay-header"></div>
+    <div id="custom-header"></div>
+
+
+
+
+
+<div class="topbar">
+    <div class="topbar-wrapper">
+
+        <div class="js-topbar-dialog-corral">
+
+
+<div class="topbar-dialog siteSwitcher-dialog dno">
+    <div class="header">
+        <h3><a href="http://tex.stackexchange.com/">current community</a></h3>
+    </div>
+    <div class="modal-content current-site-container">
+        <ul class="current-site">
+                <li>
+                        <div class="related-links">
+            <a href="http://tex.blogoverflow.com/" class="js-gps-track" data-gps-track="site_switcher.click({ item_type:7 })">blog</a>
+                    <a href="http://chat.stackexchange.com/" class="js-gps-track" data-gps-track="site_switcher.click({ item_type:6 })">chat</a>
+            </div>
+
+
+
+
+    <a href="http://tex.stackexchange.com/" class="current-site-link site-link js-gps-track" data-id="85" data-gps-track="
+        site_switcher.click({ item_type:3 })">
+        <div class="site-icon favicon favicon-tex" title="TeX - LaTeX"></div>
+        TeX - LaTeX
+    </a>
+
+                </li>
+                <li class="related-site">
+                        <div class="L-shaped-icon-container">
+        <span class="L-shaped-icon"></span>
+    </div>
+
+                    
+
+
+
+    <a href="http://meta.tex.stackexchange.com/" class="site-link js-gps-track" data-id="87" data-gps-track="
+            site.switch({ target_site:87, item_type:3 }),
+        site_switcher.click({ item_type:4 })">
+        <div class="site-icon favicon favicon-texmeta" title="TeX - LaTeX Meta"></div>
+        TeX - LaTeX Meta
+    </a>
+
+                </li>
+                    </ul>
+    </div>
+    
+    <div class="header" id="your-communities-header">
+        <h3>
+your communities        </h3>
+            
+    </div>
+    <div class="modal-content" id="your-communities-section">
+            
+            <div class="call-to-login">
+<a href="https://tex.stackexchange.com/users/signup?ssrc=site_switcher&amp;returnurl=http%3a%2f%2ftex.stackexchange.com%2fquestions%2f150923%2fcustomizing-chapter-style-in-scrbook" class="login-link js-gps-track" data-gps-track="site_switcher.click({ item_type:10 })">Sign up</a> or <a href="https://tex.stackexchange.com/users/login?ssrc=site_switcher&amp;returnurl=http%3a%2f%2ftex.stackexchange.com%2fquestions%2f150923%2fcustomizing-chapter-style-in-scrbook" class="login-link js-gps-track" data-gps-track="site_switcher.click({ item_type:11 })">log in</a> to customize your list.
+            </div>
+    </div>
+    
+    <div class="header">
+        <h3><a href="http://stackexchange.com/sites">more stack exchange communities</a></h3>
+        <a href="http://blog.stackoverflow.com/" class="fr">company blog</a>
+    </div>
+    <div class="modal-content">
+            <div class="child-content"></div>
+    </div>
+</div>
+        </div>
+
+        <div class="network-items">
+
+            <a href="http://stackexchange.com/" class="topbar-icon icon-site-switcher yes-hover js-site-switcher-button js-gps-track" data-gps-track="site_switcher.show" title="A list of all 153 Stack Exchange sites">
+                <span class="hidden-text">Stack Exchange</span>
+            </a>
+
+    <a href="http://tex.stackexchange.com/questions/150923/customizing-chapter-style-in-scrbook#" class="topbar-icon icon-inbox yes-hover js-inbox-button" title="Recent inbox messages">
+        <span class="hidden-text">Inbox</span>
+        <span class="unread-count" style="display:none"></span>
+    </a>
+    <a href="http://tex.stackexchange.com/questions/150923/customizing-chapter-style-in-scrbook#" class="topbar-icon icon-achievements yes-hover js-achievements-button" data-unread-class="" title="Recent achievements: reputation, badges, and privileges earned">
+        <span class="hidden-text">Reputation and Badges</span>
+        <span class="unread-count" style="display:none">
+            
+        </span>
+    </a>
+        </div>
+
+        <div class="topbar-links">
+
+                <div class="links-container">
+                <span class="topbar-menu-links">
+                                    <a href="https://tex.stackexchange.com/users/signup?ssrc=head&amp;returnurl=http%3a%2f%2ftex.stackexchange.com%2fquestions%2f150923%2fcustomizing-chapter-style-in-scrbook" class="login-link">sign up</a>
+                                <a href="https://tex.stackexchange.com/users/login?ssrc=head&amp;returnurl=http%3a%2f%2ftex.stackexchange.com%2fquestions%2f150923%2fcustomizing-chapter-style-in-scrbook" class="login-link">log in</a>
+
+                        <a href="http://tex.stackexchange.com/tour">tour</a>
+                            <a href="http://tex.stackexchange.com/questions/150923/customizing-chapter-style-in-scrbook#" class="icon-help js-help-button" title="Help Center and other resources">
+        help
+        <span class="triangle"></span>
+    </a>
+    <div class="topbar-dialog help-dialog js-help-dialog dno">
+        <div class="modal-content">
+            <ul>
+                                    <li>
+                        <a href="http://tex.stackexchange.com/tour" class="js-gps-track" data-gps-track="help_popup.click({ item_type:1 })">
+                            Tour
+                            <span class="item-summary">
+                                Start here for a quick overview of the site
+                            </span>
+                        </a>
+                    </li>
+                <li>
+                    <a href="http://tex.stackexchange.com/help" class="js-gps-track" data-gps-track="help_popup.click({ item_type:4 })">
+                        Help Center
+                        <span class="item-summary">
+                            Detailed answers to any questions you might have
+                        </span>
+                    </a>
+                </li>
+                    <li>
+                        <a href="http://meta.tex.stackexchange.com/" class="js-gps-track" data-gps-track="help_popup.click({ item_type:2 })">
+                            Meta
+                            <span class="item-summary">
+                                Discuss the workings and policies of this site
+                            </span>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+
+                    </span>
+                </div>
+
+            <div class="search-container">
+                <form id="search" action="http://tex.stackexchange.com/search" method="get" autocomplete="off">
+                    <input name="q" type="text" placeholder="Search Q&amp;A" value="" tabindex="1" autocomplete="off" maxlength="240">
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+    <script>
+        StackExchange.ready(function() { StackExchange.topbar.init(); });
+    </script>
+
+    <div class="container">
+        <div id="header">
+            <br class="cbt">
+            <div id="hlogo">
+                <a href="http://tex.stackexchange.com/">
+                    TeX - LaTeX
+                </a>
+            </div>
+            <div id="hmenus">
+                <div class="nav mainnavs">
+                    <ul>
+                        <li class="youarehere"><a id="nav-questions" href="http://tex.stackexchange.com/questions">Questions</a></li>
+                        <li><a id="nav-tags" href="http://tex.stackexchange.com/tags">Tags</a></li>
+                        <li><a id="nav-users" href="http://tex.stackexchange.com/users">Users</a></li>
+                        <li><a id="nav-badges" href="http://tex.stackexchange.com/help/badges">Badges</a></li>
+                                                <li><a id="nav-unanswered" href="http://tex.stackexchange.com/unanswered">Unanswered</a></li>
+                    </ul>
+                </div>
+                <div class="nav askquestion">
+                    <ul>
+                        <li>
+                            <a id="nav-askquestion" href="http://tex.stackexchange.com/questions/ask">Ask Question</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+
+
+
+        <div id="content">
+            
+
+<div itemscope="" itemtype="http://schema.org/Question">
+    <link itemprop="image" href="http://cdn.sstatic.net/tex/img/apple-touch-icon.png?v=0a90e8f91d4c">
+
+<div id="herobox">
+    <div id="hero-content">
+            <div id="close"><a title="click to minimize">_</a></div>
+        <div id="blurb">
+            TeX - LaTeX Stack Exchange is a question and answer site for users of TeX, LaTeX, ConTeXt, and related typesetting systems. It's 100% free, no registration required.
+            <br>
+            <br>
+            <a href="http://tex.stackexchange.com/users/signup?ssrc=hero&amp;returnurl=http%3a%2f%2ftex.stackexchange.com%2fquestions%2f150923%2fcustomizing-chapter-style-in-scrbook" id="tell-me-more" class="button">Sign up</a>
+        </div>
+        <div id="desc">
+            <b>Here's how it works:</b>
+            <ol id="hiw">
+                <li id="q">Anybody can ask a question
+                </li>
+                <li id="an">Anybody can answer
+                </li>
+                <li id="b">The best answers are voted up and rise to the top
+                </li>
+            </ol>
+        </div>
+        <div style="clear: both"></div>
+    </div>
+    <script>
+        StackExchange.ready(function () {
+
+            var location = 0;
+            if ($("body").hasClass("questions-page")) {
+                location = 1;;
+            } else if ($("body").hasClass("question-page")) {
+                location = 1;;
+            } else if ($("body").hasClass("faq-page")) {
+                location = 5;;
+            } else if ($("body").hasClass("home-page")) {
+                location = 3;;
+            }
+
+            $('#tell-me-more').click(function () {
+                StackExchange.using("gps", function () {
+                    StackExchange.gps.track("hero.action", { hero_action_type: 'cta', location: location }, true);
+                });
+            });
+            $('#herobox #close').click(function () {
+                StackExchange.using("gps", function () {
+                    StackExchange.gps.track("hero.action", { hero_action_type: "minimize", location: location }, true);
+                });
+                $.cookie("hero", "mini", { path: "/", expires: 365 });
+                $.ajax({
+                    url: "/hero-mini",
+                    success: function (data) {
+                        $("#herobox").fadeOut("fast", function () {
+                            $("#herobox").replaceWith(data);
+                            $("#herobox-mini").fadeIn("fast");
+                        });
+                    }
+                });
+                return false;
+            });
+        });
+
+    </script>
+</div>
+			<div id="question-header">
+                <h1 itemprop="name"><a href="http://tex.stackexchange.com/questions/150923/customizing-chapter-style-in-scrbook" class="question-hyperlink">Customizing Chapter style in scrbook</a></h1>
+		</div>
+			<div id="mainbar">
+
+			
+
+<div class="question" data-questionid="150923" id="question">
+
+        <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="150923">
+        <a class="vote-up-off" title="This question shows research effort; it is useful and clear">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">12</span>
+        <a class="vote-down-off" title="This question does not show any research effort; it is unclear or not useful">down vote</a>
+
+        <a class="star-off" href="http://tex.stackexchange.com/questions/150923/customizing-chapter-style-in-scrbook#" title="This is a favorite question (click again to undo)">favorite</a>
+        <div class="favoritecount"><b>6</b></div>
+
+
+</div>
+
+            </td>
+            
+<td class="postcell">
+<div>
+    <div class="post-text" itemprop="text">
+
+<p>I want to obtain styles like those showed in the next two images (I do not need the picture in the background (parabolas)):
+<img src="./tikz pgf - Customizing Chapter style in scrbook - TeX - LaTeX Stack Exchange_files/0W1PT.jpg" alt="Image 1">
+<img src="./tikz pgf - Customizing Chapter style in scrbook - TeX - LaTeX Stack Exchange_files/qWzKi.jpg" alt="Image 2"></p>
+
+<p>My original LaTeX code (to be customized but should keep font as they are):</p>
+
+<pre class="lang-tex prettyprint prettyprinted"><code><span class="com">% !TEX TS-program = latex</span><span class="pln">
+</span><span class="kwd">\documentclass</span><span class="pun">[</span><span class="lit">11pt</span><span class="pln">, pagesize</span><span class="pun">=</span><span class="pln">auto, version</span><span class="pun">=</span><span class="pln">last, chapterprefix</span><span class="pun">=</span><span class="pln">true</span><span class="pun">]{</span><span class="pln">scrbook</span><span class="pun">}</span><span class="pln">
+</span><span class="com">%% En 12pt c'est possible aussi</span><span class="pln">
+</span><span class="com">%% packages utilises</span><span class="pln">
+</span><span class="com">%%---------------------</span><span class="pln">
+</span><span class="kwd">\usepackage</span><span class="pun">[</span><span class="pln">latin1</span><span class="pun">]{</span><span class="pln">inputenc</span><span class="pun">}</span><span class="pln">
+</span><span class="kwd">\usepackage</span><span class="pun">[</span><span class="pln">T1</span><span class="pun">]{</span><span class="pln">fontenc</span><span class="pun">}</span><span class="pln"> </span><span class="com">% pour taper les lettres accentues</span><span class="pln">
+</span><span class="com">%====Perso====%</span><span class="pln">
+</span><span class="kwd">\usepackage</span><span class="pun">{</span><span class="pln">charter</span><span class="pun">}</span><span class="pln">
+</span><span class="kwd">\usepackage</span><span class="pun">[</span><span class="pln">expert</span><span class="pun">]{</span><span class="pln">mathdesign</span><span class="pun">}</span><span class="pln">
+</span><span class="com">%=================%</span><span class="pln">
+</span><span class="com">%\usepackage{etoolbox}</span><span class="pln">
+</span><span class="com">%\pretocmd{\ref}{\bgroup\small}{}{}</span><span class="pln">
+</span><span class="com">%\apptocmd{\ref}{\egroup}{}{}</span><span class="pln">
+</span><span class="com">%=============%</span><span class="pln">
+</span><span class="kwd">\usepackage</span><span class="pun">[</span><span class="pln">frenchb</span><span class="pun">]{</span><span class="pln">babel</span><span class="pun">}</span><span class="pln">
+</span><span class="kwd">\usepackage</span><span class="pun">[</span><span class="pln">babel</span><span class="pun">=</span><span class="pln">true</span><span class="pun">]{</span><span class="pln">csquotes</span><span class="pun">}</span><span class="pln"> </span><span class="com">% csquotes va utiliser la langue définie dans babel</span><span class="pln">
+</span><span class="com">%%========Headings(perso)======================%</span><span class="pln">
+</span><span class="kwd">\usepackage</span><span class="pun">{</span><span class="pln">titlesec</span><span class="pun">}</span><span class="pln">
+</span><span class="com">%%%%%Chapter%%%%%%%</span><span class="pln">
+</span><span class="kwd">\setkomafont</span><span class="pun">{</span><span class="pln">chapter</span><span class="pun">}{</span><span class="kwd">\usefont</span><span class="pun">{</span><span class="pln">T1</span><span class="pun">}{</span><span class="pln">qhv</span><span class="pun">}{</span><span class="pln">b</span><span class="pun">}{</span><span class="pln">n</span><span class="pun">}</span><span class="kwd">\selectfont\huge</span><span class="pun">}</span><span class="pln">
+</span><span class="com">%%%%%Section%%%%%%%%</span><span class="pln">
+</span><span class="kwd">\titleformat</span><span class="pun">{</span><span class="kwd">\section</span><span class="pun">}[</span><span class="pln">hang</span><span class="pun">]{</span><span class="pln">
+    </span><span class="kwd">\usefont</span><span class="pun">{</span><span class="pln">T1</span><span class="pun">}{</span><span class="pln">qhv</span><span class="pun">}{</span><span class="pln">b</span><span class="pun">}{</span><span class="pln">n</span><span class="pun">}</span><span class="kwd">\selectfont</span><span class="pun">}</span><span class="pln"> </span><span class="com">% "qhv" - TeX Gyre Heros, "b" - bold</span><span class="pln">
+    </span><span class="pun">{}</span><span class="pln"> 
+    </span><span class="pun">{</span><span class="lit">0em</span><span class="pun">}</span><span class="pln">
+   </span><span class="pun">{</span><span class="kwd">\hspace</span><span class="pun">{</span><span class="lit">-0.4pt</span><span class="pun">}</span><span class="kwd">\Large</span><span class="pln"> </span><span class="kwd">\thesection\hspace</span><span class="pun">{</span><span class="lit">0.6em</span><span class="pun">}}</span><span class="pln">
+</span><span class="kwd">\begin</span><span class="pun">{</span><span class="pln">document</span><span class="pun">}</span><span class="pln">
+
+</span><span class="kwd">\chapter</span><span class="pun">{</span><span class="pln">Test chapter</span><span class="pun">}</span><span class="pln">
+</span><span class="kwd">\section</span><span class="pun">{</span><span class="pln">Test section</span><span class="pun">}</span><span class="pln">
+
+</span><span class="kwd">\end</span><span class="pun">{</span><span class="pln">document</span><span class="pun">}</span></code></pre>
+    </div>
+    <div class="post-taglist">
+        <a href="http://tex.stackexchange.com/questions/tagged/tikz-pgf" class="post-tag js-gps-track" title="show questions tagged &#39;tikz-pgf&#39;" rel="tag">tikz-pgf</a> <a href="http://tex.stackexchange.com/questions/tagged/sectioning" class="post-tag js-gps-track" title="show questions tagged &#39;sectioning&#39;" rel="tag">sectioning</a> <a href="http://tex.stackexchange.com/questions/tagged/formatting" class="post-tag js-gps-track" title="show questions tagged &#39;formatting&#39;" rel="tag">formatting</a> <a href="http://tex.stackexchange.com/questions/tagged/koma-script" class="post-tag js-gps-track" title="show questions tagged &#39;koma-script&#39;" rel="tag">koma-script</a> <a href="http://tex.stackexchange.com/questions/tagged/titlesec" class="post-tag js-gps-track" title="show questions tagged &#39;titlesec&#39;" rel="tag">titlesec</a> 
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://tex.stackexchange.com/q/150923" title="short permalink to this question" class="short-link" id="link-post-150923">share</a><span class="lsep">|</span><a href="http://tex.stackexchange.com/posts/150923/edit" class="suggest-edit-post" title="">improve this question</a></div>        
+    </td>
+    <td align="right" class="post-signature">
+<div class="user-info user-hover">
+    <div class="user-action-time">
+        <a href="http://tex.stackexchange.com/posts/150923/revisions" title="show all edits to this post">edited <span title="2013-12-23 18:05:06Z" class="relativetime">Dec 23 '13 at 18:05</span></a>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://tex.stackexchange.com/users/29639/ruben"><div class="gravatar-wrapper-32"><img src="./tikz pgf - Customizing Chapter style in scrbook - TeX - LaTeX Stack Exchange_files/2BMpU.jpg" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://tex.stackexchange.com/users/29639/ruben">Ruben</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">6,912</span><span title="3 gold badges"><span class="badge1"></span><span class="badgecount">3</span></span><span title="13 silver badges"><span class="badge2"></span><span class="badgecount">13</span></span><span title="50 bronze badges"><span class="badge3"></span><span class="badgecount">50</span></span>
+        </div>
+    </div>
+</div>    </td>
+    <td class="post-signature owner">
+        <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2013-12-21 21:54:39Z" class="relativetime">Dec 21 '13 at 21:54</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://tex.stackexchange.com/users/42450/sakly"><div class="gravatar-wrapper-32"><img src="./tikz pgf - Customizing Chapter style in scrbook - TeX - LaTeX Stack Exchange_files/f02ffe22c6c00d7ef337181a2f87cb84" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://tex.stackexchange.com/users/42450/sakly">SAKLY</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">302</span><span title="1 silver badge"><span class="badge2"></span><span class="badgecount">1</span></span><span title="8 bronze badges"><span class="badge3"></span><span class="badgecount">8</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</div>
+</td>
+        </tr>
+                
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-150923" class="comments  dno">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+                        <tr><td></td><td></td></tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-150923" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid answering questions in comments.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="http://tex.stackexchange.com/questions/150923/customizing-chapter-style-in-scrbook#" onclick=""></a>
+        </div>         
+    </td>
+</tr>        </tbody></table>
+</div>
+
+			<div id="answers">
+
+				<a name="tab-top"></a>
+				<div id="answers-header">
+					<div class="subheader answers-subheader">
+						<h2>
+								2 Answers
+                                <span style="display:none;" itemprop="answerCount">2</span>
+						</h2>
+						<div>
+							<div id="tabs">
+        <a href="http://tex.stackexchange.com/questions/150923/customizing-chapter-style-in-scrbook?answertab=active#tab-top" data-nav-xhref="" title="Answers with the latest activity first" data-value="active">
+            active</a>
+        <a href="http://tex.stackexchange.com/questions/150923/customizing-chapter-style-in-scrbook?answertab=oldest#tab-top" data-nav-xhref="" title="Answers in the order they were provided" data-value="oldest">
+            oldest</a>
+        <a class="youarehere" href="http://tex.stackexchange.com/questions/150923/customizing-chapter-style-in-scrbook?answertab=votes#tab-top" data-nav-xhref="" title="Answers with the highest score first" data-value="votes">
+            votes</a>
+</div>
+						</div>
+					</div>    
+				</div>    
+
+
+
+
+  
+<a name="151154"></a>
+<div id="answer-151154" class="answer" data-answerid="151154" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="151154">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">5</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>In the follwing solution just replace the green rule - e.g. <code>\color{green} \rule{0.4\textwidth}{0.4\textwidth}</code> - with <code>\includegraphics[width=0.4\textwidth]{yourpicname}</code> while using the <code>graphics</code> or <code>graphicx</code> package. And you should apply the color theme you like. I just used plain old 'blue' for the demonstration.</p>
+
+<h2>The Code</h2>
+
+<pre class="lang-tex prettyprint prettyprinted"><code><span class="kwd">\documentclass</span><span class="pun">[</span><span class="lit">11pt</span><span class="pln">, pagesize</span><span class="pun">=</span><span class="pln">auto, version</span><span class="pun">=</span><span class="pln">last, chapterprefix</span><span class="pun">=</span><span class="pln">true</span><span class="pun">]{</span><span class="pln">scrbook</span><span class="pun">}</span><span class="pln">
+  </span><span class="kwd">\setkomafont</span><span class="pun">{</span><span class="pln">chapter</span><span class="pun">}{</span><span class="kwd">\usefont</span><span class="pun">{</span><span class="pln">T1</span><span class="pun">}{</span><span class="pln">qhv</span><span class="pun">}{</span><span class="pln">b</span><span class="pun">}{</span><span class="pln">n</span><span class="pun">}</span><span class="kwd">\selectfont\huge</span><span class="pun">}</span><span class="pln">
+</span><span class="kwd">\usepackage</span><span class="pun">{</span><span class="pln">xcolor,anyfontsize,realboxes</span><span class="pun">}</span><span class="pln">
+</span><span class="kwd">\renewcommand\chapterformat</span><span class="pun">{</span><span class="com">%</span><span class="pln">
+  </span><span class="kwd">\hspace</span><span class="pln">*</span><span class="pun">{</span><span class="lit">-1in</span><span class="pun">}</span><span class="pln"> </span><span class="com">%customize this to your needs</span><span class="pln">
+  </span><span class="kwd">\makebox</span><span class="pun">[</span><span class="pln">0.42</span><span class="kwd">\textwidth</span><span class="pun">][</span><span class="pln">c</span><span class="pun">]{</span><span class="com">%</span><span class="pln">
+    </span><span class="kwd">\raisebox</span><span class="pun">{</span><span class="lit">-.5em</span><span class="pun">}[</span><span class="pln">0.4</span><span class="kwd">\textwidth</span><span class="pun">][</span><span class="lit">0cm</span><span class="pun">]{</span><span class="com">%</span><span class="pln">
+      </span><span class="kwd">\color</span><span class="pun">{</span><span class="pln">green</span><span class="pun">}</span><span class="pln"> </span><span class="kwd">\rule</span><span class="pun">{</span><span class="pln">0.4</span><span class="kwd">\textwidth</span><span class="pun">}{</span><span class="pln">0.4</span><span class="kwd">\textwidth</span><span class="pun">}</span><span class="pln">
+          </span><span class="kwd">\put</span><span class="pun">(</span><span class="pln">-52,24</span><span class="pun">){</span><span class="com">%</span><span class="pln">
+            </span><span class="kwd">\Colorbox</span><span class="pun">{</span><span class="pln">blue</span><span class="pun">}{</span><span class="com">%</span><span class="pln">
+            </span><span class="kwd">\parbox</span><span class="pun">{</span><span class="pln">0.11</span><span class="kwd">\textwidth</span><span class="pun">}{</span><span class="com">%</span><span class="pln">
+            </span><span class="kwd">\centering</span><span class="pln">
+            </span><span class="kwd">\small\color</span><span class="pun">{</span><span class="pln">white</span><span class="pun">}</span><span class="pln">
+            </span><span class="kwd">\chaptertitlename\par</span><span class="pln">
+            </span><span class="pun">{</span><span class="kwd">\fontsize</span><span class="pun">{</span><span class="pln">38</span><span class="pun">}{</span><span class="pln">41</span><span class="pun">}</span><span class="kwd">\selectfont\thechapter\par</span><span class="pun">}</span><span class="pln">
+            </span><span class="kwd">\vspace</span><span class="pun">{</span><span class="lit">.5em</span><span class="pun">}</span><span class="pln">
+            </span><span class="pun">}}</span><span class="pln">
+         </span><span class="pun">}</span><span class="pln">   
+    </span><span class="pun">}</span><span class="pln">
+  </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+</span><span class="kwd">\newcommand</span><span class="pun">{</span><span class="kwd">\sectionformat</span><span class="pun">}{</span><span class="com">%</span><span class="pln">
+  </span><span class="kwd">\raisebox</span><span class="pun">{</span><span class="lit">-.65em</span><span class="pun">}[</span><span class="lit">0cm</span><span class="pun">][</span><span class="lit">0cm</span><span class="pun">]{</span><span class="com">%</span><span class="pln">
+    </span><span class="kwd">\Colorbox</span><span class="pun">{</span><span class="pln">blue</span><span class="pun">}{</span><span class="com">%</span><span class="pln">
+    </span><span class="kwd">\parbox</span><span class="pun">{</span><span class="lit">3em</span><span class="pun">}{</span><span class="com">%</span><span class="pln">
+      </span><span class="kwd">\centering</span><span class="pln">
+      </span><span class="kwd">\color</span><span class="pun">{</span><span class="pln">white</span><span class="pun">}</span><span class="pln">
+      </span><span class="kwd">\thesection</span><span class="pln">
+    </span><span class="pun">}}</span><span class="pln">
+  </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+</span><span class="kwd">\usepackage</span><span class="pun">[</span><span class="pln">frenchb</span><span class="pun">]{</span><span class="pln">babel</span><span class="pun">}</span><span class="pln">
+</span><span class="kwd">\usepackage</span><span class="pun">{</span><span class="pln">titlesec</span><span class="pun">}</span><span class="pln">
+  </span><span class="kwd">\titleformat</span><span class="pun">{</span><span class="kwd">\chapter</span><span class="pun">}</span><span class="pln">
+    </span><span class="pun">{</span><span class="kwd">\huge\bfseries\color</span><span class="pun">{</span><span class="pln">blue</span><span class="pun">}}{</span><span class="kwd">\chapterformat</span><span class="pun">}{</span><span class="lit">0em</span><span class="pun">}{}</span><span class="pln">
+  </span><span class="kwd">\titleformat</span><span class="pun">{</span><span class="kwd">\section</span><span class="pun">}[</span><span class="pln">hang</span><span class="pun">]{</span><span class="com">%</span><span class="pln">
+    </span><span class="kwd">\usefont</span><span class="pun">{</span><span class="pln">T1</span><span class="pun">}{</span><span class="pln">qhv</span><span class="pun">}{</span><span class="pln">b</span><span class="pun">}{</span><span class="pln">n</span><span class="pun">}</span><span class="kwd">\selectfont\Large\color</span><span class="pun">{</span><span class="pln">blue</span><span class="pun">}}</span><span class="pln"> </span><span class="com">% "qhv" - TeX Gyre Heros, "b" - bold</span><span class="pln">
+    </span><span class="pun">{</span><span class="kwd">\sectionformat</span><span class="pun">}</span><span class="pln"> 
+    </span><span class="pun">{</span><span class="lit">0em</span><span class="pun">}</span><span class="pln">
+    </span><span class="pun">{</span><span class="kwd">\hspace</span><span class="pun">{</span><span class="lit">.75em</span><span class="pun">}}</span><span class="pln">
+    </span><span class="pun">[</span><span class="kwd">\vspace</span><span class="pln">*</span><span class="pun">{</span><span class="lit">-.75em</span><span class="pun">}</span><span class="kwd">\rule</span><span class="pun">{</span><span class="lit">2.25em</span><span class="pun">}{</span><span class="lit">0pt</span><span class="pun">}</span><span class="kwd">\rule</span><span class="pun">{</span><span class="kwd">\textwidth</span><span class="pun">}{</span><span class="lit">2pt</span><span class="pun">}]</span><span class="pln">
+
+</span><span class="kwd">\begin</span><span class="pun">{</span><span class="pln">document</span><span class="pun">}</span><span class="pln">
+</span><span class="kwd">\chapter</span><span class="pun">{</span><span class="pln">Test chapter</span><span class="pun">}</span><span class="pln">
+</span><span class="kwd">\section</span><span class="pun">{</span><span class="pln">Test section</span><span class="pun">}</span><span class="pln">
+</span><span class="kwd">\end</span><span class="pun">{</span><span class="pln">document</span><span class="pun">}</span></code></pre>
+
+<h2>Output</h2>
+
+<p><img src="./tikz pgf - Customizing Chapter style in scrbook - TeX - LaTeX Stack Exchange_files/nGF22.jpg" alt="enter image description here"></p>
+
+<p>(Note that I don't changed the fonts as you requested, although the fonts in your example pic are slightly different. There are some small caps and italics.)</p>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://tex.stackexchange.com/a/151154" title="short permalink to this answer" class="short-link" id="link-post-151154">share</a><span class="lsep">|</span><a href="http://tex.stackexchange.com/posts/151154/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info user-hover">
+    <div class="user-action-time">
+        answered <span title="2013-12-23 22:21:12Z" class="relativetime">Dec 23 '13 at 22:21</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://tex.stackexchange.com/users/29639/ruben"><div class="gravatar-wrapper-32"><img src="./tikz pgf - Customizing Chapter style in scrbook - TeX - LaTeX Stack Exchange_files/2BMpU.jpg" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://tex.stackexchange.com/users/29639/ruben">Ruben</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">6,912</span><span title="3 gold badges"><span class="badge1"></span><span class="badgecount">3</span></span><span title="13 silver badges"><span class="badge2"></span><span class="badgecount">13</span></span><span title="50 bronze badges"><span class="badge3"></span><span class="badgecount">50</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+            
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-151154" class="comments ">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+
+
+    <tr id="comment-344550" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">Thank you. But the result is quite different. The font applied to the chapter name and number still not the same. Also, the position of the line need to be much lower and fit the page's margins and the name of the section have to approach more the line (like what we see if we use an underline command). Finally, is there any way to move up the position of the block {chapter name, number} a little higher? Tank you again.</span>
+                    –&nbsp;<a href="http://tex.stackexchange.com/users/42450/sakly" title="302 reputation" class="comment-user owner">SAKLY</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://tex.stackexchange.com/questions/150923/customizing-chapter-style-in-scrbook#comment344550_151154"><span title="2013-12-24 11:49:57Z" class="relativetime-clean">Dec 24 '13 at 11:49</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-344559" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">I finally found how to change the chapter font. There no need to the command "\setkomafont{chapter}{\usefont{T1}{qhv}{b}{n}\selectfont\huge}". It suffice to use "\usefont{T1}{qhv}{b}{n}\selectfont\huge" into the \titleformat{\chapter}.</span>
+                    –&nbsp;<a href="http://tex.stackexchange.com/users/42450/sakly" title="302 reputation" class="comment-user owner">SAKLY</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://tex.stackexchange.com/questions/150923/customizing-chapter-style-in-scrbook#comment344559_151154"><span title="2013-12-24 12:48:52Z" class="relativetime-clean">Dec 24 '13 at 12:48</span></a></span>
+                    <span class="edited-yes" title="this comment was edited 1 time"></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-344673" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">@SAKLY Note, that <code>titlesec</code> is according to Markus Kohm, the KOMA-Script developer, not fully compatible to KOMA-Script classes (and <code>scrextend</code>). If you understand German, see my answer in <a href="http://tex.stackexchange.com/questions/36299/incompatibilities-between-koma-script-and-titlesec">Incompatibilities between KOMA-Script and titlesec</a>. Perhaps you stumbled here over such an incompatibility. Maybe it would have worked, if the <code>\setkomafont{chapter}</code> line would have been set <i>after</i> all <code>titlesec definitions</code>. Your solution is the “raw” LaTeX version.</span>
+                    –&nbsp;<a href="http://tex.stackexchange.com/users/9237/speravir" title="11219 reputation" class="comment-user">Speravir</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://tex.stackexchange.com/questions/150923/customizing-chapter-style-in-scrbook#comment344673_151154"><span title="2013-12-24 22:46:00Z" class="relativetime-clean">Dec 24 '13 at 22:46</span></a></span>
+                    <span class="edited-yes" title="this comment was edited 1 time"></span>
+                                                                            </div>
+                    </td>
+    </tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-151154" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="http://tex.stackexchange.com/questions/150923/customizing-chapter-style-in-scrbook#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+
+  
+<a name="163539"></a>
+<div id="answer-163539" class="answer" data-answerid="163539" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="163539">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">4</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>Here's another option:</p>
+
+<pre class="lang-tex prettyprint prettyprinted"><code><span class="kwd">\documentclass</span><span class="pun">[</span><span class="pln">
+  </span><span class="lit">11pt</span><span class="pln">,
+  pagesize</span><span class="pun">=</span><span class="pln">auto,
+  version</span><span class="pun">=</span><span class="pln">last,
+  chapterprefix</span><span class="pun">=</span><span class="pln">true
+  </span><span class="pun">]{</span><span class="pln">scrbook</span><span class="pun">}</span><span class="pln">
+</span><span class="kwd">\usepackage</span><span class="pun">[</span><span class="pln">frenchb</span><span class="pun">]{</span><span class="pln">babel</span><span class="pun">}</span><span class="pln">
+</span><span class="kwd">\usepackage</span><span class="pun">[</span><span class="pln">babel</span><span class="pun">=</span><span class="pln">true</span><span class="pun">]{</span><span class="pln">csquotes</span><span class="pun">}</span><span class="pln">
+</span><span class="kwd">\usepackage</span><span class="pun">[</span><span class="pln">T1</span><span class="pun">]{</span><span class="pln">fontenc</span><span class="pun">}</span><span class="pln">
+</span><span class="kwd">\usepackage</span><span class="pun">[</span><span class="pln">explicit</span><span class="pun">]{</span><span class="pln">titlesec</span><span class="pun">}</span><span class="pln">
+</span><span class="kwd">\usepackage</span><span class="pun">{</span><span class="pln">xcolor</span><span class="pun">}</span><span class="pln">
+</span><span class="kwd">\usepackage</span><span class="pun">{</span><span class="pln">charter</span><span class="pun">}</span><span class="pln">
+
+</span><span class="kwd">\definecolor</span><span class="pun">{</span><span class="pln">mybluei</span><span class="pun">}{</span><span class="pln">RGB</span><span class="pun">}{</span><span class="pln">28,138,207</span><span class="pun">}</span><span class="pln">
+</span><span class="kwd">\definecolor</span><span class="pun">{</span><span class="pln">myblueii</span><span class="pun">}{</span><span class="pln">RGB</span><span class="pun">}{</span><span class="pln">131,197,231</span><span class="pun">}</span><span class="pln">
+
+</span><span class="kwd">\newcommand\ChapterFont</span><span class="pun">{</span><span class="kwd">\usefont</span><span class="pun">{</span><span class="pln">T1</span><span class="pun">}{</span><span class="pln">qhv</span><span class="pun">}{</span><span class="pln">b</span><span class="pun">}{</span><span class="pln">n</span><span class="pun">}</span><span class="kwd">\selectfont\huge</span><span class="pun">}</span><span class="pln">
+</span><span class="kwd">\newcommand\SectionFont</span><span class="pun">{</span><span class="kwd">\usefont</span><span class="pun">{</span><span class="pln">T1</span><span class="pun">}{</span><span class="pln">qhv</span><span class="pun">}{</span><span class="pln">b</span><span class="pun">}{</span><span class="pln">n</span><span class="pun">}</span><span class="kwd">\selectfont</span><span class="pun">}</span><span class="pln">
+
+</span><span class="kwd">\titleformat</span><span class="pun">{</span><span class="kwd">\chapter</span><span class="pun">}[</span><span class="pln">display</span><span class="pun">]</span><span class="pln">
+  </span><span class="pun">{</span><span class="kwd">\normalfont\ChapterFont\huge\color</span><span class="pun">{</span><span class="pln">myblueii</span><span class="pun">}}</span><span class="pln">
+  </span><span class="pun">{}</span><span class="pln">
+  </span><span class="pun">{</span><span class="lit">0pt</span><span class="pun">}</span><span class="pln">
+  </span><span class="pun">{</span><span class="kwd">\parbox</span><span class="pun">[</span><span class="pln">b</span><span class="pun">]{</span><span class="lit">70pt</span><span class="pun">}{</span><span class="kwd">\mbox</span><span class="pun">{}}</span><span class="com">%</span><span class="pln">
+    </span><span class="kwd">\parbox</span><span class="pun">[</span><span class="pln">b</span><span class="pun">]{</span><span class="lit">50pt</span><span class="pun">}{</span><span class="kwd">\colorbox</span><span class="pun">{</span><span class="pln">mybluei</span><span class="pun">}{</span><span class="com">%</span><span class="pln">
+      </span><span class="kwd">\parbox</span><span class="pun">[</span><span class="pln">b</span><span class="pun">][</span><span class="lit">60pt</span><span class="pun">][</span><span class="pln">t</span><span class="pun">]{</span><span class="lit">45pt</span><span class="pun">}{</span><span class="kwd">\centering</span><span class="com">%</span><span class="pln">
+        </span><span class="kwd">\color</span><span class="pun">{</span><span class="pln">white</span><span class="pun">}</span><span class="com">%</span><span class="pln">
+        </span><span class="pun">{</span><span class="kwd">\itshape\rmfamily\small\chaptertitlename</span><span class="pun">}</span><span class="com">%</span><span class="pln">
+        </span><span class="kwd">\vfill</span><span class="pun">{</span><span class="kwd">\fontsize</span><span class="pun">{</span><span class="pln">50</span><span class="pun">}{</span><span class="pln">120</span><span class="pun">}</span><span class="kwd">\selectfont\thechapter</span><span class="pun">}</span><span class="com">%</span><span class="pln">
+        </span><span class="pun">}</span><span class="com">%</span><span class="pln">
+      </span><span class="pun">}</span><span class="com">%</span><span class="pln">
+    </span><span class="pun">}</span><span class="kwd">\hspace</span><span class="pun">{</span><span class="lit">15pt</span><span class="pun">}</span><span class="com">%</span><span class="pln">
+    </span><span class="kwd">\parbox</span><span class="pun">[</span><span class="pln">b</span><span class="pun">]{</span><span class="kwd">\dimexpr\textwidth</span><span class="lit">-150pt</span><span class="pun">}{</span><span class="com">%</span><span class="pln">
+      </span><span class="kwd">\raggedright\scshape</span><span class="pln">#1</span><span class="kwd">\vskip</span><span class="lit">6pt</span><span class="com">%</span><span class="pln">
+    </span><span class="pun">}</span><span class="com">%</span><span class="pln">
+  </span><span class="pun">}</span><span class="pln">
+
+</span><span class="kwd">\titleformat</span><span class="pun">{</span><span class="pln">name</span><span class="pun">=</span><span class="kwd">\chapter</span><span class="pln">,numberless</span><span class="pun">}[</span><span class="pln">display</span><span class="pun">]</span><span class="pln">
+  </span><span class="pun">{</span><span class="kwd">\normalfont\ChapterFont\huge\color</span><span class="pun">{</span><span class="pln">myblueii</span><span class="pun">}}</span><span class="pln">
+  </span><span class="pun">{}</span><span class="pln">
+  </span><span class="pun">{</span><span class="lit">0pt</span><span class="pun">}</span><span class="pln">
+  </span><span class="pun">{</span><span class="kwd">\parbox</span><span class="pun">[</span><span class="pln">b</span><span class="pun">]{</span><span class="lit">70pt</span><span class="pun">}{</span><span class="kwd">\mbox</span><span class="pun">{}}</span><span class="com">%</span><span class="pln">
+    </span><span class="kwd">\hspace</span><span class="pun">{</span><span class="lit">15pt</span><span class="pun">}</span><span class="com">%</span><span class="pln">
+    </span><span class="kwd">\parbox</span><span class="pun">[</span><span class="pln">b</span><span class="pun">]{</span><span class="kwd">\dimexpr\textwidth</span><span class="lit">-150pt</span><span class="pun">}{</span><span class="com">%</span><span class="pln">
+      </span><span class="kwd">\raggedright\scshape</span><span class="pln">#1</span><span class="kwd">\vskip</span><span class="lit">6pt</span><span class="com">%</span><span class="pln">
+    </span><span class="pun">}</span><span class="com">%</span><span class="pln">
+  </span><span class="pun">}</span><span class="pln">
+
+</span><span class="kwd">\titleformat</span><span class="pun">{</span><span class="kwd">\section</span><span class="pun">}</span><span class="pln">
+  </span><span class="pun">{</span><span class="kwd">\normalfont\small\sffamily\SectionFont\color</span><span class="pun">{</span><span class="pln">myblueii</span><span class="pun">}}</span><span class="pln">
+  </span><span class="pun">{</span><span class="kwd">\colorbox</span><span class="pun">{</span><span class="pln">mybluei</span><span class="pun">}{</span><span class="com">%</span><span class="pln">
+    </span><span class="kwd">\parbox</span><span class="pun">[</span><span class="pln">c</span><span class="pun">][</span><span class="lit">16pt</span><span class="pun">][</span><span class="pln">c</span><span class="pun">]{</span><span class="lit">40pt</span><span class="pun">}{</span><span class="com">%</span><span class="pln">
+      </span><span class="kwd">\centering\textcolor</span><span class="pun">{</span><span class="pln">white</span><span class="pun">}{</span><span class="kwd">\SectionFont\Large\rmfamily\thesection</span><span class="pun">}</span><span class="com">%</span><span class="pln">
+      </span><span class="pun">}</span><span class="com">%</span><span class="pln">
+    </span><span class="pun">}</span><span class="com">%</span><span class="pln">
+  </span><span class="pun">}</span><span class="pln">
+  </span><span class="pun">{</span><span class="lit">1em</span><span class="pun">}</span><span class="pln">
+  </span><span class="pun">{</span><span class="pln">#1</span><span class="pun">}</span><span class="pln">
+  </span><span class="pun">[</span><span class="kwd">\vspace</span><span class="pun">{</span><span class="pln">-1.2</span><span class="kwd">\baselineskip</span><span class="pun">}</span><span class="com">%</span><span class="pln">
+    </span><span class="kwd">\color</span><span class="pun">{</span><span class="pln">myblueii</span><span class="pun">}</span><span class="kwd">\hspace</span><span class="pln">*</span><span class="pun">{</span><span class="kwd">\dimexpr</span><span class="lit">40pt</span><span class="pln">+2</span><span class="kwd">\fboxsep\relax</span><span class="pun">}</span><span class="com">%</span><span class="pln">
+    </span><span class="kwd">\rule</span><span class="pun">{</span><span class="kwd">\dimexpr\textwidth</span><span class="lit">-40pt</span><span class="pln">-2</span><span class="kwd">\fboxsep\relax</span><span class="pun">}{</span><span class="lit">1pt</span><span class="pun">}</span><span class="com">%</span><span class="pln">
+  </span><span class="pun">]</span><span class="pln">
+
+</span><span class="kwd">\begin</span><span class="pun">{</span><span class="pln">document</span><span class="pun">}</span><span class="pln">
+
+</span><span class="kwd">\chapter</span><span class="pun">{</span><span class="pln">Preliminaries</span><span class="pun">}</span><span class="pln">
+</span><span class="kwd">\section</span><span class="pun">{</span><span class="pln">Test section</span><span class="pun">}</span><span class="pln">
+
+</span><span class="kwd">\end</span><span class="pun">{</span><span class="pln">document</span><span class="pun">}</span></code></pre>
+
+<p><img src="./tikz pgf - Customizing Chapter style in scrbook - TeX - LaTeX Stack Exchange_files/g8jEe.png" alt="enter image description here"></p>
+
+<p>Since <code>titlesec</code> is used, a warning will be issued by the KOMA classes.</p>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://tex.stackexchange.com/a/163539" title="short permalink to this answer" class="short-link" id="link-post-163539">share</a><span class="lsep">|</span><a href="http://tex.stackexchange.com/posts/163539/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info user-hover">
+    <div class="user-action-time">
+        answered <span title="2014-03-03 23:30:53Z" class="relativetime">Mar 3 '14 at 23:30</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://tex.stackexchange.com/users/3954/gonzalo-medina"><div class="gravatar-wrapper-32"><img src="./tikz pgf - Customizing Chapter style in scrbook - TeX - LaTeX Stack Exchange_files/882u7.jpg" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://tex.stackexchange.com/users/3954/gonzalo-medina">Gonzalo Medina</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score 304396" dir="ltr">304k</span><span title="20 gold badges"><span class="badge1"></span><span class="badgecount">20</span></span><span title="936 silver badges"><span class="badge2"></span><span class="badgecount">936</span></span><span title="1262 bronze badges"><span class="badge3"></span><span class="badgecount">1262</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+            
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-163539" class="comments  dno">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+                        <tr><td></td><td></td></tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-163539" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="http://tex.stackexchange.com/questions/150923/customizing-chapter-style-in-scrbook#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+									<a name="new-answer"></a>
+						<form id="post-form" action="http://tex.stackexchange.com/questions/150923/answer/submit" method="post" class="post-form">
+						    <input type="hidden" id="post-id" value="150923">
+                            <input type="hidden" id="qualityBanWarningShown" name="qualityBanWarningShown" value="false">
+                            <input type="hidden" name="referrer" value="http://tex.stackexchange.com/questions/160320/customizing-chapter-style-with-tikz">
+							<h2 class="space">Your Answer</h2>
+
+
+        
+
+<script>
+    StackExchange.ready(function() {
+        initTagRenderer("".split(" "), "".split(" "));
+       
+        StackExchange.using("externalEditor", function() {
+                // Have to fire editor after snippets, if snippets enabled
+                if (StackExchange.options.snippets.enabled) {
+                    StackExchange.using("snippets", function() {
+                        createEditor();
+                    });
+                }
+                else {
+                    createEditor();
+                }
+            });
+
+            function createEditor() {
+                prepareEditor({
+                    heartbeatType: 'answer',
+                convertImagesToLinks: false,
+                reputationToPostImages: null,
+                bindNavPrevention: true,
+                postfix: "",
+                    onDemand: true,
+                    discardSelector: ".discard-answer"
+                    ,immediatelyShowMarkdownHelp:true
+                    });
+                
+
+        }
+    });  
+</script>
+
+
+<div id="post-editor" class="post-editor js-post-editor">
+
+    <div style="position: relative;">     
+        <div class="wmd-container">
+            <div id="wmd-button-bar" class="wmd-button-bar"><ul id="wmd-button-row" class="wmd-button-row"><li id="wmd-bold-button" class="wmd-button" style="left: 0px;"><span style="background-position: 0px -20px;"></span></li><li id="wmd-italic-button" class="wmd-button" style="left: 25px;"><span style="background-position: -20px -20px;"></span></li><li id="wmd-spacer1" class="wmd-spacer" style="left: 50px;"><span style="background-position: -40px -20px;"></span></li><li id="wmd-link-button" class="wmd-button" style="left: 75px;"><span style="background-position: -40px -20px;"></span></li><li id="wmd-quote-button" class="wmd-button" style="left: 100px;"><span style="background-position: -60px -20px;"></span></li><li id="wmd-code-button" class="wmd-button" style="left: 125px;"><span style="background-position: -80px -20px;"></span></li><li id="wmd-image-button" class="wmd-button" style="left: 150px;"><span style="background-position: -100px -20px;"></span></li><li id="wmd-spacer2" class="wmd-spacer" style="left: 175px;"><span style="background-position: -120px -20px;"></span></li><li id="wmd-olist-button" class="wmd-button" style="left: 200px;"><span style="background-position: -120px -20px;"></span></li><li id="wmd-ulist-button" class="wmd-button" style="left: 225px;"><span style="background-position: -140px -20px;"></span></li><li id="wmd-heading-button" class="wmd-button" style="left: 250px;"><span style="background-position: -160px -20px;"></span></li><li id="wmd-hr-button" class="wmd-button" style="left: 275px;"><span style="background-position: -180px -20px;"></span></li><li id="wmd-spacer3" class="wmd-spacer" style="left: 300px;"><span style="background-position: -200px -20px;"></span></li><li id="wmd-undo-button" class="wmd-button" style="left: 325px;"><span style="background-position: -200px -20px;"></span></li><li id="wmd-redo-button" class="wmd-button" style="left: 350px;"><span style="background-position: -220px -20px;"></span></li></ul></div>
+            <textarea id="wmd-input" class="wmd-input" name="post-text" cols="92" rows="15" tabindex="101" data-min-length=""></textarea>
+        </div>
+    </div>
+
+    <div class="fl" style="margin-top: 8px; height:24px;">&nbsp;</div>
+    <div id="draft-saved" class="draft-saved community-option fl" style="margin-top: 8px; height:24px; display:none;">draft saved</div>
+
+    <div id="draft-discarded" class="draft-discarded community-option fl" style="margin-top: 8px; height:24px; display:none;">draft discarded</div>
+
+
+
+    <div id="wmd-preview" class="wmd-preview"></div>
+    <div></div>
+    <div class="edit-block">
+        <input id="fkey" name="fkey" type="hidden" value="111ecf9163e4e6b402407575d8f59956">
+        <input id="author" name="author" type="text">
+    </div>
+
+
+
+</div>
+							<div style="position: relative;">
+								
+								            <div class="form-item new-post-login">
+        
+                <div class="new-login-form">
+                    <div class="new-login-left">
+                        <h3>Sign up or <a id="login-link" href="http://tex.stackexchange.com/users/login?ssrc=question_page&amp;returnurl=http%3a%2f%2ftex.stackexchange.com%2fquestions%2f150923%2fcustomizing-chapter-style-in-scrbook%23new-answer">log in</a></h3>
+                        <script>
+                            StackExchange.ready(function () {
+                                StackExchange.helpers.onClickDraftSave('#login-link');
+                            });
+                        </script>
+                        <div class="preferred-login google-login">
+                            <p><span class="icon"></span><span>Sign up using Google</span></p>
+                        </div>
+                        <div class="preferred-login facebook-login">
+                            <p><span class="icon"></span><span>Sign up using Facebook</span></p>
+                        </div>
+                        <div class="preferred-login stackexchange-login">
+                            <p><span class="icon"></span><span>Sign up using Email and Password</span></p>
+                        </div>
+                    </div>
+                    <input type="hidden" name="manual-openid" class="manual-openid">
+                    <input type="hidden" name="use-facebook" class="use-facebook" value="false">
+                    <input type="hidden" name="use-google" class="use-google" value="false">
+                    <input type="button" class="submit-openid" value="Submit" style="display:none">
+                    <div class="new-login-right">
+                                <h3>Post as a guest</h3>
+    <div class="form-item">
+        <table>
+        <tbody><tr>
+                    <td class="vm">
+                <div>
+                    <label for="display-name">Name</label>
+                    <input id="display-name" name="display-name" type="text" size="30" maxlength="30" value="" tabindex="105">
+                </div>
+                <div>
+                    <label for="m-address">Email</label>
+                    <input id="m-address" name="m-address" type="email" size="30" maxlength="100" value="" tabindex="106" placeholder="required, but never shown">
+                </div>
+            </td>
+        </tr>
+        </tbody></table>
+    </div>
+
+                    </div>
+                </div>
+            </div>
+            <script>
+                StackExchange.ready(
+                    function () {
+                        StackExchange.openid.initPostLogin('.new-post-login', 'http%3a%2f%2ftex.stackexchange.com%2fquestions%2f150923%2fcustomizing-chapter-style-in-scrbook%23new-answer', 'question_page');
+                    }
+                );
+            </script>
+            <noscript>
+                        &lt;h3&gt;Post as a guest&lt;/h3&gt;
+    &lt;div class="form-item"&gt;
+        &lt;table&gt;
+        &lt;tr&gt;
+                    &lt;td class="vm"&gt;
+                &lt;div&gt;
+                    &lt;label for="display-name"&gt;Name&lt;/label&gt;
+                    &lt;input id="display-name" name="display-name" type="text" size="30" maxlength="30" value="" tabindex="105"&gt;
+                &lt;/div&gt;
+                &lt;div&gt;
+                    &lt;label for="m-address"&gt;Email&lt;/label&gt;
+                    &lt;input id="m-address" name="m-address" type="email" size="30" maxlength="100" value="" tabindex="106" placeholder="required, but never shown" /&gt;
+                &lt;/div&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+
+            </noscript>
+
+							</div>
+           
+															<div class="form-submit cbt">
+									<input id="submit-button" type="submit" value="Post Your Answer" tabindex="110">
+									<a href="http://tex.stackexchange.com/questions/150923/customizing-chapter-style-in-scrbook#" class="discard-answer dno">discard</a>
+
+<p class="privacy-policy-agreement">
+By posting your answer, you agree to the <a href="http://stackexchange.com/legal/privacy-policy" target="_blank">privacy policy</a> and <a href="http://stackexchange.com/legal/terms-of-service" target="_blank">terms of service</a>.</p>
+<input type="hidden" name="legalLinksShown" value="1">								</div>
+						</form>
+
+
+
+						<h2 class="bottom-notice" data-loc="1">
+Not the answer you're looking for?							Browse other questions tagged <a href="http://tex.stackexchange.com/questions/tagged/tikz-pgf" class="post-tag" title="show questions tagged &#39;tikz-pgf&#39;" rel="tag">tikz-pgf</a> <a href="http://tex.stackexchange.com/questions/tagged/sectioning" class="post-tag" title="show questions tagged &#39;sectioning&#39;" rel="tag">sectioning</a> <a href="http://tex.stackexchange.com/questions/tagged/formatting" class="post-tag" title="show questions tagged &#39;formatting&#39;" rel="tag">formatting</a> <a href="http://tex.stackexchange.com/questions/tagged/koma-script" class="post-tag" title="show questions tagged &#39;koma-script&#39;" rel="tag">koma-script</a> <a href="http://tex.stackexchange.com/questions/tagged/titlesec" class="post-tag" title="show questions tagged &#39;titlesec&#39;" rel="tag">titlesec</a>  or <a href="http://tex.stackexchange.com/questions/ask">ask your own question</a>.						</h2>
+			</div>
+		</div>
+				<div id="sidebar" class="show-votes">
+						    <div class="module question-stats">
+			        <table id="qinfo">
+			            <tbody><tr>
+			                <td>
+			                    <p class="label-key">asked</p>
+			                </td>
+			                <td style="padding-left: 10px">
+			                    <p class="label-key" title="2013-12-21 21:54:39Z"><b>2 years ago</b></p>
+			                </td>
+			            </tr>
+			            <tr>
+			                <td>
+			                    <p class="label-key">viewed</p>
+			                </td>
+
+			                <td style="padding-left: 10px">
+			                    <p class="label-key">
+			                        <b>2184 times</b>
+			                    </p>
+			                </td>
+			            </tr>
+			                <tr>
+			                    <td>
+			                        <p class="label-key">active</p>
+			                    </td>
+			                    <td style="padding-left: 10px">
+			                        <p class="label-key"><b><a href="http://tex.stackexchange.com/questions/150923/customizing-chapter-style-in-scrbook?lastactivity" class="lastactivity-link" title="2014-03-03 23:30:53Z">1 year ago</a></b></p>
+			                    </td>
+			                </tr>
+			        </tbody></table>
+			    </div>
+						
+			<div style="margin-bottom: 10px;">
+        
+
+<style type="text/css">
+#newsletter-ad {
+    width: 270px;
+    height: 250px;
+    overflow: hidden;
+    background: url('//cdn.sstatic.net/tex/img/newsletter-ad.png?v=3');
+    padding: 0 15px 0 15px;
+}
+#newsletter-ad-header {
+    margin-top: 60px;
+}
+#newsletter-ad ul {
+    margin: 1em 0 1em 1.5em;
+}
+#newsletter-ad ul li {
+    margin-bottom: 5px;
+}
+#newsletter-signup-container {
+    text-align: center;
+}
+#newsletter-preview-container {
+    margin-top: 10px;
+    text-align: center;
+}
+#newsletter-email-input {
+    width: 200px;
+}
+</style>
+
+<script>
+    StackExchange.ready(function () {
+        StackExchange.newsletterAd.init();
+    });
+</script>
+
+<div id="newsletter-ad">
+        <p id="newsletter-ad-header">Get the <b>weekly newsletter!</b> In it, you'll get:</p>
+        <ul>
+            <li>The week's top questions and answers</li>
+            <li>Important community announcements</li>
+            <li>Questions that need answers</li>
+        </ul>
+    <div id="newsletter-signup-container"><input id="newsletter-signup" type="button" value="Sign up for the newsletter"></div>
+    <p id="newsletter-preview-container">see an <a href="http://stackexchange.com/newsletters/newsletter?site=tex.stackexchange.com" id="newsletter-preview">example newsletter</a></p>
+    <div class="dno">
+        
+<p class="privacy-policy-agreement">
+By subscribing, you agree to the <a href="http://stackexchange.com/legal/privacy-policy" target="_blank">privacy policy</a> and <a href="http://stackexchange.com/legal/terms-of-service" target="_blank">terms of service</a>.</p>
+<input type="hidden" name="legalLinksShown" value="1">
+    </div>
+</div>
+
+    </div>
+			  
+    
+            <div class="module sidebar-linked">
+	<h4 id="h-linked">Linked</h4>
+	<div class="linked" data-tracker="lq=1">
+<div class="spacer">
+	<a href="http://tex.stackexchange.com/q/36299?lq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes answered-accepted default">27</div>
+	</a>
+	<a href="http://tex.stackexchange.com/questions/36299/incompatibilities-between-koma-script-and-titlesec?lq=1" class="question-hyperlink">Incompatibilities between KOMA-Script and titlesec</a>
+</div><div class="spacer">
+	<a href="http://tex.stackexchange.com/q/160320?lq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes answered-accepted default">9</div>
+	</a>
+	<a href="http://tex.stackexchange.com/questions/160320/customizing-chapter-style-with-tikz?lq=1" class="question-hyperlink">Customizing chapter style with tikz</a>
+</div><div class="spacer">
+	<a href="http://tex.stackexchange.com/q/169416?lq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes answered-accepted default">10</div>
+	</a>
+	<a href="http://tex.stackexchange.com/questions/169416/how-to-make-this-chapter-heading-style?lq=1" class="question-hyperlink">How to make this chapter heading style?</a>
+</div><div class="spacer">
+	<a href="http://tex.stackexchange.com/q/288737?lq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes answered-accepted default">2</div>
+	</a>
+	<a href="http://tex.stackexchange.com/questions/288737/customizing-chapter-and-section-style-scrbook?lq=1" class="question-hyperlink">Customizing chapter and section style (scrbook)</a>
+</div><div class="spacer">
+	<a href="http://tex.stackexchange.com/q/228019?lq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes answered-accepted default">1</div>
+	</a>
+	<a href="http://tex.stackexchange.com/questions/228019/chapter-styles-catalog?lq=1" class="question-hyperlink">Chapter styles catalog</a>
+</div><div class="spacer">
+	<a href="http://tex.stackexchange.com/q/288966?lq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes answered-accepted default">2</div>
+	</a>
+	<a href="http://tex.stackexchange.com/questions/288966/modify-fancy-chapter-heading?lq=1" class="question-hyperlink">Modify Fancy Chapter Heading</a>
+</div><div class="spacer">
+	<a href="http://tex.stackexchange.com/q/202489?lq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes  default">0</div>
+	</a>
+	<a href="http://tex.stackexchange.com/questions/202489/chapter-style-design?lq=1" class="question-hyperlink">Chapter style design</a>
+</div>			</div>
+</div>
+
+				<div class="module sidebar-related">
+					<h4 id="h-related">Related</h4>
+                    <div class="related js-gps-related-questions" data-tracker="rq=1">
+                        <div class="spacer js-gps-track">
+<a href="http://tex.stackexchange.com/q/51841?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes answered-accepted default">2
+    </div>
+</a><a href="http://tex.stackexchange.com/questions/51841/cant-shift-position-chapter-with-titlesec?rq=1" class="question-hyperlink">Can't shift/position \chapter with titlesec?</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://tex.stackexchange.com/q/54578?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes answered-accepted default">4
+    </div>
+</a><a href="http://tex.stackexchange.com/questions/54578/set-chapter-header-to-small-caps-and-bold-in-scrbook?rq=1" class="question-hyperlink">Set chapter header to small caps and bold in scrbook</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://tex.stackexchange.com/q/56301?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes answered-accepted default">5
+    </div>
+</a><a href="http://tex.stackexchange.com/questions/56301/setting-the-upper-margin-of-chapter-titles-in-scrbook?rq=1" class="question-hyperlink">Setting the upper margin of chapter titles in scrbook</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://tex.stackexchange.com/q/79202?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes answered-accepted default">3
+    </div>
+</a><a href="http://tex.stackexchange.com/questions/79202/format-appendix-chapter-title-with-titlesec-in-a-scrbook?rq=1" class="question-hyperlink">Format appendix chapter title with titlesec in a scrbook</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://tex.stackexchange.com/q/118649?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes default">3
+    </div>
+</a><a href="http://tex.stackexchange.com/questions/118649/change-the-chapter-style-in-scrbook?rq=1" class="question-hyperlink">Change the chapter style in scrbook</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://tex.stackexchange.com/q/160320?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes answered-accepted default">9
+    </div>
+</a><a href="http://tex.stackexchange.com/questions/160320/customizing-chapter-style-with-tikz?rq=1" class="question-hyperlink">Customizing chapter style with tikz</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://tex.stackexchange.com/q/160746?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes answered-accepted default">4
+    </div>
+</a><a href="http://tex.stackexchange.com/questions/160746/koma-script-restore-default-chapter-style?rq=1" class="question-hyperlink">Koma script: Restore default chapter style</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://tex.stackexchange.com/q/160951?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes default">4
+    </div>
+</a><a href="http://tex.stackexchange.com/questions/160951/chapter-title-format-back-to-default?rq=1" class="question-hyperlink">Chapter title format back to default</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://tex.stackexchange.com/q/178569?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes answered-accepted default">9
+    </div>
+</a><a href="http://tex.stackexchange.com/questions/178569/custom-chapter-style-with-tikz-and-the-report-class?rq=1" class="question-hyperlink">Custom chapter style with Tikz and the report class</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://tex.stackexchange.com/q/254907?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes answered-accepted default">7
+    </div>
+</a><a href="http://tex.stackexchange.com/questions/254907/scrbook-three-extremely-simple-questions-about-adjustment-and-font-styling?rq=1" class="question-hyperlink">scrbook - Three extremely simple questions about adjustment and font-styling</a>
+</div>
+
+                    </div>
+				</div>
+            
+<div id="hot-network-questions" class="module">
+    <h4>
+        <a href="http://stackexchange.com/questions?tab=hot" class="js-gps-track" data-gps-track="posts_hot_network.click({ item_type:1, location:11 })">
+            Hot Network Questions
+        </a>
+    </h4>
+    <ul>
+            <li>
+                <div class="favicon favicon-rpg" title="Role-playing Games Stack Exchange"></div><a href="http://rpg.stackexchange.com/questions/74657/does-a-continual-damage-effect-stack-with-itself" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:122 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Does a continual damage effect stack with itself?
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-physics" title="Physics Stack Exchange"></div><a href="http://physics.stackexchange.com/questions/236063/why-is-sound-reflected-and-not-transmitted-through-a-wall" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:151 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Why is sound reflected and not transmitted through a wall?
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-parenting" title="Parenting Stack Exchange"></div><a href="http://parenting.stackexchange.com/questions/23929/how-can-i-explain-to-my-son-why-sunlight-will-hurt-his-eyes" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:228 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How can I explain to my son why sunlight will hurt his eyes?
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-ux" title="User Experience Stack Exchange"></div><a href="http://ux.stackexchange.com/questions/90300/is-home-screen-really-needed" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:102 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Is home screen really needed?
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-japanese" title="Japanese Language Stack Exchange"></div><a href="http://japanese.stackexchange.com/questions/31133/cold-in-japanese-when-to-use-%e5%af%92%e5%86%b7" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:257 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    "Cold" in Japanese: When to use 寒冷
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-english" title="English Language &amp; Usage Stack Exchange"></div><a href="http://english.stackexchange.com/questions/306313/the-opposite-of-communication-on-social-media" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:97 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    The opposite of "communication on social media"
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-aviation" title="Aviation Stack Exchange"></div><a href="http://aviation.stackexchange.com/questions/25214/which-way-should-i-rotate-the-propeller-of-a-c172" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:528 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Which way should I rotate the propeller of a C172?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/1654655/punctured-plane-is-not-simply-connected" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:69 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Punctured plane is not simply connected
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-ell" title="English Language Learners Stack Exchange"></div><a href="http://ell.stackexchange.com/questions/81416/at-the-fringes-of-the-haute-intelligentsia" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:481 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    "at the fringes of the haute intelligentsia"
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-rpg" title="Role-playing Games Stack Exchange"></div><a href="http://rpg.stackexchange.com/questions/74664/what-resources-are-really-needed-to-start-5e" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:122 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    What resources are really needed to start 5e?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-security" title="Information Security Stack Exchange"></div><a href="http://security.stackexchange.com/questions/113627/what-is-the-risk-of-copy-and-pasting-linux-commands-from-a-website" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:162 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    What is the risk of copy and pasting Linux commands from a website?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-electronics" title="Electrical Engineering Stack Exchange"></div><a href="http://electronics.stackexchange.com/questions/217200/generation-and-transmission-of-electricity" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:135 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Generation and transmission of electricity
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/1652937/a-good-book-for-beginning-group-theory" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:69 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    A good book for beginning Group theory
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-salesforce" title="Salesforce Stack Exchange"></div><a href="http://salesforce.stackexchange.com/questions/109156/what-objects-are-available-for-triggers" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:459 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    What objects are available for triggers
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-chemistry" title="Chemistry Stack Exchange"></div><a href="http://chemistry.stackexchange.com/questions/45255/isonitrile-to-nitrile-conversion" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:431 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Isonitrile to nitrile conversion
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-serverfault" title="Server Fault"></div><a href="http://serverfault.com/questions/756119/perform-an-automated-scp-on-a-windows-server" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:2 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Perform an automated scp on a Windows server
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-stackoverflow" title="Stack Overflow"></div><a href="http://stackoverflow.com/questions/35394867/how-to-store-60-booleans-in-a-mysql-database" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:1 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How to store 60 Booleans in a MySQL Database?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-tex" title="TeX - LaTeX Stack Exchange"></div><a href="http://tex.stackexchange.com/questions/292877/generating-grid-in-a-box" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:85 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Generating grid in a box
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-rpg" title="Role-playing Games Stack Exchange"></div><a href="http://rpg.stackexchange.com/questions/74602/i-picked-the-wrong-spells-as-a-wizard-how-do-i-recover" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:122 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    I picked the wrong spells as a wizard, how do I recover?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-stackoverflow" title="Stack Overflow"></div><a href="http://stackoverflow.com/questions/35390835/is-comparison-of-const-iterator-with-iterator-well-defined" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:1 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Is comparison of const_iterator with iterator well-defined?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-codegolf" title="Programming Puzzles &amp; Code Golf Stack Exchange"></div><a href="http://codegolf.stackexchange.com/questions/71631/upgoat-or-downgoat" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:200 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Upgoat or Downgoat?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-workplace" title="The Workplace Stack Exchange"></div><a href="http://workplace.stackexchange.com/questions/61884/should-i-recommend-that-i-not-be-involved-in-a-project-if-my-advice-is-consisten" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:423 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Should I recommend that I not be involved in a project if my advice is consistently ignored?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-mathoverflow" title="MathOverflow"></div><a href="http://mathoverflow.net/questions/231045/what-are-fun-elementary-subjects-in-probability" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:504 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    What are fun elementary subjects in probability?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-academia" title="Academia Stack Exchange"></div><a href="http://academia.stackexchange.com/questions/63086/how-to-deal-with-a-nosy-fellow-graduate-student" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:415 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How to deal with a nosy fellow graduate student?
+                </a>
+
+            </li>
+    </ul>
+
+        
+</div>
+		</div>
+	
+<div id="feed-link">
+    <div id="feed-link-text">
+        <a href="http://tex.stackexchange.com/feeds/question/150923" title="feed of this question and its answers">
+            <span class="feed-icon"></span>question feed
+        </a>
+    </div>
+</div>	<script>
+StackExchange.ready(function(){$.get('/posts/150923/ivc/4588');});
+</script>
+<noscript>
+    &lt;div&gt;&lt;img src="/posts/150923/ivc/4588" class="dno" alt="" width="0" height="0"&gt;&lt;/div&gt;
+</noscript><div style="display:none" id="prettify-lang">lang-tex</div></div>
+
+
+        </div>
+    </div>
+    <div id="footer" class="categories">
+        <div class="footerwrap">
+            <div id="footer-menu">
+                <div class="top-footer-links">
+                    <a href="http://stackoverflow.com/company/about">about us</a>
+                        <a href="http://tex.stackexchange.com/tour">tour</a>
+                    <a href="http://tex.stackexchange.com/help">help</a>
+                    <a href="http://tex.blogoverflow.com/?blb=1">blog</a>
+                        <a href="http://chat.stackexchange.com/">chat</a>
+                    <a href="http://data.stackexchange.com/">data</a>
+                    <a href="http://stackexchange.com/legal">legal</a>
+                    <a href="http://stackexchange.com/legal/privacy-policy">privacy policy</a>
+                    <a href="http://stackoverflow.com/company/work-here">work here</a>
+                    <a href="http://stackexchange.com/mediakit">advertising info</a>
+
+                    <a onclick="StackExchange.switchMobile(&quot;on&quot;)">mobile</a>
+                    <b><a href="http://tex.stackexchange.com/contact">contact us</a></b>
+                        <b><a href="http://meta.tex.stackexchange.com/">feedback</a></b>
+                    
+                </div>
+                <div id="footer-sites">
+                    <table>
+    <tbody><tr>
+            <th colspan="3">
+                Technology
+            </th>
+            <th>
+                Life / Arts
+            </th>
+            <th>
+                Culture / Recreation
+            </th>
+            <th>
+                Science
+            </th>
+            <th>
+                Other
+            </th>
+    </tr>
+    <tr>
+            <td>
+                <ol>
+                        <li><a href="http://stackoverflow.com/" title="professional and enthusiast programmers">Stack Overflow</a></li>
+                        <li><a href="http://serverfault.com/" title="system and network administrators">Server Fault</a></li>
+                        <li><a href="http://superuser.com/" title="computer enthusiasts and power users">Super User</a></li>
+                        <li><a href="http://webapps.stackexchange.com/" title="power users of web applications">Web Applications</a></li>
+                        <li><a href="http://askubuntu.com/" title="Ubuntu users and developers">Ask Ubuntu</a></li>
+                        <li><a href="http://webmasters.stackexchange.com/" title="pro webmasters">Webmasters</a></li>
+                        <li><a href="http://gamedev.stackexchange.com/" title="professional and independent game developers">Game Development</a></li>
+                        <li><a href="http://tex.stackexchange.com/" title="users of TeX, LaTeX, ConTeXt, and related typesetting systems">TeX - LaTeX</a></li>
+                            </ol></td><td><ol>
+                        <li><a href="http://programmers.stackexchange.com/" title="professional programmers interested in conceptual questions about software development">Programmers</a></li>
+                        <li><a href="http://unix.stackexchange.com/" title="users of Linux, FreeBSD and other Un*x-like operating systems">Unix &amp; Linux</a></li>
+                        <li><a href="http://apple.stackexchange.com/" title="power users of Apple hardware and software">Ask Different (Apple)</a></li>
+                        <li><a href="http://wordpress.stackexchange.com/" title="WordPress developers and administrators">WordPress Development</a></li>
+                        <li><a href="http://gis.stackexchange.com/" title="cartographers, geographers and GIS professionals">Geographic Information Systems</a></li>
+                        <li><a href="http://electronics.stackexchange.com/" title="electronics and electrical engineering professionals, students, and enthusiasts">Electrical Engineering</a></li>
+                        <li><a href="http://android.stackexchange.com/" title="enthusiasts and power users of the Android operating system">Android Enthusiasts</a></li>
+                        <li><a href="http://security.stackexchange.com/" title="information security professionals">Information Security</a></li>
+                            </ol></td><td><ol>
+                        <li><a href="http://dba.stackexchange.com/" title="database professionals who wish to improve their database skills and learn from others in the community">Database Administrators</a></li>
+                        <li><a href="http://drupal.stackexchange.com/" title="Drupal developers and administrators">Drupal Answers</a></li>
+                        <li><a href="http://sharepoint.stackexchange.com/" title="SharePoint enthusiasts">SharePoint</a></li>
+                        <li><a href="http://ux.stackexchange.com/" title="user experience researchers and experts">User Experience</a></li>
+                        <li><a href="http://mathematica.stackexchange.com/" title="users of Mathematica">Mathematica</a></li>
+                        <li><a href="http://salesforce.stackexchange.com/" title="Salesforce administrators, implementation experts, developers and anybody in-between">Salesforce</a></li>
+                        <li><a href="http://expressionengine.stackexchange.com/" title="administrators, end users, developers and designers for ExpressionEngine® CMS">ExpressionEngine® Answers</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#technology" class="more">
+                                more (13)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="http://photo.stackexchange.com/" title="professional, enthusiast and amateur photographers">Photography</a></li>
+                        <li><a href="http://scifi.stackexchange.com/" title="science fiction and fantasy enthusiasts">Science Fiction &amp; Fantasy</a></li>
+                        <li><a href="http://graphicdesign.stackexchange.com/" title="Graphic Design professionals, students, and enthusiasts">Graphic Design</a></li>
+                        <li><a href="http://movies.stackexchange.com/" title="movie and tv enthusiasts">Movies &amp; TV</a></li>
+                        <li><a href="http://cooking.stackexchange.com/" title="professional and amateur chefs">Seasoned Advice (cooking)</a></li>
+                        <li><a href="http://diy.stackexchange.com/" title="contractors and serious DIYers">Home Improvement</a></li>
+                        <li><a href="http://money.stackexchange.com/" title="people who want to be financially literate">Personal Finance &amp; Money</a></li>
+                        <li><a href="http://academia.stackexchange.com/" title="academics and those enrolled in higher education">Academia</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#lifearts" class="more">
+                                more (9)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="http://english.stackexchange.com/" title="linguists, etymologists, and serious English language enthusiasts">English Language &amp; Usage</a></li>
+                        <li><a href="http://skeptics.stackexchange.com/" title="scientific skepticism">Skeptics</a></li>
+                        <li><a href="http://judaism.stackexchange.com/" title="those who base their lives on Jewish law and tradition and anyone interested in learning more">Mi Yodeya (Judaism)</a></li>
+                        <li><a href="http://travel.stackexchange.com/" title="road warriors and seasoned travelers">Travel</a></li>
+                        <li><a href="http://christianity.stackexchange.com/" title="committed Christians, experts in Christianity and those interested in learning more">Christianity</a></li>
+                        <li><a href="http://gaming.stackexchange.com/" title="passionate videogamers on all platforms">Arqade (gaming)</a></li>
+                        <li><a href="http://bicycles.stackexchange.com/" title="people who build and repair bicycles, people who train cycling, or commute on bicycles">Bicycles</a></li>
+                        <li><a href="http://rpg.stackexchange.com/" title="gamemasters and players of tabletop, paper-and-pencil role-playing games">Role-playing Games</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#culturerecreation" class="more">
+                                more (21)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="http://math.stackexchange.com/" title="people studying math at any level and professionals in related fields">Mathematics</a></li>
+                        <li><a href="http://stats.stackexchange.com/" title="people interested in statistics, machine learning, data analysis, data mining, and data visualization">Cross Validated (stats)</a></li>
+                        <li><a href="http://cstheory.stackexchange.com/" title="theoretical computer scientists and researchers in related fields">Theoretical Computer Science</a></li>
+                        <li><a href="http://physics.stackexchange.com/" title="active researchers, academics and students of physics">Physics</a></li>
+                        <li><a href="http://mathoverflow.net/" title="professional mathematicians">MathOverflow</a></li>
+                        <li><a href="http://chemistry.stackexchange.com/" title="scientists, academics, teachers and students">Chemistry</a></li>
+                        <li><a href="http://biology.stackexchange.com/" title="biology researchers, academics, and students">Biology</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#science" class="more">
+                                more (5)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="http://stackapps.com/" title="apps, scripts, and development with the Stack Exchange API">Stack Apps</a></li>
+                        <li><a href="http://meta.stackexchange.com/" title="meta-discussion of the Stack Exchange family of Q&amp;A websites">Meta Stack Exchange</a></li>
+                        <li><a href="http://area51.stackexchange.com/" title="proposing new sites in the Stack Exchange network">Area 51</a></li>
+                        <li><a href="http://careers.stackoverflow.com/">Stack Overflow Careers</a></li>
+                    
+                </ol>
+            </td>
+    </tr>
+</tbody></table>
+                </div>
+            </div>
+
+            <div id="copyright">
+                site design / logo © 2016 Stack Exchange Inc; user contributions licensed under <a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc by-sa 3.0</a> 
+                with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a>
+            </div>
+            <div id="svnrev">
+                rev 2016.2.14.3249
+            </div>
+            
+        </div>
+    </div>
+    <noscript>
+        &lt;div id="noscript-warning"&gt;TeX - LaTeX Stack Exchange works best with JavaScript enabled&lt;img src="http://pixel.quantserve.com/pixel/p-c1rF4kxgLUzNc.gif" alt="" class="dno"&gt;&lt;/div&gt;
+    </noscript>
+
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () { (i[r].q = i[r].q || []).push(arguments) }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m);
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-5620270-24', {'cookieDomain': 'stackexchange.com'});
+                        ga('set', 'dimension2', '|tikz-pgf|sectioning|formatting|koma-script|titlesec|');         ga('send', 'pageview');
+        var _qevents = _qevents || [],
+            _comscore = _comscore || [];
+        (function () {
+            var ssl='https:'==document.location.protocol,
+                s=document.getElementsByTagName('script')[0],
+                qc=document.createElement('script');
+            qc.async=true;
+            qc.src=(ssl?'https://secure':'http://edge')+'.quantserve.com/quant.js';
+            s.parentNode.insertBefore(qc, s);
+            var sc=document.createElement('script');
+            sc.async=true;
+            sc.src=(ssl?'https://sb':'http://b') + '.scorecardresearch.com/beacon.js';
+            s.parentNode.insertBefore(sc, s);
+        })();
+        _comscore.push({ c1: "2", c2: "17440561" });
+        _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
+    </script>
+            
+    
+<div id="techsmith-snagitchrome-extension"></div></body></html>

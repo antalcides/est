@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZlt{}\PYGZlt{}}my\PYG{o}{\PYGZhy{}}label\PYG{p}{,} eval\PYG{o}{=}\PYG{k+kc}{TRUE}\PYG{p}{,} dev\PYG{o}{=}\PYG{l+s}{\PYGZsq{}png\PYGZsq{}}\PYG{o}{\PYGZgt{}\PYGZgt{}=}
+\PYG{k+kp}{set.seed}\PYG{p}{(}\PYG{l+m}{1213}\PYG{p}{)}  \PYG{c+c1}{\PYGZsh{} for reproducibility}
+x \PYG{o}{=} \PYG{k+kp}{cumsum}\PYG{p}{(}rnorm\PYG{p}{(}\PYG{l+m}{100}\PYG{p}{))}
+\PYG{k+kp}{mean}\PYG{p}{(}x\PYG{p}{)}  \PYG{c+c1}{\PYGZsh{} mean of x}
+plot\PYG{p}{(}x\PYG{p}{,} type \PYG{o}{=} \PYG{l+s}{\PYGZsq{}l\PYGZsq{}}\PYG{p}{)}  \PYG{c+c1}{\PYGZsh{} Brownian motion}
+\PYG{o}{@}
+\end{Verbatim}

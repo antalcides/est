@@ -1,0 +1,195 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass libro-matua
+\begin_preamble
+\input{preamble2}
+\input{composicion-codigo}
+\usepackage{fancyvrb}
+\usepackage[unicode=true,pdfusetitle,
+ bookmarks=true,bookmarksnumbered=true,bookmarksopen=true,bookmarksopenlevel=1,
+ breaklinks=false,pdfborder={0 0 0},backref=false,colorlinks=false]
+ {hyperref}
+\hypersetup{
+ pdfpagelayout=OneColumn, pdfnewwindow=true, pdfstartview=XYZ, plainpages=false}
+ \newsavebox{\LstBox}
+ %\graphicspath{ {./img/} }
+ \makeatletter
+\def\input@path{{./}{./build/}}
+\makeatother
+ \graphicspath{{./}{./img/}{./build/}}
+ \renewcommand{\baselinestretch}{1.5}
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package none
+\inputencoding auto
+\fontencoding default
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 0
+\use_package mathtools 1
+\use_package mhchem 0
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+A veces se dice que las variables cuantitativas son las variables numéricas,
+ y las cualitativas las no numéricas.
+ La diferencia es, en realidad, un poco más sutil.
+ Una variable es cualitativa nominal cuando sólo se utiliza para establecer
+ categorías, y no para hacer operaciones con ella.
+ Es decir, para poner nombres, crear clases o especies dentro de los individuos
+ que estamos estudiando.
+ Por ejemplo, cuando clasicamos a los seres vivos en especies, no estamos
+ midiendo nada.
+ Podemos representar esas especies mediante números, naturalmente, pero
+ en este caso la utilidad de ese número se acaba en la propia representación,
+ y en la clasicación que los números permiten.
+ Pero no utilizamos las propiedades de los números (las operaciones aritméticas,
+ suma, resta, etc.).
+ Volviendo al ejemplo de las especies, no tiene sentido sumar especies de
+ seres vivos.
+ A menudo llamaremos a estas variables factores, y diremos que los distintos
+ valores que puede tomar un factor son los niveles de ese factor.
+ Por ejemplo, en un estudio sobre cómo afecta al crecimiento de una planta
+ el tipo de riego que se utiliza, podríamos utilizar un factor (variable
+ cualitativa) llamado riego, con niveles: ninguno, escaso, medio, abundante.
+ Una variable cuantitativa, por el contrario, tiene un valor numérico, y
+ las operaciones matemáticas que se pueden hacer con ese número son importantes
+ para nosotros.
+ Por ejemplo, podemos medir la presión arterial de un animal y utilizar
+ fórmulas de la mecánica de uidos para estudiar el ujo sanguíneo.
+ En la frontera, entre las variables cuantitativas y las cualitativas, se
+ incluyen las
+\end_layout
+
+\begin_layout Standard
+cualitativas ordenadas.
+ En este caso existe una ordenación dentro de los valores de la variable.
+\end_layout
+
+\begin_layout Standard
+A su vez, las variables cuantitativas (aquellas con las que las operaciones
+ numéricas tienen sentido) se dividen en discretas y continuas.
+ Puesto que se trata de números, y queremos hacer operaciones con ellos,
+ la clasicación depende de las operaciones matemáticas que vamos a realizar.
+ Cuando utilizamos los números enteros (
+\begin_inset Formula $\mathcal{\mathfrak{\mathbb{Z}}}$
+\end_inset
+
+), que son .
+ .
+ .
+ , −3, −2, −1, 0, 1, 2, 3, .
+ .
+ .
+ o un subconjunto de ellos como modelo, la variable es discreta.
+ Y entonces con esos números podemos sumar, restar, multiplicar (pero no
+ siempre dividir).
+ Por el contrario, si usamos los números reales (
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+), entonces la variable aleatoria es continua.
+ La diferencia entre un tipo de datos y el otro se corresponde en general
+ con la diferencia entre digital y analógico.
+ Es importante entender que la diferencia entre discreto y continuo es,
+ en general, una diferencia que establecemos nosotros al crear un modelo
+ con el que estudiar un fenómeno, y que la elección correcta, entre otras
+ cosas, del tipo de variable, determina la utilidad del modelo.
+ Un ejemplo clásico de este tipo de situaciones es el uso de la variable
+ tiempo.
+ Cuando alguien nos dice que una reacción química, por ejemplo la combustión
+ en un motor diesel a 1500 rpm, ha transcurrido en 5.6 milisegundos, está
+ normalmente claro que, en el contexto de este problema, nos interesan los
+ valores de la variable tiempo con mucha precisión, y la diferencia entre
+ 5.6 y, por ejemplo, 5.9 milisegundos puede ser fundamental.
+ Además, y aún más importante, en este tipo de situaciones, damos por sentado
+ que la variable tiempo podría tomar cualquier valor en un cierto intervalo.
+ Si observáramos esa reacción con aparatos más precisos, a lo mejor podríamos
+ decir que el tiempo
+\end_layout
+
+\begin_layout Standard
+de la combustión es de 5.57 milisegundos, y no, por ejemplo, de 5.59 milisegundos.
+ ½Aunque, por supuesto, ambas cantidades se redondearán a 5.6 milisegundos
+ cuando sólo se usan dos cifras signicativas!1 Por el contrario, si decimos
+ que el tratamiento de un paciente en un hospital ha durado tres días, está
+ claro que en el contexto de este problema no queremos decir que el paciente
+ salió por la puerta del hospital exactamente 72 horas (o 259200 segundos)
+ después de haber entrado.
+ El matiz esencial es que no nos importa la diferencia entre salir a las
+ 68 o a las 71 horas.
+ Y decidimos usar una unidad de tiempo, el día, que sólo toma valores enteros,
+ separados por saltos de una unidad.
+ En este problema hablamos de un día, dos o tres días, pero no diremos que
+ el paciente salió del hospital a los 1.73 días.
+ Eso no signica que no tenga sentido hablar de 1.73 días.
+ ½Naturalmente que lo tiene! La cuestión es si nos importa, si necesitamos
+ ese nivel de precisión en el contexto del problema que nos ocupa.
+ Somos conscientes de que esta diferencia entre los tipos de variables y
+ su uso en distintos problemas es una cuestion sutil, que sólo se aclarará
+ progresivamente a medida que el lector vaya teniendo más experiencia con
+ modelos de los diversos tipos: discretos, continuos, y también factoriales.
+ Además este tema toca de cerca varias cuestiones (como la idea de precisión,
+ o el uso de las cifras signicativas) sobre los que volveremos más adelante,
+ en la Sección 1.3, y siempre que tengamos ocasión a lo largo del curso.
+\end_layout
+
+\end_body
+\end_document

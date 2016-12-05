@@ -1,0 +1,31 @@
+\documentclass{cornell}
+\begin{document}
+\title{
+    \cornelltitle{A topic we're taking notes on}
+}
+\maketitle
+\preread
+    {Questions}
+    {
+        \begin{enumerate}
+            \item{What's the first question this section will answer?}
+            \item{What's the second question?}
+        \end{enumerate}
+    }
+\note[Some key term]
+{
+    \begin{itemize} 
+        \item{A cool thing}
+        \item{Another cool thing}
+        \item{Not all things are cool}
+    \end{itemize}
+}
+\note[Another term]
+{
+    \lipsum[4]
+}
+\note{\lipsum[5]}
+
+\summary{A fabulous summary}
+\note[]{\lipsum[6]}
+\end{document}

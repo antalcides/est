@@ -1,0 +1,40 @@
+\documentclass[oneside,svgnames,x11names,x11names,HTML,twoside]{book}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{lipsum-es}
+\usepackage{tcolorbox}
+\tcbuselibrary{most,documentation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+\newtcbox{\mylib}{enhanced,nobeforeafter,tcbox raise base,boxrule=0.4pt,top=0mm,bottom=0mm,
+  right=0mm,left=4mm,arc=1pt,boxsep=2pt,before upper={\vphantom{dlg}},
+  colframe=green!50!black,coltext=green!25!black,colback=green!10!white,
+  overlay={\begin{tcbclipinterior}\fill[green!75!blue!50!white] (frame.south west)
+    rectangle node[text=white,font=\sffamily\bfseries\tiny,rotate=90] {LIB} ([xshift=4mm]frame.north west);\end{tcbclipinterior}}}
+    
+    \newtcbox{\milib}{enhanced,
+    nobeforeafter,
+    tcbox raise base,
+    boxrule=0.4pt,
+    top=0mm,
+    bottom=0mm,
+    right=0mm,
+    left=4mm,
+    arc=1pt,
+    boxsep=2pt,
+    before upper={\vphantom{dlg}},
+    colframe=green!50!black, 
+    coltext=green!25!black,
+    colback=green!10!white,
+    overlay={\begin{tcbclipinterior}\fill[green!75!blue!50!white] (frame.south west)
+            rectangle node[text=white,
+            font=\sffamily\bfseries\tiny,rotate=90] {OBS}([xshift=4mm]frame.north west);
+            \end{tcbclipinterior}}}
+            
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\chapter{Mi primera sección}
+\mylib{Capítulo}
+\milib{Capítulo}
+\end{document}

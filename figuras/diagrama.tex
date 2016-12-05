@@ -1,0 +1,56 @@
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{pgf,tikz}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+\pagestyle{empty}
+\begin{document}
+\definecolor{zzttqq}{rgb}{0.6,0.2,0.}
+\definecolor{qqzzcc}{rgb}{0.,0.6,0.8}
+\definecolor{cqcqcq}{rgb}{0.7529411764705882,0.7529411764705882,0.7529411764705882}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\draw [color=cqcqcq,dash pattern=on 17pt off 17pt, xstep=5.0cm,ystep=20.0cm] (-9.641377390944587,-31.260843438953625) grid (12.546424809506131,21.024995927545852);
+\clip(-9.641377390944587,-31.260843438953625) rectangle (12.546424809506131,21.024995927545852);
+\fill[color=qqzzcc,fill=qqzzcc,fill opacity=0.1] (-8.,20.) -- (0.,20.) -- (0.,10.) -- (-8.,10.) -- cycle;
+\fill[color=qqzzcc,fill=qqzzcc,fill opacity=0.1] (4.,20.) -- (4.,10.) -- (12.,10.) -- (12.,20.) -- cycle;
+\fill[color=qqzzcc,fill=qqzzcc,fill opacity=0.1] (-8.,0.) -- (0.,0.) -- (0.,-10.) -- (-8.,-10.) -- cycle;
+\fill[color=qqzzcc,fill=qqzzcc,fill opacity=0.1] (4.,0.) -- (4.,-10.) -- (12.,-10.) -- (12.,0.) -- cycle;
+\fill[color=qqzzcc,fill=qqzzcc,fill opacity=0.1] (-8.,-20.) -- (0.,-20.) -- (0.,-30.) -- (-8.,-30.) -- cycle;
+\fill[color=qqzzcc,fill=qqzzcc,fill opacity=0.1] (4.,-20.) -- (12.,-20.) -- (12.,-30.) -- (4.,-30.) -- cycle;
+\draw [color=qqzzcc] (-8.,20.)-- (0.,20.);
+\draw [color=qqzzcc] (0.,20.)-- (0.,10.);
+\draw [color=qqzzcc] (0.,10.)-- (-8.,10.);
+\draw [color=qqzzcc] (-8.,10.)-- (-8.,20.);
+\draw [color=qqzzcc] (4.,20.)-- (4.,10.);
+\draw [color=qqzzcc] (4.,10.)-- (12.,10.);
+\draw [color=qqzzcc] (12.,10.)-- (12.,20.);
+\draw [color=qqzzcc] (12.,20.)-- (4.,20.);
+\draw [color=qqzzcc] (-8.,0.)-- (0.,0.);
+\draw [color=qqzzcc] (0.,0.)-- (0.,-10.);
+\draw [color=qqzzcc] (0.,-10.)-- (-8.,-10.);
+\draw [color=qqzzcc] (-8.,-10.)-- (-8.,0.);
+\draw [color=qqzzcc] (4.,0.)-- (4.,-10.);
+\draw [color=qqzzcc] (4.,-10.)-- (12.,-10.);
+\draw [color=qqzzcc] (12.,-10.)-- (12.,0.);
+\draw [color=qqzzcc] (12.,0.)-- (4.,0.);
+\draw [color=qqzzcc] (-8.,-20.)-- (0.,-20.);
+\draw [color=qqzzcc] (0.,-20.)-- (0.,-30.);
+\draw [color=qqzzcc] (0.,-30.)-- (-8.,-30.);
+\draw [color=qqzzcc] (-8.,-30.)-- (-8.,-20.);
+\draw [color=qqzzcc] (4.,-20.)-- (12.,-20.);
+\draw [color=qqzzcc] (12.,-20.)-- (12.,-30.);
+\draw [color=qqzzcc] (12.,-30.)-- (4.,-30.);
+\draw [color=qqzzcc] (4.,-30.)-- (4.,-20.);
+\draw [->,color=zzttqq] (-4.,10.) -- (-4.,0.);
+\draw [->,color=zzttqq] (-4.,10.) -- (8.,0.);
+\draw [->,color=zzttqq] (8.,10.) -- (8.,0.);
+\draw [->,color=zzttqq] (8.059757740520192,-10.) -- (8.059757740520192,-20.);
+\draw [color=qqzzcc](-6.174533297124162,16.756764142525487) node[anchor=north west] {ESTADÍSTICA};
+\draw [color=qqzzcc](5.612736621865282,17.183587321027524) node[anchor=north west] {PROBABILIDAD};
+\draw [color=qqzzcc](-6.048466239167055,-3.090513657819214) node[anchor=north west] {DESCRIPTIVA};
+\draw [color=qqzzcc](5.738803679822388,-2.6636904793171774) node[anchor=north west] {INFERENCIAL};
+\draw [color=qqzzcc](-6.111499768145609,-23.15120304741493) node[anchor=north west] {PARAMÉTRICA};
+\draw [color=qqzzcc](5.108468390036856,-23.36461463666595) node[anchor=north west] {NO PARAMÉTRICA};
+\draw [->,color=zzttqq] (8.1891967341326,-10.) -- (-4.3016661494647686,-20.);
+\end{tikzpicture}
+\end{document}

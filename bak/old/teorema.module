@@ -1,0 +1,61 @@
+#\DeclareLyXModule{teorema}
+#DescriptionBegin
+#Defines some styles for movies.....
+#DescriptionEnd
+#Author: Antalcides Olivo
+
+Format 35
+Style Teorema
+Category              Reasoning
+Margin                First_Dynamic
+LatexType             Environment
+LatexName             teo
+NextNoIndent          1
+LeftMargin            MMM
+RightMargin           MMM
+ParIndent             MMM
+ParSkip               0.4
+ItemSep               0.2
+TopSep                0.7
+BottomSep             0.7
+ParSep                0.3
+Align                 Block
+AlignPossible         Right
+LabelType             Static
+LabelCounter          teorema
+LabelSep              xx
+LabelString           "Teorema \theteorema."
+LabelFont
+	  Shape               Up
+	  Series              Bold
+EndFont
+Font
+	  Shape               Italic
+	  Size                Normal
+EndFont
+RequiredArgs          2
+Argument 1
+		LabelString    "Additional Teorema Text"
+		Tooltip        "Additional text appended to the theorem header"
+EndArgument
+Argument 2
+		LabelString    "Additional Teorema Text"
+		Tooltip        "Additional text appended to the theorem header"
+EndArgument
+Preamble
+\usepackage{multicol}
+\usepackage{etoolbox}%
+\usepackage{blindtext}%
+\usepackage{tikz}
+\usepackage[many,most]{tcolorbox}%
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{shadows,calc}
+\usetikzlibrary{shadows.blur}
+\usetikzlibrary{tikzmark,decorations.pathreplacing}
+\tcbuselibrary{breakable,minted}
+\usetikzlibrary{shapes.misc}
+\usetikzlibrary{decorations.pathmorphing}
+\tcbuselibrary{skins,theorems}
+   \mtcbmaketheorem{theo}{Teorema}{lemstyle}{teorema}{th}
+    EndPreamble
+End

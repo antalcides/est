@@ -1,0 +1,903 @@
+\batchmode
+\makeatletter
+\def\input@path{{styles/}{sections/}}
+\makeatother
+\documentclass[12pt,letterpaper]{book}
+\usepackage{parskip}
+\usepackage[spanish]{babel}
+\RequirePackage{lmodern,parskip,array,ifthen,calc}
+\usepackage{color}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\RequirePackage{amsmath,amsthm,amssymb,verbatim}
+\RequirePackage[pdftex,bookmarks,raiselinks,pageanchor,hyperindex,colorlinks]{hyperref}
+\RequirePackage{varwidth,cleveref,incgraph}
+\usepackage{array,tabularx}
+\usepackage{colortbl}
+\usepackage{floatrow}
+\usepackage{caption}
+\usepackage{graphicx}
+\graphicspath{ {./image/} }
+\usepackage{amsmath} 
+\definecolor{captionbgcolor}{RGB}{103,143,150}
+\usepackage{empheq} % para ecuaciones
+%\usepackage{tcolorbox}
+   \usepackage[many,most]{tcolorbox}
+\usetikzlibrary{calc}
+\usetikzlibrary{shadows}
+\definecolor{mygreen}{rgb}{0.61,0.73,0.35}
+ \tcbuselibrary{breakable,minted}
+  \tcbuselibrary{skins}
+  \tcbuselibrary{theorems}
+\definecolor{myblue}{RGB}{0,163,243}
+%\definecolor{myblue}{RGB}{40,96,139}
+%\usepackage{lipsum}
+\usepackage{chngcntr}
+\usepackage{amssymb}
+\usepackage{aliascnt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{booktabs}
+%%%%%%%%%%%%%%%%%%%%%%%%%%% recuadro %%%%%%%%%%%
+\usepackage{tikz}
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{shadows,calc}
+\graphicspath{ {./image/} }
+\definecolor{paper}{RGB}{239,227,157}
+\definecolor{titlebgdark}{RGB}{0,163,243}
+\definecolor{titlebglight}{RGB}{191,233,251}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{lipsum}
+
+%%%%%%%%%%%%%%%%% codigo R %%%%%%%%%
+\newtcblisting{pythoncode}[1][]{    
+  listing engine=minted,    
+  breakable,   
+  colback=blue,    
+  colframe=black!70,    
+  listing only,    
+  minted style=colorful,    
+  minted language=python,    
+  minted options={linenos=true,numbersep=3mm,texcl=true},    
+  left=5mm,enhanced,    
+  overlay={\begin{tcbclipinterior}\fill[black!25] (frame.south west)    
+            rectangle ([xshift=5mm]frame.north west);\end{tcbclipinterior}},
+            #1,
+}    
+
+%%%%%%%%%%%%%%%%%%% cajas para ejemplo %%%%%%%%%%%%
+\newcounter{ejemplo}[chapter]
+\tcbset{%
+  contourskin/.style={%
+      enhanced,
+      breakable,
+      frame hidden,
+      %height fixed for=first and middle,%% <-- This causes the issue!
+      parbox=false,
+      colback=white,
+      attach boxed title to top left={xshift=12pt},%% <-- Issue does not occur if this line is commented...
+      boxed title style={enhanced,top=4pt,left=12pt,right=12pt,
+          frame hidden,
+          interior style={left color=titlebgdark,right color=white},
+          overlay={%
+              \draw[titlebgdark,line width=2pt]
+                  ([xshift=-.5em,yshift=-1pt]frame.north west)--([xshift=.5em,yshift=-1pt]frame.north east);%
+          }%
+      },
+      coltitle=titlebgdark!60!black,
+      fonttitle=\bfseries\large,
+      before skip=\baselineskip,
+      left=12pt,
+      top=.8em,
+      drop large lifted shadow,
+      underlay unbroken={%
+          \coordinate (coin) at (title.north-|frame.west); 
+          \draw[titlebgdark,line width=1pt] ([yshift=-1pt]title.north east) -- ([xshift=-0.5pt,yshift=-1pt]coin) -- +(0,-1.2cm);
+          \draw[titlebgdark,line width=2pt] ([xshift=-0.5pt,yshift=-1pt-1.2cm]coin) -- ([xshift=-0.5pt]frame.south west);
+          \draw[titlebgdark,line width=2pt] ([xshift=-0.5pt]frame.south west) -- (frame.south east);%
+      },
+      underlay first={%
+          \coordinate (coin) at (title.north-|frame.west); 
+          \draw[titlebgdark,line width=1pt] ([yshift=-1pt]title.north east) -- ([xshift=-0.5pt,yshift=-1pt]coin) -- +(0,-1.2cm);
+          \draw[titlebgdark,line width=2pt] ([xshift=-0.5pt,yshift=-1pt-1.2cm]coin) -- ([xshift=-0.5pt]frame.south west);
+      },
+      underlay middle={%
+          \draw[titlebgdark,line width=2pt] ([xshift=-0.5pt]frame.north west) -- ([xshift=-0.5pt]frame.south west);%
+      },
+      underlay last={%
+          \draw[titlebgdark,line width=2pt] ([xshift=-0.5pt]frame.north west) -- ([xshift=-0.5pt]frame.south west);
+          \draw[titlebgdark,line width=2pt] ([xshift=-0.5pt]frame.south west) -- (frame.south east);%
+      },%
+  },
+}
+
+\newtcolorbox{mycontourbox}[1][]{contourskin,#1}
+%\newenvironment{ejemplo}[1][]{\refstepcounter{ejemplo}
+%\begin{mycontourbox}[title={Example\ \thechapter.\thesection\theejemplo]}
+%  #1
+%  \end{mycontourbox}
+%}{\medskip}
+\newenvironment{ejemplo}[1][]{\refstepcounter{ejemplo}
+\medskip
+\begin{mycontourbox}[title={Ejemplo:~\thesection.\theejemplo}]
+#1
+
+}{\end{mycontourbox}\medskip}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%Cajas para ejercicio %%%%%%%%%%%%%%%%
+\tcbset{mystyle/.style={
+  breakable,
+  enhanced,
+  outer arc=0pt,
+  arc=0pt,
+  colframe=titlebgdark,
+  colback=titlebgdark!20,
+  attach boxed title to top left,
+  boxed title style={
+    colback=titlebgdark,
+    outer arc=0pt,
+    arc=0pt,
+    top=3pt,
+    bottom=3pt,
+    },
+  fonttitle=\sffamily
+  }
+}
+
+\newtcolorbox[auto counter,number within=section]{example}[1][]{
+  mystyle,
+  title=Ejercicio~\thetcbcounter,
+  overlay unbroken and first={
+      \path
+        let
+        \p1=(title.north east),
+        \p2=(frame.north east)
+        in
+        node[anchor=west,font=\sffamily,color=myblue,text width=\x2-\x1] 
+        at (title.east) {#1};
+  }
+}
+\newtcolorbox[auto counter]{assumption}[1][]{
+  mystyle,
+  colback=white,
+  rightrule=0pt,
+  toprule=0pt,
+  title=Assumption SLR.\thetcbcounter,
+  overlay unbroken and first={
+      \path
+        let
+        \p1=(title.north east),
+        \p2=(frame.north east)
+        in
+        node[anchor=west,font=\sffamily,color=myblue,text width=\x2-\x1] 
+        at (title.east) {#1};
+  }
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% cajas para teoremas%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\definecolor{problemblue}{RGB}{100,134,158}
+\definecolor{idiomsgreen}{RGB}{0,162,0}
+\definecolor{exercisebgblue}{RGB}{192,232,252}
+
+\newtcolorbox{idioms}{
+  breakable,
+  enhanced,
+  colback=white,
+  colframe=idiomsgreen,
+  arc=0pt,
+  outer arc=0pt,
+  title=Idioms,
+  fonttitle=\bfseries\sffamily\large,
+  colbacktitle=idiomsgreen,
+  attach boxed title to top left={},
+  boxed title style={
+    enhanced,
+    skin=enhancedfirst jigsaw,
+    arc=3pt,
+    bottom=0pt,
+    interior style={fill=idiomsgreen}
+  }
+}
+
+\newtcolorbox[auto counter,number within=section]{praproblem}{
+  breakable,
+  enhanced,
+  colback=white,
+  boxrule=0pt,
+  arc=0pt,
+  outer arc=0pt,
+  title=Practice Problem~\thetcbcounter,
+  fonttitle=\bfseries\sffamily\large\strut,
+  coltitle=problemblue,
+  colbacktitle=problemblue,
+  title style={
+    left color=orange!60,
+    right color=white,
+    middle color=white
+  },
+  overlay={
+    \draw[line width=1.5pt,problemblue] (title.north west) -- (title.north east);
+  }
+}
+
+\newtcolorbox[auto counter,number within=section]{tcbexercise}{
+  breakable,
+  enhanced,
+  colback=white,
+  boxrule=0pt,
+  arc=0pt,
+  outer arc=0pt,
+  title=Exercise~\thetcbcounter,
+  fonttitle=\bfseries\sffamily\large\strut,
+  coltitle=problemblue,
+  colbacktitle=problemblue,
+  title style={exercisebgblue},
+  overlay={
+    \draw[line width=1.5pt,problemblue] (frame.south west) -- (frame.south east);
+  }
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Caption %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\DeclareCaptionFormat{tcbcaption}{%
+  \begin{tcolorbox}[
+    colback=captionbgcolor,
+    arc=0pt,
+    outer arc=0pt,
+    boxrule=0pt,
+    colupper=white,
+    fontupper=\large\sffamily,
+    boxsep=0pt
+  ]
+  #1#2#3
+  \end{tcolorbox}%
+}
+\captionsetup{format=tcbcaption}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Definicion%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usetikzlibrary{shapes.misc,calc}
+\tcbuselibrary{skins,theorems,breakable}
+
+\definecolor{mygray}{RGB}{215,215,215}
+\definecolor{myblue}{RGB}{17,94,140}
+
+\makeatletter
+\tcbset{
+  mytheorem/.code args={#1#2#3#4}{%
+    \refstepcounter{#2}\label{#4}%
+    \pgfkeysalso{title={\setbox\z@=\hbox{#1~\csname the#2\endcsname\ }\hangindent\wd\z@\hangafter=1 \mbox{#1~\csname the#2\endcsname\ }(#3)}}},%
+}
+
+\newcommand{\mtcbmaketheorem}[5]{%
+  \newtcolorbox{#1}[3][]{#3,mytheorem={#2}{#4}{##2}{#5:##3},##1}%
+}
+\makeatother
+
+\newcounter{defi}
+\newaliascnt{lemm}{defi}
+\counterwithin{defi}{chapter}
+\counterwithin{lemm}{chapter}
+
+\tcbset{
+thmstyle/.style={
+  breakable,
+  freelance,
+  boxrule=2pt,
+  width=\linewidth,
+  frame code={%
+  \path[fill=myblue,draw=myblue!75!black]
+    (frame.north west) -- ([xshift=-8pt]frame.north east) --
+    ([yshift=-8pt]frame.north east) -- (frame.north east|-interior.north east) --
+   (frame.north west|-interior.north west) -- cycle;
+  },
+  interior titled code={
+  \path[fill=mygray!80,draw=mygray]
+    (frame.west|-interior.north west) -- (frame.east|-interior.north east) --   
+    ([yshift=8pt]frame.east|-interior.south east) -- 
+    ([xshift=-8pt]frame.east|-interior.south east) --
+    (frame.west|-interior.south west) -- cycle;
+  },
+  fonttitle=\bfseries\sffamily
+},
+defstyle/.style={
+  breakable,
+  freelance,
+  boxrule=2pt,
+  width=\linewidth,
+  frame code={%
+  \path[top color=myblue!50,bottom color=myblue!50,
+    middle color=myblue!50]
+    ([xshift=8pt]frame.north west) -- ([xshift=-8pt]frame.north east) --
+    ([yshift=-8pt]frame.north east) -- 
+    (frame.north east|-interior.north east) --
+    (frame.north west|-interior.north west) -- 
+    ([yshift=-8pt]frame.north west) -- cycle;
+  },
+  interior titled code={
+  \path[fill=mygray!80]
+    (frame.west|-interior.north west) -| 
+    ([yshift=8pt]frame.east|-interior.south east) -- 
+    ([xshift=-8pt]frame.east|-interior.south east) -- 
+    ([xshift=8pt]frame.west|-interior.south west) -- 
+    ([yshift=8pt]frame.west|-interior.south west) -- cycle;
+  \path[fill=myblue] 
+    ([xshift=0.5\pgflinewidth,yshift=1.5pt]frame.west|-interior.north west) 
+    rectangle 
+    ([xshift=-0.5\pgflinewidth,yshift=-1.5pt]frame.east|-interior.north east);
+  },
+  fonttitle=\bfseries\sffamily\normalcolor
+}
+}
+
+\mtcbmaketheorem{defi}{Definition}{defstyle}{defi}{df}
+\mtcbmaketheorem{lemm}{Lemma}{thmstyle}{lemm}{lm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Observacion%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\tcbset{
+mybox/.style={
+  breakable,
+  enhanced standard,
+  boxrule=0.4pt,titlerule=-0.2pt,drop fuzzy shadow,
+  width=\linewidth,
+  title style={top color=myblue!30,bottom color=myblue!0.5},
+  overlay unbroken and first={
+    \path[fill=myblue]
+    ([xshift=5pt,yshift=-\pgflinewidth]frame.north west) to[out=0,in=180] ([xshift=20pt,yshift=-5pt]title.south west) -- ([xshift=-20pt,yshift=-5pt]title.south east) to[out=0,in=180] ([xshift=-5pt,yshift=-\pgflinewidth]frame.north east) -- cycle;
+  },
+  fonttitle=\Large\bfseries\sffamily,
+  fontupper=\sffamily,
+  fontlower=\sffamily,
+  before=\par\medskip\noindent,
+  after=\par\medskip,
+  center title,
+  toptitle=3pt,
+  top=11pt,topsep at break=-5pt,
+  colback=white
+}}
+
+\newtcolorbox{MyBlock}[2][\linewidth]{mybox,width=#1,title=#2}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% Ejemplo solucion%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcounter{example}[section]
+\renewcommand\theexample{\thesection.\arabic{example}}
+
+\tcbset{examplebox/.style={%
+ title={Example~\refstepcounter{example}\theexample},
+ breakable,
+ leftrule=0pt,
+ arc=0pt,
+ colback=white,
+ colframe=cyan,
+ enhanced,
+ colbacktitle=white,
+ coltitle=cyan,
+ titlerule=0pt,
+ enlarge left by=-4mm,
+ width=\linewidth+4mm,
+ enlarge top by=2pt,
+ overlay unbroken={\draw[cyan,line width=2pt] (frame.north west)++(0,0.25mm) --++(4cm,0pt);
+                      \draw[white,line width=10mm] (frame.south west) --++(8cm,0pt) node (P) {};
+                      \fill[cyan] (P) rectangle ++(6pt,6pt) ;},%
+ overlay first={\draw[cyan,line width=2pt] (frame.north west)++(0,1pt) --++(4cm,0pt);},%
+ overlay last={\draw[white,line width=10mm] (frame.south west) --++(8cm,0pt) node (P) {};
+                       \fill[cyan] (P) rectangle ++(6pt,6pt) ;},%
+ }%
+}
+
+\newenvironment{examplebox}{%
+  \tcolorbox[examplebox]}%
+ {\endtcolorbox}
+%%%%%%%%%%%%%%%%%%%%%%%%%%codigo 2%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newtcblisting{mycode}[2][]{%
+  listing options={language={C}},
+  listing only,listing remove caption=false,
+  breakable,
+  colback=yellow!20!white,
+  coltitle=black,
+  colbacktitle=white!60!black,
+  title={\lstlistingname~#2},
+  title after break={\raggedleft\lstlistingname\ \thelstlisting~ -- continued},
+  arc = 0pt, auto outer arc, #1
+}
+%%%%%%%%%%%%%%%%codigo R%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\lstset{
+    frame=tb,                        %opciones de bordes
+    framerule=0pt,
+    aboveskip=3mm,
+    belowskip=3mm,
+    framextopmargin=3pt,
+    framexbottommargin=3pt,
+    framexleftmargin=0.2cm,
+    framesep=0pt,
+    rulesep=.4pt,
+    backgroundcolor=\color{gray97},  %opciones de color
+    rulesepcolor=\color{black},
+    stringstyle=\color{mauve},
+    showstringspaces = false,        %opciones de letra y estilo
+    basicstyle=\small\ttfamily,
+    commentstyle=\color{dkgreen},
+    keywordstyle=\color{blue},
+    numbers=left,
+    numbersep=-6.5pt,
+    numberstyle=\tiny\color{gray},
+    numberfirstline = false,
+    breaklines=true,
+    morekeywords={*,...}
+   }
+
+
+\definecolor{gray97}{gray}{.97}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\lipsum
+%%%%%%%%%%%%%%%%% ejemplos%%%%%%%%%%%%%5
+ \begin{ejemplo}
+  \lipsum
+  \end{ejemplo}
+\section{Test section}
+%%%%%%%%%%%%%%%%%% ejercicios %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{example}
+test
+\end{example}
+\begin{assumption}
+test
+\end{assumption}
+\begin{example}[Optional title]
+test
+\end{example}
+\begin{assumption}[Optional title with some more words for the example so it spans two lines]
+test
+\end{assumption}
+\section{A test section}
+
+\begin{idioms}
+Some test text.
+\end{idioms}\par\bigskip
+
+\begin{tcbexercise}
+Some test text.
+\end{tcbexercise}\par\bigskip
+
+\begin{praproblem}
+Some test text.
+\end{praproblem}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%recuadro%%%%%%%%%%%%%%%%%%%
+\begin{tikzpicture}[pencildraw/.style={ %
+    decorate,
+    decoration={random steps,segment length=2pt,amplitude=1pt}
+    } %
+]
+\node[
+preaction={fill=black,opacity=.5,transform canvas={xshift=1mm,yshift=-1mm}},
+pencildraw,draw,fill=paper,text width=.8\textwidth,inner sep=5mm] 
+{\lipsum};
+\end{tikzpicture} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Figuras%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}
+\ffigbox[\FBwidth]
+  {\includegraphics[width=.8\linewidth]{example-image}}
+  {\caption{how many factors are there in a set of 12?}}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Definicion %%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Definiciones%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{defi}{Partially ordered set}{poset}
+A partial order is a binary relation $\preccurlyeq$ over a set $P$ which is antisymmetric, transitive, and reflexive. A set with a partial order is called a partially ordered set (also called a poset). 
+\end{defi}
+
+\begin{lemm}{Zorn's Lemma}{zorn}
+Suppose a non-empty partially ordered set $P$ has the property that every non-empty chain has an upper bound in $P$. Then the set $P$ contains at least one maximal element.
+\end{lemm}
+
+\begin{lemm}{A list test}{lsit}
+\begin{itemize}
+\item First.
+\item Second.
+\item Third.
+\end{itemize}
+\end{lemm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%Observacion%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{MyBlock}{Some Variable Width Block}
+\lipsum
+\end{MyBlock}
+
+\begin{MyBlock}[.5\linewidth]{Some Title}
+\lipsum
+\end{MyBlock}
+
+%%%%%%%%%%%%%%%%%%%%%%%%Codigo R%%%%%%%%%%%%%%%%%%%%%%
+\section{Python example}    
+\begin{pythoncode}[colback=red!5!white,colframe=red!75!black,title=My nice heading]    
+# indent your Python code to put into an email    
+import glob    
+# glob supports Unix style pathname extensions    
+python_files = glob.glob('*.py')    
+for file_name in sorted(python_files):    
+    print '    ------' + file_name    
+
+    with open(file_name) as f:    
+        for line in f:    
+            print '    ' + line.rstrip()    
+
+    print    
+\end{pythoncode}    
+
+%%%%%%%%%%%%%%% solucion de ejercicios%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{examplebox}
+\lipsum
+\begin{center}
+\captionof{table}{This is a table inside a \texttt{tcolorbox} environment}
+\begin{tabular}{ccc}
+\toprule
+column1a & column2a & column3a \\
+column1a & column2a & column3a \\
+column1a & column2a & column3a \\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{examplebox}
+\lipsum
+\begin{examplebox}
+\lipsum
+\begin{center}
+\includegraphics[width=6cm]{example-image-a}
+\captionof{figure}{This is a figure inside a \texttt{tcolorbox} environment}
+\end{center}
+\lipsum*[5-6]
+\end{examplebox}
+\lipsum*[2]
+%%%%%%%%%%%%%%%%%%%%codigo 2%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{tcblisting}{listing options={language={C},caption={The sum of integers}},
+    listing only,listing remove caption=false,
+    breakable,
+    colback=yellow!20!white,
+    coltitle=black,
+    colbacktitle=white!60!brown,
+    title={\lstlistingname\ \thelstlisting},
+    title after break={\raggedleft\lstlistingname\ \thelstlisting~ -- continued},
+    arc = 0pt, auto outer arc
+  }
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char **argv)
+{
+  long int k = 0;
+  long int sum = 0;
+
+  for ( k = 1 ; k <= 100 ; k++ )
+  {
+   sum += k; 
+   printf("Current sum: %10d\n");
+  }
+
+  sum = 0;
+  /* Now the sum of squares */
+  for ( k = 1 ; k <= 10 ; k++ )
+  {
+   sum += (long int) pow(k,2); 
+   printf("Current sum: %10d\n");
+  }
+
+  sum = 0;
+  /* Now the sum of cubes */
+  for ( k = 1 ; k <= 10 ; k++ )
+  {
+   sum += (long int) pow(k,3); 
+   printf("Current sum: %10d\n");
+  }
+
+  /* And repeating the stuff to make the whole 
+  stuff longer than necessary */
+
+  sum = 0;
+  for ( k = 1 ; k <= 100 ; k++ )
+  {
+   sum += k; 
+   printf("Current sum: %10d\n");
+  }
+
+  sum = 0;
+  /* Now the sum of squares */
+  for ( k = 1 ; k <= 10 ; k++ )
+  {
+   sum += (long int) pow(k,2); 
+   printf("Current sum: %10d\n");
+  }
+
+  sum = 0;
+  /* Now the sum of cubes */
+  for ( k = 1 ; k <= 10 ; k++ )
+  {
+   sum += (long int) pow(k,3); 
+   printf("Current sum: %10d\n");
+  }
+  return(EXIT_SUCCESS);
+}
+\end{tcblisting}
+
+
+
+\begin{mycode}[listing options={caption={Just a repeat}}]{Once again}
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char **argv)
+{
+  long int k = 0;
+  long int sum = 0;
+
+  for ( k = 1 ; k <= 100 ; k++ )
+  {
+   sum += k; 
+   printf("Current sum: %10d\n");
+  }
+
+  sum = 0;
+  /* Now the sum of squares */
+  for ( k = 1 ; k <= 10 ; k++ )
+  {
+   sum += (long int) pow(k,2); 
+   printf("Current sum: %10d\n");
+  }
+
+  sum = 0;
+  /* Now the sum of cubes */
+  for ( k = 1 ; k <= 10 ; k++ )
+  {
+   sum += (long int) pow(k,3); 
+   printf("Current sum: %10d\n");
+  }
+
+  /* And repeating the stuff to make the whole 
+  stuff longer than necessary */
+
+  sum = 0;
+  for ( k = 1 ; k <= 100 ; k++ )
+  {
+   sum += k; 
+   printf("Current sum: %10d\n");
+  }
+
+  sum = 0;
+  /* Now the sum of squares */
+  for ( k = 1 ; k <= 10 ; k++ )
+  {
+   sum += (long int) pow(k,2); 
+   printf("Current sum: %10d\n");
+  }
+
+  sum = 0;
+  /* Now the sum of cubes */
+  for ( k = 1 ; k <= 10 ; k++ )
+  {
+   sum += (long int) pow(k,3); 
+   printf("Current sum: %10d\n");
+  }
+  return(EXIT_SUCCESS);
+}
+\end{mycode}
+%%%%%%%%%%%%%%%%%%%%%Para escoger para codigo%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\mytitle}[1]{
+    \node[fill=mygreen,
+        rounded corners,
+        draw=white,
+        line width=2pt,
+        drop shadow,
+        text width=4cm,
+        inner sep=8pt,
+        xshift=-2cm]
+    at (frame.north){\bfseries\textcolor{white}{#1}};
+}
+
+\newtcolorbox{mybox}[2][]{
+    enhanced,
+    overlay={\mytitle{#2}},
+    borderline={2pt}{0mm}{mygreen},
+    borderline={.7pt}{1mm}{mygreen},
+    frame hidden,
+    arc=3mm,
+    sidebyside,
+    lefthand width=2.5cm,
+    segmentation hidden,
+    top=15pt,
+    #1
+}
+%%%%%%%%%%%%%%%%%%%5 para codigo%%%%%%%
+\begin{mybox}{Political Factors}
+    \includegraphics[scale=.1]{example-image-a}
+    \tcblower
+    Analyses to what degree the government intervenes
+\end{mybox}
+%%%%%%%%%%%%%%%%%%%%ecuacion%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{equation}
+\tcbset{fonttitle=\scriptsize}
+\tcboxmath[colback=LightBlue!25!white,colframe=blue]{ a^2 = 16 }
+\quad \Rightarrow \quad
+\tcboxmath[colback=Salmon!25!white,colframe=red,title=Implication]%
+{ a = 4 ~\vee~ a=-4. }
+\end{equation}
+%%%%%%%%%%%%%%%
+%\tcbset{highlight math style={enhanced,%<-- needed for the ’remember’ options
+%colframe=red,colback=red!10!white,boxsep=0pt}}
+%\begin{align*}
+%\tcbhighmath[remember as=fx]{f(x)}
+%&= \int\limits_{1}^{x} \frac{1}{t^2}~dt
+%= \left[ -\frac{1}{t} \right]_{1}^{x}\\
+%&= -\frac{1}{x} + \frac{1}{1}\\
+%&=
+%\tcbhighmath[remember,overlay={%
+%\draw[blue,very thick,->] (fx.south) to[bend right] ([yshift=2mm]frame.west);}]
+%{1-\frac{1}{x}.}
+%\end{align*}
+%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%
+\tcbset{myformula/.style={colback=yellow!10!white,colframe=red!50!black,
+every box/.style={highlight math style={colback=LightBlue!50!white,colframe=Navy}}
+}}
+\begin{align}
+\tcbhighmath{\sum\limits_{n=1}^{\infty} \frac{1}{n}} &= \infty.\\
+\int x^2 ~\text{d}x
+&= \frac13 x^3 + c.
+\end{align}
+\begin{tcolorbox}[ams align,myformula]
+\tcbhighmath{\sum\limits_{n=1}^{\infty} \frac{1}{n}} &= \infty.\\
+\int x^2 ~\text{d}x
+&= \frac13 x^3 + c.
+\end{tcolorbox}
+%%%%%%%%%%%%%%%
+\newtcbox{\otherbox}[1][]{nobeforeafter,math upper,tcbox raise base,
+enhanced,frame hidden,boxrule=0pt,interior style={top color=green!10!white,
+bottom color=green!10!white,middle color=green!50!yellow},
+fuzzy halo=1pt with green,#1}
+\begin{empheq}[box=\otherbox]{align}
+a&=\sin(z)\\
+E&=mc^2 + \int_a^b x\, dx
+\end{empheq}
+\begin{equation}
+\tcbhighmath{E} = \otherbox{mc^2}
+\end{equation}
+%%%%%%%%%%%
+%%%%%%%%%%%%%%%%% Tablas 
+\tcbset{colframe=blue!50!black,colback=white,colupper=red!50!black,
+fonttitle=\bfseries,nobeforeafter,center title}
+Text \tcbox[tcbox raise base]{Hello World}\hfill
+%
+\tcbox[left=0mm,right=0mm,top=0mm,bottom=0mm,boxsep=0mm,
+toptitle=0.5mm,bottomtitle=0.5mm,title=My table]{%
+\arrayrulecolor{blue!50!black}\renewcommand{\arraystretch}{1.2}%
+\begin{tabular}{r|c|l}
+One
+& Two
+& Three \\\hline\hline
+Men
+& Mice
+& Lions \\\hline
+Upper & Middle & Lower
+\end{tabular}}\hfill
+%
+\tcbox[colback=blue!85!black,
+left=0mm,right=0mm,top=0mm,bottom=0mm,boxsep=1mm,arc=0mm,boxrule=0.5pt,
+title=My picture]{%
+\includegraphics[width=5cm]{Basilica_5.png}}
+%%%%%%%%%%%%%%%%
+% \usepackage{array,tabularx}
+% \usepackage{colortbl} - or - \usepackage[table]{xcolor}
+\newcolumntype{Y}{>{\raggedleft\arraybackslash}X}% see tabularx
+\tcbset{enhanced,fonttitle=\bfseries\large,fontupper=\normalsize\sffamily,
+colback=yellow!10!white,colframe=red!50!black,colbacktitle=Salmon!30!white,
+coltitle=black,center title}
+\begin{tcolorbox}[tabularx={X||Y|Y|Y|Y||Y},title=My table]
+Group & One
+& Two
+& Three
+& Four
+& Sum\\\hline\hline
+Red
+& 1000.00 & 2000.00 & 3000.00 & 4000.00 & 10000.00\\\hline
+Green & 2000.00 & 3000.00 & 4000.00 & 5000.00 & 14000.00\\\hline
+Blue & 3000.00 & 4000.00 & 5000.00 & 6000.00 & 18000.00\\\hline\hline
+Sum
+& 6000.00 & 9000.00 & 12000.00 & 15000.00 & 42000.00
+\end{tcolorbox}
+%%%%%%%%%%%%%%%
+\tcbset{enhanced,fonttitle=\bfseries\large,fontupper=\normalsize\sffamily,
+colback=yellow!10!white,colframe=red!50!black,colbacktitle=Salmon!30!white,
+coltitle=black,center title}
+\begin{tcolorbox}[tabularx*={\arrayrulewidth0.5mm}{X|X|X},title=My table]
+One
+& Two
+& Three \\\hline\hline
+1000.00 & 2000.00 & 3000.00\\\hline
+2000.00 & 3000.00 & 4000.00
+\end{tcolorbox}
+%%%%%%%%%%%%%%%%%%%
+\newtcolorbox[blend into=figures]{myfigure}[2][]{float=htb,capture=hbox,
+blend before title code={\fbox{##1}\ },title={#2},every float=\centering,#1}
+\begin{myfigure}{A tcolorbox figure}
+\includegraphics[height=6cm]{lichtspiel.jpg}
+\end{myfigure}
+%%%%%%%%%%%%%%%%
+\begin{tcolorbox}[bicolor,sidebyside,righthand width=3cm,
+sharp corners,boxrule=.4pt,colback=green!5,colbacklower=green!50!black!50]
+\lipsum[2]
+\tcblower
+\includegraphics[width=\linewidth]{goldshade}%
+\end{tcolorbox}
+%%%%%%%%%%%%%%%%%%%%%%%%
+\tcbset{colback=red!5!white,colframe=red!75!black,fonttitle=\bfseries}
+\begin{tcolorbox}[title=My title,sidebyside]
+This is the upper (\textit{left-handed}) part.
+\tcblower
+This is the lower (\textit{right-handed}) part.
+\end{tcolorbox}
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\tcbset{colback=red!5!white,colframe=red!75!black,fonttitle=\bfseries}
+\begin{tcolorbox}[title=My title,sidebyside,lefthand width=3cm]
+This is the upper (\textit{left-handed}) part.
+\tcblower
+This is the lower (\textit{right-handed}) part.
+\end{tcolorbox}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%codigo R
+%%%%%%%%%%%%%%%%%%%%%%%
+\begin{lstlisting}[language = R]
+  AE <- function(i,j) {
+ 
+    Ri = i$V5
+    Rj = j$V5
+
+    angulo = acos (sum(Ri*Rj)/(sqrt(sum(Ri^2))*sqrt(sum(Rj^2))))
+    return(angulo)
+  }
+\end{lstlisting}
+%%%%%%%%%%%%% listing
+\tcbset{enhanced jigsaw,colback=red!5!white,colframe=red!75!black,
+watermark color=yellow!25!white,watermark text=\arabic{tcbbreakpart},
+fonttitle=\bfseries}
+\begin{tcolorbox}[breakable,title=My breakable box , adjusted title after break=\title \hfill Continuaci\'on]
+\lipsum[1-6]
+\end{tcolorbox}
+%%%%%%%%%%%%%%%%
+\DeclareTotalTCBox{\myverb}{ O{red} v O{} }
+{ fontupper=\ttfamily,nobeforeafter,tcbox raise base,arc=0pt,outer arc=0pt,
+top=0pt,bottom=0pt,left=0mm,right=0mm,
+leftrule=0pt,rightrule=0pt,toprule=0.3mm,bottomrule=0.3mm,boxsep=0.5mm,
+colback=#1!10!white,colframe=#1!50!black,#3}{#2}
+To set a word \textbf{bold} in \myverb{\LaTeX}, use
+\myverb[green]{\textbf{bold}}. Alternatively, write
+\myverb[yellow]{{\bfseries bold}}.
+In \myverb[blue]{\LaTeX}[enhanced,fuzzy halo], other font settings are
+done in the same way, e.\,g. \myverb{\textit}, \myverb{\itshape}\\
+or \myverb[brown]{\texttt}, \myverb[brown]{\ttfamily}.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\tcboxverb{\LaTeX}, \tcboxverb[colback=blue!10!white,colupper=blue]{\LaTeX},
+\tcboxverb[blank,fuzzy halo]{\LaTeX}, \tcboxverb[beamer]{\LaTeX},
+\tcboxverb[enhanced,skin=enhancedmiddle jigsaw,colframe=red]{\LaTeX}.
+%%%%%%%%%%%%%5
+%% \usepackage{listings} or \tcbuselibrary{listings}
+%\DeclareTotalTCBox{\commandbox}{ s v }
+%{verbatim,colupper=white,colback=black!75!white,colframe=black}
+%{\IfBooleanTF{#1}{\textcolor{red}{\ttfamily\bfseries > }}{}%
+%
+%\lstinline[language=command.com,keywordstyle=\color{blue!35!white}\bfseries]^#2^}
+%\commandbox*{cd "My Documents"} changes to directory \commandbox{My Documents}.
+%\commandbox*{dir /A} lists the directory content.
+%\commandbox*{copy example.txt d:\target} copies \commandbox{example.txt} to
+%\commandbox{d:\target}.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\tcbset{enhanced,nobeforeafter,colback=red!5!white,
+%colframe=red!75!black,width=3cm,square,halign=center,valign=center
+%}
+%\begin{tcolorbox}[drop shadow]
+%Smart shadow arc (arguably better than normal)
+%\end{tcolorbox}
+%\hfill
+%\begin{tcolorbox}[smart shadow arc=false, drop shadow]
+%Normal shadow arc
+%\end{tcolorbox}
+%\hfill
+%\begin{tcolorbox}[circular arc, drop shadow]
+%Smart shadow arc (worse than normal)
+%\end{tcolorbox}
+%\hfill
+%\begin{tcolorbox}[circular arc, smart shadow arc=false, drop shadow]
+%Normal shadow arc
+%\end{tcolorbox}\\
+\end{document}

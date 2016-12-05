@@ -1,0 +1,168 @@
+\documentclass[oneside,svgnames,x11names,x11names,HTML,twoside]{libro-est}\usepackage[]{graphicx}\usepackage[]{color}
+%% maxwidth is the original width if it is less than linewidth
+%% otherwise use linewidth (to make sure the graphics do not exceed the margin)
+\makeatletter
+\def\maxwidth{ %
+  \ifdim\Gin@nat@width>\linewidth
+    \linewidth
+  \else
+    \Gin@nat@width
+  \fi
+}
+\makeatother
+
+\definecolor{fgcolor}{rgb}{0.345, 0.345, 0.345}
+\newcommand{\hlnum}[1]{\textcolor[rgb]{0.686,0.059,0.569}{#1}}%
+\newcommand{\hlstr}[1]{\textcolor[rgb]{0.192,0.494,0.8}{#1}}%
+\newcommand{\hlcom}[1]{\textcolor[rgb]{0.678,0.584,0.686}{\textit{#1}}}%
+\newcommand{\hlopt}[1]{\textcolor[rgb]{0,0,0}{#1}}%
+\newcommand{\hlstd}[1]{\textcolor[rgb]{0.345,0.345,0.345}{#1}}%
+\newcommand{\hlkwa}[1]{\textcolor[rgb]{0.161,0.373,0.58}{\textbf{#1}}}%
+\newcommand{\hlkwb}[1]{\textcolor[rgb]{0.69,0.353,0.396}{#1}}%
+\newcommand{\hlkwc}[1]{\textcolor[rgb]{0.333,0.667,0.333}{#1}}%
+\newcommand{\hlkwd}[1]{\textcolor[rgb]{0.737,0.353,0.396}{\textbf{#1}}}%
+
+\usepackage{framed}
+\makeatletter
+\newenvironment{kframe}{%
+ \def\at@end@of@kframe{}%
+ \ifinner\ifhmode%
+  \def\at@end@of@kframe{\end{minipage}}%
+  \begin{minipage}{\columnwidth}%
+ \fi\fi%
+ \def\FrameCommand##1{\hskip\@totalleftmargin \hskip-\fboxsep
+ \colorbox{shadecolor}{##1}\hskip-\fboxsep
+     % There is no \\@totalrightmargin, so:
+     \hskip-\linewidth \hskip-\@totalleftmargin \hskip\columnwidth}%
+ \MakeFramed {\advance\hsize-\width
+   \@totalleftmargin\z@ \linewidth\hsize
+   \@setminipage}}%
+ {\par\unskip\endMakeFramed%
+ \at@end@of@kframe}
+\makeatother
+
+\definecolor{shadecolor}{rgb}{.97, .97, .97}
+\definecolor{messagecolor}{rgb}{0, 0, 0}
+\definecolor{warningcolor}{rgb}{1, 0, 1}
+\definecolor{errorcolor}{rgb}{1, 0, 0}
+\newenvironment{knitrout}{}{} % an empty environment to be redefined in TeX
+
+\usepackage{alltt}
+\usepackage{lipsum-es}
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\begin{document}
+\chapter{mi pimer cap\'itulo}
+xxxxxxxxxxxxxxxxxxxxxxxx\\
+xxxxxxxxxxxxxxxxxxxxxxxxxxx\\
+xxxxxxxxxxxxxxxxxxxxxx\\
+
+No aparace nada
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlkwd{rnorm}\hlstd{(}\hlnum{5}\hlstd{)}
+\end{alltt}
+\begin{verbatim}
+## [1] -0.9121726  0.2347312 -0.2846027  0.8964736 -1.9541759
+\end{verbatim}
+\begin{alltt}
+\hlstd{df}\hlkwb{=}\hlkwd{data.frame}\hlstd{(}\hlkwc{y}\hlstd{=}\hlkwd{rnorm}\hlstd{(}\hlnum{100}\hlstd{),} \hlkwc{x}\hlstd{=}\hlnum{1}\hlopt{:}\hlnum{100}\hlstd{)}
+\hlkwd{summary}\hlstd{(}\hlkwd{lm}\hlstd{(y}\hlopt{~}\hlstd{x,} \hlkwc{data}\hlstd{=df))}
+\end{alltt}
+\begin{verbatim}
+## 
+## Call:
+## lm(formula = y ~ x, data = df)
+## 
+## Residuals:
+##      Min       1Q   Median       3Q      Max 
+## -2.68048 -0.60068 -0.09188  0.52868  2.37081 
+## 
+## Coefficients:
+##               Estimate Std. Error t value Pr(>|t|)
+## (Intercept) -0.0859083  0.1864624  -0.461    0.646
+## x           -0.0009821  0.0032056  -0.306    0.760
+## 
+## Residual standard error: 0.9253 on 98 degrees of freedom
+## Multiple R-squared:  0.0009569,	Adjusted R-squared:  -0.009237 
+## F-statistic: 0.09387 on 1 and 98 DF,  p-value: 0.76
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+xxxxxxxxxxxxxxxxxxxxxxxx\\
+xxxxxxxxxxxxxxxxxxxxxxxxxxx\\
+xxxxxxxxxxxxxxxxxxxxxx\\
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlkwd{rnorm}\hlstd{(}\hlnum{5}\hlstd{)}
+\end{alltt}
+\begin{verbatim}
+## [1] -1.0547795 -0.7329173 -1.1502528 -0.6529873 -1.9870853
+\end{verbatim}
+\begin{alltt}
+\hlstd{df}\hlkwb{=}\hlkwd{data.frame}\hlstd{(}\hlkwc{y}\hlstd{=}\hlkwd{rnorm}\hlstd{(}\hlnum{100}\hlstd{),} \hlkwc{x}\hlstd{=}\hlnum{1}\hlopt{:}\hlnum{100}\hlstd{)}
+\hlkwd{summary}\hlstd{(}\hlkwd{lm}\hlstd{(y}\hlopt{~}\hlstd{x,} \hlkwc{data}\hlstd{=df))}
+\end{alltt}
+\begin{verbatim}
+## 
+## Call:
+## lm(formula = y ~ x, data = df)
+## 
+## Residuals:
+##      Min       1Q   Median       3Q      Max 
+## -2.54518 -0.77631  0.05589  0.70971  2.49682 
+## 
+## Coefficients:
+##              Estimate Std. Error t value Pr(>|t|)
+## (Intercept) -0.028424   0.224053  -0.127    0.899
+## x            0.001316   0.003852   0.342    0.733
+## 
+## Residual standard error: 1.112 on 98 degrees of freedom
+## Multiple R-squared:  0.00119,	Adjusted R-squared:  -0.009001 
+## F-statistic: 0.1168 on 1 and 98 DF,  p-value: 0.7333
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+xxxxxxxxxxxxxxxxxxxxxxxx\\
+xxxxxxxxxxxxxxxxxxxxxxxxxxx\\
+xxxxxxxxxxxxxxxxxxxxxx\\
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlkwd{rnorm}\hlstd{(}\hlnum{5}\hlstd{)}
+\hlstd{df}\hlkwb{=}\hlkwd{data.frame}\hlstd{(}\hlkwc{y}\hlstd{=}\hlkwd{rnorm}\hlstd{(}\hlnum{100}\hlstd{),} \hlkwc{x}\hlstd{=}\hlnum{1}\hlopt{:}\hlnum{100}\hlstd{)}
+\hlkwd{summary}\hlstd{(}\hlkwd{lm}\hlstd{(y}\hlopt{~}\hlstd{x,} \hlkwc{data}\hlstd{=df))}
+\end{alltt}
+\end{kframe}
+\end{knitrout}
+xxxxxxxxxxxxxxxxxxxxxxxx\\
+xxxxxxxxxxxxxxxxxxxxxxxxxxx\\
+xxxxxxxxxxxxxxxxxxxxxx\\
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{verbatim}
+## [1] -0.87939978 -1.13286750  0.07144702 -0.12735000 -0.59792456
+## 
+## Call:
+## lm(formula = y ~ x, data = df)
+## 
+## Residuals:
+##      Min       1Q   Median       3Q      Max 
+## -2.42628 -0.54278  0.02001  0.55455  2.95537 
+## 
+## Coefficients:
+##               Estimate Std. Error t value Pr(>|t|)
+## (Intercept) -0.0766481  0.1883336  -0.407    0.685
+## x           -0.0003287  0.0032378  -0.102    0.919
+## 
+## Residual standard error: 0.9346 on 98 degrees of freedom
+## Multiple R-squared:  0.0001052,	Adjusted R-squared:  -0.0101 
+## F-statistic: 0.01031 on 1 and 98 DF,  p-value: 0.9193
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+\end{document}

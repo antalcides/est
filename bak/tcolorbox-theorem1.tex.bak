@@ -1,0 +1,20 @@
+\documentclass{article}
+\usepackage[most]{tcolorbox}
+\tcbuselibrary{theorems}
+\usepackage{cleveref}
+\newtcbtheorem[auto counter, number within = section,
+  crefname={example}{Example},
+  Crefname={Example}{Example} ]
+{Example}{Exam\smash{p}le}{%
+  breakable,
+  fonttitle = \bfseries,
+  colframe = blue!75!black,
+  colback = blue!10
+}{exa}
+\begin{document}
+\begin{Example}{Example}{exam}
+  Some example
+\end{Example}
+\noindent
+\Cref{exa:exam} and~\cref{exa:exam}.
+\end{document}

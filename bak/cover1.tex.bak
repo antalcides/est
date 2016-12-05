@@ -1,0 +1,51 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+
+\usepackage{xcolor} % to colour the front cover
+\usepackage{afterpage} % needed to colour only front cover and no other page
+\usepackage{graphicx} % to be able to embed graphical content
+\usepackage{tcolorbox} % needed for the text boxes
+\usepackage{color} % needed to recognise hex colour
+\usepackage{geometry}
+
+\definecolor{pink}{HTML}{FDDBC7}
+\definecolor{red}{HTML}{B2182B}
+\definecolor{blue}{HTML}{4393C3}
+
+\title{An awsome report}
+\author{An awsome person}
+\makeindex
+
+\title{An awsome report}
+\author{An awsome person}
+\makeindex
+
+\begin{document} % - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+% The title page
+\newgeometry{margin=0pt}
+\makeatletter
+\begin{titlepage}
+\centering
+\begin{tcolorbox}[colframe=red,colback=red,sharp corners,halign=flush center,
+  valign=center,height=0.5\textwidth,fontupper=\Huge\bfseries,
+  after skip=2cm]
+\@title
+\end{tcolorbox}
+
+{\Large \@author \par}
+
+\begin{tcolorbox}[colframe=white,colback=white,halign=flush center,width=0.8\linewidth,
+  before skip=2cm]
+My Logo
+\end{tcolorbox}
+
+\pagecolor{pink}\afterpage{\nopagecolor}
+
+\end{titlepage}
+\makeatother
+
+\restoregeometry
+The rest of the document
+
+\end{document}

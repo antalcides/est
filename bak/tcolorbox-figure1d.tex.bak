@@ -1,0 +1,20 @@
+\documentclass{article}
+\usepackage{lipsum,graphicx,xcolor,caption}
+
+\newcommand{\captionbackgroundcolor}[1]{\colorlet{cpbgcol}{#1}}
+\DeclareCaptionFont{white}{\color{white}}
+\captionbackgroundcolor{black!50}
+\DeclareCaptionFormat{overlay}{\colorbox{cpbgcol}{#1#2#3}}
+\captionsetup{format=overlay,font=white}
+
+\begin{document}
+
+\lipsum[1]
+
+\begin{figure}[ht]
+  \includegraphics[width=\linewidth]{example-image}
+  \caption{How many factors are there in a set of 12?}
+\end{figure}
+
+\lipsum[2]
+\end{document}

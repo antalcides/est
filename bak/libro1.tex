@@ -1,0 +1,55 @@
+\documentclass[oneside,svgnames,x11names,x11names,HTML,twoside]{libro-est}
+\usepackage{lipsum-es}
+\usepackage{Sweave}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE]{\hspace*{-0.2\headwidth}\colorbox{green!20}{\makebox[\dimexpr0.2\headwidth-2\fboxsep][c]{\strut\thepage}}%
+               \colorbox{ptctitle}{\makebox[\dimexpr\headwidth-2\fboxsep][l]{\strut\rightmark}}}
+\fancyhead[LO]{\colorbox{ptctitle}{\makebox[\dimexpr\headwidth-2\fboxsep][r]{\strut\rightmark}}%
+                \colorbox{ptctitle!20}{\makebox[\dimexpr0.2\headwidth-2\fboxsep][c]{\strut\thepage}}}
+\renewcommand{\headrulewidth}{0pt}
+\begin{document}
+%\input{libro1-concordance}
+\chapter{mi pimer cap\'itulo}
+\lipsum[1]
+
+\begin{Schunk}
+\begin{Sinput}
+> rnorm(5)
+\end{Sinput}
+\begin{Soutput}
+[1]  0.05070861  0.83486815 -0.44775749 -0.41131373  2.54260189
+\end{Soutput}
+\begin{Sinput}
+> df=data.frame(y=rnorm(100), x=1:100)
+> summary(lm(y~x, data=df))
+\end{Sinput}
+\begin{Soutput}
+Call:
+lm(formula = y ~ x, data = df)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-2.61876 -0.68818  0.01842  0.64055  2.01193 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)
+(Intercept) -0.099587   0.190491  -0.523    0.602
+x            0.001997   0.003275   0.610    0.543
+
+Residual standard error: 0.9453 on 98 degrees of freedom
+Multiple R-squared:  0.003781,	Adjusted R-squared:  -0.006385 
+F-statistic: 0.3719 on 1 and 98 DF,  p-value: 0.5434
+\end{Soutput}
+\begin{Sinput}
+> 
+\end{Sinput}
+\end{Schunk}
+
+\lipsum[2]
+
+
+
+
+\end{document}

@@ -1,0 +1,18 @@
+\documentclass{article}
+\usepackage[most]{tcolorbox}
+
+\begin{document}
+
+\begin{tcolorbox}[enhanced, title=first box, overlay, remember as=first]
+Some text inside a box
+\end{tcolorbox}
+
+\begin{tcolorbox}[enhanced, title=second box, overlay, remember as=second]
+Some text inside a box
+\end{tcolorbox}
+
+\begin{tikzpicture}[overlay,remember picture,line width=1mm,draw=red!75!black]
+\draw[->] (first.west) to[bend right] (second.west);
+\end{tikzpicture}
+
+\end{document}

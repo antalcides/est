@@ -1,0 +1,10 @@
+\documentclass{article}
+\usepackage[many]{tcolorbox}
+\begin{document}
+  \begin{tcolorbox}[enhanced,minipage boxed title,enhanced,title=My title comes here at the bottom,
+attach boxed title to bottom left=
+{xshift=0mm,yshift=1mm},
+boxed title style={size=small,colback=blue},width=5in]
+This is a \textbf{tcolorbox}.
+\end{tcolorbox}
+\end{document}

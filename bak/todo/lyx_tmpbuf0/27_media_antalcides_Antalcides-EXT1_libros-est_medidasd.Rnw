@@ -1,0 +1,1817 @@
+
+\chapter{Medidas descriptivas}
+
+\PartialToc
+
+
+\section{Introducción}
+
+En el capítulo anterior analizamos los los datos de una muestra utilizando
+diagramas o\index{Medidas descriptivas} gráficos con lo que nos dimos
+cuenta que al tratar de realizar inferencias a partir de ellos, los
+gráficos no estaban bien definidos ya que para un mismo grupo de datos
+podemos realizar gráficos diferentes, por los que debemos definir
+expresiones bien definidas para realizar mejores inferencias.
+
+Estas expresiones \\
+son cantidades matemáticas con las que podemos obtener conclusiones
+validando las inferencias, estas expresiones matemáticas que representan
+propiedades importantes de la muestra se llaman medidas descriptivas.
+
+
+\section{Medidas de tendencia central}
+
+
+\subsection{Medias}
+
+
+\subsubsection{Media aritmética}
+
+La media aritmética de una muestra \ es la suma de cada uno de los
+valores\index{Media aritmética} posibles\index{Medidas de tendencia central}
+multiplicado por su frecuencia, es decir.
+
+Si la siguiente tabla \ representa la tabla de frecuencia de la muestra
+\[
+\begin{tabular}{|l|l|l|}
+\hline  \ensuremath{M}  &  \ensuremath{n_{i}}  &  \ensuremath{f_{i}}\\
+\hline  \ensuremath{x_{1}}  &  \ensuremath{n_{1}}  &  \ensuremath{f_{1}}\\
+\hline  \ensuremath{\vdots}  &  \ensuremath{\vdots}  &  \ensuremath{\vdots}\\
+\hline  \ensuremath{x_{k}}  &  \ensuremath{n_{k}}  &  \ensuremath{f_{k}} 
+\\\hline \end{tabular}
+\]
+
+
+La media es el valor : 
+\begin{equation}
+\overset{\_}{x}=\frac{\overset{k}{\sum_{i=1}}x_{i}n_{i}}{n}\label{2-1}
+\end{equation}
+ y si los datos no están ordenados entonces $\ $
+\begin{equation}
+\overset{\_}{x}=\frac{\overset{k}{\sum_{i=1}}x_{i}}{n}\label{2-2}
+\end{equation}
+
+
+\begin{apunte} En la definición de media se consideró que la variable
+de interés $X$ es discreta, pero si la variable $X$ no es discreta
+sino continua. En la fórmula se reemplaza cada valor $x_{i}$ por
+la marca de clase correspondiente es decir 
+\begin{equation}
+\overset{\_}{x\,}=\frac{\overset{k}{\sum_{i=1}}m_{i}n_{i}}{n}\label{2-3}
+\end{equation}
+
+
+\end{apunte}
+
+Este proceso hace que la media aritmética difiera de la media obtenida
+según (2.1), es decir habrá una perdida de precisión que será mayor
+en cuanto mayor sea la diferencia entre las marcas de clase y los
+valores reales, o sea entre mayor sea la longitud $a_{i}$ de los
+intervalos
+
+
+\paragraph{Desviaciones}
+
+\index{desviaciones} 
+\begin{equation}
+\overset{k}{\sum_{i=1}}\left(x_{i}-\overline{x}\right)n_{i}\approx0\qquad Dispersi\acute{o}n\,total\label{2-4}
+\end{equation}
+ 
+\begin{equation}
+\sum_{i=1}^{n}(x_{i}-\overset{\_}{x})^{2}\succapprox0\text{ \ \ }Error\,cuadr\acute{a}tico\label{2-5}
+\end{equation}
+ 
+\begin{equation}
+\sum_{i=1}^{n}|x_{i}-\overset{\_}{x}|\succapprox0\text{ \ \ }Error\,absoluto\label{2-6}
+\end{equation}
+
+
+Estas fórmulas determinan la variabilidad entre los datos.
+
+\begin{ejemplo}[] Obtener la media y las desviaciones con respecto
+a la media 
+\[
+\begin{tabular}{|l|l}
+\hline  \ensuremath{N{^{o}}de\,caras}  &  \ensuremath{n_{i}}\\
+\hline  \ensuremath{0}  &  \ensuremath{38}\\
+\hline  \ensuremath{1}  &  \ensuremath{144}\\
+\hline  \ensuremath{2}  &  \ensuremath{342}\\
+\hline  \ensuremath{3}  &  \ensuremath{287}\\
+\hline  \ensuremath{4}  &  \ensuremath{164}\\
+\hline  \ensuremath{5}  &  \ensuremath{25}\\
+\hline   &  \ensuremath{1000} 
+\\\hline \end{tabular}\begin{tabular}{|l|l|}
+\hline  \ensuremath{x_{i}n_{i}}  &  \ensuremath{x_{i}-\bar{x}}\\
+\hline  \ensuremath{0}  &  \\
+\hline  \ensuremath{144}  &  \\
+\hline  \ensuremath{684}  &  \\
+\hline  \ensuremath{861}  &  \\
+\hline  \ensuremath{656}  &  \\
+\hline  \ensuremath{125}  &  \\
+\hline   &  
+\\\hline \end{tabular}
+\]
+ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \end{ejemplo}
+
+\begin{ejemplo}[] \bigskip{}
+Determinar la media aritmética del ejemplo 1.10 \end{ejemplo}
+
+\[
+\begin{tabular}{||c||c||c||c||}
+\hline\hline  \ensuremath{Intervalos}  &  \ensuremath{m_{i}}  &  \ensuremath{n_{i}}  &  \ensuremath{N_{i}}\\
+\hline\hline  \ensuremath{0-2}  &  \ensuremath{1}  &  \ensuremath{2}  &  \\
+\hline\hline  \ensuremath{2-4}  &  \ensuremath{3}  &  \ensuremath{1}  &  \\
+\hline\hline  \ensuremath{4-6}  &  \ensuremath{5}  &  \ensuremath{4}  &  \\
+\hline\hline  \ensuremath{6-8}  &  \ensuremath{7}  &  \ensuremath{3}  &  \\
+\hline\hline  \ensuremath{8-10}  &  \ensuremath{9}  &  \ensuremath{2}  &  \\
+\hline\hline   &   &   &  
+\\\hline\hline \end{tabular}\begin{tabular}{||c||}
+\hline\hline  \ensuremath{m_{i}n_{i}}\\
+\hline\hline  \\
+\hline\hline  \\
+\hline\hline  \\
+\hline\hline  \\
+\hline\hline  \\
+\hline\hline  \\
+\hline\hline  
+\end{tabular}
+\]
+
+
+\begin{proposicion}{}{} Dados r grupos con $n_{1},n_{2},n_{3},\cdots,n_{r}$
+observaciones, si $\overset{\_}{x}_{1},$ $\overset{\_}{x}_{2},\overset{\_}{x}_{3},\cdots,\overset{\_}{x}_{r}$
+son las respectivas medias, entonces la media de las $n=n_{1}+n_{2}+n_{3}+\cdots+n_{r}$
+observaciones es: 
+\begin{equation}
+\overset{\_}{x}=\frac{\overset{k}{\sum_{i=1}}n_{i}\overset{\_}{x}_{i}}{n}
+\end{equation}
+
+
+\end{proposicion}
+
+
+\subparagraph{Desventajas de la media}
+
+La media es una medida muy usa\-da en estadística, pero a pesar de
+eso posee ciertas desventajas
+\begin{itemize}
+\item La media aritmética es muy sensible a los valores extremos, es decir
+si una medida se aleja mucho de las otras hará que la media se aproxime
+mucho a ella
+\item No se recomienda usar cuando los datos se desplazan hacia los extremos
+\item En el caso de variables continuas depende de los intervalos de clase
+\item en le caso de variables discretas el valor puede no ser un valor de
+la muestra. 
+\end{itemize}
+
+\subsubsection{Otras medias}
+
+
+\subparagraph{Media geométrica}
+
+\footnote{Se aconseja usar cuando la diferencia entre los extremos es muy grande
+comparada con la diferencia entre los otros datos o cuando la diferencia
+entre un dato y otro siempre aumenta.}\index{Media geométrica}$\overset{\_}{x}_{g}$ es la media de los
+logaritmos de las medidas 
+\[
+\lg\overset{\_}{x}_{g}=\frac{\sum_{i=1}^{k}\lg\overset{\_}{x}_{i}}{n}
+\]
+ es decir 
+\[
+\overset{\_}{x}_{g}=\sqrt[n]{_{{\large x}_{1}{\large.x}_{2}{\large.x}_{3}{\large\cdots x}_{3}}}
+\]
+ y en el caso de datos agrupados tenemos
+
+\bigskip{}
+\[
+\overset{\_}{x}_{g}=\sqrt[n]{_{{\large x}_{1}^{n_{1}}{\large.x}_{2}^{n_{2}}{\large.x}_{3}^{n_{3}}{\large\cdots x}_{3}^{n_{k}}}}
+\]
+
+
+
+\subsubsection{Media armónica}
+
+\index{Media armónica}\bigskip{}
+$\overset{\_}{x}_{a}$ se define como el recíproco de la media aritmética
+de los recíprocos : 
+\[
+\frac{1}{\overset{\_}{x}_{a}}=\frac{\sum_{i=1}^{n}\frac{1}{x_{i}}}{n}
+\]
+
+
+
+\subsubsection{Media cuadrática}
+
+\footnote{Es usada muy a menudo cuando se estudian experimentos científicos}\index{Media cuadrática}$\overset{\_}{x}_{c}$
+es la raíz cuadrada de la media aritmética de los cuadrados 
+\[
+\overset{\_}{x}_{c}=\sqrt{\frac{\sum_{i=1}^{n}x_{i}^{2}}{n}}
+\]
+
+
+
+\subsection{La mediana}
+
+\index{Mediana}Sea $X$ una variable discreta cuyas observaciones
+han sido ordenadas de mayor de mayor a menor, entonces se le llama
+mediana $\widetilde{x}$ al primer valor de la variable que deja por
+debajo de si el 50\% de las observaciones es decir si $n$ es el número
+de observaciones, la mediana será la observación $\left[|\frac{n}{2}|\right]+1$
+
+\begin{defi}{Mediana}{med} Sea $x_{(1),}x_{(2)},x_{(3)},\cdots,x_{(n)}$
+las observaciones de una muestra para una variable $X$ donde $x_{(1)}$
+representa la observación más pequeña, $x_{(2)}$ la observación que
+le sigue en valor y así sucesivamente $x_{(n)}$ denota la observación
+de mayor valor, entonces la mediana se define 
+\[
+\widetilde{x}=\left\{ \begin{tabular}{ll}
+ \ensuremath{x_{([n+1]/2)}}  &  si \ensuremath{n} impar\\
+ \ensuremath{\frac{x_{(n/2)}+x_{([n/2]+1)}}{2}}  &  si \ensuremath{n} par 
+\end{tabular}\right.
+\]
+
+
+\end{defi}
+
+En el caso de variables continuas, las clases vienen dadas por intervalos
+como se indicó en el capítulo anterior por tal razón para determinar
+la mediana se escoge el intervalo donde se encuentra el valor para
+el cual están debajo de él la mitad de los datos. Entonces a partir
+de ese intervalo se observan las frecuencias absolutas acumuladas
+y se aplica la siguiente fórmula 
+\[
+\widetilde{x}=x_{i-1}+\frac{\frac{n}{2}-N_{i-1}}{n_{i}}a_{i}
+\]
+ de aquí se puede deducir que $\widetilde{x}$ el ``punto'' que
+divide al histograma en dos partes de áreas iguales
+
+Gráficamente la moda para variables continuas se determina de acuerdo
+con la siguiente gráfica
+\begin{figure}[ptb]
+\centering{}\includegraphics[width=9.8057cm,height=7.8178cm]{28_media_antalcides_Antalcides-EXT1_bak-pc_documentos_Libros_LibrosDPTO_est_Img165.pdf}
+\end{figure}
+
+
+
+\subsubsection{Propiedades y desventajas de la mediana}
+\begin{enumerate}
+\item Tiene la ventaja de no ser afectada por los valores extremos y por
+eso se aconseja para distribuciones para las cuales los datos no se
+concentran en el centro
+\item Es fácil de calcular
+\item En el caso de variables discretas el valor de la mediana es un valor
+de la variable
+\item El mayor defecto es que las propiedades matemáticas son muy complicadas
+y esto hace que muy poco se use para realizar inferencias
+\item Es función de los intervalos escogidos en el caso de variables continuas 
+\end{enumerate}
+\begin{ejemplo}[] Sea $X$ una variable discreta que ha presentado
+las siguientes observaciones \end{ejemplo}
+
+$X\leadsto2,5,7,9,12\Rightarrow\widetilde{x}=7$ y $\overline{x}=7$
+
+Ahora si cambiamos la ultima observación, no se afectará la mediana
+pero si la media
+
+$X\leadsto2,5,7,9,125\Longrightarrow\widetilde{x}=7$ y $\overline{x}=29,6$
+
+Además la media no es valor de la variable
+
+\begin{ejemplo}[Media] Obtener la media y la mediana de la tabla
+frecuencias siguientes
+
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline 
+$x_{i-1}-x_{i}$  &
+$m_{i}$  &
+$n_{i}$  &
+$a_{i}$  &
+$x_{i}n_{i}$  &
+$N_{i}$\tabularnewline
+\hline 
+0-10  &
+ &
+80  &
+ &
+ &
+\tabularnewline
+\hline 
+10-20  &
+ &
+60  &
+ &
+ &
+\tabularnewline
+\hline 
+20-30  &
+ &
+30  &
+ &
+ &
+\tabularnewline
+\hline 
+30-100  &
+ &
+5  &
+ &
+ &
+\tabularnewline
+\hline 
+100-500  &
+ &
+5  &
+ &
+ &
+\tabularnewline
+\hline 
+ &
+ &
+ &
+ &
+ &
+\tabularnewline
+\hline 
+\end{tabular}
+\begin{quote}
+$\overline{x}=\frac{\qquad}{\qquad}$ \ \ $\widetilde{x}=\qquad+\frac{\qquad\qquad}{\qquad}\qquad=\qquad$ 
+\end{quote}
+Realizar el histograma de frecuencia y comparar la media y la mediana 
+
+ \end{ejemplo}
+\begin{quote}
+\begin{center}
+\begin{figure}[H]
+
+
+\caption{Comparación de la media y la mediana}
+
+\begin{quote}
+\begin{centering}
+\includegraphics[width=7.5893cm,height=9.116cm]{29_media_antalcides_Antalcides-EXT1_libros-est_pdf_img179.pdf}
+\par\end{centering}
+\end{quote}
+\end{figure}
+
+\par\end{center}
+\end{quote}
+
+\subsubsection{La moda}
+
+\index{Moda}Llamaremos moda $\widehat{x}$ a cualquier máximo relativo
+de la distribución de frecuencias, es decir, cualquier valor de la
+variable que posea una frecuencia mayor que su anterior y posterior
+valor.
+
+En el caso de variables continuas es más correcto hablar de intervalos
+modales. Luego de determinar el intervalo de clase o intervalo modal,que
+es aquel para el cual la distribución de frecuencia posee un máximo
+relativo, se determina la moda utilizando la siguiente fórmula 
+\[
+\widehat{x}=x_{i-1}+\frac{n_{i}-n_{i-1}}{\left(n_{i}-n_{i-1}\right)+\left(n_{i}-n_{i+1}\right)}a_{i}
+\]
+
+
+La cual se obtiene geométricamente como se indica en la fig. 2.3
+
+\begin{figure}
+\caption{La moda}
+\includegraphics[scale=0.4]{30_media_antalcides_Antalcides-EXT1_libros-est_pdf_img180.pdf}
+\end{figure}
+
+
+
+\paragraph{Propiedades de la moda\protect \\
+}
+
+La moda posee la siguientes propiedades
+\begin{itemize}
+\item Es muy fácil de calcular
+\item Puede no ser única
+\item Es función de los intervalos de su amplitud,número y límites 
+\end{itemize}
+
+\subsubsection{Relación entre la media, la moda y la mediana}
+
+En el caso de distribuciones unimodales, la mediana está con frecuencia
+comprendida entre la media y la moda (incluso más cerca de la media).
+
+En distribuciones que presentan cierta inclinación, es más aconsejable
+el uso de la mediana. Sin embargo en estudios relacionados con propósitos
+estadísticos y de inferencia suele ser más apta la media.
+
+Veamos un ejemplo de cálculo de estas tres magnitudes.
+
+\begin{ejemplo}[] Consideramos una tabla estadística relativa a una
+variable continua, de la que nos dan los intervalos, las marcas de
+clase $m_{i}$, y las frecuencias absolutas, $n_{i},$ para determinar
+las tres medidas de tendencia central básicas \end{ejemplo}
+
+\begin{tabular}{|c|c|c|c|c|}
+\hline 
+Intervalos  &
+$m_{i}$  &
+$n_{i}$  &
+$N_{i}$  &
+$m_{i}n_{i}$\tabularnewline
+\hline 
+0-2  &
+1  &
+2  &
+ &
+\tabularnewline
+\hline 
+2-4  &
+3  &
+1  &
+ &
+\tabularnewline
+\hline 
+4-6  &
+5  &
+4  &
+ &
+\tabularnewline
+\hline 
+6-8  &
+7  &
+3  &
+ &
+\tabularnewline
+\hline 
+8-10  &
+9  &
+2  &
+ &
+\tabularnewline
+\hline 
+ &
+ &
+ &
+ &
+\tabularnewline
+\hline 
+\end{tabular}.
+
+La mediana es el valor que deja debajo de sí el 50\% de los datos,
+en la tabla en la columna de las frecuencias absolutas acumuladas
+observamos que sexto dato se encuentra en la tercera clase, es decir
+
+$i=3$
+
+$(x_{i-1},x_{i}]=(4,6]$ intervalo donde se encuentra la mediana
+
+$\widetilde{x}=\widetilde{x}=x_{i-1}+\frac{\frac{n}{2}-N_{i-1}}{n_{i}}a_{i}=4+\frac{\frac{12}{2}-3}{4}\cdot2=5,5$
+
+para calcular la moda,debemos encontrar el o los intervalos modales,
+buscando los máximos relativos en las columnas de las frecuencias
+absolutas $n_{i}.$
+
+Encontramos dos intervalos \ con un máximo relativo,
+
+para $i=1$ cuya frecuencia absoluta es $2$
+
+para $i=3$ cuya frecuencia absoluta es $4.$
+
+Por tanto la moda en cada caso se calcula
+
+cuando $i=1\Rightarrow$
+
+$\widehat{x}=x_{i-1}+\frac{n_{i}-n_{i-1}}{\left(n_{i}-n_{i-1}\right)+\left(n_{i}-n_{i+1}\right)}a_{i}=0+\frac{2-0}{\left(2-0\right)+\left(2-1\right)}\cdot2=1,\widehat{3}$
+
+cuando $i=3\Rightarrow$
+
+$\widehat{x}=x_{i-1}+\frac{n_{i}-n_{i-1}}{\left(n_{i}-n_{i-1}\right)+\left(n_{i}-n_{i+1}\right)}a_{i}=4+\frac{4-1}{\left(4-1\right)+\left(4-3\right)}\cdot5=5,5$
+
+Ahora lo resolveremos geométricamente 
+
+\begin{center}
+\begin{figure}[H]
+\begin{centering}
+\includegraphics[scale=0.3]{31_media_antalcides_Antalcides-EXT1_libros-est_pdf_mediana.pdf}
+\par\end{centering}
+
+\caption{La media}
+\end{figure}
+ $\tilde{x}=5,5$
+\par\end{center}
+
+\begin{center}
+\begin{figure}[H]
+\begin{centering}
+\includegraphics[scale=0.3]{32_media_antalcides_Antalcides-EXT1_libros-est_pdf_moda.pdf}
+\par\end{centering}
+
+\caption{La moda}
+\end{figure}
+ $\hat{x}_{1}=1,33\;;\;\;\hat{x}_{2}=5,5$
+\par\end{center}
+
+La media es $\bar{x}=5.\hat{3}$
+
+
+\section{Medidas de posición}
+
+\index{Medidas de posición}\bigskip{}
+A veces es importante obtener los valores de la variable que divi\-den
+la población en cuatro,diez o cien partes iguales,usualmente llamados
+cuartiles deciles y percentiles respectivamente.
+
+El procedimiento es similar al utilizado para determinar la mediana,
+como lo indicaremos ahora.
+
+
+\subsubsection{Percentil}
+
+\index{Percentil}Para una variable discreta, se define el percentil
+de orden $k,$ como la observación que deja por debajo de si el $k\%$
+de la población es decir 
+\begin{align*}
+N_{k} & =n\frac{k}{100},\text{ si }n\text{ es impar}\\
+\text{es decir }p_{k} & =x_{[|(n+1)\frac{k}{100}|]}
+\end{align*}
+ donde en sub índice $[|(n+1)\frac{k}{100}|]$ indica que es la posición
+$k$ a la que le corresponde ese valor de la frecuencia absoluta acumulada.
+Si $n$ es par 
+\[
+p_{k}=\frac{x_{[|n\frac{k}{100}|]}+x_{[|n\frac{k}{100}|]+1}}{2}
+\]
+
+
+En el caso de variables continuas se busca el intervalo donde se encuentra
+\ $p_{k},$ es decir se busca el valor que deja por debajo de si
+el $k\%$ de las observaciones y se determina el intervalo $(x_{i-1,}x_{i}]$
+donde se encuentra y se utiliza la relación 
+\[
+p_{k}=x_{i-1}+\frac{n\frac{k}{100}-N_{i-1}}{n_{i}}\cdot a_{i}
+\]
+
+
+para determinarlo geométricamente observe la figura
+
+\begin{center}
+\begin{figure}[H]
+\begin{centering}
+\includegraphics[scale=0.3]{33_media_antalcides_Antalcides-EXT1_libros-est_pdf_percen.pdf}.
+\par\end{centering}
+
+\caption{Percentil}
+\end{figure}
+
+\par\end{center}
+
+\begin{center}
+\let\myclearpage\relax
+\par\end{center}
+
+
+\subsubsection{Quartiles}
+
+\index{Quartiles}Los cuartiles son tres y se definen:
+\begin{itemize}
+\item $Q_{1}=p_{25}$
+\item $Q_{2}=p_{50}$
+\item $Q_{3}=p_{75}$ 
+\end{itemize}
+
+\subsection{Deciles}
+
+\index{Deciles}De manera análoga se definen los deciles
+
+los deciles son los valores que dividen las observaciones en 10 grupos
+de igual tamaño es decir son el conjunto
+
+$D_{1},D_{2},D_{3},\cdots,D_{10}$ y se definen
+
+$D_{i}=p_{10\cdot i}\qquad i=1,2,3,\cdots,10$
+
+\begin{ejemplo}[] 
+\begin{enumerate}
+\item Dada la siguiente tabla de distribución de frecuencia Determine los
+tres cuartiles 
+\[
+\begin{tabular}{||l||l||l||}
+\hline\hline  x\ensuremath{_{i}}  &  n\ensuremath{_{i}}  &  N\ensuremath{_{i}}\\
+\hline\hline  0  &  14  &  \\
+\hline\hline  1  &  10  &  \\
+\hline\hline  2  &   &  \\
+\hline\hline  3  &  26  &  \\
+\hline\hline  4  &  20  &  \\
+\hline\hline  5  &  15  &  100\\
+\hline\hline   &  100  &  
+\\\hline\hline \end{tabular}
+\]
+ \rule{0.01in}{0.17in}Solución\linebreak{}
+Primer cuartil 
+\[
+\frac{n}{4}=25\Rightarrow N_{i}>\frac{n}{4}=39\Rightarrow Q_{1}=2
+\]
+ \linebreak{}
+Segundo cuartil 
+\[
+\frac{2n}{4}=50\Rightarrow N_{i}>\frac{2n}{4}=65\Rightarrow Q_{2}=3
+\]
+ \linebreak{}
+Tercer cuartil 
+\[
+\frac{3n}{4}=75\Rightarrow N_{i}>\frac{3n}{4}=85\Rightarrow Q_{3}=4
+\]
+
+
+
+\begin{ejemplo}[] Calcular los cuartiles en las siguiente distribución
+de una variable continua 
+\[
+\begin{tabular}{|l|l|l|}
+\hline  x\ensuremath{_{i-1}}  &  n\ensuremath{_{i}}  &  N\ensuremath{_{i}}\\
+\hline  0-1  &  10  &  \\
+\hline  1-2  &  12  &  \\
+\hline  2-3  &   &  \\
+\hline  3-4  &  10  &  \\
+\hline  4-5  &  7  &  51\\
+\hline   &  51  &  
+\\\hline \end{tabular}
+\]
+ \linebreak{}
+primer cuartil 
+\begin{align*}
+\frac{n}{4} & =12,75\Rightarrow22=N_{i}>\frac{n}{4}\Rightarrow Q_{1}\in(1,2]\\
+Q_{1} & =x_{i-1}+\frac{n/4-N_{i-1}}{n_{i}}\cdot a_{i}=1+\frac{12,75-10}{12}\cdot1=1,23
+\end{align*}
+ \linebreak{}
+segundo cuartil 
+\begin{align*}
+\frac{2n}{4} & =25,5\Rightarrow34=N_{i}>\frac{2n}{4}\Rightarrow Q_{2}\in(2,3]\\
+Q_{2} & =x_{i-1}+\frac{2n/4-N_{i-1}}{n_{i}}\cdot a_{i}=2+\frac{25,5-22}{12}\cdot1=2,29
+\end{align*}
+ \linebreak{}
+Tercer cuartil 
+\begin{align*}
+\frac{3n}{4} & =38,5\Rightarrow44=N_{i}>\frac{3n}{4}\Rightarrow Q_{3}\in(3,4]\\
+Q_{3} & =x_{i-1}+\frac{3n/4-N_{i-1}}{n_{i}}\cdot a_{i}=3+\frac{38,25-34}{10}\cdot1=3,45
+\end{align*}
+
+
+
+\end{ejemplo} 
+
+\end{enumerate}
+\end{ejemplo}
+
+\begin{ejemplo}[] La distribución de una variable tiene por polígono
+acumulativo de frecuencias relativas.Si el número total de observaciones
+es de 50 
+\[
+\begin{tabular}{|c|c|c|c|}
+\hline  Intervalo  &  \ensuremath{m_{i}}  &  \ensuremath{F_{i}}  &  \ensuremath{a_{i}}\\
+\hline  0-5  &  2,5  &  0,2  &  5\\
+\hline  5-7  &  6  &  0,7  &  2\\
+\hline  7-12  &  9,5  &  0,8  &  5\\
+\hline  12-15  &  13,5  &  1  &  3 
+\\\hline \end{tabular}
+\]
+
+\begin{enumerate}
+\item Elaborar una tabla estadística con los siguientes elementos : intervalos
+de clase, marcas de clase, frecuencia absoluta, frecuencia absoluta
+acumulada, frecuencia relativa y frecuencia relativa acumulada.
+\item Cuantas observaciones tuvieron un valor inferior a 10, cuantas inferior
+a 8 y cuantas fueron superior a 11.
+\item Calcule las modas.
+\item Determine los cuartiles 
+\end{enumerate}
+\end{ejemplo}
+\begin{enumerate}
+\item En la siguiente tabla se proporciona la información pedida y algunos
+cálculos auxiliares que nos permitirán responder otras preguntas.
+\[
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline  Intervalo  &  \ensuremath{m_{i}}  &  \ensuremath{n_{i}}  &  \ensuremath{N_{i}}  &  \ensuremath{f_{i}}  &  \ensuremath{F_{i}}  &  \ensuremath{a_{i}}\\
+\hline  0-5  &  2,5  &  10  &   &   &  0,2  &  5\\
+\hline  5-7  &  6  &  25  &   &   &  0,7  &  2\\
+\hline  7-12  &  9,5  &  5  &   &   &  0,8  &  5\\
+\hline  12-15  &  13,5  &  10  &   &   &  1  &  3 
+\\\hline \end{tabular}
+\]
+
+\item Calcularemos ahora el número de observaciones que se han pedido \end{enumerate}
+\begin{itemize}
+\item Hasta el segundo intervalo van 35 datos ahora analizaremos cuantos
+datos tienen un valor menor que diez en el tercer intervalo 
+\[
+\begin{tabular}{lll}
+ \ensuremath{7\,a\,12}  &  \ensuremath{\longrightarrow}  &  \ensuremath{5}\\
+ \ensuremath{7\,a\,10}  &  \ensuremath{\longrightarrow}  &  \ensuremath{x} 
+\end{tabular}\Longleftrightarrow\begin{tabular}{lll}
+ \ensuremath{5}  &  \ensuremath{\longrightarrow}  &  \ensuremath{5}\\
+ \ensuremath{3}  &  \ensuremath{\longrightarrow}  &  \ensuremath{x} 
+\end{tabular}\Longrightarrow x=3
+\]
+ \linebreak{}
+Por tanto el número de observaciones que tomaron un va\-lor inferior
+a 10 es 38
+\item De igual forma que en el paso anterior hasta el segundo intervalo
+van 35 observaciones y en el tercer intervalo tenemos que 
+\[
+\begin{tabular}{lll}
+ \ensuremath{7\,a\,12}  &  \ensuremath{\longrightarrow}  &  \ensuremath{5}\\
+ \ensuremath{7\,a\,8}  &  \ensuremath{\longrightarrow}  &  \ensuremath{x} 
+\end{tabular}\Longleftrightarrow\begin{tabular}{lll}
+ \ensuremath{5}  &  \ensuremath{\longrightarrow}  &  \ensuremath{5}\\
+ \ensuremath{1}  &  \ensuremath{\longrightarrow}  &  \ensuremath{x} 
+\end{tabular}\Longrightarrow x=1
+\]
+ \linebreak{}
+Por tanto el número de observaciones que tomaron un va\-lor menor
+que 8 es 36
+\item En el cuarto intervalo hay 10 observaciones mayores que 11, por tanto
+hay que determinar cuantas mayores que 11 hay en el tercer intervalo
+\[
+\begin{tabular}{lll}
+ \ensuremath{7\,a\,12}  &  \ensuremath{\longrightarrow}  &  \ensuremath{5}\\
+ \ensuremath{7\,a\,11}  &  \ensuremath{\longrightarrow}  &  \ensuremath{x} 
+\end{tabular}\Longleftrightarrow\begin{tabular}{lll}
+ \ensuremath{5}  &  \ensuremath{\longrightarrow}  &  \ensuremath{5}\\
+ \ensuremath{4}  &  \ensuremath{\longrightarrow}  &  \ensuremath{x} 
+\end{tabular}\Longrightarrow x=4
+\]
+ \linebreak{}
+Entonces hay cuatro observaciones entre 7 y 11 por tanto mayor que
+11 hay 1 es decir hay 11 observaciones mayores que 11 \end{itemize}
+\begin{description}
+\item [{3.}] Tenemos dos modas \end{description}
+\begin{itemize}
+\item Cuando $i=2$
+\begin{align*}
+\widehat{x_{1}} & =x_{i-1}+\frac{n_{i}-n_{i-1}}{\left(n_{i}-n_{i-1}\right)+\left(n_{i}-n_{i+1}\right)}a_{i}\\
+\widehat{x_{1}} & =5+\frac{25-10}{\left(25-10\right)+\left(25-5\right)}\cdot2=5,86
+\end{align*}
+
+\item Cuando $i=4$
+\begin{align*}
+\widehat{x_{2}} & =x_{i-1}+\frac{n_{i}-n_{i-1}}{\left(n_{i}-n_{i-1}\right)+\left(n_{i}-n_{i+1}\right)}a_{i}\\
+\widehat{x_{2}} & =12+\frac{10-5}{\left(10-5\right)+\left(10-0\right)}\cdot7=14,\widehat{3}
+\end{align*}
+\end{itemize}
+\begin{description}
+\item [{4}] Los Cuartiles son 
+\begin{align*}
+Q_{1} & =x_{i-1}+\frac{n/4-N_{i-1}}{n_{i}}\cdot a_{i}=5+\frac{12,5-10}{25}\cdot2=5,2\\
+Q_{2} & =x_{i-1}+\frac{2n/4-N_{i-1}}{n_{i}}\cdot a_{i}=5+\frac{25-10}{25}\cdot2=6,2\\
+Q_{3} & =x_{i-1}+\frac{3n/4-N_{i-1}}{n_{i}}\cdot a_{i}=7+\frac{37,5-35}{5}\cdot5=9,5
+\end{align*}
+
+\end{description}
+
+\section{Medidas de variabilidad o dispersión}
+
+\index{Medidas de variabilidad o dispersión}Las medias de posición
+o medidas de tendencia central nos indican donde se sitúa un grupo
+de medidas. Los de variabilidad o dispersión nos indican si esas medidas
+o valores están próximas entre sí o si por el contrario están dispersas.
+
+Una medida razonable da la variabilidad podría ser la amplitud o rango,
+el cual se obtiene restando el valor o medida mínima de la medida
+máxima de un conjunto de observaciones
+
+Esta forma de determinar la variabilidad es fácil de calcular y tiene
+las mismas unidades de las medidas, pero tiene algunos inconvenientes
+
+$\circ$ No utiliza todas las observaciones si no dos de ellas
+
+$\circ$ Es afectada por las observaciones extremas
+
+$\circ$ El rango aumenta con el número de medidas, o bien queda igual.
+En ningún caso disminuye
+
+Por eso a continuación determinaremos otras formas de medir la dispersión
+de una variable
+
+
+\subsection{Desviación media}
+
+\index{Desviación media}Se define la desviación media $D_{m}$ como
+la media de las diferencias en valor absoluto de los valores de la
+variable a la media, es decir, si tenemos un conjuntos de$\ n$ observaciones
+$\ x_{1,}x_{2},x_{3},\cdots,x_{n}$ entonces 
+\[
+D_{m}=\frac{1}{n}\sum_{i=1}^{n}|x_{i}-\overline{x}|
+\]
+
+
+Si los datos están agrupados en una tabla estadística es más sencillo
+usar la relación 
+\[
+D_{m}=\frac{1}{n}\sum_{i=1}^{k}|x_{i}-\overline{x}|\cdot n_{i}
+\]
+
+
+Como se observa, la desviación media guarda las mismas dimensiones
+que las observaciones. La suma de los valores absolutos es relativamente
+fácil de calcular, pero esta simplicidad tiene un inconveniente: Desde
+el punto de vista geométrico, la distancia que induce la desviación
+media en el espacio de observaciones no es natural (no permite definir
+ángulos entre dos conjuntos de observaciones). Esto hace que sea muy
+engorroso trabajar con ella a la hora de hacer inferencias.
+
+
+\subsection{Varianza y desviación típica}
+
+\index{Varianza}Como forma de medir la dispersión de los datos hemos
+descartado:
+\begin{itemize}
+\item $\sum_{i=1}^{n}\left(x_{i}-\overline{x}\right)$, pues sabemos que
+esa suma vale 0, ya que las desviaciones con re\-specto a la media
+se compensan al haber términos en esa suma que son de signos distintos.
+\item Para tener el mismo signo al sumar las desviaciones con res\-pecto
+a la media podemos realizar la suma con valores absolutos. Esto nos
+lleva a la $D_{m}$, pero como hemos 
+\end{itemize}
+mencionado, tiene poco interés por las dificultades que presenta.
+\begin{itemize}
+\item Si las desviaciones con respecto a la media las consideramos al cuadrado,
+$\left(x_{i}-\overline{x}\right)^{2}$, de nuevo obtenemos que todos
+los sumandos tienen el mismo signo (positivo). Esta es además la forma
+de medir la dispersión de los datos de forma que sus propiedades matemáticas
+son más fáciles de utilizar. Vamos a definir entonces dos medidas
+que serán fundamentales en el resto del curso: 
+\end{itemize}
+La varianza y la desviación típica.
+
+La varianza, $S_{n}^{2}$, se define como la media de las diferencias
+cuadráticas de $n$ puntuaciones con respecto a su media aritmética,
+es decir 
+\[
+S_{n}^{2}=\frac{1}{n}\sum_{i=1}^{n}\left(x_{i}-\overline{x}\right)^{2}
+\]
+
+
+Para datos agrupados en tablas, usando las notaciones establecidas
+en el capítulo anterior, la varianza se puede escribir como 
+\[
+S_{n}^{2}=\frac{1}{n}\sum_{i=1}^{k}\left(x_{i}-\overline{x}\right)^{2}\cdot n_{i}
+\]
+
+
+Una fórmula equivalente para el cálculo de la varianza está basada
+en lo siguiente: 
+\begin{align*}
+S_{n}^{2} & =\frac{1}{n}\sum_{i=1}^{n}x_{i}^{2}n_{i}-\overline{x}^{2}\\
+ & =\frac{1}{n}\sum_{i=1}^{n}\left(x_{i}^{2}-2x_{i}\overline{x}+\overline{x}^{2}\right)\\
+ & \frac{1}{n}\sum_{i=1}^{n}x_{i}^{2}-2\overline{x}\frac{\sum_{i=1}^{n}x_{i}}{n}+\frac{1}{n}n\overline{x}^{2}
+\end{align*}
+
+
+Con lo cual se tiene 
+\[
+S_{n}^{2}=\frac{1}{n}\sum_{i=1}^{n}x_{i}^{2}-\overline{x}^{2}
+\]
+
+
+Si los datos están agrupados en tablas, es evidente que 
+\[
+S_{n}^{2}=\frac{1}{n}\sum_{i=1}^{n}x_{i}^{2}n_{i}-\overline{x}^{2}
+\]
+
+
+La varianza no tiene la misma magnitud que las observaciones (ej.
+si las observaciones se miden en metros, la varianza lo hace en $metros^{2}$
+). Si queremos que la medida de dispersión sea de la misma dimensionalidad
+que las observaciones bastará con tomar su raíz cuadrada. Por ello
+se define la desviación típica, $S_{n}$, como\index{Desviación típica}
+\[
+S_{n}=\sqrt{S_{n}^{2}}
+\]
+
+
+\begin{ejemplo}[] Calcular la varianza y desviación típica de las
+sigui\-entes cantidades medidas en metros: \end{ejemplo}
+
+3,3,4,4,5
+
+\begin{solucion} Para calcular dichas medidas de dispersión es necesario
+calcular previamente el valor con respecto al cual vamos a medir las
+diferencias. Éste es la media: 
+\[
+\overline{x}=3,8\,metros
+\]
+ La varianza es: 
+\begin{align*}
+S_{n}^{2} & =\frac{1}{n}\sum_{i=1}^{n}x_{i}^{2}n_{i}-\overline{x}^{2}\\
+ & =\frac{1}{5}\left(9+9+16+16+25\right)-3,8^{2}=0,56m^{2}
+\end{align*}
+ siendo la desviación típica su raíz cuadrada: 
+\[
+S_{n}=\sqrt{0,56m^{2}}=0,748m
+\]
+
+
+\end{solucion}
+
+Las siguientes propiedades de la varianza (respectivamente, \\
+desviación típica) son importantes a la hora de hacer un cambio de
+origen y escala a una variable. En primer lugar, la varianza (resp.
+Desviación típica) no se ve afectada si al conjunto de valores de
+la variable se le añade una constante. Si además cada observación
+es multiplicada por otra constante, en este caso la varianza cambia
+en relación al cuadrado de la constante (resp. La desviación típica
+cambia en relación al valor absoluto de la constante). Esto queda
+precisado en la siguiente proposición:
+
+\begin{proposicion}{}{} Si $Y=aX+b$ entonces $S_{n,Y}^{2}=a^{2}S_{n,X}^{2}$
+\end{proposicion}
+
+\begin{prueba} Para cada observación $x_{i}$ de $X$,$i=1,2,\cdots,n$,
+tenemos una observación de $Y$ que es por definición $y_{i}=ax_{i}+b$,
+es fácil demostrar que $\overline{y}=a\overline{x}+b$. Por tanto,
+la varianza de $Y$ es 
+\begin{align*}
+S_{n,Y}^{2} & =\frac{1}{n}\sum_{i=1}^{n}\left(y_{i}-\overline{y}\right)^{2}\\
+ & =\frac{1}{n}\sum_{i=1}^{n}\left[\left(ax_{i}+b\right)-\left(a\overline{x}+b\right)\right]^{2}\\
+ & =\frac{1}{n}\sum_{i=n}^{n}a^{2}\left(x_{i}-\overline{x}^{2}\right)\\
+ & =a^{2}S_{n,X}^{2}
+\end{align*}
+
+
+\end{prueba}
+
+\begin{apunte} Las consecuencias del anterior resultado eran de esper\-ar:
+Si los resultados de una medida son trasladados una cantidad b, la
+dispersión de los mismos no aumenta. Si estos mismos datos se multiplican
+por una cantidad $a<1$, el resultado tenderá a concentrarse alrededor
+de su media (menor varianza). Si por el contrario $a>1$ habrá mayor
+dispersión. \end{apunte}
+
+Otra propiedad fundamental de la varianza es la siguiente:
+
+\begin{proposicion}{}{} Dados r grupos, cada uno de ellos formado
+por $n_{i}$ observaciones de media $\overline{x_{i}}$ y de varianza
+$S_{i}^{2}$. Entonces la varianza,\\
+$S^{2}$, del conjunto de todas las $n=n_{1,}n_{2},n_{3},\cdots,n_{r}$
+observaciones vale 
+\[
+S_{n}^{2}=\frac{1}{n}\sum_{i=1}^{r}n_{i}S_{n_{i}}^{2}+\frac{1}{n}\sum_{i=1}^{r}n_{i}\left(\overline{x_{i}}-\overline{x}\right)^{2}
+\]
+
+
+\end{proposicion}
+
+\begin{proposicion}{}{} Además de las propiedades que hemos demostrado
+sobre la varianza (y por tanto sobre la desviación típica), será conveniente
+tener siempre en mente otras que enunciamos a continuación: \end{proposicion}
+\begin{itemize}
+\item Ambas son sensibles a la variación de cada una de las puntuaciones,
+es decir, si una puntuación cambia, cambia con ella la varianza. La
+razón es que si miramos su definición, la varianza es función de cada
+una de las puntuaciones.
+\item Si se calculan a través de los datos agrupados en una tabla, dependen
+de los intervalos elegidos. Es decir, cometemos cierto error en el
+cálculo de la varianza cuando los datos han sido resumidos en una
+tabla estadística mediante intervalos, en lugar de haber sido calculados
+directamente como datos no agrupados. Este error no será importante
+si la elección del número de intervalos, amplitud y límites de los
+mismos ha sido adecuada.
+\item La desviación típica tiene la propiedad de que en el intervalo 
+\[
+\left(\overline{x}-2S_{n},\overline{x}+2S_{n}\right)=\overline{x}\pm2S_{n}
+\]
+
+\end{itemize}
+se encuentra, al menos, el 75\% de las observaciones (véase más adelante
+el teorema de Thebycheff). Incluso si
+
+tenemos muchos datos y estos provienen de una distribución normal
+(se definirá este concepto más adelante), podremos llegar al 95\%
+\begin{itemize}
+\item No es recomendable el uso de ellas, cuando tampoco lo sea el de la
+media como medida de tendencia central. 
+\end{itemize}
+
+\subsubsection{\bigskip{}
+\ Grados de libertad}
+
+\index{Grados de libertad}Los grados de libertad de un medida calculado
+sobre $n$ datos se refieren al número de cantidades independientes
+que se necesitan en su cálculo, menos el número de restricciones que
+ligan a las observaciones y la medida.
+
+Ilustrándolo con un ejemplo. Consideraremos una serie de valores de
+una variable,
+
+$X\leadsto2,5,7,9,12$
+
+que han sido tomados de forma independiente.
+
+Su media es $\overline{x}=7$ y se ha calculado a partir de las $n=5$
+observaciones independientes $x_{i}$, que están ligadas a la media
+por la relación: 
+\[
+\overline{x}=\frac{1}{n}\sum_{i=1}^{k}x_{i}
+\]
+
+
+Luego el número de grados de libertad de la media es $n-1=4$. 
+\[
+\frac{\left(x_{i}-\overline{x}\right)^{2}}{n}
+\]
+
+
+Sin embargo esas cantidades no son totalmente independientes, pues
+están ligadas por una restricción: 
+\[
+\sum_{i=1}^{n}\left(x_{i}-\left(\frac{\sum_{i=1}^{n}x_{i}}{n}\right)\right)=0
+\]
+
+
+El número de grados de libertad de la medida es el número de observaciones
+de la variable menos el número de restricciones que se verifican,
+así que en este caso, los grados de libertad de la varianza sobre
+los $n=5$ datos son también $n-1=4$.
+
+Un principio general de la teoría matemática nos dice que si pretendemos
+calcular de modo aproximado la varianza de una población a partir
+de la varianza de una muestra suya, se tiene que el error cometido
+es generalmente más pequeño, si en vez de considerar como estimación
+de la varianza de la población, a la varianza muestral 
+\[
+S_{n}^{2}=\frac{1}{n}\sum_{i=1}^{n}\left(x_{i}-\overline{x}\right)^{2}
+\]
+
+
+consideramos lo que se denomina cuasivarianza muestral, $S^{2}$ que
+se calcula como la anterior, pero cambiando el denominador por el
+número de grados de libertad, $n-1$: 
+\[
+S^{2}=\frac{1}{n-1}\sum_{i=1}^{n}\left(x_{i}-\overline{x}\right)^{2}=\frac{nS_{n}^{2}}{n-1}
+\]
+
+
+Sobre este punto insistiremos más adelante, ya que es fundamental
+en estadística inferencial.
+
+
+\subsubsection{Tipificación}
+
+\index{Tipificación de una variable}Se conoce por tipificación al
+proceso de restar la media y dividir por su desviación típica a una
+variable $X$. De este modo se obtiene una nueva variable 
+\[
+Z=\frac{X-\overline{x}}{S}
+\]
+
+
+de media $\overline{z}=0$\ y desviación típica, $S_{Z}=1.$ que
+denominamos variable tipificada.
+
+Esta nueva variable carece de unidades y permite hacer comparables
+dos medidas que en un principio no lo son, por aludir a conceptos
+diferentes. Así por ejemplo nos podemos preguntar si un elefante es
+más grueso que una hormiga determinada, cada uno en relación a su
+población. También es aplicable al caso en que se quieran comparar
+individuos semejantes de poblaciones diferentes. Por ejemplo si deseamos
+comparar el nivel académico de dos estudiantes de diferentes Universidades
+para la concesión de una beca de estudios, en principio sería injusto
+concederla directamente al que posea una nota media más elevada, ya
+que la dificultad para conseguir una buena calificación puede ser
+mucho mayor en un centro que en el otro, lo que limita las posibilidades
+de uno de los estudiante y favorece al otro. En este caso, lo más
+correcto es comparar las calificaciones de ambos estudiantes, pero
+tipificadas cada una de ellas por las medias y desviaciones típicas
+respectivas de las notas de los alumnos de cada Universidad.
+
+
+\subsubsection{Coeficiente de variación}
+
+\index{Coeficiente de variación}Hemos visto que las medidas de centralización
+y dispersión nos dan información sobre una muestra. Nos podemos preguntar
+si tiene sentido usar estas magnitudes para comparar dos poblaciones.
+Por ejemplo, si nos piden comparar la dispersión de los pesos de las
+poblaciones de elefantes de dos circos diferentes, $S$\ nos dará
+información útil.
+
+¿Pero qué ocurre si lo que comparamos es la altura de unos elefantes
+con respecto a su peso? Tanto la media $\overline{x}$,\ como la
+desviación típica, $S$, se expresan en las mismas unidades que la
+variable. Por ejemplo, en la variable altura podemos usar como unidad
+de longitud el $metro$ y en la variable peso, el kilogramo. Comparar
+una desviación (con respecto a la media) medida en $metros$ con otra
+en $kilogramos$ no tiene ningún sentido.
+
+El problema no deriva sólo de que una de las medidas sea de longitud
+y la otra sea de masa. El mismo problema se plantea si medimos cierta
+cantidad, por ejemplo la masa, de dos poblaciones, pero con distintas
+unidades. Este es el caso en que comparamos el peso en $toneladas$
+de una población de 100 elefantes con el corres\-pondiente en $miligramos$
+de una población de 50 hormigas.
+
+El problema no se resuelve tomando las mismas escalas para ambas poblaciones.
+Por ejemplo, se nos puede ocurrir medir a las hormigas con las mismas
+unidades que los elefantes (toneladas). Si la ingeniería genética
+no nos sorprende con alguna barbaridad, lo lógico es que la dispersión
+de la variable peso de las hormigas sea prácticamente nula (¡Aunque
+haya algunas que sean 1.000 veces mayores que otras!)
+
+En los dos primeros casos mencionados anteriormente, el pro\-blema
+viene de la dimensionalidad de las variables, y en el tercero de la
+diferencia enorme entre las medias de ambas poblaciones. El coe\-ficiente
+de variación es lo que nos permite evitar estos problemas, pues elimina
+la dimensionalidad de las variables y tiene en cuenta la proporción
+existente entre medias y desviación típica. Se define del siguiente
+modo: 
+\[
+Cv=\frac{S_{X}}{\overline{x}}
+\]
+
+
+Basta dar una rápida mirada a la definición del coeficiente de variación,
+para ver que las siguientes consideraciones deben ser tenidas en cuenta:
+
+$\circ$ Sólo se debe calcular para variables con todos los valores
+po\-sitivos. Todo índice de variabilidad es esencialmente no negativo.
+Las observaciones pueden ser positivas o nulas, pero su variabilidad
+debe ser siempre positiva. De ahí que sólo debemos trabajar con variables
+positivas, para la que \ tenemos con seguridad que $\overline{x}>0$.
+
+$\circ$ No es invariante ante cambios de origen. Es decir, si a los
+resultados de una medida le sumamos una cantidad positiva, $b>0$,
+para tener $Y=X+b$, entonces, $C_{vY}<C_{vX}$ ya que la desviación
+típica no es sensible ante cambios de origen, pero si la media. Lo
+contrario ocurre si restamos $(b<0)$. 
+\[
+C_{vY}=\frac{S_{Y}}{\overline{y}}=\frac{S_{X}}{\overline{x}+b}<\frac{S_{X}}{\overline{x}}=C_{vX}
+\]
+
+
+$\circ$ Es invariante a cambios de escala. Si multiplicamos $X$
+por una constante $a$, para obtener,$Y=aX$,\ entonces
+
+Es importante destacar que los coeficientes de variación sirven para
+comparar las variabilidades de dos conjuntos de valores (muestras
+o poblaciones), mientras que si deseamos comparar a dos individuos
+de cada uno de esos conjuntos, es necesario usar los valores tipificados.
+
+Dada la distribución de edades (medidas en años) en un colectivo de
+100 personas, obtener:
+
+1.
+
+La variable tipificada $Z$.
+
+2.
+
+Valores de la media y varianza de $Z$.
+
+3.
+
+Coeficiente de variación de $Z$.
+
+Horas trabajadas%
+\begin{tabular}{||c||c||}
+\hline 
+$Horas\;trabajadas$  &
+$N{^{o}}\;de\;empleados$\tabularnewline
+\hline 
+\hline 
+$0-4$  &
+$47$\tabularnewline
+\hline 
+\hline 
+$4-10$  &
+$32$\tabularnewline
+\hline 
+\hline 
+$10-20$  &
+$17$\tabularnewline
+\hline 
+\hline 
+$20-40$  &
+$4$\tabularnewline
+\hline 
+\hline 
+ &
+$100$\tabularnewline
+\hline 
+\end{tabular}
+
+Para calcular la variable tipificada 
+\[
+Z=\frac{X-\overline{x}}{S_{X}}
+\]
+
+
+partimos de los datos del enunciado. Será necesario calcular en primer
+lugar la media y desviación típica de la variable original $(X=a\tilde{n}os)$.
+\[
+\begin{tabular}{|l|l|l|l|l|}
+\hline  \ensuremath{Intervalos}  &  \ensuremath{m_{i}}  &  \ensuremath{n_{i}}  &  \ensuremath{m_{i}n_{i}}  &  \ensuremath{m_{i}^{2}n_{i}}\\
+\hline  \ensuremath{0-4}  &  \ensuremath{2}  &  \ensuremath{47}  &  \ensuremath{94}  &  \ensuremath{188}\\
+\hline  \ensuremath{4-10}  &  \ensuremath{7}  &  \ensuremath{32}  &  \ensuremath{224}  &  \ensuremath{1568}\\
+\hline  \ensuremath{10-20}  &  \ensuremath{15}  &  \ensuremath{17}  &  \ensuremath{255}  &  \ensuremath{3825}\\
+\hline  \ensuremath{20-40}  &  \ensuremath{30}  &  \ensuremath{4}  &  \ensuremath{120}  &  \\
+\hline  \ensuremath{Total}  &   &   &  \ensuremath{693}  &  \ensuremath{9181} 
+\\\hline \end{tabular}
+\]
+ 
+\begin{align*}
+\overline{x} & =\frac{693}{100}=6,93\,a\tilde{n}os\\
+S_{X}^{2} & =\frac{9181}{100}-6,93^{2}=43,78\,(a\tilde{n}os)^{2}\\
+S_{X} & =\sqrt{43,78}=6,6\,a\tilde{n}os
+\end{align*}
+
+
+A partir de estos valores podremos calcular los valores tipificados
+para las marcas de clase de cada intervalo y construir su distribución
+de frecuencias: 
+\begin{align*}
+z_{1} & =\frac{2-6,93}{6,6}=-0,745\\
+z_{2} & =\frac{7-6,93}{6,6}=0,011\\
+z_{2} & =\frac{15-6,93}{6,6}=1,22\\
+z_{2} & =\frac{30-6,93}{6,6}=3,486
+\end{align*}
+ 
+\[
+\begin{tabular}{||c||c||c||c||}
+\hline\hline  \ensuremath{z_{i}}  &  \ensuremath{n_{i}}  &  \ensuremath{z_{i}n_{i}}  &  \ensuremath{z_{i}^{2}n_{i}}\\
+\hline\hline  \ensuremath{-0,745}  &  \ensuremath{47}  &  \ensuremath{-35,015}  &  \ensuremath{26,086}\\
+\hline\hline  \ensuremath{0,011}  &  \ensuremath{32}  &  \ensuremath{0,352}  &  \ensuremath{0,004}\\
+\hline\hline  \ensuremath{1,220}  &  \ensuremath{17}  &  \ensuremath{20,720}  &  \ensuremath{25,303}\\
+\hline\hline  \ensuremath{3,486}  &  \ensuremath{4}  &  \ensuremath{13,944}  &  \ensuremath{48,608}\\
+\hline\hline   &  \ensuremath{n=100}  &  \ensuremath{0,021}  &  \ensuremath{100,002} 
+\\\hline\hline \end{tabular}
+\]
+ 
+\begin{align*}
+\overline{z} & =\frac{0,021}{100}\approx0\\
+S_{Z}^{2} & =\frac{100,02}{100}-0^{2}\approx1\\
+S_{X} & =\sqrt{1}=1
+\end{align*}
+
+
+A pesar de que no se debe calcular el coeficiente de variación sobre
+variables que presenten valores negativos (y $Z$ los presenta), lo
+calculamos con objeto de ilustrar el porqué: 
+\[
+C_{v}=\frac{S_{Z}}{\overline{z}}=\frac{1}{0}=\infty
+\]
+
+
+Es decir, el coeficiente de variación no debe usarse nunca con variables
+tipificadas.
+
+
+\subsection{Asimetría y apuntamiento}
+
+Sabemos cómo calcular valores alrededor de los cuales se distribuyen
+las observaciones de una variable sobre una muestra y sabemos cómo
+calcular la dispersión que ofrecen los mismos con respecto al valor
+de central. Nos proponemos dar un paso más allá en el análisis de
+la variable. En primer lugar, nos vamos a plantear el saber si los
+datos se distribuyen de forma simétrica con respecto a un valor central,
+o si bien la gráfica que representa la distribución de frecuencias
+es de una forma diferente del lado derecho que del lado izquierdo.
+
+Si la simetría ha sido determinada, podemos preguntarnos si la curva
+es más o menos apuntada (larga y estrecha). Este apuntamiento habrá
+que medirlo comparado a cierta distribución de frecuencias que consideramos
+normal (no por casualidad es éste el nombre que recibe la distribución
+de referencia).
+
+Estas ideas son las que vamos a desarrollar en lo que resta del capítulo.
+
+
+\subsubsection{Índices de asimetría o sesgo}
+
+\index{Sesgo}\index{Asimetría}Para saber si una distribución de
+frecuencias es simétrica, hay que precisar con respecto a qué. Un
+buen candidato es la mediana, ya que para variables continuas, divide
+al histograma de frecuencias en dos partes de igual área. Podemos
+basarnos en ella para, de forma natural, decir que una distribución
+de frecuencias es simétrica si el lado derecho de la gráfica (a partir
+de la mediana) es la imagen por un espejo del lado izquierdo(figura
+).
+
+\begin{figure}[H]
+\centering{}\includegraphics[scale=0.3]{34_media_antalcides_Antalcides-EXT1_bak-pc_documentos_Libros_LibrosDPTO_est_simea1.pdf}
+\end{figure}
+
+
+Cuando la variable es discreta, decimos que es simétrica, si lo es
+con respecto a la media.
+\begin{itemize}
+\item Se podría pensar que definir la simetría usando la mediana para variables
+continuas y usando la media para variables discretas es una elección
+arbitraria. En realidad esto no es así, pues si una variable es continua,
+coinciden ambos criterios de simetría (con respecto a la media y a
+la mediana). Es más, se tiene que media y mediana coinciden para distribuciones
+continuas simétricas. Por otro lado,
+\item En el caso de variables discretas, la distribución es simétrica si
+el lado derecho del diagrama se obtiene por imagen especular desde
+la media. En este caso coincide la media con la mediana si el número
+de observaciones es impar.
+\item Si la variable es continua simétrica y unimodal, coinciden la media,
+la mediana y la moda. 
+\end{itemize}
+Dentro de los tipos de asimetría posible, vamos a destacar los dos
+fundamentales (\ref{figura 2.6} ):
+
+
+\subsubsection{Asimetría positiva:}
+
+\index{Asimétria!Positiva}Si las frecuencias más altas se encuentran
+en el lado izquierdo de la media, mientras que en derecho hay frecuencias
+más pequeñas (cola).
+
+
+\subsubsection{Asimetría negativa:}
+
+\index{Asimétria!Negativa}Cuando la cola está en el lado izquierdo.
+
+\begin{figure}
+\caption{Asimetría}
+
+
+\centering{}\includegraphics[scale=0.5]{35_media_antalcides_Antalcides-EXT1_libros-est_pdf_asipn1.pdf}\label{figura 2.6}
+\end{figure}
+
+
+Cuando realizamos un estudio descriptivo es altamente impro\-bable
+que la distribución de frecuencias sea totalmente simétrica. En la
+práctica diremos que la distribución de frecuencias es simétrica si
+lo es de un modo aproximado. Por otro lado, aún observando cuidadosamente
+la gráfica, podemos no ver claro de qué lado están las frecuencias
+más altas. Conviene definir entonces unos estadísticos que ayuden
+a interpretar la asimetría, a los que llamaremos índices de asimetría,
+y que denotaremos mediante $A_{s}.$ Vamos a definir a continuación
+algunos de los índices de asimetría más usuales como son el índice
+basado en los tres cuartiles, el momento de tercer orden y la distancia
+entre la moda y la media o la media y la mediana.
+
+
+\subsubsection{Índice basado en los tres cuartiles (Yule-Bowley)}
+
+\index{Índice!Intercuartílico}Si una distribución es simétrica, es
+claro que deben haber tantas observaciones entre la que deja por debajo
+de sí las tres cuartas partes de la distribución y la mediana, como
+entre la mediana y la que deja por debajo de sí un cuarto de todas
+las observaciones. De forma abreviada esto es, 
+\[
+Q_{3}-Q_{2}=Q_{2}-Q_{1}
+\]
+
+
+Una pista para saber si una distribución de frecuencias tiene una
+asimetría positiva, es observando la figura ): 
+\[
+Q_{3}-Q_{2}>Q_{2}-Q_{1}
+\]
+
+
+Índice de asimetríaPor analogía, si es asimétrica negativa, se tendrá
+\[
+Q_{3}-Q_{2}<Q_{2}-Q_{1}
+\]
+
+
+Para quitar dimensionalidad al problema, utilizamos como índice de
+asimetría la cantidad, llamada índice intercuartílico 
+\begin{equation}
+A_{s}=\frac{\left(Q_{3}-Q_{2}\right)-\left(Q_{2}-Q_{1}\right)}{Q_{3}-Q_{1}}\label{2-8}
+\end{equation}
+
+
+Es claro que 
+\[
+1\geq\frac{\left(Q_{3}-Q_{2}\right)-\left(Q_{2}-Q_{1}\right)}{(Q_{3}-Q_{1})+\left(Q_{2}-Q_{1}\right)}\geq-1
+\]
+
+
+El número obtenido, $A_{s}$, es invariante ante cambios de origen
+de referencia y de escala. 
+
+\begin{figure}[h]
+\caption{Índice de asimetría}
+\includegraphics[scale=0.5]{36_media_antalcides_Antalcides-EXT1_bak-pc_documentos_Libros_LibrosDPTO_est_cuartiles.pdf}
+\end{figure}
+
+
+
+\subsection{Índice basado en el momento central de tercer orden}
+
+Sea $X$ una variable cuantitativa y %$p\in\nz$.
+ Llamamos momento de orden $p$ a: 
+\[
+\mu_{p}=\frac{1}{n}\sum_{i=1}^{n}x_{i}^{p}
+\]
+
+
+Se denomina momento central de orden $p$ a la cantidad 
+\[
+m_{p}=\frac{1}{n-1}\sum_{i=1}^{n}(x_{i}-\overline{x})^{p}
+\]
+
+
+Si los datos están agrupados en una tabla, $m_{p}$ admite otra expresión
+equivalente: 
+\[
+m_{p}=\frac{1}{n}\sum_{i=1}^{n}n_{i}(x_{i}-\overline{x})^{p}
+\]
+
+
+si $p=1$ se tiene que $m_{1}=0.$
+
+El momento de orden 2 es la varianza muestral: 
+\[
+m_{2}=S^{2}
+\]
+
+
+Es sencillo comprobar que los momentos de orden $p$ impar, son siempre
+nulos en el caso de variables simétricas, ya que para cada $i$ que
+esté a un lado de la media, con,$\left(x_{i}-\overline{x}\right)<0,$
+le corresponde una observación $j$ del otro lado de la media tal
+que. $\left(x_{i}-\overline{x}\right)=\left(x_{j}-\overline{x}\right)$
+Elevando cada una de esas cantidades a $p$ impar, y sumando se tiene
+que $m_{p}=0$ si la distribución es simétrica
+
+Si la distribución fuese asimétrica positiva, las cantidades,$\left(x_{i}-\overline{x}\right)^{p}$
+con, $p\geq3$\ impar positivas estarían muy aumentadas al elevarse
+a $p$. Esta propiedad nos indica que un índice de asimetría posible
+consiste en tomar $p=3$y definir 
+\begin{equation}
+A_{s}=a_{3}=\frac{m_{3}}{m_{2\sqrt{m_{2}}}}=\frac{\frac{1}{n}\sum_{i=1}^{n}\left(x_{i}-\overline{x}\right)^{3}}{S^{3}}\label{2-9}
+\end{equation}
+
+
+que para datos organizados en una tabla sería 
+\begin{equation}
+a_{3}=\frac{\frac{1}{n}\sum_{i=1}^{n}n_{i}\left(x_{i}-\overline{x}\right)^{3}}{S^{3}}
+\end{equation}
+
+
+Apoyándonos en este índice, diremos que hay asimetría positiva si
+$a_{3}>0,$ y que la asimetría es negativa si $a_{3}<0$.
+
+Hemos dividido $m_{3}$ por el cubo de para $S$\ que $a_{3}\;$sea
+un número abstracto sin dimensiones, independiente de la variabilidad
+de la variable. Por otro lado, la cantidad $A_{s}$\ definida por
+la relación (\ref{2-8}) no es la misma que la definida en (\ref{2-9}).
+Simplemente las notamos $A_{s}$\ para simbolizar que es un índice
+de asimetría.
+
+
+\paragraph{2.9.2.6 Otros índices de asimetría}
+
+Basándonos en que si una distribución de frecuencias es simétrica
+y unimodal, entonces la media, la mediana y la moda coinciden, podemos
+definir otras medidas de asimetría, como son: 
+\begin{equation}
+A_{s}=\frac{\overline{x}-\widehat{x}}{S}
+\end{equation}
+
+
+o bien, 
+\begin{equation}
+A_{s}=\frac{3\left(\overline{x}-\widetilde{x}\right)}{S}
+\end{equation}
+
+
+Diremos que hay asimetría positiva si $A_{s}<0$\ y negativa si $A_{s}>0$\ (véase
+la figura ). 
+
+\begin{figure}[H]
+\caption{Otros índices de asimetría}
+\includegraphics[scale=0.3]{37_media_antalcides_Antalcides-EXT1_libros-est_pdf_Img304.pdf}
+\end{figure}
+
+
+\begin{ejemplo}[] Las edades de un grupo de personas se reflejan
+en la tabla siguiente: 
+\[
+\begin{tabular}{||c||c||}
+\hline\hline  Intervalos  &  n\ensuremath{_{i}}\\
+\hline\hline  7-9  &  4\\
+\hline\hline  9-11  &  18\\
+\hline\hline  11-12  &  14\\
+\hline\hline  12-13  &  27\\
+\hline\hline  13-14  &  42\\
+\hline\hline  14-15  &  31\\
+\hline\hline  15-17  &  20\\
+\hline\hline  17-19  &  1 
+\\\hline\hline \end{tabular}
+\]
+ \ Determinar la variabilidad de la edad mediante los estadísticos
+varianza, desviación típica, coeficiente de variación y rango intercuartílico.
+Estudie la simetría de la variable. \end{ejemplo}
+
+\begin{solucion} En primer lugar realizamos los cálculos necesa\-rios
+a partir de la tabla de frecuencias:\ 
+\[
+\begin{tabular}{||c||c||c||c||c||c||}
+\hline\hline  \ensuremath{Intervalos}  &  \ensuremath{n_{i}}  &  \ensuremath{m_{i}}  &  \ensuremath{N_{i}}  &  \ensuremath{m_{i}x_{i}}  &  \ensuremath{m_{i}^{2}n_{i}}\\
+\hline\hline  \ensuremath{7-9}  &   &   &   &   &  \\
+\hline\hline  \ensuremath{9-11}  &   &   &   &   &  \\
+\hline\hline  \ensuremath{11-12}  &   &   &   &   &  \\
+\hline\hline  \ensuremath{12-13}  &   &   &   &   &  \\
+\hline\hline  \ensuremath{13-14}  &   &   &   &   &  \\
+\hline\hline  \ensuremath{14-15}  &   &   &   &   &  \\
+\hline\hline  \ensuremath{15-17}  &   &   &   &   &  \\
+\hline\hline  \ensuremath{17-19}  &   &   &   &   &  \\
+\hline\hline   &   &   &   &   &  
+\\\hline\hline \end{tabular}
+\]
+ \ La media es $\overline{x}=13,15$\ años. La varianza la calculamos
+a partir de la columna de $m_{i}^{2}n_{i}$\ como sigue: 
+\begin{align*}
+S^{2} & =27742,25/157-13,15^{2}=3,78\,a\tilde{n}os^{2}\\
+S & =\sqrt{3,78}=1,94\,a\tilde{n}os
+\end{align*}
+ El coeficiente de variación no posee unidades y es: 
+\begin{align*}
+C_{v} & =\frac{1,94}{13,15}=0,15\\
+ & 15\%\,\ de\,variabilidad
+\end{align*}
+ En lo que concierne a la simetría podemos utilizar el coeficiente
+de asimetría de Yule-Bowley, para el cual es preciso el cálculo de
+los cuartiles: 
+\begin{figure}[H]
+\caption{Ejemplo de asimetría}
+\includegraphics[scale=0.4]{38_media_antalcides_Antalcides-EXT1_bak-pc_documentos_Libros_LibrosDPTO_est_Img314.pdf}
+\end{figure}
+\begin{align*}
+Q_{1} & =12+\frac{39,25-36}{27}\times1=12,12\\
+Q_{2} & =13+\frac{78,5-63}{42}\times1=13,37\\
+Q_{3} & =14+\frac{117,75-105}{31}\times1=14,41
+\end{align*}
+ Lo que nos dice que aproximadamente en un rango de $Q_{3}-Q_{2}=2,29$\ años
+se encuentra el 50\%\ central del total de observaciones Además:
+\[
+A_{s}=\frac{\left(14,41-13,37\right)-\left(13,37-12,12\right)}{14,41-12,12}=-0,09
+\]
+ Este resultado nos indica que existe una ligera asimetría a la izquierda
+(negativa). Un resultado similar se obtiene si observamos que la distribución
+de frecuencias es unimodal, siendo la moda: 
+\[
+\widehat{x}=13+\frac{42-27}{\left(42-27\right)-\left(42-31\right)}\times1=13,57
+\]
+ en cuyo caso podemos usar como medida del sesgo: 
+\[
+A_{s}=\frac{\overline{x}-\widehat{x}}{S}=-0,21
+\]
+
+
+\end{solucion}
+
+
+\subsubsection{Medidas de apuntamiento o curtosis}
+\begin{quote}
+\index{mediadas!Apuntamiemto}\index{Curtosis}Se define el coeficiente
+de aplastamiento de Fisher como: 
+\begin{equation}
+\gamma=\frac{m_{4}}{\sigma^{4}}-3
+\end{equation}
+ donde $m_{4}$ es el momento empírico de cuarto orden. Es éste un
+coeficiente adimensional, invariante ante cambios de escala y de origen.
+Sirve para medir si una distribución de frecuencias es muy apuntada
+o no. Para decir si la distribución es larga y estrecha, hay que tener
+un patrón de referencia. El patrón de referencia es la distribución
+normal o gaussiana para la que se tiene 
+\[
+\gamma=0
+\]
+
+
+De este modo, atendiendo a, $\gamma$ se clasifican las distribuciones
+de frecuencias en \end{quote}
+\begin{itemize}
+\item Leptocúrtica:Cuando, \end{itemize}
+\begin{quote}
+$\gamma>0$ o sea, si la distribución de frecuencias es más apuntada
+que la normal; \end{quote}
+\begin{itemize}
+\item Mesocúrtica:Cuando, \end{itemize}
+\begin{quote}
+Apuntamiento$\gamma=0$ es decir, cuando la distribución de frecuencias
+es tan apuntada como la normal; \end{quote}
+\begin{itemize}
+\item Platicúrtica:Cuando, \end{itemize}
+\begin{quote}
+$\gamma<0$ o sea, si la distribución de frecuencias es menos apuntada
+que la normal;
+
+Estadísticos de tendencia central o posición nos indican donde se
+sitúa un grupo de puntuaciones. Los de variabilidad o dispersión nos
+indican si esas puntuaciones o valores están próximas entre sí o si
+por el contrario están o muy dispersas.
+
+\begin{center}
+\begin{figure}[H]
+\begin{centering}
+\includegraphics[scale=0.5]{39_media_antalcides_Antalcides-EXT1_libros-est_pdf_Img322.pdf}
+\par\end{centering}
+
+\caption{apuntamiento}
+\end{figure}
+
+\par\end{center}
+\end{quote}
+\problemas{ 
+\begin{enumerate}
+\item Calcule en los ejercicios de la tarea del capítulo 1 las siguientes
+medidas
+
+\begin{enumerate}
+\item Tendencia central
+
+\begin{enumerate}
+\item Posición
+\item Variabilidad
+\item Asimetría
+\item Apuntamiento 
+\end{enumerate}
+\item Determine cuales medias representan mejor la muestra
+\item Interprete desde un punto de vista estadístico los resultados. 
+\end{enumerate}
+\item En un experimento de aprendizaje se registró el tiempo que los alumnos
+emplearon al resolver un problema de matemáticas $x_{i}:$ en el primer
+intento, $y_{i}:$ en el segundo intento. 
+\[
+\begin{array}{cc}
+Individuo & \begin{array}{ccccccc}
+i & 1 & 2 & 3 & 4 & 5 & 6\\
+x_{i} & 23.7 & 36.9 & 25.5 & 30.2 & 28.0 & 34.8\\
+y_{i} & 15.0 & 25.4 & 21.0 & 22.3 & 25.2 & 28.8
+\end{array}\end{array}
+\]
+
+
+\begin{enumerate}
+\item Calcule la diferencia $d=$ $x_{i}-y_{i}$ en cada caso \ y luego
+determine las medidas de
+
+\begin{enumerate}
+\item Tendencia central
+\item Posición
+\item Variabilidad
+\item Asimetría
+\item Apuntamiento 
+\end{enumerate}
+\item Determine lo mismo para $x_{i}$ y $y_{i}$
+\item Compare
+
+\begin{enumerate}
+\item $\bar{x}-\bar{y}$ con $\bar{d}$
+\item $S_{x}^{2}-S_{y}^{2}$ con $S_{d}^{2}$
+\item Que puede concluir de la comparación 
+\end{enumerate}
+\item Determine $\sum_{i=1}^{6}\frac{\left(x_{i}-c\right)^{2}}{N}$ donde
+$c$ representa una medida de tendencia central diferente de la media
+aritmética
+\item Comparando el resultado del inciso b. con los resultados del inciso
+d. para que $\ $valor de $c$ se obtuvo un valor mínimo
+\item Minimice la función 
+\[
+f\left(c\right)=\sum_{i=1}^{n}\frac{\left(x_{i}-c\right)^{2}}{N}
+\]
+ ¿Está de acuerdo este resultado con el \ del inciso anterior.?
+\item Si 
+\[
+z=\frac{x_{i}-\bar{x}}{S}
+\]
+ es. Calcule $\bar{z}$ y $S_{z}^{2}$ ¿Qué puede concluir?
+\item Realice los incisos del d. al g. para las variables $y,d$ y $z$
+\item Realice histogramas para las variables: $x,y,d$ y $z.$\\
+Compare los resultados con los histogramas 
+\end{enumerate}
+\item calcule la media y la varianza a partir de los datos tabulados en
+la siguiente tabla 
+\[
+\begin{tabular}{|l|l|}
+\hline  Clases  &  \ensuremath{n_{i}}\\
+\hline\hline  \ensuremath{10\leq x<20}  &  \ensuremath{121}\\
+\hline  \ensuremath{20\leq x<30}  &  \ensuremath{165}\\
+\hline  \ensuremath{30\leq x<40}  &  \ensuremath{184}\\
+\hline  \ensuremath{40\leq x<50}  &  \ensuremath{173}\\
+\hline  \ensuremath{50\leq x<60}  &  \ensuremath{142}\\
+\hline  \ensuremath{60\leq x<70}  &  \ensuremath{120}\\
+\hline  \ensuremath{70\leq x<80}  &  \ensuremath{118}\\
+\hline  8\ensuremath{0\leq x<90}  &  \ensuremath{110}\\
+\hline  \ensuremath{90\leq x<100}  &  \ensuremath{90} 
+\\\hline \end{tabular}
+\]
+
+\item Calcule las medidas de asimetría y de apuntamiento para los datos
+de la siguiente muestra 
+\[
+\begin{tabular}{|l|l|}
+\hline  Clases  &  \ensuremath{n_{i}}\\
+\hline\hline  \ensuremath{600\leq x<650}  &  41\\
+\hline  \ensuremath{650\leq x<700}  &  46\\
+\hline  \ensuremath{700\leq x<750}  &  50\\
+\hline  \ensuremath{750\leq x<800}  &  52\\
+\hline  \ensuremath{800\leq x<850}  &  60\\
+\hline  \ensuremath{850\leq x<900}  &  64\\
+\hline  \ensuremath{900\leq x<950}  &  65\\
+\hline  \ensuremath{950\leq x<1000}  &  66\\
+\hline  \ensuremath{1000\leq x<1050}  &  70 
+\\\hline \end{tabular}
+\]
+
+\item Si el ingreso medio de 20 trabajadores es de 40000 dólares, ¿Cuál
+\ es su ingreso total?
+\item Si la estatura media de una muestra de 25 jugadores de basketball
+es 6,9 pies, ¿cuál es la suma de la estatura de los 23 jugadores?
+\item En un esfuerzo de reducir su consumo de café, un trabajador de oficina
+registra los números siguientes de tazas de café consumidas durante
+un periodo de 20 días 
+\[
+\begin{tabular}{llllllllll}
+ 4  &  5  &  3  &  6  &  7  &  1  &  2  &  3  &  0  &  5\\
+ 6  &  5  &  8  &  4  &  0  &  2  &  3  &  7  &  5  &  6 
+\end{tabular}
+\]
+ ¿Qué medida de tendencia central le servirá mejor a su propósito?
+¿Explique por qué? ¿\ Cuál es el valor numérico?
+\item En un investigación realizada por la secretaria de un médico para
+averiguar los tiempos de espera en minutos de los pacientes que acuden
+con el doctor, una muestra de pacientes de un día arrojó los resultados:
+\[
+\begin{tabular}{llllllllll}
+ 35  &  25  &  35  &  50  &  25  &  55  &  30  &  50  &  35  &  35\\
+ 5  &  5  &  35  &  60  &  30  &  30  &  25  &  55  &  30  &  20\\
+ 60  &  25  &  25  &  40  &  80  &  20  &  20  &  5  &  5  &  10 
+\end{tabular}
+\]
+
+
+\begin{enumerate}
+\item Describa un tiempo típico de espera usando la media.
+\item Describa un tiempo típico de espera usando la mediana.
+\item ¿Cuál medida, media, moda o mediana, se considera usted que es más
+representativa del conjunto de datos? Explique.
+\item Determine los tres cuartiles
+\item Determine los deciles
+\item Realice un diagrama de caja
+\item Determine los índices de asimetría y de apuntamiento
+\item Realice una inferencia sustentada en los resultados. 
+\end{enumerate}
+\item Se escogió una muestra de 705 conductores de autobús y se registró
+en la tabla siguiente el número de accidentes de tránsito que tuvieron
+durante cuatro años. 
+\[
+\begin{tabular}{ll}
+ Número de accidentes  &  Frecuencia\\
+ 0  &  144\\
+ 1  &  157\\
+ 2  &  158\\
+ 3  &  115\\
+ 4  &  78\\
+ 5  &  44\\
+ 6  &  21\\
+ 7  &  7\\
+ 8  &  6\\
+ 10  &  3\\
+ 11  &  1 
+\end{tabular}
+\]
+
+
+\begin{enumerate}
+\item ¿Cuál es la moda?
+\item Calcule la media
+\item Determine la mediana, analítica y geométricamente
+\item Determine el rango medio
+\item Calcule el sesgo
+\item ?Cuál medida de tendencia central usaría para determinar el valor
+central? Explique
+\item Calcule los cuartiles
+\item calcule los deciles
+\item Realice un diagrama de caja 
+\end{enumerate}
+\item Si 20 puntajes tienen una media de 15 y 30 puntajes , una media de
+30, ¿cuál es la media del grupo total de 50 puntajes?
+\item La media armónica que a menudo se utiliza para promediar velocidades
+desarrolladas en distancias iguales. A continuación se presentan se
+darán las velocidades (en millas por hora) de un automóvil que viaja
+a velocidad constante cada 20 millas 
+\[
+\begin{tabular}{lllllll}
+ 30  &  60  &  40  &  60  &  30  &  20  &  25 \end{tabular}
+\]
+ ¿Cuál es la rapidez promedio en el viaje de 140 millas?
+\item Con los datos del ejercicio anterior determine:
+
+\begin{enumerate}
+\item La media aritmética
+\item La media geométrica
+\item La media cuadrática
+\item Escoja una y explique por qué 
+\end{enumerate}
+\item Si la desviación estándar de un conjunto de datos es 0, ¿qué puede
+afirmarse de dicho conjunto?
+\item ¿Será posible que el rango y la varianza sean iguales ? explique
+\item ¿Puede ser la varianza negativa?
+\item Suponga que una muestra tiene una media de 25 y una desviaci\-ón
+estándar de 3.3 Aproxime un intervalo que contenga el 90\% de los
+datos
+\item ¿Qué efecto tiene sobre la desviación el tamaño de la muestra? 
+\end{enumerate}
+}

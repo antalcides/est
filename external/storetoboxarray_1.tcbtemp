@@ -1,0 +1,18 @@
+% \usepackage{lipsum}
+\begin{tcolorbox}[enhanced jigsaw,size=fbox,width=4cm,
+  colback=yellow!10,colframe=yellow!10!black,
+  enforce breakable,% use only breakable in the real world!
+  break at=7cm/4cm,
+  height fixed for=all,
+  watermark text=\arabic{tcbbreakpart},
+  reset box array,
+  store to box array
+  ]
+\lipsum[1]
+\end{tcolorbox}
+
+\useboxarray{1}\hfill
+\begin{tabular}[b]{cc}
+\multicolumn{2}{c}{\includegraphics[width=7cm]{Basilica_5.png}}\\
+\useboxarray{2} & \useboxarray{3}
+\end{tabular}

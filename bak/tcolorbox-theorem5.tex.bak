@@ -1,0 +1,105 @@
+\documentclass{scrbook}
+\usepackage[svgnames]{xcolor}
+\usepackage{chngcntr}
+\usepackage{amssymb}
+\usepackage{aliascnt}
+\usepackage{tikz}
+\usetikzlibrary{shapes.misc,calc}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins,theorems,breakable}
+
+\definecolor{mygray}{RGB}{215,215,215}
+\definecolor{myblue}{RGB}{17,94,140}
+
+\makeatletter
+\tcbset{
+  mytheorem/.code args={#1#2#3#4}{%
+    \refstepcounter{#2}\label{#4}%
+    \pgfkeysalso{title={\setbox\z@=\hbox{#1~\csname the#2\endcsname\ }\hangindent\wd\z@\hangafter=1 \mbox{#1~\csname the#2\endcsname\ }(#3)}}},%
+}
+
+\newcommand{\mtcbmaketheorem}[5]{%
+  \newtcolorbox{#1}[3][]{#3,mytheorem={#2}{#4}{##2}{#5:##3},##1}%
+}
+\makeatother
+
+\newcounter{defi}
+\newaliascnt{lemm}{defi}
+\counterwithin{defi}{chapter}
+\counterwithin{lemm}{chapter}
+
+\tcbset{
+thmstyle/.style={
+  breakable,
+  freelance,
+  boxrule=2pt,
+  width=\linewidth,
+  frame code={%
+  \path[fill=myblue,draw=myblue!75!black]
+    (frame.north west) -- ([xshift=-8pt]frame.north east) --
+    ([yshift=-8pt]frame.north east) -- (frame.north east|-interior.north east) --
+   (frame.north west|-interior.north west) -- cycle;
+  },
+  interior titled code={
+  \path[fill=mygray!80,draw=mygray]
+    (frame.west|-interior.north west) -- (frame.east|-interior.north east) --   
+    ([yshift=8pt]frame.east|-interior.south east) -- 
+    ([xshift=-8pt]frame.east|-interior.south east) --
+    (frame.west|-interior.south west) -- cycle;
+  },
+  fonttitle=\bfseries\sffamily
+},
+defstyle/.style={
+  breakable,
+  freelance,
+  boxrule=2pt,
+  width=\linewidth,
+  frame code={%
+  \path[top color=myblue!50,bottom color=myblue!50,
+    middle color=myblue!50]
+    ([xshift=8pt]frame.north west) -- ([xshift=-8pt]frame.north east) --
+    ([yshift=-8pt]frame.north east) -- 
+    (frame.north east|-interior.north east) --
+    (frame.north west|-interior.north west) -- 
+    ([yshift=-8pt]frame.north west) -- cycle;
+  },
+  interior titled code={
+  \path[fill=mygray!80]
+    (frame.west|-interior.north west) -| 
+    ([yshift=8pt]frame.east|-interior.south east) -- 
+    ([xshift=-8pt]frame.east|-interior.south east) -- 
+    ([xshift=8pt]frame.west|-interior.south west) -- 
+    ([yshift=8pt]frame.west|-interior.south west) -- cycle;
+  \path[fill=myblue] 
+    ([xshift=0.5\pgflinewidth,yshift=1.5pt]frame.west|-interior.north west) 
+    rectangle 
+    ([xshift=-0.5\pgflinewidth,yshift=-1.5pt]frame.east|-interior.north east);
+  },
+  fonttitle=\bfseries\sffamily\normalcolor
+}
+}
+
+\mtcbmaketheorem{defi}{Definition}{defstyle}{defi}{df}
+\mtcbmaketheorem{lemm}{Lemma}{thmstyle}{lemm}{lm}
+
+\begin{document}
+
+\chapter{A test chapter}
+
+\begin{defi}{Partially ordered set}{poset}
+A partial order is a binary relation $\preccurlyeq$ over a set $P$ which is antisymmetric, transitive, and reflexive. A set with a partial order is called a partially ordered set (also called a poset). 
+\end{defi}
+
+\begin{lemm}{Zorn's Lemma}{zorn}
+Suppose a non-empty partially ordered set $P$ has the property that every non-empty chain has an upper bound in $P$. Then the set $P$ contains at least one maximal element.
+\end{lemm}
+
+\begin{lemm}{A list test}{lsit}
+\begin{itemize}
+\item First.
+\item Second.
+\item Third.
+\end{itemize}
+\end{lemm}
+
+\end{document}

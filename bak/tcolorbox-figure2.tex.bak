@@ -1,0 +1,28 @@
+\documentclass[demo]{report}
+
+\usepackage{blindtext}
+\usepackage{geometry}
+\usepackage{float}
+\usepackage[italian]{babel}
+\usepackage[most]{tcolorbox}
+\usepackage{tikz}
+\usepackage{varwidth}
+\usepackage{capt-of}
+
+\tcbset{enhanced,colback=cyan!5!white,colframe=cyan!75!black,fonttitle=\bfseries}
+
+\begin{document}
+
+\begin{tcolorbox}[every float=\centering, drop shadow, title=Esempio: misura della carica elettrica]
+    \begin{minipage}[t]{0.5\linewidth}
+    \vspace*{0pt}
+    \blindtext
+    \end{minipage}\hfill%
+    \begin{minipage}[t]{0.4\linewidth}
+    \vspace*{0pt}
+        \includegraphics[height=0.6\textheight,width=\linewidth]{fig1}
+        \captionof{figure}{Misura della carica elettrica}\label{fig:fig1}
+    \end{minipage}
+\end{tcolorbox}
+
+\end{document}

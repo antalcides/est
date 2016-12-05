@@ -1,0 +1,961 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0069)http://formularios.dane.gov.co/Anda_4_1/index.php/catalog/CAT_MET_SEN -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Catálogo - SEN</title>
+<!--<base href="http://formularios.dane.gov.co/Anda_4_1/">--><base href=".">
+
+<link rel="stylesheet" type="text/css" href="./Catálogo - SEN_files/reset-fonts-grids.css">
+<link rel="stylesheet" type="text/css" href="./Catálogo - SEN_files/styles.css">
+<link rel="stylesheet" type="text/css" href="./Catálogo - SEN_files/forms.css">
+<link rel="stylesheet" type="text/css" href="./Catálogo - SEN_files/bootstrap.buttons.min.css">
+
+<!--jquery ui-->
+<link rel="stylesheet" type="text/css" href="./Catálogo - SEN_files/jquery-ui.css">
+
+
+<script type="text/javascript" src="./Catálogo - SEN_files/jquery.js"></script>
+<script type="text/javascript" src="./Catálogo - SEN_files/jquery.ba-bbq.js"></script>
+
+<link type="text/css" rel="stylesheet" href="./Catálogo - SEN_files/jquery-ui.css"><link type="text/css" rel="stylesheet" href="./Catálogo - SEN_files/datacatalog.css"><script type="text/javascript">var i18n=
+{
+'searching':"Buscando, por favor espere...",
+'loading':"Cargando, por favor espere...",
+'invalid_year_range_selected':"Rango de años seleccionados no válidos.",
+'topic_selected':"tema seleccionado",
+'topics_selected':"temas seleccionados",
+'collection_selected':"colección seleccionada",
+'collections_selected':"colecciones seleccionadas",
+'country_selected':"país seleccionado",
+'countries_selected':"países seleccionados",
+'cancel':"Cancelar",
+'apply_filter':"Aplicar filtro",
+'clear':"Limpiar",
+'js_compare_variables_selected':"variables selected from",
+'js_compare_studies_selected':"studies",
+'js_compare_variable_select_atleast_2':"Select two or more variables to compare",
+'selected':"selected"
+};</script><script type="text/javascript" src="./Catálogo - SEN_files/datacatalog.js"></script><script type="text/javascript" src="./Catálogo - SEN_files/jquery.ui.core.js"></script><script type="text/javascript" src="./Catálogo - SEN_files/jquery.ui.position.js"></script><script type="text/javascript" src="./Catálogo - SEN_files/jquery.ui.widget.js"></script><script type="text/javascript" src="./Catálogo - SEN_files/jquery.ui.button.js"></script><script type="text/javascript" src="./Catálogo - SEN_files/jquery.ui.tabs.js"></script><script type="text/javascript" src="./Catálogo - SEN_files/jquery.ui.dialog.js"></script><script type="text/javascript" src="./Catálogo - SEN_files/jquery.scrollTo-min.js"></script><script type="text/javascript" src="./Catálogo - SEN_files/jquery.blockui.js"></script>
+<!--[if lt IE 9]>
+<link rel="stylesheet" type="text/css" href="themes/wb/styles-ie.css" />
+<![endif]-->
+
+<script type="text/javascript"> 
+   var CI = {'base_url': 'http://formularios.dane.gov.co/Anda_4_1/index.php'}; 
+   
+	if (top.frames.length!=0) {
+		top.location=self.document.location;
+	}
+
+   
+$(document).ready(function()  {
+   	/*global ajax error handler */
+	$( document ).ajaxError(function(event, jqxhr, settings, exception) {
+		if(jqxhr.status==401){
+			window.location=CI.base_url+'/auth/login/?destination=catalog/';
+		}
+		else if (jqxhr.status>=500){
+			alert(jqxhr.responseText);
+		}
+	});	
+
+  });//end-document-ready
+
+</script> 
+
+<style>
+.yui-t7 .yui-b {
+float: left;
+width: 16.8461em;
+}
+.yui-t7 #yui-main .yui-b {
+margin-left: 17.8461em;
+}
+.yui-t7 #yui-main {
+float: right;
+margin-left: -25em;
+}
+</style>
+
+</head>
+<body>
+
+<div id="custom-doc" class="yui-t7"> 
+	<!--login information bar-->
+    <span id="user-container">
+    
+<div id="user-bar">
+<div class="user-box">
+    <a href="http://formularios.dane.gov.co/Anda_4_1/index.php/auth/login">Ingresar</a> 
+        </div>
+</div>
+    </span>
+    
+    <div id="bd">
+	<!--header-->
+            <div style="border:0px solid silver;margin-bottom:0px;padding:0px;margin-top:0px;">
+            <a href="http://www.dane.gov.co/"><img src="./Catálogo - SEN_files/cabezal_ANDA.png" border="0" title="Pagina principal DANE" alt="Pagina principal DANE" style="width:961px;"></a>
+            </div>
+    	<!-- banner-->
+        <div id="banner">ARCHIVO NACIONAL DE DATOS</div>
+        
+        <div id="inner-body">
+            <!-- menu -->
+                        <div class="menu-horizontal">
+                    <ul>
+		
+
+	
+                
+		<li>
+        	<a href="http://formularios.dane.gov.co/Anda_4_1/index.php/home">Inicio</a>
+        </li>
+		
+
+	
+                
+		<li>
+        	<a href="http://formularios.dane.gov.co/Anda_4_1/index.php/antecedentes">Antecedentes</a>
+        </li>
+		
+
+	
+                
+		<li>
+        	<a href="http://formularios.dane.gov.co/Anda_4_1/index.php/actividades">Actividades</a>
+        </li>
+		
+
+	
+                
+		<li>
+        	<a href="http://formularios.dane.gov.co/Anda_4_1/index.php/herramientas">Herramientas</a>
+        </li>
+		
+
+	
+                
+		<li>
+        	<a href="http://formularios.dane.gov.co/Anda_4_1/index.php/catalog">Catálogo de Datos</a>
+        </li>
+		
+
+	
+                
+		<li>
+        	<a href="http://formularios.dane.gov.co/Anda_4_1/index.php/catalog/METADATOS">Metadatos(DANE)</a>
+        </li>
+		
+
+	
+                
+		<li>
+        	<a href="http://formularios.dane.gov.co/Anda_4_1/index.php/catalog/MICRODATOS">Microdato(DANE)</a>
+        </li>
+		
+
+	
+                
+		<li class="selected">
+        	<a href="http://formularios.dane.gov.co/Anda_4_1/index.php/catalog/CAT_MET_SEN">Metadatos(SEN)</a>
+        </li>
+</ul>
+                    <br style="clear:both;">
+             </div>
+                    
+                            <div id="content">
+                
+                	<!--share-bar -->
+                    <div id="page-tools">
+					<style>
+.share-bar-container{position:relative;text-align:right;border:0px solid blue;margin-left:auto;margin-right:0px;z-index:100;height:35px;}
+ul.share-bar{position:absolute;border:0px solid red;height:30px;width:auto;text-align:left;right:0px;z-index:999}
+ul.share-bar li{float:left;margin-left:3px;border:0px solid blue;padding:5px;position:relative;height:24px;vertical-align:baseline}
+ul.share-bar .item-body{position:absolute;height:100px;width:100px;background:white;border:2px solid #CCCCCC;right:0px;z-index:100}
+
+ul.share-bar ul{display:none;position:absolute;width:220px;background:#F7F7F7;right:0px;top:24px;padding:10px;border:4px solid #CCCCCC;z-index:1000}
+ul.share-bar ul li{float:left;width:45%;font-size:11px;margin:0px;padding:5px;}
+ul.share-bar ul li:hover{background-color:#FBFBFB; cursor:pointer}
+ur.share-bar ul li img{vertical-align:baseline}
+ul.share-bar li.active ul{display:block;}
+ul.share-bar li.active{background-color:#CCCCCC}
+a.share{background:url("images/shared_open.gif") no-repeat left center;padding-left:20px;color:#999999;text-transform:uppercase;font-size:11px}
+.active a.share{background:url("images/shared_close.gif") no-repeat left center;color:black;}
+ul.share-bar img{vertical-align:baseline}
+
+</style>
+
+
+<div class="share-bar-container">
+<ul class="share-bar">
+        <li><a rel="nofollow" href="mailto:anda@dane.gov.co ?subject=Requerimiento&amp;body=http://formularios.dane.gov.co/Anda_4_1/index.php/catalog/CAT_MET_SEN/"><img src="./Catálogo - SEN_files/email.png" alt="Email"></a></li>
+    <li><a target="_blank" title="Compartir en Facebook" href="https://www.facebook.com/DANEColombia"><img src="./Catálogo - SEN_files/facebook.png"></a></li>
+    <li><a target="_blank" title="Compartir en Twitter" href="https://twitter.com/DANE_Colombia"><img src="./Catálogo - SEN_files/twitter.png" alt="Twitter"></a></li>
+</ul>
+</div>
+
+<script type="text/javascript">
+jQuery(function($) {
+	$('.share-bar .share').click(toggle_menu);
+	function toggle_menu(event)
+	{
+		if ($(this).parent().is(".active"))
+		{
+			$(this).parent().removeClass("active");
+		}
+		else
+		{
+			$(this).parent().addClass('active');
+		}	
+		event.stopPropagation();
+		return false;
+	}
+	
+	$('body').click(function(event) {
+ 		//hide the share box
+		if(!$(event.target).is('.active ul, .active li'))
+		{
+			$('.share-bar .active').removeClass("active");
+		}
+ 	});
+ 
+});
+</script>
+                	</div>
+                
+                    <!--breadcrumbs -->
+                                                                <div id="breadcrumb">
+                        	    <div class="breadcrumbs" xmlns:v="http://rdf.data-vocabulary.org/#">
+           <span typeof="v:Breadcrumb">
+                		         <a href="http://formularios.dane.gov.co/Anda_4_1/index.php/" rel="v:url" property="v:title">Página principal</a> ›
+                        
+       </span>
+                  <span typeof="v:Breadcrumb">
+                		         <a href="http://formularios.dane.gov.co/Anda_4_1/index.php/catalog" rel="v:url" property="v:title">Catálogo Central de Datos</a> ›
+                        
+       </span>
+                  <span typeof="v:Breadcrumb">
+        	         	         <a class="active" href="http://formularios.dane.gov.co/Anda_4_1/index.php/catalog/CAT_MET_SEN" rel="v:url" property="v:title">Catálogo - SEN</a>
+                        
+       </span>
+               </div>
+                        </div>
+                                        
+					                    	<div class="main-body-container">
+                        <div id="yui-main">
+                            <div class="yui-b">
+
+
+
+<h2>Catálogo - SEN</h2>
+<div class="tab-style-1">
+<div id="collection-tabs" style="" class="ui-tabs ui-widget ui-widget-content ui-corner-all study-tabs">
+
+	<div class="tab-heading">
+		<div class="content-container" style="overflow:auto;"></div><a name="tab"></a></div>
+
+  <ul class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all" role="tablist" style="background:none;margin-top:-35px;border-bottom:1px solid gainsboro;">
+    <li class="ui-state-default ui-corner-top " role="tab" tabindex="0" aria-controls="tabs-1" aria-labelledby="ui-id-1" aria-selected="false"><a href="http://formularios.dane.gov.co/Anda_4_1/index.php/catalog/CAT_MET_SEN/about" class="ui-tabs-anchor" role="presentation" tabindex="-1">Colecciones</a></li>
+    <li class="ui-state-default ui-corner-top ui-tabs-active ui-state-active" role="tab" tabindex="-1" aria-controls="tabs-23" aria-labelledby="ui-id-23" aria-selected="true"><a href="http://formularios.dane.gov.co/Anda_4_1/index.php/catalog/CAT_MET_SEN" class="ui-tabs-anchor" role="presentation" tabindex="-1">Operaciones Estadísticas</a></li>
+  </ul>
+  <div id="tabs-1" aria-labelledby="ui-id-1" class="ui-tabs-panel ui-widget-content ui-corner-bottom" role="tabpanel" style="" aria-expanded="true" aria-hidden="false">  	
+	  <div id="surveys">
+
+
+<div class="active-filters-container">
+
+<div class="search-count">Encontró <b>18</b> operaciones estadísticas de <b>18</b></div>
+
+<div class="active-filters">
+		
+	
+            
+        
+	
+	</div>
+<div class="filter-action-bar">
+    <span class="right">
+    <a target="_blank" href="http://formularios.dane.gov.co/Anda_4_1/index.php/catalog/export/print?ps=500&amp;" class="print-search"><img src="./Catálogo - SEN_files/print.gif" alt="Print search results" title="Print search results"></a>
+    <a target="_blank" href="http://formularios.dane.gov.co/Anda_4_1/index.php/catalog/export/csv?ps=500&amp;" class="print-search"><img src="./Catálogo - SEN_files/page_excel.png" alt="Download search results as CSV" title="Download search results as CSV"></a>
+    </span>
+</div>
+</div>
+
+<input type="hidden" id="sort_order" value="">
+<input type="hidden" id="sort_by" value="titl">
+
+<table style="width:100%;" border="0" cellpadding="0" cellspacing="0">
+<tbody><tr>
+<td>
+<div class="catalog-sort-links">
+Ordenar resultados por:
+<a data-sort_by="proddate" data-sort_order="asc" href="http://formularios.dane.gov.co/Anda_4_1/index.php/catalog/?sort_by=proddate&amp;sort_order=asc&amp;">Año</a>| <a class="selected" data-sort_by="titl" data-sort_order="desc" href="http://formularios.dane.gov.co/Anda_4_1/index.php/catalog/?sort_by=titl&amp;sort_order=desc&amp;">Título <img src="./Catálogo - SEN_files/arrow-desc.png" alt="DESC" border="0"></a>| </div>
+</td>
+<td align="right">
+	</td>
+</tr>
+</tbody></table>
+
+<div class="pagination">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody><tr valign="middle">
+	<td>
+        Mostrando <b>1-15</b> de <b>18</b> operaciones estadísticas        
+   </td>
+    <td align="right"><div class="pager"><a href="http://formularios.dane.gov.co/Anda_4_1/index.php/catalog?&amp;page=1" class="page active" data-page="1">1</a><a href="http://formularios.dane.gov.co/Anda_4_1/index.php/catalog?&amp;page=2" class="page " data-page="2">2</a><a href="http://formularios.dane.gov.co/Anda_4_1/index.php/catalog?&amp;page=2" class="page" data-page="2"> Siguiente </a><a href="http://formularios.dane.gov.co/Anda_4_1/index.php/catalog?&amp;page=2" class="page last" data-page="2" title="Last">»</a></div></td>
+</tr>
+</tbody></table>
+</div>
+
+	<div class="survey-row" data-url="http://formularios.dane.gov.co/Anda_4_1/index.php/catalog/300" title="Ver operación estadística">
+        	<div class="data-access-icon data-access-data_na" title="No hay microdatos disponibles"></div>
+			<div class="link_indicator">
+							</div>
+            <h2 class="title">
+                <a href="http://formularios.dane.gov.co/Anda_4_1/index.php/catalog/300" title="Acceso a Internet 2010 A 2014 ( I TRIMESTRE)">
+                	Acceso a Internet 2010 A 2014 ( I TRIMESTRE)                </a>
+            </h2>
+            <div class="study-country">
+				                                2011			</div>
+            <div class="sub-title">
+            	<div>
+				Por:                                 	Oficina Asesora de Planeación y Estudios Sectoriales - Ministerio de Tecnologías de la Información y las Comunicaciones                            	</div>
+				                    <div class="owner-collection">Colección: <a href="http://formularios.dane.gov.co/Anda_4_1/index.php/catalog/CAT_MET_MIN_TIC">MINISTERIO DE TECNOLOGIAS DE LA INFORMACIÓN Y LAS COMUNICACIONES</a></div>
+                            </div>
+			<div class="survey-stats">
+            	<span>Creado el: 25 Nov, 2014</span>
+                <span>Última modificación: 25 Nov, 2014</span>
+                <span>Visitas: 33962</span>
+                <span>Descargas: 2142</span>
+                 
+            </div>
+		
+            </div>    
+	<div class="survey-row" data-url="http://formularios.dane.gov.co/Anda_4_1/index.php/catalog/227" title="Ver operación estadística">
+        	<div class="data-access-icon data-access-data_na" title="No hay microdatos disponibles"></div>
+			<div class="link_indicator">
+							</div>
+            <h2 class="title">
+                <a href="http://formularios.dane.gov.co/Anda_4_1/index.php/catalog/227" title="Contexto Nacional del Sistema Penitenciario y Carcelario en Colombia">
+                	Contexto Nacional del Sistema Penitenciario y Carcelario en Colombia                </a>
+            </h2>
+            <div class="study-country">
+				                                2012			</div>
+            <div class="sub-title">
+            	<div>
+				Por:                                 	Oficina Asesora de Planeación - INPEC- - INPEC,  Oficina de Sistemas de Información - INPEC                            	</div>
+				                    <div class="owner-collection">Colección: <a href="http://formularios.dane.gov.co/Anda_4_1/index.php/catalog/CAT_MET_INPEC">INSTITUTO NACIONAL PENITENCIARIO Y CARCELARIO - INPEC</a></div>
+                            </div>
+			<div class="survey-stats">
+            	<span>Creado el: 10 Jun, 2014</span>
+                <span>Última modificación: 10 Jun, 2014</span>
+                <span>Visitas: 17329</span>
+                <span>Descargas: 1448</span>
+                 
+            </div>
+		
+            </div>    
+	<div class="survey-row" data-url="http://formularios.dane.gov.co/Anda_4_1/index.php/catalog/352" title="Ver operación estadística">
+        	<div class="data-access-icon data-access-data_na" title="No hay microdatos disponibles"></div>
+			<div class="link_indicator">
+							</div>
+            <h2 class="title">
+                <a href="http://formularios.dane.gov.co/Anda_4_1/index.php/catalog/352" title="Encuesta de Opinión del Consumidor - EOC - 2001-2015">
+                	Encuesta de Opinión del Consumidor - EOC - 2001-2015                </a>
+            </h2>
+            <div class="study-country">
+				                                2001-2015			</div>
+            <div class="sub-title">
+            	<div>
+				Por:                                 	Fedesarrollo - http://www.fedesarrollo.org.co/                            	</div>
+				                    <div class="owner-collection">Colección: <a href="http://formularios.dane.gov.co/Anda_4_1/index.php/catalog/CAT_MET_FEDESARROLLO">FEDESARROLLO</a></div>
+                            </div>
+			<div class="survey-stats">
+            	<span>Creado el: 10 Jun, 2015</span>
+                <span>Última modificación: 10 Jun, 2015</span>
+                <span>Visitas: 9128</span>
+                <span>Descargas: 1608</span>
+                 
+            </div>
+		
+            </div>    
+	<div class="survey-row" data-url="http://formularios.dane.gov.co/Anda_4_1/index.php/catalog/228" title="Ver operación estadística">
+        	<div class="data-access-icon data-access-data_na" title="No hay microdatos disponibles"></div>
+			<div class="link_indicator">
+							</div>
+            <h2 class="title">
+                <a href="http://formularios.dane.gov.co/Anda_4_1/index.php/catalog/228" title="Encuesta Mensual de Expectativas Económicas">
+                	Encuesta Mensual de Expectativas Económicas                </a>
+            </h2>
+            <div class="study-country">
+				                                2013			</div>
+            <div class="sub-title">
+            	<div>
+				Por:                                 	Sección Estadística - DTIE - Banco de la República                            	</div>
+				                    <div class="owner-collection">Colección: <a href="http://formularios.dane.gov.co/Anda_4_1/index.php/catalog/INVENT_BR">BANCO DE LA REPUBLICA</a></div>
+                            </div>
+			<div class="survey-stats">
+            	<span>Creado el: 10 Jun, 2014</span>
+                <span>Última modificación: 10 Jun, 2014</span>
+                <span>Visitas: 8251</span>
+                <span>Descargas: 953</span>
+                 
+            </div>
+		
+            </div>    
+	<div class="survey-row" data-url="http://formularios.dane.gov.co/Anda_4_1/index.php/catalog/258" title="Ver operación estadística">
+        	<div class="data-access-icon data-access-data_na" title="No hay microdatos disponibles"></div>
+			<div class="link_indicator">
+							</div>
+            <h2 class="title">
+                <a href="http://formularios.dane.gov.co/Anda_4_1/index.php/catalog/258" title="Estadísticas de Escuelas Municipales de Música - EMM - 2012 - 2013">
+                	Estadísticas de Escuelas Municipales de Música - EMM - 2012 - 2013                </a>
+            </h2>
+            <div class="study-country">
+				                                2012			</div>
+            <div class="sub-title">
+            	<div>
+				Por:                                 	Grupo de Música de la Dirección de Artes - Ministerio de Cultura                            	</div>
+				                    <div class="owner-collection">Colección: <a href="http://formularios.dane.gov.co/Anda_4_1/index.php/catalog/CAT_MET_MIN_CUL">MINISTERIO DE CULTURA</a></div>
+                            </div>
+			<div class="survey-stats">
+            	<span>Creado el: 06 Aug, 2014</span>
+                <span>Última modificación: 06 Aug, 2014</span>
+                <span>Visitas: 9690</span>
+                <span>Descargas: 1393</span>
+                 
+            </div>
+		
+            </div>    
+	<div class="survey-row" data-url="http://formularios.dane.gov.co/Anda_4_1/index.php/catalog/286" title="Ver operación estadística">
+        	<div class="data-access-icon data-access-data_na" title="No hay microdatos disponibles"></div>
+			<div class="link_indicator">
+							</div>
+            <h2 class="title">
+                <a href="http://formularios.dane.gov.co/Anda_4_1/index.php/catalog/286" title="Estadísticas de Matriculas en Educación Preescolar, Básica y Media - EPBM - 2010 - 2011 - 2012 - 2013">
+                	Estadísticas de Matriculas en Educación Preescolar, Básica y Media - EPBM - 2010 - 2011 - 2012 - 2013                </a>
+            </h2>
+            <div class="study-country">
+				                                2010			</div>
+            <div class="sub-title">
+            	<div>
+				Por:                                 	Oficina Asesora de Planeación y Finanzas - OAPF - Ministerio de Educación Nacional                            	</div>
+				                    <div class="owner-collection">Colección: <a href="http://formularios.dane.gov.co/Anda_4_1/index.php/catalog/CAT_MET_MIN_EDUC">MINISTERIO DE EDUCACIÓN</a></div>
+                            </div>
+			<div class="survey-stats">
+            	<span>Creado el: 20 Oct, 2014</span>
+                <span>Última modificación: 20 Oct, 2014</span>
+                <span>Visitas: 30756</span>
+                <span>Descargas: 23578</span>
+                 
+            </div>
+		
+            </div>    
+	<div class="survey-row" data-url="http://formularios.dane.gov.co/Anda_4_1/index.php/catalog/376" title="Ver operación estadística">
+        	<div class="data-access-icon data-access-data_na" title="No hay microdatos disponibles"></div>
+			<div class="link_indicator">
+							</div>
+            <h2 class="title">
+                <a href="http://formularios.dane.gov.co/Anda_4_1/index.php/catalog/376" title="Estadísticas de Planta Docente, Directivos Docentes y Administrativos de los Establecimientos Educativos del Sector Oficial - DODASO - 2012 - 2013, Estadísticas de Docentes y Administrativos Sector Oficial">
+                	Estadísticas de Planta Docente, Directivos Docentes y Administrativos de los Establecimientos Educativos del Sector Oficial - DODASO - 2012 - 2013, Estadísticas de Docentes y Administrativos Sector Oficial                </a>
+            </h2>
+            <div class="study-country">
+				                                2012			</div>
+            <div class="sub-title">
+            	<div>
+				Por:                                 	Oficina Asesora de Planeación y Finanzas - Ministerio de Educación Nacional                            	</div>
+				                    <div class="owner-collection">Colección: <a href="http://formularios.dane.gov.co/Anda_4_1/index.php/catalog/CAT_MET_MIN_EDUC">MINISTERIO DE EDUCACIÓN</a></div>
+                            </div>
+			<div class="survey-stats">
+            	<span>Creado el: 09 Oct, 2015</span>
+                <span>Última modificación: 09 Oct, 2015</span>
+                <span>Visitas: 3528</span>
+                <span>Descargas: 1491</span>
+                 
+            </div>
+		
+            </div>    
+	<div class="survey-row" data-url="http://formularios.dane.gov.co/Anda_4_1/index.php/catalog/305" title="Ver operación estadística">
+        	<div class="data-access-icon data-access-data_na" title="No hay microdatos disponibles"></div>
+			<div class="link_indicator">
+							</div>
+            <h2 class="title">
+                <a href="http://formularios.dane.gov.co/Anda_4_1/index.php/catalog/305" title="Estadísticas de Proyectos Financiados con Recursos Provenientes del Impuesto Nacional al Consumo a la Prestación del Servicio de Telefonía Móvil - INCTM 2011 al 2013">
+                	Estadísticas de Proyectos Financiados con Recursos Provenientes del Impuesto Nacional al Consumo a la Prestación del Servicio de Telefonía Móvil - INCTM 2011 al 2013                </a>
+            </h2>
+            <div class="study-country">
+				                                2011-2013			</div>
+            <div class="sub-title">
+            	<div>
+				Por:                                 	Ministerio de Cultura de Colombia - Gobierno Nacional                            	</div>
+				                    <div class="owner-collection">Colección: <a href="http://formularios.dane.gov.co/Anda_4_1/index.php/catalog/CAT_MET_MIN_CUL">MINISTERIO DE CULTURA</a></div>
+                            </div>
+			<div class="survey-stats">
+            	<span>Creado el: 27 Nov, 2014</span>
+                <span>Última modificación: 27 Nov, 2014</span>
+                <span>Visitas: 10906</span>
+                <span>Descargas: 9059</span>
+                 
+            </div>
+		
+            </div>    
+	<div class="survey-row" data-url="http://formularios.dane.gov.co/Anda_4_1/index.php/catalog/368" title="Ver operación estadística">
+        	<div class="data-access-icon data-access-data_na" title="No hay microdatos disponibles"></div>
+			<div class="link_indicator">
+							</div>
+            <h2 class="title">
+                <a href="http://formularios.dane.gov.co/Anda_4_1/index.php/catalog/368" title="Estadísticas del libro en Colombia ESECCL 2012 - 2014">
+                	Estadísticas del libro en Colombia ESECCL 2012 - 2014                </a>
+            </h2>
+            <div class="study-country">
+				                                2012			</div>
+            <div class="sub-title">
+            	<div>
+				Por:                                 	Área de Estadísticas - Cámara Colombiana del Libro (CCL)                            	</div>
+				                    <div class="owner-collection">Colección: <a href="http://formularios.dane.gov.co/Anda_4_1/index.php/catalog/CAT_MET_CAMARA_DE_COMERCIO">CAMARA DEL LIBRO</a></div>
+                            </div>
+			<div class="survey-stats">
+            	<span>Creado el: 21 Aug, 2015</span>
+                <span>Última modificación: 21 Aug, 2015</span>
+                <span>Visitas: 8662</span>
+                <span>Descargas: 3978</span>
+                 
+            </div>
+		
+            </div>    
+	<div class="survey-row" data-url="http://formularios.dane.gov.co/Anda_4_1/index.php/catalog/331" title="Ver operación estadística">
+        	<div class="data-access-icon data-access-data_na" title="No hay microdatos disponibles"></div>
+			<div class="link_indicator">
+							</div>
+            <h2 class="title">
+                <a href="http://formularios.dane.gov.co/Anda_4_1/index.php/catalog/331" title="Estadísticas del Proceso de Liquidación Judicial - OEPLQJ 2007 - 2014, Proceso de Liquidación Judicial - Presentación Mensual">
+                	Estadísticas del Proceso de Liquidación Judicial - OEPLQJ 2007 - 2014, Proceso de Liquidación Judicial - Presentación Mensual                </a>
+            </h2>
+            <div class="study-country">
+				                                2007-2014			</div>
+            <div class="sub-title">
+            	<div>
+				Por:                                 	Superintendencia de Sociedades - Entidad pública                            	</div>
+				                    <div class="owner-collection">Colección: <a href="http://formularios.dane.gov.co/Anda_4_1/index.php/catalog/CAT_MET_SUPERINTENDENCIA_DE_SOCIEDADES">SUPERINTENDENCIA DE SOCIEDADES</a></div>
+                            </div>
+			<div class="survey-stats">
+            	<span>Creado el: 24 Mar, 2015</span>
+                <span>Última modificación: 24 Mar, 2015</span>
+                <span>Visitas: 9729</span>
+                <span>Descargas: 8124</span>
+                 
+            </div>
+		
+            </div>    
+	<div class="survey-row" data-url="http://formularios.dane.gov.co/Anda_4_1/index.php/catalog/309" title="Ver operación estadística">
+        	<div class="data-access-icon data-access-data_na" title="No hay microdatos disponibles"></div>
+			<div class="link_indicator">
+							</div>
+            <h2 class="title">
+                <a href="http://formularios.dane.gov.co/Anda_4_1/index.php/catalog/309" title="Estadísticas del Proceso de Reorganización Empresarial., Proceso de Reorganización Presentación Mensual">
+                	Estadísticas del Proceso de Reorganización Empresarial., Proceso de Reorganización Presentación Mensual                </a>
+            </h2>
+            <div class="study-country">
+				                                2007			</div>
+            <div class="sub-title">
+            	<div>
+				Por:                                 	Superintendencia de Sociedades - Entidad pública                            	</div>
+				                    <div class="owner-collection">Colección: <a href="http://formularios.dane.gov.co/Anda_4_1/index.php/catalog/CAT_MET_SUPERINTENDENCIA_DE_SOCIEDADES">SUPERINTENDENCIA DE SOCIEDADES</a></div>
+                            </div>
+			<div class="survey-stats">
+            	<span>Creado el: 10 Dec, 2014</span>
+                <span>Última modificación: 10 Dec, 2014</span>
+                <span>Visitas: 21743</span>
+                <span>Descargas: 31841</span>
+                 
+            </div>
+		
+            </div>    
+	<div class="survey-row" data-url="http://formularios.dane.gov.co/Anda_4_1/index.php/catalog/378" title="Ver operación estadística">
+        	<div class="data-access-icon data-access-data_na" title="No hay microdatos disponibles"></div>
+			<div class="link_indicator">
+							</div>
+            <h2 class="title">
+                <a href="http://formularios.dane.gov.co/Anda_4_1/index.php/catalog/378" title="Estados Financieros">
+                	Estados Financieros                </a>
+            </h2>
+            <div class="study-country">
+				                                2014			</div>
+            <div class="sub-title">
+            	<div>
+				Por:                                 	Superintendencia de Sociedades - Entidad pública                            	</div>
+				                    <div class="owner-collection">Colección: <a href="http://formularios.dane.gov.co/Anda_4_1/index.php/catalog/CAT_MET_SUPERINTENDENCIA_DE_SOCIEDADES">SUPERINTENDENCIA DE SOCIEDADES</a></div>
+                            </div>
+			<div class="survey-stats">
+            	<span>Creado el: 29 Oct, 2015</span>
+                <span>Última modificación: 29 Oct, 2015</span>
+                <span>Visitas: 1975</span>
+                <span>Descargas: 411</span>
+                 
+            </div>
+		
+            </div>    
+	<div class="survey-row" data-url="http://formularios.dane.gov.co/Anda_4_1/index.php/catalog/285" title="Ver operación estadística">
+        	<div class="data-access-icon data-access-data_na" title="No hay microdatos disponibles"></div>
+			<div class="link_indicator">
+							</div>
+            <h2 class="title">
+                <a href="http://formularios.dane.gov.co/Anda_4_1/index.php/catalog/285" title="Indice de Riesgo de la Calidad del Agua para Consumo Humano - IRCA 2007-2013">
+                	Indice de Riesgo de la Calidad del Agua para Consumo Humano - IRCA 2007-2013                </a>
+            </h2>
+            <div class="study-country">
+				                                2007-2013			</div>
+            <div class="sub-title">
+            	<div>
+				Por:                                 	Gerardo Nava Tovar - Grupo Calidad de Agua - INS                            	</div>
+				                    <div class="owner-collection">Colección: <a href="http://formularios.dane.gov.co/Anda_4_1/index.php/catalog/CAT_MET_INST_NAC_SALUD">INSTITUTO NACIONAL DE SALUD - INS</a></div>
+                            </div>
+			<div class="survey-stats">
+            	<span>Creado el: 20 Oct, 2014</span>
+                <span>Última modificación: 20 Oct, 2014</span>
+                <span>Visitas: 29550</span>
+                <span>Descargas: 19111</span>
+                 
+            </div>
+		
+            </div>    
+	<div class="survey-row" data-url="http://formularios.dane.gov.co/Anda_4_1/index.php/catalog/387" title="Ver operación estadística">
+        	<div class="data-access-icon data-access-data_na" title="No hay microdatos disponibles"></div>
+			<div class="link_indicator">
+							</div>
+            <h2 class="title">
+                <a href="http://formularios.dane.gov.co/Anda_4_1/index.php/catalog/387" title="Largometrajes Reconocidos como Producto Nacional - LRPN - 2014">
+                	Largometrajes Reconocidos como Producto Nacional - LRPN - 2014                </a>
+            </h2>
+            <div class="study-country">
+				                                			</div>
+            <div class="sub-title">
+            	<div>
+				Por:                                 	Ministerio de Cultura - Dirección de Cinematografía                            	</div>
+				                    <div class="owner-collection">Colección: <a href="http://formularios.dane.gov.co/Anda_4_1/index.php/catalog/CAT_MET_MIN_CUL">MINISTERIO DE CULTURA</a></div>
+                            </div>
+			<div class="survey-stats">
+            	<span>Creado el: 24 Dec, 2015</span>
+                <span>Última modificación: 24 Dec, 2015</span>
+                <span>Visitas: 728</span>
+                <span>Descargas: 210</span>
+                 
+            </div>
+		
+            </div>    
+	<div class="survey-row" data-url="http://formularios.dane.gov.co/Anda_4_1/index.php/catalog/340" title="Ver operación estadística">
+        	<div class="data-access-icon data-access-data_na" title="No hay microdatos disponibles"></div>
+			<div class="link_indicator">
+							</div>
+            <h2 class="title">
+                <a href="http://formularios.dane.gov.co/Anda_4_1/index.php/catalog/340" title="Saldos y Movimientos de las Entidades Estatales">
+                	Saldos y Movimientos de las Entidades Estatales                </a>
+            </h2>
+            <div class="study-country">
+				                                2011			</div>
+            <div class="sub-title">
+            	<div>
+				Por:                                 	Contaduría General de la Nación - Subcontaduría de Centralización de la Información                            	</div>
+				                    <div class="owner-collection">Colección: <a href="http://formularios.dane.gov.co/Anda_4_1/index.php/catalog/CAT_MET_CONTADURIA">CONTADURÍA GENERAL DE LA NACIÓN</a></div>
+                            </div>
+			<div class="survey-stats">
+            	<span>Creado el: 04 May, 2015</span>
+                <span>Última modificación: 04 May, 2015</span>
+                <span>Visitas: 9050</span>
+                <span>Descargas: 4357</span>
+                 
+            </div>
+		
+            </div>    
+
+<div class="pagination">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody><tr valign="middle">
+	<td>
+		Mostrando <b>1-15</b> de <b>18</b> operaciones estadísticas   </td>
+    <td align="right">
+         <div class="pager"><a href="http://formularios.dane.gov.co/Anda_4_1/index.php/catalog?&amp;page=1" class="page active" data-page="1">1</a><a href="http://formularios.dane.gov.co/Anda_4_1/index.php/catalog?&amp;page=2" class="page " data-page="2">2</a><a href="http://formularios.dane.gov.co/Anda_4_1/index.php/catalog?&amp;page=2" class="page" data-page="2"> Siguiente </a><a href="http://formularios.dane.gov.co/Anda_4_1/index.php/catalog?&amp;page=2" class="page last" data-page="2" title="Last">»</a></div>    </td>
+</tr>
+</tbody></table>
+</div>
+<div class="light switch-page-size">
+    Seleccionar el número de registros a mostrar por página:
+    <span class="btn btn-mini">15</span>
+    <span class="btn btn-mini">30</span>
+    <span class="btn btn-mini">50</span>
+    <span class="btn btn-mini">100</span>
+</div>
+
+</div>
+
+  
+  </div>
+  
+</div>
+</div></div>
+                        </div>
+                                                
+                        <div id="facets" class="yui-b">
+						<table style="display:none;" width="100%" class="catalog-page-title" cellpadding="0" cellspacing="0" border="0">
+<tbody><tr valign="baseline">
+<td><h2>Catálogo - SEN</h2></td>
+<td align="right">
+<div class="page-links">
+	<a id="link_export" title="Exportación del resultado de la búsqueda" href="http://formularios.dane.gov.co/Anda_4_1/index.php/catalog/export"><img src="./Catálogo - SEN_files/export.gif" border="0" alt="Export"></a>
+    <a title="RSS" href="http://formularios.dane.gov.co/Anda_4_1/index.php/catalog/rss" target="_blank"><img src="./Catálogo - SEN_files/rss_icon.png" border="0" alt="RSS"></a>
+</div>
+</td>
+</tr>
+</tbody></table>
+
+<form name="search_form" id="search_form" method="get" autocomplete="off">
+<input type="hidden" id="view" name="view" value="s">
+<input type="hidden" id="ps" name="ps" value="">
+<input type="hidden" id="page" name="page" value="1">
+<input type="hidden" id="repo" name="repo" value="CAT_MET_SEN">
+<input type="hidden" id="_r" name="_r" value="">
+<div> 
+
+<div class="filter-box">
+<div><a class="btn-central-catalog" href="http://formularios.dane.gov.co/Anda_4_1/index.php/catalog/central" title="Catálogo Central de Metadatos y microdatos">Catálogo Central de Datos</a></div>
+</div>
+
+
+
+
+	<!--keywords filter-->
+	<div class="filter-box">
+
+    <h3>Buscar por palabra clave</h3> 
+	<span class="search-help keyword-help"><img src="./Catálogo - SEN_files/icon_question.gif" alt="help" title="help" data-url="http://formularios.dane.gov.co/Anda_4_1/index.php/catalog/help"></span>
+
+    <div class="study-search">
+        en descripción de la operación estadística <br>
+        <input maxlength="100" type="text" id="sk" name="sk" value="" style="width:90%;"> 
+    </div>    
+    
+    <div class="variable-search" style="margin-top:5px;">
+        en documentación de la variable <br> 
+        <input maxlength="100" type="text" id="vk" name="vk" value="" style="width:90%;"> 
+
+    </div>
+
+    <div class="search-buttons" style="margin-top:5px;">
+        <input class="btn-search" type="submit" id="btnsearch" name="search" value="Buscar">
+        <a id="reset" href="http://formularios.dane.gov.co/Anda_4_1/index.php/catalog/CAT_MET_SEN?reset=reset">Restablecer</a>
+    </div>
+
+</div>    
+    <!--year filter-->
+    		        
+	<!-- country filter-->
+	
+	<!-- da filter -->
+        	        
+    <!-- end da filter -->
+
+	    
+    
+    
+    	            
+            	        	<div class="filter-box">
+    <h3>Filtrar por Año</h3> 
+
+	<div>   	
+        <input type="hidden">
+        <div>
+            <div>Mostrar operaciones estadísticas realizadas entre</div>
+            <div>
+                <input type="hidden"><select name="from" id="from">
+<option value="2015">2015</option>
+<option value="2014">2014</option>
+<option value="2013">2013</option>
+<option value="2012">2012</option>
+<option value="2011">2011</option>
+<option value="2010">2010</option>
+<option value="2009">2009</option>
+<option value="2008">2008</option>
+<option value="2007">2007</option>
+<option value="2006">2006</option>
+<option value="2005">2005</option>
+<option value="2004">2004</option>
+<option value="2003">2003</option>
+<option value="2002">2002</option>
+<option value="2001">2001</option>
+<option value="2000">2000</option>
+<option value="1999">1999</option>
+<option value="1998">1998</option>
+<option value="1997">1997</option>
+<option value="1996">1996</option>
+<option value="1995">1995</option>
+<option value="1994">1994</option>
+<option value="1993">1993</option>
+<option value="1992">1992</option>
+<option value="1991">1991</option>
+<option value="1990">1990</option>
+<option value="1989">1989</option>
+<option value="1988">1988</option>
+<option value="1987">1987</option>
+<option value="1986">1986</option>
+<option value="1985">1985</option>
+<option value="1984">1984</option>
+<option value="1983">1983</option>
+<option value="1982">1982</option>
+<option value="1981">1981</option>
+<option value="1980">1980</option>
+<option value="1979">1979</option>
+<option value="1978">1978</option>
+<option value="1977">1977</option>
+<option value="1976">1976</option>
+<option value="1975">1975</option>
+<option value="1974">1974</option>
+<option value="1973" selected="selected">1973</option>
+</select>                y                <select name="to" id="to">
+<option value="2015">2015</option>
+<option value="2014">2014</option>
+<option value="2013">2013</option>
+<option value="2012">2012</option>
+<option value="2011">2011</option>
+<option value="2010">2010</option>
+<option value="2009">2009</option>
+<option value="2008">2008</option>
+<option value="2007">2007</option>
+<option value="2006">2006</option>
+<option value="2005">2005</option>
+<option value="2004">2004</option>
+<option value="2003">2003</option>
+<option value="2002">2002</option>
+<option value="2001">2001</option>
+<option value="2000">2000</option>
+<option value="1999">1999</option>
+<option value="1998">1998</option>
+<option value="1997">1997</option>
+<option value="1996">1996</option>
+<option value="1995">1995</option>
+<option value="1994">1994</option>
+<option value="1993">1993</option>
+<option value="1992">1992</option>
+<option value="1991">1991</option>
+<option value="1990">1990</option>
+<option value="1989">1989</option>
+<option value="1988">1988</option>
+<option value="1987">1987</option>
+<option value="1986">1986</option>
+<option value="1985">1985</option>
+<option value="1984">1984</option>
+<option value="1983">1983</option>
+<option value="1982">1982</option>
+<option value="1981">1981</option>
+<option value="1980">1980</option>
+<option value="1979">1979</option>
+<option value="1978">1978</option>
+<option value="1977">1977</option>
+<option value="1976">1976</option>
+<option value="1975">1975</option>
+<option value="1974">1974</option>
+<option value="1973">1973</option>
+</select>            </div>    
+        </div>
+    </div>
+    
+</div>                	        	<div class="filter-box filter-by-dtype">
+<h3>Filtro por acceso</h3>
+
+<span class="search-help da-help">
+    <img src="./Catálogo - SEN_files/icon_question.gif" alt="help" title="help" data-url="http://formularios.dane.gov.co/Anda_4_1/index.php/catalog/help_da">
+</span>
+
+<div id="datatype-list">
+
+    <div class="filter-da any">
+        <input type="checkbox" class="chk-da-any" id="chk-da-any" checked="checked">
+        <label for="chk-da-any">todos</label>
+    </div>
+
+    <div class="filter-da items-container">
+    	<table>
+                        
+                        
+            
+			            
+                        
+                        
+                        <tbody><tr class="item">
+            <td><input class="chk chk-da no_access" type="checkbox" value="6" name="dtype[]" id="da_na"></td>
+            <td><span class="da-icon-small da-no_access"></span></td>
+            <td class="nopad"><label title="La documentación relacionada está disponible libremente para los usuarios. Sin embargo, los microdatos no están disponibles para estas operaciones estadísticas." for="da_na"><span class="title"> Datos no disponibles</span></label></td>
+            </tr>
+            		</tbody></table>
+    </div>
+</div>
+</div>                	        	
+<div class="filter-box filter-by-topic">
+<h3>Filtrar por Tema</h3> 
+<span class="selected-items-count">0</span>
+
+<div id="topics-container">
+    <div class="any">    	
+        <input type="checkbox" class="chk-any" id="topic-any" checked="checked">
+        <label for="topic-any">todos</label>
+    </div>
+	<div class="items-container topic-items ">
+	    </div>
+        
+    <div class="filter-footer">
+    <input type="button" class="btn-select" value="Ver / Seleccionar Más" id="btn-topic-selection" data-dialog-id="dialog-topics" data-dialog-title="Tópicos Seleccionados" data-url="index.php/catalog/topic_selection/CAT_MET_SEN">
+    </div>
+    
+</div>
+</div>
+                
+    
+</div>
+</form>
+
+
+
+<script type="text/javascript">
+//translations	
+var i18n=
+{
+'searching':"Buscando, por favor espere...",
+'loading':"Cargando, por favor espere...",
+'invalid_year_range_selected':"Rango de años seleccionados no válidos.",
+'topic_selected':"tema seleccionado",
+'topics_selected':"temas seleccionados",
+'collection_selected':"colección seleccionada",
+'collections_selected':"colecciones seleccionadas",
+'country_selected':"país seleccionado",
+'countries_selected':"países seleccionados",
+'center_selected':"centro seleccionado",
+'centers_selected':"centros seleccionados",
+'collection_selected':"colección seleccionada",
+'collections_selected':"colecciones seleccionadas",
+'cancel':"Cancelar",
+'js_compare_variables_selected':"variables selected from",
+'js_compare_studies_selected':"studies",
+'js_compare_variable_select_atleast_2':"Select two or more variables to compare"
+};
+
+//min/max years
+var years = {'from': '2015', 'to': '1973'}; 
+</script>                        </div>
+                        </div>
+                                    </div>
+            		</div>
+</div>
+    <!-- footer -->
+    <div id="ft">Departamento Administrativo Nacional de Estadística DANE 
+Horario de atención: Lunes a viernes 8:00 a 17:00 • Conmutador (571) 597 8300 • Fax (571) 597 8399 • Línea gratuita de atención 01 8000 912002 ó (571) 597 8300 Exts. 2532 - 2605 
+ </div>
+	<!--end bd-->
+    </div>
+
+<div style="padding-bottom:100px;">&nbsp;</div>
+
+<div class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-front ui-dialog-buttons" tabindex="-1" role="dialog" aria-describedby="dialog-topics" aria-labelledby="ui-id-1" style="display: none;"><div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix"><span id="ui-id-1" class="ui-dialog-title">Tópicos Seleccionados<div class="ui-dialog-subtitle"><span class="ui-dialog-stats"></span> | <span class="clear-selection link">Limpiar selección</span></div></span><button class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only ui-dialog-titlebar-close" role="button" aria-disabled="false" title="close"><span class="ui-button-icon-primary ui-icon ui-icon-closethick"></span><span class="ui-button-text">close</span></button></div><div id="dialog-topics" class="ui-dialog-content ui-widget-content"><div class="container topics-container">
+
+    	<div class="rows-container">
+			            n/a            		</div>
+    
+</div></div><div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix"><div class="ui-dialog-buttonset"><button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">Cancelar</span></button><button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">Aplicar filtro</span></button></div></div></div><div id="techsmith-snagitchrome-extension"></div></body></html>

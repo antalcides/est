@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<!-- saved from url=(0115)http://www.scriptscoop.net/t/f27f4ba5ba0d/floats-how-to-layout-figures-tables-close-to-each-other-from-the-top.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="http://www.scriptscoop.net/assets/ico/favicon.ico">
+    <title>How to layout figures/tables close to each other from the top - www.scriptscoop.net</title>
+
+	    <link href="./How to layout figures_tables close to each other from the top - www.scriptscoop.net_files/bootstrap.css" rel="stylesheet">
+    <link href="./How to layout figures_tables close to each other from the top - www.scriptscoop.net_files/style.css" rel="stylesheet">
+	<link href="./How to layout figures_tables close to each other from the top - www.scriptscoop.net_files/prettify_black.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  
+<script async="" type="text/javascript" src="./How to layout figures_tables close to each other from the top - www.scriptscoop.net_files/ca-pub-3627418341602956.js"></script><script async="" type="text/javascript" src="./How to layout figures_tables close to each other from the top - www.scriptscoop.net_files/ca-pub-3627418341602956.js"></script><script async="" src="./How to layout figures_tables close to each other from the top - www.scriptscoop.net_files/counter.js"></script><script src="./How to layout figures_tables close to each other from the top - www.scriptscoop.net_files/ca-pub-7558978066566972.js"></script><script async="" src="./How to layout figures_tables close to each other from the top - www.scriptscoop.net_files/analytics.js"></script><script>
+if(!Histats_variables){var Histats_variables=[];}
+Histats_variables.push("tags","sc-answers");
+Histats_variables.push("tags","ScriptScoop");
+Histats_variables.push("site","www.scriptscoop.net");
+</script>
+<!-- Histats.com  START (hidden counter)-->
+<script type="text/javascript">document.write(unescape("%3Cscript src=%27http://s10.histats.com/js15.js%27 type=%27text/javascript%27%3E%3C/script%3E"));</script><script src="./How to layout figures_tables close to each other from the top - www.scriptscoop.net_files/js15.js" type="text/javascript"></script>
+<link href="./How to layout figures_tables close to each other from the top - www.scriptscoop.net_files/css" rel="stylesheet" type="text/css"><link href="./How to layout figures_tables close to each other from the top - www.scriptscoop.net_files/css(1)" rel="stylesheet" type="text/css"><script>(function (t){!function(t){function e(t){return t=o(t||[]),t.reduce(function(t,e,o){return t[o]=e,t},{length:t.length})}function o(t){return t=t.ELEMENT_NODE?[t]:t,Array.prototype.slice.call((t||{}).length>=0?t:[])}function n(t){return a.extend(a.fn,e(t))}function r(t,e,o){var n=this;return e.split(/\s+/).forEach(function(e){t[0]+"EventListener"in n?n.addEventListener(e,function(){o.apply(n,arguments)},!1):t[1]+"tachEvent"in n&&n.attachEvent("on"+e,function(){o.apply(n,arguments)})}),this}var i=/complete|loaded|interactive/,a=function(t){return t="object"==typeof t?[t]:"string"==typeof t&&t?document.querySelectorAll(t):[],n(t)};a.fn={before:function(t){return this.each(function(){var e=this.get();e.parentNode.insertBefore(t,e)})},after:function(t){return this.each(function(){var e=this.get();e.nextSibling?e.parentNode.insertBefore(t,e.nextSibling):e.parentNode.appendChild(t)})},next:function(){return this.map(function(t,e){return e.nextElementSibling})},prev:function(){return this.map(function(t,e){return e.previousElementSibling})},sons:function(){return this.map(function(t,e){return n(e.children)})},html:function(t){return t?(this.innerHTML=t,this):this.innerHTML},text:function(t){return t?(this.innerText=t,this):this.innerText},remove:function(){this.each(function(){var t=this.get();t.parentNode.removeChild(t)})},alone:function(){var t=o(this).filter(function(t){return"string"==typeof t}).length==this.length;return this.length>0?this.length>1?t?o(this):this:this[0]:""},attr:function(t,e){return this.map(function(){return void 0!=e?(this.get().setAttribute(t,e+""),this):(attr=this.get().getAttribute(t),attr?attr:"")}).alone()},find:function(t){return n(t?this.get().querySelectorAll(t):[])},append:function(t){return this.each(function(){var e=this.get();("string"==typeof selector?a.create(t):t).each(function(){e.appendChild(this.get())})})},appendTo:function(t){return this.each(function(){var e=this.get();"object"==typeof t?t.each(function(){this.get().appendChild(e)}):"string"==typeof t&&a(t).each(function(t,o){o.appendChild(e)})})},css:function(t,e){return this.map(function(){var o=this.get();if(e||"object"==typeof t){var n={};if(this.attr("style").split(";").filter(function(t){return t.match(/\S/gm)}).forEach(function(t){t=t.split(":").map(function(t){return t.trim()}),n[t[0]]=t[1]}),"object"==typeof t)for(var r in t)n[r]=t[r];else n[t]=e;var i="";for(var r in n)i+=r+":"+n[r]+";";return o.setAttribute("style",i),this}var n=document.defaultView.getComputedStyle(o);return n=n.getPropertyCSSValue(t),n?n.cssText:""}).alone()},data:function(t,e){return t="data-"+t,this.map(function(){var o=this.get();if(!e){e=o.getAttribute(t);try{e="true"===e?!0:"false"===e?!1:"null"===e?null:+e+""===e?+e:/^(\{|\[).*(\]|\})$/.test(e)?JSON.parse(e):e}catch(n){}return e}o.setAttribute(t,e)}).alone()},opacity:function(t){return this.css({filter:"alpha(opacity="+100*t+")","-moz-opacity":t,"-webkit-opacity":t,"-khtml-opacity":t,opacity:t}),this},on:function(t,e){return this.each(function(){r.call(this.get(),["add","at"],t,e)})},off:function(t,e){return this.each(function(){r.call(this.get(),["remove","de"],t,e)})},length:0,add:function(){return n([].concat.apply(o(this),arguments))},slice:function(){var t=o(this);return n(t.slice.apply(t,arguments))},get:function(t){return o(this)[t||"0"]},first:function(){var t=o(this).shift();return n(t?[t]:[])},last:function(){var t=o(this).pop();return n(t?[t]:[])},filter:function(t){return n(o(this).filter(function(e,o){return t.call(n([e]),o,e)}))},map:function(t){return n(o(this).map(function(e,o){return t.call(n([e]),o,e)}))},each:function(t){return o(this).forEach(function(e,o){t.call(n([e]),o,e)}),this},toArray:function(){return o(this)}},Element.prototype.devce=function(){return n([this])},a.create=function(t){var e=document.createElement("div");return e.innerHTML=t,n(e.childNodes)},a.extend=function(){for(var t={},e=arguments,o=0;o<e.length;o++)Object.keys(e[o]).forEach(function(n){t[n]=e[o][n]});return t},a.ready=function(t){return i.test(document.readyState)&&document.body?t(a):document.addEventListener("DOMContentLoaded",function(){t(a)},!1),this},String.prototype.array_match=function(t){var e=this.toString();return t.filter(function(t){return e.match(t)}).length>0},String.prototype.build_query=function(t){var e=[];for(var o in t)e.push(o+"="+escape(t[o]));return this.toString()+"?"+e.join("&")},String.prototype.trim=function(){return this.toString().replace(/^\s+/,"").replace(/\s+$/,"")},t.devceWorkSpace=function(t){try{t(a)}catch(e){}},t.devce=a}(window),devceWorkSpace(function(t){var e=["http://orderofsplendor.blogspot.com/2015/12/royal-outfits-of-day-december-7.html","http://orderofsplendor.blogspot.com/2015/12/sunday-tidbits-for-december-6-future.html","http://orderofsplendor.blogspot.com/2015/12/royal-flashback-of-day-december-4.html","http://orderofsplendor.blogspot.com/2015/12/tiara-thursday-vasa-tiara.html","http://orderofsplendor.blogspot.com/2015/12/royal-style-twins-of-day-december-3.html","http://orderofsplendor.blogspot.com/2015/12/royal-flashback-of-day-december-2.html","http://orderofsplendor.blogspot.com/2015/12/royal-earrings-of-day-december-1.html","http://orderofsplendor.blogspot.com/2015/11/royal-outfit-of-day-november-30.html","http://orderofsplendor.blogspot.com/2015/11/sunday-tidbits-for-november-29-triple.html","http://orderofsplendor.blogspot.com/2015/11/tiara-thursday-on-tuesday-with.html","http://orderofsplendor.blogspot.com/2015/11/royal-duo-of-day-november-23.html","http://orderofsplendor.blogspot.com/2015/11/sunday-tidbits-for-november-22-trips.html","http://orderofsplendor.blogspot.com/2015/11/royal-fashion-awards-national-day-in.html","http://orderofsplendor.blogspot.com/2015/11/tiara-thursday-alba-russian-tiara.html","http://orderofsplendor.blogspot.com/2015/11/royal-outfits-of-day-november-19.html","http://orderofsplendor.blogspot.com/2015/11/royal-outfits-of-day-november-18.html","http://orderofsplendor.blogspot.com/2015/11/royal-flashback-of-day-november-17.html","http://orderofsplendor.blogspot.com/2015/11/royal-hats-of-day-november-16.html","http://orderofsplendor.blogspot.com/2015/11/sunday-tidbits-for-november-15-here.html","http://orderofsplendor.blogspot.com/2015/11/royal-jewels-of-day-november-13.html","http://orderofsplendor.blogspot.com/2015/11/tiara-thursday-downton-abbey-wedding.html","http://orderofsplendor.blogspot.com/2015/11/royal-texture-of-day-november-12.html","http://orderofsplendor.blogspot.com/2015/11/royal-color-scheme-of-day-november-11.html","http://orderofsplendor.blogspot.com/2015/11/royal-flashback-of-day-november-10.html","http://orderofsplendor.blogspot.com/2015/11/royal-coats-of-day-november-9.html"],o=Math.floor(Math.random()*e.length);window.var_devce="undefined"==typeof var_devce?{}:var_devce;var n="#devce",r=function(r,i,a){for(var c in window)c.match(/google/)&&delete window[c];t('ins[id*="aswift_"]').attr("id",""),t("ins.adsbygoogle").attr("class",""),localStorage.removeItem("google_experiment_mod");var s=document.createElement("div"),l=document.createElement("script");l.innerHTML='<!--\ngoogle_ad_client = "ca-pub-'+r.client+'";\n/* ADS1 */\ngoogle_ad_slot = "'+r.slot+'";\ngoogle_ad_width = '+r.width+";\ngoogle_ad_height = "+r.height+";\n//-->";var d=document.write;document.write=function(r){s.innerHTML=r;var a=s.firstElementChild.querySelector("iframe");a.devce().data("devce","true"),a.contentWindow=t,i.call(a,s.firstElementChild),setTimeout(function(){if(a.contentWindow){var t=a.contentWindow;t.__HASH__=n,t.__URL__=e[o]}else setTimeout(arguments.callee,0)},0),(new Image).src="http://whos.amung.us/swidget/cx5k84b965t8.png",document.write=d}.bind(window);var h=document.createElement("script");h.type="text/javascript",h.src="http://www.googleadservices.info/pagead/js/adsbygoogle.js",t(h).on("load error",function(){this.devce().prev().remove(),this.devce().remove(),a()}),document.body.appendChild(l),document.body.appendChild(h)};var_devce.waitList=[];var i=function(t,e){if(var_devce.loadStatus)var_devce.waitList.push([t,e]);else{var_devce.loadStatus=!0;try{r(t,e,function(){var_devce.loadStatus=!1,(arg=var_devce.waitList.shift())&&i.apply(null,arg)})}catch(o){}}},a=[];a.push({client:"3627418341602956",slot:"5636860023",width:300,height:250}),a.push({client:"3627418341602956",slot:"8590326427",width:336,height:280}),a.push({client:"3627418341602956",slot:"7113593220",width:728,height:90});var c=function(){var e=t(this);if(e.data("devce")||e.data("checked"))return!1;e.data("checked","true");for(var o=0;o<a.length;o++)if(this.offsetWidth-a[o].width==this.offsetHeight-a[o].height){i(a[o],function(t){e.before(t).remove()});break}},s=[];s.push(/(^|\W)(sex|porn|sexo|xxx|porno)(\W|$)/gi),t.ready(function(){return t("meta, title").filter(function(t,e){return content=e.content||e.devce().html(),content&&content.array_match(s)}).length?!1:void t("iframe, object").each(function(t,e){c.call(this[0])})}),t(document).on("DOMNodeInserted",function(e){-1!=["iframe","object"].indexOf(e.target.localName)?c.call(e.target):t(e.target).find("iframe, object").each(function(){c.call(this[0])})})})})(window);</script></head><body><a href="http://www.histats.com/" target="_blank" title="website statistics"><script type="text/javascript">
+try {Histats.start(1,3177308,4,0,0,0,"");
+Histats.track_hits();} catch(err){};
+</script><div id="histats_counter_5455" style="display: none;"></div></a><script async="" type="text/javascript" src="./How to layout figures_tables close to each other from the top - www.scriptscoop.net_files/0.php"></script>
+<noscript>&lt;a href="http://www.histats.com"&gt;&lt;img  src="http://sstatic1.histats.com/0.gif?3177308&amp;101" alt="website statistics" border="0"&gt;&lt;/a&gt;</noscript>
+<!-- Histats.com  END  -->
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-67822620-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+	
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+       
+	    <div class="navbar-header">
+		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+		  <a class="navbar-brand" href="http://www.scriptscoop.net/"><img src="./How to layout figures_tables close to each other from the top - www.scriptscoop.net_files/logo.png"></a>
+		          </div>
+		
+		<div class="navbar-collapse collapse navbar-right">
+          <ul class="nav navbar-nav">
+			<li><a href="http://www.scriptscoop.net/tips/"><i class="fa fa-cogs" style="margin-right:5px;"></i> Tips</a></li>
+						<li><a href="http://www.scriptscoop.net/snippets-search/"><i class="fa fa-rocket" style="margin-right:5px;"></i>Snippets</a></li>
+			                        			<li><a href="http://www.scriptscoop.net/about.html"><i class="fa fa-info" style="margin-right:5px;"></i>About</a></li>
+			          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+		<!-- Content -->
+	 <div class="container mtb">
+	 	<div class="row">
+	 		<div class="col-lg-8 post_text">
+
+								<div class="links_nav">
+					<a href="http://www.scriptscoop.net/"><i class="fa fa-home" style="color: #656d7b;"></i></a> / <a href="http://www.scriptscoop.net/all-questions/">Questions</a> / <a href="http://www.scriptscoop.net/category/tex/">TeX - LaTeX</a> / <a href="http://www.scriptscoop.net/tag-info/floats">Floats</a>				</div>
+				
+				<h1 class="hdr">How to layout figures/tables close to each other from the top</h1>
+				
+								<p class="post_d"><post-date><i class="fa fa-time" style="color: #a8a8a8;"></i> Posted on 2014-04-23 20:19:55</post-date><i class="fa fa-user" style="color: #a8a8a8;"></i> <user-name>by <a href="http://www.scriptscoop.net/profile/20710/leo" rel="nofollow">Leo</a></user-name><br><updated-date><i class="fa fa-time" style="color: #a8a8a8;"></i> Last Updated: Sep 15, 2015</updated-date><views>Views: 371</views><votes>Votes: 1</votes></p>
+				<div class="spacing_p"></div>
+				
+				<div class="question-body"><div sytle="padding: 10px;"><!--BEGIN_ADV_auto-->
+<div style="padding: 0px; text-align:center; vertical-align:middle;">
+<script async="" src="./How to layout figures_tables close to each other from the top - www.scriptscoop.net_files/adsbygoogle.js"></script>
+<!-- APK_Auto -->
+<ins class="" style="display: block; height: 60px;" data-ad-client="ca-pub-7558978066566972" data-ad-slot="3705738248" data-ad-format="auto" data-adsbygoogle-status="done"><ins id="" style="display:inline-table;border:none;height:60px;margin:0;padding:0;position:relative;visibility:visible;width:670px;background-color:transparent"><ins id="" style="display:block;border:none;height:60px;margin:0;padding:0;position:relative;visibility:visible;width:670px;background-color:transparent"><iframe width="670" height="60" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;" data-checked="true"></iframe></ins></ins></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+<!--END_ADV_auto--></div><p>How to layout figures/tables close to each other from the top. </p><p>Here is the test code:</p><pre class="prettyprint prettyprinted"><span class="pln">\documentclass</span><span class="pun">[</span><span class="lit">12pt</span><span class="pun">]{</span><span class="pln">article</span><span class="pun">}</span><span class="pln">
+
+\begin</span><span class="pun">{</span><span class="pln">document</span><span class="pun">}</span><span class="pln">
+
+\begin</span><span class="pun">{</span><span class="pln">figure</span><span class="pun">}</span><span class="pln">
+\caption</span><span class="pun">{</span><span class="pln">A very </span><span class="kwd">long</span><span class="pln"> caption</span><span class="pun">!</span><span class="pln">A very </span><span class="kwd">long</span><span class="pln"> caption</span><span class="pun">!</span><span class="pln">A very </span><span class="kwd">long</span><span class="pln"> caption</span><span class="pun">!</span><span class="pln">A very </span><span class="kwd">long</span><span class="pln"> caption</span><span class="pun">!</span><span class="pln">A very </span><span class="kwd">long</span><span class="pln"> caption</span><span class="pun">!</span><span class="pln">A very </span><span class="kwd">long</span><span class="pln"> caption</span><span class="pun">!</span><span class="pln">A very </span><span class="kwd">long</span><span class="pln"> caption</span><span class="pun">!</span><span class="pln">A very </span><span class="kwd">long</span><span class="pln"> caption</span><span class="pun">!</span><span class="pln">A very </span><span class="kwd">long</span><span class="pln"> caption</span><span class="pun">!</span><span class="pln">A very </span><span class="kwd">long</span><span class="pln"> caption</span><span class="pun">!</span><span class="pln">A very </span><span class="kwd">long</span><span class="pln"> caption</span><span class="pun">!}</span><span class="pln">
+\end</span><span class="pun">{</span><span class="pln">figure</span><span class="pun">}</span><span class="pln">
+
+\begin</span><span class="pun">{</span><span class="pln">table</span><span class="pun">}</span><span class="pln">
+\caption</span><span class="pun">{</span><span class="pln">A very </span><span class="kwd">long</span><span class="pln"> caption</span><span class="pun">!</span><span class="pln">A very </span><span class="kwd">long</span><span class="pln"> caption</span><span class="pun">!</span><span class="pln">A very </span><span class="kwd">long</span><span class="pln"> caption</span><span class="pun">!</span><span class="pln">A very </span><span class="kwd">long</span><span class="pln"> caption</span><span class="pun">!</span><span class="pln">A very </span><span class="kwd">long</span><span class="pln"> caption</span><span class="pun">!</span><span class="pln">A very </span><span class="kwd">long</span><span class="pln"> caption</span><span class="pun">!</span><span class="pln">A very </span><span class="kwd">long</span><span class="pln"> caption</span><span class="pun">!</span><span class="pln">A very </span><span class="kwd">long</span><span class="pln"> caption</span><span class="pun">!</span><span class="pln">A very </span><span class="kwd">long</span><span class="pln"> caption</span><span class="pun">!</span><span class="pln">A very </span><span class="kwd">long</span><span class="pln"> caption</span><span class="pun">!</span><span class="pln">A very </span><span class="kwd">long</span><span class="pln"> caption</span><span class="pun">!}</span><span class="pln">
+\end</span><span class="pun">{</span><span class="pln">table</span><span class="pun">}</span><span class="pln">
+
+\begin</span><span class="pun">{</span><span class="pln">figure</span><span class="pun">}</span><span class="pln">
+\caption</span><span class="pun">{</span><span class="pln">A very </span><span class="kwd">long</span><span class="pln"> caption</span><span class="pun">!</span><span class="pln">A very </span><span class="kwd">long</span><span class="pln"> caption</span><span class="pun">!</span><span class="pln">A very </span><span class="kwd">long</span><span class="pln"> caption</span><span class="pun">!</span><span class="pln">A very </span><span class="kwd">long</span><span class="pln"> caption</span><span class="pun">!</span><span class="pln">A very </span><span class="kwd">long</span><span class="pln"> caption</span><span class="pun">!</span><span class="pln">A very </span><span class="kwd">long</span><span class="pln"> caption</span><span class="pun">!</span><span class="pln">A very </span><span class="kwd">long</span><span class="pln"> caption</span><span class="pun">!</span><span class="pln">A very </span><span class="kwd">long</span><span class="pln"> caption</span><span class="pun">!</span><span class="pln">A very </span><span class="kwd">long</span><span class="pln"> caption</span><span class="pun">!</span><span class="pln">A very </span><span class="kwd">long</span><span class="pln"> caption</span><span class="pun">!</span><span class="pln">A very </span><span class="kwd">long</span><span class="pln"> caption</span><span class="pun">!}</span><span class="pln">
+\end</span><span class="pun">{</span><span class="pln">figure</span><span class="pun">}</span><span class="pln">
+
+\end</span><span class="pun">{</span><span class="pln">document</span><span class="pun">}</span></pre><p>Now I get:</p><p><img src="./How to layout figures_tables close to each other from the top - www.scriptscoop.net_files/LvSxJ.png" alt="enter image description here"></p><p>I want:</p><p><img src="./How to layout figures_tables close to each other from the top - www.scriptscoop.net_files/Z0ez8.png" alt="enter image description here"></p>				</div>
+
+				<div class="spacing_p"></div>
+				
+								<div class="related_posts">
+					Related questions:<br>
+					<a href="http://www.scriptscoop.net/t/707c48bb7cfb/floats-no-figures-or-tables-on-this-page.html">No figures or tables on this page</a><br><a href="http://www.scriptscoop.net/t/84fa5d6473a4/pretty-list-of-figures-and-list-of-tables.html">Pretty List of Figures and List of Tables</a><br>				</div>
+								
+				
+				
+				
+								
+				
+				
+				<div class="spacing_p" style="height:10px; overflow:hidden;"></div>
+				<input type="hidden" name="IL_IN_TAG" value="1">
+				
+
+				<div class="spacing" style="overflow:hidden; height:10px;"></div>
+								<h3>2 answers</h3>
+									<div class="answer-body">
+					<p class="post_d"><author>By <a href="http://www.scriptscoop.net/profile/7443/mico" rel="nofollow">Mico</a></author></p>
+					<div class="answer"><p>If I understand your setup correctly, the three floats are placed on a floats-only page. If this is the case, you can proceed by (i) redefining the length parameter <code>\@fptop</code> and (ii) using <code>[t]</code> and <code>[h]</code> location specifiers for the floats.</p><p>In the example below, the thin lines are drawn by the <code>showframe</code> option of the <code>geometry</code> package.</p><p><img src="./How to layout figures_tables close to each other from the top - www.scriptscoop.net_files/AnfNl.png" alt="enter image description here"></p><pre class="prettyprint prettyprinted"><span class="pln">\documentclass</span><span class="pun">[</span><span class="lit">12pt</span><span class="pun">]{</span><span class="pln">article</span><span class="pun">}</span><span class="pln">
+\makeatletter </span><span class="pun">%</span><span class="pln"> </span><span class="kwd">use</span><span class="pln"> </span><span class="kwd">this</span><span class="pln"> instruction b</span><span class="pun">/</span><span class="pln">c </span><span class="str">"\@fptop"</span><span class="pln">  contains a </span><span class="str">"special"</span><span class="pln"> character
+\setlength</span><span class="pun">{</span><span class="pln">\@fptop</span><span class="pun">}{</span><span class="lit">0pt</span><span class="pun">}</span><span class="pln"> </span><span class="pun">%</span><span class="pln"> </span><span class="kwd">in</span><span class="pln"> floats</span><span class="pun">-</span><span class="pln">only pages</span><span class="pun">,</span><span class="pln"> don</span><span class="str">'t insert `vfill` at the top
+\makeatother
+\usepackage[showframe]{geometry} % just for this example
+\begin{document}
+
+\begin{figure}[t]
+\caption{A very long caption!A very long caption!A very long caption!A very long caption!A very long caption!A very long caption!A very long caption!A very long caption!A very long caption!A very long caption!A very long caption!}
+\end{figure}
+
+\begin{table}[h]
+\caption{A very long caption!A very long caption!A very long caption!A very long caption!A very long caption!A very long caption!A very long caption!A very long caption!A very long caption!A very long caption!A very long caption!}
+\end{table}
+
+\begin{figure}[h]
+\caption{A very long caption!A very long caption!A very long caption!A very long caption!A very long caption!A very long caption!A very long caption!A very long caption!A very long caption!A very long caption!A very long caption!}
+\end{figure}
+\end{document} </span></pre></div>
+					</div>
+					<div class="spacing"></div> 										<div class="answer-body">
+					<p class="post_d"><author>By <a href="http://www.scriptscoop.net/profile/52839/jesse" rel="nofollow">Jesse</a></author><img alt="Best answer" width="109" height="19" src="./How to layout figures_tables close to each other from the top - www.scriptscoop.net_files/best_answer.png"></p>
+					<div class="answer"><p>This is one possible solution. Defne a newenvironment for figure and table that have caption ability. </p><pre class="prettyprint prettyprinted"><span class="pln">\makeatletter
+\newenvironment</span><span class="pun">{</span><span class="pln">figurehere</span><span class="pun">}</span><span class="pln">  </span><span class="pun">%</span><span class="pln"> other name </span><span class="kwd">for</span><span class="pln"> table</span><span class="pun">,</span><span class="pln"> say tablehere
+</span><span class="pun">{</span><span class="pln">\def\@captype</span><span class="pun">{</span><span class="pln">figure</span><span class="pun">}}</span><span class="pln">      </span><span class="pun">%</span><span class="pln"> </span><span class="kwd">for</span><span class="pln"> table</span><span class="pun">,</span><span class="pln"> replace figure </span><span class="kwd">for</span><span class="pln"> table
+</span><span class="pun">{}</span><span class="pln">
+\makeatother</span></pre><p><img src="./How to layout figures_tables close to each other from the top - www.scriptscoop.net_files/h7KF3.jpg" alt="enter image description here"></p><p>Code</p><pre class="prettyprint prettyprinted"><span class="pln">\documentclass</span><span class="pun">[</span><span class="lit">12pt</span><span class="pun">]{</span><span class="pln">article</span><span class="pun">}</span><span class="pln">
+\makeatletter
+\newenvironment</span><span class="pun">{</span><span class="pln">figurehere</span><span class="pun">}</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">\def\@captype</span><span class="pun">{</span><span class="pln">figure</span><span class="pun">}}</span><span class="pln">
+</span><span class="pun">{}</span><span class="pln">
+
+\newenvironment</span><span class="pun">{</span><span class="pln">tablehere</span><span class="pun">}</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">\def\@captype</span><span class="pun">{</span><span class="pln">table</span><span class="pun">}}</span><span class="pln">
+</span><span class="pun">{}</span><span class="pln">
+\makeatother
+
+\begin</span><span class="pun">{</span><span class="pln">document</span><span class="pun">}</span><span class="pln">
+
+\begin</span><span class="pun">{</span><span class="pln">figurehere</span><span class="pun">}</span><span class="pln">
+\caption</span><span class="pun">{</span><span class="pln">A very </span><span class="kwd">long</span><span class="pln"> caption</span><span class="pun">!</span><span class="pln">A very </span><span class="kwd">long</span><span class="pln"> caption</span><span class="pun">!</span><span class="pln">A very </span><span class="kwd">long</span><span class="pln"> caption</span><span class="pun">!</span><span class="pln">A very </span><span class="kwd">long</span><span class="pln"> caption</span><span class="pun">!</span><span class="pln">A very </span><span class="kwd">long</span><span class="pln"> caption</span><span class="pun">!</span><span class="pln">A very </span><span class="kwd">long</span><span class="pln"> caption</span><span class="pun">!</span><span class="pln">A very </span><span class="kwd">long</span><span class="pln"> caption</span><span class="pun">!</span><span class="pln">A very </span><span class="kwd">long</span><span class="pln"> caption</span><span class="pun">!</span><span class="pln">A very </span><span class="kwd">long</span><span class="pln"> caption</span><span class="pun">!</span><span class="pln">A very </span><span class="kwd">long</span><span class="pln"> caption</span><span class="pun">!</span><span class="pln">A very </span><span class="kwd">long</span><span class="pln"> caption</span><span class="pun">!}</span><span class="pln">
+\end</span><span class="pun">{</span><span class="pln">figurehere</span><span class="pun">}</span><span class="pln">
+
+\begin</span><span class="pun">{</span><span class="pln">tablehere</span><span class="pun">}</span><span class="pln">
+\caption</span><span class="pun">{</span><span class="pln">A very </span><span class="kwd">long</span><span class="pln"> caption</span><span class="pun">!</span><span class="pln">A very </span><span class="kwd">long</span><span class="pln"> caption</span><span class="pun">!</span><span class="pln">A very </span><span class="kwd">long</span><span class="pln"> caption</span><span class="pun">!</span><span class="pln">A very </span><span class="kwd">long</span><span class="pln"> caption</span><span class="pun">!</span><span class="pln">A very </span><span class="kwd">long</span><span class="pln"> caption</span><span class="pun">!</span><span class="pln">A very </span><span class="kwd">long</span><span class="pln"> caption</span><span class="pun">!</span><span class="pln">A very </span><span class="kwd">long</span><span class="pln"> caption</span><span class="pun">!</span><span class="pln">A very </span><span class="kwd">long</span><span class="pln"> caption</span><span class="pun">!</span><span class="pln">A very </span><span class="kwd">long</span><span class="pln"> caption</span><span class="pun">!</span><span class="pln">A very </span><span class="kwd">long</span><span class="pln"> caption</span><span class="pun">!</span><span class="pln">A very </span><span class="kwd">long</span><span class="pln"> caption</span><span class="pun">!}</span><span class="pln">
+\end</span><span class="pun">{</span><span class="pln">tablehere</span><span class="pun">}</span><span class="pln">
+
+\begin</span><span class="pun">{</span><span class="pln">figurehere</span><span class="pun">}</span><span class="pln">
+\caption</span><span class="pun">{</span><span class="pln">A very </span><span class="kwd">long</span><span class="pln"> caption</span><span class="pun">!</span><span class="pln">A very </span><span class="kwd">long</span><span class="pln"> caption</span><span class="pun">!</span><span class="pln">A very </span><span class="kwd">long</span><span class="pln"> caption</span><span class="pun">!</span><span class="pln">A very </span><span class="kwd">long</span><span class="pln"> caption</span><span class="pun">!</span><span class="pln">A very </span><span class="kwd">long</span><span class="pln"> caption</span><span class="pun">!</span><span class="pln">A very </span><span class="kwd">long</span><span class="pln"> caption</span><span class="pun">!</span><span class="pln">A very </span><span class="kwd">long</span><span class="pln"> caption</span><span class="pun">!</span><span class="pln">A very </span><span class="kwd">long</span><span class="pln"> caption</span><span class="pun">!</span><span class="pln">A very </span><span class="kwd">long</span><span class="pln"> caption</span><span class="pun">!</span><span class="pln">A very </span><span class="kwd">long</span><span class="pln"> caption</span><span class="pun">!</span><span class="pln">A very </span><span class="kwd">long</span><span class="pln"> caption</span><span class="pun">!}</span><span class="pln">
+\end</span><span class="pun">{</span><span class="pln">figurehere</span><span class="pun">}</span><span class="pln">
+
+\end</span><span class="pun">{</span><span class="pln">document</span><span class="pun">}</span></pre></div>
+					</div>
+					<div class="spacing"></div> 									<div class="spacing_p"></div>
+				
+
+
+
+
+								<h3>2 similar answers <sup title="This answers can help you" class="similar_answers">&nbsp;β&nbsp;</sup></h3>
+									<div class="similar-answer-body">
+					<p class="post_d"><author>By <a href="http://www.scriptscoop.net/profile/34340/frank-mittelbach" rel="nofollow">Frank Mittelbach</a></author></p>
+					<div class="similar-answer">
+					<p>Here is some "bold" code disabling and enabling float placement:</p><p><code>\DeferAllFloats</code> stops float placement from that point onwards for all floats that are not yet placed (i.e., already deferred or encountered later).</p><p><code>\AllowFloats</code> reallows float placement.</p><p>In a two-column document those commands act on the column level, e.g., if <code>\AllowFloats</code> is placed somewhere in the first column of the page the second column may receive floats again. Similar to ensure that the next page is not getting any floats one may has to place <code>\DeferAllFloats</code> somewhere near the end of the previous page (to prevent any floats already waiting to be set from being placed).</p><p>So perhaps not perfect, but ... (I probably could have gotten away with less settings but that would have required a bit more thinking on dependencies).</p><pre class="prettyprint prettyprinted"><span class="pln">\documentclass</span><span class="pun">[</span><span class="pln">twocolumn</span><span class="pun">]{</span><span class="pln">article</span><span class="pun">}</span><span class="pln">
+
+\makeatletter
+\newif\if@nofloats
+\def\AllowFloats</span><span class="pun">{</span><span class="pln">\global\let\if@nofloats\iffalse</span><span class="pun">}</span><span class="pln">
+\def\DeferAllFloats</span><span class="pun">{</span><span class="pln">\global\let\if@nofloats\iftrue\@floatplacement</span><span class="pun">}</span><span class="pln">
+\AllowFloats
+\AtEndDocument\AllowFloats
+
+\def\@floatplacement</span><span class="pun">{%</span><span class="pln">
+ \if@nofloats
+   \global\@topnum\z</span><span class="pun">@</span><span class="pln">
+    </span><span class="pun">%</span><span class="pln"> </span><span class="typ">Textpage</span><span class="pln"> bit</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">global</span><span class="pun">:</span><span class="pln">
+   \global\@toproom \z</span><span class="pun">@</span><span class="pln">
+   \global\@botnum  \z</span><span class="pun">@</span><span class="pln">
+   \global\@botroom \z</span><span class="pun">@</span><span class="pln">
+   \global\@colnum  \z</span><span class="pun">@</span><span class="pln">
+    </span><span class="pun">%</span><span class="pln"> </span><span class="typ">Floatpage</span><span class="pln"> bit</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">local</span><span class="pun">:</span><span class="pln">
+   \@fpmin   </span><span class="lit">1.1</span><span class="pln">\@colht
+ \else
+   \global\@topnum\c</span><span class="lit">@topnumber</span><span class="pln">
+    </span><span class="pun">%</span><span class="pln"> </span><span class="typ">Textpage</span><span class="pln"> bit</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">global</span><span class="pun">:</span><span class="pln">
+   \global\@toproom \topfraction\@colht
+   \global\@botnum  \c</span><span class="lit">@bottomnumber</span><span class="pln">
+   \global\@botroom \bottomfraction\@colht
+   \global\@colnum  \c</span><span class="lit">@totalnumber</span><span class="pln">
+    </span><span class="pun">%</span><span class="pln"> </span><span class="typ">Floatpage</span><span class="pln"> bit</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">local</span><span class="pun">:</span><span class="pln">
+   \@fpmin   \floatpagefraction\@colht
+ \fi
+</span><span class="pun">}</span><span class="pln">
+
+\def \@dblfloatplacement </span><span class="pun">{%</span><span class="pln">
+ \if@nofloats
+  \global \@dbltopnum \z</span><span class="pun">@</span><span class="pln">
+  \global \@dbltoproom \z</span><span class="pun">@</span><span class="pln">
+  \@textmin \@colht
+  \@fpmin </span><span class="lit">1.1</span><span class="pln">\textheight
+ \else
+  \global \@dbltopnum \c</span><span class="lit">@dbltopnumber</span><span class="pln">
+  \global \@dbltoproom \dbltopfraction\@colht
+  \@textmin \@colht
+  \advance \@textmin </span><span class="pun">-</span><span class="pln">\@dbltoproom
+  \@fpmin \dblfloatpagefraction\textheight
+  \@fptop \@dblfptop
+  \@fpsep \@dblfpsep
+  \@fpbot \@dblfpbot
+ \fi
+</span><span class="pun">}</span><span class="pln">
+\makeatother
+
+</span><span class="pun">%%%</span><span class="pln"> remainder </span><span class="kwd">is</span><span class="pln"> </span><span class="kwd">for</span><span class="pln"> testing
+
+\usepackage</span><span class="pun">{</span><span class="pln">lipsum</span><span class="pun">}</span><span class="pln">
+\newcommand\A</span><span class="kwd">float</span><span class="pun">[</span><span class="lit">1</span><span class="pun">]{</span><span class="pln">\begin</span><span class="pun">{</span><span class="pln">figure</span><span class="pun">}</span><span class="pln">A </span><span class="kwd">float</span><span class="pln">\hrulefill\caption</span><span class="pun">{#</span><span class="lit">1</span><span class="pun">}</span><span class="pln">\end</span><span class="pun">{</span><span class="pln">figure</span><span class="pun">}}</span><span class="pln">
+\newcommand\W</span><span class="kwd">float</span><span class="pun">[</span><span class="lit">1</span><span class="pun">]{</span><span class="pln">\begin</span><span class="pun">{</span><span class="pln">figure</span><span class="pun">*}</span><span class="pln">A wide </span><span class="kwd">float</span><span class="pln">\hrulefill\caption</span><span class="pun">{#</span><span class="lit">1</span><span class="pun">}</span><span class="pln">\end</span><span class="pun">{</span><span class="pln">figure</span><span class="pun">*}}</span><span class="pln">
+
+\begin</span><span class="pun">{</span><span class="pln">document</span><span class="pun">}</span><span class="pln">
+
+\lipsum</span><span class="pun">[</span><span class="lit">1</span><span class="pun">]</span><span class="pln">
+
+\A</span><span class="kwd">float</span><span class="pun">{</span><span class="pln">A</span><span class="pun">}</span><span class="pln">
+\W</span><span class="kwd">float</span><span class="pun">{</span><span class="pln">B</span><span class="pun">}</span><span class="pln">
+
+\DeferAllFloats
+\A</span><span class="kwd">float</span><span class="pun">{</span><span class="pln">C</span><span class="pun">}</span><span class="pln">
+
+\lipsum</span><span class="pun">[</span><span class="lit">2</span><span class="pun">-</span><span class="lit">21</span><span class="pun">]</span><span class="pln">
+
+
+XXXX </span><span class="pun">---</span><span class="pln"> here we allow floats again </span><span class="pun">---</span><span class="pln">
+
+\AllowFloats
+
+\lipsum</span><span class="pun">[</span><span class="lit">3</span><span class="pun">-</span><span class="lit">10</span><span class="pun">]</span><span class="pln">
+
+\end</span><span class="pun">{</span><span class="pln">document</span><span class="pun">}</span></pre>					</div>
+					</div>
+					<div class="spacing"></div>
+										<div class="similar-answer-body">
+					<p class="post_d"><author>By <a href="http://www.scriptscoop.net/profile/5072/gonzalo-medina" rel="nofollow">Gonzalo Medina</a></author></p>
+					<div class="similar-answer">
+					<p>I had to provide a different answer since when I tried to edit my previous answer to include the new code, the 30.000 character limit was exceeded.</p><p>A little modification suggested in a comment: some information for chapters is automatically included in the LoF (LoT, resp.) only for those chapters containing figures (tables, resp.).</p><pre class="prettyprint prettyprinted"><span class="pln">\documentclass</span><span class="pun">[</span><span class="pln">a4paper</span><span class="pun">,</span><span class="lit">11pt</span><span class="pun">,</span><span class="pln">twoside</span><span class="pun">,</span><span class="pln">openright</span><span class="pun">]{</span><span class="pln">memoir</span><span class="pun">}</span><span class="pln">
+\usepackage</span><span class="pun">{</span><span class="pln">fixltx2e</span><span class="pun">}</span><span class="pln">
+
+\usepackage</span><span class="pun">[</span><span class="pln">english</span><span class="pun">]{</span><span class="pln">babel</span><span class="pun">}</span><span class="pln">
+
+\usepackage</span><span class="pun">[</span><span class="pln">T1</span><span class="pun">]{</span><span class="pln">fontenc</span><span class="pun">}</span><span class="pln">
+\usepackage</span><span class="pun">{</span><span class="pln">ae</span><span class="pun">,</span><span class="pln">aecompl</span><span class="pun">}</span><span class="pln">
+\usepackage</span><span class="pun">[</span><span class="pln">utf8</span><span class="pun">]{</span><span class="pln">inputenx</span><span class="pun">}</span><span class="pln">
+
+\usepackage</span><span class="pun">{</span><span class="kwd">float</span><span class="pun">}</span><span class="pln">
+\usepackage</span><span class="pun">{</span><span class="pln">graphicx</span><span class="pun">}</span><span class="pln">
+
+\setlrmargins</span><span class="pun">{*}{*}{</span><span class="lit">1</span><span class="pun">}</span><span class="pln">
+\setulmargins</span><span class="pun">{*}{*}{</span><span class="lit">1</span><span class="pun">}</span><span class="pln">
+\checkandfixthelayout</span><span class="pun">[</span><span class="pln">nearest</span><span class="pun">]</span><span class="pln">
+
+\usepackage</span><span class="pun">{</span><span class="pln">color</span><span class="pun">}</span><span class="pln">
+\usepackage</span><span class="pun">{</span><span class="pln">xcolor</span><span class="pun">}</span><span class="pln">
+
+\usepackage</span><span class="pun">{</span><span class="pln">mdframed</span><span class="pun">}</span><span class="pln">   
+\usepackage</span><span class="pun">{</span><span class="pln">mathtools</span><span class="pun">}</span><span class="pln">
+\usepackage</span><span class="pun">{</span><span class="pln">hyphenat</span><span class="pun">}</span><span class="pln">       </span><span class="pun">%</span><span class="pln"> I </span><span class="kwd">use</span><span class="pln"> it to prevent hyphenation of table of contents items
+\usepackage</span><span class="pun">{</span><span class="pln">refcount</span><span class="pun">}</span><span class="pln">
+\usepackage</span><span class="pun">{</span><span class="pln">tikz</span><span class="pun">}</span><span class="pln">
+\usetikzlibrary</span><span class="pun">{</span><span class="pln">calc</span><span class="pun">}</span><span class="pln">
+</span><span class="pun">%%%</span><span class="pln"> </span><span class="typ">Do</span><span class="pln"> </span><span class="kwd">not</span><span class="pln"> include titletoc here </span><span class="pun">-</span><span class="pln"> </span><span class="kwd">do</span><span class="pln"> it at the </span><span class="kwd">end</span><span class="pln"> of the </span><span class="str">"Pretty TOC"</span><span class="pln"> </span><span class="pun">(</span><span class="pln">very important</span><span class="pun">!)</span><span class="pln">
+</span><span class="pun">%</span><span class="pln"> WHY</span><span class="pun">?</span><span class="pln"> </span><span class="typ">Because</span><span class="pln"> </span><span class="kwd">then</span><span class="pln"> </span><span class="kwd">in</span><span class="pln"> the </span><span class="typ">Part</span><span class="pln"> TOC</span><span class="pun">,</span><span class="pln"> the </span><span class="kwd">next</span><span class="pln"> part will be displayed </span><span class="kwd">in</span><span class="pln"> the very </span><span class="kwd">end</span><span class="pln"> of that </span><span class="typ">Part</span><span class="pln"> TOC</span><span class="pun">!</span><span class="pln"> </span><span class="typ">Of</span><span class="pln"> course</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">this</span><span class="pln"> will </span><span class="kwd">not</span><span class="pln"> happen </span><span class="kwd">in</span><span class="pln"> the very </span><span class="kwd">last</span><span class="pln"> </span><span class="typ">Part</span><span class="pln"> TOC because there </span><span class="kwd">is</span><span class="pln"> </span><span class="kwd">no</span><span class="pln"> part after that</span><span class="pun">...</span><span class="pln">
+</span><span class="pun">%</span><span class="pln"> \usepackage</span><span class="pun">{</span><span class="pln">titletoc</span><span class="pun">}</span><span class="pln">             
+
+
+</span><span class="pun">%%%</span><span class="pln"> </span><span class="typ">Pretty</span><span class="pln"> TOC
+</span><span class="pun">%%%%%</span><span class="pln"> adapted </span><span class="kwd">from</span><span class="pln"> http</span><span class="pun">:</span><span class="com">//tex.stackexchange.com/questions/35825/pretty-table-of-contents/35835</span><span class="pln">
+</span><span class="pun">%</span><span class="pln"> a modification of the leftbar environment </span><span class="kwd">defined</span><span class="pln"> </span><span class="kwd">by</span><span class="pln"> the framed </span><span class="kwd">package</span><span class="pln">
+</span><span class="pun">%</span><span class="pln"> will be used to place a vertical colored bar separating the page number </span><span class="kwd">and</span><span class="pln"> the
+</span><span class="pun">%</span><span class="pln"> title </span><span class="kwd">in</span><span class="pln"> chapter entries
+\renewenvironment</span><span class="pun">{</span><span class="pln">leftbar</span><span class="pun">}{%</span><span class="pln">
+  \def\FrameCommand</span><span class="pun">{</span><span class="pln">\textcolor</span><span class="pun">{</span><span class="pln">green</span><span class="pun">}{</span><span class="pln">\vrule width </span><span class="lit">1.5pt</span><span class="pln"> depth </span><span class="lit">0pt</span><span class="pun">}</span><span class="pln">\hspace</span><span class="pun">*{</span><span class="lit">15pt</span><span class="pun">}}%</span><span class="pln">
+  \MakeFramed</span><span class="pun">{</span><span class="pln">\advance\hsize</span><span class="pun">-</span><span class="pln">\width\FrameRestore</span><span class="pun">}}%</span><span class="pln">
+ </span><span class="pun">{</span><span class="pln">\endMakeFramed</span><span class="pun">}</span><span class="pln">
+
+\makeatletter
+
+
+</span><span class="pun">%</span><span class="pln"> a command to circle the part numbers
+\newcommand\Circle</span><span class="pun">[</span><span class="lit">1</span><span class="pun">]{</span><span class="pln">\tikz</span><span class="pun">[</span><span class="pln">overlay</span><span class="pun">,</span><span class="pln">remember picture</span><span class="pun">]</span><span class="pln"> 
+  \node</span><span class="pun">[</span><span class="pln">draw</span><span class="pun">=</span><span class="pln">blue</span><span class="pun">,</span><span class="pln">circle</span><span class="pun">,</span><span class="pln"> text width</span><span class="pun">=</span><span class="lit">18pt</span><span class="pun">,</span><span class="pln">line width</span><span class="pun">=</span><span class="lit">1pt</span><span class="pun">,</span><span class="pln">align</span><span class="pun">=</span><span class="pln">center</span><span class="pun">]</span><span class="pln"> </span><span class="pun">{#</span><span class="lit">1</span><span class="pun">};}</span><span class="pln">
+
+</span><span class="pun">%</span><span class="pln"> redefinitions </span><span class="kwd">for</span><span class="pln"> part entries
+\renewcommand\cftpartfont</span><span class="pun">{</span><span class="pln">\Large\sffamily\bfseries</span><span class="pun">}</span><span class="pln">
+\renewcommand\partnumberline</span><span class="pun">[</span><span class="lit">1</span><span class="pun">]{%</span><span class="pln">
+    \hbox to \textwidth</span><span class="pun">{</span><span class="pln">\hss\Circle</span><span class="pun">{</span><span class="pln">\textcolor</span><span class="pun">{</span><span class="pln">red</span><span class="pun">}{#</span><span class="lit">1</span><span class="pun">}}</span><span class="pln">\hss</span><span class="pun">}%</span><span class="pln">
+  \vskip </span><span class="lit">3.5ex</span><span class="pln">\color</span><span class="pun">{</span><span class="pln">cyan</span><span class="pun">}}</span><span class="pln">
+
+\renewcommand</span><span class="pun">*{</span><span class="pln">\l</span><span class="lit">@part</span><span class="pun">}[</span><span class="lit">2</span><span class="pun">]{%</span><span class="pln">
+  \ifnum \c</span><span class="lit">@tocdepth</span><span class="pln"> </span><span class="pun">&gt;-</span><span class="lit">2</span><span class="pln">\relax
+    \cftpartbreak
+    \begingroup
+      </span><span class="pun">{</span><span class="pln">\interlinepenalty\@M
+       \leavevmode
+       \settowidth</span><span class="pun">{</span><span class="pln">\@tempdima</span><span class="pun">}{</span><span class="pln">\cftpartfont\cftpartname</span><span class="pun">}%</span><span class="pln">
+       \addtolength</span><span class="pun">{</span><span class="pln">\@tempdima</span><span class="pun">}{</span><span class="pln">\cftpartnumwidth</span><span class="pun">}%</span><span class="pln">
+       \let\@cftbsnum \cftpartpresnum
+       \let\@cftasnum \cftpartaftersnum
+       \let\@cftasnumb \cftpartaftersnumb
+       \advance\memRTLleftskip\@tempdima \null\nobreak\hskip </span><span class="pun">-</span><span class="pln">\memRTLleftskip
+       \centering</span><span class="pun">{</span><span class="pln">\cftpartfont</span><span class="com">#1}\par%</span><span class="pln">
+       </span><span class="pun">}</span><span class="pln">
+      \nobreak
+        \global\@nobreaktrue
+        \everypar</span><span class="pun">{</span><span class="pln">\global\@nobreakfalse\everypar</span><span class="pun">{}}%</span><span class="pln">
+    \endgroup
+  \fi</span><span class="pun">}</span><span class="pln">
+
+
+</span><span class="pun">%</span><span class="pln"> redefinitions </span><span class="kwd">for</span><span class="pln"> chapter entries
+\renewcommand\chapternumberline</span><span class="pun">[</span><span class="lit">1</span><span class="pun">]{</span><span class="pln">\mbox</span><span class="pun">{</span><span class="pln">\small\@chapapp</span><span class="pun">~#</span><span class="lit">1</span><span class="pun">}</span><span class="pln">\par\noindent\Large</span><span class="pun">}</span><span class="pln">
+\renewcommand\cftchapterfont</span><span class="pun">{</span><span class="pln">\sffamily</span><span class="pun">}</span><span class="pln">
+\cftsetindents</span><span class="pun">{</span><span class="pln">chapter</span><span class="pun">}{</span><span class="lit">0pt</span><span class="pun">}{</span><span class="lit">0em</span><span class="pun">}</span><span class="pln">
+\renewcommand\cftchapterpagefont</span><span class="pun">{</span><span class="pln">\large\sffamily\bfseries\color</span><span class="pun">{</span><span class="pln">blue</span><span class="pun">}}</span><span class="pln">
+
+\newcommand</span><span class="pun">*{</span><span class="pln">\l</span><span class="lit">@mychap</span><span class="pun">}[</span><span class="lit">3</span><span class="pun">]{%</span><span class="pln">
+  \def\@chapapp</span><span class="pun">{</span><span class="pln">\large\color</span><span class="pun">{</span><span class="pln">cyan</span><span class="pun">}#</span><span class="lit">3</span><span class="pun">}</span><span class="pln">
+  \vskip1ex</span><span class="pun">%</span><span class="pln">
+  \par\noindent\begin</span><span class="pun">{</span><span class="pln">minipage</span><span class="pun">}{</span><span class="pln">\textwidth</span><span class="pun">}%</span><span class="pln">
+  \parbox</span><span class="pun">{</span><span class="lit">4.5em</span><span class="pun">}{%</span><span class="pln">
+    \hfill</span><span class="pun">{</span><span class="pln">\cftchapterpagefont</span><span class="com">#2}%</span><span class="pln">
+  </span><span class="pun">}</span><span class="pln">\hspace</span><span class="pun">*{</span><span class="lit">1.5em</span><span class="pun">}%</span><span class="pln">
+  \parbox</span><span class="pun">{</span><span class="pln">\dimexpr\textwidth</span><span class="pun">-</span><span class="lit">4.5em</span><span class="pun">-</span><span class="lit">15pt</span><span class="pln">\relax</span><span class="pun">}{%</span><span class="pln">
+    \leftbar\cftchapterfont</span><span class="pun">{</span><span class="pln">\color</span><span class="pun">{</span><span class="pln">red</span><span class="pun">}#</span><span class="lit">1</span><span class="pun">}</span><span class="pln">\hspace</span><span class="pun">{</span><span class="lit">1sp</span><span class="pun">}</span><span class="pln">\endleftbar</span><span class="pun">%</span><span class="pln">
+  </span><span class="pun">}%</span><span class="pln">
+  \end</span><span class="pun">{</span><span class="pln">minipage</span><span class="pun">}</span><span class="pln">\par</span><span class="pun">%</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+\renewcommand</span><span class="pun">*{</span><span class="pln">\l</span><span class="lit">@chapter</span><span class="pun">}[</span><span class="lit">2</span><span class="pun">]{%</span><span class="pln">
+  \l</span><span class="lit">@mychap</span><span class="pun">{#</span><span class="lit">1</span><span class="pun">}{#</span><span class="lit">2</span><span class="pun">}{</span><span class="pln">\chaptername</span><span class="pun">}%</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+\renewcommand</span><span class="pun">*{</span><span class="pln">\l</span><span class="lit">@appendix</span><span class="pun">}[</span><span class="lit">2</span><span class="pun">]{%</span><span class="pln">
+  \l</span><span class="lit">@mychap</span><span class="pun">{#</span><span class="lit">1</span><span class="pun">}{#</span><span class="lit">2</span><span class="pun">}{</span><span class="pln">\appendixname</span><span class="pun">}%</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+</span><span class="pun">%</span><span class="pln"> redefinitions </span><span class="kwd">for</span><span class="pln"> section entries
+\renewcommand\cftsectionfont</span><span class="pun">{</span><span class="pln">\sffamily\color</span><span class="pun">{</span><span class="pln">black</span><span class="pun">}}</span><span class="pln">
+\renewcommand\cftsectionpagefont</span><span class="pun">{</span><span class="pln">\sffamily\itshape\color</span><span class="pun">{</span><span class="pln">blue</span><span class="pun">}}</span><span class="pln">
+\renewcommand\cftsectionleader</span><span class="pun">{</span><span class="pln">\nobreak</span><span class="pun">}</span><span class="pln">
+\renewcommand\cftsectiondotsep</span><span class="pun">{</span><span class="pln">\cftnodots</span><span class="pun">}</span><span class="pln">
+\renewcommand\cftsectionafterpnum</span><span class="pun">{</span><span class="pln">\hspace</span><span class="pun">*{</span><span class="pln">\fill</span><span class="pun">}}</span><span class="pln">
+\setlength\cftsectionnumwidth</span><span class="pun">{</span><span class="lit">12em</span><span class="pun">}</span><span class="pln">
+\cftsetindents</span><span class="pun">{</span><span class="pln">section</span><span class="pun">}{</span><span class="lit">6em</span><span class="pun">}{</span><span class="lit">3em</span><span class="pun">}</span><span class="pln">
+\renewcommand\cftsectionformatpnum</span><span class="pun">[</span><span class="lit">1</span><span class="pun">]{%</span><span class="pln">
+  \hskip1em\hbox to \@pnumwidth</span><span class="pun">{{</span><span class="pln">\cftsectionpagefont </span><span class="com">#1\hfill}}}</span><span class="pln">
+
+</span><span class="pun">%</span><span class="pln"> redefinitions </span><span class="kwd">for</span><span class="pln"> subsection entries
+\renewcommand\cftsubsectionfont</span><span class="pun">{</span><span class="pln">\sffamily\color</span><span class="pun">{</span><span class="pln">black</span><span class="pun">}}</span><span class="pln">
+\renewcommand\cftsubsectionpagefont</span><span class="pun">{</span><span class="pln">\sffamily\itshape\color</span><span class="pun">{</span><span class="pln">blue</span><span class="pun">}}</span><span class="pln">
+\renewcommand\cftsubsectionleader</span><span class="pun">{</span><span class="pln">\nobreak</span><span class="pun">}</span><span class="pln">
+\renewcommand\cftsubsectiondotsep</span><span class="pun">{</span><span class="pln">\cftnodots</span><span class="pun">}</span><span class="pln">
+\renewcommand\cftsubsectionafterpnum</span><span class="pun">{</span><span class="pln">\hspace</span><span class="pun">*{</span><span class="pln">\fill</span><span class="pun">}}</span><span class="pln">
+\setlength\cftsubsectionnumwidth</span><span class="pun">{</span><span class="lit">12em</span><span class="pun">}</span><span class="pln">
+\cftsetindents</span><span class="pun">{</span><span class="pln">subsection</span><span class="pun">}{</span><span class="lit">9em</span><span class="pun">}{</span><span class="lit">3em</span><span class="pun">}</span><span class="pln">
+\renewcommand\cftsubsectionformatpnum</span><span class="pun">[</span><span class="lit">1</span><span class="pun">]{%</span><span class="pln">
+  \hskip1em\hbox to \@pnumwidth</span><span class="pun">{{</span><span class="pln">\cftsubsectionpagefont </span><span class="com">#1\hfill}}}</span><span class="pln">
+
+</span><span class="pun">%%%%</span><span class="pln"> </span><span class="typ">End</span><span class="pln"> of </span><span class="typ">Pretty</span><span class="pln"> </span><span class="typ">ToC</span><span class="pln">
+
+\settocdepth</span><span class="pun">{</span><span class="pln">subsection</span><span class="pun">}</span><span class="pln">
+\setsecnumdepth</span><span class="pun">{</span><span class="pln">subsection</span><span class="pun">}</span><span class="pln">
+
+</span><span class="pun">%</span><span class="pln"> redefinitions </span><span class="kwd">for</span><span class="pln"> figure entries
+\renewcommand\cftfigurefont</span><span class="pun">{</span><span class="pln">\sffamily\color</span><span class="pun">{</span><span class="pln">black</span><span class="pun">}}</span><span class="pln">
+\renewcommand\cftfigurepagefont</span><span class="pun">{</span><span class="pln">\sffamily\itshape\color</span><span class="pun">{</span><span class="pln">blue</span><span class="pun">}}</span><span class="pln">
+\renewcommand\cftfigureleader</span><span class="pun">{</span><span class="pln">\nobreak</span><span class="pun">}</span><span class="pln">
+\renewcommand\cftfiguredotsep</span><span class="pun">{</span><span class="pln">\cftnodots</span><span class="pun">}</span><span class="pln">
+\renewcommand\cftfigureafterpnum</span><span class="pun">{</span><span class="pln">\hspace</span><span class="pun">*{</span><span class="pln">\fill</span><span class="pun">}}</span><span class="pln">
+\setlength\cftfigurenumwidth</span><span class="pun">{</span><span class="lit">12em</span><span class="pun">}</span><span class="pln">
+\cftsetindents</span><span class="pun">{</span><span class="pln">figure</span><span class="pun">}{</span><span class="lit">6em</span><span class="pun">}{</span><span class="lit">3em</span><span class="pun">}</span><span class="pln">
+\renewcommand\cftfigureformatpnum</span><span class="pun">[</span><span class="lit">1</span><span class="pun">]{%</span><span class="pln">
+  \hskip1em\hbox to \@pnumwidth</span><span class="pun">{{</span><span class="pln">\cftfigurepagefont </span><span class="com">#1\hfill}}}</span><span class="pln">
+
+</span><span class="pun">%</span><span class="pln"> redefinitions </span><span class="kwd">for</span><span class="pln"> table entries
+\renewcommand\cfttablefont</span><span class="pun">{</span><span class="pln">\sffamily\color</span><span class="pun">{</span><span class="pln">black</span><span class="pun">}}</span><span class="pln">
+\renewcommand\cfttablepagefont</span><span class="pun">{</span><span class="pln">\sffamily\itshape\color</span><span class="pun">{</span><span class="pln">blue</span><span class="pun">}}</span><span class="pln">
+\renewcommand\cfttableleader</span><span class="pun">{</span><span class="pln">\nobreak</span><span class="pun">}</span><span class="pln">
+\renewcommand\cfttabledotsep</span><span class="pun">{</span><span class="pln">\cftnodots</span><span class="pun">}</span><span class="pln">
+\renewcommand\cfttableafterpnum</span><span class="pun">{</span><span class="pln">\hspace</span><span class="pun">*{</span><span class="pln">\fill</span><span class="pun">}}</span><span class="pln">
+\setlength\cfttablenumwidth</span><span class="pun">{</span><span class="lit">12em</span><span class="pun">}</span><span class="pln">
+\cftsetindents</span><span class="pun">{</span><span class="pln">table</span><span class="pun">}{</span><span class="lit">6em</span><span class="pun">}{</span><span class="lit">3em</span><span class="pun">}</span><span class="pln">
+\renewcommand\cfttableformatpnum</span><span class="pun">[</span><span class="lit">1</span><span class="pun">]{%</span><span class="pln">
+  \hskip1em\hbox to \@pnumwidth</span><span class="pun">{{</span><span class="pln">\cfttablepagefont </span><span class="com">#1\hfill}}}</span><span class="pln">
+
+\usepackage</span><span class="pun">{</span><span class="pln">etoolbox</span><span class="pun">}</span><span class="pln">  </span><span class="pun">%</span><span class="pln"> </span><span class="kwd">or</span><span class="pln"> xpatch
+
+</span><span class="pun">%</span><span class="pln"> the following code adds chapter information </span><span class="kwd">into</span><span class="pln"> the </span><span class="typ">LoF</span><span class="pln"> 
+</span><span class="pun">%</span><span class="pln"> </span><span class="kwd">for</span><span class="pln"> chapters containing figures
+</span><span class="pun">%</span><span class="pln"> initial definitions of the chapter info </span><span class="pun">(</span><span class="pln">name </span><span class="kwd">and</span><span class="pln"> number</span><span class="pun">)</span><span class="pln">
+\def\thischaptertitle</span><span class="pun">{}</span><span class="pln">\def\thischapternumber</span><span class="pun">{}</span><span class="pln">
+\newtoggle</span><span class="pun">{</span><span class="pln">noFigs</span><span class="pun">}</span><span class="pln">
+
+\apptocmd</span><span class="pun">{</span><span class="pln">\@chapter</span><span class="pun">}%</span><span class="pln">
+  </span><span class="pun">{</span><span class="pln">\g</span><span class="kwd">def</span><span class="pln">\thischaptertitle</span><span class="pun">{#</span><span class="lit">2</span><span class="pun">}</span><span class="pln">\g</span><span class="kwd">def</span><span class="pln">\thischapternumber</span><span class="pun">{</span><span class="pln">\thechapter</span><span class="pun">}%</span><span class="pln">
+    \global\toggletrue</span><span class="pun">{</span><span class="pln">noFigs</span><span class="pun">}}{}{}</span><span class="pln">
+
+</span><span class="pun">%</span><span class="pln"> the figure environment does the job</span><span class="pun">:</span><span class="pln"> the first time it </span><span class="kwd">is</span><span class="pln"> used after a \chapter command</span><span class="pun">,</span><span class="pln"> 
+</span><span class="pun">%</span><span class="pln"> it writes the information of the chapter to the </span><span class="typ">LoF</span><span class="pln">
+\AtBeginDocument</span><span class="pun">{%</span><span class="pln">
+  \AtBeginEnvironment</span><span class="pun">{</span><span class="pln">figure</span><span class="pun">}{%</span><span class="pln">
+    \iftoggle</span><span class="pun">{</span><span class="pln">noFigs</span><span class="pun">}{</span><span class="pln">
+      \addtocontents</span><span class="pun">{</span><span class="pln">lof</span><span class="pun">}{</span><span class="pln">\protect\contentsline </span><span class="pun">{</span><span class="pln">chapter</span><span class="pun">}%</span><span class="pln">
+        </span><span class="pun">{</span><span class="pln">\protect\numberline </span><span class="pun">{</span><span class="pln">\large\color</span><span class="pun">{</span><span class="pln">cyan</span><span class="pun">}</span><span class="pln">\@chapapp</span><span class="pun">~</span><span class="pln">\thischapternumber</span><span class="pun">}{</span><span class="pln">\thischaptertitle</span><span class="pun">}}{}{}</span><span class="pln"> </span><span class="pun">}</span><span class="pln">
+      \global\togglefalse</span><span class="pun">{</span><span class="pln">noFigs</span><span class="pun">}</span><span class="pln">
+    </span><span class="pun">}{}</span><span class="pln">
+  </span><span class="pun">}%</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+</span><span class="pun">%</span><span class="pln"> the following code adds chapter information </span><span class="kwd">into</span><span class="pln"> the </span><span class="typ">LoT</span><span class="pln"> 
+</span><span class="pun">%</span><span class="pln"> </span><span class="kwd">for</span><span class="pln"> chapters containing tables
+\newtoggle</span><span class="pun">{</span><span class="pln">noTabs</span><span class="pun">}</span><span class="pln">
+
+\apptocmd</span><span class="pun">{</span><span class="pln">\@chapter</span><span class="pun">}%</span><span class="pln">
+  </span><span class="pun">{</span><span class="pln">\g</span><span class="kwd">def</span><span class="pln">\thischaptertitle</span><span class="pun">{#</span><span class="lit">2</span><span class="pun">}</span><span class="pln">\g</span><span class="kwd">def</span><span class="pln">\thischapternumber</span><span class="pun">{</span><span class="pln">\thechapter</span><span class="pun">}%</span><span class="pln">
+    \global\toggletrue</span><span class="pun">{</span><span class="pln">noTabs</span><span class="pun">}}{}{}</span><span class="pln">
+
+</span><span class="pun">%</span><span class="pln"> the table environment does the job</span><span class="pun">:</span><span class="pln"> the first time it </span><span class="kwd">is</span><span class="pln"> used after a \chapter command</span><span class="pun">,</span><span class="pln"> 
+</span><span class="pun">%</span><span class="pln"> it writes the information of the chapter to the </span><span class="typ">LoT</span><span class="pln">
+\AtBeginDocument</span><span class="pun">{%</span><span class="pln">
+  \AtBeginEnvironment</span><span class="pun">{</span><span class="pln">table</span><span class="pun">}{%</span><span class="pln">
+    \iftoggle</span><span class="pun">{</span><span class="pln">noTabs</span><span class="pun">}{</span><span class="pln">
+      \addtocontents</span><span class="pun">{</span><span class="pln">lot</span><span class="pun">}{</span><span class="pln">\protect\contentsline </span><span class="pun">{</span><span class="pln">chapter</span><span class="pun">}%</span><span class="pln">
+        </span><span class="pun">{</span><span class="pln">\protect\numberline </span><span class="pun">{</span><span class="pln">\large\color</span><span class="pun">{</span><span class="pln">cyan</span><span class="pun">}</span><span class="pln">\@chapapp</span><span class="pun">~</span><span class="pln">\thischapternumber</span><span class="pun">}{</span><span class="pln">\thischaptertitle</span><span class="pun">}}{}{}</span><span class="pln"> </span><span class="pun">}</span><span class="pln">
+      \global\togglefalse</span><span class="pun">{</span><span class="pln">noTabs</span><span class="pun">}</span><span class="pln">
+    </span><span class="pun">}{}</span><span class="pln">
+  </span><span class="pun">}%</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+</span><span class="pun">%</span><span class="pln"> include after the change above </span><span class="pun">(</span><span class="pln">very important</span><span class="pun">!)</span><span class="pln">
+\usepackage</span><span class="pun">{</span><span class="pln">titletoc</span><span class="pun">}</span><span class="pln">
+
+\def\@endpart</span><span class="pun">{</span><span class="pln">
+</span><span class="pun">%</span><span class="pln">
+  \vfil
+  \textcolor</span><span class="pun">{</span><span class="pln">red</span><span class="pun">}{</span><span class="pln">\hrule height </span><span class="lit">1.5</span><span class="pln"> pt</span><span class="pun">}</span><span class="pln">
+\setcounter</span><span class="pun">{</span><span class="pln">tocdepth</span><span class="pun">}{</span><span class="lit">0</span><span class="pun">}</span><span class="pln">
+
+    \startcontents</span><span class="pun">[</span><span class="pln">parts</span><span class="pun">]</span><span class="pln">
+    \printcontents</span><span class="pun">[</span><span class="pln">parts</span><span class="pun">]{}{</span><span class="lit">0</span><span class="pun">}{}</span><span class="pln"> </span><span class="pun">%</span><span class="pln"> change </span><span class="lit">0</span><span class="pln"> to </span><span class="lit">1</span><span class="pln"> etc</span><span class="pun">.</span><span class="pln"> </span><span class="kwd">for</span><span class="pln"> more detail </span><span class="kwd">and</span><span class="pln"> vice versa
+
+\textcolor</span><span class="pun">{</span><span class="pln">red</span><span class="pun">}{</span><span class="pln">\hrule height </span><span class="lit">1.5</span><span class="pln"> pt</span><span class="pun">}</span><span class="pln">
+  \par\bigskip
+  \vfil\newpage
+              \if@twoside
+               \if@openright
+                \null
+                \thispagestyle</span><span class="pun">{</span><span class="pln">empty</span><span class="pun">}%</span><span class="pln">
+                \newpage
+               \fi
+              \fi
+              \if@tempswa
+                \twocolumn
+              \fi</span><span class="pun">}</span><span class="pln">
+\makeatother
+</span><span class="pun">%%%</span><span class="pln">
+
+</span><span class="pun">%</span><span class="pln"> be careful </span><span class="kwd">with</span><span class="pln"> the hyperref </span><span class="kwd">package</span><span class="pun">;</span><span class="pln"> </span><span class="kwd">if</span><span class="pln"> colorlinks </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">then</span><span class="pln"> the </span><span class="pun">(</span><span class="pln">red</span><span class="pun">)</span><span class="pln"> color </span><span class="kwd">in</span><span class="pln"> the chapter text </span><span class="kwd">in</span><span class="pln"> the TOC </span><span class="kwd">and</span><span class="pln">  disappears</span><span class="pun">!</span><span class="pln"> 
+\usepackage</span><span class="pun">{</span><span class="pln">varioref</span><span class="pun">,</span><span class="pln">hyperref</span><span class="pun">}</span><span class="pln">
+\hypersetup</span><span class="pun">{</span><span class="pln">
+    bookmarks</span><span class="pun">=</span><span class="kwd">true</span><span class="pun">,</span><span class="pln">                 </span><span class="pun">%</span><span class="pln"> show bookmarks bar</span><span class="pun">?</span><span class="pln">
+    unicode</span><span class="pun">=</span><span class="kwd">false</span><span class="pun">,</span><span class="pln">                  </span><span class="pun">%</span><span class="pln"> non</span><span class="pun">-</span><span class="typ">Latin</span><span class="pln"> characters </span><span class="kwd">in</span><span class="pln"> </span><span class="typ">Acrobat</span><span class="pun">’</span><span class="pln">s bookmarks
+    pdftoolbar</span><span class="pun">=</span><span class="kwd">true</span><span class="pun">,</span><span class="pln">                </span><span class="pun">%</span><span class="pln"> show </span><span class="typ">Acrobat</span><span class="pun">’</span><span class="pln">s toolbar</span><span class="pun">?</span><span class="pln">
+    pdfmenubar</span><span class="pun">=</span><span class="kwd">true</span><span class="pun">,</span><span class="pln">                </span><span class="pun">%</span><span class="pln"> show </span><span class="typ">Acrobat</span><span class="pun">’</span><span class="pln">s menu</span><span class="pun">?</span><span class="pln">
+    pdffitwindow</span><span class="pun">=</span><span class="kwd">true</span><span class="pln"> </span><span class="pun">,</span><span class="pln">             </span><span class="pun">%</span><span class="pln"> window fit to page </span><span class="kwd">when</span><span class="pln"> opened
+    pdfstartview</span><span class="pun">={</span><span class="typ">FitH</span><span class="pun">},</span><span class="pln">            </span><span class="pun">%</span><span class="pln"> fits the width of the page to the window
+    pdftitle</span><span class="pun">={},</span><span class="pln">                    </span><span class="pun">%</span><span class="pln"> title
+    pdfauthor</span><span class="pun">={},</span><span class="pln">   </span><span class="pun">%</span><span class="pln"> author
+    pdfsubject</span><span class="pun">={},</span><span class="pln">      </span><span class="pun">%</span><span class="pln"> subject of the document
+    pdfnewwindow</span><span class="pun">=</span><span class="kwd">true</span><span class="pun">,</span><span class="pln">              </span><span class="pun">%</span><span class="pln"> links </span><span class="kwd">in</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> window
+    hidelinks</span><span class="pun">=</span><span class="kwd">true</span><span class="pun">,</span><span class="pln">
+    colorlinks</span><span class="pun">=</span><span class="kwd">false</span><span class="pun">,</span><span class="pln">                   </span><span class="pun">%</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">:</span><span class="pln"> boxed links</span><span class="pun">;</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">:</span><span class="pln"> colored links
+    linkcolor</span><span class="pun">=</span><span class="pln">black</span><span class="pun">,</span><span class="pln">                </span><span class="pun">%</span><span class="pln"> color of </span><span class="kwd">internal</span><span class="pln"> links </span><span class="pun">(</span><span class="pln">change box color </span><span class="kwd">with</span><span class="pln"> linkbordercolor</span><span class="pun">)</span><span class="pln">
+    citecolor</span><span class="pun">=</span><span class="pln">black</span><span class="pun">,</span><span class="pln">                </span><span class="pun">%</span><span class="pln"> color of links to bibliography
+    filecolor</span><span class="pun">=</span><span class="pln">black</span><span class="pun">,</span><span class="pln">                </span><span class="pun">%</span><span class="pln"> color of file links
+    urlcolor</span><span class="pun">=</span><span class="pln">aau</span><span class="pun">-</span><span class="pln">purple             </span><span class="pun">%</span><span class="pln"> color of external links
+</span><span class="pun">}</span><span class="pln">
+
+\begin</span><span class="pun">{</span><span class="pln">document</span><span class="pun">}</span><span class="pln">
+
+\frontmatter
+
+    \tableofcontents</span><span class="pun">*</span><span class="pln">
+    \cleardoublepage
+    \listoffigures
+    \cleardoublepage
+    \listoftables
+    \cleardoublepage
+
+\chapter</span><span class="pun">{</span><span class="typ">Foreword</span><span class="pun">}</span><span class="pln">
+</span><span class="typ">Be</span><span class="pln"> careful about the </span><span class="typ">URLs</span><span class="pun">.</span><span class="pln"> </span><span class="typ">Because</span><span class="pln"> the colorlinks </span><span class="kwd">is</span><span class="pln"> </span><span class="kwd">set</span><span class="pln"> to </span><span class="kwd">false</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">in</span><span class="pln"> the hypersetup </span><span class="kwd">in</span><span class="pln"> the preamble</span><span class="pun">),</span><span class="pln"> </span><span class="kwd">this</span><span class="pln"> </span><span class="kwd">is</span><span class="pln"> how the URL will look like</span><span class="pun">:</span><span class="pln"> \newline
+
+\url</span><span class="pun">{</span><span class="pln">http</span><span class="pun">:</span><span class="com">//tex.stackexchange.com/posts/169068/edit} \newline</span><span class="pln">
+
+\noindent
+</span><span class="typ">If</span><span class="pln"> you would like to have the </span><span class="typ">URLs</span><span class="pln"> </span><span class="kwd">in</span><span class="pln"> a specific colour</span><span class="pun">,</span><span class="pln"> you have to manually colour code them</span><span class="pun">:</span><span class="pln"> \newline
+
+</span><span class="pun">{</span><span class="pln">\color</span><span class="pun">{</span><span class="pln">cyan</span><span class="pun">}{</span><span class="pln">\url</span><span class="pun">{</span><span class="pln">http</span><span class="pun">:</span><span class="com">//tex.stackexchange.com/posts/169068/edit}}} \newline</span><span class="pln">
+
+\noindent
+</span><span class="typ">However</span><span class="pun">,</span><span class="pln"> </span><span class="typ">If</span><span class="pln"> you </span><span class="kwd">do</span><span class="pln"> </span><span class="kwd">not</span><span class="pln"> care about the chapter  text colour </span><span class="kwd">in</span><span class="pln"> the TOC </span><span class="pun">(</span><span class="kwd">if</span><span class="pln"> you want it black</span><span class="pun">,</span><span class="pln"> which </span><span class="kwd">is</span><span class="pln"> standard</span><span class="pun">),</span><span class="pln"> </span><span class="kwd">then</span><span class="pln"> the colorlinks can be </span><span class="kwd">set</span><span class="pln"> to </span><span class="kwd">true</span><span class="pun">,</span><span class="pln"> which </span><span class="kwd">then</span><span class="pln"> should colour code the </span><span class="typ">URLs</span><span class="pln"> automatically</span><span class="pun">.</span><span class="pln">
+
+
+\mainmatter
+
+\part</span><span class="pun">{</span><span class="typ">Designing</span><span class="pln"> </span><span class="kwd">with</span><span class="pln"> \TeX\ </span><span class="kwd">and</span><span class="pln"> \LaTeX</span><span class="pun">}</span><span class="pln">
+
+\chapter</span><span class="pun">{</span><span class="pln">A test chapter</span><span class="pun">}</span><span class="pln">
+
+\begin</span><span class="pun">{</span><span class="pln">figure</span><span class="pun">}[</span><span class="pln">H</span><span class="pun">]</span><span class="pln">
+    \caption</span><span class="pun">[(</span><span class="kwd">short</span><span class="pun">)</span><span class="pln"> caption that goes to the LOF</span><span class="pun">.]{(</span><span class="kwd">long</span><span class="pun">)</span><span class="pln"> caption that goes below the figure</span><span class="pun">}</span><span class="pln">
+\end</span><span class="pun">{</span><span class="pln">figure</span><span class="pun">}</span><span class="pln">
+
+\begin</span><span class="pun">{</span><span class="pln">figure</span><span class="pun">}[</span><span class="pln">H</span><span class="pun">]</span><span class="pln">
+    \caption</span><span class="pun">[(</span><span class="kwd">short</span><span class="pun">)</span><span class="pln"> caption that goes to the LOF</span><span class="pun">.]{(</span><span class="kwd">long</span><span class="pun">)</span><span class="pln"> caption that goes below the figure</span><span class="pun">}</span><span class="pln">
+\end</span><span class="pun">{</span><span class="pln">figure</span><span class="pun">}</span><span class="pln">
+
+\begin</span><span class="pun">{</span><span class="pln">figure</span><span class="pun">}[</span><span class="pln">H</span><span class="pun">]</span><span class="pln">
+    \caption</span><span class="pun">[(</span><span class="kwd">short</span><span class="pun">)</span><span class="pln"> caption that goes to the LOF</span><span class="pun">.]{(</span><span class="kwd">long</span><span class="pun">)</span><span class="pln"> caption that goes below the figure</span><span class="pun">}</span><span class="pln">
+\end</span><span class="pun">{</span><span class="pln">figure</span><span class="pun">}</span><span class="pln">
+
+\begin</span><span class="pun">{</span><span class="pln">figure</span><span class="pun">}[</span><span class="pln">H</span><span class="pun">]</span><span class="pln">
+    \caption</span><span class="pun">[(</span><span class="kwd">short</span><span class="pun">)</span><span class="pln"> caption that goes to the LOF</span><span class="pun">.]{(</span><span class="kwd">long</span><span class="pun">)</span><span class="pln"> caption that goes below the figure</span><span class="pun">}</span><span class="pln">
+\end</span><span class="pun">{</span><span class="pln">figure</span><span class="pun">}</span><span class="pln">
+
+\begin</span><span class="pun">{</span><span class="pln">figure</span><span class="pun">}[</span><span class="pln">H</span><span class="pun">]</span><span class="pln">
+    \caption</span><span class="pun">[(</span><span class="kwd">short</span><span class="pun">)</span><span class="pln"> caption that goes to the LOF</span><span class="pun">.]{(</span><span class="kwd">long</span><span class="pun">)</span><span class="pln"> caption that goes below the figure</span><span class="pun">}</span><span class="pln">
+\end</span><span class="pun">{</span><span class="pln">figure</span><span class="pun">}</span><span class="pln">
+
+\chapter</span><span class="pun">{</span><span class="typ">Beginning</span><span class="pln"> to learn design </span><span class="kwd">with</span><span class="pln"> \TeX</span><span class="pun">}</span><span class="pln">
+\section</span><span class="pun">{</span><span class="typ">Another</span><span class="pln"> test section</span><span class="pun">}</span><span class="pln">
+\section</span><span class="pun">{</span><span class="typ">Another</span><span class="pln"> test section</span><span class="pun">}</span><span class="pln">
+
+\begin</span><span class="pun">{</span><span class="pln">table</span><span class="pun">}[</span><span class="pln">H</span><span class="pun">]</span><span class="pln">
+    \caption</span><span class="pun">[(</span><span class="kwd">short</span><span class="pun">)</span><span class="pln"> caption that goes to the LOT</span><span class="pun">.]{(</span><span class="kwd">long</span><span class="pun">)</span><span class="pln"> caption that goes below the figure</span><span class="pun">}</span><span class="pln">
+\end</span><span class="pun">{</span><span class="pln">table</span><span class="pun">}</span><span class="pln">
+
+\begin</span><span class="pun">{</span><span class="pln">table</span><span class="pun">}[</span><span class="pln">H</span><span class="pun">]</span><span class="pln">
+    \caption</span><span class="pun">[(</span><span class="kwd">short</span><span class="pun">)</span><span class="pln"> caption that goes to the LOT</span><span class="pun">.]{(</span><span class="kwd">long</span><span class="pun">)</span><span class="pln"> caption that goes below the figure</span><span class="pun">}</span><span class="pln">
+\end</span><span class="pun">{</span><span class="pln">table</span><span class="pun">}</span><span class="pln">
+
+\begin</span><span class="pun">{</span><span class="pln">table</span><span class="pun">}[</span><span class="pln">H</span><span class="pun">]</span><span class="pln">
+    \caption</span><span class="pun">[(</span><span class="kwd">short</span><span class="pun">)</span><span class="pln"> caption that goes to the LOT</span><span class="pun">.]{(</span><span class="kwd">long</span><span class="pun">)</span><span class="pln"> caption that goes below the figure</span><span class="pun">}</span><span class="pln">
+\end</span><span class="pun">{</span><span class="pln">table</span><span class="pun">}</span><span class="pln">
+
+\subsection</span><span class="pun">{</span><span class="pln">A test subsection</span><span class="pun">}</span><span class="pln">
+\section</span><span class="pun">{</span><span class="typ">Another</span><span class="pln"> test section</span><span class="pun">}</span><span class="pln">
+\subsection</span><span class="pun">{</span><span class="pln">A test subsection</span><span class="pun">}</span><span class="pln">
+\subsection</span><span class="pun">{</span><span class="pln">A test subsection </span><span class="kwd">with</span><span class="pln"> a </span><span class="kwd">long</span><span class="pln"> title spanning more than one line </span><span class="kwd">in</span><span class="pln"> the table of contents</span><span class="pun">}</span><span class="pln">
+\section</span><span class="pun">{</span><span class="typ">Another</span><span class="pln"> test section</span><span class="pun">}</span><span class="pln">
+\section</span><span class="pun">{</span><span class="typ">Another</span><span class="pln"> test section</span><span class="pun">}</span><span class="pln">
+\section</span><span class="pun">{</span><span class="typ">Another</span><span class="pln"> test section</span><span class="pun">}</span><span class="pln">
+
+
+
+\chapter</span><span class="pun">{</span><span class="typ">Beginning</span><span class="pln"> to learn design </span><span class="kwd">with</span><span class="pln"> \LaTeX</span><span class="pun">}</span><span class="pln">
+\section</span><span class="pun">{</span><span class="pln">A test section </span><span class="kwd">with</span><span class="pln"> a </span><span class="kwd">long</span><span class="pln"> title spanning more than one line </span><span class="kwd">in</span><span class="pln"> the table of contents</span><span class="pun">}</span><span class="pln">
+\subsection</span><span class="pun">{</span><span class="pln">A test subsection</span><span class="pun">}</span><span class="pln">
+\subsection</span><span class="pun">{</span><span class="typ">Another</span><span class="pln"> test subsection</span><span class="pun">}</span><span class="pln">
+\section</span><span class="pun">{</span><span class="pln">A test section</span><span class="pun">}</span><span class="pln">
+\phantomsection
+\addcontentsline</span><span class="pun">{</span><span class="pln">toc</span><span class="pun">}{</span><span class="pln">section</span><span class="pun">}{</span><span class="typ">Test</span><span class="pln"> unnumbered section</span><span class="pun">}</span><span class="pln">
+\section</span><span class="pun">*{</span><span class="typ">Test</span><span class="pln"> unnumbered section</span><span class="pun">}</span><span class="pln">
+\subsection</span><span class="pun">{</span><span class="pln">A test subsection</span><span class="pun">}</span><span class="pln">
+\section</span><span class="pun">{</span><span class="typ">Another</span><span class="pln"> test section</span><span class="pun">}</span><span class="pln">
+\subsection</span><span class="pun">{</span><span class="pln">A test subsection</span><span class="pun">}</span><span class="pln">
+\subsection</span><span class="pun">{</span><span class="pln">A test subsection</span><span class="pun">}</span><span class="pln">
+\section</span><span class="pun">{</span><span class="typ">Another</span><span class="pln"> test section</span><span class="pun">}</span><span class="pln">
+\section</span><span class="pun">{</span><span class="typ">Another</span><span class="pln"> test section</span><span class="pun">}</span><span class="pln">
+
+
+\newpage\setcounter</span><span class="pun">{</span><span class="pln">page</span><span class="pun">}{</span><span class="lit">123</span><span class="pun">}%</span><span class="pln"> just </span><span class="kwd">for</span><span class="pln"> the example
+
+\part</span><span class="pun">{</span><span class="typ">Designing</span><span class="pln"> </span><span class="kwd">with</span><span class="pln"> HTML</span><span class="pun">}</span><span class="pln">
+
+\chapter</span><span class="pun">{</span><span class="typ">Beginning</span><span class="pln"> to learn design </span><span class="kwd">with</span><span class="pln"> HTML </span><span class="kwd">and</span><span class="pln"> some other text to span more than one line</span><span class="pun">}</span><span class="pln">
+
+\begin</span><span class="pun">{</span><span class="pln">figure</span><span class="pun">}[</span><span class="pln">H</span><span class="pun">]</span><span class="pln">
+    \caption</span><span class="pun">[(</span><span class="kwd">short</span><span class="pun">)</span><span class="pln"> caption that goes to the LOF</span><span class="pun">.]{(</span><span class="kwd">long</span><span class="pun">)</span><span class="pln"> caption that goes below the figure</span><span class="pun">}</span><span class="pln">
+\end</span><span class="pun">{</span><span class="pln">figure</span><span class="pun">}</span><span class="pln">
+
+\begin</span><span class="pun">{</span><span class="pln">figure</span><span class="pun">}[</span><span class="pln">H</span><span class="pun">]</span><span class="pln">
+    \caption</span><span class="pun">[(</span><span class="kwd">short</span><span class="pun">)</span><span class="pln"> caption that goes to the LOF</span><span class="pun">.]{(</span><span class="kwd">long</span><span class="pun">)</span><span class="pln"> caption that goes below the figure</span><span class="pun">}</span><span class="pln">
+\end</span><span class="pun">{</span><span class="pln">figure</span><span class="pun">}</span><span class="pln">
+
+\begin</span><span class="pun">{</span><span class="pln">figure</span><span class="pun">}[</span><span class="pln">H</span><span class="pun">]</span><span class="pln">
+    \caption</span><span class="pun">[(</span><span class="kwd">short</span><span class="pun">)</span><span class="pln"> caption that goes to the LOF</span><span class="pun">.]{(</span><span class="kwd">long</span><span class="pun">)</span><span class="pln"> caption that goes below the figure</span><span class="pun">}</span><span class="pln">
+\end</span><span class="pun">{</span><span class="pln">figure</span><span class="pun">}</span><span class="pln">
+
+\section</span><span class="pun">{</span><span class="typ">Another</span><span class="pln"> test section</span><span class="pun">}</span><span class="pln">
+
+\begin</span><span class="pun">{</span><span class="pln">table</span><span class="pun">}[</span><span class="pln">H</span><span class="pun">]</span><span class="pln">
+    \caption</span><span class="pun">[(</span><span class="kwd">short</span><span class="pun">)</span><span class="pln"> caption that goes to the LOT</span><span class="pun">.]{(</span><span class="kwd">long</span><span class="pun">)</span><span class="pln"> caption that goes below the figure</span><span class="pun">}</span><span class="pln">
+\end</span><span class="pun">{</span><span class="pln">table</span><span class="pun">}</span><span class="pln">
+
+\begin</span><span class="pun">{</span><span class="pln">table</span><span class="pun">}[</span><span class="pln">H</span><span class="pun">]</span><span class="pln">
+    \caption</span><span class="pun">[(</span><span class="kwd">short</span><span class="pun">)</span><span class="pln"> caption that goes to the LOT</span><span class="pun">.]{(</span><span class="kwd">long</span><span class="pun">)</span><span class="pln"> caption that goes below the figure</span><span class="pun">}</span><span class="pln">
+\end</span><span class="pun">{</span><span class="pln">table</span><span class="pun">}</span><span class="pln">
+
+\begin</span><span class="pun">{</span><span class="pln">table</span><span class="pun">}[</span><span class="pln">H</span><span class="pun">]</span><span class="pln">
+    \caption</span><span class="pun">[(</span><span class="kwd">short</span><span class="pun">)</span><span class="pln"> caption that goes to the LOT</span><span class="pun">.]{(</span><span class="kwd">long</span><span class="pun">)</span><span class="pln"> caption that goes below the figure</span><span class="pun">}</span><span class="pln">
+\end</span><span class="pun">{</span><span class="pln">table</span><span class="pun">}</span><span class="pln">
+
+\section</span><span class="pun">{</span><span class="typ">Another</span><span class="pln"> test section</span><span class="pun">}</span><span class="pln">
+\subsection</span><span class="pun">{</span><span class="pln">A test subsection</span><span class="pun">}</span><span class="pln">
+\section</span><span class="pun">{</span><span class="typ">Another</span><span class="pln"> test section </span><span class="kwd">with</span><span class="pln"> a </span><span class="kwd">long</span><span class="pln"> title spanning more than one line </span><span class="kwd">in</span><span class="pln"> the table of contents</span><span class="pun">}</span><span class="pln">
+\subsection</span><span class="pun">{</span><span class="pln">A test subsection</span><span class="pun">}</span><span class="pln">
+\section</span><span class="pun">{</span><span class="typ">Another</span><span class="pln"> test section</span><span class="pun">}</span><span class="pln">
+
+
+
+\chapter</span><span class="pun">{</span><span class="typ">Beginning</span><span class="pln"> to learn design </span><span class="kwd">with</span><span class="pln"> HTML </span><span class="kwd">and</span><span class="pln"> some other text to span more than one line</span><span class="pun">}</span><span class="pln"> 
+\section</span><span class="pun">{</span><span class="typ">Another</span><span class="pln"> test section</span><span class="pun">}</span><span class="pln">
+\section</span><span class="pun">{</span><span class="typ">Another</span><span class="pln"> test section</span><span class="pun">}</span><span class="pln">
+\subsection</span><span class="pun">{</span><span class="pln">A test subsection</span><span class="pun">}</span><span class="pln">
+\subsection</span><span class="pun">{</span><span class="pln">A test subsection </span><span class="kwd">with</span><span class="pln"> a </span><span class="kwd">long</span><span class="pln"> title spanning more than one line </span><span class="kwd">in</span><span class="pln"> the table of contents</span><span class="pun">}</span><span class="pln">
+\section</span><span class="pun">{</span><span class="typ">Another</span><span class="pln"> test section</span><span class="pun">}</span><span class="pln">
+\section</span><span class="pun">{</span><span class="typ">Another</span><span class="pln"> test section</span><span class="pun">}</span><span class="pln">
+\subsection</span><span class="pun">{</span><span class="pln">A test subsection</span><span class="pun">}</span><span class="pln">
+
+
+
+\appendix
+
+\chapter</span><span class="pun">{</span><span class="typ">Test</span><span class="pln"> </span><span class="typ">Appendix</span><span class="pun">}</span><span class="pln">
+\section</span><span class="pun">{</span><span class="typ">Another</span><span class="pln"> test section</span><span class="pun">}</span><span class="pln">
+
+\begin</span><span class="pun">{</span><span class="pln">figure</span><span class="pun">}[</span><span class="pln">H</span><span class="pun">]</span><span class="pln">
+    \caption</span><span class="pun">[(</span><span class="kwd">short</span><span class="pun">)</span><span class="pln"> caption that goes to the LOF</span><span class="pun">.]{(</span><span class="kwd">long</span><span class="pun">)</span><span class="pln"> caption that goes below the figure</span><span class="pun">}</span><span class="pln">
+\end</span><span class="pun">{</span><span class="pln">figure</span><span class="pun">}</span><span class="pln">
+
+\begin</span><span class="pun">{</span><span class="pln">figure</span><span class="pun">}[</span><span class="pln">H</span><span class="pun">]</span><span class="pln">
+    \caption</span><span class="pun">[(</span><span class="kwd">short</span><span class="pun">)</span><span class="pln"> caption that goes to the LOF</span><span class="pun">.]{(</span><span class="kwd">long</span><span class="pun">)</span><span class="pln"> caption that goes below the figure</span><span class="pun">}</span><span class="pln">
+\end</span><span class="pun">{</span><span class="pln">figure</span><span class="pun">}</span><span class="pln">
+
+\begin</span><span class="pun">{</span><span class="pln">figure</span><span class="pun">}[</span><span class="pln">H</span><span class="pun">]</span><span class="pln">
+    \caption</span><span class="pun">[(</span><span class="kwd">short</span><span class="pun">)</span><span class="pln"> caption that goes to the LOF</span><span class="pun">.]{(</span><span class="kwd">long</span><span class="pun">)</span><span class="pln"> caption that goes below the figure</span><span class="pun">}</span><span class="pln">
+\end</span><span class="pun">{</span><span class="pln">figure</span><span class="pun">}</span><span class="pln">
+
+\section</span><span class="pun">{</span><span class="typ">Another</span><span class="pln"> test section </span><span class="kwd">with</span><span class="pln"> a </span><span class="kwd">long</span><span class="pln"> title spanning more than one line </span><span class="kwd">in</span><span class="pln"> the table of contents</span><span class="pun">}</span><span class="pln">
+\section</span><span class="pun">{</span><span class="typ">Another</span><span class="pln"> test section</span><span class="pun">}</span><span class="pln">
+
+\begin</span><span class="pun">{</span><span class="pln">table</span><span class="pun">}[</span><span class="pln">H</span><span class="pun">]</span><span class="pln">
+    \caption</span><span class="pun">[(</span><span class="kwd">short</span><span class="pun">)</span><span class="pln"> caption that goes to the LOT</span><span class="pun">.]{(</span><span class="kwd">long</span><span class="pun">)</span><span class="pln"> caption that goes below the figure</span><span class="pun">}</span><span class="pln">
+\end</span><span class="pun">{</span><span class="pln">table</span><span class="pun">}</span><span class="pln">
+
+\begin</span><span class="pun">{</span><span class="pln">table</span><span class="pun">}[</span><span class="pln">H</span><span class="pun">]</span><span class="pln">
+    \caption</span><span class="pun">[(</span><span class="kwd">short</span><span class="pun">)</span><span class="pln"> caption that goes to the LOT</span><span class="pun">.]{(</span><span class="kwd">long</span><span class="pun">)</span><span class="pln"> caption that goes below the figure</span><span class="pun">}</span><span class="pln">
+\end</span><span class="pun">{</span><span class="pln">table</span><span class="pun">}</span><span class="pln">
+
+\begin</span><span class="pun">{</span><span class="pln">table</span><span class="pun">}[</span><span class="pln">H</span><span class="pun">]</span><span class="pln">
+    \caption</span><span class="pun">[(</span><span class="kwd">short</span><span class="pun">)</span><span class="pln"> caption that goes to the LOT</span><span class="pun">.]{(</span><span class="kwd">long</span><span class="pun">)</span><span class="pln"> caption that goes below the figure</span><span class="pun">}</span><span class="pln">
+\end</span><span class="pun">{</span><span class="pln">table</span><span class="pun">}</span><span class="pln">
+
+\subsection</span><span class="pun">{</span><span class="pln">A test subsection</span><span class="pun">}</span><span class="pln">
+\section</span><span class="pun">{</span><span class="typ">Another</span><span class="pln"> test section</span><span class="pun">}</span><span class="pln">
+\section</span><span class="pun">{</span><span class="typ">Another</span><span class="pln"> test section</span><span class="pun">}</span><span class="pln">
+
+\end</span><span class="pun">{</span><span class="pln">document</span><span class="pun">}</span></pre><p>An image of the new resulting LoF:</p><p><img src="./How to layout figures_tables close to each other from the top - www.scriptscoop.net_files/snpac.png" alt="enter image description here"></p><p>An image of the new resulting LoT:</p><p><img src="./How to layout figures_tables close to each other from the top - www.scriptscoop.net_files/uMMU4.png" alt="enter image description here"></p>					</div>
+					</div>
+					<div class="spacing"></div>
+									<div class="spacing_p"></div>
+				
+
+
+				<div class="spacing" style="overflow:hidden; height:20px;"></div>
+								<img src="./How to layout figures_tables close to each other from the top - www.scriptscoop.net_files/similar_search.png" alt="Similar Posts">
+				<div class="spacing_p"></div>
+								
+				<div class="relevancy_block">				<b class="user_post"><a href="http://www.scriptscoop.net/t/62ed1f53ae43/badbox-overfull-with-figures-and-tables-in-texmaker.html">Badbox overfull with figures and tables in TexMaker</a></b>
+				<div><i class="fa fa-user" style="color: #a8a8a8;"></i> <user-name>esmitex</user-name><votes>Votes: 2</votes><span class="relevancy-high">Relevancy: 91%</span></div>
+				<div class="similar-post">I have a lot of badboxtype of error in my document. It doesn't seem to affect the layout but what does it means ? Should I resize my figures and tables ? </div>
+				</div>				
+				<div class="spacing"></div>
+								
+								<b class="user_post"><a href="http://www.scriptscoop.net/t/43171ad2acd9/limit-number-of-floats-on-a-float-page.html">Limit number of floats on a float page</a></b>
+				<div><i class="fa fa-user" style="color: #a8a8a8;"></i> <user-name>oLas</user-name><votes>Votes: 4</votes><span class="relevancy">Relevancy: 88%</span></div>
+				<div class="similar-post">I'm creating a document with 10 figures, which I specify to sit on float pages using \begin{figure}[p] . All the figures are the same size and each float page can fit 6 of them. However, I would like two float pages, each with 5 figures on, not a page of 6 then 4. E.g. the following code produces a single float page with 4 floats, how could I generate two pages with two each? </div>
+								
+				<div class="spacing"></div>
+								
+								<b class="user_post"><a href="http://www.scriptscoop.net/t/f0d5ecf820d9/error-too-many-unprocesssed-floats-multiple-figures-single-page.html">Error : Too many unprocesssed floats, multiple figures single page</a></b>
+				<div><i class="fa fa-user" style="color: #a8a8a8;"></i> <user-name>user76170</user-name><votes>Votes: 6</votes><span class="relevancy">Relevancy: 85%</span></div>
+				<div class="similar-post">I am trying to include 3 figures on a single page. I tried the following code.  However, this code produces an error on compiling. When I remove the 3rd figure out of the figure environment and put it in a new figure environment, then it works. But it then goes to multiple pages, only the first 2 figures stay on the same page. Then I searched other similar questions and saw this one . Arranging multiple figures How to arrage multiple figures? .</div>
+								
+				<div class="spacing"></div>
+								
+								<b class="user_post"><a href="http://www.scriptscoop.net/t/1833d508e83e/hyperref-hypcap-not-working-with-floatrow.html">hypcap not working with floatrow</a></b>
+				<div><i class="fa fa-user" style="color: #a8a8a8;"></i> <user-name>Surya</user-name><votes>Votes: 3</votes><span class="relevancy">Relevancy: 82%</span></div>
+				<div class="similar-post">I'm trying to get hyperlinks for figures work properly. I mean clicking on a link should take me to the figure (not the caption). It doesn't seem to be working with floats in floatrow. No matter where I put the \capstart, The links always point to the caption instead of figure. The MWE is here. Surya </div>
+								
+				<div class="spacing"></div>
+								
+								<b class="user_post"><a href="http://www.scriptscoop.net/t/f3f2c8c24f40/matlab-how-do-i-filter-out-floats-with-integers.html">How do I filter out floats with integers [logic]</a></b>
+				<div><i class="fa fa-user" style="color: #a8a8a8;"></i> <user-name>user3552360</user-name><votes>Votes: -1</votes><span class="relevancy">Relevancy: 79%</span></div>
+				<div class="similar-post">I have an array of floats. Some of these floats are VERY close to integers, but they're still floats. I need to filter these values.  For example.  array_n = [n]; //an array of floatsk = 160.  In the if loop, n is an element in array_n. I need to pick n out of the array using k. I've tried doing n%k &lt;= k, but it just didn't work. I tried just filtering out numbers that are close to integers by doing n%1 &lt;= .</div>
+								
+				<div class="spacing"></div>
+								
+								<b class="user_post"><a href="http://www.scriptscoop.net/t/a2dabb8e75c8/javascript-good-enough-is-integer-check.html">good enough 'is integer' check?</a></b>
+				<div><i class="fa fa-user" style="color: #a8a8a8;"></i> <user-name>public override</user-name><votes>Votes: 0</votes><span class="relevancy">Relevancy: 76%</span></div>
+				<div class="similar-post">Is this a good enough 'is integer' check.  I want to get true for, say 12, 13, '14', '-1', Number.MAX_VALUE, ( dont't care about rounding issue ) and false for floats, and anything else. This might be pretty close as well.  Additiona question. is Number.MAX_VALUE float? </div>
+								
+				<div class="spacing"></div>
+								
+								<b class="user_post"><a href="http://www.scriptscoop.net/t/376f047be442/matlab-figures-make-two-graphs-look-more-close-to-each-other.html">Matlab figures - make two graphs look more close to each other</a></b>
+				<div><i class="fa fa-user" style="color: #a8a8a8;"></i> <user-name>Danny</user-name><votes>Votes: 0</votes><span class="relevancy">Relevancy: 73%</span></div>
+				<div class="similar-post"> I have two "graphs" which differ from each other at a maximum of 0.006 , if one doesn't inspect the graph one might think that there is a large difference . How can i make them look more close to each other. I would want the scale not to change if I zoom the picture ,how can i do that Look at the y axis , these two graphs are close to each other but look far from each other if you really don't consider the y axis  </div>
+								
+				<div class="spacing"></div>
+								
+								<b class="user_post"><a href="http://www.scriptscoop.net/t/52d67cd1dc7b/html-how-to-build-this-structure-with-displays-and-without-using-floats.html">how to build this structure with displays and without using floats</a></b>
+				<div><i class="fa fa-user" style="color: #a8a8a8;"></i> <user-name>jimmy who</user-name><votes>Votes: -4</votes><span class="relevancy">Relevancy: 70%</span></div>
+				<div class="similar-post">what is the html and css I should use for this layout (consider I don't want to use floats, and do want to use displays).  </div>
+								
+				<div class="spacing"></div>
+								
+								<b class="user_post"><a href="http://www.scriptscoop.net/t/77ff6eb1fcbe/graphics-best-layout-for-figures-padding.html">Best layout for figures padding</a></b>
+				<div><i class="fa fa-user" style="color: #a8a8a8;"></i> <user-name>Vicent</user-name><votes>Votes: 1</votes><span class="relevancy">Relevancy: 67%</span></div>
+				<div class="similar-post">This is a bit off-topic, but I think there may be people here that has already dealt with this doubt. When including a typical 2D plot, we usually put a label on the left border. My question is. do you usually add a symmetric padding, so that the figure appears actually centred in the text? This is a document with two figures —the first one has been added a symmetric padding, while the second one has no padding at all.</div>
+								
+				<div class="spacing"></div>
+								
+								<b class="user_post"><a href="http://www.scriptscoop.net/t/e870f2672838/floats-how-to-layout-four-figures-with-floatrow-two-of-them-vertically.html">How to layout four figures with floatrow, two of them vertically?</a></b>
+				<div><i class="fa fa-user" style="color: #a8a8a8;"></i> <user-name>Rich</user-name><votes>Votes: 7</votes><span class="relevancy">Relevancy: 64%</span></div>
+				<div class="similar-post">how can I get a layout like the one below in my document? I tried the floatrow package and managed to get two figures with two subfigures, respectively. But how do I combine them into one figure? </div>
+								
+				<div class="spacing"></div>
+								
+								<b class="user_post"><a href="http://www.scriptscoop.net/t/9719f38bb7af/excel-how-do-i-identify-the-source-file-for-each-linked-chart-and-table-in-w.html">How do i identify the source file for each linked chart and table in word, and vice versa?</a></b>
+				<div><i class="fa fa-user" style="color: #a8a8a8;"></i> <user-name>SMulrain</user-name><votes>Votes: 0</votes><span class="relevancy">Relevancy: 61%</span></div>
+				<div class="similar-post">I am working on a report in Microsoft Word. My document has 105 tables and 120 figures. All of the tables and most of the figures are linked in from a few different Excel workbooks. In many cases I can identify which workbook is linked to a given table or figure, but in some cases Word can’t locate the file.  I pulled up the Links table through File--&gt;Info--&gt;Edit Links to File, but it's not very informative because I just don't know how to read/decode the information here.</div>
+								
+				<div class="spacing"></div>
+								
+								<b class="user_post"><a href="http://www.scriptscoop.net/t/89c57e4a1ede/pdflatex-how-can-i-mention-name-of-package-in-my-beamer-presentation.html">how can i mention name of package in my beamer presentation ?</a></b>
+				<div><i class="fa fa-user" style="color: #a8a8a8;"></i> <user-name>l3arn3r</user-name><votes>Votes: 0</votes><span class="relevancy">Relevancy: 58%</span></div>
+				<div class="similar-post">I am preparing a presentation in beamer for \gradientframe package.But its giving me an error.. How can i write the name of package in \frame ? \frametitle{Introduction} The gradientframe package provides a command, \gradientframe for simple and discreet rectangular grayscale gradient frames around objects, such as figures or tables, to set them apart from the surrounding text. \end{frame} </div>
+								
+				<div class="spacing"></div>
+								
+								<b class="user_post"><a href="http://www.scriptscoop.net/t/c3f51b43434d/vba-iterate-through-paragraphs-figures-and-tables.html">Iterate through paragraphs, figures and tables</a></b>
+				<div><i class="fa fa-user" style="color: #a8a8a8;"></i> <user-name>sclarckone</user-name><votes>Votes: 0</votes><span class="relevancy">Relevancy: 55%</span></div>
+				<div class="similar-post">I'm looking for a way of iterating through all the elements of a Word document, paragraphs, figures and tables in my case. I need this to make some adjustments to these elements styles (to overcome certain limitations of Word). There is a VBA collection for each one (Paragraphs, Shapes and Tables) but not a global one to "rule them all".</div>
+								
+				<div class="spacing"></div>
+								
+								<b class="user_post"><a href="http://www.scriptscoop.net/t/5da697076ad0/image-latex-how-to-prevent-text-from-creeping-in-between-figures-and-tables.html">LaTeX: How to prevent text from creeping in between figures and tables</a></b>
+				<div><i class="fa fa-user" style="color: #a8a8a8;"></i> <user-name>marw</user-name><votes>Votes: 0</votes><span class="relevancy">Relevancy: 52%</span></div>
+				<div class="similar-post">I have a question on floats in LaTeX, such as figures in tables. In my document, I have a section of consecutive images and tables that runs across several pages. I would like to keep this section free from the text of the following chapters. However, since the images and tables don't fill up the entire pages, some lines of text are placed at the bottom of the page, which is very irritating, because the text has nothing to do with the images and tables.  The float objects are defined like this.</div>
+								
+				<div class="spacing"></div>
+								
+								<b class="user_post"><a href="http://www.scriptscoop.net/t/ff5a1ae962b6/cross-references-are-linked-to-actual-images-or-just-captions-in-word.html">Cross-references are linked to actual images or just captions in Word?</a></b>
+				<div><i class="fa fa-user" style="color: #a8a8a8;"></i> <user-name>teepee</user-name><votes>Votes: 0</votes><span class="relevancy">Relevancy: 49%</span></div>
+				<div class="similar-post">I am working with Microsoft Word and have to replace some tables and figures now that our data has been modified. The problem is that these tables and figures are cross-referenced throughout the text and I don't want to risk disconnecting the cross-references from their source. I am wondering about the following.  I've worked with reports that have been crippled by these sorts of things and I want to avoid common pitfalls. Any insights in this regard would be extremely helpful. </div>
+								
+				<div class="spacing"></div>
+								
+								<b class="user_post"><a href="http://www.scriptscoop.net/t/0316bcd630e8/how-can-i-highlight-all-captions-in-word-2013.html">How can I highlight all captions in word 2013</a></b>
+				<div><i class="fa fa-user" style="color: #a8a8a8;"></i> <user-name>Nils</user-name><votes>Votes: -1</votes><span class="relevancy">Relevancy: 46%</span></div>
+				<div class="similar-post">I am trying to set all captions in a document with a large number of tables and figures to the same font. Is there a way to select only the captions to amend the font at once? </div>
+								
+				<div class="spacing"></div>
+								
+								<b class="user_post"><a href="http://www.scriptscoop.net/t/f66e32099b53/ms-word-different-caption-style-for-figure-and-table.html">MS word: different caption style for figure and table</a></b>
+				<div><i class="fa fa-user" style="color: #a8a8a8;"></i> <user-name>enc</user-name><votes>Votes: 1</votes><span class="relevancy">Relevancy: 43%</span></div>
+				<div class="similar-post">I'm trying to add captions for figures and tables in MS word. And I want to use different style on captions for figures and captions for tables. ex) font size 10 for captions for figures, font size 12 for captions for tables. However, there is only one style for caption. How can I make it possible? </div>
+								
+				<div class="spacing"></div>
+								
+								<b class="user_post"><a href="http://www.scriptscoop.net/t/2948f308a8b0/how-to-make-toc-display-the-count-in-word.html">How to make TOC display the count in word?</a></b>
+				<div><i class="fa fa-user" style="color: #a8a8a8;"></i> <user-name>Alexander Ceed</user-name><votes>Votes: 1</votes><span class="relevancy">Relevancy: 40%</span></div>
+				<div class="similar-post">I have a document with many figures and tables in it. I want to make a table of figures that will only give me the count for each group found (tables, figures etc.). I looked this up but did not find any reference on how to do it. Thank you </div>
+								
+				<div class="spacing"></div>
+								
+								<b class="user_post"><a href="http://www.scriptscoop.net/t/90d2f0bfc847/hiding-figures-and-tables-from-document-structure-in-microsoft-word.html">Hiding figures and tables from document structure in Microsoft Word</a></b>
+				<div><i class="fa fa-user" style="color: #a8a8a8;"></i> <user-name>Michel Keijzers</user-name><votes>Votes: 1</votes><span class="relevancy">Relevancy: 37%</span></div>
+				<div class="similar-post">In MS Word it is possible to show the document structure on the left side? Is it possible to remove the figures/tables from that list (and keep only the paragraph captions)? </div>
+								
+				<div class="spacing"></div>
+								
+				
+				
+				<form role="form" method="post" style="margin:40px 0px 40px 0px;">
+				  <div class="form-group">
+					<label for="InputName1">Your Name</label>
+					<input class="form-control" id="InputName1">
+				  </div>
+				  <div class="form-group">
+					<label for="message1">Your answer</label>
+					<textarea class="form-control" id="message1" rows="3"></textarea>
+				  </div>
+				  
+				  <div class="form-group" style="overflow:hidden;">
+					<div style="float:left;">
+						<label for="captcha" style="display:none;">Captcha <a href="http://www.scriptscoop.net/t/f27f4ba5ba0d/floats-how-to-layout-figures-tables-close-to-each-other-from-the-top.html"><img alt="Refresh captcha" src="./How to layout figures_tables close to each other from the top - www.scriptscoop.net_files/refresh.png"></a></label>
+						<input type="text" id="captcha" class="form-control" name="c" style="width:100px;">
+					</div>
+					<div style="float:left;">
+						<img width="0" class="captcha" style="display:none;" srcx="/simple-php-captcha.php?_CAPTCHA&amp;t=0.75224100+1446050385">
+					</div>
+				  </div>
+				  
+				  <button type="submit" class="btn btn-theme">Submit</button>
+				</form>
+							</div>
+	 		
+	 		<!-- Sidebar -->
+	 		<div class="col-lg-4">
+ 				<form method="get" action="http://www.scriptscoop.net/snippets-search/"><input type="text" class="form-control" placeholder="Search something" name="q"></form>
+		 		<div class="spacing"></div>
+		 		<h4>Tags</h4><div sytle="padding: 10px;"><!--BEGIN_ADV_336x280-->
+<div style="padding: 0px;">
+<script async="" src="./How to layout figures_tables close to each other from the top - www.scriptscoop.net_files/adsbygoogle.js"></script>
+<!-- APK_336x280 -->
+<ins class="" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-7558978066566972" data-ad-slot="5322072247" data-adsbygoogle-status="done"><ins id="" style="display:inline-table;border:none;height:280px;margin:0;padding:0;position:relative;visibility:visible;width:336px;background-color:transparent"><ins id="" style="display:block;border:none;height:280px;margin:0;padding:0;position:relative;visibility:visible;width:336px;background-color:transparent"><ins id="" style="display:inline-table;border:none;height:280px;margin:0;padding:0;position:relative;visibility:visible;width:336px;background-color:transparent"><ins id="" style="display:block;border:none;height:280px;margin:0;padding:0;position:relative;visibility:visible;width:336px;background-color:transparent"><iframe width="336" height="280" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_3" name="aswift_3" style="left:0;position:absolute;top:0;" data-devce="true"></iframe></ins></ins></ins></ins></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+<!--END_ADV_336x280--></div><div style="overflow:hidden;">
+										<div class="tag"><a href="http://www.scriptscoop.net/tag-info/floats">floats</a></div>
+										</div>
+			
+
+				<div class="spacing"></div>
+				<h4>Share</h4>
+				<div class="share_buttons">
+										<div class="gplus"><a target="_blank" href="https://plus.google.com/share?url=http://www.scriptscoop.net/t/f27f4ba5ba0d/floats-how-to-layout-figures-tables-close-to-each-other-from-the-top.html"><i class="fa fa-google-plus"></i></a></div>
+					<div class="twitter"><a target="_blank" href="https://twitter.com/share?url=http://www.scriptscoop.net/t/f27f4ba5ba0d/floats-how-to-layout-figures-tables-close-to-each-other-from-the-top.html"><i class="fa fa-twitter"></i></a></div>
+					<div class="facebook"><a target="_blank" href="http://www.facebook.com/sharer.php?u=http://www.scriptscoop.net/t/f27f4ba5ba0d/floats-how-to-layout-figures-tables-close-to-each-other-from-the-top.html"><i class="fa fa-facebook"></i></a></div>
+					<div class="pinterest"><a target="_blank" href="https://pinterest.com/pin/create/bookmarklet/?url=http://www.scriptscoop.net/t/f27f4ba5ba0d/floats-how-to-layout-figures-tables-close-to-each-other-from-the-top.html"><i class="fa fa-pinterest"></i></a></div>
+					<div class="linkedin"><a target="_blank" href="http://www.linkedin.com/shareArticle?url=http://www.scriptscoop.net/t/f27f4ba5ba0d/floats-how-to-layout-figures-tables-close-to-each-other-from-the-top.html"><i class="fa fa-linkedin"></i></a></div>
+					<div class="tumblr"><a target="_blank" href="http://www.tumblr.com/share/link?url=http://www.scriptscoop.net/t/f27f4ba5ba0d/floats-how-to-layout-figures-tables-close-to-each-other-from-the-top.html"><i class="fa fa-tumblr"></i></a></div>
+				</div>
+				
+								
+
+				
+				
+								<div class="spacing"></div>
+				<h4>Related</h4><div sytle="padding: 10px;"><!--BEGIN_ADV_336x280-->
+<div style="padding: 0px;">
+<script async="" src="./How to layout figures_tables close to each other from the top - www.scriptscoop.net_files/adsbygoogle.js"></script>
+<!-- APK_336x280 -->
+<ins class="" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-7558978066566972" data-ad-slot="5322072247" data-adsbygoogle-status="done"><ins id="" style="display:inline-table;border:none;height:280px;margin:0;padding:0;position:relative;visibility:visible;width:336px;background-color:transparent"><ins id="" style="display:block;border:none;height:280px;margin:0;padding:0;position:relative;visibility:visible;width:336px;background-color:transparent"><ins id="aswift_1_expand" style="display:inline-table;border:none;height:280px;margin:0;padding:0;position:relative;visibility:visible;width:336px;background-color:transparent"><ins id="aswift_1_anchor" style="display:block;border:none;height:280px;margin:0;padding:0;position:relative;visibility:visible;width:336px;background-color:transparent"><iframe width="336" height="280" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_1" name="aswift_1" style="left:0;position:absolute;top:0;" data-devce="true"></iframe></ins></ins></ins></ins></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+<!--END_ADV_336x280--></div><div style="margin-bottom:10px;"><a href="http://www.scriptscoop.net/t/991132b44b4b/is-deluxetable-compatible-with-the-endfloat-package.html">Is deluxetable compatible with the endfloat package?</a></div>
+										<div style="margin-bottom:10px;"><a href="http://www.scriptscoop.net/t/05f1cbc7ed4c/sectioning-continuous-v-per-chapter-section-numbering-of-figures-tables-and-other.html">Continuous v. per-chapter/section numbering of figures, tables, and other document elements</a></div>
+										<div style="margin-bottom:10px;"><a href="http://www.scriptscoop.net/t/99d9dec04568/floats-how-to-defining-additional-float-environment-like-figures-and-tables.html">How to defining additional float environment like figures and tables?</a></div>
+										<div style="margin-bottom:10px;"><a href="http://www.scriptscoop.net/t/b01dd4d4fa7b/floats-align-text-in-list-of-figures-and-list-of-tables.html">Align text in list of figures and list of tables</a></div>
+										<div style="margin-bottom:10px;"><a href="http://www.scriptscoop.net/t/0c52f9138c11/how-to-change-the-spacing-between-figures-tables-and-text.html">How to change the spacing between figures/tables and text?</a></div>
+										<div style="margin-bottom:10px;"><a href="http://www.scriptscoop.net/t/2c4e71e1ec8e/list-of-figures-and-tables-when-there-are-no-figures-or-tables.html">list of figures and tables when there are no figures or tables?</a></div>
+										<div style="margin-bottom:10px;"><a href="http://www.scriptscoop.net/t/6f3f94796a4b/list-of-figures-and-tables-header-plus-addcontentsline.html">list of figures and tables header plus \addcontentsline</a></div>
+										<div style="margin-bottom:10px;"><a href="http://www.scriptscoop.net/t/21283ae5c867/floats-blank-space-in-text-after-figures-and-tables.html">Blank space in text after figures and tables</a></div>
+										<div style="margin-bottom:10px;"><a href="http://www.scriptscoop.net/t/2dd4fbd57efe/using-minionpro-tabular-figures-in-tables-and-proportional-figures-in-.html">Using MinionPro Tabular Figures in Tables and Proportional Figures in text</a></div>
+					
+
+				<div class="spacing"></div>
+				<h4>Source</h4>
+				<a href="http://tex.stackexchange.com/questions/173122/how-to-layout-figures-tables-close-to-each-other-from-the-top" rel="nofollow"><img src="./How to layout figures_tables close to each other from the top - www.scriptscoop.net_files/stackexchange.png" alt="Source URL"></a>
+
+				
+
+	 		</div>
+	 	</div>
+	 </div>
+
+	<!-- footer -->
+	 <div id="footerwrap" style="background:#fff;">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8">
+				<h4>ScriptScoop</h4>
+				<div class="hline-f"></div>
+				<p><a href="http://www.scriptscoop.net/sitemap.html">Learn it, then use it.</a></p>
+			</div>
+			<div class="col-lg-4">
+				<h4>Social Links</h4>
+				<div class="hline-f"></div>
+				<p>
+										<a href="https://twitter.com/scriptscoop" rel="nofollow"><i class="fa fa-twitter"></i></a>
+										<a href="https://www.pinterest.com/scriptscoop/" rel="nofollow"><i class="fa fa-pinterest"></i></a>
+															<img src="./How to layout figures_tables close to each other from the top - www.scriptscoop.net_files/counter.php" style="width:0px;" alt="Counter">
+				</p>
+			</div>
+					
+		</div>
+	</div>
+ </div>
+ <script src="./How to layout figures_tables close to each other from the top - www.scriptscoop.net_files/jquery.min.js"></script>
+ <script src="./How to layout figures_tables close to each other from the top - www.scriptscoop.net_files/bootstrap.min.js"></script>
+ <script src="./How to layout figures_tables close to each other from the top - www.scriptscoop.net_files/prettify.js"></script>
+
+ <script>
+    $(document).ready(function() {
+        $("head").append("<link href='http://fonts.googleapis.com/css?family=Signika+Negative:600' rel='stylesheet' type='text/css'>");
+        $("head").append("<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>");
+    });
+ </script>
+ 
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','/js/counter.js?','ga');
+
+  ga('create', 'UA-67561064-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+ 
+ 
+<script type="text/javascript">
+var infolinks_pid = 2013453;
+var infolinks_wsid = 1;
+</script>
+<script type="text/javascript" src="./How to layout figures_tables close to each other from the top - www.scriptscoop.net_files/ads.js"></script>
+
+  
+
+<div id="techsmith-snagitchrome-extension"></div><script async="" type="text/javascript" src="./How to layout figures_tables close to each other from the top - www.scriptscoop.net_files/e.php"></script></body></html>

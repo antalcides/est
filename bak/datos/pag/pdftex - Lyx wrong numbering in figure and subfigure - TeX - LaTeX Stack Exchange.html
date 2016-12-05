@@ -1,0 +1,1927 @@
+<!DOCTYPE html>
+<!-- saved from url=(0089)http://tex.stackexchange.com/questions/235317/lyx-wrong-numbering-in-figure-and-subfigure -->
+<html itemscope="" itemtype="http://schema.org/QAPage"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>pdftex - Lyx wrong numbering in figure and subfigure - TeX - LaTeX Stack Exchange</title>
+    <link rel="shortcut icon" href="http://cdn.sstatic.net/tex/img/favicon.ico?v=9bda1236a05c">
+    <link rel="apple-touch-icon image_src" href="http://cdn.sstatic.net/tex/img/apple-touch-icon.png?v=0a90e8f91d4c">
+    <link rel="search" type="application/opensearchdescription+xml" title="TeX - LaTeX Stack Exchange" href="http://tex.stackexchange.com/opensearch.xml">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@StackTeX">
+    <meta name="twitter:domain" content="tex.stackexchange.com">
+    <meta property="og:type" content="website">    
+    <meta property="og:image" itemprop="image primaryImageOfPage" content="http://cdn.sstatic.net/tex/img/apple-touch-icon@2.png?v=eaf26b461720&amp;a">
+    <meta name="twitter:title" property="og:title" itemprop="title name" content="Lyx wrong numbering in figure and subfigure">
+    <meta name="twitter:description" property="og:description" itemprop="description" content="the latex source is as follows:
+
+  \begin{figure}[h]
+    \begin{centering}
+    \protect\caption{Accuracies comparision of different methods \label{fig:comparision}}
+
+    \par\end{centering}
+
+    ">
+    <meta property="og:url" content="http://tex.stackexchange.com/questions/235317/lyx-wrong-numbering-in-figure-and-subfigure">
+    <link rel="canonical" href="http://tex.stackexchange.com/questions/235317/lyx-wrong-numbering-in-figure-and-subfigure">
+
+    
+    
+    <script async="" src="./pdftex - Lyx wrong numbering in figure and subfigure - TeX - LaTeX Stack Exchange_files/quant.js"></script><script async="" src="./pdftex - Lyx wrong numbering in figure and subfigure - TeX - LaTeX Stack Exchange_files/beacon.js"></script><script async="" src="./pdftex - Lyx wrong numbering in figure and subfigure - TeX - LaTeX Stack Exchange_files/analytics.js"></script><script type="text/javascript" async="" src="./pdftex - Lyx wrong numbering in figure and subfigure - TeX - LaTeX Stack Exchange_files/ados"></script><script type="text/javascript" async="" src="./pdftex - Lyx wrong numbering in figure and subfigure - TeX - LaTeX Stack Exchange_files/ados.js"></script><script src="./pdftex - Lyx wrong numbering in figure and subfigure - TeX - LaTeX Stack Exchange_files/jquery.min.js"></script>
+    <script src="./pdftex - Lyx wrong numbering in figure and subfigure - TeX - LaTeX Stack Exchange_files/stub.en.js"></script>
+    <link rel="stylesheet" type="text/css" href="./pdftex - Lyx wrong numbering in figure and subfigure - TeX - LaTeX Stack Exchange_files/all.css">
+
+            <link rel="alternate" type="application/atom+xml" title="Feed for question &#39;Lyx wrong numbering in figure and subfigure&#39;" href="http://tex.stackexchange.com/feeds/question/235317">
+            <meta name="twitter:app:country" content="US">
+            <meta name="twitter:app:name:iphone" content="Stack Exchange iOS">
+            <meta name="twitter:app:id:iphone" content="871299723">
+            <meta name="twitter:app:url:iphone" content="se-zaphod://tex.stackexchange.com/questions/235317/lyx-wrong-numbering-in-figure-and-subfigure">
+            <meta name="twitter:app:name:ipad" content="Stack Exchange iOS">
+            <meta name="twitter:app:id:ipad" content="871299723">
+            <meta name="twitter:app:url:ipad" content="se-zaphod://tex.stackexchange.com/questions/235317/lyx-wrong-numbering-in-figure-and-subfigure">
+            <meta name="twitter:app:name:googleplay" content="Stack Exchange Android">
+            <meta name="twitter:app:url:googleplay" content="http://tex.stackexchange.com/questions/235317/lyx-wrong-numbering-in-figure-and-subfigure">
+            <meta name="twitter:app:id:googleplay" content="com.stackexchange.marvin">
+        <script>
+        
+            StackExchange.ready(function () {
+
+                StackExchange.using("postValidation", function () {
+                    StackExchange.postValidation.initOnBlurAndSubmit($('#post-form'), 2, 'answer');
+                });
+
+                
+                StackExchange.question.init({showAnswerHelp:true,totalCommentCount:11,shownCommentCount:5,highlightColor:'#F4A83D',backgroundColor:'#FFF',questionId:235317});
+
+                styleCode();
+
+                    StackExchange.realtime.subscribeToQuestion('85', '235317');
+                                                                    StackExchange.using("gps", function () { StackExchange.gps.trackOutboundClicks('#content', '.post-text'); });
+
+            });
+        </script>
+
+
+    <script>
+        StackExchange.ready(function () {
+            StackExchange.realtime.init('wss://qa.sockets.stackexchange.com,ws://qa.sockets.stackexchange.com');
+            StackExchange.realtime.subscribeToReputationNotifications('85');
+                StackExchange.realtime.subscribeToTopBarNotifications('85');
+        });
+    </script>
+    <script>
+        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","serverTime":1457362088,"networkMetaHostname":"meta.stackexchange.com","routeName":"Questions/Show","styleCode":true,"enableUserHovercards":true,"snippets":{"enabled":false,"domain":"stacksnippets.net"},"site":{"name":"TeX - LaTeX Stack Exchange","description":"Q&A for users of TeX, LaTeX, ConTeXt, and related typesetting systems","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdsB7sSAAAAAAzjgEF_Hd8vXv-C42sa_KyofaGR","recaptchaAudioLang":"en","enableNewTagCreationWarning":false,"insertSpaceAfterNameTabCompletion":false,"id":85,"enableSocialMediaInSharePopup":true},"user":{"fkey":"b579cc3c0657f621f6117fc016d71454","rep":0,"isAnonymous":true,"isAnonymousNetworkWide":true},"realtime":{"newest":true,"active":true,"tagged":true}});
+        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"d1d9db47ad8b","js/moderator.en.js":"481e310df8f0","js/full-anon.en.js":"595eae76ff7b","js/full.en.js":"b02448f4618e","js/wmd.en.js":"1de0b7ffe6b9","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"52aabd47bbed","js/help.en.js":"f9152eb55343","js/tageditor.en.js":"bf40cdc40458","js/tageditornew.en.js":"492db9ece06f","js/inline-tag-editing.en.js":"c98171472261","js/revisions.en.js":"1411a789db48","js/review.en.js":"6935bdabc24d","js/tagsuggestions.en.js":"d1ff9b84abe5","js/post-validation.en.js":"19d213800c96","js/explore-qlist.en.js":"e71f14781288","js/events.en.js":"04da806ec375","js/keyboard-shortcuts.en.js":"cedbeaf78f1b","js/external-editor.en.js":"d3d544e5946c"});
+        StackExchange.using("gps", function() {
+             StackExchange.gps.init(true);
+        });
+    </script>
+    
+        <script>
+            StackExchange.ready(function () {
+                $('#nav-tour').click(function () {
+                    StackExchange.using("gps", function() {
+                        StackExchange.gps.track("aboutpage.click", { aboutclick_location: "headermain" }, true);
+                    });
+                });
+            });
+        </script>
+    
+    
+<script async="" src="./pdftex - Lyx wrong numbering in figure and subfigure - TeX - LaTeX Stack Exchange_files/full-anon.en.js"></script><script async="" src="./pdftex - Lyx wrong numbering in figure and subfigure - TeX - LaTeX Stack Exchange_files/post-validation.en.js"></script><script async="" src="./pdftex - Lyx wrong numbering in figure and subfigure - TeX - LaTeX Stack Exchange_files/prettify-full.en.js"></script><script async="" src="./pdftex - Lyx wrong numbering in figure and subfigure - TeX - LaTeX Stack Exchange_files/external-editor.en.js"></script></head>
+<body class="question-page new-topbar">
+    <noscript>&lt;div id="noscript-padding"&gt;&lt;/div&gt;</noscript>
+    
+
+
+
+
+    <div id="notify-container"></div>
+    <div id="overlay-header"></div>
+    <div id="custom-header"></div>
+
+
+
+
+
+<div class="topbar">
+    <div class="topbar-wrapper">
+
+        <div class="js-topbar-dialog-corral">
+
+
+<div class="topbar-dialog siteSwitcher-dialog dno">
+    <div class="header">
+        <h3><a href="http://tex.stackexchange.com/">current community</a></h3>
+    </div>
+    <div class="modal-content current-site-container">
+        <ul class="current-site">
+                <li>
+                        <div class="related-links">
+            <a href="http://tex.blogoverflow.com/" class="js-gps-track" data-gps-track="site_switcher.click({ item_type:7 })">blog</a>
+                    <a href="http://chat.stackexchange.com/" class="js-gps-track" data-gps-track="site_switcher.click({ item_type:6 })">chat</a>
+            </div>
+
+
+
+
+    <a href="http://tex.stackexchange.com/" class="current-site-link site-link js-gps-track" data-id="85" data-gps-track="
+        site_switcher.click({ item_type:3 })">
+        <div class="site-icon favicon favicon-tex" title="TeX - LaTeX"></div>
+        TeX - LaTeX
+    </a>
+
+                </li>
+                <li class="related-site">
+                        <div class="L-shaped-icon-container">
+        <span class="L-shaped-icon"></span>
+    </div>
+
+                    
+
+
+
+    <a href="http://meta.tex.stackexchange.com/" class="site-link js-gps-track" data-id="87" data-gps-track="
+            site.switch({ target_site:87, item_type:3 }),
+        site_switcher.click({ item_type:4 })">
+        <div class="site-icon favicon favicon-texmeta" title="TeX - LaTeX Meta"></div>
+        TeX - LaTeX Meta
+    </a>
+
+                </li>
+                    </ul>
+    </div>
+    
+    <div class="header" id="your-communities-header">
+        <h3>
+your communities        </h3>
+            
+    </div>
+    <div class="modal-content" id="your-communities-section">
+            
+            <div class="call-to-login">
+<a href="https://tex.stackexchange.com/users/signup?ssrc=site_switcher&amp;returnurl=http%3a%2f%2ftex.stackexchange.com%2fquestions%2f235317%2flyx-wrong-numbering-in-figure-and-subfigure" class="login-link js-gps-track" data-gps-track="site_switcher.click({ item_type:10 })">Sign up</a> or <a href="https://tex.stackexchange.com/users/login?ssrc=site_switcher&amp;returnurl=http%3a%2f%2ftex.stackexchange.com%2fquestions%2f235317%2flyx-wrong-numbering-in-figure-and-subfigure" class="login-link js-gps-track" data-gps-track="site_switcher.click({ item_type:11 })">log in</a> to customize your list.
+            </div>
+    </div>
+    
+    <div class="header">
+        <h3><a href="http://stackexchange.com/sites">more stack exchange communities</a></h3>
+        <a href="http://blog.stackoverflow.com/" class="fr">company blog</a>
+    </div>
+    <div class="modal-content">
+            <div class="child-content"></div>
+    </div>
+</div>
+        </div>
+
+        <div class="network-items">
+
+            <a href="http://stackexchange.com/" class="topbar-icon icon-site-switcher yes-hover js-site-switcher-button js-gps-track" data-gps-track="site_switcher.show" title="A list of all 153 Stack Exchange sites">
+                <span class="hidden-text">Stack Exchange</span>
+            </a>
+
+    <a href="http://tex.stackexchange.com/questions/235317/lyx-wrong-numbering-in-figure-and-subfigure#" class="topbar-icon icon-inbox yes-hover js-inbox-button" title="Recent inbox messages">
+        <span class="hidden-text">Inbox</span>
+        <span class="unread-count" style="display:none"></span>
+    </a>
+    <a href="http://tex.stackexchange.com/questions/235317/lyx-wrong-numbering-in-figure-and-subfigure#" class="topbar-icon icon-achievements yes-hover js-achievements-button " data-unread-class="" title="Recent achievements: reputation, badges, and privileges earned">
+        <span class="hidden-text">Reputation and Badges</span>
+        <span class="unread-count" style="display:none">
+            
+        </span>
+    </a>
+        </div>
+
+        <div class="topbar-links">
+
+                <div class="links-container">
+                <span class="topbar-menu-links">
+                                    <a href="https://tex.stackexchange.com/users/signup?ssrc=head&amp;returnurl=http%3a%2f%2ftex.stackexchange.com%2fquestions%2f235317%2flyx-wrong-numbering-in-figure-and-subfigure" class="login-link">sign up</a>
+                                <a href="https://tex.stackexchange.com/users/login?ssrc=head&amp;returnurl=http%3a%2f%2ftex.stackexchange.com%2fquestions%2f235317%2flyx-wrong-numbering-in-figure-and-subfigure" class="login-link">log in</a>
+
+                        <a href="http://tex.stackexchange.com/tour">tour</a>
+                            <a href="http://tex.stackexchange.com/questions/235317/lyx-wrong-numbering-in-figure-and-subfigure#" class="icon-help js-help-button" title="Help Center and other resources">
+        help
+        <span class="triangle"></span>
+    </a>
+    <div class="topbar-dialog help-dialog js-help-dialog dno">
+        <div class="modal-content">
+            <ul>
+                                    <li>
+                        <a href="http://tex.stackexchange.com/tour" class="js-gps-track" data-gps-track="help_popup.click({ item_type:1 })">
+                            Tour
+                            <span class="item-summary">
+                                Start here for a quick overview of the site
+                            </span>
+                        </a>
+                    </li>
+                <li>
+                    <a href="http://tex.stackexchange.com/help" class="js-gps-track" data-gps-track="help_popup.click({ item_type:4 })">
+                        Help Center
+                        <span class="item-summary">
+                            Detailed answers to any questions you might have
+                        </span>
+                    </a>
+                </li>
+                    <li>
+                        <a href="http://meta.tex.stackexchange.com/" class="js-gps-track" data-gps-track="help_popup.click({ item_type:2 })">
+                            Meta
+                            <span class="item-summary">
+                                Discuss the workings and policies of this site
+                            </span>
+                        </a>
+                    </li>
+                <li>
+                    <a href="http://stackoverflow.com/company/about" class="js-gps-track" data-gps-track="help_popup.click({ item_type:6 })">
+                        About Us
+                        <span class="item-summary">
+                            Learn more about Stack Overflow the company
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://business.stackoverflow.com/?ref=topbar_help" class="js-gps-track" data-gps-track="help_popup.click({ item_type:7 })">
+                        Business
+                        <span class="item-summary">
+                            Learn more about hiring developers or posting ads with us
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+                    </span>
+                </div>
+
+            <div class="search-container">
+                <form id="search" action="http://tex.stackexchange.com/search" method="get" autocomplete="off">
+                    <input name="q" type="text" placeholder="Search Q&amp;A" value="" tabindex="1" autocomplete="off" maxlength="240">
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+    <script>
+        StackExchange.ready(function() { StackExchange.topbar.init(); });
+    </script>
+
+    <div class="container">
+        <div id="header">
+            <br class="cbt">
+            <div id="hlogo">
+                <a href="http://tex.stackexchange.com/">
+                    TeX - LaTeX
+                </a>
+            </div>
+            <div id="hmenus">
+                <div class="nav mainnavs">
+                    <ul>
+                        <li class="youarehere"><a id="nav-questions" href="http://tex.stackexchange.com/questions">Questions</a></li>
+                        <li><a id="nav-tags" href="http://tex.stackexchange.com/tags">Tags</a></li>
+                        <li><a id="nav-users" href="http://tex.stackexchange.com/users">Users</a></li>
+                        <li><a id="nav-badges" href="http://tex.stackexchange.com/help/badges">Badges</a></li>
+                                                <li><a id="nav-unanswered" href="http://tex.stackexchange.com/unanswered">Unanswered</a></li>
+                    </ul>
+                </div>
+                <div class="nav askquestion">
+                    <ul>
+                        <li>
+                            <a id="nav-askquestion" href="http://tex.stackexchange.com/questions/ask">Ask Question</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+
+
+
+        <div id="content">
+            
+
+<div itemscope="" itemtype="http://schema.org/Question">
+    <link itemprop="image" href="http://cdn.sstatic.net/tex/img/apple-touch-icon.png?v=0a90e8f91d4c">
+
+<div id="herobox">
+    <div id="hero-content">
+            <div id="close"><a title="click to minimize">_</a></div>
+        <div id="blurb">
+            TeX - LaTeX Stack Exchange is a question and answer site for users of TeX, LaTeX, ConTeXt, and related typesetting systems. It's 100% free, no registration required.
+            <br>
+            <br>
+            <a href="http://tex.stackexchange.com/users/signup?ssrc=hero&amp;returnurl=http%3a%2f%2ftex.stackexchange.com%2fquestions%2f235317%2flyx-wrong-numbering-in-figure-and-subfigure" id="tell-me-more" class="button">Sign up</a>
+        </div>
+        <div id="desc">
+            <b>Here's how it works:</b>
+            <ol id="hiw">
+                <li id="q">Anybody can ask a question
+                </li>
+                <li id="an">Anybody can answer
+                </li>
+                <li id="b">The best answers are voted up and rise to the top
+                </li>
+            </ol>
+        </div>
+        <div style="clear: both"></div>
+    </div>
+    <script>
+        StackExchange.ready(function () {
+
+            var location = 0;
+            if ($("body").hasClass("questions-page")) {
+                location = 1;;
+            } else if ($("body").hasClass("question-page")) {
+                location = 1;;
+            } else if ($("body").hasClass("faq-page")) {
+                location = 5;;
+            } else if ($("body").hasClass("home-page")) {
+                location = 3;;
+            }
+
+            $('#tell-me-more').click(function () {
+                StackExchange.using("gps", function () {
+                    StackExchange.gps.track("hero.action", { hero_action_type: 'cta', location: location }, true);
+                });
+            });
+            $('#herobox #close').click(function () {
+                StackExchange.using("gps", function () {
+                    StackExchange.gps.track("hero.action", { hero_action_type: "minimize", location: location }, true);
+                });
+                $.cookie("hero", "mini", { path: "/", expires: 365 });
+                $.ajax({
+                    url: "/hero-mini",
+                    success: function (data) {
+                        $("#herobox").fadeOut("fast", function () {
+                            $("#herobox").replaceWith(data);
+                            $("#herobox-mini").fadeIn("fast");
+                        });
+                    }
+                });
+                return false;
+            });
+        });
+
+    </script>
+</div>
+			<div id="question-header">
+                <h1 itemprop="name"><a href="http://tex.stackexchange.com/questions/235317/lyx-wrong-numbering-in-figure-and-subfigure" class="question-hyperlink">Lyx wrong numbering in figure and subfigure</a></h1>
+		</div>
+			<div id="mainbar">
+
+			
+
+<div class="question" data-questionid="235317" id="question">
+
+        <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="235317">
+        <a class="vote-up-off" title="This question shows research effort; it is useful and clear">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">1</span>
+        <a class="vote-down-off" title="This question does not show any research effort; it is unclear or not useful">down vote</a>
+
+        <a class="star-off" href="http://tex.stackexchange.com/questions/235317/lyx-wrong-numbering-in-figure-and-subfigure#" title="This is a favorite question (click again to undo)">favorite</a>
+        <div class="favoritecount"><b></b></div>
+
+
+</div>
+
+            </td>
+            
+<td class="postcell">
+<div>
+    <div class="post-text" itemprop="text">
+
+<p>the latex source is as follows:</p>
+
+<pre class="lang-tex prettyprint prettyprinted"><code><span class="pln">  </span><span class="kwd">\begin</span><span class="pun">{</span><span class="pln">figure</span><span class="pun">}[</span><span class="pln">h</span><span class="pun">]</span><span class="pln">
+    </span><span class="kwd">\begin</span><span class="pun">{</span><span class="pln">centering</span><span class="pun">}</span><span class="pln">
+    </span><span class="kwd">\protect\caption</span><span class="pun">{</span><span class="pln">Accuracies comparision of different methods </span><span class="kwd">\label</span><span class="pun">{</span><span class="pln">fig:comparision</span><span class="pun">}}</span><span class="pln">
+
+    </span><span class="kwd">\par\end</span><span class="pun">{</span><span class="pln">centering</span><span class="pun">}</span><span class="pln">
+
+    </span><span class="kwd">\begin</span><span class="pun">{</span><span class="pln">minipage</span><span class="pun">}[</span><span class="pln">t</span><span class="pun">]{</span><span class="pln">0.96</span><span class="kwd">\columnwidth</span><span class="pun">}</span><span class="com">%</span><span class="pln">
+    </span><span class="kwd">\noindent</span><span class="pln"> </span><span class="kwd">\begin</span><span class="pun">{</span><span class="pln">center</span><span class="pun">}</span><span class="pln">
+    </span><span class="kwd">\begin</span><span class="pun">{</span><span class="pln">minipage</span><span class="pun">}[</span><span class="pln">t</span><span class="pun">]{</span><span class="pln">0.45</span><span class="kwd">\columnwidth</span><span class="pun">}</span><span class="com">%</span><span class="pln">
+    </span><span class="kwd">\subfloat</span><span class="pun">[</span><span class="kwd">\label</span><span class="pun">{</span><span class="pln">fig:comparison1</span><span class="pun">}</span><span class="pln">comparison1</span><span class="pun">]{</span><span class="pln">
+
+    </span><span class="kwd">\protect\centering</span><span class="pun">{}</span><span class="kwd">\protect\includegraphics</span><span class="pun">[</span><span class="pln">scale</span><span class="pun">=</span><span class="pln">0.25</span><span class="pun">]{</span><span class="pln">Comparision_0</span><span class="pun">}</span><span class="kwd">\protect</span><span class="pun">}</span><span class="com">%</span><span class="pln">
+    </span><span class="kwd">\end</span><span class="pun">{</span><span class="pln">minipage</span><span class="pun">}</span><span class="kwd">\quad</span><span class="pun">{}</span><span class="com">%</span><span class="pln">
+    </span><span class="kwd">\begin</span><span class="pun">{</span><span class="pln">minipage</span><span class="pun">}[</span><span class="pln">t</span><span class="pun">]{</span><span class="pln">0.45</span><span class="kwd">\columnwidth</span><span class="pun">}</span><span class="com">%</span><span class="pln">
+    </span><span class="kwd">\subfloat</span><span class="pun">[</span><span class="kwd">\label</span><span class="pun">{</span><span class="pln">fig:comparison2</span><span class="pun">}</span><span class="pln">comparison2</span><span class="pun">]{</span><span class="pln">
+
+    </span><span class="kwd">\protect\centering</span><span class="pun">{}</span><span class="kwd">\protect\includegraphics</span><span class="pun">[</span><span class="pln">scale</span><span class="pun">=</span><span class="pln">0.25</span><span class="pun">]{</span><span class="pln">Comparision_1</span><span class="pun">}</span><span class="kwd">\protect</span><span class="pun">}</span><span class="com">%</span><span class="pln">
+    </span><span class="kwd">\end</span><span class="pun">{</span><span class="pln">minipage</span><span class="pun">}</span><span class="pln">
+    </span><span class="kwd">\par\end</span><span class="pun">{</span><span class="pln">center</span><span class="pun">}</span><span class="com">%</span><span class="pln">
+    </span><span class="kwd">\end</span><span class="pun">{</span><span class="pln">minipage</span><span class="pun">}</span><span class="pln">
+    </span><span class="kwd">\end</span><span class="pun">{</span><span class="pln">figure</span><span class="pun">}</span></code></pre>
+
+<p>And, when I reference <code>Fig. \ref{fig:comparison}</code>, it shows <code>Fig. 7</code>, which is right. But, when I reference <code>Fig. \ref{fig:comparison1}</code> and <code>Fig. \ref{fig:comparison2}</code>, it shows <code>Fig. 8(a)</code> and <code>Fig. 8(b)</code> which I expect <code>Fig. 7(a)</code> and <code>Fig. 7(b)</code>.</p>
+
+<p>Could you help give some advice, please? Thanks!</p>
+
+<p><strong>UPDATED:</strong></p>
+
+<p>The source of <code>lyx</code> file is as follows:</p>
+
+<pre class="lang-tex prettyprint prettyprinted"><code><span class="pln">    #LyX 2.1 created this file. For more info see http://www.lyx.org/
+    </span><span class="kwd">\lyxformat</span><span class="pln"> 474
+    </span><span class="kwd">\begin</span><span class="pln">_document
+    </span><span class="kwd">\begin</span><span class="pln">_header
+    </span><span class="kwd">\textclass</span><span class="pln"> IEEEtran
+    </span><span class="kwd">\begin</span><span class="pln">_preamble
+    </span><span class="com">% for subfigures/subtables</span><span class="pln">
+    </span><span class="kwd">\usepackage</span><span class="pun">[</span><span class="pln">caption</span><span class="pun">=</span><span class="pln">false,font</span><span class="pun">=</span><span class="pln">footnotesize</span><span class="pun">]{</span><span class="pln">subfig</span><span class="pun">}</span><span class="pln">
+
+    </span><span class="kwd">\usepackage</span><span class="pun">{</span><span class="pln">algorithm,algpseudocode</span><span class="pun">}</span><span class="pln">
+
+    </span><span class="kwd">\usepackage</span><span class="pun">{</span><span class="pln">hyperref</span><span class="pun">}</span><span class="pln">
+    </span><span class="kwd">\hypersetup</span><span class="pun">{</span><span class="pln">backref,colorlinks,linktocpage</span><span class="pun">=</span><span class="pln">true</span><span class="pun">}</span><span class="pln">
+
+    </span><span class="kwd">\usepackage</span><span class="pun">{</span><span class="pln">array</span><span class="pun">}</span><span class="pln">
+    </span><span class="kwd">\usepackage</span><span class="pun">{</span><span class="pln">booktabs</span><span class="pun">}</span><span class="pln">
+
+    </span><span class="kwd">\def\hlinew</span><span class="pln">#1</span><span class="pun">{</span><span class="com">%</span><span class="pln">
+      </span><span class="kwd">\noalign</span><span class="pun">{</span><span class="kwd">\ifnum</span><span class="pln">0</span><span class="pun">=</span><span class="pln">`</span><span class="pun">}</span><span class="kwd">\fi\hrule</span><span class="pln"> </span><span class="kwd">\@height</span><span class="pln"> #1 </span><span class="kwd">\futurelet</span><span class="pln">
+       </span><span class="kwd">\reserved@a\@xhline</span><span class="pun">}</span><span class="pln">
+
+    </span><span class="com">%\usepackage{subfig}</span><span class="pln">
+    </span><span class="com">%\captionsetup[subfloat]{position=top,farskip=10pt,topadjust=0pt,captionskip=10pt,nearskip=10pt,margin=10pt}</span><span class="pln">
+    </span><span class="kwd">\end</span><span class="pln">_preamble
+    </span><span class="kwd">\options</span><span class="pln"> journal
+    </span><span class="kwd">\use</span><span class="pln">_default_options false
+    </span><span class="kwd">\maintain</span><span class="pln">_unincluded_children false
+    </span><span class="kwd">\language</span><span class="pln"> english
+    </span><span class="kwd">\language</span><span class="pln">_package default
+    </span><span class="kwd">\inputencoding</span><span class="pln"> default
+    </span><span class="kwd">\fontencoding</span><span class="pln"> global
+    </span><span class="kwd">\font</span><span class="pln">_roman default
+    </span><span class="kwd">\font</span><span class="pln">_sans default
+    </span><span class="kwd">\font</span><span class="pln">_typewriter default
+    </span><span class="kwd">\font</span><span class="pln">_math auto
+    </span><span class="kwd">\font</span><span class="pln">_default_family default
+    </span><span class="kwd">\use</span><span class="pln">_non_tex_fonts false
+    </span><span class="kwd">\font</span><span class="pln">_sc false
+    </span><span class="kwd">\font</span><span class="pln">_osf false
+    </span><span class="kwd">\font</span><span class="pln">_sf_scale 100
+    </span><span class="kwd">\font</span><span class="pln">_tt_scale 100
+    </span><span class="kwd">\graphics</span><span class="pln"> default
+    </span><span class="kwd">\default</span><span class="pln">_output_format default
+    </span><span class="kwd">\output</span><span class="pln">_sync 0
+    </span><span class="kwd">\bibtex</span><span class="pln">_command bibtex
+    </span><span class="kwd">\index</span><span class="pln">_command default
+    </span><span class="kwd">\float</span><span class="pln">_placement tbh
+    </span><span class="kwd">\paperfontsize</span><span class="pln"> default
+    </span><span class="kwd">\spacing</span><span class="pln"> single
+    </span><span class="kwd">\use</span><span class="pln">_hyperref true
+    </span><span class="kwd">\pdf</span><span class="pln">_title "Your Title"
+    </span><span class="kwd">\pdf</span><span class="pln">_author "Your Name"
+    </span><span class="kwd">\pdf</span><span class="pln">_bookmarks true
+    </span><span class="kwd">\pdf</span><span class="pln">_bookmarksnumbered true
+    </span><span class="kwd">\pdf</span><span class="pln">_bookmarksopen true
+    </span><span class="kwd">\pdf</span><span class="pln">_bookmarksopenlevel 1
+    </span><span class="kwd">\pdf</span><span class="pln">_breaklinks false
+    </span><span class="kwd">\pdf</span><span class="pln">_pdfborder true
+    </span><span class="kwd">\pdf</span><span class="pln">_colorlinks false
+    </span><span class="kwd">\pdf</span><span class="pln">_backref false
+    </span><span class="kwd">\pdf</span><span class="pln">_pdfusetitle false
+    </span><span class="kwd">\pdf</span><span class="pln">_quoted_options "pdfpagelayout</span><span class="pun">=</span><span class="pln">OneColumn, pdfnewwindow</span><span class="pun">=</span><span class="pln">true, pdfstartview</span><span class="pun">=</span><span class="pln">XYZ, plainpages</span><span class="pun">=</span><span class="pln">false"
+    </span><span class="kwd">\papersize</span><span class="pln"> default
+    </span><span class="kwd">\use</span><span class="pln">_geometry false
+    </span><span class="kwd">\use</span><span class="pln">_package amsmath 1
+    </span><span class="kwd">\use</span><span class="pln">_package amssymb 1
+    </span><span class="kwd">\use</span><span class="pln">_package cancel 0
+    </span><span class="kwd">\use</span><span class="pln">_package esint 0
+    </span><span class="kwd">\use</span><span class="pln">_package mathdots 1
+    </span><span class="kwd">\use</span><span class="pln">_package mathtools 0
+    </span><span class="kwd">\use</span><span class="pln">_package mhchem 1
+    </span><span class="kwd">\use</span><span class="pln">_package stackrel 0
+    </span><span class="kwd">\use</span><span class="pln">_package stmaryrd 0
+    </span><span class="kwd">\use</span><span class="pln">_package undertilde 0
+    </span><span class="kwd">\cite</span><span class="pln">_engine basic
+    </span><span class="kwd">\cite</span><span class="pln">_engine_type default
+    </span><span class="kwd">\biblio</span><span class="pln">_style IEEEtran
+    </span><span class="kwd">\use</span><span class="pln">_bibtopic false
+    </span><span class="kwd">\use</span><span class="pln">_indices false
+    </span><span class="kwd">\paperorientation</span><span class="pln"> portrait
+    </span><span class="kwd">\suppress</span><span class="pln">_date false
+    </span><span class="kwd">\justification</span><span class="pln"> true
+    </span><span class="kwd">\use</span><span class="pln">_refstyle 0
+    </span><span class="kwd">\index</span><span class="pln"> Index
+    </span><span class="kwd">\shortcut</span><span class="pln"> idx
+    </span><span class="kwd">\color</span><span class="pln"> #008000
+    </span><span class="kwd">\end</span><span class="pln">_index
+    </span><span class="kwd">\secnumdepth</span><span class="pln"> 3
+    </span><span class="kwd">\tocdepth</span><span class="pln"> 3
+    </span><span class="kwd">\paragraph</span><span class="pln">_separation indent
+    </span><span class="kwd">\paragraph</span><span class="pln">_indentation default
+    </span><span class="kwd">\quotes</span><span class="pln">_language english
+    </span><span class="kwd">\papercolumns</span><span class="pln"> 2
+    </span><span class="kwd">\papersides</span><span class="pln"> 1
+    </span><span class="kwd">\paperpagestyle</span><span class="pln"> default
+    </span><span class="kwd">\tracking</span><span class="pln">_changes false
+    </span><span class="kwd">\output</span><span class="pln">_changes false
+    </span><span class="kwd">\html</span><span class="pln">_math_output 0
+    </span><span class="kwd">\html</span><span class="pln">_css_as_file 0
+    </span><span class="kwd">\html</span><span class="pln">_be_strict false
+    </span><span class="kwd">\end</span><span class="pln">_header
+
+    </span><span class="kwd">\begin</span><span class="pln">_body
+
+    </span><span class="kwd">\begin</span><span class="pln">_layout Standard
+    Fig.
+
+    </span><span class="kwd">\begin</span><span class="pln">_inset CommandInset ref
+    LatexCommand ref
+    reference "fig:comparision"
+
+    </span><span class="kwd">\end</span><span class="pln">_inset
+
+    .
+     As shown in Fig.
+
+    </span><span class="kwd">\begin</span><span class="pln">_inset CommandInset ref
+    LatexCommand ref
+    reference "fig:comparision1"
+
+    </span><span class="kwd">\end</span><span class="pln">_inset
+
+    , From the Fig.
+
+    </span><span class="kwd">\begin</span><span class="pln">_inset CommandInset ref
+    LatexCommand ref
+    reference "fig:comparision2"
+
+    </span><span class="kwd">\end</span><span class="pln">_inset
+
+    , 
+    </span><span class="kwd">\end</span><span class="pln">_layout
+
+    </span><span class="kwd">\begin</span><span class="pln">_layout Standard
+    </span><span class="kwd">\begin</span><span class="pln">_inset Float figure
+    placement h
+    wide false
+    sideways false
+    status open
+
+    </span><span class="kwd">\begin</span><span class="pln">_layout Plain Layout
+    </span><span class="kwd">\align</span><span class="pln"> center
+    </span><span class="kwd">\begin</span><span class="pln">_inset Caption Standard
+
+    </span><span class="kwd">\begin</span><span class="pln">_layout Plain Layout
+    Classification accuracies comparision of different methods.
+
+    </span><span class="kwd">\begin</span><span class="pln">_inset CommandInset label
+    LatexCommand label
+    name "fig:comparision"
+
+    </span><span class="kwd">\end</span><span class="pln">_inset
+
+
+    </span><span class="kwd">\end</span><span class="pln">_layout
+
+    </span><span class="kwd">\end</span><span class="pln">_inset
+
+
+    </span><span class="kwd">\end</span><span class="pln">_layout
+
+    </span><span class="kwd">\begin</span><span class="pln">_layout Plain Layout
+    </span><span class="kwd">\begin</span><span class="pln">_inset Box Frameless
+    position "t"
+    hor_pos "c"
+    has_inner_box 1
+    inner_pos "t"
+    use_parbox 0
+    use_makebox 0
+    width "96col</span><span class="com">%"</span><span class="pln">
+    special "none"
+    height "</span><span class="lit">1in</span><span class="pln">"
+    height_special "totalheight"
+    status open
+
+    </span><span class="kwd">\begin</span><span class="pln">_layout Plain Layout
+    </span><span class="kwd">\noindent</span><span class="pln">
+    </span><span class="kwd">\align</span><span class="pln"> center
+    </span><span class="kwd">\begin</span><span class="pln">_inset Box Frameless
+    position "t"
+    hor_pos "c"
+    has_inner_box 1
+    inner_pos "t"
+    use_parbox 0
+    use_makebox 0
+    width "45col</span><span class="com">%"</span><span class="pln">
+    special "none"
+    height "</span><span class="lit">1in</span><span class="pln">"
+    height_special "totalheight"
+    status open
+
+    </span><span class="kwd">\begin</span><span class="pln">_layout Plain Layout
+    </span><span class="kwd">\begin</span><span class="pln">_inset Float figure
+    wide false
+    sideways false
+    status open
+
+    </span><span class="kwd">\begin</span><span class="pln">_layout Plain Layout
+    </span><span class="kwd">\begin</span><span class="pln">_inset Caption Standard
+
+    </span><span class="kwd">\begin</span><span class="pln">_layout Plain Layout
+    </span><span class="kwd">\begin</span><span class="pln">_inset CommandInset label
+    LatexCommand label
+    name "fig:comparision1"
+
+    </span><span class="kwd">\end</span><span class="pln">_inset
+
+    comparison1
+    </span><span class="kwd">\end</span><span class="pln">_layout
+
+    </span><span class="kwd">\end</span><span class="pln">_inset
+
+
+    </span><span class="kwd">\end</span><span class="pln">_layout
+
+    </span><span class="kwd">\begin</span><span class="pln">_layout Plain Layout
+    </span><span class="kwd">\align</span><span class="pln"> center
+    </span><span class="kwd">\begin</span><span class="pln">_inset Graphics
+        filename /home/ubuntu/Desktop/img1.eps
+        lyxscale 50
+        scale 50
+
+    </span><span class="kwd">\end</span><span class="pln">_inset
+
+
+    </span><span class="kwd">\end</span><span class="pln">_layout
+
+    </span><span class="kwd">\end</span><span class="pln">_inset
+
+
+    </span><span class="kwd">\end</span><span class="pln">_layout
+
+    </span><span class="kwd">\end</span><span class="pln">_inset
+
+
+    </span><span class="kwd">\begin</span><span class="pln">_inset space </span><span class="kwd">\quad</span><span class="pun">{}</span><span class="pln">
+    </span><span class="kwd">\end</span><span class="pln">_inset
+
+
+    </span><span class="kwd">\begin</span><span class="pln">_inset Box Frameless
+    position "t"
+    hor_pos "c"
+    has_inner_box 1
+    inner_pos "t"
+    use_parbox 0
+    use_makebox 0
+    width "45col</span><span class="com">%"</span><span class="pln">
+    special "none"
+    height "</span><span class="lit">1in</span><span class="pln">"
+    height_special "totalheight"
+    status open
+
+    </span><span class="kwd">\begin</span><span class="pln">_layout Plain Layout
+    </span><span class="kwd">\begin</span><span class="pln">_inset Float figure
+    wide false
+    sideways false
+    status open
+
+    </span><span class="kwd">\begin</span><span class="pln">_layout Plain Layout
+    </span><span class="kwd">\begin</span><span class="pln">_inset Caption Standard
+
+    </span><span class="kwd">\begin</span><span class="pln">_layout Plain Layout
+    </span><span class="kwd">\begin</span><span class="pln">_inset CommandInset label
+    LatexCommand label
+    name "fig:comparision2"
+
+    </span><span class="kwd">\end</span><span class="pln">_inset
+
+    comparison2
+    </span><span class="kwd">\end</span><span class="pln">_layout
+
+    </span><span class="kwd">\end</span><span class="pln">_inset
+
+
+    </span><span class="kwd">\end</span><span class="pln">_layout
+
+    </span><span class="kwd">\begin</span><span class="pln">_layout Plain Layout
+    </span><span class="kwd">\align</span><span class="pln"> center
+    </span><span class="kwd">\begin</span><span class="pln">_inset Graphics
+        filename /home/ubuntu/Desktop/img2.eps
+        lyxscale 20
+        scale 10
+
+    </span><span class="kwd">\end</span><span class="pln">_inset
+
+
+    </span><span class="kwd">\end</span><span class="pln">_layout
+
+    </span><span class="kwd">\end</span><span class="pln">_inset
+
+
+    </span><span class="kwd">\end</span><span class="pln">_layout
+
+    </span><span class="kwd">\end</span><span class="pln">_inset
+
+
+    </span><span class="kwd">\end</span><span class="pln">_layout
+
+    </span><span class="kwd">\end</span><span class="pln">_inset
+
+
+    </span><span class="kwd">\end</span><span class="pln">_layout
+
+    </span><span class="kwd">\end</span><span class="pln">_inset
+
+
+    </span><span class="kwd">\end</span><span class="pln">_layout
+
+    </span><span class="kwd">\end</span><span class="pln">_body
+    </span><span class="kwd">\end</span><span class="pln">_document</span></code></pre>
+
+<p>And the visualization in <code>lyx</code> editor is as follows:</p>
+
+<p><img src="./pdftex - Lyx wrong numbering in figure and subfigure - TeX - LaTeX Stack Exchange_files/ZTIN6.png" alt="enter image description here"></p>
+
+<p>And the generated pdf is as follows:</p>
+
+<p><img src="./pdftex - Lyx wrong numbering in figure and subfigure - TeX - LaTeX Stack Exchange_files/WIpmQ.png" alt="enter image description here"></p>
+
+<p>And I export the <code>lyx</code> into the plain <code>Latex</code> as follows:</p>
+
+<pre class="lang-tex prettyprint prettyprinted"><code><span class="pln">    </span><span class="com">%% LyX 2.1.3 created this file.  For more info, see http://www.lyx.org/.</span><span class="pln">
+    </span><span class="com">%% Do not edit unless you really know what you are doing.</span><span class="pln">
+    </span><span class="kwd">\documentclass</span><span class="pun">[</span><span class="pln">twocolumn,english,journal</span><span class="pun">]{</span><span class="pln">IEEEtran</span><span class="pun">}</span><span class="pln">
+    </span><span class="kwd">\usepackage</span><span class="pun">[</span><span class="pln">T1</span><span class="pun">]{</span><span class="pln">fontenc</span><span class="pun">}</span><span class="pln">
+    </span><span class="kwd">\usepackage</span><span class="pun">{</span><span class="pln">babel</span><span class="pun">}</span><span class="pln">
+    </span><span class="kwd">\usepackage</span><span class="pun">{</span><span class="pln">graphicx</span><span class="pun">}</span><span class="pln">
+    </span><span class="kwd">\usepackage</span><span class="pun">[</span><span class="pln">unicode</span><span class="pun">=</span><span class="pln">true,
+     bookmarks</span><span class="pun">=</span><span class="pln">true,bookmarksnumbered</span><span class="pun">=</span><span class="pln">true,bookmarksopen</span><span class="pun">=</span><span class="pln">true,bookmarksopenlevel</span><span class="pun">=</span><span class="pln">1,
+     breaklinks</span><span class="pun">=</span><span class="pln">false,pdfborder</span><span class="pun">={</span><span class="pln">0 0 0</span><span class="pun">}</span><span class="pln">,backref</span><span class="pun">=</span><span class="pln">false,colorlinks</span><span class="pun">=</span><span class="pln">false</span><span class="pun">]</span><span class="pln">
+     </span><span class="pun">{</span><span class="pln">hyperref</span><span class="pun">}</span><span class="pln">
+    </span><span class="kwd">\hypersetup</span><span class="pun">{</span><span class="pln">pdftitle</span><span class="pun">={</span><span class="pln">Your Title</span><span class="pun">}</span><span class="pln">,
+     pdfauthor</span><span class="pun">={</span><span class="pln">Your Name</span><span class="pun">}</span><span class="pln">,
+     pdfpagelayout</span><span class="pun">=</span><span class="pln">OneColumn, pdfnewwindow</span><span class="pun">=</span><span class="pln">true, pdfstartview</span><span class="pun">=</span><span class="pln">XYZ, plainpages</span><span class="pun">=</span><span class="pln">false</span><span class="pun">}</span><span class="pln">
+    </span><span class="kwd">\usepackage</span><span class="pun">{</span><span class="pln">breakurl</span><span class="pun">}</span><span class="pln">
+
+    </span><span class="kwd">\makeatletter</span><span class="pln">
+    </span><span class="com">%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.</span><span class="pln">
+    </span><span class="com">% for subfigures/subtables</span><span class="pln">
+    </span><span class="kwd">\usepackage</span><span class="pun">[</span><span class="pln">caption</span><span class="pun">=</span><span class="pln">false,font</span><span class="pun">=</span><span class="pln">footnotesize</span><span class="pun">]{</span><span class="pln">subfig</span><span class="pun">}</span><span class="pln">
+
+    </span><span class="kwd">\usepackage</span><span class="pun">{</span><span class="pln">algorithm,algpseudocode</span><span class="pun">}</span><span class="pln">
+
+    </span><span class="kwd">\usepackage</span><span class="pun">{</span><span class="pln">hyperref</span><span class="pun">}</span><span class="pln">
+    </span><span class="kwd">\hypersetup</span><span class="pun">{</span><span class="pln">backref,colorlinks,linktocpage</span><span class="pun">=</span><span class="pln">true</span><span class="pun">}</span><span class="pln">
+
+    </span><span class="kwd">\usepackage</span><span class="pun">{</span><span class="pln">array</span><span class="pun">}</span><span class="pln">
+    </span><span class="kwd">\usepackage</span><span class="pun">{</span><span class="pln">booktabs</span><span class="pun">}</span><span class="pln">
+
+    </span><span class="kwd">\def\hlinew</span><span class="pln">#1</span><span class="pun">{</span><span class="com">%</span><span class="pln">
+      </span><span class="kwd">\noalign</span><span class="pun">{</span><span class="kwd">\ifnum</span><span class="pln">0</span><span class="pun">=</span><span class="pln">`</span><span class="pun">}</span><span class="kwd">\fi\hrule</span><span class="pln"> </span><span class="kwd">\@height</span><span class="pln"> #1 </span><span class="kwd">\futurelet</span><span class="pln">
+       </span><span class="kwd">\reserved@a\@xhline</span><span class="pun">}</span><span class="pln">
+
+    </span><span class="com">%\usepackage{subfig}</span><span class="pln">
+    </span><span class="com">%\captionsetup[subfloat]{position=top,farskip=10pt,topadjust=0pt,captionskip=10pt,nearskip=10pt,margin=10pt}</span><span class="pln">
+
+    </span><span class="kwd">\@ifundefined</span><span class="pun">{</span><span class="pln">showcaptionsetup</span><span class="pun">}{}{</span><span class="com">%</span><span class="pln">
+     </span><span class="kwd">\PassOptionsToPackage</span><span class="pun">{</span><span class="pln">caption</span><span class="pun">=</span><span class="pln">false</span><span class="pun">}{</span><span class="pln">subfig</span><span class="pun">}}</span><span class="pln">
+    </span><span class="kwd">\usepackage</span><span class="pun">{</span><span class="pln">subfig</span><span class="pun">}</span><span class="pln">
+    </span><span class="kwd">\makeatother</span><span class="pln">
+
+    </span><span class="kwd">\begin</span><span class="pun">{</span><span class="pln">document</span><span class="pun">}</span><span class="pln">
+    Fig. </span><span class="kwd">\ref</span><span class="pun">{</span><span class="pln">fig:comparision</span><span class="pun">}</span><span class="pln">. As shown in Fig. </span><span class="kwd">\ref</span><span class="pun">{</span><span class="pln">fig:comparision1</span><span class="pun">}</span><span class="pln">,
+    From the Fig. </span><span class="kwd">\ref</span><span class="pun">{</span><span class="pln">fig:comparision2</span><span class="pun">}</span><span class="pln">, 
+
+    </span><span class="kwd">\begin</span><span class="pun">{</span><span class="pln">figure</span><span class="pun">}[</span><span class="pln">h</span><span class="pun">]</span><span class="pln">
+    </span><span class="kwd">\begin</span><span class="pun">{</span><span class="pln">centering</span><span class="pun">}</span><span class="pln">
+    </span><span class="kwd">\protect\caption</span><span class="pun">{</span><span class="pln">Classification accuracies comparision of different methods. </span><span class="kwd">\label</span><span class="pun">{</span><span class="pln">fig:comparision</span><span class="pun">}}</span><span class="pln">
+
+    </span><span class="kwd">\par\end</span><span class="pun">{</span><span class="pln">centering</span><span class="pun">}</span><span class="pln">
+
+    </span><span class="kwd">\begin</span><span class="pun">{</span><span class="pln">minipage</span><span class="pun">}[</span><span class="pln">t</span><span class="pun">]{</span><span class="pln">0.96</span><span class="kwd">\columnwidth</span><span class="pun">}</span><span class="com">%</span><span class="pln">
+    </span><span class="kwd">\noindent</span><span class="pln"> </span><span class="kwd">\begin</span><span class="pun">{</span><span class="pln">center</span><span class="pun">}</span><span class="pln">
+    </span><span class="kwd">\begin</span><span class="pun">{</span><span class="pln">minipage</span><span class="pun">}[</span><span class="pln">t</span><span class="pun">]{</span><span class="pln">0.45</span><span class="kwd">\columnwidth</span><span class="pun">}</span><span class="com">%</span><span class="pln">
+    </span><span class="kwd">\subfloat</span><span class="pun">[</span><span class="kwd">\label</span><span class="pun">{</span><span class="pln">fig:comparision1</span><span class="pun">}</span><span class="pln">comparison1</span><span class="pun">]{</span><span class="pln">
+
+    </span><span class="kwd">\protect\centering</span><span class="pun">{}</span><span class="kwd">\protect\includegraphics</span><span class="pun">[</span><span class="pln">scale</span><span class="pun">=</span><span class="pln">0.5</span><span class="pun">]{</span><span class="pln">/home/ubuntu/Desktop/img1</span><span class="pun">}</span><span class="kwd">\protect</span><span class="pun">}</span><span class="com">%</span><span class="pln">
+    </span><span class="kwd">\end</span><span class="pun">{</span><span class="pln">minipage</span><span class="pun">}</span><span class="kwd">\quad</span><span class="pun">{}</span><span class="com">%</span><span class="pln">
+    </span><span class="kwd">\begin</span><span class="pun">{</span><span class="pln">minipage</span><span class="pun">}[</span><span class="pln">t</span><span class="pun">]{</span><span class="pln">0.45</span><span class="kwd">\columnwidth</span><span class="pun">}</span><span class="com">%</span><span class="pln">
+    </span><span class="kwd">\subfloat</span><span class="pun">[</span><span class="kwd">\label</span><span class="pun">{</span><span class="pln">fig:comparision2</span><span class="pun">}</span><span class="pln">comparison2</span><span class="pun">]{</span><span class="pln">
+
+    </span><span class="kwd">\protect\centering</span><span class="pun">{}</span><span class="kwd">\protect\includegraphics</span><span class="pun">[</span><span class="pln">scale</span><span class="pun">=</span><span class="pln">0.1</span><span class="pun">]{</span><span class="pln">/home/ubuntu/Desktop/img2</span><span class="pun">}</span><span class="kwd">\protect</span><span class="pun">}</span><span class="com">%</span><span class="pln">
+    </span><span class="kwd">\end</span><span class="pun">{</span><span class="pln">minipage</span><span class="pun">}</span><span class="pln">
+    </span><span class="kwd">\par\end</span><span class="pun">{</span><span class="pln">center</span><span class="pun">}</span><span class="com">%</span><span class="pln">
+    </span><span class="kwd">\end</span><span class="pun">{</span><span class="pln">minipage</span><span class="pun">}</span><span class="pln">
+    </span><span class="kwd">\end</span><span class="pun">{</span><span class="pln">figure</span><span class="pun">}</span><span class="pln">
+
+    </span><span class="kwd">\end</span><span class="pun">{</span><span class="pln">document</span><span class="pun">}</span></code></pre>
+    </div>
+    <div class="post-taglist">
+        <a href="http://tex.stackexchange.com/questions/tagged/pdftex" class="post-tag js-gps-track" title="show questions tagged &#39;pdftex&#39;" rel="tag">pdftex</a> <a href="http://tex.stackexchange.com/questions/tagged/lyx" class="post-tag js-gps-track" title="show questions tagged &#39;lyx&#39;" rel="tag">lyx</a> <a href="http://tex.stackexchange.com/questions/tagged/lyx-layouts" class="post-tag js-gps-track" title="show questions tagged &#39;lyx-layouts&#39;" rel="tag">lyx-layouts</a> 
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://tex.stackexchange.com/q/235317" title="short permalink to this question" class="short-link" id="link-post-235317">share</a><span class="lsep">|</span><a href="http://tex.stackexchange.com/posts/235317/edit" class="suggest-edit-post" title="">improve this question</a></div>        
+    </td>
+    <td align="right" class="post-signature">
+<div class="user-info ">
+    <div class="user-action-time">
+        <a href="http://tex.stackexchange.com/posts/235317/revisions" title="show all edits to this post">edited <span title="2015-03-27 03:02:38Z" class="relativetime">Mar 27 '15 at 3:02</span></a>
+    </div>
+    <div class="user-gravatar32">
+        
+    </div>
+    <div class="user-details">
+        
+        <div class="-flair">
+            
+        </div>
+    </div>
+</div>    </td>
+    <td class="post-signature owner">
+        <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2015-03-27 01:06:34Z" class="relativetime">Mar 27 '15 at 1:06</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://tex.stackexchange.com/users/66043/mining"><div class="gravatar-wrapper-32"><img src="./pdftex - Lyx wrong numbering in figure and subfigure - TeX - LaTeX Stack Exchange_files/2af750716565a7a21f6bd108f5bc5086" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://tex.stackexchange.com/users/66043/mining">mining</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">193</span><span title="1 silver badge"><span class="badge2"></span><span class="badgecount">1</span></span><span title="8 bronze badges"><span class="badge3"></span><span class="badgecount">8</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</div>
+</td>
+        </tr>
+                
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-235317" class="comments ">
+		    <table>
+                <tbody data-remaining-comments-count="6" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+
+
+    <tr id="comment-557523" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">please always post full small documents not just fragments, so people can test, but just looking at it <code>\begin{centering}</code> should be <code>\centering</code> , <code>\protect\caption</code> should be <code>\caption</code>, <code>\noindent \begin{center}</code> should be <code>\centering</code>, <code>\protect\centering{}</code> should be <code>\centering</code>, no <code>\protect</code> in front of <code>\includegraphics</code> and never <code>\protect</code> in front of <code>}</code></span>
+                    –&nbsp;<a href="http://tex.stackexchange.com/users/1090/david-carlisle" title="310699 reputation" class="comment-user">David Carlisle</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://tex.stackexchange.com/questions/235317/lyx-wrong-numbering-in-figure-and-subfigure#comment557523_235317"><span title="2015-03-27 01:12:58Z" class="relativetime-clean">Mar 27 '15 at 1:12</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-557524" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">Hi, @DavidCarlisle, thank you for replying! I use the <code>Lyx 2.1</code> editor to edit the <code>lyx</code> document. Thus, I couldn't modify manually these commands as you suggested.</span>
+                    –&nbsp;<a href="http://tex.stackexchange.com/users/66043/mining" title="193 reputation" class="comment-user owner">mining</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://tex.stackexchange.com/questions/235317/lyx-wrong-numbering-in-figure-and-subfigure#comment557524_235317"><span title="2015-03-27 01:17:51Z" class="relativetime-clean">Mar 27 '15 at 1:17</span></a></span>
+                    <span class="edited-yes" title="this comment was edited 1 time"></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-557525" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">@DavidCarlisle, those <code>\protect</code>s and <code>\par</code>s are automatically generated by the <code>Lyx</code> editor, thus I couldn't  delete them manually.</span>
+                    –&nbsp;<a href="http://tex.stackexchange.com/users/66043/mining" title="193 reputation" class="comment-user owner">mining</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://tex.stackexchange.com/questions/235317/lyx-wrong-numbering-in-figure-and-subfigure#comment557525_235317"><span title="2015-03-27 01:20:02Z" class="relativetime-clean">Mar 27 '15 at 1:20</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-557534" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">@mining please post a complete .tex file and a complete .lyx file (.lyx files are just text files).</span>
+                    –&nbsp;<a href="http://tex.stackexchange.com/users/12212/scottkosty" title="6622 reputation" class="comment-user">scottkosty</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://tex.stackexchange.com/questions/235317/lyx-wrong-numbering-in-figure-and-subfigure#comment557534_235317"><span title="2015-03-27 02:36:43Z" class="relativetime-clean">Mar 27 '15 at 2:36</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-557537" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">Hi, @DavidCarlisle, I've update the post with the complete source of the <code>lyx</code> file. If convenient, please help check it. Thanks!</span>
+                    –&nbsp;<a href="http://tex.stackexchange.com/users/66043/mining" title="193 reputation" class="comment-user owner">mining</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://tex.stackexchange.com/questions/235317/lyx-wrong-numbering-in-figure-and-subfigure#comment557537_235317"><span title="2015-03-27 02:55:03Z" class="relativetime-clean">Mar 27 '15 at 2:55</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-235317" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link  dno" title="Use comments to ask for more information or suggest improvements. Avoid answering questions in comments."></a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link " title="expand to show all comments on this post" href="http://tex.stackexchange.com/questions/235317/lyx-wrong-numbering-in-figure-and-subfigure#" onclick="">show <b>6</b> more comments</a>
+        </div>         
+    </td>
+</tr>        </tbody></table>
+</div>
+
+			<div id="answers">
+
+				<a name="tab-top"></a>
+				<div id="answers-header">
+					<div class="subheader answers-subheader">
+						<h2>
+								1 Answer
+                                <span style="display:none;" itemprop="answerCount">1</span>
+						</h2>
+						<div>
+							<div id="tabs">
+        <a href="http://tex.stackexchange.com/questions/235317/lyx-wrong-numbering-in-figure-and-subfigure?answertab=active#tab-top" data-nav-xhref="" title="Answers with the latest activity first" data-value="active">
+            active</a>
+        <a href="http://tex.stackexchange.com/questions/235317/lyx-wrong-numbering-in-figure-and-subfigure?answertab=oldest#tab-top" data-nav-xhref="" title="Answers in the order they were provided" data-value="oldest">
+            oldest</a>
+        <a class="youarehere" href="http://tex.stackexchange.com/questions/235317/lyx-wrong-numbering-in-figure-and-subfigure?answertab=votes#tab-top" data-nav-xhref="" title="Answers with the highest score first" data-value="votes">
+            votes</a>
+</div>
+						</div>
+					</div>    
+				</div>    
+
+
+
+
+  
+<a name="235329"></a>
+<div id="answer-235329" class="answer" data-answerid="235329" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="235329">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">2</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>Don't say <code>caption=false</code> if you want to use captions....</p>
+
+<p><img src="./pdftex - Lyx wrong numbering in figure and subfigure - TeX - LaTeX Stack Exchange_files/7Q7K1.png" alt="numbered subfigures"></p>
+
+<pre class="lang-tex prettyprint prettyprinted"><code><span class="kwd">\documentclass</span><span class="pun">[</span><span class="pln">twocolumn,journal</span><span class="pun">]{</span><span class="pln">IEEEtran</span><span class="pun">}</span><span class="pln">
+</span><span class="kwd">\usepackage</span><span class="pun">[</span><span class="pln">demo</span><span class="pun">]{</span><span class="pln">graphicx</span><span class="pun">}</span><span class="pln">
+</span><span class="kwd">\usepackage</span><span class="pun">[</span><span class="pln">font</span><span class="pun">=</span><span class="pln">footnotesize</span><span class="pun">]{</span><span class="pln">subfig</span><span class="pun">}</span><span class="pln">
+
+</span><span class="kwd">\begin</span><span class="pun">{</span><span class="pln">document</span><span class="pun">}</span><span class="pln">
+  Fig. </span><span class="kwd">\ref</span><span class="pun">{</span><span class="pln">fig:comparision</span><span class="pun">}</span><span class="pln">. As shown in Fig. </span><span class="kwd">\ref</span><span class="pun">{</span><span class="pln">fig:comparision1</span><span class="pun">}</span><span class="pln">,
+  From the Fig. </span><span class="kwd">\ref</span><span class="pun">{</span><span class="pln">fig:comparision2</span><span class="pun">}</span><span class="pln">,
+
+  </span><span class="kwd">\begin</span><span class="pun">{</span><span class="pln">figure</span><span class="pun">}[</span><span class="pln">h</span><span class="pun">]</span><span class="pln">
+    </span><span class="kwd">\centering</span><span class="pln">
+     </span><span class="kwd">\caption</span><span class="pun">{</span><span class="pln">Classification accuracies comparision of different methods. </span><span class="kwd">\label</span><span class="pun">{</span><span class="pln">fig:comparision</span><span class="pun">}}</span><span class="pln">
+     </span><span class="kwd">\subfloat</span><span class="pun">[</span><span class="kwd">\label</span><span class="pun">{</span><span class="pln">fig:comparision1</span><span class="pun">}</span><span class="pln">comparison1</span><span class="pun">]{</span><span class="com">%</span><span class="pln">
+        </span><span class="kwd">\includegraphics</span><span class="pun">[</span><span class="pln">scale</span><span class="pun">=</span><span class="pln">0.5</span><span class="pun">]{</span><span class="pln">/home/ubuntu/Desktop/img1</span><span class="pun">}}</span><span class="kwd">\thinspace</span><span class="pln">
+        </span><span class="kwd">\subfloat</span><span class="pun">[</span><span class="kwd">\label</span><span class="pun">{</span><span class="pln">fig:comparision2</span><span class="pun">}</span><span class="pln">comparison2</span><span class="pun">]{</span><span class="com">%</span><span class="pln">
+        </span><span class="kwd">\includegraphics</span><span class="pun">[</span><span class="pln">scale</span><span class="pun">=</span><span class="pln">0.1</span><span class="pun">]{</span><span class="pln">/home/ubuntu/Desktop/img2</span><span class="pun">}}</span><span class="pln">
+  </span><span class="kwd">\end</span><span class="pun">{</span><span class="pln">figure</span><span class="pun">}</span><span class="pln">
+
+</span><span class="kwd">\end</span><span class="pun">{</span><span class="pln">document</span><span class="pun">}</span></code></pre>
+
+<p>Note that my code produces an overfull <code>hbox</code>. Presumably this is because I'm using <code>demo</code> mode as I don't have the images. Hence, I've not bothered to try to eliminate the issue as it is not germane to the current question.</p>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://tex.stackexchange.com/a/235329" title="short permalink to this answer" class="short-link" id="link-post-235329">share</a><span class="lsep">|</span><a href="http://tex.stackexchange.com/posts/235329/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info ">
+    <div class="user-action-time">
+        answered <span title="2015-03-27 03:43:01Z" class="relativetime">Mar 27 '15 at 3:43</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://tex.stackexchange.com/users/39222/cfr"><div class="gravatar-wrapper-32"><img src="./pdftex - Lyx wrong numbering in figure and subfigure - TeX - LaTeX Stack Exchange_files/TP3Oc.png" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://tex.stackexchange.com/users/39222/cfr">cfr</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score 82474" dir="ltr">82.5k</span><span title="4 gold badges"><span class="badge1"></span><span class="badgecount">4</span></span><span title="82 silver badges"><span class="badge2"></span><span class="badgecount">82</span></span><span title="193 bronze badges"><span class="badge3"></span><span class="badgecount">193</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+            
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-235329" class="comments ">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+
+
+    <tr id="comment-557547" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">Hi, @cfr, thank you  very for replying! In fact, I use <code>LyX</code> for writing the paper. But the final plain <code>Latex</code> version of the paper should be submitted. However, as an editor, I think <code>LyX</code> is suitable for the work. However, I think the limit that it cannot edit directly the <code>Latex</code> source code should be improved.</span>
+                    –&nbsp;<a href="http://tex.stackexchange.com/users/66043/mining" title="193 reputation" class="comment-user owner">mining</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://tex.stackexchange.com/questions/235317/lyx-wrong-numbering-in-figure-and-subfigure#comment557547_235329"><span title="2015-03-27 03:54:40Z" class="relativetime-clean">Mar 27 '15 at 3:54</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-557548" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">And I delete the <code>caption=false</code> in the preamble, but the issue still occurs.</span>
+                    –&nbsp;<a href="http://tex.stackexchange.com/users/66043/mining" title="193 reputation" class="comment-user owner">mining</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://tex.stackexchange.com/questions/235317/lyx-wrong-numbering-in-figure-and-subfigure#comment557548_235329"><span title="2015-03-27 03:55:47Z" class="relativetime-clean">Mar 27 '15 at 3:55</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-557552" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">@mining Note that the code you posted loads the package with <code>caption=false</code> at least once, but possibly twice. Did you remove both? Or ensure that the second conditional is not activated?</span>
+                    –&nbsp;<a href="http://tex.stackexchange.com/users/39222/cfr" title="82474 reputation" class="comment-user">cfr</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://tex.stackexchange.com/questions/235317/lyx-wrong-numbering-in-figure-and-subfigure#comment557552_235329"><span title="2015-03-27 04:19:27Z" class="relativetime-clean">Mar 27 '15 at 4:19</span></a></span>
+                    <span class="edited-yes" title="this comment was edited 1 time"></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-557554" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">the second <code>caption=false</code> is generated by the <code>LyX</code> itself, thus I couldn't delete it manually.</span>
+                    –&nbsp;<a href="http://tex.stackexchange.com/users/66043/mining" title="193 reputation" class="comment-user owner">mining</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://tex.stackexchange.com/questions/235317/lyx-wrong-numbering-in-figure-and-subfigure#comment557554_235329"><span title="2015-03-27 04:35:52Z" class="relativetime-clean">Mar 27 '15 at 4:35</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-557752" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">@mining Then you have to make sure the antecedent of the conditional is true so that that option is not passed to <code>subfig</code>, I suppose. Unless there is some other way of making LyX behave nicely. It is hard to believe that that option is forced on you.</span>
+                    –&nbsp;<a href="http://tex.stackexchange.com/users/39222/cfr" title="82474 reputation" class="comment-user">cfr</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://tex.stackexchange.com/questions/235317/lyx-wrong-numbering-in-figure-and-subfigure#comment557752_235329"><span title="2015-03-27 16:42:47Z" class="relativetime-clean">Mar 27 '15 at 16:42</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-235329" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="http://tex.stackexchange.com/questions/235317/lyx-wrong-numbering-in-figure-and-subfigure#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+									<a name="new-answer"></a>
+						<form id="post-form" action="http://tex.stackexchange.com/questions/235317/answer/submit" method="post" class="post-form">
+						    <input type="hidden" id="post-id" value="235317">
+                            <input type="hidden" id="qualityBanWarningShown" name="qualityBanWarningShown" value="false">
+                            <input type="hidden" name="referrer" value="https://www.google.com.co/">
+							<h2 class="space">Your Answer</h2>
+
+
+        
+
+<script>
+    StackExchange.ready(function() {
+        initTagRenderer("".split(" "), "".split(" "));
+       
+        StackExchange.using("externalEditor", function() {
+                // Have to fire editor after snippets, if snippets enabled
+                if (StackExchange.options.snippets.enabled) {
+                    StackExchange.using("snippets", function() {
+                        createEditor();
+                    });
+                }
+                else {
+                    createEditor();
+                }
+            });
+
+            function createEditor() {
+                prepareEditor({
+                    heartbeatType: 'answer',
+                convertImagesToLinks: false,
+                reputationToPostImages: null,
+                bindNavPrevention: true,
+                postfix: "",
+                    onDemand: true,
+                    discardSelector: ".discard-answer"
+                    ,immediatelyShowMarkdownHelp:true
+                    });
+                
+
+        }
+    });  
+</script>
+
+
+<div id="post-editor" class="post-editor js-post-editor">
+
+    <div style="position: relative;">     
+        <div class="wmd-container">
+            <div id="wmd-button-bar" class="wmd-button-bar"><ul id="wmd-button-row" class="wmd-button-row"><li id="wmd-bold-button" class="wmd-button" style="left: 0px;"><span style="background-position: 0px -20px;"></span></li><li id="wmd-italic-button" class="wmd-button" style="left: 25px;"><span style="background-position: -20px -20px;"></span></li><li id="wmd-spacer1" class="wmd-spacer" style="left: 50px;"><span style="background-position: -40px -20px;"></span></li><li id="wmd-link-button" class="wmd-button" style="left: 75px;"><span style="background-position: -40px -20px;"></span></li><li id="wmd-quote-button" class="wmd-button" style="left: 100px;"><span style="background-position: -60px -20px;"></span></li><li id="wmd-code-button" class="wmd-button" style="left: 125px;"><span style="background-position: -80px -20px;"></span></li><li id="wmd-image-button" class="wmd-button" style="left: 150px;"><span style="background-position: -100px -20px;"></span></li><li id="wmd-spacer2" class="wmd-spacer" style="left: 175px;"><span style="background-position: -120px -20px;"></span></li><li id="wmd-olist-button" class="wmd-button" style="left: 200px;"><span style="background-position: -120px -20px;"></span></li><li id="wmd-ulist-button" class="wmd-button" style="left: 225px;"><span style="background-position: -140px -20px;"></span></li><li id="wmd-heading-button" class="wmd-button" style="left: 250px;"><span style="background-position: -160px -20px;"></span></li><li id="wmd-hr-button" class="wmd-button" style="left: 275px;"><span style="background-position: -180px -20px;"></span></li><li id="wmd-spacer3" class="wmd-spacer" style="left: 300px;"><span style="background-position: -200px -20px;"></span></li><li id="wmd-undo-button" class="wmd-button" style="left: 325px;"><span style="background-position: -200px -20px;"></span></li><li id="wmd-redo-button" class="wmd-button" style="left: 350px;"><span style="background-position: -220px -20px;"></span></li></ul></div>
+            <textarea id="wmd-input" class="wmd-input" name="post-text" cols="92" rows="15" tabindex="101" data-min-length=""></textarea>
+        </div>
+    </div>
+
+    <div class="fl" style="margin-top: 8px; height:24px;">&nbsp;</div>
+    <div id="draft-saved" class="draft-saved community-option fl" style="margin-top: 8px; height:24px; display:none;">draft saved</div>
+
+    <div id="draft-discarded" class="draft-discarded community-option fl" style="margin-top: 8px; height:24px; display:none;">draft discarded</div>
+
+
+
+    <div id="wmd-preview" class="wmd-preview"></div>
+    <div></div>
+    <div class="edit-block">
+        <input id="fkey" name="fkey" type="hidden" value="b579cc3c0657f621f6117fc016d71454">
+        <input id="author" name="author" type="text">
+    </div>
+
+
+
+</div>
+							<div style="position: relative;">
+								
+								            <div class="form-item new-post-login">
+        
+                <div class="new-login-form">
+                    <div class="new-login-left">
+                        <h3>Sign up or <a id="login-link" href="http://tex.stackexchange.com/users/login?ssrc=question_page&amp;returnurl=http%3a%2f%2ftex.stackexchange.com%2fquestions%2f235317%2flyx-wrong-numbering-in-figure-and-subfigure%23new-answer">log in</a></h3>
+                        <script>
+                            StackExchange.ready(function () {
+                                StackExchange.helpers.onClickDraftSave('#login-link');
+                            });
+                        </script>
+                        <div class="preferred-login google-login">
+                            <p><span class="icon"></span><span>Sign up using Google</span></p>
+                        </div>
+                        <div class="preferred-login facebook-login">
+                            <p><span class="icon"></span><span>Sign up using Facebook</span></p>
+                        </div>
+                        <div class="preferred-login stackexchange-login">
+                            <p><span class="icon"></span><span>Sign up using Email and Password</span></p>
+                        </div>
+                    </div>
+                    <input type="hidden" name="manual-openid" class="manual-openid">
+                    <input type="hidden" name="use-facebook" class="use-facebook" value="false">
+                    <input type="hidden" name="use-google" class="use-google" value="false">
+                    <input type="button" class="submit-openid" value="Submit" style="display:none">
+                    <div class="new-login-right">
+                                <h3>Post as a guest</h3>
+    <div class="form-item">
+        <table>
+        <tbody><tr>
+                    <td class="vm">
+                <div>
+                    <label for="display-name">Name</label>
+                    <input id="display-name" name="display-name" type="text" size="30" maxlength="30" value="" tabindex="105">
+                </div>
+                <div>
+                    <label for="m-address">Email</label>
+                    <input id="m-address" name="m-address" type="email" size="30" maxlength="100" value="" tabindex="106" placeholder="required, but never shown">
+                </div>
+            </td>
+        </tr>
+        </tbody></table>
+    </div>
+
+                    </div>
+                </div>
+            </div>
+            <script>
+                StackExchange.ready(
+                    function () {
+                        StackExchange.openid.initPostLogin('.new-post-login', 'http%3a%2f%2ftex.stackexchange.com%2fquestions%2f235317%2flyx-wrong-numbering-in-figure-and-subfigure%23new-answer', 'question_page');
+                    }
+                );
+            </script>
+            <noscript>
+                        &lt;h3&gt;Post as a guest&lt;/h3&gt;
+    &lt;div class="form-item"&gt;
+        &lt;table&gt;
+        &lt;tr&gt;
+                    &lt;td class="vm"&gt;
+                &lt;div&gt;
+                    &lt;label for="display-name"&gt;Name&lt;/label&gt;
+                    &lt;input id="display-name" name="display-name" type="text" size="30" maxlength="30" value="" tabindex="105"&gt;
+                &lt;/div&gt;
+                &lt;div&gt;
+                    &lt;label for="m-address"&gt;Email&lt;/label&gt;
+                    &lt;input id="m-address" name="m-address" type="email" size="30" maxlength="100" value="" tabindex="106" placeholder="required, but never shown" /&gt;
+                &lt;/div&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+
+            </noscript>
+
+							</div>
+           
+															<div class="form-submit cbt">
+									<input id="submit-button" type="submit" value="Post Your Answer" tabindex="110">
+									<a href="http://tex.stackexchange.com/questions/235317/lyx-wrong-numbering-in-figure-and-subfigure#" class="discard-answer dno">discard</a>
+
+<p class="privacy-policy-agreement">
+By posting your answer, you agree to the <a href="http://stackexchange.com/legal/privacy-policy" target="_blank">privacy policy</a> and <a href="http://stackexchange.com/legal/terms-of-service" target="_blank">terms of service</a>.</p>
+<input type="hidden" name="legalLinksShown" value="1">								</div>
+						</form>
+
+
+
+						<h2 class="bottom-notice" data-loc="1">
+Not the answer you're looking for?							Browse other questions tagged <a href="http://tex.stackexchange.com/questions/tagged/pdftex" class="post-tag" title="show questions tagged &#39;pdftex&#39;" rel="tag">pdftex</a> <a href="http://tex.stackexchange.com/questions/tagged/lyx" class="post-tag" title="show questions tagged &#39;lyx&#39;" rel="tag">lyx</a> <a href="http://tex.stackexchange.com/questions/tagged/lyx-layouts" class="post-tag" title="show questions tagged &#39;lyx-layouts&#39;" rel="tag">lyx-layouts</a>  or <a href="http://tex.stackexchange.com/questions/ask">ask your own question</a>.						</h2>
+			</div>
+		</div>
+				<div id="sidebar" class="show-votes">
+						    <div class="module question-stats">
+			        <table id="qinfo">
+			            <tbody><tr>
+			                <td>
+			                    <p class="label-key">asked</p>
+			                </td>
+			                <td style="padding-left: 10px">
+			                    <p class="label-key" title="2015-03-27 01:06:34Z"><b>11 months ago</b></p>
+			                </td>
+			            </tr>
+			            <tr>
+			                <td>
+			                    <p class="label-key">viewed</p>
+			                </td>
+
+			                <td style="padding-left: 10px">
+			                    <p class="label-key">
+			                        <b>214 times</b>
+			                    </p>
+			                </td>
+			            </tr>
+			                <tr>
+			                    <td>
+			                        <p class="label-key">active</p>
+			                    </td>
+			                    <td style="padding-left: 10px">
+			                        <p class="label-key"><b><a href="http://tex.stackexchange.com/questions/235317/lyx-wrong-numbering-in-figure-and-subfigure?lastactivity" class="lastactivity-link" title="2015-03-27 03:43:01Z">11 months ago</a></b></p>
+			                    </td>
+			                </tr>
+			        </tbody></table>
+			    </div>
+						
+			<style type="text/css">
+    .ads { margin-left: 60px; }
+    .ad-container { width: 300px; height: 250px; margin-right: 20px; margin-bottom: 20px; }
+    .ad-container .ad { height: 250px; }
+    .ad-container .footer-container { overflow: hidden; height: 30px; position: relative; top: -30px; }
+    .ad-container .footer-container .footer { font-family: Arial,Helvetic,Sans-Serif; font-size: 12px; text-align: center; padding-top: 9px; background-color: #000; color: #EFF; opacity: 0.9; filter: alpha(opacity=90); top: 30px; height: 30px; position: relative; }
+    .ad-container a:hover { text-decoration: underline; }
+    #adzerk2 { height: 250px; }
+</style>
+<script>
+    StackExchange.ready(function () {
+        $(".ad-container").hover(
+            function () {
+                $(".ad-container .footer-container .footer").stop(true, true).animate({ top: "0px" }, "fast");
+            },
+            function () {
+                $(".ad-container .footer-container .footer").animate({ top: "30px" }, "fast");
+            });
+    });
+</script>
+    <script>
+        var ados = ados || {};ados.run = ados.run || [];
+        ados.run.push(function () { ados_add_placement(22, 12057, "adcm2", [5,17]).setZone(76); });
+    </script>
+    <div class="everyonelovesstackoverflow" id="adcm2"><div id="beta-ad-container" style="height: 250px;">
+<style type="text/css">
+#beta-ad { width: 300px; height: 250px; text-align: center; color: #326ab3; border-top: 1px solid #b4cfea; overflow: hidden; font-family: Helvetica, Arial, sans-serif !important; }
+#beta-ad a, #beta-ad a:visited, #beta-ad a:active { text-decoration: none; color: #326ab3; }
+#beta-ad { background: url(//sstatic.net/stackexchange/Img/beta-ad-bg.jpg?v=2) no-repeat bottom center; }
+#beta-ad-inner { height: 190px; padding: 0px 10px 20px 10px; width: 280px; overflow: hidden; }
+#beta-ad-top a { height: 22px; padding: 7px 0; font-size: 14px; line-height: 22px; display: block; color: #FFF !important; font-family: Helvetica, Arial, sans-serif !important; }
+#beta-ad-mid { height: 178px; display:table-cell; vertical-align: middle; }
+#beta-ad-mid #beta-ad-que, #beta-ad-mid #beta-ad-que:visited, #beta-ad-mid #beta-ad-que:active { font-size: 19px; line-height: 25px; font-weight: bold; color: #3a6da6; text-shadow: 0 1px 0 #fff; }
+#beta-ad-own { float: right; margin-top: 5px; font-size: 15px; line-height: 15px; }
+#beta-ad-own a { height: 20px; }
+#beta-ad-bot { height: 25px; font-size: 12px; overflow: hidden; margin-top: 6px; }
+#beta-ad-ans { margin-right: 8px; color: #29294b !important; display: inline-block; line-height: 24px; }
+.beta-ad-tag { color: #566E76!important; font-size: 11px; display: inline-block; background-color: #F7FDFF; text-decoration: none; white-space: nowrap; overflow: visible; margin: 2px 2px 6px 0; padding: 0.1em 0.6em; line-height: 1.4; border: 1px solid #C0D4DB; -moz-border-radius: 15px; -webkit-border-radius: 15px; border-radius: 15px; }
+</style>
+<div id="beta-ad">
+    <div id="beta-ad-top"><a href="http://engine.adzerk.net/r?e=eyJhdiI6NDE0LCJhdCI6NSwiYnQiOjAsImNtIjoxMTYxLCJjaCI6MTE5OCwiY2siOnt9LCJjciI6MTI0OTEzMywiZGkiOiJhMjY1ZTRhMzU5ZDQ0YTJjOGNlNGJhMzM1N2ZkMzE0MiIsImRtIjoxLCJmYyI6MTMzNzQzNSwiZmwiOjMzMzUsImlwIjoiMTkxLjEwOS4zMi4xNTkiLCJrdyI6Im1hdGhtbCx4LWhvc3QtdGV4LnN0YWNrZXhjaGFuZ2UuY29tIiwibnciOjIyLCJwYyI6MCwiZWMiOjAsInByIjoxNzU2LCJydCI6MSwicmYiOiJodHRwczovL3d3dy5nb29nbGUuY29tLmNvLyIsInN0IjoxMjA1NywidWsiOiJ1ZTEtZjEzMmFkMjUxOTk5NDBiNzg2NmViMTI4ZTI5ZmJlYzkiLCJ6biI6NzYsInRzIjoxNDU3MzYyMDg4OTQ3LCJiZiI6dHJ1ZSwicG4iOiJhZGNtMiIsInVyIjpudWxsfQ&amp;s=xKZxfW-8PtXgfT1DtPT6LFlVIkg&amp;url=http%3A%2F%2Fwoodworking.stackexchange.com%2F%3Futm_medium%3Dad%26utm_source%3Dhttp-askubuntu-com-questions-120621-how-to-fix-duplicate-sources-list-entry%26utm_campaign%3Dwoodworking.stackexchange.com-promo%26utm_content%3D3577">woodworking.stackexchange.com</a></div>
+    <div id="beta-ad-inner">
+        <div id="beta-ad-mid">
+            <a id="beta-ad-que" href="http://engine.adzerk.net/r?e=eyJhdiI6NDE0LCJhdCI6NSwiYnQiOjAsImNtIjoxMTYxLCJjaCI6MTE5OCwiY2siOnt9LCJjciI6MTI0OTEzMywiZGkiOiJhMjY1ZTRhMzU5ZDQ0YTJjOGNlNGJhMzM1N2ZkMzE0MiIsImRtIjoxLCJmYyI6MTMzNzQzNSwiZmwiOjMzMzUsImlwIjoiMTkxLjEwOS4zMi4xNTkiLCJrdyI6Im1hdGhtbCx4LWhvc3QtdGV4LnN0YWNrZXhjaGFuZ2UuY29tIiwibnciOjIyLCJwYyI6MCwiZWMiOjAsInByIjoxNzU2LCJydCI6MSwicmYiOiJodHRwczovL3d3dy5nb29nbGUuY29tLmNvLyIsInN0IjoxMjA1NywidWsiOiJ1ZTEtZjEzMmFkMjUxOTk5NDBiNzg2NmViMTI4ZTI5ZmJlYzkiLCJ6biI6NzYsInRzIjoxNDU3MzYyMDg4OTQ3LCJiZiI6dHJ1ZSwicG4iOiJhZGNtMiIsInVyIjpudWxsfQ&amp;s=xKZxfW-8PtXgfT1DtPT6LFlVIkg&amp;url=http%3A%2F%2Fwoodworking.stackexchange.com%2Fquestions%2F3577%2Fare-my-sheet-good-storage-methods-warping-my-boards%3Futm_medium%3Dad%26utm_source%3Dhttp-askubuntu-com-questions-120621-how-to-fix-duplicate-sources-list-entry%26utm_campaign%3Dwoodworking.stackexchange.com-promo%26utm_content%3D3577">Are my sheet good storage methods warping my boards?</a><br>
+            <div id="beta-ad-own">– <a href="http://engine.adzerk.net/r?e=eyJhdiI6NDE0LCJhdCI6NSwiYnQiOjAsImNtIjoxMTYxLCJjaCI6MTE5OCwiY2siOnt9LCJjciI6MTI0OTEzMywiZGkiOiJhMjY1ZTRhMzU5ZDQ0YTJjOGNlNGJhMzM1N2ZkMzE0MiIsImRtIjoxLCJmYyI6MTMzNzQzNSwiZmwiOjMzMzUsImlwIjoiMTkxLjEwOS4zMi4xNTkiLCJrdyI6Im1hdGhtbCx4LWhvc3QtdGV4LnN0YWNrZXhjaGFuZ2UuY29tIiwibnciOjIyLCJwYyI6MCwiZWMiOjAsInByIjoxNzU2LCJydCI6MSwicmYiOiJodHRwczovL3d3dy5nb29nbGUuY29tLmNvLyIsInN0IjoxMjA1NywidWsiOiJ1ZTEtZjEzMmFkMjUxOTk5NDBiNzg2NmViMTI4ZTI5ZmJlYzkiLCJ6biI6NzYsInRzIjoxNDU3MzYyMDg4OTQ3LCJiZiI6dHJ1ZSwicG4iOiJhZGNtMiIsInVyIjpudWxsfQ&amp;s=xKZxfW-8PtXgfT1DtPT6LFlVIkg&amp;url=http%3A%2F%2Fwoodworking.stackexchange.com%2Fusers%2F1250%2Fjason-c%3Futm_medium%3Dad%26utm_source%3Dhttp-askubuntu-com-questions-120621-how-to-fix-duplicate-sources-list-entry%26utm_campaign%3Dwoodworking.stackexchange.com-promo%26utm_content%3D3577">Jason C</a></div>
+        </div>
+        <div id="beta-ad-bot"><a id="beta-ad-ans" href="http://engine.adzerk.net/r?e=eyJhdiI6NDE0LCJhdCI6NSwiYnQiOjAsImNtIjoxMTYxLCJjaCI6MTE5OCwiY2siOnt9LCJjciI6MTI0OTEzMywiZGkiOiJhMjY1ZTRhMzU5ZDQ0YTJjOGNlNGJhMzM1N2ZkMzE0MiIsImRtIjoxLCJmYyI6MTMzNzQzNSwiZmwiOjMzMzUsImlwIjoiMTkxLjEwOS4zMi4xNTkiLCJrdyI6Im1hdGhtbCx4LWhvc3QtdGV4LnN0YWNrZXhjaGFuZ2UuY29tIiwibnciOjIyLCJwYyI6MCwiZWMiOjAsInByIjoxNzU2LCJydCI6MSwicmYiOiJodHRwczovL3d3dy5nb29nbGUuY29tLmNvLyIsInN0IjoxMjA1NywidWsiOiJ1ZTEtZjEzMmFkMjUxOTk5NDBiNzg2NmViMTI4ZTI5ZmJlYzkiLCJ6biI6NzYsInRzIjoxNDU3MzYyMDg4OTQ3LCJiZiI6dHJ1ZSwicG4iOiJhZGNtMiIsInVyIjpudWxsfQ&amp;s=xKZxfW-8PtXgfT1DtPT6LFlVIkg&amp;url=http%3A%2F%2Fwoodworking.stackexchange.com%2Fquestions%2F3577%2Fare-my-sheet-good-storage-methods-warping-my-boards%3Futm_medium%3Dad%26utm_source%3Dhttp-askubuntu-com-questions-120621-how-to-fix-duplicate-sources-list-entry%26utm_campaign%3Dwoodworking.stackexchange.com-promo%26utm_content%3D3577%23tab-top">2 answers</a> <a class="beta-ad-tag" href="http://engine.adzerk.net/r?e=eyJhdiI6NDE0LCJhdCI6NSwiYnQiOjAsImNtIjoxMTYxLCJjaCI6MTE5OCwiY2siOnt9LCJjciI6MTI0OTEzMywiZGkiOiJhMjY1ZTRhMzU5ZDQ0YTJjOGNlNGJhMzM1N2ZkMzE0MiIsImRtIjoxLCJmYyI6MTMzNzQzNSwiZmwiOjMzMzUsImlwIjoiMTkxLjEwOS4zMi4xNTkiLCJrdyI6Im1hdGhtbCx4LWhvc3QtdGV4LnN0YWNrZXhjaGFuZ2UuY29tIiwibnciOjIyLCJwYyI6MCwiZWMiOjAsInByIjoxNzU2LCJydCI6MSwicmYiOiJodHRwczovL3d3dy5nb29nbGUuY29tLmNvLyIsInN0IjoxMjA1NywidWsiOiJ1ZTEtZjEzMmFkMjUxOTk5NDBiNzg2NmViMTI4ZTI5ZmJlYzkiLCJ6biI6NzYsInRzIjoxNDU3MzYyMDg4OTQ3LCJiZiI6dHJ1ZSwicG4iOiJhZGNtMiIsInVyIjpudWxsfQ&amp;s=xKZxfW-8PtXgfT1DtPT6LFlVIkg&amp;url=http%3A%2F%2Fwoodworking.stackexchange.com%2Fquestions%2Ftagged%2Fplywood">plywood</a>  <a class="beta-ad-tag" href="http://engine.adzerk.net/r?e=eyJhdiI6NDE0LCJhdCI6NSwiYnQiOjAsImNtIjoxMTYxLCJjaCI6MTE5OCwiY2siOnt9LCJjciI6MTI0OTEzMywiZGkiOiJhMjY1ZTRhMzU5ZDQ0YTJjOGNlNGJhMzM1N2ZkMzE0MiIsImRtIjoxLCJmYyI6MTMzNzQzNSwiZmwiOjMzMzUsImlwIjoiMTkxLjEwOS4zMi4xNTkiLCJrdyI6Im1hdGhtbCx4LWhvc3QtdGV4LnN0YWNrZXhjaGFuZ2UuY29tIiwibnciOjIyLCJwYyI6MCwiZWMiOjAsInByIjoxNzU2LCJydCI6MSwicmYiOiJodHRwczovL3d3dy5nb29nbGUuY29tLmNvLyIsInN0IjoxMjA1NywidWsiOiJ1ZTEtZjEzMmFkMjUxOTk5NDBiNzg2NmViMTI4ZTI5ZmJlYzkiLCJ6biI6NzYsInRzIjoxNDU3MzYyMDg4OTQ3LCJiZiI6dHJ1ZSwicG4iOiJhZGNtMiIsInVyIjpudWxsfQ&amp;s=xKZxfW-8PtXgfT1DtPT6LFlVIkg&amp;url=http%3A%2F%2Fwoodworking.stackexchange.com%2Fquestions%2Ftagged%2Fmdf">mdf</a>  <a class="beta-ad-tag" href="http://engine.adzerk.net/r?e=eyJhdiI6NDE0LCJhdCI6NSwiYnQiOjAsImNtIjoxMTYxLCJjaCI6MTE5OCwiY2siOnt9LCJjciI6MTI0OTEzMywiZGkiOiJhMjY1ZTRhMzU5ZDQ0YTJjOGNlNGJhMzM1N2ZkMzE0MiIsImRtIjoxLCJmYyI6MTMzNzQzNSwiZmwiOjMzMzUsImlwIjoiMTkxLjEwOS4zMi4xNTkiLCJrdyI6Im1hdGhtbCx4LWhvc3QtdGV4LnN0YWNrZXhjaGFuZ2UuY29tIiwibnciOjIyLCJwYyI6MCwiZWMiOjAsInByIjoxNzU2LCJydCI6MSwicmYiOiJodHRwczovL3d3dy5nb29nbGUuY29tLmNvLyIsInN0IjoxMjA1NywidWsiOiJ1ZTEtZjEzMmFkMjUxOTk5NDBiNzg2NmViMTI4ZTI5ZmJlYzkiLCJ6biI6NzYsInRzIjoxNDU3MzYyMDg4OTQ3LCJiZiI6dHJ1ZSwicG4iOiJhZGNtMiIsInVyIjpudWxsfQ&amp;s=xKZxfW-8PtXgfT1DtPT6LFlVIkg&amp;url=http%3A%2F%2Fwoodworking.stackexchange.com%2Fquestions%2Ftagged%2Fstorage">storage</a> </div>
+    </div>
+</div>
+
+
+</div><script type="text/javascript">window._betaAdUrl = "http://engine.adzerk.net/r?e=eyJhdiI6NDE0LCJhdCI6NSwiYnQiOjAsImNtIjoxMTYxLCJjaCI6MTE5OCwiY2siOnt9LCJjciI6MTI0OTEzMywiZGkiOiJhMjY1ZTRhMzU5ZDQ0YTJjOGNlNGJhMzM1N2ZkMzE0MiIsImRtIjoxLCJmYyI6MTMzNzQzNSwiZmwiOjMzMzUsImlwIjoiMTkxLjEwOS4zMi4xNTkiLCJrdyI6Im1hdGhtbCx4LWhvc3QtdGV4LnN0YWNrZXhjaGFuZ2UuY29tIiwibnciOjIyLCJwYyI6MCwiZWMiOjAsInByIjoxNzU2LCJydCI6MSwicmYiOiJodHRwczovL3d3dy5nb29nbGUuY29tLmNvLyIsInN0IjoxMjA1NywidWsiOiJ1ZTEtZjEzMmFkMjUxOTk5NDBiNzg2NmViMTI4ZTI5ZmJlYzkiLCJ6biI6NzYsInRzIjoxNDU3MzYyMDg4OTQ3LCJiZiI6dHJ1ZSwicG4iOiJhZGNtMiIsInVyIjpudWxsfQ&s=xKZxfW-8PtXgfT1DtPT6LFlVIkg";</script><script type="text/javascript" src="./pdftex - Lyx wrong numbering in figure and subfigure - TeX - LaTeX Stack Exchange_files/js"></script><img height="0px" width="0px" border="0" style="position:absolute;" src="./pdftex - Lyx wrong numbering in figure and subfigure - TeX - LaTeX Stack Exchange_files/i.gif"></div> 
+<script>var p = "http", d = "static"; if (document.location.protocol == "https:") { p += "s"; d = "engine"; } var z = document.createElement("script"); z.type = "text/javascript"; z.async = true; z.src = p + "://" + d + ".adzerk.net/ados.js"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(z, s);</script>
+<script>
+    var ados = ados || {};
+    ados.run = ados.run || [];
+    ados.run.push(function () {
+        ados_setKeywords('mathml,x-host-tex.stackexchange.com');; ados_load();
+    });         
+</script>
+			  
+    
+            
+
+				<div class="module sidebar-related">
+					<h4 id="h-related">Related</h4>
+                    <div class="related js-gps-related-questions" data-tracker="rq=1">
+                        <div class="spacer js-gps-track">
+<a href="http://tex.stackexchange.com/q/14558?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes answered-accepted default">1
+    </div>
+</a><a href="http://tex.stackexchange.com/questions/14558/using-thmboxs-title-with-lyx?rq=1" class="question-hyperlink">Using thmbox's title with lyx</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://tex.stackexchange.com/q/50986?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes default">2
+    </div>
+</a><a href="http://tex.stackexchange.com/questions/50986/lyx-layout-for-eurographics?rq=1" class="question-hyperlink">LyX layout for Eurographics</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://tex.stackexchange.com/q/67842?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes answered-accepted default">6
+    </div>
+</a><a href="http://tex.stackexchange.com/questions/67842/syntax-highlight-in-insert-tex-code-in-lyx?rq=1" class="question-hyperlink">Syntax Highlight in “Insert TeX code” in LyX?</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://tex.stackexchange.com/q/99466?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes answered-accepted default">2
+    </div>
+</a><a href="http://tex.stackexchange.com/questions/99466/write-a-dictionary-with-lyx?rq=1" class="question-hyperlink">Write a dictionary with LyX</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://tex.stackexchange.com/q/149128?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes default">1
+    </div>
+</a><a href="http://tex.stackexchange.com/questions/149128/lyx-document-format-with-subheader?rq=1" class="question-hyperlink">Lyx document format with “subheader”</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://tex.stackexchange.com/q/178824?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes default">1
+    </div>
+</a><a href="http://tex.stackexchange.com/questions/178824/why-the-lyx-getting-reset-toolbars-layout-every-time-it-starts?rq=1" class="question-hyperlink">Why the LyX getting reset toolbars layout every time it starts?</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://tex.stackexchange.com/q/222472?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes default">1
+    </div>
+</a><a href="http://tex.stackexchange.com/questions/222472/installing-new-doc-classes-in-lyx?rq=1" class="question-hyperlink">Installing New Doc Classes in Lyx</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://tex.stackexchange.com/q/242289?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes answered-accepted default">3
+    </div>
+</a><a href="http://tex.stackexchange.com/questions/242289/is-it-possible-to-create-a-lyx-layout-style-without-vertical-paragraph-spacing?rq=1" class="question-hyperlink">Is it possible to create a LyX Layout Style without vertical paragraph spacing?</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://tex.stackexchange.com/q/272137?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes default">1
+    </div>
+</a><a href="http://tex.stackexchange.com/questions/272137/trouble-adding-new-layout-to-lyx-based-on-cls?rq=1" class="question-hyperlink">Trouble adding new .layout to LyX based on .cls</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://tex.stackexchange.com/q/285616?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes default">2
+    </div>
+</a><a href="http://tex.stackexchange.com/questions/285616/breaking-equations-under-parentheses-in-nested-environments-of-lyx?rq=1" class="question-hyperlink">Breaking equations under parentheses in nested environments of LyX</a>
+</div>
+
+                    </div>
+				</div>
+            
+<div id="hot-network-questions" class="module">
+    <h4>
+        <a href="http://stackexchange.com/questions?tab=hot" class="js-gps-track" data-gps-track="posts_hot_network.click({ item_type:1, location:11 })">
+            Hot Network Questions
+        </a>
+    </h4>
+    <ul>
+            <li>
+                <div class="favicon favicon-puzzling" title="Puzzling Stack Exchange"></div><a href="http://puzzling.stackexchange.com/questions/28439/a-truly-amazing-way-of-making-the-number-2016" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:559 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    A truly amazing way of making the number 2016
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-english" title="English Language &amp; Usage Stack Exchange"></div><a href="http://english.stackexchange.com/questions/310780/is-there-any-word-in-english-where-th-sounds-like-th" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:97 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Is there any word in English where "th" sounds like "t+h"?
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-vi" title="Vi and Vim Stack Exchange"></div><a href="http://vi.stackexchange.com/questions/6805/how-can-i-convert-this-remap-to-a-expr" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:599 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How can I convert this remap to a &lt;expr&gt;?
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-puzzling" title="Puzzling Stack Exchange"></div><a href="http://puzzling.stackexchange.com/questions/28498/how-many-bottles-can-you-serve" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:559 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How many bottles can you serve?
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-serverfault" title="Server Fault"></div><a href="http://serverfault.com/questions/762017/how-to-get-the-linux-oom-killer-to-not-kill-my-process" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:2 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How to get the Linux OOM killer to not kill my process?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-webapps" title="Web Applications Stack Exchange"></div><a href="http://webapps.stackexchange.com/questions/90658/in-google-spreadsheets-how-do-i-make-a-cell-display-a-value-randomly-depending" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:34 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    In Google Spreadsheets, how do I make a cell display a value randomly depending on a percentage in another cell
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-puzzling" title="Puzzling Stack Exchange"></div><a href="http://puzzling.stackexchange.com/questions/28293/how-did-alice-and-bob-die" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:559 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How did Alice and Bob die?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-aviation" title="Aviation Stack Exchange"></div><a href="http://aviation.stackexchange.com/questions/25852/is-it-practical-to-become-an-airline-pilot-in-order-to-travel-internationally" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:528 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Is it practical to become an airline pilot in order to travel internationally?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/1686953/why-is-a-path-connected-subset-of-r-an-interval" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:69 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Why is a path connected subset of R an interval?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-movies" title="Movies &amp; TV Stack Exchange"></div><a href="http://movies.stackexchange.com/questions/49724/what-is-it-called-when-a-movie-breaks-the-illusion-of-fantasy" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:367 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    What is it called when a movie breaks the illusion of fantasy?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-mathoverflow" title="MathOverflow"></div><a href="http://mathoverflow.net/questions/232965/is-there-a-rank-for-higher-degree-homogeneous-forms-analogous-to-that-of-quadrat" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:504 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Is there a rank for higher degree homogeneous forms analogous to that of quadratic forms?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-security" title="Information Security Stack Exchange"></div><a href="http://security.stackexchange.com/questions/116566/use-multiple-computers-for-faster-brute-force" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:162 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Use multiple computers for faster brute force
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-sharepoint" title="SharePoint Stack Exchange"></div><a href="http://sharepoint.stackexchange.com/questions/173255/check-current-user-is-sharepoint-administrator" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:232 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Check current user is SharePoint Administrator
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-worldbuilding" title="Worldbuilding Stack Exchange"></div><a href="http://worldbuilding.stackexchange.com/questions/37351/poison-which-constantly-needs-to-be-treated-by-antidote-to-not-get-killed" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:579 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Poison which constantly needs to be treated by antidote to not get killed
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-movies" title="Movies &amp; TV Stack Exchange"></div><a href="http://movies.stackexchange.com/questions/49826/why-does-kylo-ren-wear-a-mask" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:367 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Why does Kylo Ren wear a mask?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-codereview" title="Code Review Stack Exchange"></div><a href="http://codereview.stackexchange.com/questions/122060/singly-linked-list-implementation-in-c" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:196 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Singly Linked list implementation in C++
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-stats" title="Cross Validated"></div><a href="http://stats.stackexchange.com/questions/200290/estimating-the-probability-in-a-bernoulli-process-by-sampling-until-10-failures" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:65 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Estimating the probability in a Bernoulli process by sampling until 10 failures: is it biased?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/1686751/definite-integral-by-using-properties-or-by-indefinite-integration" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:69 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Definite Integral by using properties or by indefinite integration
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/1681993/why-is-1-1-1-1-1-not-real" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:69 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Why is 1 - 1/(1 - 1/(1 - ...)) not real?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-space" title="Space Exploration Stack Exchange"></div><a href="http://space.stackexchange.com/questions/14359/how-could-a-hot-lander-enter-titans-atmosphere-without-setting-its-hydrocarbons" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:508 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How could a hot lander enter Titan's atmosphere without setting its hydrocarbons ablaze?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-salesforce" title="Salesforce Stack Exchange"></div><a href="http://salesforce.stackexchange.com/questions/113179/how-can-i-check-batch-apex-results" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:459 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How can I check batch apex results?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-scifi" title="Science Fiction &amp; Fantasy Stack Exchange"></div><a href="http://scifi.stackexchange.com/questions/121340/what-was-the-first-story-describing-realistic-zero-g-during-space-flight" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:186 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    What was the first story describing realistic zero-g during space flight?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-anime" title="Anime &amp; Manga Stack Exchange"></div><a href="http://anime.stackexchange.com/questions/30276/is-the-golden-den-den-mushi-mechanical-or-a-living-specimen" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:477 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Is the Golden Den Den Mushi mechanical, or a living specimen?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-tridion" title="Tridion Stack Exchange"></div><a href="http://tridion.stackexchange.com/questions/14098/start-workflow-if-the-component-version-is-greater-than-1-0" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:485 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Start workflow if the component version is greater than 1.0
+                </a>
+
+            </li>
+    </ul>
+
+        
+</div>
+		</div>
+	
+<div id="feed-link">
+    <div id="feed-link-text">
+        <a href="http://tex.stackexchange.com/feeds/question/235317" title="feed of this question and its answers">
+            <span class="feed-icon"></span>question feed
+        </a>
+    </div>
+</div>	<script>
+StackExchange.ready(function(){$.get('/posts/235317/ivc/a398');});
+</script>
+<noscript>
+    &lt;div&gt;&lt;img src="/posts/235317/ivc/a398" class="dno" alt="" width="0" height="0"&gt;&lt;/div&gt;
+</noscript><div style="display:none" id="prettify-lang">lang-tex</div></div>
+
+
+        </div>
+    </div>
+    <div id="footer" class="categories">
+        <div class="footerwrap">
+            <div id="footer-menu">
+                <div class="top-footer-links">
+                    <a href="http://stackoverflow.com/company/about">about us</a>
+                        <a href="http://tex.stackexchange.com/tour">tour</a>
+                    <a href="http://tex.stackexchange.com/help">help</a>
+                    <a href="http://tex.blogoverflow.com/?blb=1">blog</a>
+                        <a href="http://chat.stackexchange.com/">chat</a>
+                    <a href="http://data.stackexchange.com/">data</a>
+                    <a href="http://stackexchange.com/legal">legal</a>
+                    <a href="http://stackexchange.com/legal/privacy-policy">privacy policy</a>
+                    <a href="http://stackoverflow.com/company/work-here">work here</a>
+                    <a href="http://stackexchange.com/mediakit">advertising info</a>
+
+                    <a onclick="StackExchange.switchMobile(&quot;on&quot;)">mobile</a>
+                    <b><a href="http://tex.stackexchange.com/contact">contact us</a></b>
+                        <b><a href="http://meta.tex.stackexchange.com/">feedback</a></b>
+                    
+                </div>
+                <div id="footer-sites">
+                    <table>
+    <tbody><tr>
+            <th colspan="3">
+                Technology
+            </th>
+            <th>
+                Life / Arts
+            </th>
+            <th>
+                Culture / Recreation
+            </th>
+            <th>
+                Science
+            </th>
+            <th>
+                Other
+            </th>
+    </tr>
+    <tr>
+            <td>
+                <ol>
+                        <li><a href="http://stackoverflow.com/" title="professional and enthusiast programmers">Stack Overflow</a></li>
+                        <li><a href="http://serverfault.com/" title="system and network administrators">Server Fault</a></li>
+                        <li><a href="http://superuser.com/" title="computer enthusiasts and power users">Super User</a></li>
+                        <li><a href="http://webapps.stackexchange.com/" title="power users of web applications">Web Applications</a></li>
+                        <li><a href="http://askubuntu.com/" title="Ubuntu users and developers">Ask Ubuntu</a></li>
+                        <li><a href="http://webmasters.stackexchange.com/" title="pro webmasters">Webmasters</a></li>
+                        <li><a href="http://gamedev.stackexchange.com/" title="professional and independent game developers">Game Development</a></li>
+                        <li><a href="http://tex.stackexchange.com/" title="users of TeX, LaTeX, ConTeXt, and related typesetting systems">TeX - LaTeX</a></li>
+                            </ol></td><td><ol>
+                        <li><a href="http://programmers.stackexchange.com/" title="professional programmers interested in conceptual questions about software development">Programmers</a></li>
+                        <li><a href="http://unix.stackexchange.com/" title="users of Linux, FreeBSD and other Un*x-like operating systems">Unix &amp; Linux</a></li>
+                        <li><a href="http://apple.stackexchange.com/" title="power users of Apple hardware and software">Ask Different (Apple)</a></li>
+                        <li><a href="http://wordpress.stackexchange.com/" title="WordPress developers and administrators">WordPress Development</a></li>
+                        <li><a href="http://gis.stackexchange.com/" title="cartographers, geographers and GIS professionals">Geographic Information Systems</a></li>
+                        <li><a href="http://electronics.stackexchange.com/" title="electronics and electrical engineering professionals, students, and enthusiasts">Electrical Engineering</a></li>
+                        <li><a href="http://android.stackexchange.com/" title="enthusiasts and power users of the Android operating system">Android Enthusiasts</a></li>
+                        <li><a href="http://security.stackexchange.com/" title="information security professionals">Information Security</a></li>
+                            </ol></td><td><ol>
+                        <li><a href="http://dba.stackexchange.com/" title="database professionals who wish to improve their database skills and learn from others in the community">Database Administrators</a></li>
+                        <li><a href="http://drupal.stackexchange.com/" title="Drupal developers and administrators">Drupal Answers</a></li>
+                        <li><a href="http://sharepoint.stackexchange.com/" title="SharePoint enthusiasts">SharePoint</a></li>
+                        <li><a href="http://ux.stackexchange.com/" title="user experience researchers and experts">User Experience</a></li>
+                        <li><a href="http://mathematica.stackexchange.com/" title="users of Mathematica">Mathematica</a></li>
+                        <li><a href="http://salesforce.stackexchange.com/" title="Salesforce administrators, implementation experts, developers and anybody in-between">Salesforce</a></li>
+                        <li><a href="http://expressionengine.stackexchange.com/" title="administrators, end users, developers and designers for ExpressionEngine® CMS">ExpressionEngine® Answers</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#technology" class="more">
+                                more (13)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="http://photo.stackexchange.com/" title="professional, enthusiast and amateur photographers">Photography</a></li>
+                        <li><a href="http://scifi.stackexchange.com/" title="science fiction and fantasy enthusiasts">Science Fiction &amp; Fantasy</a></li>
+                        <li><a href="http://graphicdesign.stackexchange.com/" title="Graphic Design professionals, students, and enthusiasts">Graphic Design</a></li>
+                        <li><a href="http://movies.stackexchange.com/" title="movie and tv enthusiasts">Movies &amp; TV</a></li>
+                        <li><a href="http://cooking.stackexchange.com/" title="professional and amateur chefs">Seasoned Advice (cooking)</a></li>
+                        <li><a href="http://diy.stackexchange.com/" title="contractors and serious DIYers">Home Improvement</a></li>
+                        <li><a href="http://money.stackexchange.com/" title="people who want to be financially literate">Personal Finance &amp; Money</a></li>
+                        <li><a href="http://academia.stackexchange.com/" title="academics and those enrolled in higher education">Academia</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#lifearts" class="more">
+                                more (9)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="http://english.stackexchange.com/" title="linguists, etymologists, and serious English language enthusiasts">English Language &amp; Usage</a></li>
+                        <li><a href="http://skeptics.stackexchange.com/" title="scientific skepticism">Skeptics</a></li>
+                        <li><a href="http://judaism.stackexchange.com/" title="those who base their lives on Jewish law and tradition and anyone interested in learning more">Mi Yodeya (Judaism)</a></li>
+                        <li><a href="http://travel.stackexchange.com/" title="road warriors and seasoned travelers">Travel</a></li>
+                        <li><a href="http://christianity.stackexchange.com/" title="committed Christians, experts in Christianity and those interested in learning more">Christianity</a></li>
+                        <li><a href="http://gaming.stackexchange.com/" title="passionate videogamers on all platforms">Arqade (gaming)</a></li>
+                        <li><a href="http://bicycles.stackexchange.com/" title="people who build and repair bicycles, people who train cycling, or commute on bicycles">Bicycles</a></li>
+                        <li><a href="http://rpg.stackexchange.com/" title="gamemasters and players of tabletop, paper-and-pencil role-playing games">Role-playing Games</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#culturerecreation" class="more">
+                                more (21)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="http://math.stackexchange.com/" title="people studying math at any level and professionals in related fields">Mathematics</a></li>
+                        <li><a href="http://stats.stackexchange.com/" title="people interested in statistics, machine learning, data analysis, data mining, and data visualization">Cross Validated (stats)</a></li>
+                        <li><a href="http://cstheory.stackexchange.com/" title="theoretical computer scientists and researchers in related fields">Theoretical Computer Science</a></li>
+                        <li><a href="http://physics.stackexchange.com/" title="active researchers, academics and students of physics">Physics</a></li>
+                        <li><a href="http://mathoverflow.net/" title="professional mathematicians">MathOverflow</a></li>
+                        <li><a href="http://chemistry.stackexchange.com/" title="scientists, academics, teachers and students">Chemistry</a></li>
+                        <li><a href="http://biology.stackexchange.com/" title="biology researchers, academics, and students">Biology</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#science" class="more">
+                                more (5)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="http://stackapps.com/" title="apps, scripts, and development with the Stack Exchange API">Stack Apps</a></li>
+                        <li><a href="http://meta.stackexchange.com/" title="meta-discussion of the Stack Exchange family of Q&amp;A websites">Meta Stack Exchange</a></li>
+                        <li><a href="http://area51.stackexchange.com/" title="proposing new sites in the Stack Exchange network">Area 51</a></li>
+                        <li><a href="http://careers.stackoverflow.com/">Stack Overflow Careers</a></li>
+                    
+                </ol>
+            </td>
+    </tr>
+</tbody></table>
+                </div>
+            </div>
+
+            <div id="copyright">
+                site design / logo © 2016 Stack Exchange Inc; user contributions licensed under <a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc by-sa 3.0</a> 
+                with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a>
+            </div>
+            <div id="svnrev">
+                rev 2016.3.4.3317
+            </div>
+            
+        </div>
+    </div>
+    <noscript>
+        &lt;div id="noscript-warning"&gt;TeX - LaTeX Stack Exchange works best with JavaScript enabled&lt;img src="http://pixel.quantserve.com/pixel/p-c1rF4kxgLUzNc.gif" alt="" class="dno"&gt;&lt;/div&gt;
+    </noscript>
+
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () { (i[r].q = i[r].q || []).push(arguments) }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m);
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-5620270-24', {'cookieDomain': 'stackexchange.com'});
+                        ga('set', 'dimension2', '|pdftex|lyx|lyx-layouts|');         ga('send', 'pageview');
+        var _qevents = _qevents || [],
+            _comscore = _comscore || [];
+        (function () {
+            var ssl='https:'==document.location.protocol,
+                s=document.getElementsByTagName('script')[0],
+                qc=document.createElement('script');
+            qc.async=true;
+            qc.src=(ssl?'https://secure':'http://edge')+'.quantserve.com/quant.js';
+            s.parentNode.insertBefore(qc, s);
+            var sc=document.createElement('script');
+            sc.async=true;
+            sc.src=(ssl?'https://sb':'http://b') + '.scorecardresearch.com/beacon.js';
+            s.parentNode.insertBefore(sc, s);
+        })();
+        _comscore.push({ c1: "2", c2: "17440561" });
+        _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
+    </script>
+            
+    
+<div id="techsmith-snagitchrome-extension"></div></body></html>

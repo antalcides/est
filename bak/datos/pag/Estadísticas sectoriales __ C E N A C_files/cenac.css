@@ -1,0 +1,930 @@
+/* CSS Document para CENAC
+	Hoja de Estilo desarrollada por Colnodo, http://www.colnodo.apc.org/ 
+	Todos los derechos reservados  
+	AGOSTO DE 2011 
+	IMPORTANTE 	Este disenno no es una plantilla. Usted no puede utilizarla sin un permiso
+	escrito	de Colnodo (info@colnodo.apc.org). Sin embargo, sientase libre de estudiar la
+	hoja de estilo y usarla para aprender tecnicas y disenno web usando CSS. */
+
+/*reset css: unifica la apariencia en los navegadores:*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big,
+cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike,
+sub, sup, tt, var, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td,
+center, u, b	{vertical-align: baseline; border: 0; outline: 0;
+                font-weight: normal; font-style: normal; font-size: 100%; font-family: inherit;}
+*               {margin: 0; padding: 0;}
+body            {line-height: 1; height:100%}
+:focus          {outline: 0}
+ol, ul, li      {list-style: none;}
+table           {border-collapse: collapse; border-spacing: 0;}
+blockquote, q   {quotes: "" ""}
+hr              {border: 0; color: #000; background-color: #000; height:1px}
+blockquote:before, blockquote:after, q:before, q:after {content: ""}
+
+blockquote{font-size: 100%;
+	line-height: 130%;
+	font-style:italic;
+	color: #333;}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #000;
+	height: auto;
+	text-align: center;
+	background:#fff url(../graficas/bgbody.jpg) center top repeat-x;
+	font-size: 0.9em;
+}
+
+p {
+	font-size: 1em;
+	color: #000;
+	margin: 0 0 15px 0; 
+	line-height: 140%;
+}
+a:link {
+	color:#264777 ;
+	text-decoration: none;
+}
+a:visited {
+	color: #606A8D;
+	text-decoration: none;
+}
+a:hover {
+	color: #fff;
+	background:#264777 ;
+	text-decoration: none;
+}
+
+h1{
+	clear: both;
+	color:#9F4015;
+	font-size: 1.2em;
+	margin: 10px 0;
+	line-height: 130%;
+	}
+		
+h2{
+	color:#143299;
+	font-size: 1.6em;
+	margin: 10px 0;
+	line-height: 130%;
+	}
+	
+h3{
+	color:#143299;
+	font-size: 1.3em;
+	margin: 20px 0 10px 0;
+	Font-weight: bold;
+	line-height: 130%;
+	}
+	
+h4{
+	color:#264777;
+	font-size: 1.2em;
+	margin: 20px 0 10px 0;
+	Font-weight: normal;
+	line-height: 130%;
+	}
+	
+h5{
+	color:#9F4015;
+	font-size: 1.1em;
+	margin: 20px 0 10px 0;
+	font-weight: normal;
+	line-height: 130%;
+	}
+	
+h6{
+	color:#9F4015;
+	font-size: 0.9em;
+	margin: 20px 0 10px 0;
+	Font-weight: bold;
+	line-height: 130%;
+	}	
+
+ul{
+	margin: 0 0 0 5px;
+	padding: 0px;
+}
+ol{
+	margin: 0 0 0 20px;
+	padding: 0;
+}
+ul li{
+	margin: 10px 0 10px 20px;
+	list-style-image: url(../graficas/bullet.gif);
+	padding: 0 0 0 10px;
+	color: #000;
+	line-height: 125%!important;
+}
+
+ol li{
+	padding-left: 5px;
+	margin-left: 0px;
+	padding-bottom: 5px;
+	padding-top: 5px;
+}
+.renglon{
+	clear: both;
+	margin: 10px 0 0 0;
+	overflow: hidden;
+}
+
+.renglon1{
+	clear: both;
+	margin: 40px 0 0 0;
+}
+
+.imagen_izq {
+	float: left;
+	margin: 0px 10px 5px 0!important;
+        clear: both;
+        border: 0px;
+}
+
+.ico-archivo{
+	margin: 0px 0 0 5px;
+	vertical-align:middle!important;
+	}
+
+.imagen_der {
+	float: right;
+	margin: 5px 0px 5px 10px;
+	clear: both;
+	border: 0px;
+}
+.imagen_centro {
+        border: 0;
+	display: block;
+	margin: 0 0 10px 0;
+}
+
+.foto-con-pie-tc{
+	width: 250px;
+	float: left;
+	margin: 0px 0 5px 0;
+	font-size: 0.7em;
+	color: #666;
+	text-align: center;
+	clear: both;
+}
+
+.esconde{
+	position: absolute; 
+	left: -9999em; 
+	top: -9999em ; 
+	text-indent: -9999em; 
+}
+
+table.general {
+	background-color: #FFFFFF;
+	width: 100%;
+	margin:  0 0 15px 0px;
+	padding: 0px;
+	font-size: 90%;
+}
+table.general th {
+	margin: 0px;
+	padding: 10px 5px;
+	background-color: #143299;
+	color: #FFFFFF;
+	text-align: left;
+	vertical-align: middle;
+	font-weight: bold;
+}
+table.general tr {
+	vertical-align: top;
+}
+table.general td {
+	margin: 0px;
+	padding: 7px 5px;
+	border-bottom: 1px solid #498ABC;
+}
+
+th.icon, td.icon {
+	text-align: center;
+}
+.color1{
+	background:#FFF7CE;
+}
+.color2{
+	background: #fff;
+}
+
+abbr{
+border-bottom: 1px dotted;
+cursor:help;
+}
+/**************************************/	
+#contenedor{
+	width: 960px;
+	margin: 0px auto;
+	text-align: left;
+	}
+
+#encabezado{
+	width: 960px;
+	height: 152px;
+	background: url(../graficas/encab.jpg) center top no-repeat;
+	}
+	
+#menu-herr{
+	padding: 18px 40px;
+	float: left;
+	}
+	
+#menu-herr ul{
+	width: 320px;
+	margin:0px 0 0 355px;
+	padding:0;
+	background: url(../graficas/sep-menu.gif) left no-repeat;
+	}	
+
+#menu-herr ul li{
+	display: inline;
+	font-size: 0.8em;
+	margin:0 0 0 0!important;
+	padding:0 0 0 0!important;
+	list-style: none;
+	background: url(../graficas/sep-menu.gif) right no-repeat;
+	text-transform: uppercase;
+	font-weight: bold!important;
+	}	
+	
+#menu-herr ul li a{
+	padding: 3px 12px;
+	color: #fff;
+	text-decoration: none;
+	}
+	
+#menu-herr ul li a:hover, #menu-herr ul li a:focus{
+	background: #064D8A;
+	color: #fff;
+	}
+	
+#busquedas{
+	width		: 205px;
+	float		: left;
+	margin		: 10px 0 0 0;
+    padding		: 0;
+	overflow	:hidden;
+	vertical-align:top;
+	border		:0!important;
+	position	:relative;
+	
+}
+
+.input-busquedas {
+	margin		: 0 0 0 0;
+	width		: 165px;
+	padding		: 5px!important;
+	font		: normal 0.9em Arial, Helvetica, sans-serif;
+	color		: #333;
+	top			:0px;
+	border		:1px solid #49BBE1;
+	}
+	
+.boton-buscar {
+	vertical-align:bottom;
+	position	: absolute;
+	top			: 2px;
+	right		:3px;
+	}	
+	
+#logo a{
+	width: 376px;
+	height: 65px;
+	background:url(../graficas/sprite-cenac.png) 0 0;
+	float: left;
+	margin: 16px 0 0 25px;
+}
+
+#logo h1{
+	color		: #000;
+	position	: absolute;
+	left		: -9999em;
+	top			: -9999em ;
+	text-indent	: -9999em;
+	}
+/*****************************/
+
+#menu_ppal{
+	clear: both;
+	}
+	
+ .menu {
+	height: 36px;
+	float: left;
+	font-weight: normal;
+	font-size: 1.1em;
+	width: 940px;
+	margin: 0 0 0 20px;
+	background: url(../graficas/sep-menu-ppal.gif) left no-repeat!important;
+ }
+ 
+ .menu ul {
+	 list-style-type: none;
+	 padding: 0 0 0 0px !important;
+	 margin: 0px !important;
+	
+ }
+ 
+ .menu li {
+	float: left;
+	position: relative;
+	z-index: 100;
+	height: 36px;
+	list-style: none;
+	background: url(../graficas/sep-menu-ppal.gif) right no-repeat;
+	padding: 0;
+	margin: 0;
+	font-size: 0.9em;
+ }
+ 
+ .menu table {
+	 margin: 0px;
+	 padding: 0px;
+	 position: fixed;
+	 border-collapse: collapse;
+	 z-index: 1000;
+ }
+ 
+.menu a:link, .menu a:visited {
+	 display: block;
+	 font-weight: normal;
+	 padding: 10px 20px 0 20px;
+	 color: #9F4015;
+	 height: 26px;
+	 text-align: center;
+	 text-decoration:none;
+	 border-bottom: 4px solid #fff;
+}
+ .menu a:hover {
+	 color: #fff;
+	 text-decoration: none;
+	 border-bottom: 4px solid #FFAA54;
+	background-color:#FF7C00;
+ }
+ .menu ul ul {
+	 visibility: hidden;
+	 position: absolute;
+	 height: 0px;
+	 top: 40px;
+	 font-size:1em;
+ }
+ 
+.menu ul li ul li a:link, .menu ul li ul li a:visited {
+ 	background-color:#fff!important;
+	background-image: none!important;
+	width: 190px;
+	text-align: left;
+	border: 1px solid #FFAA54!important;
+	color: #000;
+	padding: 10px 0px 0 15px;
+ }
+ 
+.menu ul li ul li a:hover {
+ 	background-color: #FF7C00!important;
+	background-image: none!important;
+	color: #fff;
+ } 
+ 
+ .menu ul li:hover ul, .menu ul a:hover ul {
+ 	visibility: visible;
+	display: block;
+ }
+
+/************************/	
+
+#blq1{/*izquierda*/
+	clear: both;
+	margin: 40px 0 0 25px;
+	float: left;
+	width: 510px;
+	}
+	
+#blq1 .capsula{
+	padding: 15px 15px 5px 15px;
+	background: url(../graficas/bgcapsula.jpg) bottom repeat-x;
+	margin: 0 0 10px 0;
+	border: 1px solid #C9D6DA;
+	position: relative;
+	/*min-height: 173px;*/
+	height: auto;
+	overflow: auto;
+	}
+	
+#blq1 .capsula-bolet{
+	padding: 15px 15px 5px 15px;
+	background: url(../graficas/bgcapsula.jpg) bottom repeat-x;
+	margin: 0 0 10px 0;
+	border: 1px solid #C9D6DA;
+	position: relative;
+	min-height: 170px;
+	height: auto;
+	overflow: auto;
+	}	
+	
+.ico-documentos{
+	position: absolute;
+	background: url(../graficas/sprite-cenac.png) 0 -66px;
+	width: 106px;
+	height: 88px;
+	top: 79px;
+	left: 10px;
+	z-index: 1;
+	}
+	
+.ico-boletines{
+	position: absolute;
+	background: url(../graficas/sprite-cenac.png) -106px -65px;
+	width: 122px;
+	height: 94px;
+	top: 79px;
+	left: 10px;
+	z-index: 2;
+	}
+	
+.ico-estadisticas{
+	position: absolute;
+	background: url(../graficas/sprite-cenac.png) -229px -65px;
+	width: 99px;
+	height: 92px;
+	top: 79px;
+	left: 10px;
+	z-index: 3;
+	}	
+	
+.capsula h2, .capsula-bolet h2{
+	color:#264777;
+	font-size: 1.5em;
+	margin: 0 0 0 0!important;
+	padding:0 0 0 0!important;
+	}
+	
+.capsula h3, .capsula-bolet h3{
+	color:#333333;
+	font-size:0.9em;
+	margin: 0px 0 0 0!important;
+	padding:0 0 0 0;
+	font-weight: normal!important;
+	}	
+	
+.capsula ul, .capsula-bolet ul{
+	margin: 15px 0 0 135px;
+	padding:0;
+	}
+	
+.capsula ul li, .capsula-bolet ul li{
+	margin: 0 0 4px 0;
+	list-style-image: url(../graficas/bullet.gif);
+	padding: 0 0 0 2px;
+	font-size: 0.9em;
+	color: #000;
+	line-height: 125%!important;
+	}	
+
+.boton-naranja a{
+	float: right;
+	margin: 5px 0 0 0;
+	width:226px;
+	height: 30px;
+	background: url(../graficas/sprite-cenac.png) -255px -186px;
+	color: #fff;
+	padding: 15px 0 0 0px;
+	font-size: 90%;
+	text-align:center!important;
+	}
+
+	
+.boton-naranja a:hover, #boton-naranja a:focus{
+	margin: 5px 0 0 0;
+	width:226px;
+	height: 30px;
+	background: url(../graficas/sprite-cenac.png) -255px -231px;
+	padding: 15px 0 0 0px;
+	color: #000;
+	text-align:center!important;
+	}
+
+/***********************/
+	
+#blq2{/*derecha*/
+	margin: 40px 25px 0 0;
+	float: right;
+	width: 380px;
+	}
+	
+#redes{
+	width: 260px;
+	float: right;
+	margin: 8px 0 20px 0px;
+	}
+	
+.twitter a{
+	float:left;
+	background:url(../graficas/sprite-cenac.png) 0 -160px;
+	width: 51px;
+	height: 48px;
+	margin: 0;
+	}
+	
+.twitter a:hover, .twitter a:focus{
+	float:left;
+	background:url(../graficas/sprite-cenac.png) 0 -208px;
+	width: 51px;
+	height: 48px;
+	margin: 0;
+	}	
+
+.linkedin a{
+	float:left;
+	background:url(../graficas/sprite-cenac.png) -51px -160px;
+	width: 51px;
+	height: 48px;
+	margin: 0;
+	}
+	
+.linkedin a:hover, .linkedin a:focus{
+	float:left;
+	background:url(../graficas/sprite-cenac.png) -51px -208px;
+	width: 51px;
+	height: 48px;
+	margin: 0;
+		}	
+
+.contac a{
+	float:left;
+	background:url(../graficas/sprite-cenac.png) -102px -160px;
+	width: 51px;
+	height: 48px;
+	margin: 0;
+	}
+	
+.contac a:hover, .contac a:focus{
+	float:left;
+	background:url(../graficas/sprite-cenac.png) -102px -208px;
+	width: 51px;
+	height: 48px;
+	margin: 0;
+	}	
+
+.facebook a{
+	float:left;
+	background:url(../graficas/sprite-cenac.png) -153px -160px;
+	width: 51px;
+	height: 48px;
+	margin: 0;
+	}
+	
+.facebook a:hover, .facebook a:focus{
+	float:left;
+	background:url(../graficas/sprite-cenac.png) -153px -208px;
+	width: 51px;
+	height: 48px;
+	margin: 0;
+	}	
+
+.rss a{
+	float:left;
+	background:url(../graficas/sprite-cenac.png) -204px -160px;
+	width: 51px;
+	height: 48px;
+	margin: 0;
+	}
+	
+.rss a:hover, .rss a:focus{
+	float:left;
+	background:url(../graficas/sprite-cenac.png) -204px -208px;
+	width: 51px;
+	height: 48px;
+	margin: 0;
+	}
+
+.twitter em, .linkedin em, .contac em,.facebook em, .rss em{
+	color		: #000;
+	position	: absolute;
+	left		: -9999em;
+	top			: -9999em ;
+	text-indent	: -9999em;
+	}
+/*********************************/
+
+#blq2 .capsula{
+	padding: 15px 15px 5px 15px;
+	background: url(../graficas/bgcapsula.jpg) bottom repeat-x;
+	margin: 0 0 10px 0;
+	border: 1px solid #C9D6DA;
+	position: relative;
+	min-height: 380px;
+	height: auto;
+	}
+	
+#blq2 .capsula p{margin: 25px 0 0 0;}	
+
+#portafolio{
+	float: left;
+	width: 175px;
+	margin: 35px 0 20px 0;
+	}
+	
+.ico-portafolio{
+	margin: 35px 0 0 15px;
+	background: url(../graficas/sprite-cenac.png) -328px -65px;
+	width: 110px;
+	height: 111px;
+	}
+	
+.boton-azul a{
+	float: right;
+	margin: 5px 0 0px 0;
+	width:156px;
+	height: 41px;
+	background: url(../graficas/sprite-cenac.png) -404px -4px;
+	color: #fff;
+	padding: 15px 0 0 0px;
+	font-size: 90%;
+	text-align:center!important;
+	}
+
+	
+.boton-azul a:hover, #boton-azul a:focus{
+	margin: 5px 0 0px 0;
+	width:156px;
+	height: 41px;
+	background: url(../graficas/sprite-cenac.png) -560px -4px;
+	padding: 15px 0 0 0px;
+	color: #FFFFCC;
+	text-align:center!important;
+	}	
+
+#presentaciones{
+	float: right;
+	width: 175px;
+	margin: 35px 0 20px 0;
+	}
+	
+.ico-presentaciones{
+	margin: 20px 0 0 15px;
+	background: url(../graficas/sprite-cenac.png) -438px -60px;
+	width: 118px;
+	height:126px;
+	}
+	
+#banner{
+	width: 380px;
+	height: 140px;
+	margin: 0px 0 0 0;
+	}
+	
+#consejo{
+	clear: both;
+	margin: 0px 0px 10px!important;
+	height: 100px;
+	padding: 10px 0;
+	}
+	
+#consejo h1{
+	font-size: 0.9em;
+	font-weight: normal!important;
+	border-bottom: 1px solid #ABC2DA;
+	color: #264777;
+	padding: 0 0 5px 0;
+	}	
+
+.fedelonjas{
+	margin: 16px 23px 0 -5px!important;
+	float: left;}
+	
+.fedelonjas a{
+	width: 119px;
+	height:67px;
+	background: url(../graficas/sprite-cenac.png) -572px -67px;
+	float: left;
+	border: 1px solid #fff;
+	}	
+	
+.fedevivienda{
+	margin: 16px 24px 0 0!important;
+	float: left;}	
+
+.fedevivienda a{
+	width: 69px;
+	height:67px;
+	background: url(../graficas/sprite-cenac.png) -844px -134px;
+	float: left;
+	border: 1px solid #fff;
+	}		
+	
+.igac{margin: 4px 24px 0 0px;
+	float: left;}	
+	
+.igac a{
+	width: 59px;
+	height:81px;
+	background: url(../graficas/sprite-cenac.png) -493px -193px;
+	float: left;
+	border: 1px solid #fff;
+	}		
+	
+.ujaveriana{
+	margin: 16px 24px 0 0!important;
+	float: left;}
+
+.ujaveriana a{
+	width: 115px;
+	height:66px;
+	background: url(../graficas/sprite-cenac.png) -715px -151px;
+	float: left;
+	border: 1px solid #fff;
+	}		
+	
+.uniandes{
+	margin: 16px 24px 0 0!important;
+	float: left;}
+
+.uniandes a{
+	width: 107px;
+	height:53px;
+	background: url(../graficas/sprite-cenac.png) -579px -158px;
+	float: left;
+	border: 1px solid #fff;
+	}	
+	
+.unal{
+	margin: 10px 24px 0 0!important;
+	float: left;}
+
+.unal a{
+	width: 117px;
+	height:65px;
+	background: url(../graficas/sprite-cenac.png) -713px -65px;
+	float: left;
+	border: 1px solid #fff;
+	}		
+	
+.minambiente{
+	margin: 10px 0px 0 0!important;
+	float: left;}
+
+.minambiente a{
+	width: 220px;
+	height:56px;
+	background: url(../graficas/sprite-cenac.png) -682px -225px;
+	float: left;
+	border: 1px solid #fff;
+	}	
+	
+.fedelonjas a:hover, .fedelonjas a:focus, .fedevivienda a:hover, .fedevivienda a:focus, .igac a:hover, .igac a:focus, .ujaveriana a:hover, .ujaveriana a:focus, .uniandes a:hover, .ujaveriana a:focus, .unal a:hover, .unal a:focus, .minambiente a:hover, .minambiente a:focus{
+	border: 1px solid #3F64A6;
+	}
+	
+.fedelonjas em, .fedevivienda em, .igac em, .ujaveriana em, .uniandes em, .unal em, .minambiente em{
+	color		: #000;
+	position	: absolute;
+	left		: -9999em;
+	top			: -9999em ;
+	text-indent	: -9999em;
+	}
+/*************************/
+#pie{
+	clear: both;
+	margin: 25px 0;
+	text-align: right;
+	position: relative;
+	border-top: 1px solid #ABC2DA;
+	padding: 15px 0 0 0;
+	}
+	
+#pie p{
+	margin: 0 70px 0 0;
+	padding: 0;
+	font-size: 0.8em;
+	}
+	
+.logocenac{
+	position: absolute;
+	top: 20px;
+	right: 15px;
+	width: 42px;
+	height:45px;
+	background: url(../graficas/sprite-cenac.png) 0px -256px;
+	}
+	
+/********SECUNDARIAS*****************/
+
+#contenidos{/*izquierda*/
+	clear: both;
+	margin: 20px 0 0 25px;
+	float: left;
+	width: 620px;
+	}
+	
+#migas {
+	padding		: 26px 0 40px 40px;
+	}
+	
+#migas span{
+	padding		: 0 10px 0 0;
+	float		: left;
+	font-size	: 0.8em;
+	}	
+	
+#migas ul{
+	float		:left;
+	font-size	: 0.8em;
+	}
+	
+#migas ul li{
+	display		: inline;
+	list-style-type	: none;
+	background	: url(../graficas/miga.gif) left 2px no-repeat;
+	padding		: 0 10px 0 18px;
+	margin		: 0 0 0 0;
+	}
+
+
+#extras{/*derecha*/
+	margin: 40px 25px 0 0;
+	float: right;
+	width: 255px;
+	}
+	
+.capsula-sec{
+	padding: 15px 15px 5px 15px;
+	background: url(../graficas/bgcapsula.jpg) bottom repeat-x;
+	margin: 0 0 10px 0;
+	border: 1px solid #C9D6DA;
+	position: relative;
+	height: 100px;
+	clear: both;
+	
+	}
+	
+.ico-documentos-sec{
+	position: absolute;
+	background: url(../graficas/sprite-cenac.png) -773px -3px;
+	width: 68px;
+	height: 56px;
+	top: 10px;
+	left: 10px;
+	z-index: 1;
+	}
+	
+.ico-boletines-sec{
+	position: absolute;
+	background: url(../graficas/sprite-cenac.png) -573px -231px;
+	width: 76px;
+	height: 60px;
+	top: 10px;
+	left: 10px;
+	z-index: 2;
+	}
+	
+.ico-presentaciones-sec{
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	background: url(../graficas/sprite-cenac.png) -716px -1px;
+	width: 55px;
+	height:59px;
+	}	
+	
+.ico-estadisticas-sec{
+	position: absolute;
+	background: url(../graficas/sprite-cenac.png) -841px -0px;
+	width: 67px;
+	height: 62px;
+	top: 10px;
+	left: 10px;
+	z-index: 3;
+	}
+	
+.ico-portafolio-sec{
+	position: absolute;
+	background: url(../graficas/sprite-cenac.png) -841px -62px;
+	width: 60px;
+	height: 61px;
+	top: 10px;
+	left: 10px;
+	z-index: 3;
+	}	
+	
+.capsula-sec h2{
+	color:#264777;
+	font-size: 1.4em;
+	line-height: 110%;
+	margin: 0 0 5px 80px;
+	padding:0;
+	}
+	
+/*.capsula-sec h2{
+	color:#333333;
+	font-size:0.9em;
+	margin: 6px 0 0 0;
+	padding:0;
+	}*/
+
+.sube{margin: 0 0 0 0;}	

@@ -1,0 +1,15 @@
+\documentclass{article}
+\usepackage[most]{tcolorbox}
+
+\usepackage{blindtext}
+\begin{document}
+\centering
+
+\tcbset{enhanced jigsaw, width=7cm, left=0mm,right=0mm,top=0mm,bottom=0mm,boxsep=0mm,boxrule=2pt, colback=white}
+
+
+\begin{tcolorbox}[breakable,title={Titulo},title after break={Titulo -- continuado}] 
+\blindtext[10]   
+\end{tcolorbox}
+
+\end{document}

@@ -1,0 +1,59 @@
+\documentclass[oneside]{memoir}
+
+\usepackage{tikz}
+\usetikzlibrary{shadows.blur}
+
+\usepackage{titletoc}
+\usepackage{lipsum}
+
+\usepackage{calc}
+\definecolor{titlebgdark}{RGB}{0,163,243}
+\definecolor{titlebglight}{RGB}{191,233,251}
+\definecolor{yourcolor}{HTML}{008bb2}
+
+%define new chapter style (just for a nicer look)
+\makechapterstyle{mystyle}{%
+  \chapterstyle{default}
+  \renewcommand*{\chapnumfont}{\normalfont\Huge\sffamily\bfseries}
+  \renewcommand*{\chaptitlefont}{\normalfont\huge\sffamily\itshape\color{titlebgdark}}
+  \settowidth{\chapindent}{\chapnumfont 111}
+  \renewcommand*{\chapterheadstart}{}
+  \renewcommand*{\chapnamefont}{\hfill\color{titlebgdark}\normalfont\Huge\sffamily\bfseries}
+  \renewcommand*{\printchapternum}{%
+  \begin{tikzpicture}[baseline={([yshift=-.6ex]current bounding box.center)}]
+  \node[fill=titlebgdark,circle,text=white] {\thechapter};
+  \end{tikzpicture}\\[1ex]
+  \hrule height 1.5pt}
+  \renewcommand*{\printchaptertitle}[1]{%
+    {\chaptitlefont ##1}}
+}
+
+%use new chapter style
+\chapterstyle{mystyle}
+
+%command to print the acutal minitoc
+\newcommand{\printmyminitoc}{\noindent\hspace{-2cm}\begin{tikzpicture}
+    \node[rounded corners,align=left,fill=titlebgdark, blur shadow={shadow blur steps=5}, inner sep=5mm]{%
+        \color{white}%
+        \begin{minipage}{8cm}%minipage trick
+        \printcontents[chapters]{}{1}{}
+        \end{minipage}};
+    \end{tikzpicture}}
+
+\begin{document}
+\tableofcontents
+\chapter{A chapter}
+\startcontents[chapters]
+%print minitoc
+\printmyminitoc
+
+
+
+\section{Section}
+\lipsum[1]
+\section{Section 2}
+\section{test}
+\section{abc}
+\lipsum
+\chapter{Second chapter}
+\end{document}

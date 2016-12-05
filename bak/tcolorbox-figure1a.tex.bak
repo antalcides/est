@@ -1,0 +1,15 @@
+\documentclass{book}
+\usepackage{lipsum,graphics}
+\usepackage{caption}
+\DeclareCaptionFormat{overlay}{\gdef\capoverlay{#1#2#3\par}}
+\DeclareCaptionStyle{overlay}{format=overlay}
+
+\begin{document}
+
+\lipsum[1]
+  \begin{figure*}[!h]
+  \includegraphics{example-image-a}
+  \caption{How many factors are there in a set of 12?}
+  \end{figure*}    
+ \lipsum[2]      
+\end{document}

@@ -1,0 +1,14 @@
+var html__89074 = '\x3cdiv\x20id\x3d\x22beta\x2dad\x2dcontainer\x22\x20style\x3d\x22height\x3a\x20250px\x3b\x22\x3e\x3c\x2fdiv\x3e';
+var html_command__60225 = function() { azHtmlLoad('adcm2', html__89074); };
+var js__12732 = 'window\x2e_betaAdUrl\x20\x3d\x20\x22http\x3a\x2f\x2fengine\x2eadzerk\x2enet\x2fr\x3fe\x3deyJhdiI6NDE0LCJhdCI6NSwiYnQiOjAsImNtIjoxMTYxLCJjaCI6MTE5OCwiY2siOnt9LCJjciI6MTI0OTEzMywiZGkiOiJhMjY1ZTRhMzU5ZDQ0YTJjOGNlNGJhMzM1N2ZkMzE0MiIsImRtIjoxLCJmYyI6MTMzNzQzNSwiZmwiOjMzMzUsImlwIjoiMTkxLjEwOS4zMi4xNTkiLCJrdyI6Im1hdGhtbCx4LWhvc3QtdGV4LnN0YWNrZXhjaGFuZ2UuY29tIiwibnciOjIyLCJwYyI6MCwiZWMiOjAsInByIjoxNzU2LCJydCI6MSwicmYiOiJodHRwczovL3d3dy5nb29nbGUuY29tLmNvLyIsInN0IjoxMjA1NywidWsiOiJ1ZTEtZjEzMmFkMjUxOTk5NDBiNzg2NmViMTI4ZTI5ZmJlYzkiLCJ6biI6NzYsInRzIjoxNDU3MzYyMDg4OTQ3LCJiZiI6dHJ1ZSwicG4iOiJhZGNtMiIsInVyIjpudWxsfQ\x26s\x3dxKZxfW\x2d8PtXgfT1DtPT6LFlVIkg\x22\x3b';
+var js_command__97253 = function() { azScriptInlineLoad('adcm2', js__12732); };
+var js__58694 = '\x2f\x2fstackexchange\x2ecom\x2fads\x2fbeta\x2dquestion\x2fjs\x3fid\x3dbeta\x2dad\x2dcontainer';
+var js_command__96218 = function() { azScriptSRCLoad('adcm2', js__58694); };
+var pixel__84064 = 'http\x3a\x2f\x2fengine\x2eadzerk\x2enet\x2fi\x2egif\x3fe\x3deyJhdiI6NDE0LCJhdCI6NSwiYnQiOjAsImNtIjoxMTYxLCJjaCI6MTE5OCwiY2siOnt9LCJjciI6MTI0OTEzMywiZGkiOiJhMjY1ZTRhMzU5ZDQ0YTJjOGNlNGJhMzM1N2ZkMzE0MiIsImRtIjoxLCJmYyI6MTMzNzQzNSwiZmwiOjMzMzUsImlwIjoiMTkxLjEwOS4zMi4xNTkiLCJrdyI6Im1hdGhtbCx4LWhvc3QtdGV4LnN0YWNrZXhjaGFuZ2UuY29tIiwibnciOjIyLCJwYyI6MCwiZWMiOjAsInByIjoxNzU2LCJydCI6MSwicmYiOiJodHRwczovL3d3dy5nb29nbGUuY29tLmNvLyIsInN0IjoxMjA1NywidWsiOiJ1ZTEtZjEzMmFkMjUxOTk5NDBiNzg2NmViMTI4ZTI5ZmJlYzkiLCJ6biI6NzYsInRzIjoxNDU3MzYyMDg4OTQ3LCJiZiI6dHJ1ZSwicG4iOiJhZGNtMiJ9\x26s\x3dV_C\x2dmI6JZcls7h4vZ8N6WS7yk28';
+var pixel_command__28780 = function() { ados_writePixel('adcm2', pixel__84064); };
+setTimeout(function() {
+  azLoad('adcm2', html_command__60225);
+  azLoad('adcm2', js_command__97253);
+  azLoad('adcm2', js_command__96218);
+  azLoad('adcm2', pixel_command__28780);
+}, 100);

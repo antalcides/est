@@ -1,0 +1,20 @@
+\documentclass{book}
+\usepackage[demo]{graphicx}
+\usepackage[paperwidth=170mm, paperheight=240mm, left=42pt, top=40pt, textwidth=280pt, marginparsep=20pt, marginparwidth=100pt, textheight=560pt, footskip=40pt]{geometry}
+\usepackage{lipsum}
+\usepackage{sidenotes}
+\usepackage[many]{tcolorbox}
+\begin{document}
+A test
+
+\lipsum[1]
+\begin{marginfigure}%[!h]
+\begin{tcolorbox}
+\includegraphics[width=\linewidth]{fig1}
+\caption{A test caption}
+\label{fig1}
+\end{tcolorbox}
+\end{marginfigure}
+
+
+\end{document}

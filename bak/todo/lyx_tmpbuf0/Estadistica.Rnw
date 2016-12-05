@@ -1,0 +1,127 @@
+\batchmode
+\makeatletter
+\def\input@path{{/home/antalcides/Escritorio/est/libros-est//}}
+\makeatother
+\documentclass[english,spanish,svgnames,x11names,HTML,twoside,12pt]{libro-matua}
+\usepackage[latin9]{inputenc}
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+\usepackage{color}
+\usepackage{float}
+\usepackage{amstext}
+\usepackage{graphicx}
+
+\makeatletter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
+%% Because html converters don't know tabularnewline
+\providecommand{\tabularnewline}{\\}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+%\usepackage[utf8x]{inputenc}
+\usepackage[spanish, es-tabla]{babel}
+\usepackage{graphicx}
+\graphicspath{{ps/}{logo/}{image/}{sections/Figures/}}
+%\usepackage{lmodern}
+\usepackage{lipsum}
+\usepackage{fancyvrb}
+\usepackage{cancel}
+\raggedbottom %para que no distibuya los espacios verticales en una hoja
+\usepackage{pgf}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+\usepackage{zahlen}
+\usepackage[hmargin=2cm,bmargin=3cm,tmargin=4.5cm,centering]{geometry}
+% Length to control the \fancyheadoffset and the calculation of \headline
+% simultaneously
+\usepackage{makeidx}
+%\usepackage[xindy]{imakeidx}
+\usepackage{robustindex}
+%\indexsetup{othercode=\small}
+%\makeindex[name=words,columns=1,program=xindy,options=-M texindy -M mystyle -C utf8 -L spanish]
+\makeindex
+\usepackage[totoc]{idxlayout}
+\usepackage[nottoc]{tocbibind}
+\RequirePackage{hyperref}
+\hypersetup{
+             linktoc=all,
+             hidelinks,
+             pdfborder={0 0 0},
+            colorlinks=true,
+            linkcolor = ptctitle,
+            backref=true,
+            pagebackref=true,
+             breaklinks=true,
+            urlcolor=ocre,
+            citecolor = ocre,
+            bookmarks=true,
+            bookmarksopen=false,
+            pdftitle={Title},
+            pdfauthor={Author}
+            plainpages=false,
+           hyperindex=false
+                              }
+\newlength\FHoffset
+\setlength\FHoffset{0.5cm}
+
+\addtolength\headwidth{2\FHoffset}
+
+\fancyheadoffset{\FHoffset}
+
+% these lengths will control the headrule trimming to the left and right 
+\newlength\FHleft
+\newlength\FHright
+
+% here the trimmings are controlled by the user
+\setlength\FHleft{1cm}
+\setlength\FHright{0cm}
+
+% The new definition of headrule that will take into acount the trimming(s)
+\newbox\FHline
+\setbox\FHline=\hbox{\hsize=\paperwidth%
+  \hspace*{\FHleft}%
+  \rule{\dimexpr\headwidth-\FHleft-\FHright\relax}{\headrulewidth}\hspace*{\FHright}%
+}
+\renewcommand\headrule{\vskip-.7\baselineskip\copy\FHline}
+
+\makeatother
+
+\usepackage{babel}
+\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+
+\begin{document}
+\frontmatter \pagestyle{empty}\pagecolor{ptcbackground} 
+
+ \begin{center} \vspace*{5cm} 
+  \Huge{Fundamentos De Matemáticas}
+\\[5pt]
+\Large{UNIVERSIDAD DEL ATLÁNTICO}
+\\ \Large{FACULTAD DE CIENCIAS BÁSICAS}
+\\ \Large{DEPARTAMENTO DE MATEMÁTICAS} 
+\\ \Large{Autores} \end{center} \vfill\makeatletter \def\@classoptionslist{<class options except `margin` OR empty>} \makeatother\tableofcontents{}\let\myclearpage\relax\newpage{}
+\nocite{*} 
+
+\color{black}\pagecolor{white} \mainmatter \newgeometry{top=2.5cm,bottom=2.5cm}
+
+\part{Estad\'istica Descriptiva}
+
+\pagestyle{fancy}
+
+\input{5_home_antalcides_Escritorio_est_libros-est_conceptos.tex}
+
+\input{27_media_antalcides_Antalcides-EXT1_libros-est_medidasd.tex}
+
+\part{Probabilidad}
+
+\input{40_home_antalcides_Escritorio_est_libros-est_teoria-probabilidades.tex}
+
+\input{50_home_antalcides_Escritorio_est_libros-est_variables-aleatorias.tex}
+
+\input{83_home_antalcides_Escritorio_est_libros-est_distribuciones.tex}
+
+\backmatter
+%\addcontentsline{toc}{\string\contentsline}{\protect Indice Alfabetico}
+\indexincontents % always put this before the index.
+\printindex
+
+\end{document}

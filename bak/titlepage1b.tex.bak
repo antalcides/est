@@ -1,0 +1,71 @@
+\documentclass[twoside]{book}
+
+\usepackage{tikz}
+\usetikzlibrary{shadows.blur}
+
+\usepackage{titletoc}
+\usepackage{lipsum}
+
+\usepackage{calc}
+
+\usepackage[]{titlesec} 
+\definecolor{yourcolor}{HTML}{008bb2}
+\definecolor{titlebgdark}{RGB}{0,163,243}
+\definecolor{titlebglight}{RGB}{191,233,251}
+\colorlet{chpnumbercolor}{black}
+\makeatletter
+\let\oldl@chapter\l@chapter
+\def\l@chapter#1#2{\oldl@chapter{#1}{\textcolor{titlebgdark}{#2}}}
+
+\let\old@dottedcontentsline\@dottedtocline
+\def\@dottedtocline#1#2#3#4#5{%
+\old@dottedcontentsline{#1}{#2}{#3}{#4}{{\textcolor{titlebgdark}{#5}}}}
+\makeatother
+
+\titleformat{\chapter}[display]
+  {\normalfont\color{titlebgdark}}
+  {\filleft\Huge\sffamily\bfseries\partname\hspace*{2mm}%
+  \begin{tikzpicture}[baseline={([yshift=-.6ex]current bounding box.center)}]
+    \node[fill=titlebgdark,circle,text=white] {\thepart};
+  \end{tikzpicture}}
+  {1ex}
+  {\titlerule[1.5pt]\vspace*{5ex}\huge\sffamily\itshape}
+  []
+
+\titleformat{name=\chapter,numberless}[display]
+  {\normalfont\color{titlebgdark}}
+  {}
+  {1ex}
+  {\vspace*{5ex}\huge\sffamily\itshape}
+  []
+
+%command to print the acutal minitoc
+\newcommand{\printmyminitoc}{%
+    \noindent\hspace{-2cm}%
+    \colorlet{chpnumbercolor}{white}%
+    \begin{tikzpicture}
+    \node[rounded corners,align=left,fill=titlebgdark, blur shadow={shadow blur steps=5}, inner sep=5mm]{%
+        \color{white}%
+        \begin{minipage}{8cm}%minipage trick
+        \printcontents[chapters]{}{1}{}
+        \end{minipage}};
+    \end{tikzpicture}}
+
+\begin{document}
+\tableofcontents
+\chapter{A chapter}
+\startcontents[chapters]
+%print minitoc
+\printmyminitoc
+
+
+
+\section{Section}
+\lipsum[1]
+\section{Section 2}
+\section{test}
+\section{abc}
+\lipsum
+\chapter*{Second chapter}
+\lipsum
+\end{document}

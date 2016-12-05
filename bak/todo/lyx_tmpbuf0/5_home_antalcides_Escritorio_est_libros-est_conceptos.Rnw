@@ -1,0 +1,1160 @@
+
+\chapter{Conceptos previos}
+
+\PartialToc
+
+
+\section{Introducción}
+
+En este capítulo hablaremos de la estadística en forma general \ de
+sus conceptos básicos y de su utilidad, pero al final pretendemos
+introducir al estudiante en el manejo \ de los datos obtenidos, como
+son: distinguir y clasificar los datos, organizarlos, tabularlos y
+representarlos gráficamente, para así obtener de ellos una mejor información
+y realizar así una buena inferencia.
+
+No obstante al realizar todos los procedimientos que enseñaremos en
+este capítulo debemos ser prudentes al analizar los gráficos obtenidos
+ya que los mismos datos se pueden representar de dife\-rentes formas
+y no todas son las más pertinentes, por lo que nuestro objetivo en
+este capítulo además de construir las bases conceptuales de la estadística
+desde un punto de vista elemental es enseñarles a realizar los gráficos
+que mejor representen las variables de interés.\index{Estadistica@Estadística}
+
+
+\section{¿Qué es la estadística?}
+
+A pesar de que la estadística es hoy por hoy una ciencia axiomatizada
+y por ende una rama de las matemáticas, en sus orígenes era una ciencia
+puramente experimental, como lo indica la historia de la humanidad,
+ya que se tiene testimonio de que los egipcios 3050 ac llevaban datos
+acerca de los esclavos, población, agrimensura y riquezas; los chinos
+llevaban estadística de la población; la Biblia en el libro de los
+números se habla de los censos realizados por los levitas, \ lo mismo
+que los romanos lo cual lo hacían cada 5 años; en América los Aztecas
+y los Incas también tabulaban datos.
+
+Pero fue en la edad media cuando Jhonn Graunt realizó un estudio estadístico
+serio sobre las muertes ocurridas en Londres entre 1603 y 1624 y publicado
+en 1662, luego Edmond Halley en 1693 realizó la primera tabla de seguros
+de vida.
+
+Hasta ese momento la estadística aún era una ciencia puramente experimental
+y fueron los matemáticos Jacobo Bernoulli, Fermat, Pascal, Laplace,
+Leibniz, Huyghens, Bayes, Tchebitchef y Borel los que la axiomatizaron.
+
+La palabra estadística fue usada por primera vez por Godofredo Achenwall
+convencido de que los datos estudiados por esta nueva ciencia sería
+de gran utilidad para los gobernantes.
+
+Como lo indica este pequeño resumen histórico la estadística generalmente
+se toma como una ciencia que se encarga de presentar informes de encuestas,
+como nos lo hace pensar también los medios de comunicación masivos,
+pero la estadística es algo más que eso.
+
+\textit{Ella se encarga de establecer los métodos y procedimientos
+para recolectar, clasificar y resumir datos para luego analizarlos\ siempre
+que exista \ variabilidad e incertidumbre causada intrínsecamente
+por ellos y después realizar inferencias con el fin de hacer predi\-cciones
+y tomar decisiones. }
+
+Aunque no es fácil definir la estadística y por eso no vamos a tratar
+de hacerlo aquí por que lo más importante es comprender \texttt{que
+es y como se utiliza }y en el párrafo anterior expresamos lo que es
+la estadística.
+
+En el siguiente esquema representamos en forma general la estructura
+de esta ciencia, aunque faltan eslabones estos lo representaremos
+en el segundo curso. 
+\begin{figure}[H]
+\centering
+
+\caption{Diagrama }
+
+
+\includegraphics[scale=0.3]{6_home_antalcides_Escritorio_est_libros-est_image_diagrama.png}
+\end{figure}
+
+
+Ahora clasificaremos la estadística.
+
+\begin{apunte} \textcolor{zanahoria}{Estadística descriptiva:}
+Describe y analiza los datos utilizando métodos numéricos elementales
+y gráficos para resumir y presentar la información contenida en ellos.\index{Estadistica!desciptiva}
+\end{apunte}
+
+\begin{apunte} \textcolor{zanahoria}{Estadística inferencial:}
+apoyándose del cálculo de pro\-ba\-bilidades y utilizando los datos
+de una muestra, efectúa estima\-ciones, decisiones y generaliza sobre
+un conjunto mayor de datos llamado población.\index{Estadistica!Inferencial}
+\end{apunte}
+
+
+\section{Conceptos previos}
+
+\begin{defi}{Individuos o elementos:}{def1} Individuos o elementos:Son
+personas u objetos que contienen cierta información de interés.\index{Individuos}\index{Elementos}
+\end{defi}
+
+\begin{defi}{Población:}{def2} Es el conjunto de individuos o elementos
+que poseen la misma información de interés, es decir poseen ciertas
+propiedades comunes, y lo denotaremos $\Omega.$o $S$\index{Población}
+\end{defi}
+
+\begin{defi}{Muestra:}{def3} Es un subconjunto representativo de
+una población.\index{Muestra} \end{defi}
+
+\begin{defi}{Caracteres o atributos:}{def4} Son rasgos o cualidades
+de los elementos de la población, los cuales pueden ser cualitativos
+o cuantitativos.\index{Caracteres} \end{defi}
+
+\begin{defi}{Modalidades:}{def5} Son diferentes situaciones posibles
+de un carácter, los cuales deben ser mutuamente excluyentes y exhaus\-tivos,
+es decir cada elemento posee una y solo una de las modalidades posibles
+y un carácter debe tener todas las modalidades posibles.\index{Modalidades}
+\end{defi}
+
+\begin{defi}{Clases:}{def6} Conjunto de una o más modalidades en
+el que se verifica que cada modalidad pertenece a una y solo una de
+las clases\index{Clases} \end{defi}
+
+\begin{defi}{Variabilidad:}{def7} Al estudiar unos individuos escogemos
+uno varios caracteres, pero la medida de le los caracteres presentan
+desviaciones con respecto a una modalidad cuando cada carácter es
+analizado con las mismas condiciones, pero con la imposibilidad de
+controlar esas desviaciones. A cada una de esas desviaciones se le
+llama variabilidad.\index{Variabilidad} \end{defi}
+
+
+\subsection{Variables estadísticas\index{Variables estadísticas}}
+
+Cuando hablamos de variables estamos en realidad hablando de una función
+definida:
+\[
+f\,:\,\begin{array}{ccc}
+A & \longrightarrow & B\\
+x_{i} & \longmapsto & X(x_{i})
+\end{array}
+\]
+
+
+Donde $A\subseteq\Omega$ y $B$ es un conjunto determinado de modalidades.
+
+Al conjunto $B$ se le denomina dominio de la variable o rango, de
+acuerdo con el tipo de dominio las variables se clasifican en:
+
+\begin{defi}{Variables cualitativas:}{def8} Son aquellas que las
+modali\-dades posibles son de tipo nominal o categ{ó}rico. \end{defi}
+
+\begin{ejemplo} \{si, no\}, \{hombre, mujer\}, \{blanco, negro, amari\-llo,...,etc.\}\index{Varibles!cualitativas}
+\end{ejemplo}
+
+\begin{defi}{Variables casicuantitativas:}{def9} Son variables de
+tipo nominal, pero se puede establecer un orden entre ellas. \end{defi}
+
+\begin{ejemplo} \{1${^{o}}$,2${^{o}}$,3${^{o}}$,...\}, \{alto,
+medio, bajo\}\index{Variables!Cuasicuantitativas} \end{ejemplo}
+
+\begin{defi}{Variables cuantitativas:}{def10} Son las que tienen
+por modalidades un conjunto de elementos dotados de operaciones y
+estas a su vez se clasifican en discretas y continuas\index{Variables!cuantitativas}
+\end{defi}
+
+\begin{defi}{Discretas:}{def11} Cuando las variables toman valores
+puntuales \end{defi}
+
+\begin{ejemplo} Cuando el rango es subconjunto de los n\'umeros\ \nz, %\gz o \qz,%
+\index{Variables@Discretas} \end{ejemplo}
+
+\begin{defi}{Continuas:}{def12} si $X$ toma todos los valores en
+un intervalo \end{defi}
+
+\begin{ejemplo} si $X$ \ $\in\rz$
+\end{ejemplo}
+
+
+\section{Organización de datos}
+
+Generalmente los datos se organizan usando tablas \ y determinando
+algunas cantidades o valores que definiremos a continuación:
+
+Consideremos una población finita de $n$ elementos o indivi\-duos
+descrita según un carácter o variable $X$ cuyas modalidades han sido
+agrupadas en un número $k$ de clases, que denotaremos $\ c_{1},c_{2},c_{3},...,c_{k}$
+y para cada clase $c_{i},i=1,2,3,...,k$ definimos lo si\-guiente:
+\footnotetext{La población también puede ser infinita, pero ese caso
+lo estudiaremos más adelante en el capítulo 3}
+
+\begin{defi}{Distribución de frecuencias:}{def17} Es una función
+que a cada clase $c_{i}$ de $C$ (el conjunto de todas las clases)
+le asigna un valor $n_{i}\in\nz _{0}$,
+ es decir, es una función de la forma 
+\[
+\begin{array}{cccc}
+\mathfrak{F}: & C & \rightarrow & \nz_{0}\\
+ & c_{i} & \longmapsto & n_{i}
+\end{array}
+\]
+
+
+\index{Distribución de frecuencia}
+
+tal que $\mathfrak{F(}c_{i}\mathfrak{)=}n_{i}$
+
+\end{defi}
+
+La función de distribución no es única existen cuatro, las cuales
+definiremos ahora.
+
+\begin{defi}{ Frecuencia absoluta:}{def13} La frecuencia absoluta
+de una clase $c_{i}$ es el número de veces $n_{i}$ que se observa
+una modalidad perteneciente a esa clase.\index{Frecencia!Absoluta}
+\end{defi}
+
+\begin{defi}{Frecuencia relativa:}{def14} La frecuencia relativa
+de una clase $c_{i}$ es el cociente $f_{i}$ entre la frecuencia
+absoluta de la clase $c_{i}$ y el número total de observaciones de
+todas las modalidades pertenecientes a todas las clases. \end{defi}
+
+Generalmente esta frecuencia se multiplica por 100 y se da en porcentaje\index{Frecuencia!Relativa}
+
+\begin{defi}{Frecuencia absoluta acumulada:}{def15} La frecuencia
+absoluta acumulada $N_{i}$ es el número de elementos de la población
+cuya modalidad es inferior o equivalente a la modalidad $c_{i}$ es
+decir,\index{Frecuencia!Absoluta!Acumulada} 
+\[
+N_{i}=\sum_{j=1}^{k}n_{j}
+\]
+
+
+\end{defi}
+
+\begin{defi}{Frecuencia relativa acumulada:}{def16} Se denota $F_{i}$
+y es el tanto por uno de los elementos de la población que están en
+alguna de las clases y que presenta una modalidad inferior o igual
+a la $c_{i}$, es decir 
+\[
+F_{i}=\frac{N_{i}}{n}=\sum_{j=1}^{k}f_{j}
+\]
+
+
+\end{defi}
+
+De éstas definiciones se pueden deducir algunas propiedades evi\-dentes
+ya que las modalidades son exhaustivas y mutuamente excluyentes 
+\begin{itemize}
+\item 
+\[
+n=\sum_{j=1}^{k}n_{j},
+\]
+
+\item 
+\[
+\sum_{j=1}^{k}f_{j}=1
+\]
+$\index{Frecuencia!Relativa!Acumulada}$ 
+\end{itemize}
+\begin{defi}{Tabla de frecuencia:}{def18} Es una representación de
+$\mathfrak{F}$ y generalmente una tabla como se muestra en la tabla
+\ref{tab1}
+
+\index{Tabla de frecuencias}
+
+Donde:
+\begin{itemize}
+\item M: representa modalidades, 
+\item F.A.: frecuencia absoluta,
+\item F.R.: frecuencia relativa, 
+\item F.A.A: frecuencia absoluta acumulada y 
+\item F.R.A.: frecuencia relativa acumulada.
+\end{itemize}
+\end{defi}
+
+\begin{table}[H]
+\centering\caption{Tabla de Frecuencias\label{tab1}}
+ %
+\begin{tabular}{|ccccc|}
+\arrayrulecolor{ptctitle}\cellcolor{ptctitle!50}{\small{}M}  &
+\cellcolor{ptctitle!50}{\small{}F.}  &
+\cellcolor{ptctitle!50}{\small{}F.R.}  &
+\cellcolor{ptctitle!50}{\small{}F.A.A.}  &
+\cellcolor{ptctitle!50}{\small{}F.R.A.}\tabularnewline
+\cellcolor{ptcbackground}{\small{}C}  &
+\cellcolor{ptcbackground}{\small{}n}$_{i}$  &
+\cellcolor{ptcbackground}{\small{}f}$_{i}$  &
+\cellcolor{ptcbackground}{\small{}N}$_{i}$  &
+\cellcolor{ptcbackground}{\small{}F}$_{i}$\tabularnewline
+\cellcolor{gray!50}{\small{}c}$_{1}$  &
+\cellcolor{gray!50}{\small{}n}$_{1}$  &
+\cellcolor{gray!50}{\small{}f}$_{1}${\small{}=}$\frac{n_{1}}{n}$  &
+\cellcolor{gray!50}{\small{}N}$_{1}${\small{}=n}$_{1}$  &
+\cellcolor{gray!50}{\small{}F}$_{1}${\small{}=}$\frac{N_{1}}{n}${\small{}=f}$_{1}$\tabularnewline
+\cellcolor{ptcbackground}{\small{}Cc}$_{2}$  &
+\cellcolor{ptcbackground}{\small{}n}$_{2}$  &
+\cellcolor{ptcbackground}{\small{}f}$_{2}${\small{}=}$\frac{n_{2}}{n}$  &
+\cellcolor{ptcbackground}{\small{}N}$_{2}${\small{}=n}$_{1}${\small{}+n}$_{2}$  &
+\cellcolor{ptcbackground}{\small{}F}$_{2}${\small{}=f}$_{1}${\small{}+f}$_{2}$\tabularnewline
+\cellcolor{gray!50}{\small{}c}$_{3}$  &
+\cellcolor{gray!50}{\small{}n}$_{3}$  &
+\cellcolor{gray!50}{\small{}f}$_{3}${\small{}=}$\frac{n_{3}}{n}$  &
+\cellcolor{gray!50}{\small{}N}$_{3}${\small{}=n}$_{1}${\small{}+n}$_{2}${\small{}+n}$_{3}$  &
+\cellcolor{gray!50}{\small{}F}$_{3}${\small{}=f}$_{1}${\small{}+f}$_{2}${\small{}+f}$_{3}$\tabularnewline
+\cellcolor{ptcbackground}$\vdots$  &
+\cellcolor{ptcbackground}$\vdots$  &
+\cellcolor{ptcbackground}$\vdots$  &
+\cellcolor{ptcbackground}$\vdots$  &
+\cellcolor{ptcbackground}$\vdots$\tabularnewline
+\cellcolor{gray!50}{\small{}c}$_{j}$  &
+\cellcolor{gray!50}{\small{}n}$_{j}$  &
+\cellcolor{gray!50}{\small{}f}$_{j}${\small{}=}$\frac{n_{j}}{n}$  &
+\cellcolor{gray!50}{\small{}N}$_{j}${\small{}=}$\sum_{i=1}^{j}${\small{}n}$_{i}$  &
+\cellcolor{gray!50}{\small{}F}$_{j}${\small{}=}$\sum_{i=1}^{j}${\small{}f}$_{i}$\tabularnewline
+\cellcolor{ptcbackground}$\vdots$  &
+\cellcolor{ptcbackground}$\vdots$  &
+\cellcolor{ptcbackground}$\vdots$  &
+\cellcolor{ptcbackground}$\vdots$  &
+\cellcolor{ptcbackground}$\vdots$\tabularnewline
+\cellcolor{gray!50}{\small{}c}$_{k}$  &
+\cellcolor{gray!50}{\small{}n}$_{k}$  &
+\cellcolor{gray!50}{\small{}f}$_{k}${\small{}=}$\frac{n_{k}}{n}$  &
+\cellcolor{gray!50}{\small{}N}$_{k}${\small{}=n}  &
+\cellcolor{gray!50}{\small{}F}$_{k}${\small{}=1}\tabularnewline
+\cellcolor{ptcbackground}\footnote{Aunque hemos definido la tabla sólo para $\mathfrak{F}$ en realidad
+en una tablas de frecuencia se tabulan las otras frecuencias definidas
+en este apartado}  &
+\cellcolor{ptcbackground}{\small{}n}  &
+\cellcolor{ptcbackground}{\small{}1}  &
+\cellcolor{ptcbackground} &
+\cellcolor{ptcbackground}\tabularnewline
+\end{tabular}
+\end{table}
+
+
+\begin{ejemplo} Se lanzan cinco monedas 1000 veces. El número de
+lanzamientos en los que han salido 0,1,2,3,4,5 caras se indican en
+la Tabla \ref{tab:Lanzamiento-de-monedas}: 
+
+\begin{table}[H]
+\centering\caption{Lanzamiento de monedas\label{tab:Lanzamiento-de-monedas}}
+\begin{tabular}{cllll}
+\arrayrulecolor{ptctitle}\cellcolor{ptctitle!50}N\ensuremath{{^{o}}} de caras  &\cellcolor{ptctitle!50}  \ensuremath{n_{i}}  &\cellcolor{ptctitle!50}  \ensuremath{f_{i}}  & \cellcolor{ptctitle!50} \ensuremath{N_{i}}  & \cellcolor{ptctitle!50} \ensuremath{F_{i}}\\
+ \cellcolor{ptcbackground} 0  &\cellcolor{ptcbackground}  38  & \cellcolor{ptcbackground}  &  \cellcolor{ptcbackground} & \cellcolor{ptcbackground} \\
+ \cellcolor{gray!50} 1  & \cellcolor{gray!50} 144  &  \cellcolor{gray!50} &  \cellcolor{gray!50} & \cellcolor{gray!50} \\
+ \cellcolor{ptcbackground} 2  & \cellcolor{ptcbackground} 342  &\cellcolor{ptcbackground}   & \cellcolor{ptcbackground}  & \cellcolor{ptcbackground} \\
+ \cellcolor{gray!50} 3  & \cellcolor{gray!50} 287  &\cellcolor{gray!50}   & \cellcolor{gray!50}  & \cellcolor{gray!50} \\
+ \cellcolor{ptcbackground} 4  &  \cellcolor{ptcbackground}164  & \cellcolor{ptcbackground}  & \cellcolor{ptcbackground}  & \cellcolor{ptcbackground} \\
+ \cellcolor{gray!50} 5  & \cellcolor{gray!50} 25  &\cellcolor{gray!50}   & \cellcolor{gray!50}  & \cellcolor{gray!50} \\
+ \cellcolor{ptcbackground}Total  & \cellcolor{ptcbackground} 1000  & \cellcolor{ptcbackground}  &  \cellcolor{ptcbackground} & \cellcolor{ptcbackground} \\
+ \end{tabular}
+\end{table}
+
+\begin{description}
+\item [{{a}.}] Completar la tabla 
+\item [{{b}.}] Determinar para que clase \ $F_{i}$ es mayor que el
+60\%: $\ F_{\_\_\_}=$\_\_\_ 
+\end{description}
+\end{ejemplo} 
+
+
+\subsubsection{Elección de clases}
+
+Las clases se pueden seleccionar de diferentes formas, pero siempre
+hay que seguir los criterios que se ajustan al tipo de variables que
+estudiamos. 
+\begin{itemize}
+\item Cuando se trata de una variable nominal las clases $c_{i}$ serán
+de tipo nominal 
+\item Cuando la variable es cuantitativa discreta las clases serán valo\-res
+numéricos del tipo $x_{1},x_{2},x_{3},\cdots,x_{k}.$ 
+\item Si las variables son cuantitativas continuas las clases se definen
+mediante intervalos abiertos o semiabiertos, es decir de la forma:
+\[
+\left(x_{i-1},x_{i}\right),\left(x_{i},x_{i+1}\right),\left[x_{i-1},x_{i}\right),\left[x_{i},x_{i+1}\right),\left(x_{i-1},x_{i}\right],\left(x_{i},x_{i+1}\right].
+\]
+
+\end{itemize}
+En estos casos las modalidades que contienen una clase son todos los
+valores numéricos posibles contenidos en el intervalo.
+
+Por convención nosotros de aquí en adelante tomaremos siempre los
+$(k-1)$ primeros intervalos de la forma $\left(x_{i-1},x_{i}\right]$
+y el último $[x_{k-1},x_{k}].$ A cada intervalo lo representaremos
+$x_{i-1}-x_{i}=I_{i}$.
+
+\begin{defi}{Amplitud:}{def19} La amplitud de un intervalo se define
+$a_{i}=x_{i}-x_{i-1}.$ \end{defi}
+
+\begin{defi}{Marca de clase: }{def20} Es un valor $m_{i}$ $\in I_{i\text{ }}$que
+representa a la clase y se define 
+\[
+m_{i}=\frac{x_{i}+x_{i-1}}{2}
+\]
+
+
+\end{defi}
+
+La marca de clase es una forma abreviada de representar la clase.
+
+\begin{apunte} $m_{i}$ se determina de esta forma si las clases
+son conjuntos acotados.\end{apunte}
+
+
+\subsubsection{Elección de clases para variables continuas}
+
+\index{Clases}Cuando tenemos una muestra es importante escoger en
+una forma adecuada las clases y el número de clases $k$ y para ello
+indicaremos los siguientes pasos: 
+\begin{itemize}
+\item Lo primero es determinar $k$, entre mayor sea su valor mejor\footnote{Se aconseja que se escojan entre 5 y 20 clases dependiendo del número
+de datos}, pero de todas formas hay que acotarlo por que la idea es reducir
+el número de datos en la muestra. 
+\[
+k=\left\{ \begin{array}{cc}
+\sqrt{n} & \text{si }n\text{ es muy grande}\\
+1+3.22\log n & \text{en otro caso}
+\end{array}\right\} 
+\]
+
+\end{itemize}
+$n$ se considera grande si $n\geq40$ 
+\begin{itemize}
+\item Como segundo paso se determina el rango $R=x_{k}-x_{0}$ \index{Rango de la muestra} 
+\item Determinado el rango de la muestra podemos hallar la amplitud de cada
+intervalo que generalmente la tomamos constante: 
+\[
+a=\frac{R}{k},\quad a_{i}=a\quad\forall i=1,2,3,...,k
+\]
+ \index{Amplitud de los intervalos} 
+\item Ahora determinaremos los intervalos\footnote{Se aconseja que las marcas de clases coincidan con un gran número
+de datos y que los datos no sean extremos de las clases, para que
+los c{á}lculos posteriores queden mejor aproximados.} 
+\end{itemize}
+\begin{align*}
+x_{0} & =x_{\min}\\
+x_{1} & =x_{0}+a\\
+x_{2} & =x_{1}+2a\\
+x_{k} & =x_{\max}+ka
+\end{align*}
+
+
+Como se puede observar es posible que el valor de $a$ no sea un número
+fácil de manejar entonces en estos casos como 
+\[
+x_{k}\geq x_{\max}>x_{\min}\geq x_{0}
+\]
+ entonces se varían los extremos simétricamente y $a$ se aproxima
+al mayor entero es decir $a\prime=\left[\left[a\right]\right]+1$
+
+\begin{ejemplo} Queremos observar el peso de las personas en una
+población y se toma una muestra de 21 individuos, los cuales están
+tabulados en la siguiente tabla
+
+$\begin{tabular}{l}
+ Peso en Kg\\
+ \begin{tabular}{lllllll}
+ 58  &  42  &  51  &  54  &  40  &  40  &  49\\
+ 56  &  58  &  57  &  59  &  63  &  58  &  66\\
+ 70  &  73  &  71  &  69  &  70  &  68  &  64 
+\end{tabular} 
+\end{tabular}$
+
+Construir la tabla de frecuencias:
+
+\end{ejemplo}
+
+\begin{solucion} Lo primero que hay que identificar es la variable
+y en este caso vemos que la variable es de tipo cuantitativa continua
+por lo que ahora hay que determinar los intervalos y su longitud para
+que la perdida de información no sea significativa entonces sea $X$
+la variable peso, utilizaremos la fórmula $k=1+3.22\ast\log_{10}21=5.\,\allowbreak257\,5\approxeq6$
+aunque podríamos escoger también $k=\sqrt{21}\approxeq5$. 
+
+Ahora hallemos $R=73-40=33\Longrightarrow a_{i}=a=\frac{33}{6}=5.\,\allowbreak5$
+
+$x_{0}=x_{\min}=40$
+
+$x_{5}=x_{\max}=73$
+\[
+\begin{tabular}{||c||c||c||c||c||c||c||}
+\hline\hline  \ensuremath{i}  &  Intervalos  &  \ensuremath{m_{i}}  &  \ensuremath{n_{i}}  &  \ensuremath{f_{i}}  &  \ensuremath{N_{i}}  &  \ensuremath{F_{i}}\\
+\hline\hline  1  &  40-45,5  &   &   &   &   &  \\
+\hline\hline  2  &  45,5-51  &   &   &   &   &  \\
+\hline\hline  3  &   &   &   &   &   &  \\
+\hline\hline  4  &   &   &   &   &   &  \\
+\hline\hline  5  &  62-67.5  &   &   &   &   &  \ensuremath{\thickapprox1}\\
+\hline\hline   &   &   &   &   &  21  &  \ensuremath{\thickapprox1}\\
+\hline\hline   &   &   &  21  &  \ensuremath{\thickapprox1}  &   &  
+\\\hline\hline \end{tabular}
+\]
+
+
+Existe otra posibilidad de construir la tabla y es escogiendo por
+ejemplo $a\prime=7\Longrightarrow R\prime=a\prime\cdot5=35$
+
+$d=R\prime-R=2\Longrightarrow x_{0}=x_{\min}-\frac{d}{2}=39,\quad x_{5}=x_{\max}+\frac{d}{2}=74$
+
+\bigskip{}
+
+
+\begin{center}
+\bigskip{}
+ $\begin{tabular}{||c||c||c||c||c||c||c||}
+\hline\hline  \ensuremath{i}  &  Intervalos  &  \ensuremath{m_{i}}  &  \ensuremath{n_{i}}  &  \ensuremath{f_{i}}  &  \ensuremath{N_{i}}  &  \ensuremath{F_{i}}\\
+\hline\hline  1  &  39-46  &   &   &   &   &  \\
+\hline\hline  2  &  46-53  &   &   &   &   &  \\
+\hline\hline  3  &   &   &   &   &   &  \\
+\hline\hline  4  &   &   &   &   &   &  \\
+\hline\hline  5  &  67-74  &   &   &   &   &  \\
+\hline\hline  6  &   &   &   &   &  21  &  \ensuremath{\thickapprox1}\\
+\hline\hline   &   &   &  21  &  \ensuremath{\thickapprox1}  &   &  
+\\\hline\hline \end{tabular}$
+\par\end{center}
+
+\end{solucion}
+
+Utilizando un software estadístico \textbf{\textsl{Statgraphics}}
+\textregistered,\  obtenemos la siguiente tabla
+
+\begin{center}
+\includegraphics[width=11.1017cm,height=6.6009cm]{7_media_antalcides_Antalcides-EXT1_bak-pc_documentos_Libros_LibrosDPTO_est_peso.pdf} 
+\par\end{center}
+
+Podemos usar \textcolor{blue}{R} para resolver el ejercicio, en este
+caso cargamos el paquete \textsl{\textcolor{blue}{Agricolae}} como
+se muestra a continuación
+
+<<>>=
+<<tablas1,echo=FALSE,results='hide',fig.show='hide'>>=
+library(agricolae) # cargar el paquete agricole a la memoria
+peso<-c(58,42,51,54,40,40,49,56,58,57,59,63,58,66,70,73,71,69,70,68,64)
+par(mfrow=c(1,2),mar=c(4,3,0,1),cex=0.6)
+h1<- graph.freq(peso,col="yellow",frequency=1,las=2,xlab="h1")
+axis(1,h1$breaks,las=2)
+axis(2,h1$count)
+@
+
+<<>>=
+<<tablas2>>
+round(table.freq(h1), 2) 
+@
+
+<<>>=
+<<tablas3>>
+stem(peso)
+@
+
+
+\section{Representaciones gráficas y diagramas}
+
+En la sección anterior hemos visto que al organizar los datos en una
+tabla se reduce la información, pero con ello podemos analizarlos
+de manera más sistemática y de esa manera podemos concentrarnos en
+los más importante, pero aún así a veces no es fácil observar todo
+lo que queremos, sobre todo si la persona interesada en los resultados
+no le interesa la estadística y sabe muy poco de ella, por lo que
+una representación gráfica simplifica aún más los datos.
+
+
+\subsection{Gráficos para variables cualitativas\index{Diagramas de barra}}
+\begin{description}
+\item [{{i.}}] Diagramas de barras
+
+
+Se establece una especie de plano cartesiano representando las modalidades
+en el eje de ordenadas y las frecuencias absolutas o relativas en
+el eje de las abscisas, con este gráfico \ si\ se comparan varias
+poblaciones entre sí es conveniente utilizar las frecuencias relativas
+
+\end{description}
+\begin{flushleft}
+Diagrama de barra para una variable cualitativa \label{ec1} 
+\par\end{flushleft}
+\begin{quote}
+\begin{figure}[ph]
+\begin{centering}
+\includegraphics[width=8.5668cm,height=9.4784cm]{8_media_antalcides_Antalcides-EXT1_bak-pc_documentos_Libros_LibrosDPTO_est_Areac.pdf}\caption{AREAS DE LOS CONTINENTES}
+
+\par\end{centering}
+
+\centering{}\label{ec1} 
+\end{figure}
+
+
+\begin{center}
+\includegraphics[width=10.4252cm,height=8.2549cm]{9_media_antalcides_Antalcides-EXT1_bak-pc_documentos_Libros_LibrosDPTO_est_trigom.pdf}\label{ec1} 
+\par\end{center}\end{quote}
+\begin{description}
+\item [{\bigskip{}
+}]~
+\item [{ii.}] Diagramas circulares o sectores: 
+\end{description}
+En estos diagramas se toma un círculo o cilindro y se dividen en tantos
+sectores como clases existan de modo que cada sector es proporcional
+a su frecuencia absoluta o acumulada, como se indica en los siguientes
+diagramas:
+
+\begin{center}
+\includegraphics[width=8.2549cm,height=10.3175cm]{10_media_antalcides_Antalcides-EXT1_bak-pc_documentos_Libros_LibrosDPTO_est_feconomia.pdf}\\
+ Diagrama circular 
+\par\end{center}
+
+Con estos diagramas también se pueden comparar dos poblaciones utilizando
+dos semic{í}rculos de radios $r_{1}$ y $r_{2}$ tal que $r_{2}>r_{1}$
+y cumplan la relación: $r_{2}=r_{1}\sqrt{\frac{n_{2}}{n_{1}}}$ donde
+las $n$ representan el tamaño de las poblaciones.
+
+\begin{center}
+\includegraphics[width=3.8397cm,height=3.2466cm]{11_media_antalcides_Antalcides-EXT1_bak-pc_documentos_Libros_LibrosDPTO_est_2pob.pdf}\\
+ DOS MUESTRAS 
+\par\end{center}
+
+\index{Diagramas!Circulares} 
+\begin{description}
+\item [{iii.}] Pictogramas: Cuando se expresan dibujos alusivos al tema
+en estudio estos dibujos se hacen de tal forma que se utilizan diferentes
+escalas para representar la frecuencia absoluta o relativa.
+
+
+\begin{center}
+\includegraphics[width=3.6867in,height=1.6553in]{12_media_antalcides_Antalcides-EXT1_bak-pc_documentos_Libros_LibrosDPTO_est_Pictog.pdf} 
+\par\end{center}
+
+
+\index{Pictograma}
+
+\end{description}
+
+\subsection{Gráficos para variables cuantitativas}
+\begin{description}
+\item [{i.}] Diagrama de puntos: En este diagrama se coloca la frecuencia
+absoluta o relativa de una modalidad en una recta numérica y nos sirve
+para analizar dos o más modalidades cuando el número de datos es pequeño,
+con este gráfico analizamos fácilmente la tendencia y la variabilidad
+de la muestra. lo mismo que características poco usuales.
+
+
+\begin{center}
+\includegraphics[width=3.7446in,height=1.1978in]{13_media_antalcides_Antalcides-EXT1_bak-pc_documentos_Libros_LibrosDPTO_est_punto.pdf} 
+\par\end{center}
+
+
+\index{Diagrama!De puntos}
+
+\item [{ii.}] Diagrama de tallo y hoja: Cuando el conjunto de datos 
+\[
+x_{1},x_{2},x_{3},\cdots,x_{n}.x_{1},x_{2},x_{3},\cdots,x_{n}.
+\]
+ es grande cada $x_{i},\quad i=1,2,3,...,n$ tiene más de dos dígitos,
+entonces se dividen los $x_{i}$ en dos partes . Un tallo formado
+por los primeros dígitos. Una hoja formada por el resto de dígitos\index{Diagrama!De tallo y hoja}\begin{ejemplo}
+En un examen de clasificación para seleccionar alumnos que pueden
+ver directamente cálculo en el primer semestre en la facultad de ingeniería
+se obtuvieron los siguientes resultados: \end{ejemplo} \ $\left[\begin{array}{cccccccccc}
+95 & 95 & 100 & 100 & 100 & 100 & 100 & 105 & 105 & 105\\
+110 & 110 & 110 & 110 & 110 & 110 & 110 & 110 & 110 & 115\\
+115 & 115 & 115 & 115 & 115 & 115 & 115 & 115 & 115 & 115\\
+120 & 120 & 120 & 120 & 120 & 120 & 120 & 120 & 125 & 125\\
+125 & 125 & 130 & 130 & 130 & 130 & 135 & 135 & 140 & 140
+\end{array}\right]\allowbreak$
+\end{description}
+$\text{\begin{tabular}{l||llllllllllllllllllll}
+ {\tiny09}  &  {\tiny5}  &  {\tiny5}  &  {\tiny-}  &  {\tiny-}  &  {\tiny-}  &  {\tiny-}  &  {\tiny-}  &  {\tiny-}  &  {\tiny-}  &  {\tiny-}  &  {\tiny-}  &  {\tiny-}  &  {\tiny-}  &  {\tiny-}  &  {\tiny-}  &  {\tiny-}  &  {\tiny-}  &  {\tiny-}  &  {\tiny-}  &  {\tiny-}\\
+ {\tiny10}  &  {\tiny0}  &  {\tiny0}  &  {\tiny0}  &  {\tiny0}  &  {\tiny0}  &  {\tiny5}  &  {\tiny5}  &  {\tiny5}  &  {\tiny-}  &  {\tiny-}  &  {\tiny-}  &  {\tiny-}  &  {\tiny-}  &  {\tiny-}  &  {\tiny-}  &  {\tiny-}  &  {\tiny-}  &  {\tiny-}  &  {\tiny-}  &  {\tiny-}\\
+ {\tiny11}  &  {\tiny0}  &  {\tiny0}  &  {\tiny0}  &  {\tiny0}  &  {\tiny0}  &  {\tiny0}  &  {\tiny0}  &  {\tiny0}  &  {\tiny0}  &  {\tiny5}  &  {\tiny5}  &  {\tiny5}  &  {\tiny5}  &  {\tiny5}  &  {\tiny5}  &  {\tiny5}  &  {\tiny5}  &  {\tiny5}  &  {\tiny5}  &  {\tiny5}\\
+ {\tiny12}  &  {\tiny0}  &  {\tiny0}  &  {\tiny0}  &  {\tiny0}  &  {\tiny0}  &  {\tiny0}  &  {\tiny0}  &  {\tiny0}  &  {\tiny5}  &  {\tiny5}  &  {\tiny5}  &  {\tiny5}  &  {\tiny-}  &  {\tiny-}  &  {\tiny-}  &  {\tiny-}  &  {\tiny-}  &  {\tiny-}  &  {\tiny-}  &  {\tiny-}\\
+ {\tiny13}  &  {\tiny0}  &  {\tiny0}  &  {\tiny0}  &  {\tiny0}  &  {\tiny5}  &  {\tiny5}  &  {\tiny-}  &  {\tiny-}  &  {\tiny-}  &  {\tiny-}  &  {\tiny-}  &  {\tiny-}  &  {\tiny-}  &  {\tiny-}  &  {\tiny-}  &  {\tiny-}  &  {\tiny-}  &  {\tiny-}  &  {\tiny-}  &  {\tiny-}\\
+ {\tiny14}  &  {\tiny0}  &  {\tiny0}  &  {\tiny-}  &  {\tiny-}  &  {\tiny-}  &  {\tiny-}  &  {\tiny-}  &  {\tiny-}  &  {\tiny-}  &  {\tiny-}  &  {\tiny-}  &  {\tiny-}  &  {\tiny-}  &  {\tiny-}  &  {\tiny-}  &  {\tiny-}  &  {\tiny-}  &  {\tiny-}  &  {\tiny-}  &  {\tiny-} 
+\end{tabular} }$
+\begin{description}
+\item [{iii.}] Diagramas diferenciales: Son aquellos en los que se representan
+gráficamente frecuencias absolutas y relativas \index{Diagramas!Diferenciales} 
+\item [{iv.}] Diagramas integrales: Son los diagramas en los que se representan
+gráficamente el número de elementos que presentan una modalidad inferior
+o igual a una modalidad dada y se generan a tráves de las frecuencias
+acumuladas\index{Diagramas!Integrales} 
+\end{description}
+Debido a que existen dos tipos de variables cuantitativas entonces
+debemos clasificar estos dos tipos de diagramas de acuerdo con el
+tipo de variable cuantitativa en estudio.
+
+
+\paragraph{Gráficos para variables discreta}
+
+Al representar gráficamente la frecuencia absoluta o relativa de una
+variable discreta usamos los diagrama de barras, pero a diferencia
+de los diagrama de barra de las variables cualitativas las barras
+aquí se presentan con l{í}neas delgadas, para indicar así la naturaleza
+de la variable. En el caso de los diagramas integrales tienen la forma
+del gráfico de una función escalonada
+
+\begin{ejemplo} La siguiente tabla representa el número de hijos
+que tenían 12 familias encuestadas de un caserío cerca a Baranoa:
+\[
+\begin{tabular}{||l||l||l||l||}
+\hline\hline  \ensuremath{x_{i}}  &  \ensuremath{n_{i}}  &  \ensuremath{f_{i}}  &  \ensuremath{N_{i}}\\
+\hline\hline  1  &  1  &   &  \\
+\hline\hline  2  &  3  &   &  \\
+\hline\hline  3  &  5  &   &  \\
+\hline\hline  4  &  3  &   &  \\
+\hline\hline   &  12  &   &  
+\\\hline\hline \end{tabular}
+\]
+ \end{ejemplo} 
+\begin{figure}[h]
+\centering{}\includegraphics[width=9.5333cm,height=5.0676cm]{14_media_antalcides_Antalcides-EXT1_bak-pc_documentos_Libros_LibrosDPTO_est_barah.pdf}\caption{FRECUENCIAS ABSOLUTAS}
+\end{figure}
+
+
+\begin{center}
+\includegraphics[width=7.8024cm,height=6.1505cm]{15_media_antalcides_Antalcides-EXT1_bak-pc_documentos_Libros_LibrosDPTO_est_barah1.pdf}\\
+ FRECUENCIAS ABSOLUTAS ACUMULADAS 
+\par\end{center}
+
+Para las variables continuas también se pueden representar con diagramas
+circulares
+
+\begin{center}
+\begin{ejemplo} La tabla representa las notas obtenidas por los alumnos
+de \ 11en un examen de Matemáticas en 1990 
+\begin{equation}
+\begin{tabular}{ccc}
+\hline  \textbf{Notas}  &  \textbf{Frecuencia}  &  \textbf{\ frecuencia Relativa}\\
+\hline  \ensuremath{10\ }  &  \ensuremath{2}  &  \ensuremath{2/15=.133}\\
+ \ensuremath{9}  &  \ensuremath{3}  &  \ensuremath{3/15=.200}\\
+ \ensuremath{8}  &  \ensuremath{4}  &  \ensuremath{4/15=.267}\\
+ \ensuremath{7}  &  \ensuremath{4}  &  \ensuremath{4/15=.267}\\
+ \ensuremath{4}  &  \ensuremath{2}  &  \ensuremath{2/15=.133} 
+\end{tabular}\tag{Tabla 1}
+\end{equation}
+ 
+\begin{equation}
+\begin{tabular}{cccccccccc}
+\hline  \textbf{notas}  &  \ensuremath{\mathbf{n}_{i}}  &   &  \textbf{f}\ensuremath{_{i}}  &   &  \ensuremath{f_{i}} \textbf{\%}  &   &  \ensuremath{\mathbf{N}_{i}}  &   &  \ensuremath{\mathbf{F}_{i}}\\
+\hline  \ensuremath{10\ }  &  \ensuremath{2}  &   &  \ensuremath{2/15=.133}  &   &  \ensuremath{13.3}  &   &  \ensuremath{15}  &   &  \ensuremath{1.000}\\
+ \ensuremath{9}  &  \ensuremath{3}  &   &  \ensuremath{3/15=.200}  &   &  \ensuremath{20.0}  &   &  \ensuremath{13}  &   &  \ensuremath{.867}\\
+ \ensuremath{8}  &  \ensuremath{4}  &   &  \ensuremath{4/15=.267}  &   &  \ensuremath{26.7}  &   &  \ensuremath{10}  &   &  \ensuremath{.667}\\
+ \ensuremath{7}  &  \ensuremath{4}  &   &  \ensuremath{4/15=.267}  &   &  \ensuremath{26.7}  &   &  \ensuremath{6}  &   &  \ensuremath{.400}\\
+ \ensuremath{4}  &  \ensuremath{2}  &   &  \ensuremath{2/15=.133}  &   &  \ensuremath{13.3}  &   &  \ensuremath{2}  &   &  \ensuremath{.133} 
+\end{tabular}\tag{Tabla 2}
+\end{equation}
+\end{ejemplo} \fbox{\includegraphics[width=6.4449cm,height=5.9814cm]{16_media_antalcides_Antalcides-EXT1_bak-pc_documentos_Libros_LibrosDPTO_est_chart4.pdf}} 
+\par\end{center}
+
+
+\paragraph{Gráficos para variables continuas}
+
+Para las variables continuas existen dos tipos de gráficos: 
+\begin{itemize}
+\item Los histogramas: Los cuales se construyen representando sobre cada
+intervalo, un rectángulo que tiene la longitud del segmento como base
+y la altura debe ser un valor proporcional a el valor de la frecuencia
+para ese intervalo.\index{Histogramas} 
+\item Polígono de frecuencias: Este se elabora uniendo los puntos que corresponden
+a las imágenes de las marcas de clase. 
+\end{itemize}
+En el caso de los diagramas integrales a estos polígonos se les llama
+ojiva y se obtienen uniendo las abscisas a partir de los extremos
+de los intervalos en los que se han organizado los datos
+
+\begin{ejemplo} Representar gráficamente la información que apare\-ce
+en la siguiente tabla \end{ejemplo}
+
+\begin{center}
+\begin{tabular}{||c||c||c||c||}
+\hline 
+Intervalos  &
+$m_{i}$  &
+$n_{i}$  &
+$N_{i}$\tabularnewline
+\hline 
+\hline 
+0-2  &
+1  &
+1  &
+\tabularnewline
+\hline 
+\hline 
+2-4  &
+3  &
+4  &
+\tabularnewline
+\hline 
+\hline 
+4-6  &
+5  &
+10  &
+\tabularnewline
+\hline 
+\hline 
+6-8  &
+7  &
+3  &
+\tabularnewline
+\hline 
+\hline 
+8-10  &
+9  &
+1  &
+\tabularnewline
+\hline 
+\hline 
+ &
+ &
+ &
+\tabularnewline
+\hline 
+\end{tabular}
+\par\end{center}
+
+\begin{center}
+\includegraphics[width=6.7173cm,height=5.0676cm]{17_media_antalcides_Antalcides-EXT1_bak-pc_documentos_Libros_LibrosDPTO_est_hisc.pdf}\\
+ Diagrama Diferencial 
+\par\end{center}
+
+\begin{center}
+\includegraphics[width=7.3916cm,height=5.4191cm]{18_media_antalcides_Antalcides-EXT1_bak-pc_documentos_Libros_LibrosDPTO_est_poligono.pdf}\\
+ Polígono de frecuencias 
+\par\end{center}
+
+\begin{center}
+\includegraphics[width=7.9298cm,height=5.3773cm]{19_media_antalcides_Antalcides-EXT1_bak-pc_documentos_Libros_LibrosDPTO_est_Acumu.pdf}\\
+ Diagrama acumulado 
+\par\end{center}
+
+\begin{ejemplo} Representar gráficamente los datos de la tabla1 
+\begin{equation}
+\begin{tabular}{cc}
+\hline  \textbf{\label{Table1}Notas}  &  \textbf{Frecuencia}\\
+\hline  \ensuremath{10\ }  &  \ensuremath{2}\\
+ \ensuremath{9}  &  \ensuremath{3}\\
+ \ensuremath{8}  &  \ensuremath{4}\\
+ \ensuremath{7}  &  \ensuremath{4}\\
+ \ensuremath{6}  &  \ensuremath{0}\\
+ \ensuremath{5}  &  \ensuremath{0}\\
+ \ensuremath{4}  &  \ensuremath{2}\\
+ \ensuremath{3}  &  \ensuremath{0}\\
+ \ensuremath{2}  &  \ensuremath{0}\\
+ \ensuremath{1}  &  \ensuremath{0}\\
+ \ensuremath{0}  &  \ensuremath{0} 
+\end{tabular}\tag{Tabla 1}
+\end{equation}
+
+
+\end{ejemplo}
+
+\bigskip{}
+ 
+\begin{figure}[ptb]
+\centering{}\includegraphics[width=4.3448in,height=2.7795in]{20_media_antalcides_Antalcides-EXT1_bak-pc_documentos_Libros_LibrosDPTO_est_notas.pdf} 
+\end{figure}
+
+
+\begin{center}
+\includegraphics[width=3in,height=2.0003in]{21_media_antalcides_Antalcides-EXT1_bak-pc_documentos_Libros_LibrosDPTO_est_H0CZ9D00.pdf}\\
+ Test Scores 
+\par\end{center}
+
+\begin{center}
+\includegraphics[width=4.1459in,height=2.4232in]{22_media_antalcides_Antalcides-EXT1_bak-pc_documentos_Libros_LibrosDPTO_est_H0CZA601.pdf}\\
+ Test Scores 
+\par\end{center}
+\begin{description}
+\item [{{{*}}}] Realizar una ojiva que represente los datos de la tabla2 \end{description}
+\begin{itemize}
+\item Diagrama de caja: El diagrama de caja es una representación visual
+que describe varias características importantes tales coma \ son:
+la dispersión, la variabilidad, la simetría e identifica los datos
+que se alejan de manera poco usual del resto de los datos. 
+\end{itemize}
+En un diagrama de caja se concentran el 50\% de los datos en un rectángulo,
+ubicando los valores para los cuales la frecuencia relativa acumulada
+son el 25\% y el 75\% respectivamente en líneas horizontales o verticales
+formando los lados paralelos del rectángulo, también se utiliza una
+línea que pasa por el centro del rectángulo para representar el dato
+que le corresponde a la frecuencia relativa acumulada del 50\%. De
+los dos lados del rectángulo antes mencionados se extiende una línea
+perpendicular hasta los extremos más alejados, los valores que se
+encuentran en esta región se llaman valores atípicos o extremos.
+
+\begin{ejemplo} La siguiente tabla muestra los datos sobre la viscosidad
+de tres mezclas \end{ejemplo}
+
+\begin{center}
+\bigskip{}
+ %
+\begin{tabular}{lll}
+\hline 
+mezcla 1  &
+mezcla 2  &
+mezcla 2\tabularnewline
+\hline 
+22.02  &
+21.49  &
+20.33\tabularnewline
+23.83  &
+22.67  &
+21.67\tabularnewline
+26.67  &
+24.62  &
+24.67\tabularnewline
+25.38  &
+24.18  &
+22.45\tabularnewline
+25.48  &
+22.78  &
+22.28\tabularnewline
+23.50  &
+22.56  &
+21.95\tabularnewline
+25.90  &
+24.46  &
+20.49\tabularnewline
+24.98  &
+23.79  &
+21.81\tabularnewline
+\hline 
+\end{tabular}
+\par\end{center}
+
+\bigskip{}
+
+
+\begin{center}
+\includegraphics[width=3.25in,height=2.0046in]{23_media_antalcides_Antalcides-EXT1_bak-pc_documentos_Libros_LibrosDPTO_est_dcaja.pdf} 
+\par\end{center}
+\begin{itemize}
+\item Gráficas de serie de tiempo: Estas gráficas de series de tiempo se
+utilizan cuando nos interesa averiguar si el momento en que se tomaron
+afecta su variabilidad. 
+\end{itemize}
+\begin{ejemplo} El número de piezas (en miles) existentes en el almacén
+de una determinada fábrica el último día de cada mes del año 1981,
+viene dado por la tabla\\
+ %
+\begin{tabular}{lllllllllllll}
+{\tiny{}Meses}  &
+{\tiny{}Ene.}  &
+{\tiny{}Feb.}  &
+{\tiny{}Mar.}  &
+{\tiny{}Abr.}  &
+{\tiny{}Ma..}  &
+{\tiny{}Jun.}  &
+{\tiny{}Jul.}  &
+{\tiny{}Ag.}  &
+{\tiny{}Sep.}  &
+{\tiny{}Oct.}  &
+{\tiny{}Nov.}  &
+{\tiny{}Dic.}\tabularnewline
+{\tiny{}Piezas}  &
+{\tiny{}5,5}  &
+{\tiny{}6,3}  &
+{\tiny{}6,6}  &
+{\tiny{}7}  &
+{\tiny{}7}  &
+{\tiny{}7,5}  &
+{\tiny{}8,5}  &
+{\tiny{}8}  &
+{\tiny{}8,3}  &
+{\tiny{}7,5}  &
+{\tiny{}7}  &
+{\tiny{}6}\tabularnewline
+\end{tabular}
+
+\end{ejemplo}
+
+\bigskip{}
+
+
+\begin{center}
+\includegraphics[scale=0.2]{24_media_antalcides_Antalcides-EXT1_bak-pc_documentos_Libros_LibrosDPTO_est_serie.pdf}
+\par\end{center}
+
+
+\subsubsection{Diagrama de Tallo y Hoja}
+
+Salida del programa estadístico \textbf{\textsl{Statgraphics}} \textregistered,\ 
+para el peso de las 27 personas
+
+\textbf{\textcolor{black}{Diagrama de Tallo y Hoja para Peso: unidad
+= 1,0 \ \ 1{\textbar}2 representa 12,0}}
+
+\bigskip{}
+
+
+\textcolor{black}{\ \ \ \ \ \ 3 \ \ \ \ 4{\textbar}002}
+
+\textcolor{black}{\ \ \ \ \ \ 5 \ \ \ \ 4{\textbar}99}
+
+\textcolor{black}{\ \ \ \ \ \ 7 \ \ \ \ 5{\textbar}14}
+
+\textcolor{black}{\ \ \ \ (10) \ \ 5{\textbar}6778888899}
+
+\textcolor{black}{\ \ \ \ \ 10 \ \ \ \ 6{\textbar}3334}
+
+\textcolor{black}{\ \ \ \ \ \ 6 \ \ \ \ 6{\textbar}689}
+
+\textcolor{black}{\ \ \ \ \ \ 3 \ \ \ \ 7{\textbar}001}
+
+\bigskip{}
+
+
+\textcolor{black}{Este diagrama muestra la tabulación de frecuencias
+para Peso. \ El rango de los datos se ha dividido en 7 intervalos
+(llamados tallos), cada uno representado por un renglón en la tabla.
+\ Los tallos se etiquetan utilizando uno ó más dígitos indicadores
+para los valores que caen dentro de ese intervalo. \ En cada renglón,
+los valores individuales se representan por un dígito (llamado hoja)
+a la derecha de la línea vertical. \ Esto resulta en un histograma
+para los datos del cual uno puede recuperar, al menos, dos dígitos
+significativos de cada valor. \ Si hay algunos puntos muy alejados
+del resto (llamados puntos lejanos), se colocan en tallos alto y bajo
+separados. \ En este caso, no hay puntos alejados}
+
+Salida obetnida con \textcolor{blue}{R} para el mismo ejemplo
+
+<<>>=
+<<tablas3>>
+stem(peso)
+@
+
+\problemas{ 
+\begin{enumerate}
+\item Decir si los datos que representan \ los siguientes item son continuos
+o,discretos o cualitativos
+
+\begin{enumerate}
+\item Color de los ojos 
+\item Letras usadas en un párrafo 
+\item Velocidad de un coche 
+\item Edad de un trabajador 
+\item Número de billetes de 20000 que circulan en una ciudad 
+\item Número de estudiantes matriculados en la Universidad 
+\item Caudal del río,medido en diferentes días del año 
+\end{enumerate}
+\item El conjunto de datos adjunto está formado de observaciones del gasto
+de agua en regaderas (L/min) para una muestra de $n=128$ casas \ de
+un sector exclusivo de Barranquilla\\
+ \\
+\hspace*{-10pt} $\begin{array}{cccccccccc}
+4.6 & 12.3 & 7.1 & 4.0 & 9.2 & 6.7 & 6.9 & 11.5 & 5.1 & 3.8\\
+11.2 & 10.5 & 14.3 & 8.0 & 8.8 & 6.8 & 5.1 & 5.6 & 9.6 & 7.5\\
+7.5 & 6.2 & 5.8 & 2.3 & 3.4 & 10.4 & 9.8 & 6.6 & 3.7 & 6.4\\
+6.0 & 8.3 & 6.5 & 7.6 & 9.3 & 9.2 & 7.3 & 5.0 & 6.3 & 13.8\\
+6.2 & 5.4 & 4.8 & 7.5 & 6.0 & 6.9 & 10.8 & 7.5 & 6.6 & 5.5\\
+3.3 & 7.6 & 3.9 & 11.9 & 2.2 & 15.0 & 7.2 & 6.1 & 15.3 & 18.9\\
+7.2 & 5.4 & 5.5 & 4.3 & 9.0 & 12.7 & 11.5 & 7.4 & 5.0 & 3.5\\
+8.2 & 8.4 & 7.3 & 10.3 & 11.9 & 6.0 & 5.6 & 9.5 & 9.3 & 10.4\\
+9.7 & 5.1 & 6.7 & 10.2 & 6.2 & 8.4 & 7.0 & 4.8 & 5.6 & 10.5\\
+14.6 & 10.8 & 15.5 & 7.5 & 6.4 & 3.4 & 5.5 & 6.6 & 5.9 & 15.0\\
+9.6 & 7.8 & 7.0 & 6.9 & 4.1 & 3.5 & 11.9 & 3.7 & 5.7 & 6.8\\
+11.3 & 9.3 & 9.6 & 10.4 & 9.3 & 6.9 & 9.8 & 9.1 & 10.6 & 4.5\\
+6.2 & 8.3 & 3.2 & 4.9 & 5.0 & 6.0 & 8.2 & 6.3
+\end{array}$\\
+
+
+\begin{enumerate}
+\item Dibuje un histograma de frecuencias absolutas en el eje vertical 
+\item Dibuje un diagrama acumulado 
+\item Construya una representación de tallo y hoja 
+\item Dibuje una gráfica de series de tiempo 
+\item Tome tres opciones diferentes de intervalos de clase \ para el conjunto
+de datos
+
+\begin{enumerate}
+\item Intervalos largos e iguales 
+\item Intervalos cortos e iguales 
+\item Intervalos de diferente rango 
+\end{enumerate}
+\item Realice un diagrama circular 
+\item Compare las gráficas y determine cual de ellas representa mejor los
+datos 
+\item ¿La gráfica está centrada o sesgada? 
+\item ¿Existen Puntos inusuales?, es decir muy alejados de la mayoría 
+\end{enumerate}
+\item Un artículo sobre semilla de maní (Sept de 1990) reportó los siguientes
+resultados\\
+ $\begin{array}{cc}
+Cremoso & \begin{array}{ccccccccc}
+56 & 44 & 62 & 36 & 39 & 53 & 50 & 65 & 56\\
+68 & 41 & 30 & 40 & 50 & 56 & 30 & 22 & 40
+\end{array}\end{array}$\\
+ $\begin{array}{cc}
+Crujiente & \begin{array}{ccccccccc}
+62 & 53 & 75 & 42 & 47 & 40 & 34 & 62 & 52\\
+50 & 34 & 42 & 36 & 75 & 80 & 47 & 56 & 62
+\end{array}\end{array}$
+
+\begin{enumerate}
+\item Construya un diagrama de tallo y hojas para las muestras 
+\item Construya un histograma para los muestras 
+\item Realice un diagrama de puntos en ambos casos 
+\item Realice sendos diagramas de cajas 
+\item Compare las dos muestras 
+\item Obtuvo los mismos resultados al comparar 
+\item ¿Que decisión tomaría usted? Explique porqué. 
+\end{enumerate}
+\item Construya un diagrama de barras para los datos representados en la
+siguiente tabla. 
+\[
+\begin{array}{cc}
+X & n\\
+480 & 75\\
+498 & 56\\
+516 & 42\\
+534 & 30\\
+552 & 21\\
+570 & 15\\
+588 & 11\\
+606 & 6\\
+624 & 2\\
+720 & 1
+\end{array}
+\]
+ Donde $X$ representa el sueldo en miles de pesos que reciben los
+empleados de una empresa industrial de acuerdo con la labor que desempeñan 
+\item Considere la muestra de calificaciones de un grupo de primaria 
+\[
+\begin{tabular}{llllllllll}
+ a  &  c  &  d  &  b  &  c  &  c  &  c  &  d  &  f  &  f\\
+ d  &  f  &  a  &  d  &  c  &  b  &  c  &  d  &  d  &  b 
+\end{tabular}
+\]
+ Construya un
+
+\begin{enumerate}
+\item Diagrama de barras 
+\item Diagrama circular 
+\end{enumerate}
+\item En un párrafo se utilizaron las siguientes letras 
+\[
+\begin{tabular}{llllllllllll}
+ a  &  b  &  c  &  e  &  h  &  t  &  r  &  o  &  i  &  u  &  w  &  x\\
+ 20  &  15  &  12  &  15  &  3  &  10  &  4  &  20  &  12  &  10  &  1  &  1 
+\end{tabular}
+\]
+
+
+\begin{enumerate}
+\item Diagrama de barras 
+\item Diagrama circula 
+\end{enumerate}
+\item ¿Qué clase de gráficas son apropiadas para los datos
+
+\begin{enumerate}
+\item Nominales 
+\item Ordinales 
+\item Cuantitativos discretos 
+\item Cuantitativos continuos 
+\end{enumerate}
+\item Use los datos de la gráfica 1.3 para realizar una tabla de frecuencias
+\begin{figure}[h]
+\centering{}\includegraphics[width=9.0215cm,height=9.8189cm]{25_media_antalcides_Antalcides-EXT1_bak-pc_documentos_Libros_LibrosDPTO_est_tarea1.pdf} 
+\end{figure}
+
+\item De acuerdo con los datos de la gráfica 1.4 realice una tabla de frecuencias
+\begin{figure}[h]
+\centering{}\includegraphics[width=7.6135cm,height=7.4531cm]{26_media_antalcides_Antalcides-EXT1_bak-pc_documentos_Libros_LibrosDPTO_est_tarea1a.pdf} 
+\end{figure}
+
+\end{enumerate}
+}

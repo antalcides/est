@@ -1,0 +1,35 @@
+\documentclass[oneside,svgnames,x11names,x11names,HTML,twoside]{libro-est}
+\usepackage{lipsum-es}
+\begin{document}
+\chapter{mi pimer cap\'itulo}
+\lipsum[1]
+
+<<>>=
+<<show-off>>=
+rnorm(5)
+df=data.frame(y=rnorm(100), x=1:100)
+summary(lm(y~x, data=df))
+
+@
+
+\lipsum[2]
+<<>>=
+<<show-off>>=
+rnorm(5)
+df=data.frame(y=rnorm(100), x=1:100)
+summary(lm(y~x, data=df))
+
+@
+xxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxx
+<<>>=
+<<show-off>>=
+rnorm(5)
+df=data.frame(y=rnorm(100), x=1:100)
+summary(lm(y~x, data=df))
+
+@
+
+
+\end{document}

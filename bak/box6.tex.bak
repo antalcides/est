@@ -1,0 +1,67 @@
+\documentclass[12pt,letterpaper]{article}
+
+\usepackage{parskip}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\usepackage{tcolorbox}
+  \tcbuselibrary{breakable}
+  \tcbuselibrary{skins}
+\usepackage{lipsum}
+
+\tcbset{%
+  contourskin/.style={%
+      enhanced,
+      breakable,
+      frame hidden,
+      %height fixed for=first and middle,%% <-- This causes the issue!
+      parbox=false,
+      colback=white,
+      attach boxed title to top left={xshift=12pt},%% <-- Issue does not occur if this line is commented...
+      boxed title style={enhanced,top=4pt,left=12pt,right=12pt,
+          frame hidden,
+          interior style={left color=blue!20,right color=white},
+          overlay={%
+              \draw[blue!60,line width=2pt]
+                  ([xshift=-.5em,yshift=-1pt]frame.north west)--([xshift=.5em,yshift=-1pt]frame.north east);%
+          }%
+      },
+      coltitle=blue!60!black,
+      fonttitle=\bfseries\large,
+      before skip=\baselineskip,
+      left=12pt,
+      top=.8em,
+      drop large lifted shadow,
+      underlay unbroken={%
+          \coordinate (coin) at (title.north-|frame.west); 
+          \draw[blue!60,line width=1pt] ([yshift=-1pt]title.north east) -- ([xshift=-0.5pt,yshift=-1pt]coin) -- +(0,-1.2cm);
+          \draw[blue!60,line width=2pt] ([xshift=-0.5pt,yshift=-1pt-1.2cm]coin) -- ([xshift=-0.5pt]frame.south west);
+          \draw[blue!60,line width=2pt] ([xshift=-0.5pt]frame.south west) -- (frame.south east);%
+      },
+      underlay first={%
+          \coordinate (coin) at (title.north-|frame.west); 
+          \draw[blue!60,line width=1pt] ([yshift=-1pt]title.north east) -- ([xshift=-0.5pt,yshift=-1pt]coin) -- +(0,-1.2cm);
+          \draw[blue!60,line width=2pt] ([xshift=-0.5pt,yshift=-1pt-1.2cm]coin) -- ([xshift=-0.5pt]frame.south west);
+      },
+      underlay middle={%
+          \draw[blue!60,line width=2pt] ([xshift=-0.5pt]frame.north west) -- ([xshift=-0.5pt]frame.south west);%
+      },
+      underlay last={%
+          \draw[blue!60,line width=2pt] ([xshift=-0.5pt]frame.north west) -- ([xshift=-0.5pt]frame.south west);
+          \draw[blue!60,line width=2pt] ([xshift=-0.5pt]frame.south west) -- (frame.south east);%
+      },%
+  },
+}
+
+\newtcolorbox{mycontourbox}[1][]{contourskin,#1}
+
+\begin{document}
+
+\lipsum[1-2]
+
+\begin{mycontourbox}[title={Example}]
+  \lipsum[4]
+  \lipsum[4]
+  \lipsum[4]
+  \lipsum[4]
+\end{mycontourbox}
+
+\end{document}

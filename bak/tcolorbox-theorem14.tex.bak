@@ -1,0 +1,151 @@
+\documentclass{article}
+
+\usepackage[most]{tcolorbox}
+
+
+\newtcblisting{mycode}[2][]{%
+  listing options={language={C}},
+  listing only,listing remove caption=false,
+  breakable,
+  colback=yellow!20!white,
+  coltitle=black,
+  colbacktitle=white!60!black,
+  title={\lstlistingname~#2},
+  title after break={\raggedleft\lstlistingname\ \thelstlisting~ -- continued},
+  arc = 0pt, auto outer arc, #1
+}
+
+\begin{document}
+
+\begin{tcblisting}{listing options={language={C},caption={The sum of integers}},
+    listing only,listing remove caption=false,
+    breakable,
+    colback=yellow!20!white,
+    coltitle=black,
+    colbacktitle=white!60!brown,
+    title={\lstlistingname\ \thelstlisting},
+    title after break={\raggedleft\lstlistingname\ \thelstlisting~ -- continued},
+    arc = 0pt, auto outer arc
+  }
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char **argv)
+{
+  long int k = 0;
+  long int sum = 0;
+
+  for ( k = 1 ; k <= 100 ; k++ )
+  {
+   sum += k; 
+   printf("Current sum: %10d\n");
+  }
+
+  sum = 0;
+  /* Now the sum of squares */
+  for ( k = 1 ; k <= 10 ; k++ )
+  {
+   sum += (long int) pow(k,2); 
+   printf("Current sum: %10d\n");
+  }
+
+  sum = 0;
+  /* Now the sum of cubes */
+  for ( k = 1 ; k <= 10 ; k++ )
+  {
+   sum += (long int) pow(k,3); 
+   printf("Current sum: %10d\n");
+  }
+
+  /* And repeating the stuff to make the whole 
+  stuff longer than necessary */
+
+  sum = 0;
+  for ( k = 1 ; k <= 100 ; k++ )
+  {
+   sum += k; 
+   printf("Current sum: %10d\n");
+  }
+
+  sum = 0;
+  /* Now the sum of squares */
+  for ( k = 1 ; k <= 10 ; k++ )
+  {
+   sum += (long int) pow(k,2); 
+   printf("Current sum: %10d\n");
+  }
+
+  sum = 0;
+  /* Now the sum of cubes */
+  for ( k = 1 ; k <= 10 ; k++ )
+  {
+   sum += (long int) pow(k,3); 
+   printf("Current sum: %10d\n");
+  }
+  return(EXIT_SUCCESS);
+}
+\end{tcblisting}
+
+
+
+\begin{mycode}[listing options={caption={Just a repeat}}]{Once again}
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char **argv)
+{
+  long int k = 0;
+  long int sum = 0;
+
+  for ( k = 1 ; k <= 100 ; k++ )
+  {
+   sum += k; 
+   printf("Current sum: %10d\n");
+  }
+
+  sum = 0;
+  /* Now the sum of squares */
+  for ( k = 1 ; k <= 10 ; k++ )
+  {
+   sum += (long int) pow(k,2); 
+   printf("Current sum: %10d\n");
+  }
+
+  sum = 0;
+  /* Now the sum of cubes */
+  for ( k = 1 ; k <= 10 ; k++ )
+  {
+   sum += (long int) pow(k,3); 
+   printf("Current sum: %10d\n");
+  }
+
+  /* And repeating the stuff to make the whole 
+  stuff longer than necessary */
+
+  sum = 0;
+  for ( k = 1 ; k <= 100 ; k++ )
+  {
+   sum += k; 
+   printf("Current sum: %10d\n");
+  }
+
+  sum = 0;
+  /* Now the sum of squares */
+  for ( k = 1 ; k <= 10 ; k++ )
+  {
+   sum += (long int) pow(k,2); 
+   printf("Current sum: %10d\n");
+  }
+
+  sum = 0;
+  /* Now the sum of cubes */
+  for ( k = 1 ; k <= 10 ; k++ )
+  {
+   sum += (long int) pow(k,3); 
+   printf("Current sum: %10d\n");
+  }
+  return(EXIT_SUCCESS);
+}
+\end{mycode}
+
+\end{document}

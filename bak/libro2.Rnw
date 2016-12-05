@@ -1,0 +1,46 @@
+\documentclass[oneside,svgnames,x11names,x11names,HTML,twoside]{libro-est}
+\usepackage{lipsum-es}
+\begin{document}
+\chapter{mi pimer cap\'itulo}
+xxxxxxxxxxxxxxxxxxxxxxxx\\
+xxxxxxxxxxxxxxxxxxxxxxxxxxx\\
+xxxxxxxxxxxxxxxxxxxxxx\\
+
+No aparace nada
+<<show-off>>=
+rnorm(5)
+df=data.frame(y=rnorm(100), x=1:100)
+summary(lm(y~x, data=df))
+
+@
+
+xxxxxxxxxxxxxxxxxxxxxxxx\\
+xxxxxxxxxxxxxxxxxxxxxxxxxxx\\
+xxxxxxxxxxxxxxxxxxxxxx\\
+
+<<show-on>>=
+rnorm(5)
+df=data.frame(y=rnorm(100), x=1:100)
+summary(lm(y~x, data=df))
+
+@
+xxxxxxxxxxxxxxxxxxxxxxxx\\
+xxxxxxxxxxxxxxxxxxxxxxxxxxx\\
+xxxxxxxxxxxxxxxxxxxxxx\\
+<<echo=T, eval=F>>=
+rnorm(5)
+df=data.frame(y=rnorm(100), x=1:100)
+summary(lm(y~x, data=df))
+
+@
+xxxxxxxxxxxxxxxxxxxxxxxx\\
+xxxxxxxxxxxxxxxxxxxxxxxxxxx\\
+xxxxxxxxxxxxxxxxxxxxxx\\
+<<echo=F, eval=T>>=
+rnorm(5)
+df=data.frame(y=rnorm(100), x=1:100)
+summary(lm(y~x, data=df))
+
+@
+
+\end{document}

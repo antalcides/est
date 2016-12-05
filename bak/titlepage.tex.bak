@@ -1,0 +1,33 @@
+\documentclass{book}
+
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage[x11names]{xcolor}
+\usepackage[most]{tcolorbox}
+
+\newtcolorbox[auto counter]{examplebox}[2][]{colframe=green,enhanced jigsaw, title={Example \thetcbcounter\ #2},coltitle={black},sharp corners,
+  frame style={left color=orange,right color=black!20!white},
+  #1}
+
+\begin{document}
+
+
+\chapter{Summary}
+
+\begin{examplebox}{Computing the doubling time}
+Computing the doubling time
+
+\end{examplebox}
+
+
+\begin{tabularx}{\linewidth}{XX}
+  \textcolor{cyan}{Term, notation} & \textcolor{cyan}{Equations} \tabularnewline
+  \toprule
+  1. Exponential function & the equation  \tabularnewline
+  \multicolumn{2}{l}{} \tabularnewline
+
+  2. The number & Compute \tabularnewline
+  \bottomrule
+\end{tabularx}
+
+\end{document}

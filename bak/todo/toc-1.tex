@@ -1,0 +1,126 @@
+\documentclass[11pt, openany]{book}
+
+\usepackage[dutch]{babel}
+\usepackage{amsmath}
+\usepackage{xcolor}
+\usepackage{framed}
+\usepackage{titletoc}
+\usepackage{etoolbox}
+\usepackage{lmodern}
+\definecolor{myred}{RGB}{127,0,0}
+\definecolor{myyellow}{RGB}{169,121,69}
+\patchcmd{\tableofcontents}{\contentsname}{\sffamily\contentsname}{}{}
+
+\usepackage{xcolor}
+\usepackage{framed}
+
+\definecolor{myred}{RGB}{127,0,0}
+\definecolor{myyellow}{RGB}{169,121,69}
+
+%\renewenvironment{leftbar}{%
+%  \def\FrameCommand{{\color{myyellow}\vrule width 2pt depth 6pt} \hspace{10pt}}%
+%  \MakeFramed {\advance\hsize-\width \FrameRestore}}%
+% {\endMakeFramed}
+
+\makeatletter
+\def\@chapter[#1]#2{\ifnum \c@secnumdepth >\m@ne
+                       \if@mainmatter
+                         \refstepcounter{chapter}%
+                         \typeout{\@chapapp\space\thechapter.}%
+                         \addtocontents{toc}%
+                                   {%
+                                       {\noindent\protect\parbox{3.8em}{\hfill\Huge\color{myred}\bfseries\thepage}}%
+                                         \protect\hspace*{.5em}%
+                                        \protect\parbox{\dimexpr\linewidth-4.5em\relax}{%
+                                           \protect\begin{leftbar}
+%                                              {\scshape\small\chaptername~\thechapter}\\\sffamily#1%
+%                                           \protect\end{leftbar}}\par\noindent
+%                                    }%
+                                               {\scshape\small\chaptername~\thechapter}\\\sffamily#1%
+                               \protect\end{leftbar}}\par%\noindent
+                        }%
+                       \else
+                         \addcontentsline{toc}{chapter}{#1}%
+                       \fi
+                    \else
+                      \addcontentsline{toc}{chapter}{#1}%
+                    \fi
+                    \chaptermark{#1}%
+                    \addtocontents{lof}{\protect\addvspace{10\p@}}%
+                    \addtocontents{lot}{\protect\addvspace{10\p@}}%
+                    \if@twocolumn
+                      \@topnewpage[\@makechapterhead{#2}]%
+                    \else
+                      \@makechapterhead{#2}%
+                      \@afterheading
+                    \fi}
+\makeatother
+\usepackage{graphicx}
+\usepackage[margin=2cm, paperwidth=210mm, paperheight=297mm]{geometry}
+\begin{document}
+\pagenumbering{roman}
+\begin{titlepage}
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+\center
+\HRule \\[0.4cm]
+{ \LARGE \bfseries P\\[0.4cm]}
+\HRule \\[0,5cm]
+\textsc  Gaming - KB-24  \\ [11cm]
+\begin{minipage}{0.8\textwidth}
+\begin{flushright} \large
+ Haagse Hogeschool \\ Mi\\ R\\ 2
+\end{flushright}
+\end{minipage}
+\\[1cm]
+\begin{minipage}{0.8\textwidth}
+\begin{flushright} \large
+{\bf Studenten:}\\ W\\ Ak\\ L
+\end{flushright}
+\end{minipage}
+\\[1cm]
+\begin{minipage}{0.8\textwidth}
+\begin{flushright} \large
+{\bf Docenten:}\\ G
+\\ G
+\end{flushright}
+\end{minipage}
+\\[1cm]
+\begin{minipage}{0.8\textwidth}
+\begin{flushright} \large
+I\\
+Datum: \today \\
+
+Versie: 0.1 \\
+G
+\end{flushright}
+\end{minipage}
+\end{titlepage}
+\renewenvironment{leftbar}
+  {\def\FrameCommand{\hspace{6em}%
+    {\color{myyellow}\vrule width 2pt depth 6pt}\hspace{1em}}%
+    \MakeFramed{\parshape 1 0cm \dimexpr\textwidth-6em\relax\FrameRestore}\vskip2pt%
+  }
+ {\endMakeFramed}
+
+\titlecontents{section}
+  [8.4em]
+  {\sffamily\contentslabel{3em}}{}{}
+  {\hspace{0.5em}\nobreak\itshape\color{myred}\contentspage}
+\titlecontents{subsection}
+  [8.4em]
+  {\sffamily\contentslabel{3em}}{}{}  
+  {\hspace{0.5em}\nobreak\itshape\color{myred}\contentspage}
+
+\tableofcontents
+\newpage
+
+\pagenumbering{arabic}
+%\phantomsection
+\chapter*{chapter one}
+\addcontentsline{toc}{chapter}{chapter one}
+dfgdfg
+\section{section one}
+\newpage  
+\chapter{chapter two}
+\section{section one} 
+\end{document}

@@ -1,0 +1,41 @@
+\documentclass{article}
+\usepackage[many]{tcolorbox}
+\usepackage{floatrow}
+\usepackage{caption}
+\usepackage{graphicx}
+\usepackage{showframe}% just for the example to have a visual guideline
+
+\definecolor{captionbgcolor}{RGB}{103,143,150}
+
+\DeclareCaptionFormat{tcbcaption}{%
+  \begin{tcolorbox}[
+    nobeforeafter,
+    colback=captionbgcolor,
+    arc=0pt,
+    outer arc=0pt,
+    boxrule=0pt,
+    colupper=white,
+    fontupper=\large\sffamily,
+    boxsep=0pt
+  ]
+  #1#2#3
+  \end{tcolorbox}%
+}
+\captionsetup{format=tcbcaption}
+\setkeys{Gin}{width=0.7\textwidth}
+
+\begin{document}
+
+\begin{figure}
+\ffigbox[\FBwidth]
+  {\includegraphics{example-image-a}}
+  {\caption{how many factors are there in a set of 12?}}
+\end{figure}
+
+\begin{figure}
+\ffigbox[\FBwidth]
+  {\includegraphics{example-image-a}}
+  {\caption{how many factors are there in a set of 12?}}
+\end{figure}
+
+\end{document}

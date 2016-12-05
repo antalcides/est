@@ -1,0 +1,56 @@
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{pgf,tikz}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+\pagestyle{empty}
+\begin{document}
+\definecolor{zzttqq}{rgb}{0.6,0.2,0.}
+\definecolor{wwzzff}{rgb}{0.4,0.6,1.}
+\definecolor{cqcqcq}{rgb}{0.7529411764705882,0.7529411764705882,0.7529411764705882}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\draw [color=cqcqcq,dash pattern=on 65pt off 65pt, xstep=50.0cm,ystep=50.0cm] (-86.85984878587159,-146.5486105083644) grid (311.0845988869086,65.27063880407694);
+\clip(-86.85984878587159,-146.5486105083644) rectangle (311.0845988869086,65.27063880407694);
+\fill[color=wwzzff,fill=wwzzff,fill opacity=0.3] (-80.,60.) -- (-80.,20.) -- (80.,20.) -- (80.,60.) -- cycle;
+\fill[color=wwzzff,fill=wwzzff,fill opacity=0.3] (140.,60.) -- (300.,60.) -- (300.,20.) -- (140.,20.) -- cycle;
+\fill[color=wwzzff,fill=wwzzff,fill opacity=0.3] (-80.,-60.) -- (80.,-60.) -- (80.,-20.) -- (-80.,-20.) -- cycle;
+\fill[color=wwzzff,fill=wwzzff,fill opacity=0.3] (140.,-60.) -- (300.,-60.) -- (300.,-20.) -- (140.,-20.) -- cycle;
+\fill[color=wwzzff,fill=wwzzff,fill opacity=0.3] (-80.,-140.) -- (80.,-140.) -- (80.,-100.) -- (-80.,-100.) -- cycle;
+\fill[color=wwzzff,fill=wwzzff,fill opacity=0.3] (140.,-140.) -- (300.,-140.) -- (300.,-100.) -- (140.,-100.) -- cycle;
+\draw [color=wwzzff] (-80.,60.)-- (-80.,20.);
+\draw [color=wwzzff] (-80.,20.)-- (80.,20.);
+\draw [color=wwzzff] (80.,20.)-- (80.,60.);
+\draw [color=wwzzff] (80.,60.)-- (-80.,60.);
+\draw [color=wwzzff] (140.,60.)-- (300.,60.);
+\draw [color=wwzzff] (300.,60.)-- (300.,20.);
+\draw [color=wwzzff] (300.,20.)-- (140.,20.);
+\draw [color=wwzzff] (140.,20.)-- (140.,60.);
+\draw [color=wwzzff] (-80.,-60.)-- (80.,-60.);
+\draw [color=wwzzff] (80.,-60.)-- (80.,-20.);
+\draw [color=wwzzff] (80.,-20.)-- (-80.,-20.);
+\draw [color=wwzzff] (-80.,-20.)-- (-80.,-60.);
+\draw [color=wwzzff] (140.,-60.)-- (300.,-60.);
+\draw [color=wwzzff] (300.,-60.)-- (300.,-20.);
+\draw [color=wwzzff] (300.,-20.)-- (140.,-20.);
+\draw [color=wwzzff] (140.,-20.)-- (140.,-60.);
+\draw [color=wwzzff] (-80.,-140.)-- (80.,-140.);
+\draw [color=wwzzff] (80.,-140.)-- (80.,-100.);
+\draw [color=wwzzff] (80.,-100.)-- (-80.,-100.);
+\draw [color=wwzzff] (-80.,-100.)-- (-80.,-140.);
+\draw [color=wwzzff] (140.,-140.)-- (300.,-140.);
+\draw [color=wwzzff] (300.,-140.)-- (300.,-100.);
+\draw [color=wwzzff] (300.,-100.)-- (140.,-100.);
+\draw [color=wwzzff] (140.,-100.)-- (140.,-140.);
+\draw [->,color=zzttqq] (0.,20.) -- (-40.,-20.);
+\draw [->,color=zzttqq] (0.,20.) -- (216.76574590500968,-20.);
+\draw [->,color=zzttqq] (222.67649986744308,20.) -- (216.76574590500968,-20.);
+\draw [->,color=zzttqq] (222.67649986744308,-60.) -- (213.810368923793,-100.);
+\draw [->,color=zzttqq] (222.67649986744308,-60.) -- (0.,-100.);
+\draw [color=zzttqq](-34.84506271210662,53.36363958237166) node[anchor=north west] {$ESTAD\'ISTICA$};
+\draw [color=zzttqq](-34.84506271210662,-26.225249952184697) node[anchor=north west] {$DESCRIPTIVA$};
+\draw [color=zzttqq](-31.711641864289447,-105.81413948674106) node[anchor=north west] {$PARAM\'ETRICA$};
+\draw [color=zzttqq](173.84076575251672,-102.68071863892388) node[anchor=north west] {$NO  \space PARAM\'ETRICA$};
+\draw [color=zzttqq](191.38792250029286,-26.225249952184697) node[anchor=north west] {$INFETRENCIAL$};
+\draw [color=zzttqq](178.22755493946076,53.990323751935094) node[anchor=north west] {$PROBABILIDAD$};
+\end{tikzpicture}
+\end{document}

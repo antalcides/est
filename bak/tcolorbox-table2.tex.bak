@@ -1,0 +1,115 @@
+\documentclass{book}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{tcolorbox}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{colortbl}
+\tcbuselibrary{skins}
+\usepackage{multicol}
+\usepackage{lipsum}
+
+%table
+%mytable constuction:
+\tcbset
+{
+    ponyotab/.style=
+    {
+         enhanced,
+         fonttitle=\bfseries,
+         fontupper=\normalsize\sffamily,
+         colback=white!,
+         colframe=black!65!white,
+         colbacktitle=gray!20!white,
+         coltitle=black,center title
+    }
+}
+\makeatletter
+\tcbset
+    {
+tabular*/.style 2 args={%
+    boxsep=0pt,top=0pt,bottom=0pt,leftupper=0pt,rightupper=0pt,
+    toptitle=1mm,bottomtitle=1mm,boxrule=0.5mm,hbox,
+    before upper={\def\arraystretch{1.1}#1%
+    \tcb@hack@currenvir\tabular{#2}},
+    after upper=\endtabular\arrayrulecolor{black}},
+    }
+\makeatother
+
+\newtcolorbox[auto counter,number within=chapter]{ptable}[3][]
+{
+     ponyotab,
+     tabular*={\arrayrulecolor{black}\renewcommand{\arraystretch}{1.0}}{#2},% change 1.0  to change cell heights
+     title=Table \ref{#3},
+     label=#3,
+%     before={\begin{table}[htb]\refstepcounter{table}\label{#3}\centering},
+%     after={\end{table}},
+     nobeforeafter, % <-- added
+     #1
+}
+
+\makeatletter
+
+
+\newcommand{\twocols}[2]%
+  {\par\noindent
+    \begin{minipage}[t]{0.5\textwidth}%
+      \begin{center}#1\end{center}\end{minipage}
+    \begin{minipage}[t]{0.5\textwidth}%
+      \begin{center}#2\end{center}\end{minipage}
+}
+
+\newcommand{\onecol}[1]%
+  {\par\noindent
+    \begin{minipage}[t]{\textwidth}%
+      \begin{center}#1\end{center}\end{minipage}
+}
+
+\def\btable#1#2#3\ntable
+{
+    \onecol
+    {
+        \begin{ptable}{#1}{#2}
+        #3
+        \end{ptable}
+    }
+}
+%end table second type
+
+
+
+
+
+\begin{document}
+
+\chapter{oo}
+\btable{c|c}{jj}
+group & one      \\\hline
+red   & 1000.00  \\\hline
+green & 2000.00  \\\hline
+blue  & 3000.00  \\\hline
+sum   & 6000.00
+\ntable
+
+% \end{multicols}
+
+\twocols
+{
+\btable{c|c}{kk}
+group & one      \\\hline
+red   & 1000.00  \\\hline
+green & 2000.00  \\\hline
+blue  & 3000.00  \\\hline
+sum   & 6000.00
+\ntable
+}
+{
+\btable{c|c}{jj}
+group & one      \\\hline
+red   & 1000.00  \\\hline
+green & 2000.00  \\\hline
+blue  & 3000.00  \\\hline
+sum   & 6000.00
+\ntable
+}
+
+\end{document}

@@ -1,0 +1,42 @@
+\documentclass{article}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins,breakable}
+\usepackage{varwidth}
+\usepackage{lipsum-es}
+\newtcolorbox[auto counter]{sol}[1][]{
+  enhanced,breakable,
+  frame hidden,interior hidden,boxrule=0pt,coltitle=black,
+  title={\textsc{Soluci\'on~\thetcbcounter: #1}},
+  attach boxed title to top left,
+  varwidth boxed title*=0pt,
+  boxed title style={enhanced,boxrule=0pt,left=4mm,right=4mm,top=1mm,bottom=1mm,
+    frame hidden,
+    interior code={\draw[very thick,blue!50!cyan!80!black]
+      ([xshift=0.6pt,yshift=0.6pt]frame.south west)--([xshift=0.6pt,yshift=-0.6pt]frame.north west)
+      --([xshift=-0.6pt,yshift=-0.6pt]frame.north east)--([xshift=-0.6pt,yshift=0.6pt]frame.south east)
+      --++(-0.45em,0)--++(-115:2mm)--++(125:2mm)--cycle; }},
+  underlay={%
+      \draw[very thick,blue!50!cyan!80!black]
+      ([xshift=7pt]interior.north west) --
+      ([xshift=7pt]interior.south west); }
+}
+
+\begin{document}
+
+   \begin{sol}[Eliminacion de Gauss-Jordan]
+ \lipsum[1]
+   \end{sol}
+
+   \begin{sol}[A short title]
+      Hola
+   \end{sol}
+
+   \begin{sol}[A very very very very very very long title]
+      Hola
+   \end{sol}
+
+   \begin{sol}[A really really really really really really very very very very very very long title]
+      Hola
+   \end{sol}
+
+\end{document}

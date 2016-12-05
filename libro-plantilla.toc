@@ -1,0 +1,26 @@
+\select@language {spanish}
+\contentsline {part}{\@mypartnumtocformat {I}{Un T\'itulo largo para la parte}}{3}{part.1}
+\contentsline {chapter}{\numberline {1}Un T\'itulo largo para el primer cap\'itulo}{7}{chapter.1}
+\ttl@change@i {\@ne }{section}{1.25cm}{\addvspace {3pt}\sffamily \bfseries }{\contentslabel [\thecontentslabel ]{1.25cm}}{}{\hfill \thecontentspage }\relax 
+\ttl@change@v {section}{}{}{}\relax 
+\ttl@change@i {\@ne }{subsection}{1.25cm}{\addvspace {3pt}\sffamily \bfseries }{\contentslabel [\thecontentslabel ]{1.25cm}}{}{\hfill \thecontentspage }\relax 
+\ttl@change@v {subsection}{}{}{}\relax 
+\contentsline {section}{\numberline {1.1}AA}{7}{section.1.1}
+\contentsline {section}{\numberline {1.2}Test section}{9}{section.1.2}
+\contentsline {subsection}{\numberline {1.2.1}AAA}{10}{subsection.1.2.1}
+\contentsline {subsubsection}{AAAA}{11}{section*.2}
+\contentsline {subsubsection}{AAAB}{12}{section*.4}
+\contentsline {subsection}{\numberline {1.2.2}AAB}{15}{subsection.1.2.2}
+\contentsline {subsection}{\numberline {1.2.3}AAC}{16}{subsection.1.2.3}
+\contentsline {chapter}{\numberline {2}Second chapter}{19}{chapter.2}
+\ttl@change@i {\@ne }{section}{1.25cm}{\addvspace {3pt}\sffamily \bfseries }{\contentslabel [\thecontentslabel ]{1.25cm}}{}{\hfill \thecontentspage }\relax 
+\ttl@change@v {section}{}{}{}\relax 
+\ttl@change@i {\@ne }{subsection}{1.25cm}{\addvspace {3pt}\sffamily \bfseries }{\contentslabel [\thecontentslabel ]{1.25cm}}{}{\hfill \thecontentspage }\relax 
+\ttl@change@v {subsection}{}{}{}\relax 
+\contentsline {section}{\numberline {2.1}BBB}{19}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}AAD}{19}{subsection.2.1.1}
+\contentsline {subsubsection}{AADA}{21}{section*.5}
+\contentsline {subsubsection}{AADB}{22}{section*.6}
+\contentsline {subsubsection}{AADC}{22}{section*.7}
+\contentsline {subsubsection}{AADD}{24}{section*.8}
+\contentsfinish 

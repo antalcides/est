@@ -1,0 +1,1753 @@
+\chapter{Distribuciones}\index{Distribuciones especiales}
+
+\PartialToc
+
+
+\section*{Introducción}
+
+Para realizar predicciones en estadística es necesario establecer
+un modelo probabilístico y para ello hay que realizar algo más que
+un histograma una tabulación o una fórmula para representar una variable
+aleatoria ya que que con frecuencia , las observaciones que se generan
+en diferentes experimentos estadísticos presentan el mismo comportamiento
+, por lo que las variables aleatorias asociadas a estos experimentos
+pueden describirse por la misma función de distribucíon ,ya sea discreta
+o continua, por esto a continuación presentaremos las funciones de
+distribucción más importantes.
+
+
+\section{Algunas distribuciones discretas importantes}
+
+
+\subsection{Distribución uniforme}
+
+\index{Distribución!Uniforme discreta}
+
+Esta distribución de probabilidad discreta es la más sencilla de todas
+y es aquella para la cual la variable aleatoria asociada a ella asume
+cada uno de sus valores con idéntica probabilidad es decir
+
+\begin{defi}{}{} Sea $X$ una variable aleatoria que asume los valores
+\\
+$x_{1},x_{2},x_{3},\cdots x_{k}$, con iguales probabilidades, entonces
+\[
+f\left(x,k\right)=\left\{ \begin{array}{ccc}
+\frac{1}{k} & si & x=x_{1},x_{2},x_{3},\cdots x_{k}\\
+0 &  & \text{si no}
+\end{array}\right.
+\]
+
+
+\end{defi}
+
+\begin{teo}{}{} Sea $X$una v.a discreta con distribución de probabilidad
+uniforme, entonces 
+\begin{align*}
+\mu & =E\left(X\right)=\frac{\sum_{i=1}^{k}x_{i}}{k}\\
+\sigma^{2} & =V\left(X\right)=\frac{\sum_{i=1}^{k}(x_{i}-\mu)^{2}}{k}
+\end{align*}
+y se denota $\ X\leadsto\mathbb{U}_{d}\left(\mu,\sigma^{2}\right)$
+\end{teo}
+
+\begin{ejemplo}[] Se selecciona a un empleado de un grupo de 10 para
+supervisar un cierto proyecto, escogiendo aleatoriamente una placa
+de una caja que contiene 10 placas numeradas del 1 al 10. Encuentre
+la función de probabilidad de $X$ que representa el número de la
+placa que se saca y
+\begin{enumerate}
+\item ¿Cuál es la probabilidad de que el número que se saque sea menor que
+4 ?
+
+\begin{enumerate}
+\item Encuentre la media y la varianza de $X$
+
+
+Como cada placa tiene la misma posibilidad de salir entonces $X$
+$\leadsto\mathbb{B}_{d}\left(\mu,\sigma^{2}\right)$ la cual es 
+\[
+f\left(x,10\right)=\left\{ \begin{array}{ccc}
+\frac{1}{10} & si & x=1,2,3,\cdots10\\
+0 &  & \text{si no}
+\end{array}\right.
+\]
+
+
+\end{enumerate}
+\end{enumerate}
+\end{ejemplo}\begin{solucion}
+\begin{enumerate}
+\item $P\left(4\geq X\right)=\sum_{i=1}^{3}f\left(x_{i}\right)=\left(1+1+1\right)\frac{1}{10}$=$\frac{3}{10}$
+
+\begin{enumerate}
+\item $E\left(X\right)=\frac{\sum_{i=1}^{10}x_{i}}{10}$=$\frac{11}{2},V\left(X\right)=\frac{\sum_{i=1}^{10}\left(x_{i}-5.5\right)^{2}}{10}$
+= $8.\,\allowbreak25$ 
+\end{enumerate}
+\end{enumerate}
+\end{solucion} 
+
+
+\subsection{\index{Distribución!De Bernoulli}Distribución de Bernoulli}
+
+Si realizamos un experimento una sola vez y observamos si cierto suceso
+ocurre o no decimos que este experimento es de Bernoulli y decimos
+que la variable aleatoria $X$ la podemos definir 
+\[
+X=\left\{ \begin{array}{ccc}
+0 & si & \text{no ocurre el suceso}\\
+1 & si & \text{el suceso ocurre}
+\end{array}\right.
+\]
+y su función de probabilidad 
+\[
+f\left(x,p\right)=\left\{ \begin{array}{ccc}
+q & si & x=0\\
+p & si & x=1\\
+0 &  & \text{en otro caso}
+\end{array}\right.
+\]
+y su función de distribución es 
+\[
+F\left(x,p\right)=\left\{ \begin{array}{ccc}
+0 & si & x<0\\
+q & si & 1>x\geq0\\
+1 & si & x\geq1
+\end{array}\right.
+\]
+En el ejemplo 4.23 se determinó que $E\left(X\right)=p$ y $V\left(X\right)=pq$
+en el ejemplo 4.27 una variable de Bernoulli con media $p$ y varianza
+$pq$ se denota $X\leadsto\mathbb{B}\left(p,pq\right)$
+
+
+\subsection{Distribución binomial}
+
+\index{Distribución!Binomial}
+
+Se dice que una variable aleatoria $X$ tiene una distribución binomial
+de parámetros $n,p$ si $X=\sum_{i=1}^{n}X_{i}$ donde cada $X_{i}\leadsto\mathbb{B}\left(p,pq\right)$
+y se denota $B\left(np,npq\right)$
+
+\begin{defi}{}{} Supóngase que se realiza un experimento de Bernoulli
+$n$ veces , donde en todas ellas, la probabilidad de éxito es la
+misma ($p$), y queremos calcular el número de éxitos, $X$ obtenidos
+en el total de $n$ pruebas, entonces su función de probabilidad es
+\[
+f\left(x\right)=\left\{ \begin{array}{ccc}
+\binom{n}{x}p^{x}q^{n-x} & si & x=0,1,2,\cdots,n\\
+0 &  & \text{en otro caso}
+\end{array}\right.
+\]
+
+
+\begin{center}
+\includegraphics[scale=0.4]{84_home_antalcides_Escritorio_est_libros-est_pdf_fig51.pdf}\\
+ figura 5.1 distribución binomial 
+\par\end{center}
+
+Por tanto, su función de distribución es 
+\[
+F\left(x\right)=\left\{ \begin{array}{ccc}
+0 & si & x<0\\
+\sum_{k=0}^{[x]}\binom{n}{k}p^{k}q^{n-k} & si & n\geq x\geq0\\
+1 & si & x\geq n
+\end{array}\right.
+\]
+La esperanza y la varianza se calcularon en los ejemplos 4.23 y 4.27
+\[
+E\left(X\right)=np,V\left(X\right)=npq
+\]
+
+
+\end{defi}
+
+\begin{ejemplo}[] Supóngase que la probabilidad de que un cierto
+experimento tenga éxito es 0.4 y sea X el número de éxitos que se
+obtienen en 15 realizaciones independientes del experimento. Utilice
+la tabla de la distribución binomial para determinar el valor P$\left(9\geq X\geq6\right)$\end{ejemplo}\begin{solucion} 
+
+Tenemos que $X$ tiene una distribución binomial con $p=0.4$ y $n=15$
+por tanto se busca en la tabla estos parámetros y se suman los valores
+entre 6 y 9 
+\begin{align*}
+P\left(9\geq X\geq6\right) & =0.2066+0.1771+0.1181+0.0612\\
+ & =0.\,\allowbreak563
+\end{align*}
+
+
+\end{solucion}\begin{ejemplo}[]
+
+Un cierto sistema electrónico contiene diez componentes. Supóngase
+que la probabilidad de que un componente individual falle es 0.2 y
+que los componentes fallan independientemente unos de otros. \ Dado
+de que al menos uno de los componentes ha fallado .¿Cuál es la probabilidad
+de que fallen al menos dos de los componentes?\end{ejemplo}
+
+\begin{solucion} $p=0.2$ y $n=9$ Entonces $P\left(1\geq X\geq0\right)=0.4362$
+\end{solucion} 
+
+
+\subsection{Distribución geométrica}
+
+\index{Distribución!Geométrica}
+
+Consideremos una sucesión de v.a independientes de Bernoulli 
+\begin{align*}
+ & X_{1},X_{2},X_{3},\cdots\\
+donde\text{\quad}X_{i} & \leadsto B\left(np,npq\right)\quad\forall i=1,2,3,\cdots
+\end{align*}
+Una v.a. $X$ tiene una distribución geométrica o de fracaso , si
+esta es la suma del número de fracasos obtenidos hasta la aparición
+del primer éxito en la sucesión $\{X_{i}\}_{i}$
+\[
+\begin{array}{ccccccc}
+X_{1} & X_{2} & X_{3} & \cdots &  & X & f\\
+\downarrow & \downarrow & \downarrow & \vdots &  & \downarrow & \downarrow\\
+1 & 0 & 0 & \cdots & \Longrightarrow & 0 & f\left(0\right)=p\\
+0 & 1 & 0 & \cdots & \Longrightarrow & 1 & f\left(1\right)=qp\\
+0 & 0 & 1 & \cdots & \Longrightarrow & 2 & f\left(2\right)=qqp\\
+\vdots & \vdots & \vdots & \vdots & \vdots & \vdots & \vdots
+\end{array}
+\]
+Siguiendo este proceso se obtiene que la función de probabilidad es
+\[
+f\left(x\right)=\left\{ \begin{array}{ccc}
+pq^{x} & si & x=0,1,2,\cdots\\
+0 &  & \text{ en otro caso}
+\end{array}\right.
+\]
+Tenemos que 
+\begin{align*}
+\sum_{k=0}^{\infty}f\left(k\right) & =\sum_{k=0}^{\infty}pq^{k}=\\
+p\sum_{k=0}^{\infty}q^{k} & =p\frac{1}{1-q}=1
+\end{align*}
+ya que es una serie geométrica por ser 1$\geq q\geq0$, por lo que
+nos queda determinar su esperanza y su varianza
+\begin{align*}
+E\left(X\right) & =p\sum_{k=0}^{\infty}kq^{k}=\frac{p}{\left(p-1\right)^{2}}=\frac{pq}{\left(q-1\right)^{2}}=\frac{q}{p}\\
+E\left(X^{2}\right) & =p\sum_{k=0}^{\infty}k^{2}q^{k}=p\frac{q^{2}+q}{\left(1-q\right)^{3}}=\frac{q\left(q+1\right)}{p^{2}}\\
+V\left(X\right) & =\frac{q\left(q+1\right)}{p^{2}}-\left(\frac{q}{p}\right)^{2}=\frac{q}{p^{2}}
+\end{align*}
+
+
+\begin{ejemplo}[] Un matrimonio quiere tener una hija, y por ello
+deciden tener hijos hasta el nacimiento de una hija. Calcular la probabilidad
+de que una pareja acabe teniendo tres hijos o más
+
+\end{ejemplo} 
+
+\begin{solucion}Vamos a suponer que la probabilidad de tener una
+niña es de $\frac{2}{3}.$ Sea $X$ el número de hijos varones que
+tienen antes de tener una niña. por lo tanto $X\leadsto G\left(\frac{1}{2},\frac{3}{4}\right),entonces$
+\begin{align*}
+P\left(X\geq2\right) & =1-P\left(X<2\right)\\
+ & =1-p-qp\\
+ & =1-\frac{2}{3}-\frac{2}{9}=\frac{1}{9}
+\end{align*}
+
+
+\end{solucion} 
+
+
+\subsection{Distribución hipergeométrica}
+
+\index{Distribución!Hipergeométrica}
+
+Cuando El interés que se tiene es el de determinar la probabilidad
+de seleccionar $x$ éxitos de los $k$ posibles resultados o artículos
+considerados éxitos donde hay$\ n-x$ resultados considerados fracasos
+de los $N-k$ posibles resultados, entonces se realiza un experimento
+llamado hipergeométrico.
+
+Un experimento hipergeométrico es aquel que sigue los siguientes pasos
+\begin{enumerate}
+\item Se tiene una muestra aleatoria de tamaño $n$ se selecciona sin reemplazo
+un total de $N$ resultados o artículos
+\item $k$ artículos del total de $N$ pueden clasificarse como éxitos y
+$N-k$ como fracasos. 
+\end{enumerate}
+Entonces el número $X$ de éxitos en un experimento hipergeométrico
+recibe el nombre de variable aleatoria hipergeométrica y la distribucón
+de probabilidad se llama distribución hipergeométrica
+
+\begin{defi}{}{} La distribución de probabilidad de la variable aleatoria
+hipergeométrica $X$, el número de éxitos en una muestra aleatoria
+de tamaño $n$ seleccionada de $N$ resultados posibles, de los cuales
+$k$ son considerados éxitos y $N-k$ como fracasos es 
+\[
+f\left(x\right)=\left\{ \begin{array}{ccc}
+\frac{\binom{k}{x}\binom{N-k}{n-x}}{\binom{N}{n}} & si & x=1,2,3,\cdots,n\\
+0 &  & \text{ en otro caso}
+\end{array}\right.
+\]
+La media y la varianza \ de una variable hipergeométrica son 
+\begin{align*}
+E\left(X\right) & =\frac{nk}{N}\\
+V\left(X\right) & =\frac{N-n}{N-1}n\frac{k}{N}\left(1-\frac{k}{N}\right)
+\end{align*}
+
+
+\end{defi}
+
+Cuando $N\longrightarrow\infty$ observamos que $HG(N,n,p)\longrightarrow B\left(np,npq\right)$
+
+$E\left(X\right)=np$ y $V\left(X\right)=npq\frac{N-n}{N-1}$ el cual
+no es la misma varianza de la binomial por lo que al factor $\frac{N-n}{N-1}$
+se le llama de corrección para la población finita
+
+\begin{ejemplo}[] En un departamento de inspección de envíos, se
+reciben en forma periódica lotes de ejes de bombas. Los lotes contienen
+100 unidades y el siguiente plan de muestreo de aceptación se utiliza.
+Se selecciona una muestra aleatoria de 10 unidades sin reemplazo.
+El lote se acepta si la muestra no tiene más de un artículo defectuoso
+: supóngase que se recibe un lote si éxito una probabilidad de que
+un artículo sea defectuoso es 0.05 .¿Cuál es la probabilidad de que
+sea aceptado?
+
+\end{ejemplo} 
+
+\begin{solucion}Tenemos que determinar $P\left(1\geq X\right)$ entonces
+$k=0.\allowbreak05\ast100$ 
+\[
+P\left(1\geq X\right)=\sum_{x=0}^{1}\frac{\binom{5}{x}\binom{95}{10-x}}{\binom{100}{10}}=0.\,\allowbreak923\,14:
+\]
+
+
+\end{solucion} 
+
+
+\subsection{Distribucción de Poisson}
+
+\index{Distribucion!De Poisson}
+
+Sea $X$ una variable aleatoria con una distribución discreta y supóngase
+que el valor de $X$ debe ser un entero no negativo. Se dice que $X$
+tiene una distribución de Poisson con media $\lambda$ si la f.p de
+$X$ es 
+\[
+f\left(x\right)=\left\{ \begin{array}{ccc}
+\frac{e^{-\lambda}\lambda^{x}}{x!} & si & x=1,2,3,\cdots\\
+0 &  & \text{ en otro caso}
+\end{array}\right.
+\]
+del cálculo tenemos que $e^{\lambda}=\sum_{x=0}^{\infty}\frac{\lambda^{x}}{x!}$
+por tanto $\sum_{x=0}^{\infty}f\left(x\right)=\sum_{x=0}^{\infty}\frac{e^{-\lambda}\lambda^{x}}{x!}=e^{-\lambda}e^{\lambda}=1$\\
+$E\left(X\right)=\sum_{x=0}^{\infty}x\frac{e^{-\lambda}\lambda^{x}}{x!}=\lambda\sum_{x=0}^{\infty}\frac{e^{-\lambda}\lambda^{x-1}}{(x-1)!}=\lambda$\\
+se deja como ejercicio comprobar que \\
+E$\left(X\left(X-1\right)\right)=\lambda^{2}=E\left(X^{2}\right)-\lambda$\\
+
+
+V$\left(X\right)=\lambda$
+
+Se denota $X\leadsto P\left(\lambda,\lambda\right)$
+
+\begin{ejemplo}[] Cierta enfermedad tiene una probabilidad muy baja
+de ocurrir, $p=10^{-6}$. Calcular la probabilidad de que en una ciudad
+con $500000$ habitantes haya más de 3 personas con dicha enfermedad.
+Calcular el número de habitantes que la padecen.
+
+\end{ejemplo}
+
+\begin{solucion}Si consideramos la v.a $X$ que contabiliza el número
+de personas que padecen la enfermedad, es claro que sigue un modelo
+binomial, pero que puede ser aproximado por un modelo de Poisson,
+tal que $\lambda=np=5,$ es decir $X\leadsto P\left(5,5\right),entonces$
+\begin{align*}
+P\left(X>3\right) & =1-P\left(3\geq X\right)\\
+ & =1-\sum_{i=0}^{3}\frac{\exp\left(-5\right)5^{i}}{i!}=1-\frac{118}{3}e^{-5}\\
+ & =0.\,\allowbreak734\,97
+\end{align*}
+
+
+\end{solucion}
+
+
+\subsubsection{Proceso de poisson}
+
+Al definir un proceso de Poisson, consideramos una colección de sucesos
+relativos al tiempo, las cuales generalmente se les denomina llegadas.\\
+Al escoger una variable aleatoria $X$ de interés como el número de
+llegadas que ocurren en un intervalo de tiempo $[0,t]$ , obtenemos
+una variable discretizada con $R_{X}=\{0,1,2,\cdots\}$ y que para
+determinar su distribución hay que suponer dos condiciones las cuales
+solo tienen sustento empírico \\
+La primera condición es que el número de llegadas durante un intervalo
+de tiempo son representadas por variables aleatorias independientes,
+la segunda es que exista una constante $c>0$ tal que cumpla los siguientes
+postulados
+\begin{enumerate}
+\item La probabilidad de que ocurrirá con exactitud una llegada en un intervalo
+con duración $\triangle t$, es aproximadamente $c\triangle t$. donde
+$c$ se le denomina tasa de llegada media
+\item La probabilidad de que ocurrirá exactamente cero llegadas en el intervalo
+es aproximadamente $1-c\Delta t$
+\item La probabilidad de que ocurra dos o más llegadas en le intervalo es
+igual a una cantidad $\circ\left(\Delta t\right),$ donde $\circ$
+es una función de $t$ con la propiedad que 
+\[
+\lim_{t\longrightarrow\infty}\frac{\circ\left(t\right)}{t}=0
+\]
+
+\end{enumerate}
+Considerando estos supuestos entonces 
+\[
+\lambda=c\Delta t\text{ y }X\leadsto P\left(c\Delta t,c\Delta t\right)
+\]
+
+
+\begin{ejemplo}[] Supóngase que un comerciante determina que el número
+de pedidos para un cierto aparato doméstico en un periodo de tiempo
+particular tiene una distribución de Poisson con parámetro $\lambda.$
+Al le gustaría determinar el nivel de existencias $a$ para el principio
+del periodo de manera que haya una probabilidad de al menos 0.95 de
+surtir a todos los clientes que pidan el aparato durante el periodo,
+pues no desea devolver pedidos ni volver a surtir el almacén durante
+ese periodo.\end{ejemplo}
+
+\begin{solucion} Si $X$ representa el número de pedidos, entonces
+\[
+P\left(a\geq X\right)\geq0.95\Longleftrightarrow0.5\geq P\left(X>a\right)
+\]
+por lo tanto 
+\[
+0.5\geq\sum_{x=\left(a+1\right)}^{\infty}\frac{e^{-\lambda}\lambda^{x}}{x!}
+\]
+De acuerdo con la tabla $7=a+1\Longrightarrow a=6$ \end{solucion} 
+
+\begin{ejemplo}[] Un dispositivo electrónico de conmutación ocasionalmente
+funciona mal y puede ser necesario reemplazarlo. Se sabe que el dispositivo
+es satisfactorio si, en promedio, no comete más de 0.20 errores por
+hora. Se selecciona un periodo particular de 5 horas como prueba del
+dispositivo. Si no ocurre más de un error, el dispositivo se considera
+satisfactorio.¿Cuál es la probabilidad de que un dispositivo se considere
+insatisfactorio de acuerdo con la prueba?
+
+\end{ejemplo}\begin{solucion} Sea $X$ el número de fallas del dispositivo
+en 5 horas entonces podemos suponer que está variable sigue un proceso
+de Poisson tal que $\lambda=5\left(0.20\right)=1$ entonces 
+\[
+P\left(X\geq1\right)=1-P\left(X<1\right)=0.63
+\]
+
+
+\end{solucion} 
+
+
+\subsection{Distribucción Multinomial}
+
+\index{Distribución!Multinomial}
+
+Supóngase que una población \ contiene artículos de $k\geq2$ tipos
+distintos y que la proporción de artículos del tipo $i$ en la población
+es $p_{i}$, $i=1,2,3,\cdots,k$.Supóngase que $p_{i}>0$ y que $\sum_{i=1}^{k}p_{i}=1.$
+Además, supóngase que es seleccionan al azar con reemplazo $n$ artículos
+de la población y sea $X_{i}$ el número de artículos seleccionados
+que son del tipo $i.$ Se dice entonces que el vector aleatorio $\overrightarrow{X}=\left(X_{1},\cdots,X_{k}\right)$
+tiene una distribución multinomial con parámetro $p\left(p_{1},\cdots,p_{k}\right)$
+es 
+\[
+f\left(\overrightarrow{x}\right)=\left\{ \begin{array}{ccc}
+\frac{n!}{x_{1}!\cdots x_{2}!} & si & x_{1},\cdots x_{k}\in\gz^{+}\\
+0 &  & \text{ si no}
+\end{array}\right.
+\]
+Donde $\sum_{i=1}^{k}x_{i}=n$
+
+
+\subsubsection{Medias, varianzas y covarianzas}
+
+\begin{align*}
+E\left(X_{i}\right) & =np_{i},V\left(X_{i}\right)=np_{i}q_{i}\\
+V\left(X_{i}+X_{j}\right) & =n\left(p_{i}+p_{j}\right)\left(1-p_{i}-p_{j}\right)\\
+cov\left(X_{i},X_{j}\right) & =-np_{i}p_{j}\quad\forall i,j=1,2,\cdots,k
+\end{align*}
+
+
+\begin{ejemplo}[] Se fabican lápices mecánicos por medio de un proceso
+que implica una gran cantidad de mano de obra en las operaciones de
+ensamble. Éste es un trabajo altamente repetitivo y hay un pago de
+incentivo. La inspección final ha revelado que el 85\% del producto
+es bueno y el 10\% defectuoso pero que puede reelaborarse, y el 5\%
+es defectuoso y se desecha. Estos porsentajes se mantienen constantes
+todo el tiempo. Se selecciona una muestra aleatoria de 20 artículos
+. Si se designa 
+\begin{align*}
+X_{1} & =\text{ número de artículos buenos}\\
+X_{2} & =\text{número de artículos defectuosos que se pueden rescatar}\\
+X_{3} & =\text{número de artículos que se desechan}
+\end{align*}
+Determinar la probabilidad que 18 sean buenos y que 2 se puedan rescatar
+\end{ejemplo}
+
+\begin{solucion} Nos piden la probabilidad 
+\begin{align*}
+P\left(18,2,0\right) & =\frac{20!}{\left(18!\right)\left(2!\right)\left(0!\right)}\left(0.85\right)^{18}\left(0.1\right)^{2}\left(0.05\right)^{0}\\
+ & =0.\,\allowbreak101\,93
+\end{align*}
+
+
+\end{solucion}
+
+
+\section{Algunas distribuciones continuas}
+
+
+\subsection{Distribución uniforme}
+
+Se dice que una v.a $X$ tiene una distribución uniforme continua
+en un intervalo $[a,b]$ si su función densidad es 
+\[
+f\left(x\right)=\left\{ \begin{array}{ccc}
+\frac{1}{b-a} & si & x\in\lbrack a,b]\\
+0 &  & \text{en otro caso}
+\end{array}\right.
+\]
+y se denota $X\leadsto U_{c}\left(\mu,\sigma^{2}\right)$ donde $\mu$
+es la media y $\sigma^{2}$ es la varianza. Se puede determinar su
+función de distribución como 
+\[
+F\left(x\right)=\left\{ \begin{array}{ccc}
+0 & si & x<a\\
+\frac{x-a}{b-a} & si & x\in\lbrack a,b]\\
+1 & si & x\geq b
+\end{array}\right.
+\]
+Es fácil calcular su media y su varianza se le deja como ejercicio
+al lector 
+\begin{align*}
+E\left(X\right) & =\frac{b+a}{2}\\
+V\left(X\right) & =\frac{\left(b-a\right)^{2}}{12}
+\end{align*}
+
+
+\begin{center}
+\includegraphics[scale=0.4]{85_home_antalcides_Escritorio_est_libros-est_pdf_Img502.pdf}\\
+ Distribución uniforme 
+\par\end{center}
+
+\begin{ejemplo}[] Se elige un punto al azar en el intervalo {[}0,10{]}.
+Supóngase que deseamos encontrar la probabilidad de que el punto esté
+entre 1.5 y 3.5 si la función de densidad de la v.a aleatoria X es
+\[
+f\left(x\right)=\left\{ \begin{array}{ccc}
+\frac{1}{10} & si & x\in\lbrack0,10]\\
+0 &  & \text{si no}
+\end{array}\right.
+\]
+Tenemos que 
+\[
+P\left(3,5\geq X\geq1,5\right)=\frac{2}{10}
+\]
+
+
+\end{ejemplo}
+
+
+\subsection{Distribución exponencial}
+
+\index{Distribución!Exponencial}
+
+La distribución exponencial es el equivalente continuo por as\'{i}
+decirlo de la distribución geométrica discreta, Esta describe un proceso
+en el que.\\
+
+
+Nos interesa saber el tiempo hasta que ocurre determinado evento,
+sabiendo que el tiempo que pueda ocurrir desde cualquier instante
+dado $t$, hasta que ello ocurra en un instante $t_{f}$, no depende
+del tiempo trascurrido anteriormente en el que no pasó nada
+
+Si $X$ es una v.a se dice que tiene una distribución exponencial
+si 
+\[
+f\left(x\right)=\left\{ \begin{array}{ccc}
+\lambda e^{-\lambda x} & si & x>0\\
+0 &  & \text{si no}
+\end{array}\right.
+\]
+Y su función de distribución es 
+\[
+F\left(x\right)=\left\{ \begin{array}{ccc}
+1-e^{-\lambda x} & si & x>0\\
+0 &  & \text{si no}
+\end{array}\right.
+\]
+Su esperanza y su varianza son 
+\begin{align*}
+E\left(X\right) & =\frac{1}{\lambda}\\
+V\left(X\right) & =\frac{1}{\lambda^{2}}
+\end{align*}
+
+
+\begin{center}
+\includegraphics[scale=0.4]{86_home_antalcides_Escritorio_est_libros-est_pdf_Img503.pdf}\\
+ Distribución exponencial 
+\par\end{center}
+
+\begin{ejemplo}[] Se sabe que un componente electrónico tiene una
+vida útil representada por una densidad exponencial con tasa de falla
+de 10$^{-5}$ fallas por hora.Determinar la fracción de tales componentes
+que podrían fallar antes de la vida media
+
+\end{ejemplo}\begin{solucion} Sea $\ T$ el tiempo que tarda en
+dañarse el componente, entonces $\lambda=10^{5}$
+\[
+P\left(\frac{1}{\lambda}\geq T\right)=\int_{0}^{\frac{1}{\lambda}}\lambda e^{-\lambda x}dx=1-e^{-1}
+\]
+
+
+\end{solucion} 
+
+\begin{ejemplo}[] Se ha comprado que el tiempo de vida de cierto
+tipo de marca pasos sigue una distribución exponencial con media de
+16 años. ¿uál es la probabilidad de que a una persona a la que se
+le ha implantado este marca paso se le deba reimplantar otro antes
+de 20 años?. Si el marca paso lleva funcionando correctamente 5 años
+en un paciente, ¿Cuál es la probabilidad de que haya que cambiarlo
+antes de 25 años?.
+
+\end{ejemplo}\begin{solucion} Sea $T$ la variable aleatoria que
+mide la duración de un marca pasos en una persona. Tenemos que $\lambda=\frac{1}{16},$
+entonces 
+\[
+P\left(20\geq T\right)=\int_{0}^{20}f\left(t\right)dt=F\left(20\right)=0.7135
+\]
+ahora tenemos 
+\[
+P\left(25\geq T|T\geq5\right)=\frac{P\left(25\geq T\geq5\right)}{P\left(T\geq5\right)}
+\]
+Por lo tanto 
+\begin{align*}
+P\left(25\geq T\geq5\right) & =F\left(25\right)-F\left(0\right)=0.522\\
+P\left(T\geq5\right) & =F\left(+\infty\right)-F\left(5\right)=0.7316\\
+P\left(25\geq T|T\geq5\right) & =0.7135
+\end{align*}
+
+
+\end{solucion} 
+
+
+\subsection{Distribución normal o Gaussiana}
+
+\index{Distribución!Normal}\index{Distribución!Gaussiana}
+
+Se dice que una v.a tiene una distribución normal de parámetros $\mu$
+y $\sigma^{2}$ lo que se denota $X\leadsto N\left(\mu,\sigma^{2}\right)$
+si su función de densidad es 
+\[
+f\left(x\right)=\begin{array}{ccc}
+\frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right)^{2}} & si & x\in\rz\end{array}
+\]
+\[
+F\left(x\right)=P\left(x\geq X\right)=\int_{-\infty}^{x}f\left(x\right)dx
+\]
+La media y la varianza son 
+\begin{align*}
+E\left(X\right) & =\mu\\
+V\left(X\right) & =\sigma^{2}
+\end{align*}
+
+\begin{itemize}
+\item Estas variables tienen una propiedad importante que se llama reproductividad,
+es decir la suma de variables aleatorias \ e independientes normales
+también es normal
+\item Una propiedad de esta distribución es que es simétrica con respecto
+a la media
+\item Si $X\leadsto N\left(0,1\right)$ se dice que $X$ tiene una distribución
+normal estándar y su f.d se denota $\varphi\left(X\right)$ y su función
+de distribución $\Phi\left(X\right)$
+\item Los puntos de inflexión están en $x=\mu\pm\sigma$
+\item 
+\[
+\lim_{x\longrightarrow+\infty}f\left(x\right)=0\;\;\text{y}\;\;\lim_{x\longrightarrow-\infty}f\left(x\right)=0
+\]
+
+
+
+\begin{center}
+\includegraphics[scale=0.4]{87_home_antalcides_Escritorio_est_libros-est_pdf_img504.pdf}\\
+\[
+Distribuci\acute{o}n\text{ Normal}
+\]
+
+\par\end{center}
+
+
+\begin{figure}[h]
+\centering{}\includegraphics[scale=0.4]{88_home_antalcides_Escritorio_est_libros-est_pdf_img5051.pdf}
+\caption{Distribuciones Normales con igual varianza y diferente esperanza}
+\end{figure}
+
+
+
+\begin{figure}[hptb]
+\centering{}\includegraphics[scale=0.4]{89_home_antalcides_Escritorio_est_libros-est_pdf_img506.pdf}\caption{Distribuciones Normales con igual media pero diferente varianza}
+\end{figure}
+
+
+\end{itemize}
+\begin{proposicion}{} Sean $a,b\in\rz$, entonces 
+\begin{align*}
+X & \leadsto N\left(\mu,\sigma^{2}\right)\Longrightarrow\\
+Y & =aX+b\leadsto N\left(a\mu+b,\left(a\sigma\right)^{2}\right)
+\end{align*}
+Este resultado lo utilizaremos para estandarizar una variable normal\\
+Si $X\leadsto N\left(\mu,\sigma^{2}\right)$ entonces $Z=\frac{X-\mu}{\sigma}\leadsto N\left(0,1\right)$
+\end{proposicion}
+
+\begin{ejemplo}[] Supongamos que cierto fenómeno pueda ser representado
+mediante una v.a. aleatoria $X\leadsto N\left(45,81\right)$, y queremos
+calcular la probabilidad de que $X$ tome un valor entre 39 y 48,
+
+\end{ejemplo}\begin{solucion} Para resolver este problema debemos
+usar la tabla que aparece al final del capítulo, pero antes hay que
+estándarizar la variable de tal manera que 
+\begin{align*}
+Z & =\frac{X-\mu}{\sigma}\\
+ & =\frac{X-45}{\sqrt{81}}
+\end{align*}
+de modo que si \\
+$48\geq X\geq39\Longleftrightarrow\frac{1}{3}\geq\frac{X-45}{9}\geq\frac{-2}{3},$
+entonces \\
+$P\left(48\geq X\geq39\right)=\Phi\left(\frac{1}{3}\geq Z\geq\frac{-2}{3}\right)=0,378$
+\end{solucion} 
+
+\begin{center}
+\includegraphics[scale=0.4]{90_home_antalcides_Escritorio_est_libros-est_pdf_zd1cd.pdf}\\
+\begin{tabular}{c}
+Cola de la derecha\tabularnewline
+$Z\leq\frac{1}{3}$\tabularnewline
+\end{tabular}
+\par\end{center}
+
+\begin{ejemplo}[] Sugún un estudio de la altura de los varones de
+cierta ciudad es una variable aleatoria $X$, que podemos considerar
+que se distribuye normalmente con media 175cm y varianza 10cm. Determinar
+un intervalo para el cual el 50\% de los habitantes de esa ciudad
+están comprendidos en él.
+
+\end{ejemplo}\begin{solucion} Existen infinitas soluciones para
+este problema en la gráficas siguientes podemos analizar tres de las
+tantas posibilidades 
+
+\begin{center}
+\includegraphics[scale=0.4]{91_home_antalcides_Escritorio_est_libros-est_pdf_Img507.pdf}\\
+ fig 5.07 
+\par\end{center}
+
+$X$ $\geq x_{0.5}$ y que $x_{0.75}\geq X\geq x_{0.25}$ en los dos
+casos hay que estandarizar las variables, en el primer caso es obvio
+que el intervalo es $(-\infty,175]$ en el segundo caso usaremos la
+tabla para determinar 
+\begin{align*}
+z_{0.75} & =0,675\\
+ & =\frac{x_{0.75}-175}{10}\Longrightarrow\\
+x_{0.75} & =181.75\\
+z_{0.25} & =-0.675\\
+ & =\frac{x_{0.25}-175}{10}\Longrightarrow\\
+x_{0.25} & =168,25
+\end{align*}
+por lo que el intervalo es {[}168.5;181.75{]} de los dos resultados
+escogemos el segundo por ser de menor longitud y ser simétrico con
+respecto a la media\newpage{}\end{solucion}
+
+
+\section{Distribuci{ó}n Gamma}
+
+Muchos problemas de estad{í}stica se resuelven con la distribuci{ó}n
+Normal como estudiaremos a partir del pr{ó}ximo cap{í}tulo, pero
+en ocasiones los problemas nos indican que la distribuci{ó}n de
+la variable de inter{é}s no es acampanada y sim{é}trica , por
+lo que tenemos que usar distribuciones sesgadas y estas son precisamente
+las familias de distribuciones Gamma y Beta.
+
+Antes de definir la distribuci{ó}n Gamma definiremos una funci{ó}n
+muy utilizada en matem{á}ticas llamada funci{ó}n Gamma y de la
+cual la distribuci{ó}n Gamma toma su nombre.
+
+\begin{defi}{}{} {[}Funci{ó}n Gamma{]}Para cualquier positivo $\alpha$,
+el valor $\Gamma\left(\alpha\right)$ se define por la integral
+\begin{equation}
+\Gamma\left(\alpha\right)=\int_{0}^{\infty}x^{\alpha-1}e^{-x}dx,
+\end{equation}
+se puede demostrar que esta integral existe para cualquier $\alpha>0$
+\end{defi}
+
+
+\subsection{Propiedades de la funci{ó}n Gamma}
+
+\begin{teo}{}{} Si $\alpha>1$, entonces $\Gamma\left(\alpha\right)=\left(\alpha-1\right)\Gamma\left(\alpha-1\right)$
+\end{teo}
+
+\begin{lema}{}{} Si $n$ es un entero positivo se tiene que $\Gamma\left(n\right)=\left(n-1\right)!$
+, $\Gamma\left(n+\dfrac{1}{2}\right)=\left(n-\dfrac{1}{2}\right)\left(n-\dfrac{3}{2}\right)\left(n-\dfrac{5}{2}\right)\cdots\left(\dfrac{1}{2}\right)\Gamma\left(\dfrac{1}{2}\right)$
+\end{lema}
+
+\begin{lema}{}{} $\Gamma\left(\dfrac{1}{2}\right)=\sqrt{\pi}$ \end{lema}
+
+\begin{defi}{}{} {[}Distribuci{ó}n Gamma{]}Sea $X$ una variable
+aleatoria continua se dice que tiene una distribuci{ó}n Gamma Si
+su $f.d.p$ es 
+\begin{equation}
+f\left(x\right)=\left\{ \begin{array}{cc}
+\dfrac{\beta^{\alpha}}{\Gamma\left(\alpha\right)}x^{\alpha-1}e^{-\beta x} & \text{para }x>0\\
+0 & \text{para }x\leq0
+\end{array}\right.
+\end{equation}
+
+
+\end{defi}
+
+Calculemos la esperanza y la varianza de $X$Antes de seguir con esta
+distribuci{ó}n definiremos una funci{ó}n llamada generadora de
+momentos
+
+\begin{defi}{}{} Sea $X$ una variable aleatoria la funci{ó}n generadora
+de momentos se define 
+\begin{equation}
+\psi\left(t\right)=E\left(e^{tX}\right),\text{ para cada real }t
+\end{equation}
+
+
+\end{defi}
+
+resulta que $\psi^{\prime}\left(0\right)=E\left(X\right),$ y en general
+$\psi^{\prime}\left(t\right)$ existe para todos los valores de $t$
+en un intervalo alrededor de $t=0$ y adem{á}s 
+\begin{equation}
+\psi^{\left(n\right)}\left(0\right)=\left[\dfrac{d^{n}}{dt^{n}}E\left(e^{tX}\right)\right]_{t=0}=E\left(X^{n}\right)
+\end{equation}
+De esta forma la funci{ó}n generadora de momentos para nuestro caso
+ser{í}a
+\begin{equation}
+\psi\left(t\right)=\int_{0}^{\infty}e^{tx}f\left(x\right)dx=\dfrac{\beta^{\alpha}}{\Gamma\left(\alpha\right)}\dfrac{\Gamma\left(\alpha\right)}{\left(\beta-t\right)^{\alpha}}=\beta^{\alpha}\left(\beta-t\right)^{-\alpha},\ \ t<\beta
+\end{equation}
+
+
+Determinemos 
+\begin{align}
+E\left(X^{n}\right) & =\int_{0}^{\infty}x^{n}f\left(x\right)dx=\dfrac{\beta^{\alpha}}{\Gamma\left(\alpha\right)}\int_{0}^{\infty}x^{\alpha+n-1}e^{-\beta x}dx\\
+ & =\dfrac{\beta^{\alpha}}{\Gamma\left(\alpha\right)}\dfrac{\Gamma\left(\alpha+n\right)}{\beta^{\alpha+n}}=\dfrac{\Gamma\left(\alpha+n\right)}{\beta^{n}\Gamma\left(\alpha\right)}\nonumber \\
+ & \dfrac{\alpha\left(\alpha+1\right)\left(\alpha+2\right)\cdots\left(\alpha+n-1\right)}{\beta^{n}}\nonumber 
+\end{align}
+es decir 
+\begin{align}
+E\left(X\right) & =\dfrac{\alpha}{\beta},\ \ \ E\left(X^{2}\right)=\dfrac{\alpha\left(\alpha+1\right)}{\beta^{2}}\\
+V\left(X\right) & =\dfrac{\alpha\left(\alpha+1\right)}{\beta^{2}}-\left(\dfrac{\alpha}{\beta}\right)^{2}=\dfrac{\alpha}{\beta^{2}}\nonumber 
+\end{align}
+Si $X$ tiene una distribuci{ó}n Gamma se denota $X\leadsto\Gamma\left(\dfrac{\alpha}{\beta},\dfrac{\alpha}{\beta^{2}}\right)$
+
+\begin{teo}{}{} \label{gamma}Si las variables aleatorias $X_{1},X_{2},\cdots X_{k}$
+son independientes y $X_{i}\leadsto$ $\Gamma\left(\dfrac{\alpha_{i}}{\beta},\dfrac{\alpha_{i}}{\beta^{2}}\right),$
+para todo $i=1,2,3,\cdots,k$ entonces $%TCIMACRO{\dsum\limits _{i=1}^{k}}%
+%BeginExpansion
+{\displaystyle \sum\limits _{i=1}^{k}}%EndExpansion
+X_{i}\leadsto\Gamma\left(\dfrac{%TCIMACRO{\dsum\limits _{i=1}^{k}}%
+%BeginExpansion
+{\displaystyle \sum\limits _{i=1}^{k}}%EndExpansion
+\alpha_{i}}{\beta},\dfrac{%TCIMACRO{\dsum\limits _{i=1}^{k}}%
+%BeginExpansion
+{\displaystyle \sum\limits _{i=1}^{k}}%EndExpansion
+\alpha_{i}}{\beta^{2}}\right)$ \end{teo}
+
+ahora estamos en condiciones de determinar la $f.d.a$ de $X$
+
+\begin{center}
+\begin{equation}
+F\left(x\right)=\left\{ \begin{array}{cc}
+1-\int_{x}^{\infty}\dfrac{\lambda}{\Gamma\left(\alpha\right)}\left(\lambda t\right)^{\alpha-1}e^{-\lambda t}dt & x>0\\
+0 & x\leq0
+\end{array}\right.
+\end{equation}
+si $\alpha$ es un entero positivo esta integral puede integrarse
+por partes obteniendo
+\begin{equation}
+F\left(x\right)=1-\sum_{k=0}^{\alpha-1}\dfrac{e^{-\lambda x}\left(\lambda x\right)^{k}}{k!},\ \ x>0
+\end{equation}
+{%
+\parbox[b]{2.1006in}{%
+\begin{center}
+\includegraphics[scale=0.4]{92_home_antalcides_Escritorio_est_libros-est_pdf_gammaden.pdf}\\
+ $f.d.p$\ de la \ Gamma 
+\par\end{center}%
+}}{%
+\parbox[b]{2.1006in}{%
+\begin{center}
+\includegraphics[scale=0.4]{93_home_antalcides_Escritorio_est_libros-est_pdf_gammadst.pdf}\\
+ $f.d.a~\ \ de~\ la\ $Gamma 
+\par\end{center}%
+}}%EndExpansion
+\par\end{center}
+
+\begin{center}
+que es la suma de los t{é}rminos de Poisson con media $\lambda x$
+con lo que nos queda que podemos utilizar la\ distribuci{ó}n de
+Poisson para calcular la distribuci{ó}n Gamma $f\left(y\right)$
+haciendo $y=\lambda x,\ \beta=\lambda^{-1}$ 
+\par\end{center}
+
+\begin{ejemplo}[] Sea $X$ una variable aleatoria tal que $X\leadsto Exp\left(\dfrac{1}{\lambda},\dfrac{1}{\lambda^{2}}\right),$
+esta variable se puede representar con una Gamma haciendo $\alpha=1,\beta=\lambda^{-1}$
+\end{ejemplo}
+
+\begin{ejemplo}[] Un sistema de control opera como muestra la figura
+. al principio la unidad 1 est{á} en l{í}nea, en tanto que las
+unidades 2 , 3 y 4 est{á}n en espera. Cuando la unidad 1 falla entra
+en funcionamiento la unidad 2 hasta que falla y entonces se activara
+la unidad 3, cuando esta falla entre en funcionamiento la unidad 4
+el interruptor de decisi{ó}n se supone perfecto, por lo que la vida
+del sistema puede representarse como la suma de las vidas de los subsistemas.
+As{í} $X=X_{1}+X_{2}+X_{3}+X_{4}$. Si la vidas de los subsistemas
+son independientes entre s{í}, y cada subsistema tiene una vida
+$X_{j,}\ j=1,2,3,4,$ con $f.d.p$ 
+\begin{equation}
+g\left(x_{j}\right)=\left\{ \begin{array}{cc}
+\dfrac{1}{1000}e^{-\dfrac{x_{j}}{1000}} & x_{j}\geq0\\
+0 & x_{j}<0
+\end{array}\right.
+\end{equation}
+Calcule la probabilidad de que el sistema operar{á} al menos $x$
+horas \end{ejemplo}
+
+\textbf{Soluci{ó}n.} Entonces $X$ tendr{á} una $f.d.p$ Gamma
+con $\alpha=4$ y $\beta=0.001^{-1}$ \ de acuerdo con el teorema\ref{gamma}
+y el ejemplo anterior, decir 
+\begin{equation}
+f\left(x\right)=\left\{ \begin{array}{cc}
+\dfrac{0.001}{3!}\left(0.001x\right)^{3}e^{-0.01x} & x>0\\
+0 & x\leq0
+\end{array}\right.
+\end{equation}
+por lo que nos queda
+\begin{equation}
+P\left(\infty>x\right)=\sum_{k=0}^{3}e^{.0.001x}\left(0.001x\right)^{k}/k!
+\end{equation}
+
+
+\begin{center}
+\includegraphics[scale=0.4]{94_home_antalcides_Escritorio_est_libros-est_pdf_gamma.pdf}
+\par\end{center}
+
+\begin{ejemplo}[] Suponga que el tiempo de reacci{ó}n $X$ a cierto
+est{í}mulo en un individuo seleccionado al azar tiene una distribuci{ó}n
+est{á}ndar $(\beta=1)$ con $\alpha=2$s calcular la probabilidad
+de que el tiempo de reacci{ó}n sea mayor de 4 \end{ejemplo}
+
+\textbf{Soluci{ó}n }entonces tenemos que 
+\begin{equation}
+P\left(X>4\right)=\sum_{k=0}^{1}\dfrac{e^{-4}\left(4\right)^{k}}{k!}=5e^{-4}=9.\,\allowbreak157\,8\times10^{-2}
+\end{equation}
+
+
+\begin{ejercicio}[] Suponga que el tiempo $X$ de supervivencia en
+semanas, de un rat{ó}n macho seleccionado al azar y expuesto a 240
+rads de radiaci{ó}n gamma, tiene una distribuci{ó}n Gamma con
+$\alpha=8$ y $\beta=15.$ El tiempo esperado de supervivencia es
+$E\left(X\right)=\left(8\right)\left(15\right)=120$ semanas y la
+varianza es $V\left(X\right)=\left(8\right)\left(15\right)^{2}semanas^{2}.$
+Cu{á}l es la probabilidad de que un rat{ó}n sobreviva entre 60
+y 120 semanas \end{ejercicio}
+
+Soluci{ó}n tenemos que calcular 
+\begin{align}
+P\left(60<X<120\right) & =P(X<120)-P\left(X<60\right)\nonumber \\
+ & =-\sum_{k=0}^{7}\dfrac{e^{-\left(120/15\right)}\left(120/15\right)^{k}}{k!}+\sum_{k=0}^{7}\dfrac{e^{-\left(60/15\right)}\left(60/15\right)^{k}}{k!}=0.495\,91
+\end{align}
+
+
+\begin{ejercicio}[] para una distribuci{ó}n gamma con $\beta=2$
+y $\alpha=\dfrac{v}{2},$ donde $v$ es un entero positivo est{á}
+distribuci{ó}n as{í} definida se le denomina chi-cuadrada y se
+denota $\chi^{2},$ y su $f.d.p$ es 
+\begin{equation}
+f\left(X^{2}\right)=\left\{ \begin{array}{cc}
+\dfrac{1}{2^{\dfrac{v}{2}\Gamma\left(\dfrac{v}{2}\right)}}x^{\dfrac{v}{2}-1}e^{-\dfrac{x^{2}}{2}} & x>0\\
+0 & x\leq0
+\end{array}\right.
+\end{equation}
+\raisebox{-0.0277in}{%
+\parbox[b]{1.5385in}{%
+\begin{center}
+\includegraphics[scale=0.5]{95_home_antalcides_Escritorio_est_libros-est_pdf_ChiDen.pdf} 
+\par\end{center}%
+}}{%
+\parbox[b]{1.5385in}{%
+\begin{center}
+\includegraphics[width=1.5385in,height=1.2574in]{96_home_antalcides_Escritorio_est_libros-est_pdf_ChiDist.pdf} 
+\par\end{center}%
+}}
+
+\end{ejercicio} 
+
+
+\section{Distribuci{ó}n Gamma}
+
+Muchos problemas de estad{í}stica se resuelven con la distribuci{ó}n
+Normal como estudiaremos a partir del pr{ó}ximo cap{í}tulo, pero
+en ocasiones los problemas nos indican que la distribuci{ó}n de
+la variable de inter{é}s no es acampanada y sim{é}trica , por
+lo que tenemos que usar distribuciones sesgadas y estas son precisamente
+las familias de distribuciones Gamma y Beta.
+
+Antes de definir la distribuci{ó}n Gamma definiremos una funci{ó}n
+muy utilizada en matem{á}ticas llamada funci{ó}n Gamma y de la
+cual la distribuci{ó}n Gamma toma su nombre.
+
+\begin{defi}{}{} {[}Funci{ó}n Gamma{]}Para cualquier positivo $\alpha$,
+el valor $\Gamma\left(\alpha\right)$ se define por la integral
+\begin{equation}
+\Gamma\left(\alpha\right)=\int_{0}^{\infty}x^{\alpha-1}e^{-x}dx,
+\end{equation}
+se puede demostrar que esta integral existe para cualquier $\alpha>0$
+\end{defi}
+
+
+\subsection{Propiedades de la funci{ó}n Gamma}
+
+\begin{teo}{}{} Si $\alpha>1$, entonces $\Gamma\left(\alpha\right)=\left(\alpha-1\right)\Gamma\left(\alpha-1\right)$
+\end{teo}
+
+\begin{lema}{}{} Si $n$ es un entero positivo se tiene que $\Gamma\left(n\right)=\left(n-1\right)!$
+, $\Gamma\left(n+\dfrac{1}{2}\right)=\left(n-\dfrac{1}{2}\right)\left(n-\dfrac{3}{2}\right)\left(n-\dfrac{5}{2}\right)\cdots\left(\dfrac{1}{2}\right)\Gamma\left(\dfrac{1}{2}\right)$
+\end{lema}
+
+\begin{lema}{}{} $\Gamma\left(\dfrac{1}{2}\right)=\sqrt{\pi}$ \end{lema}
+
+\begin{defi}{}{} {[}Distribuci{ó}n Gamma{]}Sea $X$ una variable
+aleatoria continua se dice que tiene una distribuci{ó}n Gamma Si
+su $f.d.p$ es 
+\begin{equation}
+f\left(x\right)=\left\{ \begin{array}{cc}
+\dfrac{\beta^{\alpha}}{\Gamma\left(\alpha\right)}x^{\alpha-1}e^{-\beta x} & \text{para }x>0\\
+0 & \text{para }x\leq0
+\end{array}\right.
+\end{equation}
+
+
+\end{defi}
+
+Calculemos la esperanza y la varianza de $X$Antes de seguir con esta
+distribuci{ó}n definiremos una funci{ó}n llamada generadora de
+momentos
+
+\begin{defi}{}{} Sea $X$ una variable aleatoria la funci{ó}n generadora
+de momentos se define 
+\begin{equation}
+\psi\left(t\right)=E\left(e^{tX}\right),\text{ para cada real }t
+\end{equation}
+
+
+\end{defi}
+
+resulta que $\psi^{\prime}\left(0\right)=E\left(X\right),$ y en general
+$\psi^{\prime}\left(t\right)$ existe para todos los valores de $t$
+en un intervalo alrededor de $t=0$ y adem{á}s 
+\begin{equation}
+\psi^{\left(n\right)}\left(0\right)=\left[\dfrac{d^{n}}{dt^{n}}E\left(e^{tX}\right)\right]_{t=0}=E\left(X^{n}\right)
+\end{equation}
+De esta forma la funci{ó}n generadora de momentos para nuestro caso
+ser{í}a
+\begin{equation}
+\psi\left(t\right)=\int_{0}^{\infty}e^{tx}f\left(x\right)dx=\dfrac{\beta^{\alpha}}{\Gamma\left(\alpha\right)}\dfrac{\Gamma\left(\alpha\right)}{\left(\beta-t\right)^{\alpha}}=\beta^{\alpha}\left(\beta-t\right)^{-\alpha},\ \ t<\beta
+\end{equation}
+
+
+Determinemos 
+\begin{align}
+E\left(X^{n}\right) & =\int_{0}^{\infty}x^{n}f\left(x\right)dx=\dfrac{\beta^{\alpha}}{\Gamma\left(\alpha\right)}\int_{0}^{\infty}x^{\alpha+n-1}e^{-\beta x}dx\\
+ & =\dfrac{\beta^{\alpha}}{\Gamma\left(\alpha\right)}\dfrac{\Gamma\left(\alpha+n\right)}{\beta^{\alpha+n}}=\dfrac{\Gamma\left(\alpha+n\right)}{\beta^{n}\Gamma\left(\alpha\right)}\nonumber \\
+ & \dfrac{\alpha\left(\alpha+1\right)\left(\alpha+2\right)\cdots\left(\alpha+n-1\right)}{\beta^{n}}\nonumber 
+\end{align}
+es decir 
+\begin{align}
+E\left(X\right) & =\dfrac{\alpha}{\beta},\ \ \ E\left(X^{2}\right)=\dfrac{\alpha\left(\alpha+1\right)}{\beta^{2}}\\
+V\left(X\right) & =\dfrac{\alpha\left(\alpha+1\right)}{\beta^{2}}-\left(\dfrac{\alpha}{\beta}\right)^{2}=\dfrac{\alpha}{\beta^{2}}\nonumber 
+\end{align}
+Si $X$ tiene una distribuci{ó}n Gamma se denota $X\leadsto\Gamma\left(\dfrac{\alpha}{\beta},\dfrac{\alpha}{\beta^{2}}\right)$
+
+\begin{teo}{}{} \label{gamma}Si las variables aleatorias $X_{1},X_{2},\cdots X_{k}$
+son independientes y $X_{i}\leadsto$ $\Gamma\left(\dfrac{\alpha_{i}}{\beta},\dfrac{\alpha_{i}}{\beta^{2}}\right),$
+para todo $i=1,2,3,\cdots,k$ entonces $%TCIMACRO{\dsum\limits _{i=1}^{k}}%
+%BeginExpansion
+{\displaystyle \sum\limits _{i=1}^{k}}%EndExpansion
+X_{i}\leadsto\Gamma\left(\dfrac{%TCIMACRO{\dsum\limits _{i=1}^{k}}%
+%BeginExpansion
+{\displaystyle \sum\limits _{i=1}^{k}}%EndExpansion
+\alpha_{i}}{\beta},\dfrac{%TCIMACRO{\dsum\limits _{i=1}^{k}}%
+%BeginExpansion
+{\displaystyle \sum\limits _{i=1}^{k}}%EndExpansion
+\alpha_{i}}{\beta^{2}}\right)$ \end{teo}
+
+ahora estamos en condiciones de determinar la $f.d.a$ de $X$
+
+\begin{center}
+\begin{equation}
+F\left(x\right)=\left\{ \begin{array}{cc}
+1-\int_{x}^{\infty}\dfrac{\lambda}{\Gamma\left(\alpha\right)}\left(\lambda t\right)^{\alpha-1}e^{-\lambda t}dt & x>0\\
+0 & x\leq0
+\end{array}\right.
+\end{equation}
+si $\alpha$ es un entero positivo esta integral puede integrarse
+por partes obteniendo
+\begin{equation}
+F\left(x\right)=1-\sum_{k=0}^{\alpha-1}\dfrac{e^{-\lambda x}\left(\lambda x\right)^{k}}{k!},\ \ x>0
+\end{equation}
+{%
+\parbox[b]{2.1006in}{%
+\begin{center}
+\includegraphics[width=2.1006in,height=2.1006in]{93_home_antalcides_Escritorio_est_libros-est_pdf_gammadst.pdf}\\
+ $f.d.a~\ \ de~\ la\ $Gamma 
+\par\end{center}%
+}}
+\par\end{center}
+
+\begin{center}
+que es la suma de los t{é}rminos de Poisson con media $\lambda x$
+con lo que nos queda que podemos utilizar la\ distribuci{ó}n de
+Poisson para calcular la distribuci{ó}n Gamma $f\left(y\right)$
+haciendo $y=\lambda x,\ \beta=\lambda^{-1}$ 
+\par\end{center}
+
+\begin{ejemplo}[] Sea $X$ una variable aleatoria tal que $X\leadsto Exp\left(\dfrac{1}{\lambda},\dfrac{1}{\lambda^{2}}\right),$
+esta variable se puede representar con una Gamma haciendo $\alpha=1,\beta=\lambda^{-1}$
+\end{ejemplo}
+
+\begin{ejemplo}[] Un sistema de control opera como muestra la figura
+. al principio la unidad 1 est{á} en l{í}nea, en tanto que las
+unidades 2 , 3 y 4 est{á}n en espera. Cuando la unidad 1 falla entra
+en funcionamiento la unidad 2 hasta que falla y entonces se activara
+la unidad 3, cuando esta falla entre en funcionamiento la unidad 4
+el interruptor de decisi{ó}n se supone perfecto, por lo que la vida
+del sistema puede representarse como la suma de las vidas de los subsistemas.
+As{í} $X=X_{1}+X_{2}+X_{3}+X_{4}$. Si la vidas de los subsistemas
+son independientes entre s{í}, y cada subsistema tiene una vida
+$X_{j,}\ j=1,2,3,4,$ con $f.d.p$ 
+\begin{equation}
+g\left(x_{j}\right)=\left\{ \begin{array}{cc}
+\dfrac{1}{1000}e^{-\dfrac{x_{j}}{1000}} & x_{j}\geq0\\
+0 & x_{j}<0
+\end{array}\right.
+\end{equation}
+Calcule la probabilidad de que el sistema operar{á} al menos $x$
+horas \end{ejemplo}
+
+\textbf{Soluci{ó}n.} Entonces $X$ tendr{á} una $f.d.p$ Gamma
+con $\alpha=4$ y $\beta=0.001^{-1}$ \ de acuerdo con el teorema\ref{gamma}
+y el ejemplo anterior, decir 
+\begin{equation}
+f\left(x\right)=\left\{ \begin{array}{cc}
+\dfrac{0.001}{3!}\left(0.001x\right)^{3}e^{-0.01x} & x>0\\
+0 & x\leq0
+\end{array}\right.
+\end{equation}
+por lo que nos queda
+\begin{equation}
+P\left(\infty>x\right)=\sum_{k=0}^{3}e^{.0.001x}\left(0.001x\right)^{k}/k!
+\end{equation}
+
+
+\begin{center}
+\includegraphics[width=3.429in,height=1.7469in]{94_home_antalcides_Escritorio_est_libros-est_pdf_gamma.pdf}
+\par\end{center}
+
+\begin{ejemplo}[] Suponga que el tiempo de reacci{ó}n $X$ a cierto
+est{í}mulo en un individuo seleccionado al azar tiene una distribuci{ó}n
+est{á}ndar $(\beta=1)$ con $\alpha=2$s calcular la probabilidad
+de que el tiempo de reacci{ó}n sea mayor de 4 \end{ejemplo}
+
+\textbf{Soluci{ó}n }entonces tenemos que 
+\begin{equation}
+P\left(X>4\right)=\sum_{k=0}^{1}\dfrac{e^{-4}\left(4\right)^{k}}{k!}=5e^{-4}=9.\,\allowbreak157\,8\times10^{-2}
+\end{equation}
+
+
+\begin{ejercicio}[] Suponga que el tiempo $X$ de supervivencia en
+semanas, de un rat{ó}n macho seleccionado al azar y expuesto a 240
+rads de radiaci{ó}n gamma, tiene una distribuci{ó}n Gamma con
+$\alpha=8$ y $\beta=15.$ El tiempo esperado de supervivencia es
+$E\left(X\right)=\left(8\right)\left(15\right)=120$ semanas y la
+varianza es $V\left(X\right)=\left(8\right)\left(15\right)^{2}semanas^{2}.$
+Cu{á}l es la probabilidad de que un rat{ó}n sobreviva entre 60
+y 120 semanas \end{ejercicio}
+
+Soluci{ó}n tenemos que calcular 
+\begin{align}
+P\left(60<X<120\right) & =P(X<120)-P\left(X<60\right)\nonumber \\
+ & =-\sum_{k=0}^{7}\dfrac{e^{-\left(120/15\right)}\left(120/15\right)^{k}}{k!}+\sum_{k=0}^{7}\dfrac{e^{-\left(60/15\right)}\left(60/15\right)^{k}}{k!}=0.495\,91
+\end{align}
+
+
+\begin{ejercicio}[] para una distribuci{ó}n gamma con $\beta=2$
+y $\alpha=\dfrac{v}{2},$ donde $v$ es un entero positivo est{á}
+distribuci{ó}n as{í} definida se le denomina chi-cuadrada y se
+denota $\chi^{2},$ y su $f.d.p$ es 
+\begin{equation}
+f\left(X^{2}\right)=\left\{ \begin{array}{cc}
+\dfrac{1}{2^{\dfrac{v}{2}\Gamma\left(\dfrac{v}{2}\right)}}x^{\dfrac{v}{2}-1}e^{-\dfrac{x^{2}}{2}} & x>0\\
+0 & x\leq0
+\end{array}\right.
+\end{equation}
+ \end{ejercicio}
+
+\problemas{
+\begin{enumerate}
+\item La presión de aire de un neumático seleccionado al azar, instalado
+en un automóvil nuevo, está normalmente distribuida con valor medio
+de 31 Ib/pulg$^{2}$ y desviación estándar de 2 Ib/pulg$^{2}$
+
+\begin{enumerate}
+\item ¿Cuál es la probabilidad de que la presión de un neumático seleccionado
+al azar exceda de 30.5 lb/pulg$^{2}$? 
+\item ¿Cuál es la probabilidad de que la presión de un neumático seleccionado
+al azar se encuentre entre 30.5 y 31.5 Ib/pulg$^{2}?$ y ¿entre 30
+y 32 Ib/pulg$^{2}$?
+\item Suponga que un neumático se considera con presión baja si su presión
+está debajo de 30.4 Ib/pulg$^{2}$. ¿Cuál es la probabilidad de que
+al menos uno de los cuatro neumáticos de un automóvil se encuentre
+desinflado?\textsc{(sugerencia }Si $A$ =\{al menos un neumático está
+desinflado\}, ¿cuál es el complemento de $A$?) 
+\end{enumerate}
+\item La dureza Rockwell de un metal se determina al golpear con un punto
+acerado (herramienta) la superficie del metal y luego se mide la profundidad
+de penetración del punto Suponga que la dureza Rockwell de cierta
+aleación está normalmente distribuida con media de 70 y desviación
+estándar de 3 (suponga que la dureza Rockwell se mide en una escala
+continua)
+
+\begin{enumerate}
+\item Si un espécimen es aceptable sólo si su dureza está entre 67 y 75,
+¿cuál es la probabilidad de que un espécimen seleccionado al azar
+tenga una dureza aceptable\ ?
+\item Si la escala aceptable de dureza fue $(70-c,70+c)$, ¿para qué valor
+de $c$ tendría una dureza aceptable el 95\% de todos los especímenes?
+\item Si la escala aceptable es como en la parte (a) y la dureza de cada
+diez especímenes seleccionados al azar se determina independientemente,
+¿cuál es el número esperado de especímenes aceptable entre los diez$?$
+\item ¿Cuál es la probabilidad de que a lo sumo ocho de diez especímenes
+seleccionados independientemente tengan una dureza menor de 73.84\ \textsc{(sugerencia
+}$Y$ = el número entre los diez especímenes con dureza menor de 73.84
+es una variable binomial, ¿cuál es $p$? 
+\end{enumerate}
+\item La distribución del peso de paquetes enviados de cierto modo es normal
+con valor medio de 10 libras y desviación estándar de 2 libras. El
+servicio de paqueter{í}a desea establecer un valor de peso $c$,
+más allá del cual habrá cargo extra ¿Cuál valor de $c$ es tal que
+99{\%} de todos los paquetes pesen por lo menos 1 libra abajo del
+peso con cargo extra$?$
+\item Suponga que la tabla de la distribución normal del Apéndice contiene
+$\Phi$(z) sólo para z $>$0 Explique cómo se podr{í}a calcular
+todavía
+
+\begin{enumerate}
+\item $P(-1.72\leq Z\leq-0.55).$
+\item $P(-1.72\leq Z\leq0.55)$.\\
+¿es necesario poner $\Phi$(z) en la tabla para z negativa$?$, ¿que
+propiedad de la curva normal estándar justifica su respuesta? 
+\end{enumerate}
+\item Represente por X el número de páginas de texto de una tesis de doctorado
+en matemáticas seleccionado al azar. Aun cuando X puede tomar sólo
+valores enteros positivos, suponga que está distribuida normalmente
+en forma aproximada con valor esperado de 90 y desviación estándar
+de 15 ¿Cuál es la probabilidad de que una tesis seleccionada al azar
+contenga
+
+\begin{enumerate}
+\item A lo sumo 100 páginas ?
+\item Entre 80 y 110 páginas ? 
+\end{enumerate}
+\item Haga que X tenga una distribución binomial con par{á}metros $n$
+= 25 y $p$ calcule cada una de las siguientes probabilidades para
+los casos $p=0.5,0.6$ y.$8$
+
+\begin{enumerate}
+\item $P(15<X<.20)$\textit{ }
+\item $P(X{\leq}15)$
+\item $P(20<X)$ 
+\end{enumerate}
+\item Suponga que el 10{\%} de todos los ejes de acero producidos por
+cierto proceso están fuera de especificaciones, pero se pueden volver
+a trabajar (en lugar de tener que enviarlos la chatarra) Considere
+una muestra aleatoria de 200 ejes y denote por $X$ el número entre
+ellos que estén fuera de especificaciones y se puedan volver a trabajar
+¿Cuál es la probabilidad (aproximada) de que $X$ sea
+
+\begin{enumerate}
+\item A lo sumo 30?
+\item Menosde30?
+\item Entre 15 y 25 (inclusive)$?$ 
+\end{enumerate}
+\item Suponga que sólo el 40{\%} de todos los automovilistas de cierto
+estado usan con regularidad su cinturón de seguridad Se selecciona
+al azar una muestra de 500 automovilistas ¿Cuál es la probabilidad
+de que $X$ este\\
+entre 180 y 230 (inclusive) de los automovilistas de la muestra utilice
+su cinturón con regularidad?
+\item Si $X$ es una \textit{va} normal con media 80 y desviación estándar
+10, calcule las siguientes probabilidades mediante estandanzación
+
+\begin{enumerate}
+\item $P(X\leq80)$
+\item $P(X<100)$\textit{ }
+\item $P(65<X<100)$
+\item $P(70<X)$
+\item $P(|X-80|<10)$
+\item $P(85\mathbf{<}X\leq95)$ 
+\end{enumerate}
+\item Suponga que la fuerza que actúa sobre una columna que ayuda a sostener
+un edificio está normalmente distribuida con media de 15.0 kips y
+desviación estándar de 1.25 kips ¿Cuál es la probabilidad de que la
+fuerza
+
+\begin{enumerate}
+\item Sea a lo sumo 17 kips$?$
+\item Se encuentre entre 12 y 17 kips$?$
+\item Difiera de 15.0 kips en a lo sumo 2 desviaciones estándar? 
+\end{enumerate}
+\item Suponga que el tiempo de revelado para un tipo particular de papel
+fotográfico cuando se expone a una fuente luminosa durante 5 s está
+normalmente distribuido con una media de 25 s y una desviación estándar
+de 1.3 s ¿Cuál es la probabilidad de que
+
+\begin{enumerate}
+\item Una impresión en particular necesite más de 26.5 s para revelarse$?$
+\item El tiempo de revelado sea por lo menos 23 s$?$
+\item El tiempo de revelado difiera del tiempo esperado en más de 2.5 s$?$ 
+\end{enumerate}
+\item Un tipo particular de tanque de gasolina para un automóvil compacto
+está dise{ñ}ado para contener 15 galones Suponga que la capacidad
+real X de un tanque escogido al azar de este tipo esté normalmente
+distribuido con media de 15 galones y desviación estándar de 2 galones
+
+\begin{enumerate}
+\item ¿Cuál es la probabilidad de que un tanque seleccionado al azar contenga
+a lo sumo 14.8 galones?
+\item ¿Cuál es la probabilidad de que un tanque seleccionado al azar contenga
+entre 14.7 y 15.1 galones$?$
+\item Si el automóvil en el que se instala un tanque seleccionado al azar
+recorre exactamente 25 millas por galón, ¿cuál es la probabilidad
+de que el automóvil pueda recorrer 370 millas sin reabastecerse$?$ 
+\end{enumerate}
+\item Hay dos máquinas para cortar corchos destinados para usarse en botellas
+de vino La primera produce corchos con diámetros que están normalmente
+distribuidos con media de 3 cm y desviación estándar de 1 cm La segunda
+máquina produce corchos con diámetros que tienen una distribución
+normal con media de 3.04 cm y desviación estándar de 0.02 cm Los corchos
+aceptables tienen diámetros entre 2.9 cm y 3.1 cm ¿Cuál máquina tiene
+más probabilidad de producir un corcho aceptable$?$
+
+\begin{enumerate}
+\item Si una distribución normal tiene $\mu=$ 25 y $\sigma=$ 5, ¿cuál
+es el 91avo percentil de la distribución$?$
+\item ¿Cuál es el sexto percentil de la distribución de la parte (a)$?$
+\item El ancho de una linea grabada en un circuito integrado esta normalmente
+distribuido con media de 3.000 \ $\mu$m y desviaci{ó}n est{á}ndar
+de 0.150 \ ¿Que valor separa al 10{\%} mas ancho de todas las l{í}neas
+del otro 90{\%}? 
+\end{enumerate}
+\item El dispositivo automático de apertura de un paraca{í}das militar
+de carga se ha dise{ñ}ado para abrir el paracaídas cuando éste se
+encuentre a 200 m de altura sobre el suelo Supongamos que la altitud
+de apertura en realidad tiene una distribución normal con valor medio
+de 200 m y desviación estándar de 30 m Habrá da{ñ}o al equipo si
+el paraca{í}das se abre a una altitud de menos de 100 m \ Cuál
+es la probabilidad de que haya daño a la carga en al menos uno de
+cinco paraca{í}das lanzado independientemente$?$
+\item La lectura de temperatura de un termopar puesto en un medio de temperatura
+constante esta normalmente distribuida con media $\mu$\textit{,}
+la temperatura real del entorno, y desviaci{ó}n est{á}ndar $\sigma$\ ¿Cual
+tendr{í}a que ser el valor de $\sigma$ para asegurar que el 95
+\% de todas las lecturas se encuentren dentro de 0.1${^{o}}$ de\ $\mu?$
+\item Se sabe que la distribución de resistencia para resistores de cierto
+tipo es normal, 10{\%} de todos los resistores tienen una resistencia
+que excede los 10.256 ohms y 5{\%} tiene una resistencia menor de
+9.671 ohms ¿Cuales son los valores de la media y de la desviaci{ó}n
+est{á}ndar de la distribuci{ó}n de resistencia?
+\item Si el diámetro de un cojinete está normalmente distribuido, ¿cuál
+es la probabilidad de que el diámetro de un cojinete seleccionado
+al azar esté
+
+\begin{enumerate}
+\item Dentro de 1.5$\sigma$ de su valor medio$?$
+\item A más de 2 5$\sigma$ de su valor medio?
+\item Entre 1 y 2 $\sigma$ de su valor medio$?$ 
+\end{enumerate}
+\item Suponga que sólo 20{\%} de los automovilistas se detienen por completo
+en un crucero, donde hay un semáforo con luz roja intermitente en
+todas las direcciones cuando no haya otros automóviles visibles ¿Cuál
+es la probabilidad de que, de 20 automovilistas seleccionados al azar
+lleguen al crucero en estas condiciones,
+
+\begin{enumerate}
+\item a lo sumo 5 se detengan por completo$?$
+\item exactamente 5 se detengan por completo$?$
+\item por lo menos 5 se detengan por completo?
+\item ¿Cuántos, de los siguientes 20 automovilistas, espera el lector que
+se detengan por completo? 
+\end{enumerate}
+\item Si el 90{\%} de todos los solicitantes para cierto tipo de hipoteca
+no llenan correctamente el formato de solicitud en la primera remisión,
+¿cuál es la probabilidad de que entre 15 de estos solicitantes seleccionados
+al azar
+
+\begin{enumerate}
+\item por lo menos 12 no la llenen a la primera remisión?
+\item entre 10 y 13 inclusive no la llenen a la primera remisión?
+\item a lo sumo 2 llenen correctamente sus formatos antesde la remisión
+inicial 
+\end{enumerate}
+\item Un tipo particular de raqueta de tenis se fabrica en tamaños mediano
+y extragrande El 60{\%} de todos los clientes de cierta tienda buscan
+el tamaño extragrande
+
+\begin{enumerate}
+\item Entre diez clientes seleccionados al azar, que desean este tipo de
+raqueta, ¿cuál es la probabilidad de que por lo menos seis busquen
+el tamaflo extragrande$?$
+\item Entre diez clientes seleccionados al azar, ¿cuál es la probabilidad
+de que el número que buscan el tamaño extragrande esté dentro de 1\textbf{
+}$\sigma$ del valor medio$?$
+\item La tienda tiene actualmente siete raquetas de cada modelo ¿Cuál es
+la probabilidad de que los siguientes diez clientes que buscan esta
+raqueta puedan comprar el modelo que buscan, de entre la existencia
+actual 
+\end{enumerate}
+\item Veinte por ciento de todos los teléfonos de cierto tipo se remiten
+para repararse cuando todav{í}a está vigente su garant{í}a De
+éstos, 60{\%} se pueden reparar y el otro 40{\%} debe sustituirse
+con aparatos nuevos Si una compaflía compra diez de estos teléfonos,
+(,cuál es la probabilidad de que exactamente se cambien dos dentro
+del periodo de garantía\
+\item Un lote muy grande de componentes ha llegado a un distribuidor El
+lote se puede clasificar como aceptable sólo si la proporción de componentes
+defectuosos es a lo sumo 10. El distribuidor determina seleccionar
+al azar 10 componentes y aceptar el lote sólo si el número de componentes
+defectuosos en la muestra es a lo sumo 2.
+
+\begin{enumerate}
+\item ¿Cuál es la probabilidad de que el lote sea aceptado cuando la proporción
+real de piezas defectuosas es 0.1, 0.05, 0.10, 0.20 y 0.25 ?
+\item Denotemos por $p$ la proporción real de piezas defectuosas del lote
+Una gráfica de P(lote aceptado) como función de $p,$ con $p$ en
+el horizontal y P(lote aceptado) en el vertical, se llama \textit{curva
+caracter{í}stica de operación} para el plan de muestreo de aceptación
+del lote. Utilice los resultados de la parte (a) para trazar esta
+curva para $0\leq p\leq1.$
+\item Repita las partes (a) y (b) con 1 sustituyendo a 2 en el plan de muestreo
+de aceptación del lote
+\item Repita las partes (a) y (b) con 15 sustituyendo a 10 en el plan de
+muestreo de aceptación del lote.
+\item ¿Cual de los tres planes de muestreo, el de la parte (a) (c) o (d)
+parece mas satisfactorio, y por que? 
+\end{enumerate}
+\item Un reglamento. que requiere que un detector de humo ( pueda instalar
+en todas las casas prefabricadas ha estado en vigor en una ciudad
+durante un año. El departamento de bomberos está preocupado porque
+muchas casas siguen sin detectores. Sea $p=$ la verdadera proporción
+de las casas que tienen detectores y supongamos que se inspecciona
+al azar una muestra de 25 casas. Si la muestra indica fuertemente
+que menos del 80{\%} tienen detector el departamento de bomberos
+hará una campa{ñ}a para que el programa de inspecciones sea obligatorio
+Debido a lo costoso del programa, el departamento prefiere no pedir
+tales inspecciones a menos que la evidencia muestral apoye con argumentos
+sólidos esta necesidad Denotenotemos por $X$ el número de casas con
+detectores entre las 25 en que se hace muestreo Considere rechazar
+la afirmación de que $p\geq0.$8 si $x<$ 15, donde $x$ es el valor
+observado\textbf{ }de $X.$
+
+\begin{enumerate}
+\item ¿Cuál es la probabilidad de que la petición sea rechazada cuando el
+valor real de $p$ es 0.8
+\item ¿Cuál es la probabilidad de no rechazar la petición cuando $p$ =0.7?
+o ¿.Cuándo $p$ = 6$?$
+\item ¿Cómo cambian las <\textcompwordmark{}<probabilidades de error>\textcompwordmark{}>de
+las partes (a) y (b) si el valor de 15 de la regla de decisión se
+sustituye por 14$?$ 
+\end{enumerate}
+\item Un geólogo ha recolectado 10 especímenes de roca basáltica y 10 de
+granito Si el geólogo instruye a un asistente de laboratorio para
+que seleccione al azar 15 de los especímenes para analizarlos,¿cuál
+es la f.d.p del número de espec{í}menes de basalto seleccionados
+para analizarlos? \ Cuál es la probabilidad de que todos los especímenes
+de uno de los dos tipos de roca sean seleccionados para análisis?
+\item Un director de personal que entrevista a 11 ingenieros para cuatro
+vacantes ha programado seis entrevistas para el primer día y cinco
+para el segundo día de entrevistas. Suponga que los candidatos son
+entrevistados al azar
+
+\begin{enumerate}
+\item ¿Cuál es la probabilidad de que $x$ de los mejores cuatro candidatos
+sean entrevistados el primer día$?$
+\item ¿Cuántos de los mejores cuatro candidatos pueden esperar ser entrevistados
+el primer día? 
+\end{enumerate}
+\item Veinte parejas de individuos que juegan un torneo de \textit{bridge
+}han sido sembrados como 1,$\cdots$, 20 En la primera parte del torneo,
+los 20 se dividen al azar en 10 parejas este-oeste y 10 parejas norte-sur
+
+\begin{enumerate}
+\item ¿Cuál es la probabilidad de que $x$ de las mejores 10 parejas terminen
+Jugando este-oeste?
+\item ¿Cuál es la probabilidad de que todos los de las mejores cinco parejas
+terminen Jugando en la misma dirección?
+\item Si hay \textit{2n} parejas, (,cuál es la f.d.p de $X=$ el número
+entre las mejores $n$ parejas que terminan Jugando este-oeste, y
+cuáles son $E(X)$ y V(X) 
+\end{enumerate}
+\item Ha sido puesta en vigor la segunda etapa de una alerta de \textit{smog}
+en cierta zona del condado de Los Ángeles, en la que hay 50 empresas
+industriales Un inspector visitará 10 de ellas seleccionadas al azar
+para verificar las violaciones de los reglamentos
+
+\begin{enumerate}
+\item Si 15 de las empresas violan en realidad al menos un reglamento, ¿cuál
+es la f.d.p del número de empresas visitadas por el inspector que
+están violando al menos un reglamento?
+\item Si hay 500 empresas en la zona, de las cuales 150 están en violación,
+aproxime la f.d.p de la parte (a) por una f.d.p más sencilla
+\item Para $X=$ el número entre las 10 visitadas que estén en violación,
+calcule \textit{E(X) y V(X)} tanto para la f.d.p exacta como para
+la f.d.p aproximada de la parte (b) 
+\end{enumerate}
+\item Suponga que $p$ = P(nace ni{ñ}o) =0. 5. Una pareja desea tener
+exactamente dos ni{ñ}as en su familia Tendrán hijos hasta que se
+satisfaga esta condición.
+
+\begin{enumerate}
+\item ¿Cuál es la probabilidad de que la familia tenga-x hijos(hombres)$?$
+\item ¿Cuál es la probabilidad de que la familia tenga cuatro hijos$?$
+\item ¿Cuál es la probabilidad de que la familia tenga a lo sumo cuatro
+hijos$?$
+\item ¿Cuántos hijos (hombres) se esperar{í}a que tenga esta familia$?,$
+¿Cuántos hijos se esperara que tenga esta \textbf{familia?} 
+\end{enumerate}
+\item Una familia decide tener hijos hasta que tenga tres del mismo sexo
+Si se supone que $P(B)$ = \textit{P{[}G) =0.5} ¿cual es la \ f.d.p
+de $X=$ número de hijos de la familia?
+\item Tres hermanos y sus esposas deciden tener hijos hasta que cada familia
+tenga dos ni{ñ}as ¿Cuál es la f.d.p de $X=$ el número total de
+ni{ñ}os (hombres) nacidos de los hermanos?. ¿Cuál es $E(X)$ y cómo
+se compara con el número esperado de hijos (hombres) nacidos de cada
+hermano$?$
+\item El individuo A tiene un dado rojo y $B$ tiene un dado verde (ambos
+no cargados) Si cada uno de ellos tira su dado hasta obtener <\textcompwordmark{}<dobles>\textcompwordmark{}>
+(1 -1, ..., 6-6), (,cuál es la f.d.p de $X$ = el número total de
+veces que se tira un dado$?$ ¿Cuáles son $E(X)$ y V$\left(X\right)$
+\item Haga que $X$ tenga una distnbución de Poisson con parámetro $\lambda$=
+5 calcule las siguientes probabilidades
+
+\begin{enumerate}
+\item \textbf{$P(X<8)$}
+\item $P(X=8)$
+\item \textit{$P(9\geq X)$}
+\item $P(5<X\leq8)$
+\item $P(5<X<8)$
+\end{enumerate}
+\item Suponga que el número $X$ de tornados observados en una región particular
+durante un periodo de 1 año tiene una distnbución de Poisson con $\lambda$=
+8.
+
+\begin{enumerate}
+\item Calcule $P(X<5)$
+\item Calcule $P(6<X<9)$.
+\item Calcule $P(10\geq X)$
+\item ¿Cuántos tornados se puede esperar que se observen durante un periodo
+de un año, y cuál es la desviación estándar del número de tornados
+observados? 
+\end{enumerate}
+\item Sea $X$ = el número de automóviles de un año y modelo particular
+que en algún momento en el futuro sufrirán una falla grave en el mecanismo
+de dirección, que ocasionará pérdida completa de control a alta velocidad
+Suponga que $X$ tiene una distribución de Poisson con parámetro $\lambda$=
+10
+
+\begin{enumerate}
+\item ¿Cuál es la probabilidad de que a lo sumo 10 automóviles sufran dicha
+falla$?$
+\item ¿Cuál es la probabilidad de que entre 10 y 15 (inclusive) automóviles
+sufran dicha falla\
+\item ¿Cuáles son $E(X)$ y $V\left(X\right)$? 
+\end{enumerate}
+\item Considere escribir en un disco de computadora y luego enviar el escrito
+por un certificador que cuenta\textbf{ el }número de pulsos faltantes
+Suponga que este número $X$ tiene una distnbución de Poisson con
+parámetro $\lambda$= 2. (Sugendo en <\textcompwordmark{}<Average
+Sample Number for SermCunailed Sampling Using the Poisson Distribution>\textcompwordmark{}>,
+\textit{J Quahty Technology,} 1983, pp 126-129 )
+
+\begin{enumerate}
+\item ¿Cuál es la probabilidad de que un disco tenga exactamente un pulso
+faltante?
+\item ¿Cuál es la probabilidad de que un disco tenga al menos dos pulsos
+faltantes?
+\item Si dos discos se seleccionan independientemente, ¿cuál es la probabilidad
+de que ninguno contenga un pulso faltante\ ? 
+\end{enumerate}
+\item Un artículo de \textit{Los Angeles Times} (3 de diciembre de 1993)
+reporta que. de cada 200 personas, una lleva el gene defectuoso que
+ocasiona cáncer de colon hereditario En una muestra de 1 000 personas,
+¿cuál es la distribución aproximada del número de quienes llevan este
+gene$?.$Utilice esta distribución para calcular la probabilidad aproximada
+de que
+
+\begin{enumerate}
+\item Entre 4 y 7 (inclusive) lleven el gene
+\item Por lo menos 8 lleven el gene. 
+\end{enumerate}
+\item Se envía un aviso a todos los propietarios de cierto tipo de automóvil,
+solicitándoles llevar su automóvil a un distribuidor para comprobar
+la presencia de un defecto particular de fabricación Suponga que sólo
+0.05{\%} de tales automóviles tienen el defecto Considere una muestra
+aleatoria de 10 000 automóviles.
+
+\begin{enumerate}
+\item ¿Cuáles son el valor esperado y la desviación estándar del número
+de automóviles de la muestra que tiene el defecto?
+\item ¿Cuál es la probabilidad (aproximada) de que por lo menos 10 automóviles
+en los que se efectuó el muestreo tengan el defecto\ ?
+\item ¿Cuál es la probabilidad (aproximada) de que ninguno de los automóviles
+en los que se efectuó el muestreo tengan el defecto$?$ 
+\end{enumerate}
+\item Suponga que aviones peque{ñ}os llegan a cierto aeropuerto según
+un proceso de Poisson, con tasa $\lambda$ = 8 aviones por hora, de
+modo que el número de llegadas durante un periodo de $t$ horas es
+una \textit{va} de Poisson con parámetro c = 8t
+
+\begin{enumerate}
+\item ¿Cuál es la probabilidad de que exactamente 5 aviones peque{ñ}os
+lleguen durante un periodo de una hora$?$\ Por lo menos 5?, ¿Por
+lo menos 10?
+\item ¿Cuáles son el valor esperado y la desviación estándar del número
+de aviones peque{ñ}os que lleguen durante un periodo de 90 min?
+\item ¿Cuál es la probabilidad de que por lo menos 20 aviones peque{ñ}os
+lleguen durante un periodo de 2 1/2 h\ (,De que a lo sumo 10 lleguen
+durante este periodo$?$ 
+\end{enumerate}
+\item El número de infracciones expedidas por el lector de un parquímetro,
+por violaciones de estacionamiento. puede modelarse mediante un proceso
+de Poisson con una tasa de cinco infracciones por hora. ¿Cuál es la
+probabilidad de que exactamente cinco infracciones se expidan durante
+una hora particular$?$
+\item Un experimento consta de cuatro ensayos de Bernoulli independientes
+con probabilidad de éxitos en cada uno de ellos. La variable aleatoria
+A'es el número de éxitos. Enumere la distribución de probabilidad
+de $X.$
+\item Se planean seis misiones espaciales independientes a la luna. La probabilidad
+estimada de éxito de cada misión es 0.95. \ ¿Cuál es la probabilidad
+de que al menos cinco de las misiones planeadas tengan éxito?
+\item La Compa{ñ}ia \textit{XYZ} ha planeado presentaciones de ventas
+a una docena de clientes importantes. La probabilidad de recibir un
+pedido como un resultado de tal presentación se estima en 0.5. ¿Cuál
+es la probabilidad de recibir cuatro o más pedidos como resultado
+de las reuniones?
+\item Un corredor de bolsa llama a sus 20 más importantes clientes cada
+ma{ñ}ana. Si la probabilidad de que efectúe una transacción como
+resultado de dichas llamadas es de uno a tres, ¿cuáles son las posibilidades
+de que maneje 10 o más transacciones?
+\item ¿Un proceso de producción que manufactura transistores genera, en
+promedio, una fracción de 2 por ciento de piezas defectuosas. Cada
+dos horas se toma del proceso una muestra aleatoria de tama{ñ}o
+50. Si la muestra contiene más de dos piezas defectuosas el proceso
+debe interrumpirse. Determine la probabilidad de que el proceso será
+interrumpido por medio del esquema de muestreo indicado.
+\item Se sabe que el proceso de producción de luces de un tablero de automóvil
+de indicador giratorio produce uno por ciento de luces defectuosas.
+Si este valor permanece invariable, y se selecciona al azar una muestra
+de 100 luces, encuentre $P(p\mathbf{\leq0}.03)$, donde ${p}$ es
+la fracción de defectos de la muestra.
+\item Suponga que una muestra aleatoria de tama{ñ}o 200 se toma de un
+proceso que tiene una fracción de defectos de 0.07. \ Cuál es la
+probabilidad de que $p$ exceda la fracción verdadera de defectos
+en una desviación estándar?, ¿En dos desviaciones estándar? y ¿,En
+tres desviaciones estándar?
+\item Un agente de bienes ra{í}ces estima que la probabilidad de vender
+una casa es .10.1 d{í}a de hoy tiene que ver cuatro clientes Si
+tiene éxito en las primeras tres visita cual es la probabilidad de
+que su cuarta visita no sea exitosa$?$
+\item Suponga que se van a realizar cinco experimentos de laboratorio idénticos
+independientes Cada experimento es en extremo sensible a las condiciones
+ambientales, y solo hay una probabilidad $p$ de que se tenmnará con
+éxito Grafique, como una función \textit{de }la probabilidad de que
+el quinto experimento sea el primero que falle. Obtenga matemáticamente
+el valor de $p$ que maximice la probabilidad de que el quinto ensayo
+sea el primer experimento no exitoso.
+\item La probabilidad de que un submarino hunda un barco enemigo con un
+disparo de sin torpedos es 8 Si los disparos son independientes, determine
+la probabilidad de hundimiento dentro de los primeros dos disparos,
+y dentro de los primeros tres ,
+\item En Atlanta la probabilidad de que ocurra una tormenta en cualquier
+dia durante la primavera es 050 Suponiendo independencia, ¿cual es
+la probabilidad de que la primera tormenta ocurra el cinco de abril
+Suponga que la primavera empieza el 1 de marzo ?
+\item Una compradora recibe lotes peque{ñ}os $(N$ = 25) de un dispositivo
+de alta precisión Pretende rechazar el lote el 95 por ciento de las
+veces si contienen hasta siete unidades defectuosas Suponga que la
+compradora decide que la presencia de una unidad defectuosa en la
+muestra, es suficiente para provocar el rechazo \ Qué tan grande
+debe ser el tama{ñ}o de su muestra?
+\item Se estima que el número de automóviles que pasa por un cruce particular
+por hora es de 25 Obtenga la probabilidad de que menos de 10 veh{í}culos
+crucen durante cualquier intervalo de una hora Suponga que el núiriero
+de veh{í}culos sigue una distribución de Poisson.
+\item Las llamadas llegan a un tablero de control telefónico de modo tal
+que el numero de llamadas por hora sigue una distnbución de Poisson
+con media 10 El equipo disponible puede manejar hasta 20 llamadas
+sin que se sobrecargue ¿Cuál es la probabilidad de que ocurra dicha
+sobrecarga?
+\item El número de células de sangre por unidad cuadrada visible bajo el
+microscopio sigue una distribucion de Poisson con media 4 Encuentre
+la probabilidad de que más de 5 de tales células de sangre sean visibles
+para el observador.
+\item Una compaflía grande de seguros ha descubierto que 2 por ciento de
+la poblaci{ó}n de Estados Unidos esta lesionada como resultado de
+alg{ú}n tipo de accidente particular Esta compañía tiene 15,000
+asegurados que est{á}n protegidos contra tal accidente \ Cuál es
+la probabilidad de que tres o menos reclamos se entablen en relación
+con esas pólizas de seguro durante el siguiente año$?,$ ¿Cinco o
+mas reclamos$?$
+\item Cuadrillas de mantenimiento llegan a un almacén de herramientas solicitando
+una pieza de repuesto particular de acuerdo con una distnbución de
+Poisson con par{á}metro $\lambda$= 2 Tres de estas piezas de repuesto
+por lo general se tienen disponibles Si ocurren mas de tres solicitudes,
+las cuadrillas deben desplazarse a una distancia considerable hasta
+los almacenes centrales
+
+\begin{enumerate}
+\item En un f.d.a cualquiera, \ cuál es la probabilidad de que se realice
+un viaje a los almacenes centrales$?$
+\item \ Cual es la demanda media esperada para piezas de repuesto?
+\item ¿Cuantas piezas de repuesto deben transportarse si el almacen de herramientas
+tiene que dar servicio a las cuadnllas que llegan el 90 por ciento
+de las veces$?$
+\item \ Cuál es el numero esperado de cuadnllas atendidas dianamente en
+el almacén de herramientas$?$
+\item ¿Cuál es el numero esperado de cuadrillas que realizaran el viaje
+a los almacenes generales$?$ 
+\end{enumerate}
+\item \textbf{En una ciudad cualquiera el} consumo diario de agua (en millones
+de litros) sigue aproximada-mente una distribución gamma con $\alpha$=
+2 y $\beta$ = 3. Si la capacidad diaria para esta ciudad es de 9
+millones dc litros de agua, ¿cuál es la probabilidad de que en un
+determinado día el suministro de agua sea inadecuado?
+\item Suponga que el tiempo, en horas, que toma reparar una bomba es una
+variable aleatoria $X$ que tiene una distribución gamma con parámetros
+$\alpha$ = 2 y $\beta$= 1/2. ¿Cuál es la probabilidad de que en
+el siguiente servicio
+
+\begin{enumerate}
+\item tome cuando mucho 1 hora reparar la bomba?
+\item al menos se requieran 2 horas para reparar la bomba? 
+\end{enumerate}
+\item En una ciudad cualquiera el consumo de energía eléctrica, en millones
+de kilowatts-hora, es una variable aleatoria $X$ que tiene una distribución
+gamma con media $\mu$\textit{=} 6 y $\sigma^{2}$ = 12,
+
+\begin{enumerate}
+\item Encuentre los valores de $\alpha$ y $\beta$.
+\item Encuentre la probabilidad de que en un determinado día el consumo
+de energía eléctrica se exceda por 12 kilowatts-hora. 
+\end{enumerate}
+\item El tiempo que transcurre antes de que una persona sea atendida en
+una cafetería es una variable aleatoria que tiene una distnbución
+exponencial con una media de 4 minutos. \ Cuál es la probabilidad
+de que una persona sea atendida antes dc que transcurran 3 minutos
+en al menos 4 de los 6 días siguientes? 
+\end{enumerate}
+}

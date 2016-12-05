@@ -1,0 +1,10498 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass libro-matua
+\begin_preamble
+%\usepackage[utf8x]{inputenc}
+\usepackage[spanish, es-tabla]{babel}
+%\usepackage{makeidx}
+\usepackage{imakeidx}
+\makeindex[program=truexindy,options=-M texindy -L spanish -C utf8]
+%\usepackage[totoc]{idxlayout}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\graphicspath{{ps/}{logo/}{image/}{sections/Figures/}}
+%\usepackage{lmodern}
+\usepackage{lipsum}
+\usepackage{fancyvrb}
+\usepackage{cancel}
+\raggedbottom %para que no distibuya los espacios verticales en una hoja
+\usepackage{pgf}
+\usepackage{mathrsfs}
+\usetikzlibrary{fit,shapes}
+\usepackage{mivenndiagram}
+\usepackage{tikz-cd}% diagramas commutativos
+\usetikzlibrary{matrix}
+\usetikzlibrary{intersections}
+\usetikzlibrary{arrows}
+\usetikzlibrary{calc}
+\usepackage{zahlen}
+\usepackage{mathtools}
+\usepackage{theoremref}
+\MakeRobust{\eqref}
+\mathtoolsset{showonlyrefs=true,showmanualtags=true}
+\def\myref#1{\thesection .\ref{#1}}
+\usepackage[hmargin=2cm,bmargin=3cm,tmargin=4.5cm,centering]{geometry}
+\def\yy{\rowcolor{ptcbackground}}
+\def\yyy{\rowcolor{gray!50}}
+\def\xxx{\rowcolor{ptctitle!50}}
+\def\ccc{\cellcolor{ptctitle!50}}
+\usepackage{multirow}
+\def\maxwidth{8cm}
+% Length to control the \fancyheadoffset and the calculation of \headline
+% simultaneously
+\RequirePackage{hyperref}
+\hypersetup{
+             linktoc=all,
+             hidelinks,
+             pdfborder={0 0 0},
+            colorlinks=true,
+            linkcolor = ptctitle,
+            backref=true,
+            pagebackref=true,
+            hyperindex=true,
+            breaklinks=true,
+            urlcolor=ocre,
+            citecolor = ocre,
+            bookmarks=true,
+            bookmarksopen=false,
+            pdftitle={Title},
+            pdfauthor={Author}
+                              }
+\newlength\FHoffset
+\setlength\FHoffset{0.5cm}
+
+\addtolength\headwidth{2\FHoffset}
+
+\fancyheadoffset{\FHoffset}
+
+% these lengths will control the headrule trimming to the left and right 
+\newlength\FHleft
+\newlength\FHright
+
+% here the trimmings are controlled by the user
+\setlength\FHleft{1cm}
+\setlength\FHright{0cm}
+
+% The new definition of headrule that will take into acount the trimming(s)
+\newbox\FHline
+\setbox\FHline=\hbox{\hsize=\paperwidth%
+  \hspace*{\FHleft}%
+  \rule{\dimexpr\headwidth-\FHleft-\FHright\relax}{\headrulewidth}\hspace*{\FHright}%
+}
+\renewcommand\headrule{\vskip-.7\baselineskip\copy\FHline}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\providecommand\phantomsection{}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\def\fullwidthcolor#1{\color{#1}\leaders\vrule\hskip\textwidth\hskip-\textwidth\kern0pt}
+\def\resetLTcolor{\global\let\zz\zzb}
+\def\yy{\rowcolor{ptcbackground}}
+\def\yyy{\rowcolor{gray!50}}
+\def\xxx{\rowcolor{ptctitle!50}}
+\def\ccc{\cellcolor{ptctitle!50}}
+\def\yya{\cellcolor{gray!50}}
+\def\yyb{\cellcolor{ptcbackground}}
+\def\maxwidth{8cm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\def\firstcircle{(0,0) circle (1.5cm)} 
+\def\secondcircle{(45:2cm) circle (1.5cm)}
+\def\thirdcircle{(0:2cm) circle (1.5cm)} 
+\def\rectangulo{(-2,-2) rectangle (4,3.6)}
+\def\fourcircle{(1.1,1) circle (1.5cm)}
+\def\fivecircle{(-2,1) circle (1.5cm)}
+\def\rect{(-4,-2) rectangle (4,3.6)} 
+\def\sixcircle{(1.5,1) circle (1.5cm)} 
+\def\sevencircle{(1.1,1) circle (0.8cm)}
+\def\myref#1{\thesection .\ref{#1}}
+\end_preamble
+\options svgnames,x11names,HTML
+\use_default_options false
+\master Estadistica.lyx
+\begin_modules
+knitr
+\end_modules
+\maintain_unincluded_children false
+\language spanish
+\language_package none
+\inputencoding utf8x
+\fontencoding default
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement H
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 0
+\use_package cancel 0
+\use_package esint 1
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language french
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Chapter
+Distribuciones
+\end_layout
+
+\begin_layout Standard
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Distribuciones especiales
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+PartialToc
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypersetup{linkcolor=ptctitle}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Introducción
+\end_layout
+
+\begin_layout Standard
+Para realizar predicciones en estadística es necesario establecer un modelo
+ probabilístico y para ello hay que realizar algo más que un histograma
+ una tabulación o una fórmula para representar una variable aleatoria ya
+ que que con frecuencia , las observaciones que se generan en diferentes
+ experimentos estadísticos presentan el mismo comportamiento , por lo que
+ las variables aleatorias asociadas a estos experimentos pueden describirse
+ por la misma función de distribucíon ,ya sea discreta o continua, por esto
+ a continuación presentaremos las funciones de distribucción más importantes.
+\end_layout
+
+\begin_layout Section
+Algunas distribuciones discretas importantes
+\end_layout
+
+\begin_layout Subsection
+Distribución uniforme
+\end_layout
+
+\begin_layout Standard
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Distribución!Uniforme discreta
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Esta distribución de probabilidad discreta es la más sencilla de todas y
+ es aquella para la cual la variable aleatoria asociada a ella asume cada
+ uno de sus valores con idéntica probabilidad es decir
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{defi}{}{}
+\end_layout
+
+\end_inset
+
+ Sea 
+\begin_inset Formula $X$
+\end_inset
+
+ una variable aleatoria que asume los valores 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $x_{1},x_{2},x_{3},\cdots x_{k}$
+\end_inset
+
+, con iguales probabilidades, entonces 
+\begin_inset Formula 
+\[
+f\left(x,k\right)=\left\{ \begin{array}{ccc}
+\frac{1}{k} & si & x=x_{1},x_{2},x_{3},\cdots x_{k}\\
+0 &  & \text{si no}
+\end{array}\right.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{defi}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{teo}{}{}
+\end_layout
+
+\end_inset
+
+ Sea 
+\begin_inset Formula $X$
+\end_inset
+
+una v.a discreta con distribución de probabilidad uniforme, entonces 
+\begin_inset Formula 
+\begin{align*}
+\mu & =E\left(X\right)=\frac{\sum_{i=1}^{k}x_{i}}{k}\\
+\sigma^{2} & =V\left(X\right)=\frac{\sum_{i=1}^{k}(x_{i}-\mu)^{2}}{k}
+\end{align*}
+
+\end_inset
+
+y se denota 
+\begin_inset Formula $\ X\leadsto\mathbb{U}_{d}\left(\mu,\sigma^{2}\right)$
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{teo}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ejemplo}[]
+\end_layout
+
+\end_inset
+
+ Se selecciona a un empleado de un grupo de 10 para supervisar un cierto
+ proyecto, escogiendo aleatoriamente una placa de una caja que contiene
+ 10 placas numeradas del 1 al 10.
+ Encuentre la función de probabilidad de 
+\begin_inset Formula $X$
+\end_inset
+
+ que representa el número de la placa que se saca y
+\end_layout
+
+\begin_layout Enumerate
+¿Cuál es la probabilidad de que el número que se saque sea menor que 4 ?
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Encuentre la media y la varianza de 
+\begin_inset Formula $X$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Como cada placa tiene la misma posibilidad de salir entonces 
+\begin_inset Formula $X$
+\end_inset
+
+ 
+\begin_inset Formula $\leadsto\mathbb{B}_{d}\left(\mu,\sigma^{2}\right)$
+\end_inset
+
+ la cual es 
+\begin_inset Formula 
+\[
+f\left(x,10\right)=\left\{ \begin{array}{ccc}
+\frac{1}{10} & si & x=1,2,3,\cdots10\\
+0 &  & \text{si no}
+\end{array}\right.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ejemplo}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{solucion}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $P\left(4\geq X\right)=\sum_{i=1}^{3}f\left(x_{i}\right)=\left(1+1+1\right)\frac{1}{10}$
+\end_inset
+
+=
+\begin_inset Formula $\frac{3}{10}$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $E\left(X\right)=\frac{\sum_{i=1}^{10}x_{i}}{10}$
+\end_inset
+
+=
+\begin_inset Formula $\frac{11}{2},V\left(X\right)=\frac{\sum_{i=1}^{10}\left(x_{i}-5.5\right)^{2}}{10}$
+\end_inset
+
+ = 
+\begin_inset Formula $8.\,\allowbreak25$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{solucion}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Subsection
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Distribución!De Bernoulli
+\end_layout
+
+\end_inset
+
+Distribución de Bernoulli
+\end_layout
+
+\begin_layout Standard
+Si realizamos un experimento una sola vez y observamos si cierto suceso
+ ocurre o no decimos que este experimento es de Bernoulli y decimos que
+ la variable aleatoria 
+\begin_inset Formula $X$
+\end_inset
+
+ la podemos definir 
+\begin_inset Formula 
+\[
+X=\left\{ \begin{array}{ccc}
+0 & si & \text{no ocurre el suceso}\\
+1 & si & \text{el suceso ocurre}
+\end{array}\right.
+\]
+
+\end_inset
+
+y su función de probabilidad 
+\begin_inset Formula 
+\[
+f\left(x,p\right)=\left\{ \begin{array}{ccc}
+q & si & x=0\\
+p & si & x=1\\
+0 &  & \text{en otro caso}
+\end{array}\right.
+\]
+
+\end_inset
+
+y su función de distribución es 
+\begin_inset Formula 
+\[
+F\left(x,p\right)=\left\{ \begin{array}{ccc}
+0 & si & x<0\\
+q & si & 1>x\geq0\\
+1 & si & x\geq1
+\end{array}\right.
+\]
+
+\end_inset
+
+En el ejemplo 4.23 se determinó que 
+\begin_inset Formula $E\left(X\right)=p$
+\end_inset
+
+ y 
+\begin_inset Formula $V\left(X\right)=pq$
+\end_inset
+
+ en el ejemplo 4.27 una variable de Bernoulli con media 
+\begin_inset Formula $p$
+\end_inset
+
+ y varianza 
+\begin_inset Formula $pq$
+\end_inset
+
+ se denota 
+\begin_inset Formula $X\leadsto\mathbb{B}\left(p,pq\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Distribución binomial
+\end_layout
+
+\begin_layout Standard
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Distribución!Binomial
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se dice que una variable aleatoria 
+\begin_inset Formula $X$
+\end_inset
+
+ tiene una distribución binomial de parámetros 
+\begin_inset Formula $n,p$
+\end_inset
+
+ si 
+\begin_inset Formula $X=\sum_{i=1}^{n}X_{i}$
+\end_inset
+
+ donde cada 
+\begin_inset Formula $X_{i}\leadsto\mathbb{B}\left(p,q\right)$
+\end_inset
+
+ y se denota 
+\begin_inset Formula $B\left(n,p\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{defi}{}{}
+\end_layout
+
+\end_inset
+
+ Supóngase que se realiza un experimento de Bernoulli 
+\begin_inset Formula $n$
+\end_inset
+
+ veces , donde en todas ellas, la probabilidad de éxito es la misma (
+\begin_inset Formula $p$
+\end_inset
+
+), y queremos calcular el número de éxitos, 
+\begin_inset Formula $X$
+\end_inset
+
+ obtenidos en el total de 
+\begin_inset Formula $n$
+\end_inset
+
+ pruebas, entonces su función de probabilidad es 
+\begin_inset Formula 
+\[
+f\left(x\right)=\left\{ \begin{array}{ccc}
+\binom{n}{x}p^{x}q^{n-x} & si & x=0,1,2,\cdots,n\\
+0 &  & \text{en otro caso}
+\end{array}\right.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename pdf/fig51.pdf
+	lyxscale 40
+	scale 40
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ figura 5.1 distribución binomial 
+\end_layout
+
+\begin_layout Standard
+Por tanto, su función de distribución es 
+\begin_inset Formula 
+\[
+F\left(x\right)=\left\{ \begin{array}{ccc}
+0 & si & x<0\\
+\sum_{k=0}^{[x]}\binom{n}{k}p^{k}q^{n-k} & si & n\geq x\geq0\\
+1 & si & x\geq n
+\end{array}\right.
+\]
+
+\end_inset
+
+La esperanza y la varianza se calcularon en los ejemplos 4.23 y 4.27 
+\begin_inset Formula 
+\[
+E\left(X\right)=np,V\left(X\right)=npq
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{defi}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ejemplo}[]
+\end_layout
+
+\end_inset
+
+ Supóngase que la probabilidad de que un cierto experimento tenga éxito
+ es 0.4 y sea X el número de éxitos que se obtienen en 15 realizaciones independi
+entes del experimento.
+ Utilice la tabla de la distribución binomial para determinar el valor P
+\begin_inset Formula $\left(9\geq X\geq6\right)$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ejemplo}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{solucion}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Tenemos que 
+\begin_inset Formula $X$
+\end_inset
+
+ tiene una distribución binomial con 
+\begin_inset Formula $p=0.4$
+\end_inset
+
+ y 
+\begin_inset Formula $n=15$
+\end_inset
+
+ por tanto se busca en la tabla estos parámetros y se suman los valores
+ entre 6 y 9 
+\begin_inset Formula 
+\begin{align*}
+P\left(9\geq X\geq6\right) & =0.2066+0.1771+0.1181+0.0612\\
+ & =0.\,\allowbreak563
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{solucion}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ejemplo}[]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Un cierto sistema electrónico contiene diez componentes.
+ Supóngase que la probabilidad de que un componente individual falle es
+ 0.2 y que los componentes fallan independientemente unos de otros.
+ 
+\begin_inset space \space{}
+\end_inset
+
+Dado de que al menos uno de los componentes ha fallado .¿Cuál es la probabilidad
+ de que fallen al menos dos de los componentes?
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ejemplo}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{solucion}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $p=0.2$
+\end_inset
+
+ y 
+\begin_inset Formula $n=9$
+\end_inset
+
+ Entonces 
+\begin_inset Formula $P\left(1\geq X\geq0\right)=0.4362$
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{solucion}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Subsection
+Distribución geométrica
+\end_layout
+
+\begin_layout Standard
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Distribución!Geométrica
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Consideremos una sucesión de v.a independientes de Bernoulli 
+\begin_inset Formula 
+\begin{align*}
+ & X_{1},X_{2},X_{3},\cdots\\
+donde\text{\quad}X_{i} & \leadsto B\left(np,npq\right)\quad\forall i=1,2,3,\cdots
+\end{align*}
+
+\end_inset
+
+Una v.a.
+ 
+\begin_inset Formula $X$
+\end_inset
+
+ tiene una distribución geométrica o de fracaso , si esta es la suma del
+ número de fracasos obtenidos hasta la aparición del primer éxito en la
+ sucesión 
+\begin_inset Formula $\{X_{i}\}_{i}$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\begin{array}{ccccccc}
+X_{1} & X_{2} & X_{3} & \cdots &  & X & f\\
+\downarrow & \downarrow & \downarrow & \vdots &  & \downarrow & \downarrow\\
+1 & 0 & 0 & \cdots & \Longrightarrow & 0 & f\left(0\right)=p\\
+0 & 1 & 0 & \cdots & \Longrightarrow & 1 & f\left(1\right)=qp\\
+0 & 0 & 1 & \cdots & \Longrightarrow & 2 & f\left(2\right)=qqp\\
+\vdots & \vdots & \vdots & \vdots & \vdots & \vdots & \vdots
+\end{array}
+\]
+
+\end_inset
+
+Siguiendo este proceso se obtiene que la función de probabilidad es 
+\begin_inset Formula 
+\[
+f\left(x\right)=\left\{ \begin{array}{ccc}
+pq^{x} & si & x=0,1,2,\cdots\\
+0 &  & \text{ en otro caso}
+\end{array}\right.
+\]
+
+\end_inset
+
+Tenemos que 
+\begin_inset Formula 
+\begin{align*}
+\sum_{k=0}^{\infty}f\left(k\right) & =\sum_{k=0}^{\infty}pq^{k}=\\
+p\sum_{k=0}^{\infty}q^{k} & =p\frac{1}{1-q}=1
+\end{align*}
+
+\end_inset
+
+ya que es una serie geométrica por ser 1
+\begin_inset Formula $\geq q\geq0$
+\end_inset
+
+, por lo que nos queda determinar su esperanza y su varianza
+\begin_inset Formula 
+\begin{align*}
+E\left(X\right) & =p\sum_{k=0}^{\infty}kq^{k}=\frac{p}{\left(p-1\right)^{2}}=\frac{pq}{\left(q-1\right)^{2}}=\frac{q}{p}\\
+E\left(X^{2}\right) & =p\sum_{k=0}^{\infty}k^{2}q^{k}=p\frac{q^{2}+q}{\left(1-q\right)^{3}}=\frac{q\left(q+1\right)}{p^{2}}\\
+V\left(X\right) & =\frac{q\left(q+1\right)}{p^{2}}-\left(\frac{q}{p}\right)^{2}=\frac{q}{p^{2}}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ejemplo}[]
+\end_layout
+
+\end_inset
+
+ Un matrimonio quiere tener una hija, y por ello deciden tener hijos hasta
+ el nacimiento de una hija.
+ Calcular la probabilidad de que una pareja acabe teniendo tres hijos o
+ más
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ejemplo}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{solucion}
+\end_layout
+
+\end_inset
+
+Vamos a suponer que la probabilidad de tener una niña es de 
+\begin_inset Formula $\frac{2}{3}.$
+\end_inset
+
+ Sea 
+\begin_inset Formula $X$
+\end_inset
+
+ el número de hijos varones que tienen antes de tener una niña.
+ por lo tanto 
+\begin_inset Formula $X\leadsto G\left(\frac{1}{2},\frac{3}{4}\right),entonces$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+P\left(X\geq2\right) & =1-P\left(X<2\right)\\
+ & =1-p-qp\\
+ & =1-\frac{2}{3}-\frac{2}{9}=\frac{1}{9}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{solucion}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Subsection
+Distribución hipergeométrica
+\end_layout
+
+\begin_layout Standard
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Distribución!Hipergeométrica
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Cuando El interés que se tiene es el de determinar la probabilidad de selecciona
+r 
+\begin_inset Formula $x$
+\end_inset
+
+ éxitos de los 
+\begin_inset Formula $k$
+\end_inset
+
+ posibles resultados o artículos considerados éxitos donde hay
+\begin_inset Formula $\ n-x$
+\end_inset
+
+ resultados considerados fracasos de los 
+\begin_inset Formula $N-k$
+\end_inset
+
+ posibles resultados, entonces se realiza un experimento llamado hipergeométrico.
+\end_layout
+
+\begin_layout Standard
+Un experimento hipergeométrico es aquel que sigue los siguientes pasos
+\end_layout
+
+\begin_layout Enumerate
+Se tiene una muestra aleatoria de tamaño 
+\begin_inset Formula $n$
+\end_inset
+
+ se selecciona sin reemplazo un total de 
+\begin_inset Formula $N$
+\end_inset
+
+ resultados o artículos
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $k$
+\end_inset
+
+ artículos del total de 
+\begin_inset Formula $N$
+\end_inset
+
+ pueden clasificarse como éxitos y 
+\begin_inset Formula $N-k$
+\end_inset
+
+ como fracasos.
+ 
+\end_layout
+
+\begin_layout Standard
+Entonces el número 
+\begin_inset Formula $X$
+\end_inset
+
+ de éxitos en un experimento hipergeométrico recibe el nombre de variable
+ aleatoria hipergeométrica y la distribucón de probabilidad se llama distribució
+n hipergeométrica
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{defi}{}{}
+\end_layout
+
+\end_inset
+
+ La distribución de probabilidad de la variable aleatoria hipergeométrica
+ 
+\begin_inset Formula $X$
+\end_inset
+
+, el número de éxitos en una muestra aleatoria de tamaño 
+\begin_inset Formula $n$
+\end_inset
+
+ seleccionada de 
+\begin_inset Formula $N$
+\end_inset
+
+ resultados posibles, de los cuales 
+\begin_inset Formula $k$
+\end_inset
+
+ son considerados éxitos y 
+\begin_inset Formula $N-k$
+\end_inset
+
+ como fracasos es 
+\begin_inset Formula 
+\[
+f\left(x\right)=\left\{ \begin{array}{ccc}
+\frac{\binom{k}{x}\binom{N-k}{n-x}}{\binom{N}{n}} & si & x=1,2,3,\cdots,n\\
+0 &  & \text{ en otro caso}
+\end{array}\right.
+\]
+
+\end_inset
+
+La media y la varianza 
+\begin_inset space \space{}
+\end_inset
+
+de una variable hipergeométrica son 
+\begin_inset Formula 
+\begin{align*}
+E\left(X\right) & =\frac{nk}{N}\\
+V\left(X\right) & =\frac{N-n}{N-1}n\frac{k}{N}\left(1-\frac{k}{N}\right)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{defi}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Cuando 
+\begin_inset Formula $N\longrightarrow\infty$
+\end_inset
+
+ observamos que 
+\begin_inset Formula $HG(N,n,p)\longrightarrow B\left(np,npq\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $E\left(X\right)=np$
+\end_inset
+
+ y 
+\begin_inset Formula $V\left(X\right)=npq\frac{N-n}{N-1}$
+\end_inset
+
+ el cual no es la misma varianza de la binomial por lo que al factor 
+\begin_inset Formula $\frac{N-n}{N-1}$
+\end_inset
+
+ se le llama de corrección para la población finita
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ejemplo}[]
+\end_layout
+
+\end_inset
+
+ En un departamento de inspección de envíos, se reciben en forma periódica
+ lotes de ejes de bombas.
+ Los lotes contienen 100 unidades y el siguiente plan de muestreo de aceptación
+ se utiliza.
+ Se selecciona una muestra aleatoria de 10 unidades sin reemplazo.
+ El lote se acepta si la muestra no tiene más de un artículo defectuoso
+ : supóngase que se recibe un lote si éxito una probabilidad de que un artículo
+ sea defectuoso es 0.05 .¿Cuál es la probabilidad de que sea aceptado?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ejemplo}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{solucion}
+\end_layout
+
+\end_inset
+
+Tenemos que determinar 
+\begin_inset Formula $P\left(1\geq X\right)$
+\end_inset
+
+ entonces 
+\begin_inset Formula $k=0.\allowbreak05\ast100$
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+P\left(1\geq X\right)=\sum_{x=0}^{1}\frac{\binom{5}{x}\binom{95}{10-x}}{\binom{100}{10}}=0.\,\allowbreak923\,14:
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{solucion}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Subsection
+Distribucción de Poisson
+\end_layout
+
+\begin_layout Standard
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Distribucion!De Poisson
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $X$
+\end_inset
+
+ una variable aleatoria con una distribución discreta y supóngase que el
+ valor de 
+\begin_inset Formula $X$
+\end_inset
+
+ debe ser un entero no negativo.
+ Se dice que 
+\begin_inset Formula $X$
+\end_inset
+
+ tiene una distribución de Poisson con media 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ si la f.p de 
+\begin_inset Formula $X$
+\end_inset
+
+ es 
+\begin_inset Formula 
+\[
+f\left(x\right)=\left\{ \begin{array}{ccc}
+\frac{e^{-\lambda}\lambda^{x}}{x!} & si & x=1,2,3,\cdots\\
+0 &  & \text{ en otro caso}
+\end{array}\right.
+\]
+
+\end_inset
+
+del cálculo tenemos que 
+\begin_inset Formula $e^{\lambda}=\sum_{x=0}^{\infty}\frac{\lambda^{x}}{x!}$
+\end_inset
+
+ por tanto 
+\begin_inset Formula $\sum_{x=0}^{\infty}f\left(x\right)=\sum_{x=0}^{\infty}\frac{e^{-\lambda}\lambda^{x}}{x!}=e^{-\lambda}e^{\lambda}=1$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $E\left(X\right)=\sum_{x=0}^{\infty}x\frac{e^{-\lambda}\lambda^{x}}{x!}=\lambda\sum_{x=0}^{\infty}\frac{e^{-\lambda}\lambda^{x-1}}{(x-1)!}=\lambda$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+se deja como ejercicio comprobar que 
+\begin_inset Newline newline
+\end_inset
+
+E
+\begin_inset Formula $\left(X\left(X-1\right)\right)=\lambda^{2}=E\left(X^{2}\right)-\lambda$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+V
+\begin_inset Formula $\left(X\right)=\lambda$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se denota 
+\begin_inset Formula $X\leadsto P\left(\lambda,\lambda\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ejemplo}[]
+\end_layout
+
+\end_inset
+
+ Cierta enfermedad tiene una probabilidad muy baja de ocurrir, 
+\begin_inset Formula $p=10^{-6}$
+\end_inset
+
+.
+ Calcular la probabilidad de que en una ciudad con 
+\begin_inset Formula $500000$
+\end_inset
+
+ habitantes haya más de 3 personas con dicha enfermedad.
+ Calcular el número de habitantes que la padecen.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ejemplo}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{solucion}
+\end_layout
+
+\end_inset
+
+Si consideramos la v.a 
+\begin_inset Formula $X$
+\end_inset
+
+ que contabiliza el número de personas que padecen la enfermedad, es claro
+ que sigue un modelo binomial, pero que puede ser aproximado por un modelo
+ de Poisson, tal que 
+\begin_inset Formula $\lambda=np=5,$
+\end_inset
+
+ es decir 
+\begin_inset Formula $X\leadsto P\left(5,5\right),entonces$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+P\left(X>3\right) & =1-P\left(3\geq X\right)\\
+ & =1-\sum_{i=0}^{3}\frac{\exp\left(-5\right)5^{i}}{i!}=1-\frac{118}{3}e^{-5}\\
+ & =0.\,\allowbreak734\,97
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{solucion}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Proceso de poisson
+\end_layout
+
+\begin_layout Standard
+Al definir un proceso de Poisson, consideramos una colección de sucesos
+ relativos al tiempo, las cuales generalmente se les denomina llegadas.
+\begin_inset Newline newline
+\end_inset
+
+Al escoger una variable aleatoria 
+\begin_inset Formula $X$
+\end_inset
+
+ de interés como el número de llegadas que ocurren en un intervalo de tiempo
+ 
+\begin_inset Formula $[0,t]$
+\end_inset
+
+ , obtenemos una variable discretizada con 
+\begin_inset Formula $R_{X}=\{0,1,2,\cdots\}$
+\end_inset
+
+ y que para determinar su distribución hay que suponer dos condiciones las
+ cuales solo tienen sustento empírico 
+\begin_inset Newline newline
+\end_inset
+
+La primera condición es que el número de llegadas durante un intervalo de
+ tiempo son representadas por variables aleatorias independientes, la segunda
+ es que exista una constante 
+\begin_inset Formula $c>0$
+\end_inset
+
+ tal que cumpla los siguientes postulados
+\end_layout
+
+\begin_layout Enumerate
+La probabilidad de que ocurrirá con exactitud una llegada en un intervalo
+ con duración 
+\begin_inset Formula $\triangle t$
+\end_inset
+
+, es aproximadamente 
+\begin_inset Formula $c\triangle t$
+\end_inset
+
+.
+ donde 
+\begin_inset Formula $c$
+\end_inset
+
+ se le denomina tasa de llegada media
+\end_layout
+
+\begin_layout Enumerate
+La probabilidad de que ocurrirá exactamente cero llegadas en el intervalo
+ es aproximadamente 
+\begin_inset Formula $1-c\Delta t$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+La probabilidad de que ocurra dos o más llegadas en le intervalo es igual
+ a una cantidad 
+\begin_inset Formula $\circ\left(\Delta t\right),$
+\end_inset
+
+ donde 
+\begin_inset Formula $\circ$
+\end_inset
+
+ es una función de 
+\begin_inset Formula $t$
+\end_inset
+
+ con la propiedad que 
+\begin_inset Formula 
+\[
+\lim_{t\longrightarrow\infty}\frac{\circ\left(t\right)}{t}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Considerando estos supuestos entonces 
+\begin_inset Formula 
+\[
+\lambda=c\Delta t\text{ y }X\leadsto P\left(c\Delta t,c\Delta t\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ejemplo}[]
+\end_layout
+
+\end_inset
+
+ Supóngase que un comerciante determina que el número de pedidos para un
+ cierto aparato doméstico en un periodo de tiempo particular tiene una distribuc
+ión de Poisson con parámetro 
+\begin_inset Formula $\lambda.$
+\end_inset
+
+ Al le gustaría determinar el nivel de existencias 
+\begin_inset Formula $a$
+\end_inset
+
+ para el principio del periodo de manera que haya una probabilidad de al
+ menos 0.95 de surtir a todos los clientes que pidan el aparato durante el
+ periodo, pues no desea devolver pedidos ni volver a surtir el almacén durante
+ ese periodo.
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ejemplo}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{solucion}
+\end_layout
+
+\end_inset
+
+ Si 
+\begin_inset Formula $X$
+\end_inset
+
+ representa el número de pedidos, entonces 
+\begin_inset Formula 
+\[
+P\left(a\geq X\right)\geq0.95\Longleftrightarrow0.5\geq P\left(X>a\right)
+\]
+
+\end_inset
+
+por lo tanto 
+\begin_inset Formula 
+\[
+0.5\geq\sum_{x=\left(a+1\right)}^{\infty}\frac{e^{-\lambda}\lambda^{x}}{x!}
+\]
+
+\end_inset
+
+De acuerdo con la tabla 
+\begin_inset Formula $7=a+1\Longrightarrow a=6$
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{solucion}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ejemplo}[]
+\end_layout
+
+\end_inset
+
+ Un dispositivo electrónico de conmutación ocasionalmente funciona mal y
+ puede ser necesario reemplazarlo.
+ Se sabe que el dispositivo es satisfactorio si, en promedio, no comete
+ más de 0.20 errores por hora.
+ Se selecciona un periodo particular de 5 horas como prueba del dispositivo.
+ Si no ocurre más de un error, el dispositivo se considera satisfactorio.¿Cuál
+ es la probabilidad de que un dispositivo se considere insatisfactorio de
+ acuerdo con la prueba?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ejemplo}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{solucion}
+\end_layout
+
+\end_inset
+
+ Sea 
+\begin_inset Formula $X$
+\end_inset
+
+ el número de fallas del dispositivo en 5 horas entonces podemos suponer
+ que está variable sigue un proceso de Poisson tal que 
+\begin_inset Formula $\lambda=5\left(0.20\right)=1$
+\end_inset
+
+ entonces 
+\begin_inset Formula 
+\[
+P\left(X\geq1\right)=1-P\left(X<1\right)=0.63
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{solucion}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Subsection
+Distribucción Multinomial
+\end_layout
+
+\begin_layout Standard
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Distribución!Multinomial
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Supóngase que una población 
+\begin_inset space \space{}
+\end_inset
+
+contiene artículos de 
+\begin_inset Formula $k\geq2$
+\end_inset
+
+ tipos distintos y que la proporción de artículos del tipo 
+\begin_inset Formula $i$
+\end_inset
+
+ en la población es 
+\begin_inset Formula $p_{i}$
+\end_inset
+
+, 
+\begin_inset Formula $i=1,2,3,\cdots,k$
+\end_inset
+
+.Supóngase que 
+\begin_inset Formula $p_{i}>0$
+\end_inset
+
+ y que 
+\begin_inset Formula $\sum_{i=1}^{k}p_{i}=1.$
+\end_inset
+
+ Además, supóngase que es seleccionan al azar con reemplazo 
+\begin_inset Formula $n$
+\end_inset
+
+ artículos de la población y sea 
+\begin_inset Formula $X_{i}$
+\end_inset
+
+ el número de artículos seleccionados que son del tipo 
+\begin_inset Formula $i.$
+\end_inset
+
+ Se dice entonces que el vector aleatorio 
+\begin_inset Formula $\overrightarrow{X}=\left(X_{1},\cdots,X_{k}\right)$
+\end_inset
+
+ tiene una distribución multinomial con parámetro 
+\begin_inset Formula $p\left(p_{1},\cdots,p_{k}\right)$
+\end_inset
+
+ es 
+\begin_inset Formula 
+\[
+f\left(\overrightarrow{x}\right)=\left\{ \begin{array}{ccc}
+\frac{n!}{x_{1}!\cdots x_{2}!} & si & x_{1},\cdots x_{k}\in\gz^{+}\\
+0 &  & \text{ si no}
+\end{array}\right.
+\]
+
+\end_inset
+
+Donde 
+\begin_inset Formula $\sum_{i=1}^{k}x_{i}=n$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Medias, varianzas y covarianzas
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+E\left(X_{i}\right) & =np_{i},V\left(X_{i}\right)=np_{i}q_{i}\\
+V\left(X_{i}+X_{j}\right) & =n\left(p_{i}+p_{j}\right)\left(1-p_{i}-p_{j}\right)\\
+cov\left(X_{i},X_{j}\right) & =-np_{i}p_{j}\quad\forall i,j=1,2,\cdots,k
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ejemplo}[]
+\end_layout
+
+\end_inset
+
+ Se fabican lápices mecánicos por medio de un proceso que implica una gran
+ cantidad de mano de obra en las operaciones de ensamble.
+ éste es un trabajo altamente repetitivo y hay un pago de incentivo.
+ La inspección final ha revelado que el 85% del producto es bueno y el 10%
+ defectuoso pero que puede reelaborarse, y el 5% es defectuoso y se desecha.
+ Estos porsentajes se mantienen constantes todo el tiempo.
+ Se selecciona una muestra aleatoria de 20 artículos .
+ Si se designa 
+\begin_inset Formula 
+\begin{align*}
+X_{1} & =\text{ número de artículos buenos}\\
+X_{2} & =\text{número de artículos defectuosos que se pueden rescatar}\\
+X_{3} & =\text{número de artículos que se desechan}
+\end{align*}
+
+\end_inset
+
+Determinar la probabilidad que 18 sean buenos y que 2 se puedan rescatar
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ejemplo}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{solucion}
+\end_layout
+
+\end_inset
+
+ Nos piden la probabilidad 
+\begin_inset Formula 
+\begin{align*}
+P\left(18,2,0\right) & =\frac{20!}{\left(18!\right)\left(2!\right)\left(0!\right)}\left(0.85\right)^{18}\left(0.1\right)^{2}\left(0.05\right)^{0}\\
+ & =0.\,\allowbreak101\,93
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{solucion}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Algunas distribuciones continuas
+\end_layout
+
+\begin_layout Subsection
+Distribución uniforme
+\end_layout
+
+\begin_layout Standard
+Se dice que una v.a 
+\begin_inset Formula $X$
+\end_inset
+
+ tiene una distribución uniforme continua en un intervalo 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+ si su función densidad es 
+\begin_inset Formula 
+\[
+f\left(x\right)=\left\{ \begin{array}{ccc}
+\frac{1}{b-a} & si & x\in\lbrack a,b]\\
+0 &  & \text{en otro caso}
+\end{array}\right.
+\]
+
+\end_inset
+
+y se denota 
+\begin_inset Formula $X\leadsto U_{c}\left(\mu,\sigma^{2}\right)$
+\end_inset
+
+ donde 
+\begin_inset Formula $\mu$
+\end_inset
+
+ es la media y 
+\begin_inset Formula $\sigma^{2}$
+\end_inset
+
+ es la varianza.
+ Se puede determinar su función de distribución como 
+\begin_inset Formula 
+\[
+F\left(x\right)=\left\{ \begin{array}{ccc}
+0 & si & x<a\\
+\frac{x-a}{b-a} & si & x\in\lbrack a,b]\\
+1 & si & x\geq b
+\end{array}\right.
+\]
+
+\end_inset
+
+Es fácil calcular su media y su varianza se le deja como ejercicio al lector
+ 
+\begin_inset Formula 
+\begin{align*}
+E\left(X\right) & =\frac{b+a}{2}\\
+V\left(X\right) & =\frac{\left(b-a\right)^{2}}{12}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename pdf/Img502.pdf
+	lyxscale 40
+	scale 40
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ Distribución uniforme 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ejemplo}[]
+\end_layout
+
+\end_inset
+
+ Se elige un punto al azar en el intervalo [0,10].
+ Supóngase que deseamos encontrar la probabilidad de que el punto esté entre
+ 1.5 y 3.5 si la función de densidad de la v.a aleatoria X es 
+\begin_inset Formula 
+\[
+f\left(x\right)=\left\{ \begin{array}{ccc}
+\frac{1}{10} & si & x\in\lbrack0,10]\\
+0 &  & \text{si no}
+\end{array}\right.
+\]
+
+\end_inset
+
+Tenemos que 
+\begin_inset Formula 
+\[
+P\left(3,5\geq X\geq1,5\right)=\frac{2}{10}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ejemplo}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Distribución exponencial
+\end_layout
+
+\begin_layout Standard
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Distribución!Exponencial
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La distribución exponencial es el equivalente continuo por así decirlo
+ de la distribución geométrica discreta, Esta describe un proceso en el
+ que.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Nos interesa saber el tiempo hasta que ocurre determinado evento, sabiendo
+ que el tiempo que pueda ocurrir desde cualquier instante dado 
+\begin_inset Formula $t$
+\end_inset
+
+, hasta que ello ocurra en un instante 
+\begin_inset Formula $t_{f}$
+\end_inset
+
+, no depende del tiempo trascurrido anteriormente en el que no pasó nada
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $X$
+\end_inset
+
+ es una v.a se dice que tiene una distribución exponencial si 
+\begin_inset Formula 
+\[
+f\left(x\right)=\left\{ \begin{array}{ccc}
+\lambda e^{-\lambda x} & si & x>0\\
+0 &  & \text{si no}
+\end{array}\right.
+\]
+
+\end_inset
+
+Y su función de distribución es 
+\begin_inset Formula 
+\[
+F\left(x\right)=\left\{ \begin{array}{ccc}
+1-e^{-\lambda x} & si & x>0\\
+0 &  & \text{si no}
+\end{array}\right.
+\]
+
+\end_inset
+
+Su esperanza y su varianza son 
+\begin_inset Formula 
+\begin{align*}
+E\left(X\right) & =\frac{1}{\lambda}\\
+V\left(X\right) & =\frac{1}{\lambda^{2}}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename pdf/Img503.pdf
+	scale 40
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ Distribución exponencial 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ejemplo}[]
+\end_layout
+
+\end_inset
+
+ Se sabe que un componente electrónico tiene una vida útil representada
+ por una densidad exponencial con tasa de falla de 10
+\begin_inset Formula $^{-5}$
+\end_inset
+
+ fallas por hora.Determinar la fracción de tales componentes que podrían
+ fallar antes de la vida media
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ejemplo}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{solucion}
+\end_layout
+
+\end_inset
+
+ Sea 
+\begin_inset Formula $\ T$
+\end_inset
+
+ el tiempo que tarda en dañarse el componente, entonces 
+\begin_inset Formula $\lambda=10^{5}$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+P\left(\frac{1}{\lambda}\geq T\right)=\int_{0}^{\frac{1}{\lambda}}\lambda e^{-\lambda x}dx=1-e^{-1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{solucion}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ejemplo}[]
+\end_layout
+
+\end_inset
+
+ Se ha comprado que el tiempo de vida de cierto tipo de marca pasos sigue
+ una distribución exponencial con media de 16 años.
+ ¿uál es la probabilidad de que a una persona a la que se le ha implantado
+ este marca paso se le deba reimplantar otro antes de 20 años?.
+ Si el marca paso lleva funcionando correctamente 5 años en un paciente,
+ ¿Cuál es la probabilidad de que haya que cambiarlo antes de 25 años?.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ejemplo}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{solucion}
+\end_layout
+
+\end_inset
+
+ Sea 
+\begin_inset Formula $T$
+\end_inset
+
+ la variable aleatoria que mide la duración de un marca pasos en una persona.
+ Tenemos que 
+\begin_inset Formula $\lambda=\frac{1}{16},$
+\end_inset
+
+ entonces 
+\begin_inset Formula 
+\[
+P\left(20\geq T\right)=\int_{0}^{20}f\left(t\right)dt=F\left(20\right)=0.7135
+\]
+
+\end_inset
+
+ahora tenemos 
+\begin_inset Formula 
+\[
+P\left(25\geq T|T\geq5\right)=\frac{P\left(25\geq T\geq5\right)}{P\left(T\geq5\right)}
+\]
+
+\end_inset
+
+Por lo tanto 
+\begin_inset Formula 
+\begin{align*}
+P\left(25\geq T\geq5\right) & =F\left(25\right)-F\left(0\right)=0.522\\
+P\left(T\geq5\right) & =F\left(+\infty\right)-F\left(5\right)=0.7316\\
+P\left(25\geq T|T\geq5\right) & =0.7135
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{solucion}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Subsection
+Distribución normal o Gaussiana
+\end_layout
+
+\begin_layout Standard
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Distribución!Normal
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Distribución!Gaussiana
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se dice que una v.a tiene una distribución normal de parámetros 
+\begin_inset Formula $\mu$
+\end_inset
+
+ y 
+\begin_inset Formula $\sigma^{2}$
+\end_inset
+
+ lo que se denota 
+\begin_inset Formula $X\leadsto N\left(\mu,\sigma^{2}\right)$
+\end_inset
+
+ si su función de densidad es 
+\begin_inset Formula 
+\[
+f\left(x\right)=\begin{array}{ccc}
+\frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right)^{2}} & si & x\in\rz\end{array}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+F\left(x\right)=P\left(x\geq X\right)=\int_{-\infty}^{x}f\left(x\right)dx
+\]
+
+\end_inset
+
+La media y la varianza son 
+\begin_inset Formula 
+\begin{align*}
+E\left(X\right) & =\mu\\
+V\left(X\right) & =\sigma^{2}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Estas variables tienen una propiedad importante que se llama reproductividad,
+ es decir la suma de variables aleatorias 
+\begin_inset space \space{}
+\end_inset
+
+e independientes normales también es normal
+\end_layout
+
+\begin_layout Itemize
+Una propiedad de esta distribución es que es simétrica con respecto a la
+ media
+\end_layout
+
+\begin_layout Itemize
+Si 
+\begin_inset Formula $X\leadsto N\left(0,1\right)$
+\end_inset
+
+ se dice que 
+\begin_inset Formula $X$
+\end_inset
+
+ tiene una distribución normal estándar y su f.d se denota 
+\begin_inset Formula $\varphi\left(X\right)$
+\end_inset
+
+ y su función de distribución 
+\begin_inset Formula $\Phi\left(X\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Los puntos de inflexión están en 
+\begin_inset Formula $x=\mu\pm\sigma$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula 
+\[
+\lim_{x\longrightarrow+\infty}f\left(x\right)=0\;\;\text{y}\;\;\lim_{x\longrightarrow-\infty}f\left(x\right)=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename pdf/img504.pdf
+	lyxscale 40
+	scale 40
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula 
+\[
+Distribuci\acute{o}n\text{ Normal}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename pdf/img5051.pdf
+	lyxscale 40
+	scale 40
+
+\end_inset
+
+ 
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Distribuciones Normales con igual varianza y diferente esperanza
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement hptb
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename pdf/img506.pdf
+	lyxscale 40
+	scale 40
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Distribuciones Normales con igual media pero diferente varianza
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{proposicion}{}
+\end_layout
+
+\end_inset
+
+ Sean 
+\begin_inset Formula $a,b\in\rz$
+\end_inset
+
+, entonces 
+\begin_inset Formula 
+\begin{align*}
+X & \leadsto N\left(\mu,\sigma^{2}\right)\Longrightarrow\\
+Y & =aX+b\leadsto N\left(a\mu+b,\left(a\sigma\right)^{2}\right)
+\end{align*}
+
+\end_inset
+
+Este resultado lo utilizaremos para estandarizar una variable normal
+\begin_inset Newline newline
+\end_inset
+
+Si 
+\begin_inset Formula $X\leadsto N\left(\mu,\sigma^{2}\right)$
+\end_inset
+
+ entonces 
+\begin_inset Formula $Z=\frac{X-\mu}{\sigma}\leadsto N\left(0,1\right)$
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{proposicion}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ejemplo}[]
+\end_layout
+
+\end_inset
+
+ Supongamos que cierto fenómeno pueda ser representado mediante una v.a.
+ aleatoria 
+\begin_inset Formula $X\leadsto N\left(45,81\right)$
+\end_inset
+
+, y queremos calcular la probabilidad de que 
+\begin_inset Formula $X$
+\end_inset
+
+ tome un valor entre 39 y 48,
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ejemplo}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{solucion}
+\end_layout
+
+\end_inset
+
+ Para resolver este problema debemos usar la tabla que aparece al final
+ del capítulo, pero antes hay que estándarizar la variable de tal manera
+ que 
+\begin_inset Formula 
+\begin{align*}
+Z & =\frac{X-\mu}{\sigma}\\
+ & =\frac{X-45}{\sqrt{81}}
+\end{align*}
+
+\end_inset
+
+de modo que si 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $48\geq X\geq39\Longleftrightarrow\frac{1}{3}\geq\frac{X-45}{9}\geq\frac{-2}{3},$
+\end_inset
+
+ entonces 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $P\left(48\geq X\geq39\right)=\Phi\left(\frac{1}{3}\geq Z\geq\frac{-2}{3}\right)=0,378$
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{solucion}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename pdf/zd1cd.pdf
+	lyxscale 40
+	scale 40
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Cola de la derecha
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $Z\leq\frac{1}{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ejemplo}[]
+\end_layout
+
+\end_inset
+
+ Sugún un estudio de la altura de los varones de cierta ciudad es una variable
+ aleatoria 
+\begin_inset Formula $X$
+\end_inset
+
+, que podemos considerar que se distribuye normalmente con media 175cm y
+ varianza 10cm.
+ Determinar un intervalo para el cual el 50% de los habitantes de esa ciudad
+ están comprendidos en él.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ejemplo}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{solucion}
+\end_layout
+
+\end_inset
+
+ Existen infinitas soluciones para este problema en la gráficas siguientes
+ podemos analizar tres de las tantas posibilidades 
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename pdf/Img507.pdf
+	lyxscale 40
+	scale 40
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ fig 5.07 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $X$
+\end_inset
+
+ 
+\begin_inset Formula $\geq x_{0.5}$
+\end_inset
+
+ y que 
+\begin_inset Formula $x_{0.75}\geq X\geq x_{0.25}$
+\end_inset
+
+ en los dos casos hay que estandarizar las variables, en el primer caso
+ es obvio que el intervalo es 
+\begin_inset Formula $(-\infty,175]$
+\end_inset
+
+ en el segundo caso usaremos la tabla para determinar 
+\begin_inset Formula 
+\begin{align*}
+z_{0.75} & =0,675\\
+ & =\frac{x_{0.75}-175}{10}\Longrightarrow\\
+x_{0.75} & =181.75\\
+z_{0.25} & =-0.675\\
+ & =\frac{x_{0.25}-175}{10}\Longrightarrow\\
+x_{0.25} & =168,25
+\end{align*}
+
+\end_inset
+
+por lo que el intervalo es [168.5;181.75] de los dos resultados escogemos
+ el segundo por ser de menor longitud y ser simétrico con respecto a la
+ media
+\begin_inset Newpage newpage
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{solucion}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Distribuci
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ó
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+n Gamma
+\end_layout
+
+\begin_layout Standard
+Muchos problemas de estad
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+í
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+stica se resuelven con la distribuci
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ó
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+n Normal como estudiaremos a partir del pr
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ó
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ximo cap
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+í
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+tulo, pero en ocasiones los problemas nos indican que la distribuci
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ó
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+n de la variable de inter
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+é
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+s no es acampanada y sim
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+é
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+trica , por lo que tenemos que usar distribuciones sesgadas y estas son
+ precisamente las familias de distribuciones Gamma y Beta.
+\end_layout
+
+\begin_layout Standard
+Antes de definir la distribuci
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ó
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+n Gamma definiremos una funci
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ó
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+n muy utilizada en matem
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+á
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ticas llamada funci
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ó
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+n Gamma y de la cual la distribuci
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ó
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+n Gamma toma su nombre.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{defi}{}{}
+\end_layout
+
+\end_inset
+
+ [Funci
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ó
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+n Gamma]Para cualquier positivo 
+\begin_inset Formula $\alpha$
+\end_inset
+
+, el valor 
+\begin_inset Formula $\Gamma\left(\alpha\right)$
+\end_inset
+
+ se define por la integral
+\begin_inset Formula 
+\begin{equation}
+\Gamma\left(\alpha\right)=\int_{0}^{\infty}x^{\alpha-1}e^{-x}dx,
+\end{equation}
+
+\end_inset
+
+se puede demostrar que esta integral existe para cualquier 
+\begin_inset Formula $\alpha>0$
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{defi}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Propiedades de la funci
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ó
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+n Gamma
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{teo}{}{}
+\end_layout
+
+\end_inset
+
+ Si 
+\begin_inset Formula $\alpha>1$
+\end_inset
+
+, entonces 
+\begin_inset Formula $\Gamma\left(\alpha\right)=\left(\alpha-1\right)\Gamma\left(\alpha-1\right)$
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{teo}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{lema}{}{}
+\end_layout
+
+\end_inset
+
+ Si 
+\begin_inset Formula $n$
+\end_inset
+
+ es un entero positivo se tiene que 
+\begin_inset Formula $\Gamma\left(n\right)=\left(n-1\right)!$
+\end_inset
+
+ , 
+\begin_inset Formula $\Gamma\left(n+\dfrac{1}{2}\right)=\left(n-\dfrac{1}{2}\right)\left(n-\dfrac{3}{2}\right)\left(n-\dfrac{5}{2}\right)\cdots\left(\dfrac{1}{2}\right)\Gamma\left(\dfrac{1}{2}\right)$
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{lema}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{lema}{}{}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\Gamma\left(\dfrac{1}{2}\right)=\sqrt{\pi}$
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{lema}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{defi}{}{}
+\end_layout
+
+\end_inset
+
+ [Distribuci
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ó
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+n Gamma]Sea 
+\begin_inset Formula $X$
+\end_inset
+
+ una variable aleatoria continua se dice que tiene una distribuci
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ó
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+n Gamma Si su 
+\begin_inset Formula $f.d.p$
+\end_inset
+
+ es 
+\begin_inset Formula 
+\begin{equation}
+f\left(x\right)=\left\{ \begin{array}{cc}
+\dfrac{\beta^{\alpha}}{\Gamma\left(\alpha\right)}x^{\alpha-1}e^{-\beta x} & \text{para }x>0\\
+0 & \text{para }x\leq0
+\end{array}\right.
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{defi}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Calculemos la esperanza y la varianza de 
+\begin_inset Formula $X$
+\end_inset
+
+Antes de seguir con esta distribuci
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ó
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+n definiremos una funci
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ó
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+n llamada generadora de momentos
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{defi}{}{}
+\end_layout
+
+\end_inset
+
+ Sea 
+\begin_inset Formula $X$
+\end_inset
+
+ una variable aleatoria la funci
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ó
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+n generadora de momentos se define 
+\begin_inset Formula 
+\begin{equation}
+\psi\left(t\right)=E\left(e^{tX}\right),\text{ para cada real }t
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{defi}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+resulta que 
+\begin_inset Formula $\psi^{\prime}\left(0\right)=E\left(X\right),$
+\end_inset
+
+ y en general 
+\begin_inset Formula $\psi^{\prime}\left(t\right)$
+\end_inset
+
+ existe para todos los valores de 
+\begin_inset Formula $t$
+\end_inset
+
+ en un intervalo alrededor de 
+\begin_inset Formula $t=0$
+\end_inset
+
+ y adem
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+á
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+s 
+\begin_inset Formula 
+\begin{equation}
+\psi^{\left(n\right)}\left(0\right)=\left[\dfrac{d^{n}}{dt^{n}}E\left(e^{tX}\right)\right]_{t=0}=E\left(X^{n}\right)
+\end{equation}
+
+\end_inset
+
+De esta forma la funci
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ó
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+n generadora de momentos para nuestro caso ser
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+í
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+a
+\begin_inset Formula 
+\begin{equation}
+\psi\left(t\right)=\int_{0}^{\infty}e^{tx}f\left(x\right)dx=\dfrac{\beta^{\alpha}}{\Gamma\left(\alpha\right)}\dfrac{\Gamma\left(\alpha\right)}{\left(\beta-t\right)^{\alpha}}=\beta^{\alpha}\left(\beta-t\right)^{-\alpha},\ \ t<\beta
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Determinemos 
+\begin_inset Formula 
+\begin{align}
+E\left(X^{n}\right) & =\int_{0}^{\infty}x^{n}f\left(x\right)dx=\dfrac{\beta^{\alpha}}{\Gamma\left(\alpha\right)}\int_{0}^{\infty}x^{\alpha+n-1}e^{-\beta x}dx\\
+ & =\dfrac{\beta^{\alpha}}{\Gamma\left(\alpha\right)}\dfrac{\Gamma\left(\alpha+n\right)}{\beta^{\alpha+n}}=\dfrac{\Gamma\left(\alpha+n\right)}{\beta^{n}\Gamma\left(\alpha\right)}\nonumber \\
+ & \dfrac{\alpha\left(\alpha+1\right)\left(\alpha+2\right)\cdots\left(\alpha+n-1\right)}{\beta^{n}}\nonumber 
+\end{align}
+
+\end_inset
+
+es decir 
+\begin_inset Formula 
+\begin{align}
+E\left(X\right) & =\dfrac{\alpha}{\beta},\ \ \ E\left(X^{2}\right)=\dfrac{\alpha\left(\alpha+1\right)}{\beta^{2}}\\
+V\left(X\right) & =\dfrac{\alpha\left(\alpha+1\right)}{\beta^{2}}-\left(\dfrac{\alpha}{\beta}\right)^{2}=\dfrac{\alpha}{\beta^{2}}\nonumber 
+\end{align}
+
+\end_inset
+
+Si 
+\begin_inset Formula $X$
+\end_inset
+
+ tiene una distribuci
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ó
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+n Gamma se denota 
+\begin_inset Formula $X\leadsto\Gamma\left(\dfrac{\alpha}{\beta},\dfrac{\alpha}{\beta^{2}}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{teo}{}{}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "gamma"
+
+\end_inset
+
+Si las variables aleatorias 
+\begin_inset Formula $X_{1},X_{2},\cdots X_{k}$
+\end_inset
+
+ son independientes y 
+\begin_inset Formula $X_{i}\leadsto$
+\end_inset
+
+ 
+\begin_inset Formula $\Gamma\left(\dfrac{\alpha_{i}}{\beta},\dfrac{\alpha_{i}}{\beta^{2}}\right),$
+\end_inset
+
+ para todo 
+\begin_inset Formula $i=1,2,3,\cdots,k$
+\end_inset
+
+ entonces 
+\begin_inset Formula $%TCIMACRO{\dsum\limits _{i=1}^{k}}%
+%BeginExpansion
+{\displaystyle \sum\limits _{i=1}^{k}}%EndExpansion
+X_{i}\leadsto\Gamma\left(\dfrac{%TCIMACRO{\dsum\limits _{i=1}^{k}}%
+%BeginExpansion
+{\displaystyle \sum\limits _{i=1}^{k}}%EndExpansion
+\alpha_{i}}{\beta},\dfrac{%TCIMACRO{\dsum\limits _{i=1}^{k}}%
+%BeginExpansion
+{\displaystyle \sum\limits _{i=1}^{k}}%EndExpansion
+\alpha_{i}}{\beta^{2}}\right)$
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{teo}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+ahora estamos en condiciones de determinar la 
+\begin_inset Formula $f.d.a$
+\end_inset
+
+ de 
+\begin_inset Formula $X$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula 
+\begin{equation}
+F\left(x\right)=\left\{ \begin{array}{cc}
+1-\int_{x}^{\infty}\dfrac{\lambda}{\Gamma\left(\alpha\right)}\left(\lambda t\right)^{\alpha-1}e^{-\lambda t}dt & x>0\\
+0 & x\leq0
+\end{array}\right.
+\end{equation}
+
+\end_inset
+
+si 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ es un entero positivo esta integral puede integrarse por partes obteniendo
+\begin_inset Formula 
+\begin{equation}
+F\left(x\right)=1-\sum_{k=0}^{\alpha-1}\dfrac{e^{-\lambda x}\left(\lambda x\right)^{k}}{k!},\ \ x>0
+\end{equation}
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "b"
+hor_pos "c"
+has_inner_box 1
+inner_pos "b"
+use_parbox 1
+use_makebox 0
+width "2.1006in"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename pdf/gammaden.pdf
+	lyxscale 40
+	scale 40
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Formula $f.d.p$
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+de la 
+\begin_inset space \space{}
+\end_inset
+
+Gamma 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "b"
+hor_pos "c"
+has_inner_box 1
+inner_pos "b"
+use_parbox 1
+use_makebox 0
+width "2.1006in"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename pdf/gammadst.pdf
+	lyxscale 40
+	scale 40
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Formula $f.d.a~\ \ de~\ la\ $
+\end_inset
+
+Gamma 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%EndExpansion
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+que es la suma de los t
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+é
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+rminos de Poisson con media 
+\begin_inset Formula $\lambda x$
+\end_inset
+
+ con lo que nos queda que podemos utilizar la
+\begin_inset space \space{}
+\end_inset
+
+distribuci
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ó
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+n de Poisson para calcular la distribuci
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ó
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+n Gamma 
+\begin_inset Formula $f\left(y\right)$
+\end_inset
+
+ haciendo 
+\begin_inset Formula $y=\lambda x,\ \beta=\lambda^{-1}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ejemplo}[]
+\end_layout
+
+\end_inset
+
+ Sea 
+\begin_inset Formula $X$
+\end_inset
+
+ una variable aleatoria tal que 
+\begin_inset Formula $X\leadsto Exp\left(\dfrac{1}{\lambda},\dfrac{1}{\lambda^{2}}\right),$
+\end_inset
+
+ esta variable se puede representar con una Gamma haciendo 
+\begin_inset Formula $\alpha=1,\beta=\lambda^{-1}$
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ejemplo}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ejemplo}[]
+\end_layout
+
+\end_inset
+
+ Un sistema de control opera como muestra la figura .
+ al principio la unidad 1 est
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+á
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ en l
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+í
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+nea, en tanto que las unidades 2 , 3 y 4 est
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+á
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+n en espera.
+ Cuando la unidad 1 falla entra en funcionamiento la unidad 2 hasta que
+ falla y entonces se activara la unidad 3, cuando esta falla entre en funcionami
+ento la unidad 4 el interruptor de decisi
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ó
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+n se supone perfecto, por lo que la vida del sistema puede representarse
+ como la suma de las vidas de los subsistemas.
+ As
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+í
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $X=X_{1}+X_{2}+X_{3}+X_{4}$
+\end_inset
+
+.
+ Si la vidas de los subsistemas son independientes entre s
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+í
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+, y cada subsistema tiene una vida 
+\begin_inset Formula $X_{j,}\ j=1,2,3,4,$
+\end_inset
+
+ con 
+\begin_inset Formula $f.d.p$
+\end_inset
+
+ 
+\begin_inset Formula 
+\begin{equation}
+g\left(x_{j}\right)=\left\{ \begin{array}{cc}
+\dfrac{1}{1000}e^{-\dfrac{x_{j}}{1000}} & x_{j}\geq0\\
+0 & x_{j}<0
+\end{array}\right.
+\end{equation}
+
+\end_inset
+
+Calcule la probabilidad de que el sistema operar
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+á
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ al menos 
+\begin_inset Formula $x$
+\end_inset
+
+ horas 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ejemplo}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Soluci
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ó
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+n.
+
+\series default
+ Entonces 
+\begin_inset Formula $X$
+\end_inset
+
+ tendr
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+á
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ una 
+\begin_inset Formula $f.d.p$
+\end_inset
+
+ Gamma con 
+\begin_inset Formula $\alpha=4$
+\end_inset
+
+ y 
+\begin_inset Formula $\beta=0.001^{-1}$
+\end_inset
+
+ 
+\begin_inset space \space{}
+\end_inset
+
+de acuerdo con el teorema
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "gamma"
+
+\end_inset
+
+ y el ejemplo anterior, decir 
+\begin_inset Formula 
+\begin{equation}
+f\left(x\right)=\left\{ \begin{array}{cc}
+\dfrac{0.001}{3!}\left(0.001x\right)^{3}e^{-0.01x} & x>0\\
+0 & x\leq0
+\end{array}\right.
+\end{equation}
+
+\end_inset
+
+por lo que nos queda
+\begin_inset Formula 
+\begin{equation}
+P\left(\infty>x\right)=\sum_{k=0}^{3}e^{.0.001x}\left(0.001x\right)^{k}/k!
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename pdf/gamma.pdf
+	lyxscale 40
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ejemplo}[]
+\end_layout
+
+\end_inset
+
+ Suponga que el tiempo de reacci
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ó
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+n 
+\begin_inset Formula $X$
+\end_inset
+
+ a cierto est
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+í
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+mulo en un individuo seleccionado al azar tiene una distribuci
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ó
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+n est
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+á
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ndar 
+\begin_inset Formula $(\beta=1)$
+\end_inset
+
+ con 
+\begin_inset Formula $\alpha=2$
+\end_inset
+
+s calcular la probabilidad de que el tiempo de reacci
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ó
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+n sea mayor de 4 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ejemplo}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Soluci
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ó
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+n 
+\series default
+entonces tenemos que 
+\begin_inset Formula 
+\begin{equation}
+P\left(X>4\right)=\sum_{k=0}^{1}\dfrac{e^{-4}\left(4\right)^{k}}{k!}=5e^{-4}=9.\,\allowbreak157\,8\times10^{-2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ejercicio}[]
+\end_layout
+
+\end_inset
+
+ Suponga que el tiempo 
+\begin_inset Formula $X$
+\end_inset
+
+ de supervivencia en semanas, de un rat
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ó
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+n macho seleccionado al azar y expuesto a 240 rads de radiaci
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ó
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+n gamma, tiene una distribuci
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ó
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+n Gamma con 
+\begin_inset Formula $\alpha=8$
+\end_inset
+
+ y 
+\begin_inset Formula $\beta=15.$
+\end_inset
+
+ El tiempo esperado de supervivencia es 
+\begin_inset Formula $E\left(X\right)=\left(8\right)\left(15\right)=120$
+\end_inset
+
+ semanas y la varianza es 
+\begin_inset Formula $V\left(X\right)=\left(8\right)\left(15\right)^{2}semanas^{2}.$
+\end_inset
+
+ Cu
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+á
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+l es la probabilidad de que un rat
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ó
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+n sobreviva entre 60 y 120 semanas 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ejercicio}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Soluci
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ó
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+n tenemos que calcular 
+\begin_inset Formula 
+\begin{align}
+P\left(60<X<120\right) & =P(X<120)-P\left(X<60\right)\nonumber \\
+ & =-\sum_{k=0}^{7}\dfrac{e^{-\left(120/15\right)}\left(120/15\right)^{k}}{k!}+\sum_{k=0}^{7}\dfrac{e^{-\left(60/15\right)}\left(60/15\right)^{k}}{k!}=0.495\,91
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ejercicio}[]
+\end_layout
+
+\end_inset
+
+ para una distribuci
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ó
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+n gamma con 
+\begin_inset Formula $\beta=2$
+\end_inset
+
+ y 
+\begin_inset Formula $\alpha=\dfrac{v}{2},$
+\end_inset
+
+ donde 
+\begin_inset Formula $v$
+\end_inset
+
+ es un entero positivo est
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+á
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ distribuci
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ó
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+n as
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+í
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ definida se le denomina chi-cuadrada y se denota 
+\begin_inset Formula $\chi^{2},$
+\end_inset
+
+ y su 
+\begin_inset Formula $f.d.p$
+\end_inset
+
+ es 
+\begin_inset Formula 
+\begin{equation}
+f\left(X^{2}\right)=\left\{ \begin{array}{cc}
+\dfrac{1}{2^{\dfrac{v}{2}\Gamma\left(\dfrac{v}{2}\right)}}x^{\dfrac{v}{2}-1}e^{-\dfrac{x^{2}}{2}} & x>0\\
+0 & x\leq0
+\end{array}\right.
+\end{equation}
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{-0.0277in}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "b"
+hor_pos "c"
+has_inner_box 1
+inner_pos "b"
+use_parbox 1
+use_makebox 0
+width "1.5385in"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename pdf/ChiDen.pdf
+	lyxscale 50
+	scale 50
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "b"
+hor_pos "c"
+has_inner_box 1
+inner_pos "b"
+use_parbox 1
+use_makebox 0
+width "1.5385in"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename pdf/ChiDist.pdf
+	lyxscale 50
+	width 1.5385in
+	height 1.2574in
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ejercicio}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Section
+Distribuci
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ó
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+n Gamma
+\end_layout
+
+\begin_layout Standard
+Muchos problemas de estad
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+í
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+stica se resuelven con la distribuci
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ó
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+n Normal como estudiaremos a partir del pr
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ó
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ximo cap
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+í
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+tulo, pero en ocasiones los problemas nos indican que la distribuci
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ó
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+n de la variable de inter
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+é
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+s no es acampanada y sim
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+é
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+trica , por lo que tenemos que usar distribuciones sesgadas y estas son
+ precisamente las familias de distribuciones Gamma y Beta.
+\end_layout
+
+\begin_layout Standard
+Antes de definir la distribuci
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ó
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+n Gamma definiremos una funci
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ó
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+n muy utilizada en matem
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+á
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ticas llamada funci
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ó
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+n Gamma y de la cual la distribuci
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ó
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+n Gamma toma su nombre.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{defi}{}{}
+\end_layout
+
+\end_inset
+
+ [Funci
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ó
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+n Gamma]Para cualquier positivo 
+\begin_inset Formula $\alpha$
+\end_inset
+
+, el valor 
+\begin_inset Formula $\Gamma\left(\alpha\right)$
+\end_inset
+
+ se define por la integral
+\begin_inset Formula 
+\begin{equation}
+\Gamma\left(\alpha\right)=\int_{0}^{\infty}x^{\alpha-1}e^{-x}dx,
+\end{equation}
+
+\end_inset
+
+se puede demostrar que esta integral existe para cualquier 
+\begin_inset Formula $\alpha>0$
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{defi}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Propiedades de la funci
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ó
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+n Gamma
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{teo}{}{}
+\end_layout
+
+\end_inset
+
+ Si 
+\begin_inset Formula $\alpha>1$
+\end_inset
+
+, entonces 
+\begin_inset Formula $\Gamma\left(\alpha\right)=\left(\alpha-1\right)\Gamma\left(\alpha-1\right)$
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{teo}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{lema}{}{}
+\end_layout
+
+\end_inset
+
+ Si 
+\begin_inset Formula $n$
+\end_inset
+
+ es un entero positivo se tiene que 
+\begin_inset Formula $\Gamma\left(n\right)=\left(n-1\right)!$
+\end_inset
+
+ , 
+\begin_inset Formula $\Gamma\left(n+\dfrac{1}{2}\right)=\left(n-\dfrac{1}{2}\right)\left(n-\dfrac{3}{2}\right)\left(n-\dfrac{5}{2}\right)\cdots\left(\dfrac{1}{2}\right)\Gamma\left(\dfrac{1}{2}\right)$
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{lema}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{lema}{}{}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\Gamma\left(\dfrac{1}{2}\right)=\sqrt{\pi}$
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{lema}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{defi}{}{}
+\end_layout
+
+\end_inset
+
+ [Distribuci
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ó
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+n Gamma]Sea 
+\begin_inset Formula $X$
+\end_inset
+
+ una variable aleatoria continua se dice que tiene una distribuci
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ó
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+n Gamma Si su 
+\begin_inset Formula $f.d.p$
+\end_inset
+
+ es 
+\begin_inset Formula 
+\begin{equation}
+f\left(x\right)=\left\{ \begin{array}{cc}
+\dfrac{\beta^{\alpha}}{\Gamma\left(\alpha\right)}x^{\alpha-1}e^{-\beta x} & \text{para }x>0\\
+0 & \text{para }x\leq0
+\end{array}\right.
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{defi}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Calculemos la esperanza y la varianza de 
+\begin_inset Formula $X$
+\end_inset
+
+Antes de seguir con esta distribuci
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ó
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+n definiremos una funci
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ó
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+n llamada generadora de momentos
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{defi}{}{}
+\end_layout
+
+\end_inset
+
+ Sea 
+\begin_inset Formula $X$
+\end_inset
+
+ una variable aleatoria la funci
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ó
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+n generadora de momentos se define 
+\begin_inset Formula 
+\begin{equation}
+\psi\left(t\right)=E\left(e^{tX}\right),\text{ para cada real }t
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{defi}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+resulta que 
+\begin_inset Formula $\psi^{\prime}\left(0\right)=E\left(X\right),$
+\end_inset
+
+ y en general 
+\begin_inset Formula $\psi^{\prime}\left(t\right)$
+\end_inset
+
+ existe para todos los valores de 
+\begin_inset Formula $t$
+\end_inset
+
+ en un intervalo alrededor de 
+\begin_inset Formula $t=0$
+\end_inset
+
+ y adem
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+á
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+s 
+\begin_inset Formula 
+\begin{equation}
+\psi^{\left(n\right)}\left(0\right)=\left[\dfrac{d^{n}}{dt^{n}}E\left(e^{tX}\right)\right]_{t=0}=E\left(X^{n}\right)
+\end{equation}
+
+\end_inset
+
+De esta forma la funci
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ó
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+n generadora de momentos para nuestro caso ser
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+í
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+a
+\begin_inset Formula 
+\begin{equation}
+\psi\left(t\right)=\int_{0}^{\infty}e^{tx}f\left(x\right)dx=\dfrac{\beta^{\alpha}}{\Gamma\left(\alpha\right)}\dfrac{\Gamma\left(\alpha\right)}{\left(\beta-t\right)^{\alpha}}=\beta^{\alpha}\left(\beta-t\right)^{-\alpha},\ \ t<\beta
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Determinemos 
+\begin_inset Formula 
+\begin{align}
+E\left(X^{n}\right) & =\int_{0}^{\infty}x^{n}f\left(x\right)dx=\dfrac{\beta^{\alpha}}{\Gamma\left(\alpha\right)}\int_{0}^{\infty}x^{\alpha+n-1}e^{-\beta x}dx\\
+ & =\dfrac{\beta^{\alpha}}{\Gamma\left(\alpha\right)}\dfrac{\Gamma\left(\alpha+n\right)}{\beta^{\alpha+n}}=\dfrac{\Gamma\left(\alpha+n\right)}{\beta^{n}\Gamma\left(\alpha\right)}\nonumber \\
+ & \dfrac{\alpha\left(\alpha+1\right)\left(\alpha+2\right)\cdots\left(\alpha+n-1\right)}{\beta^{n}}\nonumber 
+\end{align}
+
+\end_inset
+
+es decir 
+\begin_inset Formula 
+\begin{align}
+E\left(X\right) & =\dfrac{\alpha}{\beta},\ \ \ E\left(X^{2}\right)=\dfrac{\alpha\left(\alpha+1\right)}{\beta^{2}}\\
+V\left(X\right) & =\dfrac{\alpha\left(\alpha+1\right)}{\beta^{2}}-\left(\dfrac{\alpha}{\beta}\right)^{2}=\dfrac{\alpha}{\beta^{2}}\nonumber 
+\end{align}
+
+\end_inset
+
+Si 
+\begin_inset Formula $X$
+\end_inset
+
+ tiene una distribuci
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ó
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+n Gamma se denota 
+\begin_inset Formula $X\leadsto\Gamma\left(\dfrac{\alpha}{\beta},\dfrac{\alpha}{\beta^{2}}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{teo}{}{}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "gamma"
+
+\end_inset
+
+Si las variables aleatorias 
+\begin_inset Formula $X_{1},X_{2},\cdots X_{k}$
+\end_inset
+
+ son independientes y 
+\begin_inset Formula $X_{i}\leadsto$
+\end_inset
+
+ 
+\begin_inset Formula $\Gamma\left(\dfrac{\alpha_{i}}{\beta},\dfrac{\alpha_{i}}{\beta^{2}}\right),$
+\end_inset
+
+ para todo 
+\begin_inset Formula $i=1,2,3,\cdots,k$
+\end_inset
+
+ entonces 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{teo}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+ahora estamos en condiciones de determinar la 
+\begin_inset Formula $f.d.a$
+\end_inset
+
+ de 
+\begin_inset Formula $X$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula 
+\begin{equation}
+F\left(x\right)=\left\{ \begin{array}{cc}
+1-\int_{x}^{\infty}\dfrac{\lambda}{\Gamma\left(\alpha\right)}\left(\lambda t\right)^{\alpha-1}e^{-\lambda t}dt & x>0\\
+0 & x\leq0
+\end{array}\right.
+\end{equation}
+
+\end_inset
+
+si 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ es un entero positivo esta integral puede integrarse por partes obteniendo
+\begin_inset Formula 
+\begin{equation}
+F\left(x\right)=1-\sum_{k=0}^{\alpha-1}\dfrac{e^{-\lambda x}\left(\lambda x\right)^{k}}{k!},\ \ x>0
+\end{equation}
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "b"
+hor_pos "c"
+has_inner_box 1
+inner_pos "b"
+use_parbox 1
+use_makebox 0
+width "2.1006in"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename pdf/gammadst.pdf
+	lyxscale 40
+	width 2.1006in
+	height 2.1006in
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ f.d.a de la Gamma 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+que es la suma de los t
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+é
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+rminos de Poisson con media 
+\begin_inset Formula $\lambda x$
+\end_inset
+
+ con lo que nos queda que podemos utilizar la
+\begin_inset space \space{}
+\end_inset
+
+distribuci
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ó
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+n de Poisson para calcular la distribuci
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ó
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+n Gamma 
+\begin_inset Formula $f\left(y\right)$
+\end_inset
+
+ haciendo 
+\begin_inset Formula $y=\lambda x,\ \beta=\lambda^{-1}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ejemplo}[]
+\end_layout
+
+\end_inset
+
+ Sea 
+\begin_inset Formula $X$
+\end_inset
+
+ una variable aleatoria tal que 
+\begin_inset Formula $X\leadsto Exp\left(\dfrac{1}{\lambda},\dfrac{1}{\lambda^{2}}\right),$
+\end_inset
+
+ esta variable se puede representar con una Gamma haciendo 
+\begin_inset Formula $\alpha=1,\beta=\lambda^{-1}$
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ejemplo}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ejemplo}[]
+\end_layout
+
+\end_inset
+
+ Un sistema de control opera como muestra la figura .
+ al principio la unidad 1 est
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+á
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ en l
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+í
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+nea, en tanto que las unidades 2 , 3 y 4 est
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+á
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+n en espera.
+ Cuando la unidad 1 falla entra en funcionamiento la unidad 2 hasta que
+ falla y entonces se activara la unidad 3, cuando esta falla entre en funcionami
+ento la unidad 4 el interruptor de decisi
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ó
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+n se supone perfecto, por lo que la vida del sistema puede representarse
+ como la suma de las vidas de los subsistemas.
+ As
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+í
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $X=X_{1}+X_{2}+X_{3}+X_{4}$
+\end_inset
+
+.
+ Si la vidas de los subsistemas son independientes entre s
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+í
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+, y cada subsistema tiene una vida 
+\begin_inset Formula $X_{j,}\ j=1,2,3,4,$
+\end_inset
+
+ con 
+\begin_inset Formula $f.d.p$
+\end_inset
+
+ 
+\begin_inset Formula 
+\begin{equation}
+g\left(x_{j}\right)=\left\{ \begin{array}{cc}
+\dfrac{1}{1000}e^{-\dfrac{x_{j}}{1000}} & x_{j}\geq0\\
+0 & x_{j}<0
+\end{array}\right.
+\end{equation}
+
+\end_inset
+
+Calcule la probabilidad de que el sistema operar
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+á
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ al menos 
+\begin_inset Formula $x$
+\end_inset
+
+ horas 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ejemplo}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Soluci
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ó
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+n.
+
+\series default
+ Entonces 
+\begin_inset Formula $X$
+\end_inset
+
+ tendr
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+á
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ una 
+\begin_inset Formula $f.d.p$
+\end_inset
+
+ Gamma con 
+\begin_inset Formula $\alpha=4$
+\end_inset
+
+ y 
+\begin_inset Formula $\beta=0.001^{-1}$
+\end_inset
+
+ 
+\begin_inset space \space{}
+\end_inset
+
+de acuerdo con el teorema
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "gamma"
+
+\end_inset
+
+ y el ejemplo anterior, decir 
+\begin_inset Formula 
+\begin{equation}
+f\left(x\right)=\left\{ \begin{array}{cc}
+\dfrac{0.001}{3!}\left(0.001x\right)^{3}e^{-0.01x} & x>0\\
+0 & x\leq0
+\end{array}\right.
+\end{equation}
+
+\end_inset
+
+por lo que nos queda
+\begin_inset Formula 
+\begin{equation}
+P\left(\infty>x\right)=\sum_{k=0}^{3}e^{.0.001x}\left(0.001x\right)^{k}/k!
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename pdf/gamma.pdf
+	lyxscale 40
+	width 3.429in
+	height 1.7469in
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ejemplo}[]
+\end_layout
+
+\end_inset
+
+ Suponga que el tiempo de reacci
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ó
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+n 
+\begin_inset Formula $X$
+\end_inset
+
+ a cierto est
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+í
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+mulo en un individuo seleccionado al azar tiene una distribuci
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ó
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+n est
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+á
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ndar 
+\begin_inset Formula $(\beta=1)$
+\end_inset
+
+ con 
+\begin_inset Formula $\alpha=2$
+\end_inset
+
+s calcular la probabilidad de que el tiempo de reacci
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ó
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+n sea mayor de 4 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ejemplo}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Soluci
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ó
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+n 
+\series default
+entonces tenemos que 
+\begin_inset Formula 
+\begin{equation}
+P\left(X>4\right)=\sum_{k=0}^{1}\dfrac{e^{-4}\left(4\right)^{k}}{k!}=5e^{-4}=9.\,\allowbreak157\,8\times10^{-2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ejercicio}[]
+\end_layout
+
+\end_inset
+
+ Suponga que el tiempo 
+\begin_inset Formula $X$
+\end_inset
+
+ de supervivencia en semanas, de un rat
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ó
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+n macho seleccionado al azar y expuesto a 240 rads de radiaci
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ó
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+n gamma, tiene una distribuci
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ó
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+n Gamma con 
+\begin_inset Formula $\alpha=8$
+\end_inset
+
+ y 
+\begin_inset Formula $\beta=15.$
+\end_inset
+
+ El tiempo esperado de supervivencia es 
+\begin_inset Formula $E\left(X\right)=\left(8\right)\left(15\right)=120$
+\end_inset
+
+ semanas y la varianza es 
+\begin_inset Formula $V\left(X\right)=\left(8\right)\left(15\right)^{2}semanas^{2}.$
+\end_inset
+
+ Cu
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+á
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+l es la probabilidad de que un rat
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ó
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+n sobreviva entre 60 y 120 semanas 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ejercicio}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Soluci
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ó
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+n tenemos que calcular 
+\begin_inset Formula 
+\begin{align}
+P\left(60<X<120\right) & =P(X<120)-P\left(X<60\right)\nonumber \\
+ & =-\sum_{k=0}^{7}\dfrac{e^{-\left(120/15\right)}\left(120/15\right)^{k}}{k!}+\sum_{k=0}^{7}\dfrac{e^{-\left(60/15\right)}\left(60/15\right)^{k}}{k!}=0.495\,91
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ejercicio}[]
+\end_layout
+
+\end_inset
+
+ para una distribuci
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ó
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+n gamma con 
+\begin_inset Formula $\beta=2$
+\end_inset
+
+ y 
+\begin_inset Formula $\alpha=\dfrac{v}{2},$
+\end_inset
+
+ donde 
+\begin_inset Formula $v$
+\end_inset
+
+ es un entero positivo est
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+á
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ distribuci
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ó
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+n as
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+í
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ definida se le denomina chi-cuadrada y se denota 
+\begin_inset Formula $\chi^{2},$
+\end_inset
+
+ y su 
+\begin_inset Formula $f.d.p$
+\end_inset
+
+ es 
+\begin_inset Formula 
+\begin{equation}
+f\left(X^{2}\right)=\left\{ \begin{array}{cc}
+\dfrac{1}{2^{\dfrac{v}{2}\Gamma\left(\dfrac{v}{2}\right)}}x^{\dfrac{v}{2}-1}e^{-\dfrac{x^{2}}{2}} & x>0\\
+0 & x\leq0
+\end{array}\right.
+\end{equation}
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ejercicio}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+problemas{
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+La presión de aire de un neumático seleccionado al azar, instalado en un
+ automóvil nuevo, está normalmente distribuida con valor medio de 31 Ib/pulg
+\begin_inset Formula $^{2}$
+\end_inset
+
+ y desviación estándar de 2 Ib/pulg
+\begin_inset Formula $^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+¿Cuál es la probabilidad de que la presión de un neumático seleccionado
+ al azar exceda de 30.5 lb/pulg
+\begin_inset Formula $^{2}$
+\end_inset
+
+? 
+\end_layout
+
+\begin_layout Enumerate
+¿Cuál es la probabilidad de que la presión de un neumático seleccionado
+ al azar se encuentre entre 30.5 y 31.5 Ib/pulg
+\begin_inset Formula $^{2}?$
+\end_inset
+
+ y ¿entre 30 y 32 Ib/pulg
+\begin_inset Formula $^{2}$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Enumerate
+Suponga que un neumático se considera con presión baja si su presión está
+ debajo de 30.4 Ib/pulg
+\begin_inset Formula $^{2}$
+\end_inset
+
+.
+ ¿Cuál es la probabilidad de que al menos uno de los cuatro neumáticos de
+ un automóvil se encuentre desinflado?
+\shape smallcaps
+(sugerencia 
+\shape default
+Si 
+\begin_inset Formula $A$
+\end_inset
+
+ = 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+{
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+al menos un neumático está desinflado
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+}
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+, ¿cuál es el complemento de 
+\begin_inset Formula $A$
+\end_inset
+
+?) 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+La dureza Rockwell de un metal se determina al golpear con un punto acerado
+ (herramienta) la superficie del metal y luego se mide la profundidad de
+ penetración del punto Suponga que la dureza Rockwell de cierta aleación
+ está normalmente distribuida con media de 70 y desviación estándar de 3
+ (suponga que la dureza Rockwell se mide en una escala continua)
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Si un esp
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+é
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+cimen es aceptable sólo si su dureza está entre 67 y 75, ¿cuál es la probabilida
+d de que un esp
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+é
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+cimen seleccionado al azar tenga una dureza aceptable
+\begin_inset space \space{}
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Enumerate
+Si la escala aceptable de dureza fue 
+\begin_inset Formula $(70-c,70+c)$
+\end_inset
+
+, ¿para qué valor de 
+\begin_inset Formula $c$
+\end_inset
+
+ tendría una dureza aceptable el 95
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+%
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ de todos los especímenes?
+\end_layout
+
+\begin_layout Enumerate
+Si la escala aceptable es como en la parte (a) y la dureza de cada diez
+ especímenes seleccionados al azar se determina independientemente, ¿cuál
+ es el número esperado de especímenes aceptable entre los diez
+\begin_inset Formula $?$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+¿Cuál es la probabilidad de que a lo sumo ocho de diez especímenes seleccionados
+ independientemente tengan una dureza menor de 73.84”
+\begin_inset space \space{}
+\end_inset
+
+
+\shape smallcaps
+(sugerencia 
+\shape default
+
+\begin_inset Formula $Y$
+\end_inset
+
+ = el número entre los diez especímenes con dureza menor de 73.84 es una
+ variable binomial, ¿cuál es 
+\begin_inset Formula $p$
+\end_inset
+
+? 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+La distribución del peso de paquetes enviados de cierto modo es normal con
+ valor medio de 10 libras y desviación estándar de 2 libras.
+ El servicio de paqueter
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+í
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+a desea establecer un valor de peso 
+\begin_inset Formula $c$
+\end_inset
+
+, más allá del cual habrá cargo extra ¿Cuál valor de 
+\begin_inset Formula $c$
+\end_inset
+
+ es tal que 99
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+%
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ de todos los paquetes pesen por lo menos 1 libra abajo del peso con cargo
+ extra
+\begin_inset Formula $?$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Suponga que la tabla de la distribución normal del Apéndice contiene 
+\begin_inset Formula $\Phi$
+\end_inset
+
+(z) sólo para z 
+\begin_inset Formula $>$
+\end_inset
+
+0 Explique cómo se podr
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+í
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+a calcular todavía
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $P(-1.72\leq Z\leq-0.55).$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $P(-1.72\leq Z\leq0.55)$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+¿es necesario poner 
+\begin_inset Formula $\Phi$
+\end_inset
+
+(z) en la tabla para z negativa
+\begin_inset Formula $?$
+\end_inset
+
+, ¿que propiedad de la curva normal estándar justifica su respuesta? 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Represente por X el número de páginas de texto de una tesis de doctorado
+ en matemáticas seleccionado al azar.
+ Aun cuando X puede tomar sólo valores enteros positivos, suponga que está
+ distribuida normalmente en forma aproximada con valor esperado de 90 y
+ desviación estándar de 15 ¿Cuál es la probabilidad de que una tesis seleccionad
+a al azar contenga
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+A lo sumo 100 páginas ?
+\end_layout
+
+\begin_layout Enumerate
+Entre 80 y 110 páginas ? 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Haga que X tenga una distribución binomial con par
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+á
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+metros 
+\begin_inset Formula $n$
+\end_inset
+
+ = 25 y 
+\begin_inset Formula $p$
+\end_inset
+
+ calcule cada una de las siguientes probabilidades para los casos 
+\begin_inset Formula $p=0.5,0.6$
+\end_inset
+
+ y.
+\begin_inset Formula $8$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $P(15<X<.20)$
+\end_inset
+
+
+\shape italic
+ 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $P(X{\leq}15)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $P(20<X)$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Suponga que el 10
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+%
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ de todos los ejes de acero producidos por cierto proceso están fuera de
+ especificaciones, pero se pueden volver a trabajar (en lugar de tener que
+ enviarlos la chatarra) Considere una muestra aleatoria de 200 ejes y denote
+ por 
+\begin_inset Formula $X$
+\end_inset
+
+ el número entre ellos que estén fuera de especificaciones y se puedan volver
+ a trabajar ¿Cuál es la probabilidad (aproximada) de que 
+\begin_inset Formula $X$
+\end_inset
+
+ sea
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+A lo sumo 30?
+\end_layout
+
+\begin_layout Enumerate
+Menosde30?
+\end_layout
+
+\begin_layout Enumerate
+Entre 15 y 25 (inclusive)
+\begin_inset Formula $?$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Suponga que sólo el 40
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+%
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ de todos los automovilistas de cierto estado usan con regularidad su cinturón
+ de seguridad Se selecciona al azar una muestra de 500 automovilistas ¿Cuál
+ es la probabilidad de que 
+\begin_inset Formula $X$
+\end_inset
+
+ este
+\begin_inset Newline newline
+\end_inset
+
+entre 180 y 230 (inclusive) de los automovilistas de la muestra utilice
+ su cinturón con regularidad?
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $X$
+\end_inset
+
+ es una 
+\shape italic
+va
+\shape default
+ normal con media 80 y desviación estándar 10, calcule las siguientes probabilid
+ades mediante estandanzación
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $P(X\leq80)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $P(X<100)$
+\end_inset
+
+
+\shape italic
+ 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $P(65<X<100)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $P(70<X)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $P(|X-80|<10)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $P(85\mathbf{<}X\leq95)$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Suponga que la fuerza que actúa sobre una columna que ayuda a sostener un
+ edificio está normalmente distribuida con media de 15.0 kips y desviación
+ estándar de 1.25 kips ¿Cuál es la probabilidad de que la fuerza
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Sea a lo sumo 17 kips
+\begin_inset Formula $?$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Se encuentre entre 12 y 17 kips
+\begin_inset Formula $?$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Difiera de 15.0 kips en a lo sumo 2 desviaciones estándar? 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Suponga que el tiempo de revelado para un tipo particular de papel fotográfico
+ cuando se expone a una fuente luminosa durante 5 s está normalmente distribuido
+ con una media de 25 s y una desviación estándar de 1.3 s ¿Cuál es la probabilida
+d de que
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Una impresión en particular necesite más de 26.5 s para revelarse
+\begin_inset Formula $?$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+El tiempo de revelado sea por lo menos 23 s
+\begin_inset Formula $?$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+El tiempo de revelado difiera del tiempo esperado en más de 2.5 s
+\begin_inset Formula $?$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Un tipo particular de tanque de gasolina para un automóvil compacto está
+ dise
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ñ
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ado para contener 15 galones Suponga que la capacidad real X de un tanque
+ escogido al azar de este tipo esté normalmente distribuido con media de
+ 15 galones y desviación estándar de 2 galones
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+¿Cuál es la probabilidad de que un tanque seleccionado al azar contenga
+ a lo sumo 14.8 galones?
+\end_layout
+
+\begin_layout Enumerate
+¿Cuál es la probabilidad de que un tanque seleccionado al azar contenga
+ entre 14.7 y 15.1 galones
+\begin_inset Formula $?$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Si el automóvil en el que se instala un tanque seleccionado al azar recorre
+ exactamente 25 millas por galón, ¿cuál es la probabilidad de que el automóvil
+ pueda recorrer 370 millas sin reabastecerse
+\begin_inset Formula $?$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Hay dos máquinas para cortar corchos destinados para usarse en botellas
+ de vino La primera produce corchos con diámetros que están normalmente
+ distribuidos con media de 3 cm y desviación estándar de 1 cm La segunda
+ máquina produce corchos con diámetros que tienen una distribución normal
+ con media de 3.04 cm y desviación estándar de 0.02 cm Los corchos aceptables
+ tienen diámetros entre 2.9 cm y 3.1 cm ¿Cuál máquina tiene más probabilidad
+ de producir un corcho aceptable
+\begin_inset Formula $?$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Si una distribución normal tiene 
+\begin_inset Formula $\mu=$
+\end_inset
+
+ 25 y 
+\begin_inset Formula $\sigma=$
+\end_inset
+
+ 5, ¿cuál es el 91avo percentil de la distribución
+\begin_inset Formula $?$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+¿Cuál es el sexto percentil de la distribución de la parte (a)
+\begin_inset Formula $?$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+El ancho de una linea grabada en un circuito integrado esta normalmente
+ distribuido con media de 3.000 
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset Formula $\mu$
+\end_inset
+
+m y desviaci
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ó
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+n est
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+á
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ndar de 0.150 
+\begin_inset space \space{}
+\end_inset
+
+¿Que valor separa al 10
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+%
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ mas ancho de todas las l
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+í
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+neas del otro 90
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+%
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+? 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+El articulo <<Monte Carlo Simulation -Tool for Better Understanding ofLRFD>>
+ 
+\shape italic
+(J Structural Engr
+\shape default
+ 1993, pp 1586-1599) sugiere que la resistencia a la ruptura (ksi) para
+ acero grado A36 está normalmente distribuida con 
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset Formula $\mu$
+\end_inset
+
+=43 y 
+\begin_inset Formula $\sigma$
+\end_inset
+
+=4.5
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+¿Cuál es la probabilidad de que la resistencia a la ruptura sea a lo sumo
+ 40 y mayor de 60
+\begin_inset Formula $?$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+¿Cual valor de resistencia a la ruptura separa de los otros al 75
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+%
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ mas fuerte? 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+El dispositivo automático de apertura de un paraca
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+í
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+das militar de carga se ha dise
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ñ
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ado para abrir el paracaídas cuando éste se encuentre a 200 m de altura
+ sobre el suelo Supongamos que la altitud de apertura en realidad tiene
+ una distribución normal con valor medio de 200 m y desviación estándar
+ de 30 m Habrá da
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ñ
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+o al equipo si el paraca
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+í
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+das se abre a una altitud de menos de 100 m 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+ Cuál es la probabilidad de que haya daño a la carga en al menos uno de
+ cinco paraca
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+í
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+das lanzado independientemente
+\begin_inset Formula $?$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+La lectura de temperatura de un termopar puesto en un medio de temperatura
+ constante esta normalmente distribuida con media 
+\begin_inset Formula $\mu$
+\end_inset
+
+
+\shape italic
+,
+\shape default
+ la temperatura real del entorno, y desviaci
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ó
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+n est
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+á
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ndar 
+\begin_inset Formula $\sigma$
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+¿Cual tendr
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+í
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+a que ser el valor de 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ para asegurar que el 95 % de todas las lecturas se encuentren dentro de
+ 0.1
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%TCIMACRO{
+\backslash
+U{ba} }%
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%BeginExpansion
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula ${^{o}}$
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%EndExpansion
+\end_layout
+
+\end_inset
+
+de
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset Formula $\mu?$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Se sabe que la distribución de resistencia para resistores de cierto tipo
+ es normal, 10
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+%
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ de todos los resistores tienen una resistencia que excede los 10.256 ohms
+ y 5
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+%
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ tiene una resistencia menor de 9.671 ohms ¿Cuales son los valores de la
+ media y de la desviaci
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ó
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+n est
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+á
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ndar de la distribuci
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ó
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+n de resistencia?
+\end_layout
+
+\begin_layout Enumerate
+Si el diámetro de un cojinete está normalmente distribuido, ¿cuál es la
+ probabilidad de que el diámetro de un cojinete seleccionado al azar esté
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Dentro de 1.5
+\begin_inset Formula $\sigma$
+\end_inset
+
+ de su valor medio
+\begin_inset Formula $?$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+A más de 2 5
+\begin_inset Formula $\sigma$
+\end_inset
+
+ de su valor medio?
+\end_layout
+
+\begin_layout Enumerate
+Entre 1 y 2 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ de su valor medio
+\begin_inset Formula $?$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Suponga que sólo 20
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+%
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ de los automovilistas se detienen por completo en un crucero, donde hay
+ un semáforo con luz roja intermitente en todas las direcciones cuando no
+ haya otros automóviles visibles ¿Cuál es la probabilidad de que, de 20
+ automovilistas seleccionados al azar lleguen al crucero en estas condiciones,
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+a lo sumo 5 se detengan por completo
+\begin_inset Formula $?$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+exactamente 5 se detengan por completo
+\begin_inset Formula $?$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+por lo menos 5 se detengan por completo?
+\end_layout
+
+\begin_layout Enumerate
+¿Cuántos, de los siguientes 20 automovilistas, espera el lector que se detengan
+ por completo? 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Si el 90
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+%
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ de todos los solicitantes para cierto tipo de hipoteca no llenan correctamente
+ el formato de solicitud en la primera remisión, ¿cuál es la probabilidad
+ de que entre 15 de estos solicitantes seleccionados al azar
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+por lo menos 12 no la llenen a la primera remisión?
+\end_layout
+
+\begin_layout Enumerate
+entre 10 y 13 inclusive no la llenen a la primera remisión?
+\end_layout
+
+\begin_layout Enumerate
+a lo sumo 2 llenen correctamente sus formatos antesde la remisión inicial
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Un tipo particular de raqueta de tenis se fabrica en tamaños mediano y extragran
+de El 60
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+%
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ de todos los clientes de cierta tienda buscan el tamaño extragrande
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Entre diez clientes seleccionados al azar, que desean este tipo de raqueta,
+ ¿cuál es la probabilidad de que por lo menos seis busquen el tamaflo extragrand
+e
+\begin_inset Formula $?$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Entre diez clientes seleccionados al azar, ¿cuál es la probabilidad de que
+ el número que buscan el tamaño extragrande esté dentro de 1
+\series bold
+ 
+\series default
+
+\begin_inset Formula $\sigma$
+\end_inset
+
+ del valor medio
+\begin_inset Formula $?$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+La tienda tiene actualmente siete raquetas de cada modelo ¿Cuál es la probabilid
+ad de que los siguientes diez clientes que buscan esta raqueta puedan comprar
+ el modelo que buscan, de entre la existencia actual 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Veinte por ciento de todos los teléfonos de cierto tipo se remiten para
+ repararse cuando todav
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+í
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+a está vigente su garant
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+í
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+a De éstos, 60
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+%
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ se pueden reparar y el otro 40
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+%
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ debe sustituirse con aparatos nuevos Si una compaflía compra diez de estos
+ teléfonos, (,cuál es la probabilidad de que exactamente se cambien dos
+ dentro del periodo de garantía
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Un lote muy grande de componentes ha llegado a un distribuidor El lote se
+ puede clasificar como aceptable sólo si la proporción de componentes defectuoso
+s es a lo sumo 10.
+ El distribuidor determina seleccionar al azar 10 componentes y aceptar
+ el lote sólo si el número de componentes defectuosos en la muestra es a
+ lo sumo 2.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+¿Cuál es la probabilidad de que el lote sea aceptado cuando la proporción
+ real de piezas defectuosas es 0.1, 0.05, 0.10, 0.20 y 0.25 ?
+\end_layout
+
+\begin_layout Enumerate
+Denotemos por 
+\begin_inset Formula $p$
+\end_inset
+
+ la proporción real de piezas defectuosas del lote Una gráfica de P(lote
+ aceptado) como función de 
+\begin_inset Formula $p,$
+\end_inset
+
+ con 
+\begin_inset Formula $p$
+\end_inset
+
+ en el horizontal y P(lote aceptado) en el vertical, se llama 
+\shape italic
+curva caracter
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+í
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+stica de operación
+\shape default
+ para el plan de muestreo de aceptación del lote.
+ Utilice los resultados de la parte (a) para trazar esta curva para 
+\begin_inset Formula $0\leq p\leq1.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Repita las partes (a) y (b) con <<1>> sustituyendo a <<2>> en el plan de
+ muestreo de aceptación del lote
+\end_layout
+
+\begin_layout Enumerate
+Repita las partes (a) y (b) con 15 sustituyendo a 10 en el plan de muestreo
+ de aceptación del lote.
+\end_layout
+
+\begin_layout Enumerate
+¿Cual de los tres planes de muestreo, el de la parte (a) (c) o (d) parece
+ mas satisfactorio, y por que? 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Un reglamento.
+ que requiere que un detector de humo ( pueda instalar en todas las casas
+ prefabricadas ha estado en vigor en una ciudad durante un año.
+ El departamento de bomberos está preocupado porque muchas casas siguen
+ sin detectores.
+ Sea 
+\begin_inset Formula $p=$
+\end_inset
+
+ la verdadera proporción de las casas que tienen detectores y supongamos
+ que se inspecciona al azar una muestra de 25 casas.
+ Si la muestra indica fuertemente que menos del 80
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+%
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ tienen detector el departamento de bomberos hará una campa
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ñ
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+a para que el programa de inspecciones sea obligatorio Debido a lo costoso
+ del programa, el departamento prefiere no pedir tales inspecciones a menos
+ que la evidencia muestral apoye con argumentos sólidos esta necesidad Denotenot
+emos por 
+\begin_inset Formula $X$
+\end_inset
+
+ el número de casas con detectores entre las 25 en que se hace muestreo
+ Considere rechazar la afirmación de que 
+\begin_inset Formula $p\geq0.$
+\end_inset
+
+8 si 
+\begin_inset Formula $x<$
+\end_inset
+
+ 15, donde 
+\begin_inset Formula $x$
+\end_inset
+
+ es el valor observado
+\series bold
+ 
+\series default
+de 
+\begin_inset Formula $X.$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+¿Cuál es la probabilidad de que la petición sea rechazada cuando el valor
+ real de 
+\begin_inset Formula $p$
+\end_inset
+
+ es 0.8
+\end_layout
+
+\begin_layout Enumerate
+¿Cuál es la probabilidad de no rechazar la petición cuando 
+\begin_inset Formula $p$
+\end_inset
+
+ =0.7? o ¿.Cuándo 
+\begin_inset Formula $p$
+\end_inset
+
+ = 6
+\begin_inset Formula $?$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+¿Cómo cambian las <<probabilidades de error>> de las partes (a) y (b) si
+ el valor de 15 de la regla de decisión se sustituye por 14
+\begin_inset Formula $?$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Un geólogo ha recolectado 10 especímenes de roca basáltica y 10 de granito
+ Si el geólogo instruye a un asistente de laboratorio para que seleccione
+ al azar 15 de los especímenes para analizarlos,¿cuál es la f.d.p del número
+ de espec
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+í
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+menes de basalto seleccionados para analizarlos? 
+\begin_inset space \space{}
+\end_inset
+
+Cuál es la probabilidad de que todos los especímenes de uno de los dos tipos
+ de roca sean seleccionados para análisis?
+\end_layout
+
+\begin_layout Enumerate
+Un director de personal que entrevista a 11 ingenieros para cuatro vacantes
+ ha programado seis entrevistas para el primer día y cinco para el segundo
+ día de entrevistas.
+ Suponga que los candidatos son entrevistados al azar
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+¿Cuál es la probabilidad de que 
+\begin_inset Formula $x$
+\end_inset
+
+ de los mejores cuatro candidatos sean entrevistados el primer día
+\begin_inset Formula $?$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+¿Cuántos de los mejores cuatro candidatos pueden esperar ser entrevistados
+ el primer día? 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Veinte parejas de individuos que juegan un torneo de 
+\shape italic
+bridge 
+\shape default
+han sido sembrados como 1,
+\begin_inset Formula $\cdots$
+\end_inset
+
+, 20 En la primera parte del torneo, los 20 se dividen al azar en 10 parejas
+ este-oeste y 10 parejas norte-sur
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+¿Cuál es la probabilidad de que 
+\begin_inset Formula $x$
+\end_inset
+
+ de las mejores 10 parejas terminen Jugando este-oeste?
+\end_layout
+
+\begin_layout Enumerate
+¿Cuál es la probabilidad de que todos los de las mejores cinco parejas terminen
+ Jugando en la misma dirección?
+\end_layout
+
+\begin_layout Enumerate
+Si hay 
+\shape italic
+2n
+\shape default
+ parejas, (,cuál es la f.d.p de 
+\begin_inset Formula $X=$
+\end_inset
+
+ el número entre las mejores 
+\begin_inset Formula $n$
+\end_inset
+
+ parejas que terminan Jugando este-oeste, y cuáles son 
+\begin_inset Formula $E(X)$
+\end_inset
+
+ y V(X) 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Ha sido puesta en vigor la segunda etapa de una alerta de 
+\shape italic
+smog
+\shape default
+ en cierta zona del condado de Los ángeles, en la que hay 50 empresas industrial
+es Un inspector visitará 10 de ellas seleccionadas al azar para verificar
+ las violaciones de los reglamentos
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Si 15 de las empresas violan en realidad al menos un reglamento, ¿cuál es
+ la f.d.p del número de empresas visitadas por el inspector que están violando
+ al menos un reglamento?
+\end_layout
+
+\begin_layout Enumerate
+Si hay 500 empresas en la zona, de las cuales 150 están en violación, aproxime
+ la f.d.p de la parte (a) por una f.d.p más sencilla
+\end_layout
+
+\begin_layout Enumerate
+Para 
+\begin_inset Formula $X=$
+\end_inset
+
+ el número entre las 10 visitadas que estén en violación, calcule 
+\shape italic
+E(X) y V(X)
+\shape default
+ tanto para la f.d.p exacta como para la f.d.p aproximada de la parte (b) 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Suponga que 
+\begin_inset Formula $p$
+\end_inset
+
+ = P(nace ni
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ñ
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+o) =0.
+ 5.
+ Una pareja desea tener exactamente dos ni
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ñ
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+as en su familia Tendrán hijos hasta que se satisfaga esta condición.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+¿Cuál es la probabilidad de que la familia tenga-x hijos(hombres)
+\begin_inset Formula $?$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+¿Cuál es la probabilidad de que la familia tenga cuatro hijos
+\begin_inset Formula $?$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+¿Cuál es la probabilidad de que la familia tenga a lo sumo cuatro hijos
+\begin_inset Formula $?$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+¿Cuántos hijos (hombres) se esperar
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+í
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+a que tenga esta familia
+\begin_inset Formula $?,$
+\end_inset
+
+ ¿Cuántos hijos se esperara que tenga esta 
+\series bold
+familia?
+\series default
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Una familia decide tener hijos hasta que tenga tres del mismo sexo Si se
+ supone que 
+\begin_inset Formula $P(B)$
+\end_inset
+
+ = 
+\shape italic
+P[G) =0.5
+\shape default
+ ¿cual es la 
+\begin_inset space \space{}
+\end_inset
+
+f.d.p de 
+\begin_inset Formula $X=$
+\end_inset
+
+ número de hijos de la familia?
+\end_layout
+
+\begin_layout Enumerate
+Tres hermanos y sus esposas deciden tener hijos hasta que cada familia tenga
+ dos ni
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ñ
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+as ¿Cuál es la f.d.p de 
+\begin_inset Formula $X=$
+\end_inset
+
+ el número total de ni
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ñ
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+os (hombres) nacidos de los hermanos?.
+ ¿Cuál es 
+\begin_inset Formula $E(X)$
+\end_inset
+
+ y cómo se compara con el número esperado de hijos (hombres) nacidos de
+ cada hermano
+\begin_inset Formula $?$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+El individuo A tiene un dado rojo y 
+\begin_inset Formula $B$
+\end_inset
+
+ tiene un dado verde (ambos no cargados) Si cada uno de ellos tira su dado
+ hasta obtener <<dobles>> (1 -1, ..., 6-6), (,cuál es la f.d.p de 
+\begin_inset Formula $X$
+\end_inset
+
+ = el número total de veces que se tira un dado
+\begin_inset Formula $?$
+\end_inset
+
+ ¿Cuáles son 
+\begin_inset Formula $E(X)$
+\end_inset
+
+ y V
+\begin_inset Formula $\left(X\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Haga que 
+\begin_inset Formula $X$
+\end_inset
+
+ tenga una distnbución de Poisson con parámetro 
+\begin_inset Formula $\lambda$
+\end_inset
+
+= 5 calcule las siguientes probabilidades
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\series bold
+\begin_inset Formula $P(X<8)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $P(X=8)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\shape italic
+\begin_inset Formula $P(9\geq X)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $P(5<X\leq8)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $P(5<X<8)$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Suponga que el número 
+\begin_inset Formula $X$
+\end_inset
+
+ de tornados observados en una región particular durante un periodo de 1
+ año tiene una distnbución de Poisson con 
+\begin_inset Formula $\lambda$
+\end_inset
+
+= 8.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Calcule 
+\begin_inset Formula $P(X<5)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Calcule 
+\begin_inset Formula $P(6<X<9)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Calcule 
+\begin_inset Formula $P(10\geq X)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+¿Cuántos tornados se puede esperar que se observen durante un periodo de
+ un año, y cuál es la desviación estándar del número de tornados observados?
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $X$
+\end_inset
+
+ = el número de automóviles de un año y modelo particular que en algún momento
+ en el futuro sufrirán una falla grave en el mecanismo de dirección, que
+ ocasionará pérdida completa de control a alta velocidad Suponga que 
+\begin_inset Formula $X$
+\end_inset
+
+ tiene una distribución de Poisson con parámetro 
+\begin_inset Formula $\lambda$
+\end_inset
+
+= 10
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+¿Cuál es la probabilidad de que a lo sumo 10 automóviles sufran dicha falla
+\begin_inset Formula $?$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+¿Cuál es la probabilidad de que entre 10 y 15 (inclusive) automóviles sufran
+ dicha falla
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+¿Cuáles son 
+\begin_inset Formula $E(X)$
+\end_inset
+
+ y 
+\begin_inset Formula $V\left(X\right)$
+\end_inset
+
+? 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Considere escribir en un disco de computadora y luego enviar el escrito
+ por un certificador que cuenta
+\series bold
+ el 
+\series default
+número de pulsos faltantes Suponga que este número 
+\begin_inset Formula $X$
+\end_inset
+
+ tiene una distnbución de Poisson con parámetro 
+\begin_inset Formula $\lambda$
+\end_inset
+
+= 2.
+ (Sugendo en <<Average Sample Number for SermCunailed Sampling Using the
+ Poisson Distribution>>, 
+\shape italic
+J Quahty Technology,
+\shape default
+ 1983, pp 126-129 )
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+¿Cuál es la probabilidad de que un disco tenga exactamente un pulso faltante?
+\end_layout
+
+\begin_layout Enumerate
+¿Cuál es la probabilidad de que un disco tenga al menos dos pulsos faltantes?
+\end_layout
+
+\begin_layout Enumerate
+Si dos discos se seleccionan independientemente, ¿cuál es la probabilidad
+ de que ninguno contenga un pulso faltante
+\begin_inset space \space{}
+\end_inset
+
+? 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Un artículo de 
+\shape italic
+Los Angeles Times
+\shape default
+ (3 de diciembre de 1993) reporta que.
+ de cada 200 personas, una lleva el gene defectuoso que ocasiona cáncer
+ de colon hereditario En una muestra de 1 000 personas, ¿cuál es la distribución
+ aproximada del número de quienes llevan este gene
+\begin_inset Formula $?.$
+\end_inset
+
+Utilice esta distribución para calcular la probabilidad aproximada de que
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Entre 4 y 7 (inclusive) lleven el gene
+\end_layout
+
+\begin_layout Enumerate
+Por lo menos 8 lleven el gene.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Se envía un aviso a todos los propietarios de cierto tipo de automóvil,
+ solicitándoles llevar su automóvil a un distribuidor para comprobar la
+ presencia de un defecto particular de fabricación Suponga que sólo 0.05
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+%
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ de tales automóviles tienen el defecto Considere una muestra aleatoria
+ de 10 000 automóviles.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+¿Cuáles son el valor esperado y la desviación estándar del número de automóviles
+ de la muestra que tiene el defecto?
+\end_layout
+
+\begin_layout Enumerate
+¿Cuál es la probabilidad (aproximada) de que por lo menos 10 automóviles
+ en los que se efectuó el muestreo tengan el defecto
+\begin_inset space \space{}
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Enumerate
+¿Cuál es la probabilidad (aproximada) de que ninguno de los automóviles
+ en los que se efectuó el muestreo tengan el defecto
+\begin_inset Formula $?$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Suponga que aviones peque
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ñ
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+os llegan a cierto aeropuerto según un proceso de Poisson, con tasa 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ = 8 aviones por hora, de modo que el número de llegadas durante un periodo
+ de 
+\begin_inset Formula $t$
+\end_inset
+
+ horas es una 
+\shape italic
+va
+\shape default
+ de Poisson con parámetro c = 8t
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+¿Cuál es la probabilidad de que exactamente 5 aviones peque
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ñ
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+os lleguen durante un periodo de una hora
+\begin_inset Formula $?$
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+Por lo menos 5?, ¿Por lo menos 10?
+\end_layout
+
+\begin_layout Enumerate
+¿Cuáles son el valor esperado y la desviación estándar del número de aviones
+ peque
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ñ
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+os que lleguen durante un periodo de 90 min?
+\end_layout
+
+\begin_layout Enumerate
+¿Cuál es la probabilidad de que por lo menos 20 aviones peque
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ñ
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+os lleguen durante un periodo de 2 1/2 h
+\begin_inset space \space{}
+\end_inset
+
+(,De que a lo sumo 10 lleguen durante este periodo
+\begin_inset Formula $?$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+El número de infracciones expedidas por el lector de un parquímetro, por
+ violaciones de estacionamiento.
+ puede modelarse mediante un proceso de Poisson con una tasa de cinco infraccion
+es por hora.
+ ¿Cuál es la probabilidad de que exactamente cinco infracciones se expidan
+ durante una hora particular
+\begin_inset Formula $?$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Un experimento consta de cuatro ensayos de Bernoulli independientes con
+ probabilidad de éxitos en cada uno de ellos.
+ La variable aleatoria A'es el número de éxitos.
+ Enumere la distribución de probabilidad de 
+\begin_inset Formula $X.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Se planean seis misiones espaciales independientes a la luna.
+ La probabilidad estimada de éxito de cada misión es 0.95.
+ 
+\begin_inset space \space{}
+\end_inset
+
+¿Cuál es la probabilidad de que al menos cinco de las misiones planeadas
+ tengan éxito?
+\end_layout
+
+\begin_layout Enumerate
+La Compa
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ñ
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ia 
+\shape italic
+XYZ
+\shape default
+ ha planeado presentaciones de ventas a una docena de clientes importantes.
+ La probabilidad de recibir un pedido como un resultado de tal presentación
+ se estima en 0.5.
+ ¿Cuál es la probabilidad de recibir cuatro o más pedidos como resultado
+ de las reuniones?
+\end_layout
+
+\begin_layout Enumerate
+Un corredor de bolsa llama a sus 20 más importantes clientes cada ma
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ñ
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ana.
+ Si la probabilidad de que efectúe una transacción como resultado de dichas
+ llamadas es de uno a tres, ¿cuáles son las posibilidades de que maneje
+ 10 o más transacciones?
+\end_layout
+
+\begin_layout Enumerate
+¿Un proceso de producción que manufactura transistores genera, en promedio,
+ una fracción de 2 por ciento de piezas defectuosas.
+ Cada dos horas se toma del proceso una muestra aleatoria de tama
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ñ
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+o 50.
+ Si la muestra contiene más de dos piezas defectuosas el proceso debe interrumpi
+rse.
+ Determine la probabilidad de que el proceso será interrumpido por medio
+ del esquema de muestreo indicado.
+\end_layout
+
+\begin_layout Enumerate
+Se sabe que el proceso de producción de luces de un tablero de automóvil
+ de indicador giratorio produce uno por ciento de luces defectuosas.
+ Si este valor permanece invariable, y se selecciona al azar una muestra
+ de 100 luces, encuentre 
+\shape italic
+P(
+\shape default
+
+\begin_inset Formula ${p}\mathbf{\leq0}$
+\end_inset
+
+ .03), donde 
+\begin_inset Formula ${p}$
+\end_inset
+
+ es la fracción de defectos de la muestra.
+\end_layout
+
+\begin_layout Enumerate
+Suponga que una muestra aleatoria de tama
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ñ
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+o 200 se toma de un proceso que tiene una fracción de defectos de 0.07.
+ 
+\begin_inset space \space{}
+\end_inset
+
+Cuál es la probabilidad de que 
+\begin_inset Formula $p$
+\end_inset
+
+ exceda la fracción verdadera de defectos en una desviación estándar?, ¿En
+ dos desviaciones estándar? y ¿,En tres desviaciones estándar?
+\end_layout
+
+\begin_layout Enumerate
+Un agente de bienes ra
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+í
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ces estima que la probabilidad de vender una casa es .10.1 d
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+í
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+a de hoy tiene que ver cuatro clientes Si tiene éxito en las primeras tres
+ visita cual es la probabilidad de que su cuarta visita no sea exitosa
+\begin_inset Formula $?$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Suponga que se van a realizar cinco experimentos de laboratorio idénticos
+ independientes Cada experimento es en extremo sensible a las condiciones
+ ambientales, y solo hay una probabilidad 
+\begin_inset Formula $p$
+\end_inset
+
+ de que se tenmnará con éxito Grafique, como una función 
+\shape italic
+de 
+\shape default
+la probabilidad de que el quinto experimento sea el primero que falle.
+ Obtenga matemáticamente el valor de 
+\begin_inset Formula $p$
+\end_inset
+
+ que maximice la probabilidad de que el quinto ensayo sea el primer experimento
+ no exitoso.
+\end_layout
+
+\begin_layout Enumerate
+La probabilidad de que un submarino hunda un barco enemigo con un disparo
+ de sin torpedos es 8 Si los disparos son independientes, determine la probabili
+dad de hundimiento dentro de los primeros dos disparos, y dentro de los
+ primeros tres ,
+\end_layout
+
+\begin_layout Enumerate
+En Atlanta la probabilidad de que ocurra una tormenta en cualquier dia durante
+ la primavera es 050 Suponiendo independencia, ¿cual es la probabilidad
+ de que la primera tormenta ocurra el cinco de abril Suponga que la primavera
+ empieza el 1 de marzo ?
+\end_layout
+
+\begin_layout Enumerate
+Una compradora recibe lotes peque
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ñ
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+os 
+\begin_inset Formula $(N$
+\end_inset
+
+ = 25) de un dispositivo de alta precisión Pretende rechazar el lote el
+ 95 por ciento de las veces si contienen hasta siete unidades defectuosas
+ Suponga que la compradora decide que la presencia de una unidad defectuosa
+ en la muestra, es suficiente para provocar el rechazo 
+\begin_inset space \space{}
+\end_inset
+
+Qué tan grande debe ser el tama
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ñ
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+o de su muestra?
+\end_layout
+
+\begin_layout Enumerate
+Se estima que el número de automóviles que pasa por un cruce particular
+ por hora es de 25 Obtenga la probabilidad de que menos de 10 veh
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+í
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+culos crucen durante cualquier intervalo de una hora Suponga que el núiriero
+ de veh
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+í
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+culos sigue una distribución de Poisson.
+\end_layout
+
+\begin_layout Enumerate
+Las llamadas llegan a un tablero de control telefónico de modo tal que el
+ numero de llamadas por hora sigue una distnbución de Poisson con media
+ 10 El equipo disponible puede manejar hasta 20 llamadas sin que se sobrecargue
+ ¿Cuál es la probabilidad de que ocurra dicha sobrecarga?
+\end_layout
+
+\begin_layout Enumerate
+El número de células de sangre por unidad cuadrada visible bajo el microscopio
+ sigue una distribucion de Poisson con media 4 Encuentre la probabilidad
+ de que más de 5 de tales células de sangre sean visibles para el observador.
+\end_layout
+
+\begin_layout Enumerate
+Una compaflía grande de seguros ha descubierto que 2 por ciento de la poblaci
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ó
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+n de Estados Unidos esta lesionada como resultado de alg
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ú
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+n tipo de accidente particular Esta compañía tiene 15,000 asegurados que
+ est
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+á
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+n protegidos contra tal accidente 
+\begin_inset space \space{}
+\end_inset
+
+Cuál es la probabilidad de que tres o menos reclamos se entablen en relación
+ con esas pólizas de seguro durante el siguiente año
+\begin_inset Formula $?,$
+\end_inset
+
+ ¿Cinco o mas reclamos
+\begin_inset Formula $?$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Cuadrillas de mantenimiento llegan a un almacén de herramientas solicitando
+ una pieza de repuesto particular de acuerdo con una distnbución de Poisson
+ con par
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+á
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+metro 
+\begin_inset Formula $\lambda$
+\end_inset
+
+= 2 Tres de estas piezas de repuesto por lo general se tienen disponibles
+ Si ocurren mas de tres solicitudes, las cuadrillas deben desplazarse a
+ una distancia considerable hasta los almacenes centrales
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+En un f.d.a cualquiera, 
+\begin_inset space \space{}
+\end_inset
+
+cuál es la probabilidad de que se realice un viaje a los almacenes centrales
+\begin_inset Formula $?$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset space \space{}
+\end_inset
+
+Cual es la demanda media esperada para piezas de repuesto?
+\end_layout
+
+\begin_layout Enumerate
+¿Cuantas piezas de repuesto deben transportarse si el almacen de herramientas
+ tiene que dar servicio a las cuadnllas que llegan el 90 por ciento de las
+ veces
+\begin_inset Formula $?$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset space \space{}
+\end_inset
+
+Cuál es el numero esperado de cuadnllas atendidas dianamente en el almacén
+ de herramientas
+\begin_inset Formula $?$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+¿Cuál es el numero esperado de cuadrillas que realizaran el viaje a los
+ almacenes generales
+\begin_inset Formula $?$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+En una ciudad cualquiera el
+\series default
+ consumo diario de agua (en millones de litros) sigue aproximada-mente una
+ distribución gamma con 
+\begin_inset Formula $\alpha$
+\end_inset
+
+= 2 y 
+\begin_inset Formula $\beta$
+\end_inset
+
+ = 3.
+ Si la capacidad diaria para esta ciudad es de 9 millones dc litros de agua,
+ ¿cuál es la probabilidad de que en un determinado día el suministro de
+ agua sea inadecuado?
+\end_layout
+
+\begin_layout Enumerate
+Suponga que el tiempo, en horas, que toma reparar una bomba es una variable
+ aleatoria 
+\begin_inset Formula $X$
+\end_inset
+
+ que tiene una distribución gamma con parámetros 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ = 2 y 
+\begin_inset Formula $\beta$
+\end_inset
+
+= 1/2.
+ ¿Cuál es la probabilidad de que en el siguiente servicio
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+tome cuando mucho 1 hora reparar la bomba?
+\end_layout
+
+\begin_layout Enumerate
+al menos se requieran 2 horas para reparar la bomba? 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+En una ciudad cualquiera el consumo de energía eléctrica, en millones de
+ kilowatts-hora, es una variable aleatoria 
+\begin_inset Formula $X$
+\end_inset
+
+ que tiene una distribución gamma con media 
+\begin_inset Formula $\mu$
+\end_inset
+
+
+\shape italic
+=
+\shape default
+ 6 y 
+\begin_inset Formula $\sigma^{2}$
+\end_inset
+
+ = 12,
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Encuentre los valores de 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ y 
+\begin_inset Formula $\beta$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Encuentre la probabilidad de que en un determinado día el consumo de energía
+ eléctrica se exceda por 12 kilowatts-hora.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+El tiempo que transcurre antes de que una persona sea atendida en una cafetería
+ es una variable aleatoria que tiene una distnbución exponencial con una
+ media de 4 minutos.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+ Cuál es la probabilidad de que una persona sea atendida antes dc que transcurra
+n 3 minutos en al menos 4 de los 6 días siguientes? 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

@@ -1,0 +1,19 @@
+\documentclass{article}
+\usepackage{lipsum}
+\usepackage[many]{tcolorbox}
+\usepackage{longtable}% 
+\begin{document}
+\begin{tcolorbox}[breakable]
+\makeatletter
+%\mathchardef\LT@end@pen=9999 %avoids the page break.
+
+\begin{longtable}{c}
+        Title
+\end{longtable}
+
+\lipsum[4] \lipsum[4] \lipsum[4] \lipsum[4] \lipsum[4]
+
+\lipsum[4] \lipsum[4] \lipsum[4] \lipsum[4] \lipsum[4]
+\end{tcolorbox}
+
+\end{document}

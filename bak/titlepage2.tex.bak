@@ -1,0 +1,273 @@
+\documentclass{book}
+%\documentclass{memoir}
+%
+% debugging page breaks, but too short pageheight gives bad page breaks
+% anyhow, despite my best efforts
+%\usepackage[paperheight=12cm]{geometry}
+\usepackage{xcolor}
+\usepackage{framed}
+\usepackage{tikz}
+\usepackage{lmodern}
+\usepackage{etoc}
+\usepackage[linktoc=all]{hyperref}
+
+%% THE FOLLOWING IS TAKEN (STOLEN) VERBATIM 
+%% FROM GONZALO MEDINA'S ANSWER
+
+% definition of some personal colors
+\definecolor{myred}{RGB}{127,0,0}
+\definecolor{myyellow}{RGB}{169,121,69}
+
+% command for the circle for the number of part entries
+\newcommand\Circle[1]{\tikz[overlay,remember picture] 
+  \node[draw,circle, text width=18pt,line width=1pt] {#1};}
+
+
+%% (jfbu) This defines an adjustable length, which gives the position of the
+%% section and subsection from the left document margin.
+\newlength{\tocmargin}
+% Its value is set in the \etocsettocstyle command below, after \sffamily
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% USE OF framed package
+
+% modified (jfbu): it took me a while to settle on that way of using the
+% framed package. Initially I had as in Gonzalo Medina's code
+% a \parshape, but it applies only to one paragraph (this was from his
+% code where the left bar applied only to the chapter entries of the
+% toc, not the sections and subsections). Besides, I had some problems
+% with disturbing page breaks in certain circumstances, and these
+% problems seem to be gone now, I needed to do adjustment to \hsize from
+% inside the chapter style. This is all gone now.
+\newenvironment{tocleftbar}
+  {\def\FrameCommand {\hspace{\dimexpr\tocmargin-4pt\relax}%
+           {\color{myyellow}\vrule width 2pt depth 6pt}\hspace{2pt}%
+           \hspace{-\tocmargin}}% 
+    \MakeFramed {\leftskip\tocmargin\rightskip\tocmargin\FrameRestore}}
+ {\endMakeFramed}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% THE PLAGIARISM CONTINUES, WITH SOME MORE MODIFICATIONS, 
+%% AND  EMBEDDED INSIDE ETOC COMMANDS
+
+\etocsetstyle{part}
+   {\nobreak\etocskipfirstprefix }
+   {\pagebreak[3]}% makes a page break before a Part favorable
+   {% debugging:
+    % \noindent\rule{\tocmargin}{1pt}\par
+    %          \rule{\dimexpr2\tocmargin\relax}{1pt}\par
+    \addvspace{1.5\baselineskip}%
+    {\huge\centering
+     \color{myyellow}\Circle{\hfil\etocnumber\hfil}\\*[2ex]%
+     \color{myred}\etocname\par}}
+   {}
+
+% totalement instable: passer de 2ex à 2.5ex suffit à tout bouleverser!
+% toutes choses égales par ailleurs.
+
+
+\newif\ifintocleftbar
+
+\etocsetstyle{chapter}
+% don't break immediately after Part
+   {\nobreak\etocskipfirstprefix }
+% but allow break after section or subsection
+   {\pagebreak[2]}
+   {%\addvspace{\baselineskip}%
+    % it seems that framed's code too easily allows a page break 
+    % if some vertical glue is here, so let's use a \kern
+    \kern\baselineskip
+    \begin{tocleftbar}
+      \intocleftbartrue
+      \makebox[0pt][r]{\smash{\parbox{6em}%
+                       {\null\hfill\Huge\bfseries\color{myred}\etocpage
+                        \hspace*{8pt}}}}%
+% use of \parbox, else framed.sty has a tendency to allow page breaks if
+% multi-line name
+      \parbox[t]{\dimexpr\hsize-2\tocmargin\relax}
+      {\Large\textsc{\small \etoclink{Chapter~\etocthenumber}}%
+%\\* does not do what I want. \par\nobreak does.
+% But as we are now in \parbox, does not matter
+      \par\etocname\rule[-\baselineskip]{0pt}{0pt}}%
+      \par
+      \normalsize\leftskip\dimexpr\leftskip+3em\relax
+    }
+   {}
+
+% THIS IS A VARIANT ABLE TO COPE WITH CHAPTERS WITHOUT SECTIONS
+% it is **complicated** because \etocname etc.. loose their meaning if one
+% closes a group in the third ("prefix")  or fourth ("contents")
+% arguments to \etocsetstyle. Thus, we have to save them before
+% issueing \end{tocleftbar} to close the previous left bar environment.
+% Although the code mentions \etocthelink, etc, it works also if
+% hyperref is not loaded.
+% \etocsetstyle{chapter}
+%    {\nobreak\etocskipfirstprefix}% don't break immediately after Part
+%    {\pagebreak[2]}% but allow break after section or subsection
+%    {\global\let\ETOCthepage\etocthepage
+%                    \global\let\ETOCthename\etocthename
+%                    \global\let\ETOCthenumber\etocthenumber
+%                    \global\let\ETOCthelink\etocthelink
+%     \ifintocleftbar\end{tocleftbar}\fi%
+%     \kern\baselineskip
+%     \begin{tocleftbar}
+%       \intocleftbartrue
+%       \makebox[0pt][r]{\smash{\parbox{6em}%
+%                        {\null\hfill\Huge\bfseries\color{myred}%
+%                         \ETOCthelink{\ETOCthepage}%
+%                         \hspace*{8pt}}}}%
+%       \parbox[t]{\dimexpr\hsize-2\tocmargin\relax}
+%       {\Large\textsc{\small \ETOCthelink{Chapter~\ETOCthenumber}}%
+% %\\* does not do what I want. \par\nobreak does.
+% % But as we are now in \parbox, does not matter
+%       \par\ETOCthelink{\ETOCthename}\rule[-\baselineskip]{0pt}{0pt}}%
+%       \par
+%       \normalsize\leftskip\dimexpr\leftskip+3em\relax
+%     }
+%    {\ifintocleftbar\end{tocleftbar}\fi}
+
+
+\etocsetstyle {section}
+% avoid break after Chapter
+  {\nopagebreak[3]\vspace{1pt}\etocskipfirstprefix}
+% allow break after previous subsection or section
+  {\vspace {1pt plus .2pt minus .2pt}}
+  {\makebox[0pt][r]{\makebox[3em][l]{\etocnumber}}%
+   \etocname
+   \hspace{0.5em}\nobreak{\itshape\color{myred}\etocpage}\par }
+  {\end{tocleftbar}}
+
+
+% IMPORTANT: this is ALSO executed if the last thing
+                   % before the next chapter is a subsection
+
+\etocsetstyle {subsection}
+% avoid break immediately after section
+  {\nopagebreak[2]\vspace{1pt}\etocskipfirstprefix}
+  {\vspace {1pt plus .2pt minus .2pt}}%
+  % {\etocskipfirstprefix}
+  % {\pagebreak[2]\etocskipfirstprefix}% allow break after previous subsection
+  {\makebox[0pt][r]{\makebox[3em][l]{\etocnumber}}\etocname
+   \hspace{0.5em}\nobreak{\itshape\color{myred}\etocpage}\par }
+  {}
+
+
+\etocsettocstyle{\sffamily\setlength{\tocmargin}{5.4em}%
+          {\Huge\bfseries\color{myred}\contentsname\par}%
+          \leftskip 0pt\parindent 0pt }{}
+
+  % for memoir class: (does no harm otherwise) [Nota Bene: this should
+  % perhaps be done automatically by etoc when it detects the memoir
+  % class, for better compatibility]
+\etocsetlevel {appendix}{0}
+
+\begin{document}
+
+% Use \tableofcontents* for memoir class, as the TOC itself should not
+% appear as a Chapter in the TOC. The * works also with book/report+etoc
+% but does nothing. 
+
+% With memoir and without *, the TOC defines a  not-very aesthetic
+% chapter entry in itself and one must un-comment the more complicated
+% etoc style for chapter above.
+
+% debugging
+% \hrule
+
+\tableofcontents*
+
+\part{Designing with \TeX\ and \LaTeX}
+
+\localtableofcontents
+
+\chapter{Beginning to learn design with \TeX}
+\section{Another test section}
+\section{Another test section}
+\subsection{A test subsection}
+\section{Another test section}
+\subsection{A test subsection}
+\subsection{A test subsection with a long title spanning more than one line in the table of contents}
+\section{Another test section}
+\section{Another test section}
+\section{Another test section}
+\subsection{A test subsection with a long title spanning more than one line in the table of contents}
+
+% If this is un-commented the more sophisticated chapter style must be used.
+%\chapter{A lone chapter without any sections}
+
+\chapter{Beginning to learn design with \LaTeX}
+\section{A test section with a long title spanning more than one line in the table of contents}
+\subsection{A test subsection}
+\subsection{Another test subsection}
+\section{A test section}
+\ifdefined\phantomsection\phantomsection\fi
+\addcontentsline{toc}{section}{Test unnumbered section}
+\section*{Test unnumbered section}
+\subsection{A test subsection}
+\section{Another test section}
+\subsection{A test subsection}
+\subsection{A test subsection}
+\section{Another test section}
+\section{Another test section}
+
+
+\newpage\setcounter{page}{123}% just for the example
+
+\part{Designing with HTML}
+
+\localtableofcontents
+
+\chapter{Beginning to learn design with HTML and some other text to span more than one line} 
+\section{Another test section}
+\section{Another test section}
+\subsection{A test subsection}
+\section{Another test section with a long title spanning more than one line in the table of contents}
+\subsection{A test subsection}
+\section{Another test section}
+\section{Another test section}
+\subsection{A test subsection}
+\subsection{A test subsection}
+\section{Another test section}
+\section{Another test section}
+\subsection{A test subsection}
+
+
+
+\chapter{Beginning to learn design with HTML and some other text to span more than one line} 
+\section{Another test section}
+\section{Another test section}
+\subsection{A test subsection}
+\section{Another test section}
+\section{Another test section}
+\subsection{A test subsection with a long title spanning more than one line in the table of contents}
+\section{Another test section}
+\section{Another test section}
+\subsection{A test subsection}
+\section{Another test section}
+\section{Another test section}
+\subsection{A test subsection}
+\subsection{A test subsection}
+\section{Another test section}
+\section{Another test section}
+\subsection{A test subsection}
+\section{Another test section}
+\subsection{A test subsection}
+\section{Another test section}
+\section{Another test section}
+\section{Another test section}
+\subsection{A test subsection}
+
+
+\appendix
+
+\chapter{Test Appendix}
+\section{Another test section}
+\section{Another test section with a long title spanning more than one line in the table of contents}
+\section{Another test section}
+\subsection{A test subsection}
+\section{Another test section}
+\section{Another test section}
+
+
+\end{document}

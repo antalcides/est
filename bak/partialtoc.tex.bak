@@ -1,0 +1,52 @@
+\documentclass[12pt,a4paper]{book}
+\usepackage{titletoc}
+\usepackage[toctitles]{titlesec}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{shadows.blur}
+\usepackage{lipsum}
+\usepackage{calc}
+\definecolor{titlebgdark}{RGB}{0,163,243}
+\definecolor{titlebglight}{RGB}{191,233,251}
+\definecolor{yourcolor}{HTML}{008bb2}
+
+\newcommand{\PartialToc}{\vspace*{2pc}\textcolor{titlebgdark}\hrule\vspace*{1pc}%
+\startcontents[chapters]\vbox{\bf\Large \color{titlebgdark}Contenido}\vspace*{20pt}
+\colorlet{chpnumbercolor}{white}
+
+%\printcontents[chapters]{}{1}{}
+ \begin{tikzpicture}
+    \node[rounded corners,align=left,fill=titlebgdark, blur shadow={shadow blur steps=5}, inner sep=5mm]{%
+        \color{white}%
+        \begin{minipage}{8cm}%minipage trick
+        \printcontents[chapters]{}{1}{}
+        \end{minipage}};
+    \end{tikzpicture}
+\textcolor{titlebgdark}{\vspace*{1pc}\hrule}}
+
+\begin{document}
+
+\chapter{First Chapter}
+
+Text Text Text Text Text Text Text Text Text Text Text Text Text
+
+\PartialToc
+
+\section{First Section}
+\lipsum
+\section{Another Section}
+\subsection{One Subsection}
+\subsection{Two Subsection}
+
+\chapter{Second Chapter}
+
+Text Text Text Text Text Text Text Text Text Text Text Text Text
+
+\PartialToc
+
+\section{Last Section}
+\subsection{Three Subsection}
+\subsection{Four Subsection}
+
+\end{document}

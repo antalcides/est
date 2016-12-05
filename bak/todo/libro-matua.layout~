@@ -1,0 +1,6 @@
+#  \DeclareLaTeXClass[libro-est]{book Libro Estadística)}
+
+Format 35
+
+Input book.layout
+Input knitr.module

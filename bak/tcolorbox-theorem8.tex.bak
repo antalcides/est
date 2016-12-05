@@ -1,0 +1,338 @@
+\documentclass{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\RequirePackage[T1]{fontenc}
+\RequirePackage[latin1]{inputenc}
+\RequirePackage[english]{babel}
+\RequirePackage{lmodern,parskip,array,ifthen,calc}
+\RequirePackage{amsmath,amsthm,amssymb,verbatim}
+\usepackage{listing}
+\RequirePackage[svgnames,table,hyperref]{xcolor}
+\RequirePackage{tikz}
+\RequirePackage{varioref}
+\RequirePackage[pdftex,bookmarks,raiselinks,pageanchor,hyperindex,colorlinks]{hyperref}
+\RequirePackage{varwidth,cleveref,incgraph}
+\RequirePackage[a4paper,left=2.5cm,right=2.5cm,top=1.5cm,bottom=1.5cm,
+    marginparsep=3mm,marginparwidth=18mm,
+    headheight=0mm,headsep=0cm,
+    footskip=1.5cm,includeheadfoot%,showframe
+    ]{geometry}
+\RequirePackage{fancyhdr}
+\fancyhf{}
+\fancyfoot[C]{\thepage}%
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\pagestyle{fancy}
+\tolerance=2000%
+\setlength{\emergencystretch}{20pt}%
+ 
+ \newsavebox\mysavebox % preamble
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[many]{tcolorbox}
+\tcbuselibrary{skins,xparse,breakable}
+\tcbuselibrary{minted,listings}
+\usepackage{lipsum-es}
+\definecolor{myblue}{RGB}{0,163,243}
+
+\newtcolorbox[auto counter,number within=section]{mytheorem}[1][]{
+  enhanced jigsaw,colback=white,colframe=myblue,coltitle=myblue,
+  fonttitle=\bfseries\sffamily,
+  sharp corners,
+  detach title,
+  leftrule=22mm,
+  underlay unbroken and first={\node[below,text=white,font=\sffamily\bfseries,align=center]
+    at ([xshift=-11mm,yshift=-1mm]interior.north west) {THEOREM\\\thetcbcounter};},
+  breakable,pad at break=1mm,
+  #1,
+  code={\ifdefempty{\tcbtitletext}{}{\tcbset{before upper={\tcbtitle\par\medskip}}}},
+}
+%%%%%%%%%%%%%
+\tcbset{
+defstyle/.style={fonttitle=\bfseries\upshape, fontupper=\slshape,
+arc=0mm, colback=blue!5!white,colframe=blue!75!black},
+theostyle/.style={fonttitle=\bfseries\upshape, fontupper=\slshape,
+colback=red!10!white,colframe=red!75!black},
+}
+\newtcbtheorem[number within=subsection,crefname={definition}{definitions}]%
+{Definition}{Definition}{defstyle}{def}
+\newtcbtheorem[use counter from=Definition,crefname={theorem}{theorems}]%
+{Theorem}{Theorem}{theostyle}{theo}
+\newtcbtheorem[use counter from=Definition,crefname={corollary}{corollaries}]%
+{Corollary}{Corollary}{theostyle}{cor}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ \usepackage{varwidth}
+\newtcolorbox{mybox}[2][]{enhanced,skin=enhancedlast jigsaw,
+attach boxed title to top left={xshift=-4mm,yshift=-0.5mm},
+fonttitle=\bfseries\sffamily,varwidth boxed title=0.7\linewidth,
+colbacktitle=blue!45!white,colframe=red!50!black,
+interior style={top color=blue!10!white,bottom color=red!10!white},
+boxed title style={empty,arc=0pt,outer arc=0pt,boxrule=0pt},
+underlay boxed title={
+\fill[blue!45!white] (title.north west) -- (title.north east)
+-- +(\tcboxedtitleheight-1mm,-\tcboxedtitleheight+1mm)
+-- ([xshift=4mm,yshift=0.5mm]frame.north east) -- +(0mm,-1mm)
+-- (title.south west) -- cycle;
+\fill[blue!45!white!50!black] ([yshift=-0.5mm]frame.north west)
+-- +(-0.4,0) -- +(0,-0.3) -- cycle;
+\fill[blue!45!white!50!black] ([yshift=-0.5mm]frame.north east)
+-- +(0,-0.3) -- +(0.4,0) -- cycle; },
+title={#2},#1}
+%%%%%%%%%%%%%%%%%
+\newtcblisting[auto counter]{mycbox}[1]{%
+colback=red!5!white,colframe=red!75!black,fonttitle=\bfseries,
+title=Listing \thetcbcounter: #1}
+\usepackage{empheq}
+% \tcbuselibrary{skins}
+\usepackage{varioref}
+ \usepackage{cleveref}
+ \newtcbtheorem[use counter from=Definition]{YetAnotherTheorem}{Theorem}%
+  {theorem style=plain apart,label type=theorem,enhanced,frame hidden,
+  boxrule=2mm,titlerule=0mm,toptitle=1mm,bottomtitle=1mm,
+  fonttitle=\bfseries\large,fontupper=\normalsize,
+  coltitle=green!35!black,colbacktitle=green!15!white,
+  colback=green!50!yellow!15!white,borderline={1pt}{0pt}{green!25!blue},
+  }{theo}
+  %%%%%%%%%
+  \tcolorboxenvironment{proof}{% ’proof’ from ’amsthm’
+blanker,breakable,left=5mm,
+before skip=10pt,after skip=10pt,
+borderline west={1mm}{0pt}{red}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\section{Test section}
+
+\begin{mytheorem}[title=Normal Sampling Distributions]
+\lipsum[1]
+\end{mytheorem}
+
+\begin{mytheorem}
+\lipsum[2]
+\end{mytheorem}
+
+\begin{mytheorem}[title=Test]
+\lipsum[3-5]
+\end{mytheorem}
+\begin{equation}
+\tcbset{fonttitle=\scriptsize}
+\tcboxmath[colback=LightBlue!25!white,colframe=blue]{ a^2 = 16 }
+\quad \Rightarrow \quad
+\tcboxmath[colback=Salmon!25!white,colframe=red,title=Implication]%
+{ a = 4 ~\vee~ a=-4. }
+\end{equation}
+\tcbset{colback=green!40!white}
+\tcbsetforeverylayer{colframe=red!75!black}
+\begin{tcolorbox}[title=All options for this box]
+This is a tcolorbox.\par\medskip
+\begin{tcolorbox}[title=Nested box]
+Note that this nested box has a red frame but no green background.
+\end{tcolorbox}
+\end{tcolorbox}
+\bigskip
+\begin{tcolorbox}[reset]
+Options given with \verb+\tcbsetforeverylayer + survive a \verb+ reset+.
+\end{tcolorbox}
+\begin{tcolorbox}
+Options given with \verb+\tcbsetforeverylayer + reset a \verb+ survive+.
+\end{tcolorbox}
+%%%%%%%%%%%%%%%%%%%%%%%%
+% \tcbuselibrary{skins,xparse}
+% \usepackage{lipsum}
+% \newsavebox\mysavebox % preamble
+\DeclareTotalTColorBox{\mysidebox}{ O{} +m +m }{
+bicolor,colback=white,colbacklower=yellow!10,
+fonttitle=\bfseries,center title,
+sidebyside,
+code={\sbox{\mysavebox}{#2}},
+lefthand width=\wd\mysavebox,
+drop lifted shadow,
+#1
+}
+{\usebox{\mysavebox}\tcblower#3}
+\mysidebox[title=The Triangle]{%
+\begin{tikzpicture}
+\path[fill=red!20,draw=red!50!black]
+(0,0) node[below]{A} -- (3,1) node[right]{B}
+-- (1,4) node[above]{C} -- cycle;
+\end{tikzpicture}%
+}{%
+\lipsum[1]
+}
+\begin{mybox}{My title}
+\lipsum[2]
+\end{mybox}
+%%%%%%%%%%%%%%%%%%%%%
+\tcbset{enhanced,colback=red!5!white,
+colframe=red!75!black,fonttitle=\bfseries}
+\begin{tcolorbox}[title=Transparent box,
+tikz={opacity=0.5,transparency group}]
+This is a tcolorbox.
+\end{tcolorbox}
+%%%%%%%%%%%%
+\begin{tcblisting}{colback=red!5!white,colframe=red!25,left=6mm,
+listing options={style=tcblatex,numbers=left,numberstyle=\tiny\color{red!75!black}}}
+This is a \LaTeX\ example which displays the text as source code
+and in compiled form. Additionally, we use line numbers here.
+\end{tcblisting}
+%%%%%%%%%%%%%%%%%
+\begin{mycbox}{Listing Box}
+This is my \LaTeX\ box.
+\end{mycbox}
+%%%%%%%%%%%%%%%
+\tcbset{highlight math style={enhanced,%<-- needed for the ’remember’ options
+colframe=red,colback=red!10!white,boxsep=0pt}}
+\begin{align*}
+\tcbhighmath[remember as=fx]{f(x)}
+&= \int\limits_{1}^{x} \frac{1}{t^2}~dt
+= \left[ -\frac{1}{t} \right]_{1}^{x}\\
+&= -\frac{1}{x} + \frac{1}{1}\\
+&=
+\tcbhighmath[remember,overlay={%
+\draw[blue,very thick,->] (fx.south) to[bend right] ([yshift=2mm]frame.west);}]
+{1-\frac{1}{x}.}
+\end{align*}
+%%%%%%%%%%%%%%%%%
+% \usepackage{empheq}
+\begin{empheq}[box=\tcbhighmath]{align}
+a&=\sin(z)\\
+E&=mc^2 + \int_a^b x\, dx
+\end{empheq}
+\tcbset{highlight math style={enhanced,
+colframe=red!60!black,colback=yellow!50!white,arc=4pt,boxrule=1pt,
+drop fuzzy shadow}}
+\begin{empheq}[box=\tcbhighmath]{align}
+a&=\sin(z)\\
+E&=mc^2 + \int_a^b x\, dx
+\end{empheq}
+%%%%%%%%%%%%%%
+\tcbset{myformula/.style={colback=yellow!10!white,colframe=red!50!black,
+every box/.style={highlight math style={colback=LightBlue!50!white,colframe=Navy}}
+}}
+\begin{align}
+\tcbhighmath{\sum\limits_{n=1}^{\infty} \frac{1}{n}} &= \infty.\\
+\int x^2 ~\text{d}x
+&= \frac13 x^3 + c.
+\end{align}
+\begin{tcolorbox}[ams align,myformula]
+\tcbhighmath{\sum\limits_{n=1}^{\infty} \frac{1}{n}} &= \infty.\\
+\int x^2 ~\text{d}x
+&= \frac13 x^3 + c.
+\end{tcolorbox}
+%%%%%%%%%%%%%%%
+\newtcbox{\otherbox}[1][]{nobeforeafter,math upper,tcbox raise base,
+enhanced,frame hidden,boxrule=0pt,interior style={top color=green!10!white,
+bottom color=green!10!white,middle color=green!50!yellow},
+fuzzy halo=1pt with green,#1}
+\begin{empheq}[box=\otherbox]{align}
+a&=\sin(z)\\
+E&=mc^2 + \int_a^b x\, dx
+\end{empheq}
+\begin{equation}
+\tcbhighmath{E} = \otherbox{mc^2}
+\end{equation}
+%%%%%%%%%%%
+
+
+\begin{YetAnotherTheorem}{Mittelwertsatz f\"{u}r $n$ Variable}{meanvaluetheorem}%
+  Es sei $n\in\mathbb{N}$, $D\subseteq\mathbb{R}^n$ eine offene Menge und
+  $f\in C^{1}(D,\mathbb{R})$. Dann gibt es auf jeder Strecke
+  $[x_0,x]\subset D$ einen Punkt $\xi\in[x_0,x]$, so dass gilt
+  \begin{equation*}
+  f(x)-f(x_0) = \operatorname{grad} f(\xi)^{\top}(x-x_0)
+  \end{equation*}
+\end{YetAnotherTheorem}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \tcbuselibrary{skins}
+\newtcbtheorem[use counter from=Definition]{YetAnotherTheorem1}{Theorem}%
+{theorem style=change apart,enhanced,arc=0mm,outer arc=0mm,
+boxrule=0mm,toprule=1mm,bottomrule=1mm,left=1mm,right=1mm,
+titlerule=0mm,toptitle=0mm,bottomtitle=1mm,top=0mm,
+colframe=red!50!black,colback=red!5!white,coltitle=red!50!black,
+title style={top color=yellow!50!white,bottom color=red!5!white,
+middle color=yellow!50!white},
+fonttitle=\bfseries\sffamily\normalsize,fontupper=\normalsize\itshape,
+}{theo}
+\begin{YetAnotherTheorem1}{Mittelwertsatz f\"{u}r $n$ Variable}{mittelwertsatz_n2}%
+Es sei $n\in\mathbb{N}$, $D\subseteq\mathbb{R}^n$ eine offene Menge und
+$f\in C^{1}(D,\mathbb{R})$. Dann gibt es auf jeder Strecke
+$[x_0,x]\subset D$ einen Punkt $\xi\in[x_0,x]$, so dass gilt
+\begin{equation*}
+f(x)-f(x_0) = \operatorname{grad} f(\xi)^{\top}(x-x_0)
+\end{equation*}
+\end{YetAnotherTheorem1}
+
+\begin{proof}
+\lipsum*[4]
+\end{proof}
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%
+\tcbset{after title={\hfill\colorbox{Navy}{approved}},
+colback=red!5!white,colframe=red!75!black,fonttitle=\bfseries}
+\begin{tcolorbox}[title=My title]
+This is a \textbf{tcolorbox}.
+\end{tcolorbox}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\tcbset{after title=,enhanced jigsaw,colback=red!5!white,colframe=red!75!black,
+watermark color=yellow!25!white,watermark text=\arabic{tcbbreakpart},
+fonttitle=\bfseries}
+\begin{tcolorbox}[breakable,title=My breakable box , title after break=\title \hfill Continuaci\'on]
+\lipsum[1-6]
+\end{tcolorbox}
+%%%%%%%%%%%%%
+\tcbset{enhanced jigsaw,colback=red!5!white,colframe=red!75!black,
+watermark color=yellow!25!white,watermark text=\arabic{tcbbreakpart},
+fonttitle=\bfseries}
+\begin{tcolorbox}[breakable,title=My breakable box , adjusted title after break=\title \hfill Continuaci\'on]
+\lipsum[1-6]
+\end{tcolorbox}
+%%%%%%%%%%%%%%%%
+\DeclareTotalTCBox{\myverb}{ O{red} v O{} }
+{ fontupper=\ttfamily,nobeforeafter,tcbox raise base,arc=0pt,outer arc=0pt,
+top=0pt,bottom=0pt,left=0mm,right=0mm,
+leftrule=0pt,rightrule=0pt,toprule=0.3mm,bottomrule=0.3mm,boxsep=0.5mm,
+colback=#1!10!white,colframe=#1!50!black,#3}{#2}
+To set a word \textbf{bold} in \myverb{\LaTeX}, use
+\myverb[green]{\textbf{bold}}. Alternatively, write
+\myverb[yellow]{{\bfseries bold}}.
+In \myverb[blue]{\LaTeX}[enhanced,fuzzy halo], other font settings are
+done in the same way, e.\,g. \myverb{\textit}, \myverb{\itshape}\\
+or \myverb[brown]{\texttt}, \myverb[brown]{\ttfamily}.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\tcboxverb{\LaTeX}, \tcboxverb[colback=blue!10!white,colupper=blue]{\LaTeX},
+\tcboxverb[blank,fuzzy halo]{\LaTeX}, \tcboxverb[beamer]{\LaTeX},
+\tcboxverb[enhanced,skin=enhancedmiddle jigsaw,colframe=red]{\LaTeX}.
+%%%%%%%%%%%%%5
+% \usepackage{listings} or \tcbuselibrary{listings}
+\DeclareTotalTCBox{\commandbox}{ s v }
+{verbatim,colupper=white,colback=black!75!white,colframe=black}
+{\IfBooleanTF{#1}{\textcolor{red}{\ttfamily\bfseries > }}{}%
+
+\lstinline[language=command.com,keywordstyle=\color{blue!35!white}\bfseries]^#2^}
+\commandbox*{cd "My Documents"} changes to directory \commandbox{My Documents}.
+\commandbox*{dir /A} lists the directory content.
+\commandbox*{copy example.txt d:\target} copies \commandbox{example.txt} to
+\commandbox{d:\target}.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\tcbset{enhanced,nobeforeafter,colback=red!5!white,
+colframe=red!75!black,width=3cm,square,halign=center,valign=center
+}
+\begin{tcolorbox}[drop shadow]
+Smart shadow arc (arguably better than normal)
+\end{tcolorbox}
+\hfill
+\begin{tcolorbox}[smart shadow arc=false, drop shadow]
+Normal shadow arc
+\end{tcolorbox}
+\hfill
+\begin{tcolorbox}[circular arc, drop shadow]
+Smart shadow arc (worse than normal)
+\end{tcolorbox}
+\hfill
+\begin{tcolorbox}[circular arc, smart shadow arc=false, drop shadow]
+Normal shadow arc
+\end{tcolorbox}\\
+
+
+\end{document}

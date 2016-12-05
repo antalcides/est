@@ -1,0 +1,45 @@
+\documentclass{article}
+\usepackage{blindtext}
+\usepackage{tcolorbox}
+\tcbuselibrary{breakable,skins}
+\usepackage{caption}
+\usepackage{array,tabularx,longtable}
+\usepackage{colortbl,lipsum}
+\usepackage[margin=2cm]{geometry}
+\begin{document}
+
+\begin{tcolorbox}[
+  breakable=true,
+  enhanced jigsaw,
+  size=small,
+  fonttitle=\bfseries\normalsize,
+  fontupper=\small,
+  fontlower=\small,
+  center title,
+  title={\captionsetup{skip=0pt}\captionof{table}{Test}},
+  colbacktitle=blue!10,
+  colframe=blue!50!black,
+  colback=yellow!10,
+  label=fig:Test
+  ]
+\def\LTpre{0pt}%
+\begin{longtable}{
+@{\extracolsep{\fill}}
+>{\raggedright}p{.3\linewidth}|
+>{\raggedright}p{.3\linewidth}|
+>{\raggedright}p{.3\linewidth}
+@{}}
+\emph{A} & \emph{B} & \emph{C}\tabularnewline\hline
+A & B & C \tabularnewline
+\blindtext[1] & \blindtext[1] & \blindtext[1] \tabularnewline
+\blindtext[1] & \blindtext[1] & \blindtext[1] \tabularnewline
+\blindtext[1] & \blindtext[1] & \blindtext[1] \tabularnewline
+\blindtext[1] & \blindtext[1] & \blindtext[1] \tabularnewline
+\blindtext[1] & \blindtext[1] & \blindtext[1] \tabularnewline
+\blindtext[1] & \blindtext[1] & \blindtext[1] \tabularnewline
+\blindtext[1] & \blindtext[1] & \blindtext[1] \tabularnewline
+\blindtext[1] & \blindtext[1] & \blindtext[1] \tabularnewline
+\end{longtable}
+\end{tcolorbox}
+
+\end{document}

@@ -1,0 +1,56 @@
+\ProvidesClass{cornell}
+\LoadClass[a4paper]{article} 
+\usepackage{tcolorbox}
+\usepackage{parcolumns}
+\usepackage{xparse}
+\usepackage{tikz}
+\usepackage{tikzpagenodes}
+\usepackage{lipsum}
+
+\tcbuselibrary{skins}
+
+\date{}
+\usepackage[margin=2cm]{geometry}
+\DeclareDocumentCommand\cornelltitle{ m }
+{
+    \vspace{-3em}
+        \begin{tcolorbox}[width=\textwidth,lowerbox=invisible]
+                \Huge\sffamily #1
+        \end{tcolorbox}
+    \vspace{-3em}
+}
+
+\DeclareDocumentCommand\preread{ m m }
+{
+    \begin{tcolorbox}[width=\textwidth]
+    #1
+    \tcblower 
+        #2
+    \end{tcolorbox}
+}
+
+\DeclareDocumentCommand\note{ o m }
+{
+    \begin{parcolumns}[colwidths={1=.3\textwidth},nofirstindent]{2}
+        \colchunk{ 
+            \IfNoValueF{#1} {
+                \begin{tcolorbox}[lowerbox=invisible, box align=top]
+                #1 
+                \end{tcolorbox}
+            }{}
+        }
+        \colchunk{ 
+            \begin{tcolorbox}[lowerbox=invisible, box align=top]
+            #2
+            \end{tcolorbox}
+        }
+    \end{parcolumns}
+}
+\DeclareDocumentCommand\summary{ m }
+{
+    \begin{tcolorbox}[floatplacement=b,float]
+    Summary
+    \tcblower
+        #1
+    \end{tcolorbox}
+}

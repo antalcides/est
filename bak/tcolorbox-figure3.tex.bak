@@ -1,0 +1,109 @@
+\documentclass[draft]{article}
+\usepackage[margin=2cm]{geometry}
+\usepackage{tikz}
+\usepackage[most]{tcolorbox}
+
+\begin{document}
+\begin{center}
+\begin{tcolorbox}[halign= flush center, halign title= flush center, fonttitle=\sffamily\bfseries\large, title={Lecteur DVD LG=Modèle GSA-H10N}, width=9cm]
+\includegraphics[height=3cm]{Picture1.jpg}
+\end{tcolorbox}
+\end{center}
+\tcbset{on line,before upper=\strut,width=10cm}
+
+\vspace{10px} %%%%%%%%% Adding space %%%%%%%%%
+\begin{minipage}{.45\linewidth}
+\begin{flushleft} 
+\tcbox[tcbox width=auto]{PHASES DE DEMONTAGE}
+\end{flushleft} 
+\end{minipage}
+\hfill
+\begin{minipage}{.45\linewidth}
+\begin{flushright}
+\tcbox[tcbox width=auto limited]{ATTACHEMENTS}
+\end{flushright}
+\end{minipage}
+
+\newtcolorbox[auto counter]{mybox}[1]{fonttitle=\sffamily\bfseries\large, sidebyside, lefthand width=6.5cm,
+  enhanced, remember as=a\thetcbcounter,
+  title=#1,
+  overlay unbroken and first ={
+    \node[anchor=north east,rounded corners,draw=black!80,fill=gray!30,line width=0.5mm,text width=2.5em,align=center,minimum height=4ex] at ([xshift=-\marginparsep]frame.north west) {\thetcbcounter};
+  }
+}
+
+\vspace{10px}
+%%%%%%%%%%%%%%%% Phase 1
+\begin{minipage}{.45\linewidth}
+\begin{flushleft} 
+\begin{mybox}{Démontage du boitier}
+\includegraphics[height=3cm]{Picture2.JPG}% 
+\hspace{10px}\includegraphics[height=3cm]{Picture3.jpg}
+\tcblower
+\underline{Temps:}\\\\ 4 min.\\ 30 sec.
+\end{mybox}
+\end{flushleft} 
+\end{minipage}
+\hfill
+\begin{minipage}{.45\linewidth}
+\begin{flushright}
+\begin{tcolorbox}[enhanced, width=4.5cm,
+halign=center,valign=center,
+square, remember as=b1]
+\includegraphics[height=3.5cm]{Picture4.JPG}
+\end{tcolorbox}
+\end{flushright}
+\end{minipage}
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%% Phase 2
+\begin{minipage}{.45\linewidth}
+\begin{flushleft} 
+\begin{mybox}{Démontage de la carte mère}
+\includegraphics[height=3cm]{Picture2_1.jpg}%
+\hspace{10px}\includegraphics[height=3cm]{Picture5.JPG}
+\tcblower
+\underline{Temps:}\\\\ 1 min.\\ 25 sec.
+\end{mybox}
+\end{flushleft} 
+\end{minipage}
+\hfill
+\begin{minipage}{.45\linewidth}
+\begin{flushright}
+\begin{tcolorbox}[enhanced, width=4.5cm,
+halign=center,valign=center,
+square, remember as=b2]
+\includegraphics[height=3.5cm]{Picture2_2.jpg}
+\end{tcolorbox}
+\end{flushright}
+\end{minipage}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%% Phase 3
+\begin{minipage}{.45\linewidth}
+\begin{flushleft} 
+\begin{mybox}{Démontage du boitier}
+\includegraphics[height=3cm]{Picture6.JPG}% 
+\hspace{10px}\includegraphics[height=3cm]{Picture7.JPG}
+\tcblower
+\underline{Temps:}\\\\ 45 sec.
+\end{mybox}
+\end{flushleft} 
+\end{minipage}
+\hfill
+\begin{minipage}{.45\linewidth}
+\begin{flushright}
+\begin{tcolorbox}[enhanced, overlay, width=4.5cm,
+halign=center,valign=center,
+square, remember as=b3]
+\includegraphics[height=3.5cm]{Picture2_3.jpg}
+\end{tcolorbox}
+\end{flushright}
+\end{minipage}
+
+\begin{tikzpicture}[overlay,remember picture,->, line width=0.8mm,draw=red!75!black]
+    \foreach \x in {1,2,3}{%
+        \draw (a\x.east) -- (b\x.west);
+    }    
+\end{tikzpicture}
+\end{document}

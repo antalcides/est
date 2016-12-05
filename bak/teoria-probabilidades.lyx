@@ -1,0 +1,9261 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass libro-matua
+\begin_preamble
+%\usepackage[utf8x]{inputenc}
+\usepackage[spanish, es-tabla]{babel}
+\usepackage{makeidx}
+\usepackage{graphicx}
+\graphicspath{{ps/}{logo/}{image/}{sections/Figures/}}
+%\usepackage{lmodern}
+\usepackage{lipsum}
+\usepackage{fancyvrb}
+\usepackage{cancel}
+\raggedbottom %para que no distibuya los espacios verticales en una hoja
+\usepackage{pgf}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+\usepackage{zahlen}
+\usepackage[hmargin=2cm,bmargin=3cm,tmargin=4.5cm,centering]{geometry}
+% Length to control the \fancyheadoffset and the calculation of \headline
+% simultaneously
+\newlength\FHoffset
+\setlength\FHoffset{0.5cm}
+
+\addtolength\headwidth{2\FHoffset}
+
+\fancyheadoffset{\FHoffset}
+
+% these lengths will control the headrule trimming to the left and right 
+\newlength\FHleft
+\newlength\FHright
+
+% here the trimmings are controlled by the user
+\setlength\FHleft{1cm}
+\setlength\FHright{0cm}
+
+% The new definition of headrule that will take into acount the trimming(s)
+\newbox\FHline
+\setbox\FHline=\hbox{\hsize=\paperwidth%
+  \hspace*{\FHleft}%
+  \rule{\dimexpr\headwidth-\FHleft-\FHright\relax}{\headrulewidth}\hspace*{\FHright}%
+}
+\renewcommand\headrule{\vskip-.7\baselineskip\copy\FHline}
+\end_preamble
+\options svgnames,x11names,HTML,twoside,12pt
+\use_default_options false
+\master Estadistica.lyx
+\begin_modules
+knitr
+\end_modules
+\maintain_unincluded_children false
+\language spanish
+\language_package none
+\inputencoding auto
+\fontencoding default
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 0
+\use_package mathtools 1
+\use_package mhchem 0
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language french
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Chapter
+Teoría de probabilidades
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+PartialToc
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Probabilidad
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Introducción
+\end_layout
+
+\begin_layout Standard
+Si el único propósito del investigador es describir los resultados de un
+ experimento concreto, los métodos descriptivos analizados en los capítulos
+ anteriores pueden considerarse suficientes.
+ No obstante, si lo que se pretende es utilizar la información obtenida
+ para extraer conclusiones generales sobre todos aquellos objetos del tipo
+ de los que han sido estudiados, entonces estos métodos constituyen sólo
+ el principio del análisis, y debe recurrirse a métodos de inferencia estadístic
+a, los cuales implican el uso de una de las ramas de la matemática, llamada
+ teoría de la probabilidad.
+\end_layout
+
+\begin_layout Standard
+Analizaremos en este párrafo la noción de probabilidad y la terminología
+ subyacente a esta área de las matemáticas, ya que la probabilidad constituye
+ por sí misma un concepto básico que refleja su relación con la faceta del
+ mundo exterior que pretende estudiar: los fenómenos aleatorios, los cuales
+ obedecen unas ciertas reglas de comportamiento.
+\end_layout
+
+\begin_layout Standard
+El concepto de probabilidad es importante cuando se estudian procesos físicos,
+ biológicos, químicos, sociales que generan observaciones que no es fácil
+ o factible predecir con exactitud, pero se puede determinar la frecuencia
+ relativa con que ocurren con cierta precisión, si realizamos un gran número
+ de observaciones.
+\end_layout
+
+\begin_layout Standard
+Los eventos que poseen esta propiedad se denominan eventos aleatorios estocástic
+os y la frecuencia relativa con que ocurren es una interpretación intuitiva
+ de la probabilidad, pero no nos proporciona una definición exacta de ella.
+\end_layout
+
+\begin_layout Standard
+En su definición y en sus aplicaciones nos dedicaremos en este capítulo.
+\end_layout
+
+\begin_layout Section
+Experimentos y sucesos aleatorios
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{defi}{}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Sucesos aleatorios
+\end_layout
+
+\end_inset
+
+Diremos que un experimento es aleatorio si se veri\SpecialChar \-
+fican las siguientes condicion
+es,
+\backslash
+
+\end_layout
+
+\begin_layout Enumerate
+Se puede repetir indefinidamente, siempre con las mismas condiciones.
+\end_layout
+
+\begin_layout Enumerate
+Antes de realizarlo no se puede predecir el resultado.
+\end_layout
+
+\begin_layout Enumerate
+El resultado 
+\begin_inset Quotes erd
+\end_inset
+
+
+\begin_inset Formula $e"$
+\end_inset
+
+ que se obtiene pertenece a un conjunto de resultados posibles conocido
+ previamente el cual llamaremos espacio muestral y lo denotaremos con la
+ letra 
+\begin_inset Formula $\Omega\;o\;S$
+\end_inset
+
+.
+ Los elementos del espacio muestral se denominan sucesos elementales.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{defi}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Es decir si 
+\begin_inset Formula $e_{1},e_{2}\in S\Longrightarrow e_{1},e_{2}$
+\end_inset
+
+ son sucesos elementales o puntos muestrales.
+ En otras palabras: Un suceso es elemental si su ocu\SpecialChar \-
+rrencia o no ocurrencia
+ no está relacionada con ningún otro suceso.
+\end_layout
+
+\begin_layout Standard
+Cualquier subconjunto 
+\begin_inset Formula $A$
+\end_inset
+
+ de 
+\begin_inset Formula $S$
+\end_inset
+
+ se denomina suceso o evento aleatorio.
+\end_layout
+
+\begin_layout Standard
+El espacio muestral puede ser de dos tipos:
+\end_layout
+
+\begin_layout Itemize
+Discreto si está formado por un conjunto finito o numerable de resultados.
+\end_layout
+
+\begin_layout Itemize
+Continuo si está compuesto por un conjunto no numerable de elementos.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{defi}{}{}
+\end_layout
+
+\end_inset
+
+ [Suceso determinista]Se denomina experimento determinista a el experimento
+ que al realizarlo varias veces con las mismas condiciones iniciales obtenemos
+ siempre el mismo resultado 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{defi}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ejemplo}[]
+\end_layout
+
+\end_inset
+
+ Si dejamos caer dos cuerpos de diferentes masas y a la misma altura en
+ el vacío, los dos cuerpos caerán al mismo tiempo.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ejemplo}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Cuando en un experimento no se puede predecir el resultado final, decimos
+ que el experimento es aleatorio
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ejemplo}[]
+\end_layout
+
+\end_inset
+
+ En una ruleta legal no se sabe que número va a salir 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ejemplo}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Tipos de eventos
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Eventos
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Eventos!Operaciones
+\end_layout
+
+\end_inset
+
+Evento seguro es aquel que siempre se verifica después del experimento aleatorio
+, es decir 
+\begin_inset Formula $S.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Evento imposible es aquel que nunca se verifica como resultado del experimento
+ aleatorio y como un evento debe ser un subconjunto de 
+\begin_inset Formula $S$
+\end_inset
+
+ el suceso imposible es el conjunto vacío 
+\begin_inset Formula $\phi.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Evento complementario.
+ Se denomina suceso complementario de un suceso 
+\begin_inset Formula $A$
+\end_inset
+
+ 
+\begin_inset space \space{}
+\end_inset
+
+al que se verifica si no se verifica 
+\begin_inset Formula $A$
+\end_inset
+
+ es decir El complemento de 
+\begin_inset Formula $A$
+\end_inset
+
+ con respecto a 
+\begin_inset Formula $S$
+\end_inset
+
+ es el conjunto de todos los elementos de 
+\begin_inset Formula $S$
+\end_inset
+
+ que no están en 
+\begin_inset Formula $A.$
+\end_inset
+
+ Denotaremos el complemento del conjunto 
+\begin_inset Formula $A$
+\end_inset
+
+ como 
+\begin_inset Formula $A^{^{\prime}}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Evento complementario
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename pdf/Dibujo2.pdf
+	lyxscale 40
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ejemplo}[]
+\end_layout
+
+\end_inset
+
+ Si realizamos el experimento aleatorio de lanzar un dado al aire.
+ Determinar el conjunto de eventos posibles 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ejemplo}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{solucion}
+\end_layout
+
+\end_inset
+
+ En este caso tenemos 
+\begin_inset space \space{}
+\end_inset
+
+el espacio muestral es
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $S=\{1,2,3,4,5,6\}$
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+y los sucesos elementales son 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\{1\},\{2\},\{3\},\{4\},\{5\},\{6\}$
+\end_inset
+
+
+\begin_inset Newline linebreak
+\end_inset
+
+El conjunto de eventos posibles es 
+\begin_inset Formula $\mathcal{A}=\left\{ \begin{tabular}{l}
+ \ensuremath{\phi} suceso imposible\\
+ \ensuremath{S} suceso seguro\\
+ \ensuremath{\{1,2,3\}}\\
+ \ensuremath{\{4,5\}}\\
+ \ensuremath{\{2,4,6\}=\{1,2,3\}^{\prime}}\\
+ \ensuremath{\vdots} 
+\end{tabular}\right.$
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{solucion}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Operaciones básicas con eventos ale\SpecialChar \-
+atorios
+\end_layout
+
+\begin_layout Standard
+Como los eventos son en realidad conjuntos podemos aplicarles el álgebra
+ de conjuntos tratada en su curso de álgebra elemental visto en I semestre.
+\end_layout
+
+\begin_layout Enumerate
+Intersección.
+ La intersección de dos eventos 
+\begin_inset Formula $A$
+\end_inset
+
+ y 
+\begin_inset Formula $B\subset S$
+\end_inset
+
+ que se representa 
+\begin_inset Formula $A\cap B$
+\end_inset
+
+, es el evento que contiene a todos los sucesos elementales comunes de 
+\begin_inset Formula $A$
+\end_inset
+
+ y 
+\begin_inset Formula $B,$
+\end_inset
+
+ es decir 
+\begin_inset Formula 
+\[
+A\cap B=\{e\in S:e\in A\wedge e\in B\}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Eventos!Disyuntos
+\end_layout
+
+\end_inset
+
+Dos eventos son mutuamente excluyentes o disjuntos si 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $A\cap B=\phi$
+\end_inset
+
+, esto es si 
+\begin_inset Formula $A$
+\end_inset
+
+ y 
+\begin_inset Formula $B\subset S$
+\end_inset
+
+ no tienen elementos comunes.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename pdf/Dibujo3.pdf
+	lyxscale 40
+	scale 40
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ Eventos disjuntos 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+La unión.
+ 
+\begin_inset space \space{}
+\end_inset
+
+Dados dos sucesos aleatorios 
+\begin_inset Formula $A$
+\end_inset
+
+ y 
+\begin_inset Formula $B$
+\end_inset
+
+, se denomina suceso unión de 
+\begin_inset Formula $A$
+\end_inset
+
+ y 
+\begin_inset Formula $B\subset S$
+\end_inset
+
+ al evento formado por todos los sucesos elementales que pertenecen a 
+\begin_inset Formula $A$
+\end_inset
+
+ o bien a 
+\begin_inset Formula $B,$
+\end_inset
+
+ es decir 
+\begin_inset Formula 
+\[
+A\cup B=\{e\in S:e\in A\vee e\in B\}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Dados dos sucesos aleatorios 
+\begin_inset Formula $A,B\subset S$
+\end_inset
+
+, se llama diferencia de 
+\begin_inset Formula $A$
+\end_inset
+
+ y 
+\begin_inset Formula $B$
+\end_inset
+
+, y se representa 
+\begin_inset Formula $A-B$
+\end_inset
+
+ o 
+\begin_inset Formula $A\backslash B$
+\end_inset
+
+, al suceso aleatorio formado por todos los sucesos elementales que pertenecen
+ a 
+\begin_inset Formula $A,$
+\end_inset
+
+ pero no a 
+\begin_inset Formula $B$
+\end_inset
+
+, es decir 
+\begin_inset Formula 
+\[
+A\backslash B=\{e\in S:e\in A\wedge e\notin B\}=A\cap B^{\prime}
+\]
+
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+Donde a 
+\begin_inset Formula $B^{\prime}$
+\end_inset
+
+ se le llama complemento de 
+\begin_inset Formula $B$
+\end_inset
+
+ y se define 
+\begin_inset Formula $S\backslash B$
+\end_inset
+
+ 
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+evento!complemento de un
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Diferencia simétrica.
+ Si 
+\begin_inset Formula $A,B\subset S$
+\end_inset
+
+ se denomina evento dife\SpecialChar \-
+rencia simétrica de 
+\begin_inset Formula $A$
+\end_inset
+
+ y 
+\begin_inset Formula $B$
+\end_inset
+
+ y se denota por 
+\begin_inset Formula $A\bigtriangleup B$
+\end_inset
+
+ al evento formado por todos los sucesos elementales que pertenecen a 
+\begin_inset Formula $A$
+\end_inset
+
+ y no a 
+\begin_inset Formula $B,$
+\end_inset
+
+ y los que están en 
+\begin_inset Formula $B$
+\end_inset
+
+ y no en 
+\begin_inset Formula $A$
+\end_inset
+
+ es decir, 
+\begin_inset Formula 
+\[
+A\bigtriangleup B=\{e\in S:e\in(A\cup B)\wedge e\notin(A\cap B)\}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename pdf/image7.pdf
+	lyxscale 40
+	scale 40
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ Dados dos eventos 
+\begin_inset Formula $A,B\subset S$
+\end_inset
+
+ se presenta en: (a) 
+\begin_inset Formula $A\cup B;$
+\end_inset
+
+ en (b)
+\begin_inset Formula $\;A\cap B;$
+\end_inset
+
+ en (c) 
+\begin_inset Formula $A-B;$
+\end_inset
+
+ en (d) 
+\begin_inset Formula $A\bigtriangleup B.\;$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Hay algunas propiedades importantes que valen la pena recordar
+\end_layout
+
+\begin_layout Itemize
+Leyes de Morgan 
+\end_layout
+
+\begin_layout Description
+i 
+\begin_inset Formula $\left(A\cup B\right)^{\prime}=A^{\prime}\cap B^{\prime}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+ii 
+\begin_inset Formula $\left(A\cap B\right)^{\prime}=A^{\prime}\cup B^{\prime}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $A\bigtriangleup B=\left(A\backslash B\right)\cup\left(B\backslash A\right)=\left(A\cup B\right)\backslash\left(A\cap B\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $A\cap A^{\prime}=\phi$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $A\cap B^{\prime}=A\backslash B$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $A^{\prime}=S\backslash A$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $A\cup A^{\prime}=S$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{defi}{}{}
+\end_layout
+
+\end_inset
+
+ Sea 
+\begin_inset Formula $A_{1},A_{2},A_{3},\cdots A_{n}$
+\end_inset
+
+ una serie de eventos se tiene,
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\circ$
+\end_inset
+
+ El evento formado por todos los sucesos comunes y no comunes de la serie
+ es, 
+\begin_inset Formula 
+\[
+A_{1}\cup A_{2}\cup A_{3}\cdots\cup A_{n}=\cup_{i=1}^{n}A_{i}
+\]
+
+\end_inset
+
+ 
+\begin_inset Newline linebreak
+\end_inset
+
+
+\begin_inset Formula $\circ$
+\end_inset
+
+ El evento formado por los sucesos comunes entre los eventos de la serie
+ es el evento, 
+\begin_inset Formula 
+\[
+A_{1}\cap A_{2}\cap A_{3}\cdots\cap A_{n}=\cap_{i=1}^{n}A_{i}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{defi}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{defi}{}{}
+\end_layout
+
+\end_inset
+
+ Sea 
+\begin_inset Formula $A\index{Conjunto!Numeraldeun}$
+\end_inset
+
+ un conjunto finito o enumerable, Se le denomina 
+\begin_inset Formula $n\left(A\right),\index{Numeraldeunconjunto}$
+\end_inset
+
+ al cardinal de 
+\begin_inset Formula $A$
+\end_inset
+
+, es decir el número de elementos que posee el conjunto 
+\begin_inset Formula $A.$
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{defi}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Probabilidad
+\end_layout
+
+\begin_layout Subsection
+Probabilidad estocástica
+\end_layout
+
+\begin_layout Standard
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Probabilidad
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Probabilidad!Estocastica
+\end_layout
+
+\end_inset
+
+En los experimentos aleatorios observamos que si conservamos las mismas
+ condiciones iniciales al aumentar el números de ensayos la frecuencia relativa
+ con la que ocurre el suceso 
+\begin_inset Formula $A$
+\end_inset
+
+ es, 
+\begin_inset Formula 
+\[
+f_{n}\left(A\right)=\frac{n\acute{u}mero\,de\,veces\,que\,ocurre\,A}{n}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+y tiende a converger hacia un valor, el cual se denomina probabilidad de
+ 
+\begin_inset Formula $A$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+P\left(A\right)=\lim_{n\rightarrow\infty}f_{n}\left(A\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Esta noción de probabilidad no se puede aplicar en la práctica ya que:
+\end_layout
+
+\begin_layout Itemize
+Se requiere realizar un número infinito de veces el experimento para calcular
+ la probabilidad
+\end_layout
+
+\begin_layout Itemize
+Los experimentos aleatorios a veces no pueden ser realizados en la práctica
+ por ejemplo.
+ Si se quiere saber cuantas personas mueren al fumigar con un tóxico 
+\end_layout
+
+\begin_layout Subsection
+Probabilidad de laplace
+\end_layout
+
+\begin_layout Standard
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+pobabilidad!Laplace
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+probabiliad!Axiomas
+\end_layout
+
+\end_inset
+
+Si un experimento cualquiera se puede repetir obteniendo un número finito
+ de resultados posibles y no existe ninguna razón para pensar que un resultado
+ tiene privilegios sobre otro, se calcula la probabi\SpecialChar \-
+lidad del suceso 
+\begin_inset Formula $A$
+\end_inset
+
+ según la regla de Laplace 
+\begin_inset Formula 
+\[
+P\left(A\right)=\frac{n\acute{u}mero\,de\,casos\,favorables\,para\,A}{n\acute{u}mero\,de\,casos\,posibles}=\frac{n\left(A\right)}{n\left(S\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ejemplo}[]
+\end_layout
+
+\end_inset
+
+ Calcular la probabilidad de que al lanzar un dado se obtenga un número
+ par 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ejemplo}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{solucion}
+\end_layout
+
+\end_inset
+
+ El espacio muestral es 
+\begin_inset Formula $S=\{1,2,3,4,5,6\}$
+\end_inset
+
+ llamaremos 
+\begin_inset Formula $A$
+\end_inset
+
+ al suceso que da como resultado un número par el lanzamiento del dado,
+ 
+\begin_inset Formula $A=\{2,4,6\},$
+\end_inset
+
+ si suponemos que el dado es legal, es decir ninguna cara tiene privilegio
+ sobre otra para salir, entonces 
+\begin_inset Formula 
+\[
+P\left(A\right)=\frac{n\left(A\right)}{n\left(S\right)}=\frac{3}{6}=\frac{1}{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{solucion}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Definición axiomática de la probabilidad
+\end_layout
+
+\begin_layout Standard
+Como en toda rama de las matemáticas debemos establecer una serie de axiomas
+ y definiciones básicas
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{defi}{}{}
+\end_layout
+
+\end_inset
+
+ Sea 
+\begin_inset Formula $\mathcal{A}$
+\end_inset
+
+ una clase no vacía formada por subconjuntos de 
+\begin_inset Formula $S$
+\end_inset
+
+, diremos que la clase 
+\begin_inset Formula $\mathcal{A}$
+\end_inset
+
+ es un 
+\begin_inset Formula $\sigma-\acute{a}lgebra\,$
+\end_inset
+
+de
+\begin_inset space \thinspace{}
+\end_inset
+
+eventos si los eventos complementarios de cada \SpecialChar \-
+elemento de 
+\begin_inset Formula $\mathcal{A}$
+\end_inset
+
+ está también en 
+\begin_inset Formula $\mathcal{A}$
+\end_inset
+
+ y además las uniones numerables de eventos de 
+\begin_inset Formula $\mathcal{A}$
+\end_inset
+
+ es elemento de 
+\begin_inset Formula $\mathcal{A}$
+\end_inset
+
+ es decir.
+\begin_inset Newline newline
+\end_inset
+
+Se dice que una clase 
+\begin_inset Formula $\mathcal{A}$
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+no vacía de subconjuntos de 
+\begin_inset Formula $S$
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+ es una 
+\begin_inset Formula $\sigma-\acute{a}lgebra$
+\end_inset
+
+ si y sólo si
+\begin_inset space \space{}
+\end_inset
+
+cumple las siguientes propiedades 
+\begin_inset Formula 
+\begin{align*}
+S & \in\mathcal{A}\ \\[0.15cm]
+\forall A & \in\mathcal{A\Longrightarrow}A^{\prime}\in\mathcal{A}\\
+\forall A_{1},A_{2},A_{3},\cdots & \in\mathcal{A\Longrightarrow}\bigcup_{i=1}^{\infty}A_{i}\in\mathcal{A}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{defi}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{defi}{}{}
+\end_layout
+
+\end_inset
+
+ 
+\series bold
+Definición axiomática de probabilidad
+\series default
+
+\begin_inset Newline newline
+\end_inset
+
+Dado un espacio muestral 
+\begin_inset Formula $S$
+\end_inset
+
+, y una 
+\begin_inset Formula $\sigma-\acute{a}lgebra$
+\end_inset
+
+ de sucesos 
+\begin_inset Formula $\mathcal{A}$
+\end_inset
+
+ sobre él, diremos que 
+\begin_inset Formula $P$
+\end_inset
+
+ es una probabilidad sobre 
+\begin_inset Formula $\mathcal{A}$
+\end_inset
+
+ si cumple las siguientes propiedades
+\end_layout
+
+\begin_layout Description
+A
+\begin_inset Formula $_{1}$
+\end_inset
+
+ La probabilidad es una función definida sobre 
+\begin_inset Formula $\ \mathcal{A}$
+\end_inset
+
+, que toma solo valores positivos comprendidos entre 0 y 1, es decir 
+\begin_inset Formula 
+\[
+\begin{array}{ccc}
+P:\mathcal{A} & \rightarrow & [0,1]\subset IR\\
+A\in\mathcal{A} & \mapsto & 1\geq P\left(A\right)\geq0
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+A
+\begin_inset Formula $_{2}$
+\end_inset
+
+ 
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Evento seguro
+\end_layout
+
+\end_inset
+
+La probabilidad del suceso seguro es 1 
+\begin_inset Formula 
+\[
+P\left(S\right)=1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+A
+\begin_inset Formula $_{3}$
+\end_inset
+
+ Para cualquier sucesión infinita 
+\begin_inset Formula $A_{1},A_{2},A_{3},\cdots$
+\end_inset
+
+ de sucesos disjuntos de 
+\begin_inset Formula $\mathcal{A}$
+\end_inset
+
+ se tiene que la probabilidad de el evento 
+\begin_inset Formula $\bigcup_{i=1}^{\infty}A_{i}$
+\end_inset
+
+ es la serie infinita de las probabilidades, es decir 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{defi}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+P\left(\bigcup_{i=1}^{\infty}A_{i}\right)=\sum_{i=1}^{\infty}P\left(A_{i}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ejemplo}[]
+\end_layout
+
+\end_inset
+
+ Cuando el conjunto 
+\begin_inset Formula $S$
+\end_inset
+
+ formado por todos los posibles resultados de un experimento es finito o
+ infinito enumerable podemos considerar que la clase 
+\begin_inset Formula $\mathcal{A}$
+\end_inset
+
+ es 
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Partes de S
+\end_layout
+
+\end_inset
+
+el conjunto denominado 
+\series bold
+partes de
+\series default
+ 
+\begin_inset Formula $S$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\mathbb{P}\left(S\right)=\left\{ A|A\subseteq S\right\} 
+\]
+
+\end_inset
+
+ el cual es un 
+\begin_inset Formula $\sigma-\acute{a}lgebra.$
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ejemplo}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ejemplo}[]
+\end_layout
+
+\end_inset
+
+ Consideremos el experimento de lanzamiento de un dado, entonces 
+\begin_inset Formula 
+\begin{align*}
+S & =\{1,2,3,4,5,6\}\\
+\mathbb{P}\left(S\right) & =\{\phi,S,\{1\},\{2\},\cdots,\{6\},\{1,2\},\{1,3\},...\}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Es decir 
+\begin_inset Formula $\mathbb{P}\left(S\right)$
+\end_inset
+
+ tiene 
+\begin_inset Formula $2^{6}=$
+\end_inset
+
+ 
+\begin_inset Formula $64$
+\end_inset
+
+ elementos 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ejemplo}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ejemplo}[]
+\end_layout
+
+\end_inset
+
+ Cuando 
+\begin_inset Formula $S$
+\end_inset
+
+ es infinito no enumerable por ejemplo que\SpecialChar \-
+remos realizar el experimento
+ de esperar el tiempo necesario para que el polietileno se desintegre naturalmen
+te, observamos que 
+\begin_inset Formula $S=I\,R{+}$
+\end_inset
+
+ y consideramos 
+\begin_inset Formula $\mathcal{A}$
+\end_inset
+
+ como el conjunto de intervalos abiertos o cerrados, y sus uniones finitas,
+ es decir 
+\begin_inset Formula 
+\[
+\mathcal{A}=\{\phi,I\,R^{+},[2,2],\left(2,3\right),(4,5]\cup\lbrack8,+\infty),...\}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ejemplo}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+De acuerdo con el nivel de estas notas no trabajaremos con 
+\begin_inset Formula $\sigma-\acute{a}lgebras$
+\end_inset
+
+ diferentes a las indicadas en los ejemplos 3.6 y 3.7
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+El lector interesado en 
+\begin_inset Formula $\sigma-\acute{a}\lg ebras$
+\end_inset
+
+ puede remitirse a Real Analysis probability de Robert B.
+ Ash
+\end_layout
+
+\end_inset
+
+, por lo que de aquí en adelante suponemos que estas son las clases 
+\begin_inset Formula $\mathcal{A}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+falta el teorema de la probabilidad del vacio
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{teo}{Probabilidad del vac
+\backslash
+'io}
+\backslash
+protect
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $P(\varPhi)=0$
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{teo}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{prueba}
+\end_layout
+
+\end_inset
+
+ consideremos la sucesión infinita de eventos 
+\begin_inset Formula $A_{1},A_{2},A_{3},\cdots\in\mathcal{A}$
+\end_inset
+
+ los cuales son todos vacíos y además disjuntos ya que 
+\begin_inset Formula $\phi\cap\phi=\phi,\;$
+\end_inset
+
+de acuerdo con esto tenemos que 
+\begin_inset Formula $\bigcup_{i=1}^{\infty}A_{i}=\phi$
+\end_inset
+
+ al aplicar A
+\begin_inset Formula $_{3}$
+\end_inset
+
+ tenemos 
+\begin_inset Formula 
+\[
+P\left(\phi\right)=P\left(\bigcup_{i=1}^{\infty}A_{i}\right)=\sum_{i=1}^{\infty}P\left(A_{i}\right)
+\]
+
+\end_inset
+
+ y el único real que cumple esta propiedad es el cero por lo que 
+\begin_inset Formula $P\left(\phi\right)=0$
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{prueba}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{teo}{}
+\end_layout
+
+\end_inset
+
+ Para cualquier sucesión finita de 
+\begin_inset Formula $n$
+\end_inset
+
+ eventos disjuntos 
+\begin_inset Formula $A_{1},A_{2},A_{3},\cdots A_{n}\in\mathcal{A}$
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+P\left(\bigcup_{i=1}^{n}A_{i}\right)=\sum_{i=1}^{n}P\left(A_{i}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{teo}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{prueba}
+\end_layout
+
+\end_inset
+
+ Consideremos la sucesión infinita de eventos 
+\begin_inset Formula $A_{1},A_{2},A_{3},\cdots\in\mathcal{A}$
+\end_inset
+
+ en los cuales hay 
+\begin_inset Formula $A_{1},A_{2},A_{3},\cdots A_{n}$
+\end_inset
+
+ eventos disjuntos y los 
+\begin_inset Formula $A_{n+1},A_{n+2},A_{n+3},\cdots$
+\end_inset
+
+ son vacíos.
+ Entonces 
+\begin_inset Formula $\bigcup_{i=1}^{\infty}A_{i}=\bigcup_{i=1}^{n}A_{i}$
+\end_inset
+
+.
+ Por A
+\begin_inset Formula $_{3}$
+\end_inset
+
+ tenemos 
+\begin_inset Formula 
+\begin{align*}
+P\left(\bigcup_{i=1}^{n}A_{i}\right) & =P\left(\bigcup_{i=1}^{\infty}A_{i}\right)\\
+ & =\sum_{i=1}^{n}P\left(A_{i}\right)+\sum_{i=n+1}^{\infty}P\left(A_{i}\right)\\
+ & \sum_{i=1}^{n}P\left(A_{i}\right)+0\\
+ & \sum_{i=1}^{n}P\left(A_{i}\right)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{prueba}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{teo}{}
+\end_layout
+
+\end_inset
+
+ para cualquier suceso 
+\begin_inset Formula $A\in\mathcal{A}$
+\end_inset
+
+ se tiene que 
+\begin_inset Formula $P\left(A^{\prime}\right)=1-P\left(A\right)$
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{teo}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{prueba}
+\end_layout
+
+\end_inset
+
+ Como 
+\begin_inset Formula $A\in\mathcal{A}\Longrightarrow A^{\prime}\in\mathcal{A}$
+\end_inset
+
+ y además 
+\begin_inset Formula $A\cup A^{\prime}=S$
+\end_inset
+
+ y 
+\begin_inset Formula $P\left(S\right)=1$
+\end_inset
+
+ tenemos por el teorema 4 que 
+\begin_inset Formula 
+\[
+P\left(A\cup A^{\prime}\right)=P\left(A\right)+P\left(A^{\prime}\right)=P\left(S\right)
+\]
+
+\end_inset
+
+ pero de acuerdo con A
+\begin_inset Formula $_{2}$
+\end_inset
+
+ 
+\begin_inset Formula $P\left(S\right)=1,$
+\end_inset
+
+ entonces 
+\begin_inset Formula 
+\begin{align*}
+P\left(A\right)+P\left(A^{\prime}\right) & =1\\
+P\left(A^{\prime}\right) & =1-P\left(A\right)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{prueba}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{teo}{}
+\end_layout
+
+\end_inset
+
+ Si 
+\begin_inset Formula $A,B\in\mathcal{A}$
+\end_inset
+
+ y 
+\begin_inset Formula $A\subset B$
+\end_inset
+
+, entonces 
+\begin_inset Formula $P\left(B\right)\geq P\left(A\right)$
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{teo}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{prueba}
+\end_layout
+
+\end_inset
+
+ Como se ilustra en la fig 3.1 El evento 
+\begin_inset Formula $B$
+\end_inset
+
+ lo podemos escribir como 
+\begin_inset Formula $B=A\cup\left(B\cap A^{\prime}\right)$
+\end_inset
+
+ entonces 
+\begin_inset Formula 
+\begin{align*}
+P\left(B\right) & =P\left(A\cup\left(B\cap A^{\prime}\right)\right)\\
+ & =P\left(A\right)+P\left(B\cap A^{\prime}\right)
+\end{align*}
+
+\end_inset
+
+ y del A
+\begin_inset Formula $_{1}$
+\end_inset
+
+ 
+\begin_inset Formula $P\left(B\cap A^{\prime}\right)\geq0$
+\end_inset
+
+ de lo que se deduce 
+\begin_inset Formula $P\left(B\right)\geq P\left(A\right)$
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{prueba}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+aaaa
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename pdf/fig3_2.pdf
+	lyxscale 40
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para dos sucesos cualesquiera 
+\begin_inset Formula $A,B\subset\mathcal{A}$
+\end_inset
+
+ cualesquiera 
+\begin_inset Formula 
+\[
+P\left(A\cup B\right)=P\left(A\right)+P\left(B\right)-P\left(A\cap B\right)
+\]
+
+\end_inset
+
+ Como se ilustra en la fig 3.2 
+\begin_inset Formula 
+\[
+A\cup B=\left(A\cap B^{\prime}\right)\cup\left(A\cap B\right)\cup\left(A^{\prime}\cap B\right)
+\]
+
+\end_inset
+
+ como los eventos 
+\begin_inset Formula $\left(A^{\prime}\cap B\right),\left(A\cap B^{\prime}\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $\left(A\cap B\right)$
+\end_inset
+
+ son disjuntos podemos aplicar el teorema 3.1 
+\begin_inset Formula 
+\begin{align*}
+P\left(A\cup B\right) & =\\
+ & P\left(A\cap B^{\prime}\right)+P\left(A\cap B\right)+P\left(A^{\prime}\cap B\right)
+\end{align*}
+
+\end_inset
+
+ pero en la gráfica se observa que 
+\begin_inset Formula 
+\begin{align*}
+A & =(A\cap B\acute{})\cup(A\cap B)\\
+ & \;\;\;\;\;\;\;\;y\\
+B & =\left(A\cap B\right)\cup(A\acute{}\cap B)
+\end{align*}
+
+\end_inset
+
+ al aplicar el teorema 5 queda 
+\begin_inset Formula 
+\begin{align*}
+P\left(A\right) & =P\left(A\cap B^{\prime}\right)+P\left(A\cap B\right)\\
+P\left(B\right) & =P\left(A\cap B\right)+P\left(A^{\prime}\cap B\right)
+\end{align*}
+
+\end_inset
+
+ al despejar y sustituir obtenemos lo que queremos 
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $B=A\cup\left(B\cap A^{\prime}\right)$
+\end_inset
+
+ donde 
+\begin_inset Formula $C=$
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{--0.1565in}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "b"
+hor_pos "c"
+has_inner_box 1
+inner_pos "b"
+use_parbox 1
+use_makebox 0
+width "2.9291in"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /media/antalcides/Antalcides-EXT1/est/bak/est/pdf/fig3_1.pdf
+	scale 40
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ Figura 3.1 
+\begin_inset Formula $B=A\cup\left(B\cap A^{\prime}\right)$
+\end_inset
+
+ donde 
+\begin_inset Formula $C=\left(B\cap A^{\prime}\right)$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{teo}{}
+\end_layout
+
+\end_inset
+
+ Para dos sucesos 
+\begin_inset Formula $A,B\subset\mathcal{A}$
+\end_inset
+
+ cualesquiera 
+\begin_inset Formula 
+\[
+P\left(A\cup B\right)=P\left(A\right)+P\left(B\right)-P\left(A\cap B\right)
+\]
+
+\end_inset
+
+Como se ilustra en la fig 3.2 
+\begin_inset Formula 
+\[
+A\cup B=\left(A\cap B^{\prime}\right)\cup\left(A\cap B\right)\cup\left(A^{\prime}\cap B\right)
+\]
+
+\end_inset
+
+como los eventos 
+\begin_inset Formula $\left(A^{\prime}\cap B\right),\left(A\cap B^{\prime}\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $\left(A\cap B\right)$
+\end_inset
+
+ son disjuntos podemos aplicar el teorema 3.1 
+\begin_inset Formula 
+\begin{align*}
+P\left(A\cup B\right) & =\\
+ & P\left(A\cap B^{\prime}\right)+P\left(A\cap B\right)+P\left(A^{\prime}\cap B\right)
+\end{align*}
+
+\end_inset
+
+pero en la gráfica se observa que 
+\begin_inset Formula 
+\begin{align*}
+A & =(A\cap B%TCIMACRO{\U{b4}}%
+%BeginExpansion
+\acute{}%EndExpansion
+)\cup(A\cap B)\\
+ & \;\;\;\;\;\;\;\;y\\
+B & =\left(A\cap B\right)\cup(A\acute{}\cap B)
+\end{align*}
+
+\end_inset
+
+al aplicar el teorema 5 queda 
+\begin_inset Formula 
+\begin{align*}
+P\left(A\right) & =P\left(A\cap B^{\prime}\right)+P\left(A\cap B\right)\\
+P\left(B\right) & =P\left(A\cap B\right)+P\left(A^{\prime}\cap B\right)
+\end{align*}
+
+\end_inset
+
+al despejar y sustituir obtenemos lo que queremos 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{teo}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename /media/antalcides/Antalcides-EXT1/est/bak/est/pdf/fig3_2.pdf
+	scale 40
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ Figura 3.2 Partición de 
+\begin_inset Formula $A\cup B$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{teo}{}
+\end_layout
+
+\end_inset
+
+ Sean 
+\begin_inset Formula $A_{1},A_{2},A_{3},\cdots A_{n}\in\mathcal{A}$
+\end_inset
+
+ una sucesión finita de eventos se tiene 
+\begin_inset Formula 
+\begin{align*}
+P\left(\bigcup_{i=1}^{n}A_{i}\right) & =\sum_{i=1}^{n}P\left(A_{i}\right)-\sum_{i<j=2}^{n}P\left(A_{i}\cap A_{j}\right)+\\
+ & +\sum_{i<j<r=3}^{n}P\left(A_{i}\cap A_{j}\cap A_{r}\right)+\\
+ & +\cdots+\left(-1\right)^{n-1}P\left(\bigcap_{i=1}^{n}A_{i}\right)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{teo}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ejemplo}[]
+\end_layout
+
+\end_inset
+
+ Un estudiante de clase puede ser hombre o mujer.
+ Si la probabilidad de que un hombre sea seleccionado es 0.3 ¿Cuál es la
+ probabilidad de que sea seleccionada una mujer?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{solucion}
+\end_layout
+
+\end_inset
+
+ Sea 
+\begin_inset Formula $A$
+\end_inset
+
+ el evento de que se seleccione un hombre de la clase y sea 
+\begin_inset Formula $B$
+\end_inset
+
+ el evento de seleccionar una mujer, entonces es obvio que 
+\begin_inset Formula $S=A\cup B,$
+\end_inset
+
+ y además 
+\begin_inset Formula $A\cap B=\phi,$
+\end_inset
+
+ aplicando el teorema 7 
+\begin_inset Formula 
+\[
+P\left(A\cup B\right)=P\left(A\right)+P\left(B\right)-P\left(A\cap B\right)
+\]
+
+\end_inset
+
+y de los teorema 4 y A
+\begin_inset Formula $_{2}$
+\end_inset
+
+ obtenemos 
+\begin_inset Formula 
+\begin{align*}
+1 & =P\left(A\right)+P\left(B\right)\\
+1 & =0,3+P\left(B\right)\\
+P\left(B\right) & =0,7
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{solucion}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ejemplo}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ejemplo}[]
+\end_layout
+
+\end_inset
+
+ Se selecciona una bola de una urna que contiene bolas rojas, blancas, azules,
+ amarillas y verdes.
+ Si la probabilidad de seleccionar una bola roja es 
+\begin_inset Formula $\frac{1}{5}$
+\end_inset
+
+ y la de seleccionar una blanca es 
+\begin_inset Formula $\frac{2}{5}$
+\end_inset
+
+ ¿Cuál es la probabilidad de seleccionar una bola azul, amarilla o blanca?
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ejemplo}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{solucion}
+\end_layout
+
+\end_inset
+
+ Sean 
+\begin_inset Formula $A_{1},A_{2},A_{3},A_{4},A_{5},A_{6}$
+\end_inset
+
+ los eventos de seleccionar de la urna una bola roja, blanca, azul, amarilla
+ y verde respectivamente.
+ Nos dicen que 
+\begin_inset Formula $P\left(A_{1}\right)=$
+\end_inset
+
+ 
+\begin_inset Formula $\frac{1}{5}$
+\end_inset
+
+ y 
+\begin_inset Formula $P\left(A_{2}\right)=\frac{2}{5}$
+\end_inset
+
+, entonces 
+\begin_inset Formula 
+\[
+P\left(A_{3}\cup A_{4}\cup A_{5}\cup A_{6}\right)=P\left(B\right)=?
+\]
+
+\end_inset
+
+Como los eventos son disjuntos 
+\begin_inset Formula 
+\[
+S=A_{1}\cup A_{2}\cup A_{3}\cup A_{4}\cup A_{5}\cup A_{6}
+\]
+
+\end_inset
+
+y por A
+\begin_inset Formula $_{2}$
+\end_inset
+
+ y el th.3 
+\begin_inset Formula 
+\begin{align*}
+1 & =P\left(A_{1}\right)+P\left(A_{2}\right)+P\left(B\right)\\
+P\left(B\right) & =1-\frac{1}{5}-\frac{2}{5}=\frac{2}{5}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{solucion}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ejemplo}[]
+\end_layout
+
+\end_inset
+
+ Si la probabilidad de que un estudiante A pierda un examen de estadística
+ es de 0,5, la probabilidad de que un estudiante B pierda el mismo examen
+ es de 0,2 y la probabilidad de que ambos pierdan el examen es de 0,1 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ejemplo}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\shape italic
+¿Cuál es la probabilidad de que al menos uno de estos estudiantes gane el
+ examen?
+\end_layout
+
+\begin_layout Enumerate
+
+\shape italic
+¿Cuál es la probabilidad de de que ninguno de los dos pierda el examen?
+\shape default
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{solucion}
+\end_layout
+
+\end_inset
+
+ Sea 
+\begin_inset Formula $A$
+\end_inset
+
+ el evento que el estudiante A pierda el examen y sea 
+\begin_inset Formula $B$
+\end_inset
+
+ el evento de que el estudiante B pierda el examen de estadística 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{solucion}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+
+\shape italic
+Nos piden la probabilidad de que uno de los dos gane el examen pero no los
+ dos, es decir si 
+\shape default
+
+\begin_inset Formula $C$
+\end_inset
+
+ 
+\shape italic
+es
+\shape default
+ 
+\shape italic
+este evento
+\shape default
+ 
+\begin_inset Formula 
+\begin{align*}
+P\left(C\right) & =P\left(A^{\prime}\right)+P\left(B^{\prime}\right)-P\left(A^{\prime}\cap B^{\prime}\right)\\
+P\left(A^{\prime}\right) & =1-P\left(A\right)=1-0,5=0,5\\
+P\left(B^{\prime}\right) & =1-P\left(B\right)=1-0,2=0,8\\
+A^{\prime}\cap B^{\prime} & =\left(A\cup B\right)^{\prime}\\
+P\left(A^{\prime}\cap B^{\prime}\right) & =1-P\left(A\cup B\right)
+\end{align*}
+
+\end_inset
+
+
+\shape italic
+Pero
+\shape default
+ 
+\begin_inset Formula 
+\begin{align*}
+P\left(A\cup B\right) & =P\left(A\right)+P\left(B\right)-P\left(A\cap B\right)=0,6\\
+P\left(A^{\prime}\cap B^{\prime}\right) & =0,4
+\end{align*}
+
+\end_inset
+
+
+\shape italic
+entonces
+\shape default
+ 
+\begin_inset Formula 
+\[
+P\left(C\right)=0,5+0,8-0,4=0,9
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $P\left(A^{\prime}\cap B^{\prime}\right)=0,4$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Section
+Técnica para la enumeración de puntos muestrales
+\end_layout
+
+\begin_layout Standard
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+
+\lang english
+Técnicas de conteo
+\end_layout
+
+\end_inset
+
+Cuando 
+\begin_inset Formula $S$
+\end_inset
+
+ o cualquiera de sus subconjuntos tiene muchos eventos elementales describirlo
+ por extensión para determinar los casos favorables y casos posibles se
+ hace engorroso por lo que en esta se\SpecialChar \-
+cción utilizaremos el análisis combinatorio
+ para determinar los casos favorables y posibles de una manera más simple.
+\end_layout
+
+\begin_layout Subsection
+Diagrama de árbol
+\end_layout
+
+\begin_layout Standard
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+
+\lang english
+Diagrama de árbol
+\end_layout
+
+\end_inset
+
+En experimentos simples es muy útil utilizar un método llamado diagrama
+ de árbol el cual explicaré con un ejemplo.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ejemplo}[]
+\end_layout
+
+\end_inset
+
+ Si se lanza una moneda legal tres veces ¿Cuál es la probabilidad de que
+ 
+\begin_inset space \space{}
+\end_inset
+
+en la primera y la ultima lanzada salga cara?.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ejemplo}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{solucion}
+\end_layout
+
+\end_inset
+
+ En el diagrama observamos que para el primer lanzamiento hay dos posibilidades
+ sello (
+\begin_inset Formula $S$
+\end_inset
+
+) y cara (
+\begin_inset Formula $C$
+\end_inset
+
+) en el segundo lanzamiento para cada posibilidad anterior hay dos nuevas
+ posibilidades y en el tercer se da lo mismo por lo que al final hay 8 casos
+ posibles y dos casos favorables de acuerdo con Laplace, entonces si 
+\begin_inset Formula $A$
+\end_inset
+
+ es el evento que sale cara en el primer y último lanzamiento 
+\begin_inset Formula 
+\[
+P\left(A\right)=\frac{2}{8}=\frac{1}{4}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{solucion}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename pdf/g11ir300.pdf
+	lyxscale 40
+	scale 40
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ Diagrama de árbol 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{teo}{}
+\end_layout
+
+\end_inset
+
+ Considérese un experimento que tiene las dos cara\SpecialChar \-
+cterísticas siguientes
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{teo}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\shape italic
+El experimento se realiza en dos partes 
+\end_layout
+
+\begin_layout Itemize
+
+\shape italic
+La primera parte del experimento tiene 
+\shape default
+
+\begin_inset Formula $m$
+\end_inset
+
+ 
+\shape italic
+resultados posibles 
+\shape default
+
+\begin_inset Formula $x_{1},x_{2},x_{3},\cdots,x_{m}$
+\end_inset
+
+ 
+\shape italic
+independientemente del resultado
+\shape default
+ 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ 
+\shape italic
+obtenido la segunda parte del experimento tiene 
+\shape default
+
+\begin_inset Formula $n$
+\end_inset
+
+
+\shape italic
+
+\begin_inset space \space{}
+\end_inset
+
+resultados posibles 
+\shape default
+
+\begin_inset Formula $y_{1},y_{2},y_{3},\cdots,y_{n}$
+\end_inset
+
+
+\shape italic
+.
+\begin_inset Newline newline
+\end_inset
+
+Cada resultado del espacio muestral S del experimento será por tanto, un
+ par de la forma 
+\shape default
+
+\begin_inset Formula $\left(x_{i},y_{j}\right)$
+\end_inset
+
+
+\shape italic
+
+\begin_inset space \space{}
+\end_inset
+
+es decir 
+\shape default
+ 
+\begin_inset Formula 
+\begin{align*}
+S & =\left\{ \left(x_{i},y_{j}\right)|i=1,2,3,\cdots m;j=1,2,3\cdots n\right\} \\
+n\left(S\right) & =mn
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Este teorema puede generalizarse de la siguiente forma
+\end_layout
+
+\begin_layout Standard
+Si un experimento 
+\begin_inset space \space{}
+\end_inset
+
+puede realizarse con las siguientes características
+\end_layout
+
+\begin_layout Itemize
+El experimento se realiza en 
+\begin_inset Formula $k$
+\end_inset
+
+ partes
+\end_layout
+
+\begin_layout Itemize
+la primera parte puede realizarse con 
+\begin_inset Formula $n_{1}$
+\end_inset
+
+ resultados posibles 
+\begin_inset Formula $x_{11},x_{12},x_{13},\cdots,x_{1n_{1}}$
+\end_inset
+
+ e independientemente del resultado 
+\begin_inset Formula $x_{1i}$
+\end_inset
+
+ se pueden realizar la segunda parte con 
+\begin_inset Formula $n_{2}$
+\end_inset
+
+ resultados posibles 
+\begin_inset Formula $x_{21},x_{22},x_{23},\cdots,x_{2n_{2}}$
+\end_inset
+
+ y así sucesivamente cada parte del experimento puede realizarse de 
+\begin_inset Formula $n_{l}$
+\end_inset
+
+ formas, 
+\begin_inset Formula $l=1,2,3,\cdots k$
+\end_inset
+
+ obteniéndose un espacio muestral de la forma 
+\begin_inset Formula 
+\begin{align*}
+S & =\{(x_{1i},x_{2j},x_{3r},\cdots,x_{km})\}\\
+n\left(S\right) & =n_{1}\cdot n_{2}\cdot n_{3}\cdot\cdots\cdot n_{k}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ahora enunciamos este teorema de una manera diferente.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{teo}{Fundamental}
+\end_layout
+
+\end_inset
+
+.
+ Si una acción puede efectuarse de una de 
+\begin_inset Formula $p$
+\end_inset
+
+ maneras diferentes, y si después de que esta acción ha sido efectuada de
+ una de esas maneras, una segunda acción puede efectuarse de una de 
+\begin_inset Formula $q$
+\end_inset
+
+ maneras diferentes, entonces el número total de maneras diferentes en que
+ las acciones pueden efectuarse sigui\SpecialChar \-
+endo el orden mencionado es 
+\begin_inset Formula $pq.$
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{teo}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{coro}
+\end_layout
+
+\end_inset
+
+ Si una acción puede efectuarse de 
+\begin_inset Formula $p$
+\end_inset
+
+ maneras dife\SpecialChar \-
+rentes, y una segunda acción puede efectuarse de 
+\begin_inset Formula $q$
+\end_inset
+
+ maneras dife\SpecialChar \-
+rentes, y una tercera acción puede efectuarse de 
+\begin_inset Formula $r$
+\end_inset
+
+ maneras dife\SpecialChar \-
+rentes, y así sucesivamente, entonces el número total de maneras
+ diferentes en que pueden realizarse todas estas acciones en el orden mencionado
+ es 
+\begin_inset Formula $pqr...$
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{coro}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{coro}
+\end_layout
+
+\end_inset
+
+ Si 
+\begin_inset Formula $r$
+\end_inset
+
+ acciones pueden efectuarse sucesivamente de 
+\begin_inset Formula $p$
+\end_inset
+
+ maneras diferentes cada una, entonces el número total de maneras diferentes
+ en que pueden efectuarse las 
+\begin_inset Formula $r$
+\end_inset
+
+ acciones sucesivamente es 
+\begin_inset Formula $p^{r}.$
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{coro}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Permutaciones
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{defi}{}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+
+\lang english
+Permutaciones
+\end_layout
+
+\end_inset
+
+Una permutación es un arreglo de objetos distintos de tal manera que una
+ permutación difiere de otra si el orden del arreglo o su contenido difieren
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{defi}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Conviene observar que el orden es una característica de especial importancia
+ en una permutación.
+ Cuando cambiamos el orden de los elementos de este arreglo, se dice que
+ permutamos dichos elementos
+\end_layout
+
+\begin_layout Subsection
+Muestreo sin reemplazo
+\end_layout
+
+\begin_layout Standard
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+
+\lang english
+Muestreo!Sin reemplazo
+\end_layout
+
+\end_inset
+
+Consideremos un experimento en el cual se selecciona un objeto de 
+\begin_inset Formula $n$
+\end_inset
+
+ objetos distintos, y luego se selecciona un segundo objeto de los 
+\begin_inset Formula $n-1$
+\end_inset
+
+ objetos restantes, y así sucesivamente hasta seleccionar el último objeto
+ Este proceso 
+\begin_inset space \space{}
+\end_inset
+
+se llama muestreo sin reemplazo
+\begin_inset space \space{}
+\end_inset
+
+de acuerdo con el teorema anterior los 
+\begin_inset Formula $n$
+\end_inset
+
+ objetos se pueden seleccionar de 
+\begin_inset Formula $n\left(n-1\right)\left(n-2\right)\cdots3\cdot2\cdot1$
+\end_inset
+
+ 
+\begin_inset Formula $=n!$
+\end_inset
+
+ formas diferentes
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+ Ahora si no se escogen todos los objetos, si no 
+\begin_inset Formula $k$
+\end_inset
+
+ objetos, los 
+\begin_inset Formula $k$
+\end_inset
+
+ objetos se pueden seleccionar 
+\begin_inset Formula 
+\begin{align*}
+p_{n,k} & =n\left(n-1\right)\left(n-2\right)\cdots\left(n-k+1\right)=\frac{n!}{\left(n-k\right)!}\;\;r\leq n\\
+0! & =1\\
+1! & =1\\
+p_{n,n} & =n\left(n-1\right)\left(n-2\right)\cdots1=n!
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ejemplo}[]
+\end_layout
+
+\end_inset
+
+ Supongamos que se necesitan dos representantes del grupo 02 de estadística
+ I-ad para asistir a un congreso 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ejemplo}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{solucion}
+\end_layout
+
+\end_inset
+
+ Como el grupo 02 de estadística tiene 40 alumnos y se necesitan dos, eso
+ quiere decir que que escogen 2 de 40 
+\begin_inset Formula 
+\[
+p_{40,2}=\frac{40!}{\left(40-2\right)!}=1560
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{solucion}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ejemplo}[]
+\end_layout
+
+\end_inset
+
+ Se necesita colocar 7 libros en un estante ¿De cuantas formas posibles
+ se pueden colocar? 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ejemplo}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{solucion}
+\end_layout
+
+\end_inset
+
+ Como se escogerán 7 de 7 entonces 
+\begin_inset Formula 
+\[
+p_{7,7}=7!=5040
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{solucion}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Muestreo con reemplazo
+\end_layout
+
+\begin_layout Standard
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+
+\lang english
+Muestreo!Con reemplazo
+\end_layout
+
+\end_inset
+
+Si suponemos que tenemos una urna con 
+\begin_inset Formula $n$
+\end_inset
+
+ objetos numerados del 
+\begin_inset Formula $1$
+\end_inset
+
+ al 
+\begin_inset Formula $n$
+\end_inset
+
+ y se selecciona un objeto de la urna y se anota su número, y luego se coloca
+ nuevamente en la urna, luego se selecciona otro objeto el cual pude ser
+ el primero y así sucesivamente se pueden seleccionar tantos objetos como
+ se quieran.
+ Este proceso se denomina muestreo con reemplazo.
+\end_layout
+
+\begin_layout Standard
+Si queremos realizar un total de 
+\begin_inset Formula $k$
+\end_inset
+
+ selecciones distintas, se nos presentan dos posibilidades
+\end_layout
+
+\begin_layout Itemize
+Si 
+\begin_inset Formula $k>n$
+\end_inset
+
+, es imposible ya que hay 
+\begin_inset Formula $n$
+\end_inset
+
+ números posibles y no están repetidos.
+\end_layout
+
+\begin_layout Itemize
+Si 
+\begin_inset Formula $n\geq k$
+\end_inset
+
+ Entonces existen 
+\begin_inset Formula $n^{k}$
+\end_inset
+
+ posibles formas de escoger los 
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset Formula $k$
+\end_inset
+
+ objetos 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ejemplo}[]
+\end_layout
+
+\end_inset
+
+ Si se colocan al azar 12 bolas en 20 urnas, ¿Cuál es la probabilidad de
+ que ninguna urna contenga más de una bola 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ejemplo}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{solucion}
+\end_layout
+
+\end_inset
+
+ Como hay 20 urnas y 12 bolas entonces podemos escoger 12 de 20 posibilidades
+ de colocar las bolas, pero hay 20
+\begin_inset Formula $^{12}$
+\end_inset
+
+, posibles formas de escoger una urna con una bola 
+\begin_inset Formula 
+\[
+p=\frac{20!}{8!\ast20^{12}}=\frac{235\,702\,467}{16\,\allowbreak000\,000\,000}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{solucion}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Coeficiente multinomial
+\end_layout
+
+\begin_layout Standard
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+
+\lang english
+Coeficiente multinomial
+\end_layout
+
+\end_inset
+
+El número de formas en las que se pueden asignar 
+\begin_inset Formula $n$
+\end_inset
+
+ objetos distintos de 
+\begin_inset Formula $k$
+\end_inset
+
+ grupos diferentes que contienen 
+\begin_inset Formula $n_{1},n_{2},n_{3},\cdots,n_{k}$
+\end_inset
+
+ objetos respectivamente es 
+\begin_inset Formula 
+\begin{align*}
+N & =\frac{n!}{n_{1}!n_{2}!n_{3}!\cdots n_{k}!}=\left(\begin{array}{c}
+n\\
+n_{1}n_{2}n_{3}\cdots n_{k}
+\end{array}\right)\\
+\text{ donde }n & =\sum_{i=1}^{k}n_{i}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Combinación
+\end_layout
+
+\begin_layout Standard
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+
+\lang english
+Combinación
+\end_layout
+
+\end_inset
+
+Una combinación es un arreglo de objetos distintos donde una combinación
+ difiere de otra si difiere el contenido del arreglo.
+ Si nos interesa determinar el número de combinaciones cuando en 
+\begin_inset Formula $n$
+\end_inset
+
+ objetos distintos deben seleccionarse 
+\begin_inset Formula $r$
+\end_inset
+
+ a la vez entonces 
+\begin_inset Formula 
+\[
+C_{n,r}=\frac{p_{n,r}}{r!}=\left(\begin{array}{c}
+n\\
+r
+\end{array}\right)\;\;r\leq n
+\]
+
+\end_inset
+
+ya que el numerador es el número de permutaciones al escoger 
+\begin_inset Formula $r$
+\end_inset
+
+ objetos de 
+\begin_inset Formula $n$
+\end_inset
+
+ posibles, pero hay que descontar los casos en que el orden determina para
+ la combinación el mismo elemento, que es exactamente 
+\begin_inset Formula $r!.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Propiedades
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(\begin{array}{c}
+n\\
+0
+\end{array}\right)=\left(\begin{array}{c}
+n\\
+n
+\end{array}\right)=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(\begin{array}{c}
+n\\
+k
+\end{array}\right)=\left(\begin{array}{c}
+n\\
+n-k
+\end{array}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(\begin{array}{c}
+n\\
+k
+\end{array}\right)+\left(\begin{array}{c}
+n\\
+k-1
+\end{array}\right)=\left(\begin{array}{c}
+n+1\\
+k
+\end{array}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $C_{n,r}=C_{n-1,r-1}+C_{n-1,r}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+El número de maneras en que 
+\begin_inset Formula $mn$
+\end_inset
+
+ objetos diferentes pueden dividirse en 
+\begin_inset Formula $m$
+\end_inset
+
+ grupos de 
+\begin_inset Formula $n$
+\end_inset
+
+ objetos cada uno, en donde el orden de los objetos en cada grupo no se
+ toma en consi\SpecialChar \-
+deración, es 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\frac{\left(mn\right)!}{\left(n!\right)^{m}},$
+\end_inset
+
+ considerando el orden en que se forman los grupos,
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\frac{\left(mn\right)!}{\left(n!\right)^{m}m!},$
+\end_inset
+
+ sin considerar el orden en que se forman los grupos.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ejemplo}[]
+\end_layout
+
+\end_inset
+
+ Calcular el número de maneras distintas en que 15 libros diferentes pueden
+ dividirse en tres grupos de 9, 4 y 2 libros respectivamente.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{solucion}
+\end_layout
+
+\end_inset
+
+ En este caso 
+\begin_inset Formula 
+\[
+N_{m}=\frac{15!}{9!4!2!}=75075.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{solucion}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ejemplo}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ejemplo}[]
+\end_layout
+
+\end_inset
+
+ Se tiene una baraja
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Muchos problemas de probabilidad están relacionados con cartas, y aunque
+ algunos estudiantes están relacionados con este juego, lo describiremos
+ brevemente para que los problemas sean entendidos con claridad.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+Una baraja ordinaria tiene 52 cartas divididas en cuatro grupos o palos
+ con trece cartas cada uno.
+ Los nombres de los palos y sus colores son los siguientes: 
+\end_layout
+
+\begin_layout Plain Layout
+Bastos(negros), diamantes(rojos), corazones(rojos) y espadas(negras.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+Cada palo consiste de 9 cartas numeradas del 2 al 10 inclusive y 4 cartas
+ más llamadas as, rey, reina y sota (ordenadas en valor descendente).
+ La expresión de que una carta se escoge o saca al azar, significa que la
+ carta se toma de una baraja bien mezclada del modo que todas las cartas
+ tengan igual oportunidad de ser escogida.
+\end_layout
+
+\end_inset
+
+ de 52 cartas diferentes.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ejemplo}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Encontrar
+\end_layout
+
+\begin_layout Enumerate
+El número de maneras en que pueden repartirse las cuatro manos de 13 cartas
+ a cuatro jugadores de bridge
+\end_layout
+
+\begin_layout Enumerate
+El número de maneras en que las 52 cartas pueden dividirse en cuatro grupos
+ de 13 cartas cada uno.
+ 
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Enumerate
+En el juego de bridge cada distribución diferente de las manos entre los
+ jugadores constituye una división diferente.
+ Por tanto, en este caso, los grupos aparecen permutados, y por lo tanto,
+ el número de maneras diferentes es 
+\begin_inset Formula 
+\begin{align*}
+\frac{52!}{\left(13!\right)^{4}} & =\\
+ & 53\,\allowbreak644\,737\,765\,\allowbreak488\,792\,839\,\allowbreak237\,440\,000
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+En este caso, no importa el orden de los grupos, así el número de maneras
+ es 
+\begin_inset Formula 
+\begin{align*}
+\frac{52!}{\left(13!\right)^{4}4!} & =\\
+ & 2235\,197\,406\,\allowbreak895\,366\,368\,\allowbreak301\,560\,000
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ejemplo}[]
+\end_layout
+
+\end_inset
+
+ Una moneda se tira 10 veces.
+\begin_inset space \space{}
+\end_inset
+
+Calcular la probabi\SpecialChar \-
+lidad de que aparezcan exactamente 7 caras 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ejemplo}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{solucion}
+\end_layout
+
+\end_inset
+
+ Ya que la moneda tiene dos formas diferentes de aparecer en cada tiro,
+ en 10 sería 
+\begin_inset Formula $2^{10}$
+\end_inset
+
+ formas.
+ Y de las 10 caras vamos a seleccionar 7 caras, por lo que serían 
+\begin_inset Formula $C_{10,7}$
+\end_inset
+
+ formas diferentes, por lo que la probabilidad buscada es 
+\begin_inset Formula 
+\[
+P=\frac{\binom{10}{7}}{2^{10}}=\frac{15}{128}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{solucion}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ejemplo}[]
+\end_layout
+
+\end_inset
+
+ Si se sacan 
+\begin_inset Formula $3$
+\end_inset
+
+ cartas al azar de una baraja de 
+\begin_inset Formula $52$
+\end_inset
+
+ cartas, calcular la probabilidad de que sean as, rey y reina.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ejemplo}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{solucion}
+\end_layout
+
+\end_inset
+
+ Se pueden seleccionar 
+\begin_inset Formula $3$
+\end_inset
+
+ cartas al azar entre 
+\begin_inset Formula $52$
+\end_inset
+
+, por lo que hay 
+\begin_inset Formula $C_{52,3}\;$
+\end_inset
+
+formas diferentes.
+ Y como hay 
+\begin_inset Formula $4$
+\end_inset
+
+palos y en cada palo hay un as, un rey y una reina, entonces resulta que
+ estas barajas pueden obtenerse de 
+\begin_inset Formula $4\times4\times4$
+\end_inset
+
+ formas diferentes .Por lo que la probabilidad buscada es 
+\begin_inset Formula 
+\[
+\frac{4^{3}}{\binom{52}{3}}=\frac{16}{5525}=2.\,\allowbreak895\,9\times10^{-3}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{solucion}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ejemplo}[]
+\end_layout
+
+\end_inset
+
+ De una bolsa que que contiene 4 bolas blancas, 2 negras y 3 rojas, se sacan
+ 5 al azar.
+ Calcular la probabilidad de que 2 sean blancas 1 negra y 2 rojas.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ejemplo}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{solucion}
+\end_layout
+
+\end_inset
+
+ Del total de 
+\begin_inset Formula $4+2+3=9$
+\end_inset
+
+ bolas se pueden seleccionar 5 bolas en 
+\begin_inset Formula $C_{9,5}$
+\end_inset
+
+ formas diferentes.
+ Ahora entre las 4 bolas blancas 2 de ellas pueden seleccionarse 
+\begin_inset Formula $C_{4,2}$
+\end_inset
+
+, entre las 2 blancas 
+\begin_inset Formula $C_{2,1}$
+\end_inset
+
+ y entre las 3 rojas 
+\begin_inset Formula $C_{3,2}$
+\end_inset
+
+ formas por lo que el total de casos favorables es 
+\begin_inset Formula $C_{4,2}C_{2,1}C_{3,2}$
+\end_inset
+
+, así 
+\begin_inset Formula 
+\[
+P=\frac{\binom{4}{2}\binom{2}{1}\binom{3}{2}}{\binom{9}{5}}=\frac{2}{7}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{solucion}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Probabilidad condicionada e independencia de eventos
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{defi}{}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+
+\lang english
+Probabilidad!condicionada
+\end_layout
+
+\end_inset
+
+Sean 
+\begin_inset Formula $A,B\in\mathcal{A}$
+\end_inset
+
+ y sea 
+\begin_inset Formula $B$
+\end_inset
+
+ un evento de probabilidad no nula para el evento 
+\begin_inset Formula $A$
+\end_inset
+
+, llamamos probabilidad condicionada de 
+\begin_inset Formula $A$
+\end_inset
+
+ a 
+\begin_inset Formula $B$
+\end_inset
+
+ a la cantidad que representamos 
+\begin_inset Formula $P\left(A|B\right)$
+\end_inset
+
+ y que definimos 
+\begin_inset Formula 
+\[
+P\left(A|B\right)=\frac{P\left(AB\right)}{P\left(B\right)},
+\]
+
+\end_inset
+
+la cantidad 
+\begin_inset Formula $P\left(A|B\right)$
+\end_inset
+
+ se lee la probabilidad de 
+\begin_inset Formula $A$
+\end_inset
+
+ dada la ocu\SpecialChar \-
+rrencia de 
+\begin_inset Formula $B$
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{defi}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ejemplo}[]
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+
+\lang english
+Eventos!Independencia
+\end_layout
+
+\end_inset
+
+Se lanza al aire un dado ¿Cuál es la probabilidad de que salga el número
+ 4? si sabemos que el resultado ha sido par 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ejemplo}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{solucion}
+\end_layout
+
+\end_inset
+
+ Sea 
+\begin_inset Formula $A=\{4\}$
+\end_inset
+
+, entonces 
+\begin_inset Formula $P\left(A\right)=\frac{1}{6},$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $B=\{2,4,6\},$
+\end_inset
+
+ 
+\begin_inset space \space{}
+\end_inset
+
+entonces 
+\begin_inset Formula $P\left(B\right)=\frac{3}{6}=\frac{1}{2}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+por tanto 
+\begin_inset Formula 
+\[
+P\left(A|B\right)=\frac{P\left(AB\right)}{P\left(B\right)}=\frac{\frac{1}{6}}{\frac{1}{2}}=\frac{1}{3}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{solucion}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{defi}{}{}
+\end_layout
+
+\end_inset
+
+ Sean 
+\begin_inset Formula $A,B\in\mathcal{A}$
+\end_inset
+
+ dos eventos de probabilidad no nula se dice que son independientes si y
+ solo si 
+\begin_inset Formula 
+\[
+P\left(AB\right)=P\left(A\right)P\left(B\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{defi}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ejemplo}[]
+\end_layout
+
+\end_inset
+
+ Para cierta población de empleados, los porcentajes de quienes aprueban
+ un examen de aptitud para un trabajo, especificados según el sexo, se muestran
+ en la tabla.
+ Es decir todas las personas que presentan el examen el 24% cae en la categoría
+ de hombre aprobado, el 16% en la categoría de de hombre reprobado, y así
+ sucesivamente.
+ Se selecciona al azar un empleado de esta población.
+ Sea 
+\begin_inset Formula $A$
+\end_inset
+
+ el evento de que el empleado aprueba el examen y 
+\begin_inset Formula $H$
+\end_inset
+
+ el evento de que se selecciona un hombre ¿Son independientes los eventos
+ 
+\begin_inset Formula $A$
+\end_inset
+
+ y 
+\begin_inset Formula $H$
+\end_inset
+
+ ? 
+\begin_inset Formula 
+\[
+\begin{tabular}{|c|c|}
+\hline  &  sexo\\
+\hline \begin{tabular}{l}
+Resultado\\
+ Aprueba \ensuremath{\left(A\right)}\\
+ Reprueba\ensuremath{\left(A^{\prime}\right)}\\
+ Total 
+\end{tabular}  &  \begin{tabular}{lll}
+Mujer\ensuremath{\left(M\right)}  &  Hombre\ensuremath{\left(H\right)}  &  Total\\
+ 24  &  36  &  60\\
+ 16  &  24  &  40\\
+ 40  &  60  &  100 
+\end{tabular} 
+\\\hline \end{tabular}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{solucion}
+\end_layout
+
+\end_inset
+
+ Determinemos 
+\begin_inset Formula 
+\begin{align*}
+P\left(A|H\right) & =\frac{{}}{{}}\\
+ & =\_\_\_\_\_\_\\
+ & =\_\_\_\_\_\_\\
+ & =\_\_\_\_\_\_\_
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{solucion}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ejemplo}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Reglas multiplicativas
+\end_layout
+
+\begin_layout Standard
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+
+\lang english
+Reglas multiplicativas
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{teo}{}
+\end_layout
+
+\end_inset
+
+ Sea 
+\begin_inset Formula $A_{1},A_{2},A_{3},\cdots A_{n}\in\mathcal{A}$
+\end_inset
+
+ una sucesión de eventos aleatorios, entonces 
+\begin_inset Formula 
+\[
+P\left(\bigcap_{i=1}^{n}A_{i}\right)=P\left(A_{1}\right)P\left(A_{2}|A_{1}\right)P\left(A_{3}|A_{1}A_{2}\right)\cdots P\left(A_{n}|\bigcap_{i=1}^{n-1}A_{i}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{teo}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{defi}{}{}
+\end_layout
+
+\end_inset
+
+ Se dice que una colección de eventos independientes 
+\begin_inset Formula $A_{1},A_{2},A_{3},\cdots A_{n}\in\mathcal{A}$
+\end_inset
+
+ es un evento exhaustivo y excluyente de sucesos, si se verifican las siguientes
+ condiciones 
+\begin_inset Formula 
+\begin{align*}
+\bigcup_{i=1}^{n}A_{i} & =S\\
+A_{i}\cap A_{j} & =\phi\qquad\forall i\neq j
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{defi}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+placement ptbh
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /media/antalcides/Antalcides-EXT1/est/bak/est/pdf/Image1.pdf
+	scale 40
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Formula $A_{1},A_{2},A_{3},A_{4}$
+\end_inset
+
+ y 
+\begin_inset Formula $A_{5}$
+\end_inset
+
+ forman un sistema exhaustivo y excluyente de sucesos
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig 3.5"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{teo}{}
+\end_layout
+
+\end_inset
+
+ sea 
+\begin_inset Formula $A_{1},A_{2},A_{3},\cdots A_{n}\in\mathcal{A}$
+\end_inset
+
+ un sistema exhaustivo y excluyente de sucesos.
+ Entonces 
+\begin_inset Formula 
+\[
+\forall B\subset\mathcal{A},\Longrightarrow P\left(B\right)=\sum_{i=1}^{n}P\left(B|A_{i}\right)P\left(A_{i}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{teo}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement ptbh
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /media/antalcides/Antalcides-EXT1/est/bak/est/pdf/particion.pdf
+	scale 40
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\lang english
+Si 
+\begin_inset Formula $A_{1},A_{2},A_{3},A_{4}$
+\end_inset
+
+ forman un sistema exhaustivo y excluyente de sucesos , podemos calcular
+ la probabilidad de 
+\begin_inset Formula $B$
+\end_inset
+
+ a partir de las cantidades 
+\begin_inset Formula $P\left(B\cap A_{i}\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig 3.6"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{prueba}
+\end_layout
+
+\end_inset
+
+ Como 
+\begin_inset Formula $B\subset S$
+\end_inset
+
+ podemos decir 
+\begin_inset Formula 
+\begin{align*}
+P\left(B\right) & =P\left(B\cap\left(\bigcup_{i=1}^{n}A_{i}\right)\right)\\
+ & =P\left(\bigcup_{i=1}^{n}\left(B\cap A_{i}\right)\right)\\
+ & =\sum_{i=1}^{n}P\left(B\cap A_{i}\right)\\
+ & =\sum_{i=1}^{n}P\left(B|A_{i}\right)P\left(A_{i}\right)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ejemplo}[]
+\end_layout
+
+\end_inset
+
+ Se tienen dos urnas, y cada una de ellas contiene un número diferente de
+ bolas blancas y rojas: 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ejemplo}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{prueba}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\shape italic
+primera urna 
+\shape default
+
+\begin_inset Formula $U_{1}\mathit{:}$
+\end_inset
+
+ 
+\shape italic
+3 bolas blancas y 2 roja
+\shape default
+s
+\end_layout
+
+\begin_layout Itemize
+
+\shape italic
+Segunda urna 
+\shape default
+
+\begin_inset Formula $U_{2}$
+\end_inset
+
+
+\shape italic
+
+\begin_inset space \space{}
+\end_inset
+
+4 bolas blancas y 2 rojas
+\shape default
+ 
+\end_layout
+
+\begin_layout Standard
+
+\shape italic
+Se realiza el siguiente experimento :
+\end_layout
+
+\begin_layout Standard
+
+\shape italic
+Se tira una moneda al aire y si sale cara se elige una bola de la primera
+ urna y si sale sello se escoge una bola de la segunda urna.
+\end_layout
+
+\begin_layout Standard
+
+\shape italic
+¿Cuál es la probabilidad de que salga una bola blanca?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{solucion}
+\end_layout
+
+\end_inset
+
+ La situación que tenemos la podemos esquematizar de la siguiente manera
+\begin_inset Newline newline
+\end_inset
+
+Si 
+\begin_inset Formula $B$
+\end_inset
+
+: es el evento de sacar una bola blanca y 
+\begin_inset Formula $R$
+\end_inset
+
+ : el evento de sacar una bola roja, entonces 
+\begin_inset Formula 
+\begin{align*}
+P\left(U_{1}\right) & =\frac{1}{2}\\
+P\left(B|U_{1}\right) & =\frac{3}{5}\\
+P\left(U_{2}\right) & =\frac{1}{2}\\
+P\left(B|U_{2}\right) & =\frac{4}{6}
+\end{align*}
+
+\end_inset
+
+Como 
+\begin_inset Formula $U_{1}$
+\end_inset
+
+ y 
+\begin_inset Formula $U_{2}$
+\end_inset
+
+ forman un sistema exhaustivo y excluyente de sucesos aplicando el teorema
+ de la probabilidad total podemos afirmar que, 
+\begin_inset Formula 
+\begin{align*}
+P\left(B\right) & =P\left(B|U_{1}\right)P\left(U_{1}\right)+P\left(B|U_{2}\right)P\left(U_{2}\right)\\
+ & =\frac{3}{5}\cdot\frac{1}{2}+\frac{4}{6}\cdot\frac{1}{2}=\frac{19}{30}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{solucion}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{teo}{}
+\end_layout
+
+\end_inset
+
+ (Bayes) Sea 
+\begin_inset Formula $A_{1},A_{2},A_{3},\cdots A_{n}\in\mathcal{A}$
+\end_inset
+
+ un sistema exhaustivo y excluyente de eventos.
+ 
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+
+\lang english
+Teorema!Bayes
+\end_layout
+
+\end_inset
+
+Sea 
+\begin_inset Formula $B\subset\mathcal{A}$
+\end_inset
+
+ un suceso del que conocemos todas las cantidades 
+\begin_inset Formula 
+\[
+P\left(B|A_{i}\right),i=1,2,3,\cdots,n
+\]
+
+\end_inset
+
+a las que denominamos verosimilitudes, entones se verifica 
+\begin_inset Formula 
+\[
+\forall j=1,2,3,\cdots,n,\qquad P\left(A_{j}|B\right)=\frac{P\left(B|A_{j}\right)P\left(A_{j}\right)}{\sum_{i=1}^{n}P\left(B|A_{i}\right)P\left(A_{i}\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{teo}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{prueba}
+\end_layout
+
+\end_inset
+
+ Es consecuencia de la definición de probabilidad condicionada en términos
+ de la intersección, y del teorema de la probabilidad total 
+\begin_inset Formula 
+\begin{align*}
+P\left(A_{j}|B\right) & =\frac{P\left(A_{j}\cap B\right)}{P\left(B\right)}\\
+ & =\frac{P\left(B|A_{j}\right)P\left(A_{j}\right)}{\sum_{i=1}^{n}P\left(B|A_{i}\right)P\left(A_{i}\right)}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{prueba}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ejemplo}[]
+\end_layout
+
+\end_inset
+
+ Se tienen tres urnas.
+ Cada una de ellas contiene un número diferente de bolas blancas y rojas.
+ La primera urna tiene 3 bolas blancas y 2 rojas, la segunda 4 bolas blancas
+ y 2 rojas y la tercera 3 bolas rojas.
+\begin_inset Newline newline
+\end_inset
+
+Se realiza el siguiente experimento:
+\begin_inset Newline newline
+\end_inset
+
+Alguién elije al azar y con la misma probabilidad una de las tres urnas,
+ saca una bola.
+\begin_inset Newline newline
+\end_inset
+
+Si el resultado del experimento ha sido sacar una bola blanca ¿Cuál es la
+ probabilidad de que provenga de la primera urna? Calcular lo mismo para
+ las otras dos urnas.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ejemplo}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{solucion}
+\end_layout
+
+\end_inset
+
+ Si 
+\begin_inset Formula $B$
+\end_inset
+
+: es el evento de sacar una bola blanca y 
+\begin_inset Formula $R$
+\end_inset
+
+: el evento de sacar una bola roja, entonces como 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="2">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="left" valignment="top">
+<column alignment="left" valignment="top">
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $U_{1}:$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3 bolas blancas y 2 rojas
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $U_{2}:$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4 bolas blancas y 2 rojas
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $U_{3}:$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3 bolas rojas 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+tenemos 
+\begin_inset Formula 
+\begin{align*}
+P\left(U_{1}\right) & =\frac{1}{3}\\
+P\left(U_{2}\right) & =\frac{1}{3}\\
+P\left(U_{3}\right) & =\frac{1}{3}\\
+P\left(B|U_{1}\right) & =\frac{3}{5}\\
+P\left(B|U_{2}\right) & =\frac{4}{6}\\
+P\left(B|U_{3}\right) & =0
+\end{align*}
+
+\end_inset
+
+En este caso 
+\begin_inset Formula $U_{1},U_{2},U_{3}$
+\end_inset
+
+ forman un sistema incompatible y excluyente de eventos, por lo que es posible
+ aplicar el teorema de Bayes 
+\begin_inset Formula 
+\begin{align*}
+P\left(U_{1}|B\right) & =\frac{P\left(B|U_{1}\right)P\left(U_{1}\right)}{P\left(B|U_{1}\right)P\left(U_{1}\right)+P\left(B|U_{2}\right)P\left(U_{2}\right)+P\left(B|U_{3}\right)P\left(U_{3}\right)}\\
+ & =\frac{\left(\frac{3}{5}\right)\left(\frac{1}{3}\right)}{\left(\frac{3}{5}\right)\left(\frac{1}{3}\right)+\left(\frac{4}{6}\right)\left(\frac{1}{3}\right)+0\left(\frac{1}{3}\right)}\\
+ & =\frac{9}{19}
+\end{align*}
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Para los otros dos casos resulta de manera equivalente 
+\begin_inset Formula 
+\begin{align*}
+P\left(U_{2}|B\right) & =\frac{P\left(B|U_{2}\right)P\left(U_{2}\right)}{P\left(B|U_{1}\right)P\left(U_{1}\right)+P\left(B|U_{2}\right)P\left(U_{2}\right)+P\left(B|U_{3}\right)P\left(U_{3}\right)}\\
+ & =\frac{10}{19}
+\end{align*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+P\left(U_{3}|B\right) & =\frac{P\left(B|U_{3}\right)P\left(U_{3}\right)}{P\left(B|U_{1}\right)P\left(U_{1}\right)+P\left(B|U_{2}\right)P\left(U_{2}\right)+P\left(B|U_{3}\right)P\left(U_{3}\right)}\\
+ & =0
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{solucion}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ejemplo}[]
+\end_layout
+
+\end_inset
+
+ En la segunda guerra mundial, uno de los primeros intentos de investigación
+ de operaciones en la Gran Bretaña se orientaba en establecer patrones de
+ búsqueda de submarinos desde vuelos de escuadrones o mediante un sólo avión.
+ Por algún tiempo, la tendencia fue concentrar los vuelos en la costa, pues
+ se pensaba que le mayor número de avistamientos que ocurrían ahí.
+ El grupo de investigación registró 1000 vuelos de un solo avión con los
+ sigui\SpecialChar \-
+entes resultados( Los datos no son reales)
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="4">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="left" valignment="top">
+<column alignment="left" valignment="top">
+<column alignment="left" valignment="top">
+<column alignment="left" valignment="top">
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+En la playa 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Fuera de la costa 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Total
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Observación 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+80 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+20 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+100
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+No observación 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+820 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+80 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+900
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Total de salidas 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+900 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+100 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1000
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+sea
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="2">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="left" valignment="top">
+<column alignment="left" valignment="top">
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $S_{1}$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Hubo un avistamiento
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $S_{2}$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+No hubo avistamiento
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{1}$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Salida a la costa
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{2}$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Salida en altamar 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Vemos de inmediato que 
+\begin_inset Formula 
+\begin{align*}
+P\left(S_{1}|B_{1}\right) & =\frac{80}{900}=\frac{4}{45}=8.\,\allowbreak888\,9\times10^{-2}\\
+P\left(S_{2}|B_{2}\right) & =\frac{20}{100}=0.\,\allowbreak2
+\end{align*}
+
+\end_inset
+
+lo cual indica una estrategia de búsqueda es contraria a la primera práctica.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ejemplo}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ejemplo}[]
+\end_layout
+
+\end_inset
+
+ Supóngase que se va a seleccionar una muestra ale\SpecialChar \-
+atoria de tamaño 2 de
+ un lotes de tamaño 100, y que se sabe que 98 de los 100 artículos se encuentran
+ en buen estado.
+ La muestra se toma de manera tal que el primer artículo se observa y se
+ regresa antes de seleccionar el segundo artículo 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ejemplo}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{solucion}
+\end_layout
+
+\end_inset
+
+ .
+ Si aceptamos 
+\begin_inset space \space{}
+\end_inset
+
+que 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $A$
+\end_inset
+
+ : El primer artículo observado está en buen estado 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $B$
+\end_inset
+
+ : El segundo artículo observado está en buen estado 
+\begin_inset Newline newline
+\end_inset
+
+Y si deseamos determinar la probabilidad de que ambos artículos estén en
+ buen estado, entonces 
+\begin_inset Formula 
+\[
+P\left(A\cap B\right)=P\left(A\right)P\left(B\right)=\left(\frac{98}{100}\right)\left(\frac{98}{100}\right)=0.\,\allowbreak960\,4
+\]
+
+\end_inset
+
+Si se selecciona el artículo sin reemplazo de modo que que el primer artículo
+ no se regresa antes de seleccionar el segundo, entonces 
+\begin_inset Formula 
+\[
+P\left(A\cap B\right)=P\left(A\right)P\left(B|A\right)=\frac{98}{100}\cdot\frac{97}{99}=0.9602
+\]
+
+\end_inset
+
+Los resultados son muy parecidos por lo que generalmente suponemos que los
+ eventos son independientes cuando la fracción de muestreo (tamaño de la
+ muestra/tamaño de la población) es menor que 0.1 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{solucion}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ejemplo}[]
+\end_layout
+
+\end_inset
+
+ Tres industrias suministran microprocesadores a un fabricante de equipos
+ de telemetría.
+ Todos se elaboran supuestamente con las mismas especificaciones.
+ No obstante, el fabricante ha probado durante varios años los microprocesadores
+, y los re\SpecialChar \-
+gis\SpecialChar \-
+tros indican la siguiente información
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="3">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="left" valignment="top">
+<column alignment="left" valignment="top">
+<column alignment="left" valignment="top">
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Industria 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Fracción de defectos 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Fracción suministrada por
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.02 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.15
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.01 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.80
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.03 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.05
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+EL fabricante ha interrumpido las pruebas por causa de los costos involucrados,
+ y puede ser razonable suponer que la proporción defectuosa y la mezcla
+ de inventarios son las mismas que durante el periodo en el que se efectuaron
+ los registros.
+ El director de manu\SpecialChar \-
+factura selecciona un microprocesador al azar, lo lleva
+ al de\SpecialChar \-
+par\SpecialChar \-
+tamento de pruebas y descubre que está defectuoso.
+ Determinar la probabilidad que el artículo proviene de la industria 3
+\begin_inset Newline newline
+\end_inset
+
+Sea 
+\begin_inset Formula $A$
+\end_inset
+
+ el evento de que el artículo es defectuoso y 
+\begin_inset Formula $B_{i}\;i=1,2,3$
+\end_inset
+
+ es el evento que el artículo proviene de la empresa 
+\begin_inset Formula $i$
+\end_inset
+
+ 
+\begin_inset Formula 
+\begin{align*}
+P\left(B_{3}|A\right) & =\frac{P\left(A|B_{2}\right)P\left(B_{2}\right)}{P\left(A|B_{1}\right)P\left(B_{1}\right)+P\left(A|B_{2}\right)P\left(B_{2}\right)+P\left(A|B_{3}\right)P\left(B_{3}\right)}\\
+ & =\frac{\left(0.05\right)\left(0.03\right)}{\left(0.15\right)\left(0.02\right)+\left(0.8\right)\left(0.01\right)+\left(0.05\right)\left(0.03\right)}=0.\,\allowbreak12
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ejemplo}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ejemplo}[]
+\end_layout
+
+\end_inset
+
+ Una caja contiene 8 bolas rojas, 3 bolas blancas y nueve azules.
+ Si se sacan 3 bolas al azar, determinar la proba\SpecialChar \-
+bili\SpecialChar \-
+dad de que 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ejemplo}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+
+\lang english
+a.
+\end_layout
+
+\end_inset
+
+
+\shape italic
+
+\begin_inset space \space{}
+\end_inset
+
+Las 3 sea rojas
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+
+\lang english
+b.
+\end_layout
+
+\end_inset
+
+
+\shape italic
+
+\begin_inset space \space{}
+\end_inset
+
+Las tres sean blancas
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+
+\lang english
+c.
+\end_layout
+
+\end_inset
+
+
+\shape italic
+2 sean rojas
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+
+\lang english
+d.
+\end_layout
+
+\end_inset
+
+
+\shape italic
+
+\begin_inset space \space{}
+\end_inset
+
+Al menos una blanca
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+
+\lang english
+e.
+\end_layout
+
+\end_inset
+
+
+\shape italic
+
+\begin_inset space \space{}
+\end_inset
+
+Sea una de cada color
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+
+\lang english
+f.
+\end_layout
+
+\end_inset
+
+
+\shape italic
+Salgan en el orden roja,blanca y azul
+\shape default
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{solucion}
+\end_layout
+
+\end_inset
+
+ 
+\shape italic
+
+\begin_inset space \space{}
+\end_inset
+
+Denotaremos por 
+\shape default
+
+\begin_inset Formula $R_{i}\;i=1,2,3$
+\end_inset
+
+
+\shape italic
+
+\begin_inset space \space{}
+\end_inset
+
+los eventos que la primera, la segunda y la tercera bola sean rojas respectivame
+nte.
+ Denotaremos por 
+\shape default
+
+\begin_inset Formula $B_{i}\;i=1,2,3$
+\end_inset
+
+ los eventos que la primera, la segunda y la tercera bola sean blancas respectiv
+amente, y
+\shape italic
+
+\begin_inset space \space{}
+\end_inset
+
+denotaremos por 
+\shape default
+
+\begin_inset Formula $A_{i}\;i=1,2,3$
+\end_inset
+
+
+\shape italic
+
+\begin_inset space \space{}
+\end_inset
+
+los eventos que la primera, la segunda y la tercera bola sean rojas respectivame
+nte, entonces
+\shape default
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{solucion}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+
+\lang english
+a.
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+P\left(\bigcap_{i=1}^{3}R_{i}\right)=\frac{\left(\begin{array}{c}
+8\\
+3
+\end{array}\right)}{\left(\begin{array}{c}
+20\\
+3
+\end{array}\right)}=\frac{14}{285}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+b.
+ 
+\begin_inset Formula 
+\[
+P\left(\bigcap_{i=1}^{3}B_{i}\right)=\frac{\left(\begin{array}{c}
+3\\
+3
+\end{array}\right)}{\left(\begin{array}{c}
+20\\
+3
+\end{array}\right)}=\frac{1}{1140}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+c.
+ 
+\begin_inset Formula 
+\[
+P\left(\bigcap_{i=1}^{2}R_{i}\cap B\right)=\frac{\left(\begin{array}{c}
+8\\
+2
+\end{array}\right)}{\left(\begin{array}{c}
+20\\
+3
+\end{array}\right)}=\frac{\_}{\_}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+d.
+ 
+\begin_inset Formula 
+\[
+P\left(\text{ninguna es blanca}\right)=\frac{\left(\begin{array}{c}
+17\\
+3
+\end{array}\right)}{\left(\begin{array}{c}
+20\\
+3
+\end{array}\right)}=\frac{\_}{\_}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+e.
+ 
+\begin_inset Formula 
+\[
+P\left(\text{sacar una de cada color}\right)=\frac{\left(\begin{array}{c}
+8\\
+1
+\end{array}\right)\left(\begin{array}{c}
+3\\
+1
+\end{array}\right)\left(\begin{array}{c}
+9\\
+1
+\end{array}\right)}{\left(\begin{array}{c}
+20\\
+3
+\end{array}\right)}=\frac{\_}{\_}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+f.
+ 
+\begin_inset Formula 
+\begin{align*}
+ & P\left(\text{bolas en el orden R, B,A}\right)\\
+ & =\frac{1}{3!}P\left(\text{una de cada colore}\right)=\frac{3}{95}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ejemplo}[]
+\end_layout
+
+\end_inset
+
+ De una baraja de 52 naipes 
+\begin_inset space \space{}
+\end_inset
+
+bien mezclada se sacan 5 naipes.
+ Hallar la probabilidad de que 3 sean de un palo y 2 de otro 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ejemplo}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{solucion}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+P\left(\text{3 de cualquier figura y 2 de otra}\right) & =\\
+ & =\frac{4\binom{13}{3}\cdot3\binom{13}{2}}{\binom{52}{5}}\\
+ & =0.\,\allowbreak103
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{solucion}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ejemplo}[]
+\end_layout
+
+\end_inset
+
+ Supóngase que se lanzan 12 dados.
+ Se determina la probabilidad 
+\begin_inset Formula $p$
+\end_inset
+
+ de que cada uno de los seis números distintos aparezca dos veces 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ejemplo}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{solucion}
+\end_layout
+
+\end_inset
+
+ tenemos que 
+\begin_inset Formula $S$
+\end_inset
+
+ es el conjunto formado por la sucesión de 12-tupla donde la i-ésimo valor
+ de la sucesión es el resultado i-ésimo lanzamiento, de lo que se deduce
+ que 
+\begin_inset Formula $n\left(S\right)=6^{12}$
+\end_inset
+
+ donde todos los 
+\begin_inset Formula $6^{12}$
+\end_inset
+
+ resultados posibles son igualmente probables, ahora podemos considerar
+ los seis valores posibles que se puede dar en cada dado como seis casillas
+ las cuales 
+\begin_inset space \space{}
+\end_inset
+
+se le pueden asignar solo dos posibilidades.
+ Por lo que al utilizar el coeficiente multinomial para determinar los casos
+ favorables tenemos 
+\begin_inset Formula 
+\begin{align*}
+n & =12\\
+k & =6\\
+n_{1} & =n_{2}=\cdots=n_{6}=2\\
+N & =\frac{12!}{\left(2!\right)\left(2!\right)\cdots\left(2!\right)}=\frac{12!}{\left(2!\right)^{6}}
+\end{align*}
+
+\end_inset
+
+Por lo que la probabilidad buscada es
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $P=\frac{12!}{2^{6}6^{12}}$
+\end_inset
+
+ 
+\begin_inset Formula $=$
+\end_inset
+
+ 
+\begin_inset Formula $\frac{1925}{559\,872}=$
+\end_inset
+
+ 
+\begin_inset Formula $3.\,\allowbreak438\,3\times10^{-3}$
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{solucion}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ejemplo}[]
+\end_layout
+
+\end_inset
+
+ Una baraja de 52 cartas contiene 13 corazones.
+ Su\SpecialChar \-
+póngase que se barajan las cartas y se distribuyen entre cuatro jugadores
+ A,B,C y D de tal manera que a cada jugador le corres\SpecialChar \-
+pondan 13 cartas, Se
+ determinará la probabilidad 
+\begin_inset Formula $P$
+\end_inset
+
+ de que cada jugador reciba 6, 4, 2 y 1 
+\begin_inset space \space{}
+\end_inset
+
+corazones respectivamente 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ejemplo}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{solucion}
+\end_layout
+
+\end_inset
+
+ El número de combinaciones distintas posibles de las 13 posiciones ocupadas
+ en la baraja por los corazones es 
+\begin_inset Formula $\binom{52}{13}$
+\end_inset
+
+.
+ Si el jugador A recibe 6 corazones, hay 
+\begin_inset Formula $\binom{13}{6}$
+\end_inset
+
+ combinaciones posibles de las 6 posiciones que ocupan estos corazones entre
+ las 13 cartas que recibe el jugador A.
+ De la misma manera podemos establecer las combinaciones posibles de cada
+ jugador entre las 13 cartas que recibe cada uno como 
+\begin_inset Formula $\binom{13}{4},\binom{13}{2}$
+\end_inset
+
+ y 
+\begin_inset Formula $\binom{13}{1}$
+\end_inset
+
+ respectivamente para B,C y D.
+ Por tanto como los eventos A,B,C y D son independientes 
+\begin_inset Formula 
+\[
+P\left(ABCD\right)=\frac{\binom{13}{6}\binom{13}{4}\binom{13}{2}\binom{13}{1}}{\binom{52}{13}}=1.\,\allowbreak9592\times10^{-3}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{solucion}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ejemplo}[]
+\end_layout
+
+\end_inset
+
+ Supóngase que una moneda equilibrada va a ser lanzada diez veces y se desea
+ determinar 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ejemplo}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+a.
+ 
+\shape italic
+
+\begin_inset space \space{}
+\end_inset
+
+la probabilidad 
+\shape default
+
+\begin_inset Formula $P$
+\end_inset
+
+
+\shape italic
+
+\begin_inset space \space{}
+\end_inset
+
+de obtener exactamente 3 caras
+\end_layout
+
+\begin_layout Description
+b.
+ 
+\shape italic
+
+\begin_inset space \space{}
+\end_inset
+
+La probabilidad 
+\shape default
+
+\begin_inset Formula $P$
+\end_inset
+
+
+\shape italic
+
+\begin_inset space \space{}
+\end_inset
+
+de obtener a lo sumo tres caras
+\shape default
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{solucion}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset space \qquad{}
+\end_inset
+
+
+\begin_inset space \qquad{}
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{solucion}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+
+\lang english
+a.
+\end_layout
+
+\end_inset
+
+El número total de posibles combinaciones distintas de 10 caras y sellos
+ es 
+\begin_inset Formula $2^{10}$
+\end_inset
+
+ y se puede suponer que todas estas combinaciones son igualmente probables
+ y el número de casos favorables 
+\begin_inset space \space{}
+\end_inset
+
+es 
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset Formula $\binom{10}{3}$
+\end_inset
+
+ por lo que 
+\begin_inset Formula 
+\[
+p=\frac{\binom{10}{3}}{2^{10}}=0.\,\allowbreak117\,19
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{solucion}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Description
+b.
+ Puesto que lo que me piden es la union de los eventos 
+\begin_inset Formula $A_{i}$
+\end_inset
+
+ : obte\SpecialChar \-
+ner 0,1,2 y 3 caras 
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset Formula $i=0,1,2,3$
+\end_inset
+
+, y como estos eventos son disjuntos tenemos que 
+\begin_inset Formula 
+\[
+P\left(\bigcup_{i=0}^{3}A_{i}\right)=\frac{\binom{10}{0}+\binom{10}{1}+\binom{10}{2}+\binom{10}{3}}{2^{10}}=0.\,\allowbreak171\,88
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{solucion}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ejemplo}[]
+\end_layout
+
+\end_inset
+
+ Supóngase que en una clase hay 15 hombres y 30 mujeres, y que se van a
+ seleccionar al azar 10 estudiantes para una tarea especial.
+ se determinará la probabilidad 
+\begin_inset Formula $P$
+\end_inset
+
+ de seleccionar exactamente 3 hombres 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ejemplo}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{solucion}
+\end_layout
+
+\end_inset
+
+ el número de combinaciones distintas que se pu\SpecialChar \-
+eden formar con 45 estudiantes
+ para obtener una muestra de 10 es 
+\begin_inset Formula $\binom{45}{10},$
+\end_inset
+
+ y como el muestreo es al azar y sin reemplazo entonces todas estas combinacione
+s son igualmente posibles por lo que hay que determinar el números de combinacio
+nes 
+\begin_inset space \space{}
+\end_inset
+
+distintas que se pueden seleccionar con 3 hombres y 7 mujeres, entonces
+ con los hombres se pueden realizar 
+\begin_inset Formula $\binom{15}{3}$
+\end_inset
+
+ y con las mujeres 
+\begin_inset Formula $\binom{30}{7}$
+\end_inset
+
+ por lo que 
+\begin_inset Formula 
+\[
+P=\frac{\binom{15}{3}\binom{30}{7}}{\binom{45}{10}}=\frac{3958\,500}{13\,633\,279}=0.\,\allowbreak290\,36
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{solucion}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ejemplo}[]
+\end_layout
+
+\end_inset
+
+ Supóngase que se baraja un naipe de 52 cartas que contiene 4 ases y que
+ las cartas se reparten entre cuatro jugadores, de forma que cada una reciba
+ 13 cartas.
+ se determinará la proba\SpecialChar \-
+bilidad de que cada jugador reciba un as.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ejemplo}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{solucion}
+\end_layout
+
+\end_inset
+
+ El número de combinaciones diferentes es 
+\begin_inset Formula $\binom{52}{4}.$
+\end_inset
+
+ Y podemos suponer que todas estas combinaciones son igualmente probables.
+ si cada jugador recibe un as entonces debe haber un as entre las 13 cartas
+ que recibe por ejemplo el primer jugador y un as recibirá cada uno de los
+ jugadores de las 13 cartas que recibirán, es decir hay 13 posiciones posibles
+ para el as que recibe cada jugador por lo que los casos favorables será
+ 
+\begin_inset Formula $13^{4},$
+\end_inset
+
+ entonces 
+\begin_inset Formula 
+\[
+P=\frac{13^{4}}{\binom{52}{4}}=\frac{2197}{20\,825}=0.\,\allowbreak105\,5
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{solucion}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ejemplo}[]
+\end_layout
+
+\end_inset
+
+ Supóngase que una máquina produce un artículo defectuoso con probabilidad
+ 
+\begin_inset Formula $p=0.4$
+\end_inset
+
+ y produce un artículo no defectuoso con una probabilidad 
+\begin_inset Formula $q=0,6$
+\end_inset
+
+.
+ Supóngase además que se seleccionan aleatoriamente para su control seis
+ de los artículos producidos por la máquina y que los resultados de control
+ son independientes para estos seis artículos.
+ Se determinará la probabilidad de que exactamente dos de los seis artículos
+ sean defectuosos 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ejemplo}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{solucion}
+\end_layout
+
+\end_inset
+
+ Si consideramos los eventos 
+\begin_inset Formula $D_{i}$
+\end_inset
+
+ el evento del que el 
+\begin_inset Formula $i-\acute{e}simo$
+\end_inset
+
+ artículo sea defectuoso y 
+\begin_inset Formula $N_{j}$
+\end_inset
+
+ el evento de que el 
+\begin_inset Formula $\ i-\acute{e}simo$
+\end_inset
+
+ artículo sea no defectuoso para, 
+\begin_inset Formula $i=1,2,3,4,5,6,$
+\end_inset
+
+ como los eventos son independientes entonces por ejemplo 
+\begin_inset Formula 
+\[
+P\left(N_{1}N_{3}D_{2}D_{4}D_{5}D_{6}\right)=qqpppp
+\]
+
+\end_inset
+
+como esta es una de las posibles combinaciones hay que determinar las otras
+ que no es más que 
+\begin_inset Formula $\binom{6}{2}$
+\end_inset
+
+ combinaciones distintas y por el th 3.13 tenemos 
+\begin_inset Formula 
+\[
+P=\binom{6}{2}\left(0.4\right)^{2}\left(0.6\right)^{4}=0.\,\allowbreak311\,04
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{solucion}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ejemplo}[]
+\end_layout
+
+\end_inset
+
+ considérese una máquina que produce un artículo defectuoso con una probabilidad
+ 
+\begin_inset Formula $p=0.4$
+\end_inset
+
+ y uno no defectuoso con probabilidad 
+\begin_inset Formula $q=0.6$
+\end_inset
+
+.
+ Supóngase que el control se realiza seleccionando artículos al azar y de
+ uno en uno hasta obtener exactamente cinco artículos defectuosos.
+ Se determinará 
+\begin_inset space \space{}
+\end_inset
+
+la probabilidad 
+\begin_inset Formula $P$
+\end_inset
+
+ de que deban ser seleccionados 20 artículos para obtener 5 defectuosos
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ejemplo}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{solucion}
+\end_layout
+
+\end_inset
+
+ El quinto artículo defectuoso será el 
+\begin_inset Formula $n-\acute{e}simo$
+\end_inset
+
+ controlado si, y sólo si, hay exactamente cuatro defectuosos entre los
+ primeros 
+\begin_inset Formula $\ n-1$
+\end_inset
+
+ artículos y el 
+\begin_inset Formula $n-\acute{e}simo$
+\end_inset
+
+ es defectuoso entonces por el th 3.13 tenemos que 
+\begin_inset Formula 
+\begin{align*}
+P & =\binom{n-1}{4}p^{5}q^{n-5}=\binom{19}{4}\left(0.4\right)^{5}\left(0.6\right)^{15}\\
+ & =1.\,\allowbreak866\,2\times10^{-2}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{solucion}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ejemplo}[]
+\end_layout
+
+\end_inset
+
+ Supóngase que se van a extraer dos bolas aleatoriamente y sin reemplazo,
+ de una urna que contiene 8 bolas rojas y 10 bolas azules.
+ Se determinará la probabilidad 
+\begin_inset Formula $P$
+\end_inset
+
+ de obtener la primera bola roja y la segunda azul 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ejemplo}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{solucion}
+\end_layout
+
+\end_inset
+
+ Sea A el evento de que la primera bola sea roja y B de que la segunda bola
+ sea azul, entonces 
+\begin_inset Formula $P\left(A\right)=\frac{8}{18}=0.\,\allowbreak444\,44$
+\end_inset
+
+, además si el suceso A ha ocurrido, entonces se ha obtenido una bola roja
+ de la urna en la primera extracción por lo que la probabilidad de obtener
+ una bola azul en la segunda extracción es 
+\begin_inset Formula 
+\[
+P\left(B|A\right)=\frac{10}{17}=0.\,\allowbreak588\,24
+\]
+
+\end_inset
+
+entonces 
+\begin_inset Formula 
+\[
+P\left(AB\right)=\left(0.\,\allowbreak444\,44\right)\left(0.\,\allowbreak588\,24\right)=0.\,\allowbreak261\,44
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{solucion}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{ejemplo}[]
+\end_layout
+
+\end_inset
+
+ Para la fabricación de un gran lote de artículos similares se utilizaron
+ tres máquinas 
+\begin_inset Formula $M_{1},M_{2}$
+\end_inset
+
+ y 
+\begin_inset Formula $M_{3}$
+\end_inset
+
+.
+ Supóngase que el 20% de los artículos fueron fabricados por la máquina
+ 
+\begin_inset Formula $M_{1}$
+\end_inset
+
+, el 30% por la máquina 
+\begin_inset Formula $M_{2}$
+\end_inset
+
+ y el 50% por la máquina 
+\begin_inset Formula $M_{3}$
+\end_inset
+
+ Suponemos además que el 1% de los artículos fabricados por la máquina 
+\begin_inset Formula $M_{1}$
+\end_inset
+
+ son defectuosos y así respectivamente 2% y 3% de los artículos fa\SpecialChar \-
+bricados
+ por la máquinas 
+\begin_inset Formula $M_{2}$
+\end_inset
+
+ y 
+\begin_inset Formula $M_{3}$
+\end_inset
+
+.
+ Se quiere seleccionar al azar uno de los artículos del lote que resultan
+ defectuosos.
+ Determine la probabilidad de que el artículo haya sido fabricado por la
+ máquina 
+\begin_inset Formula $M_{2}$
+\end_inset
+
+.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{ejemplo}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{solucion}
+\end_layout
+
+\end_inset
+
+ Sea 
+\begin_inset Formula $A_{i}$
+\end_inset
+
+ el evento de que el artículo haya sido fa\SpecialChar \-
+bricado por la máquina 
+\begin_inset Formula $M_{i},i=1,2,3,$
+\end_inset
+
+ y sea B el suceso de que el artículo seleccionado sea defectuoso, de acuerdo
+ con esto hay que determinar 
+\begin_inset Formula $P\left(A_{2}|B\right)$
+\end_inset
+
+, entonces 
+\begin_inset Formula 
+\begin{align*}
+P\left(A_{1}\right) & =0.2\\
+P\left(A_{2}\right) & =0.3\\
+P\left(A_{3}\right) & =0.5\\
+P\left(B|A_{1}\right) & =0.01\\
+P\left(B|A_{2}\right) & =0.02\\
+P\left(B|A_{3}\right) & =0.03
+\end{align*}
+
+\end_inset
+
+aplicando el teorema de Bayes 
+\begin_inset Formula 
+\[
+P\left(A_{2}|B\right)=\frac{P\left(A_{2}\right)P\left(B|A_{2}\right)}{\sum_{i=1}^{3}P\left(A_{i}\right)P\left(B|A_{i}\right)}=0.26
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{solucion}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+problemas{
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+Tres clases diferentes tienen 20, 18 y 25 estudiantes, respectivamente,
+ y cada estudiante pertenece a una sola clase.
+ Si se forma un equipo con un estudiante de cada una de estas tres clases,
+ ¿de cuántas maneras distintas se pueden seleccionar los miembros del equipo?
+\end_layout
+
+\begin_layout Enumerate
+¿De cuántas maneras distintas se pueden ordenar cinco letras a, b, c, d
+ y e?
+\end_layout
+
+\begin_layout Enumerate
+Si un hombre tiene seis camisas distintas y cuatro pares distintos de pantalones
+, ¿de cuántas formas distintas se puede vestir combinando esas prendas?
+\end_layout
+
+\begin_layout Enumerate
+Si se lanzan cuatro dados, ¿cuál es la probabilidad de que los cuatro números
+ que aparecen sean distintos?
+\end_layout
+
+\begin_layout Enumerate
+Si se lanzan seis dados, ¿cuál es la probabilidad de que cada uno de los
+ seis números posibles aparezcan exactamente una vez?
+\end_layout
+
+\begin_layout Enumerate
+Si se colocan al azar 12 bolas en 20 urnas, ¿cuál es la probabilidad de
+ que ninguna urna contenga más de una bola?
+\end_layout
+
+\begin_layout Enumerate
+El ascensor de un edificio empieza a subir con cinco personas y para en
+ siete pisos.
+ Si la probabilidad de que cualquier pasajero salga del ascensor en un piso
+ concreto es igual para todos los pisos y los pasajeros salen independientemente
+ unos de otros, ¿cuál es la probabilidad de que no haya dos pasajeros que
+ salgan en el mismo piso?
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $k$
+\end_inset
+
+ personas se sientan aleatoriamente en una fila de 
+\begin_inset Formula $n$
+\end_inset
+
+ asientos 
+\begin_inset Formula $(n>k)$
+\end_inset
+
+, ¿cuál es la probabilidad de que ocupen 
+\begin_inset Formula $k$
+\end_inset
+
+ asientos contiguos en la fila?
+\end_layout
+
+\begin_layout Enumerate
+Si
+\begin_inset Formula $k$
+\end_inset
+
+ personas se sientan aleatoriamente en 
+\begin_inset Formula $n$
+\end_inset
+
+ sillas dispuestas en círculo 
+\begin_inset Formula $(n>k)$
+\end_inset
+
+, ¿cuál es la probabilidad de que ocupen 
+\begin_inset Formula $k$
+\end_inset
+
+ sillas contiguas del círculo?
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $n$
+\end_inset
+
+ personas se sientan aleatoriamente en una fila de 
+\begin_inset Formula $2n$
+\end_inset
+
+ asientos, ¿cuál es la probabilidad de que no haya dos personas sentadas
+ en asientos contiguos?
+\end_layout
+
+\begin_layout Enumerate
+Una caja contiene 24 bombillas, de las cuales 2 son defectuosas.
+ Sí una persona selecciona 10 bombillas al azar, sin reemplazo, ¿cuál es
+ la probabilidad de seleccionar las 2 bombillas defectuosas?
+\end_layout
+
+\begin_layout Enumerate
+Supóngase que se ha de seleccionar un comité de 12 personas aleatoriamente
+ escogidas entre un grupo de 100.
+ Determínese la probabilidad de que dos personas concretas, A y B, sean
+ seleccionadas.
+\end_layout
+
+\begin_layout Enumerate
+Supóngase que 35 personas se dividen aleatoriamente en dos equipos de manera
+ que uno de los equipos consta de 10 personas y el otro de 25.
+ ¿Cuál es la probabilidad de que dos personas concretas, A y B, estén en
+ el mismo equipo?
+\end_layout
+
+\begin_layout Enumerate
+Una caja contiene 24 bombillas, de las cuales 4 son defectuosas.
+ Si una persona selecciona aleatoriamente 10 bombillas de la caja, y una
+ segunda persona toma entonces las 14 bombillas restantes, ¿cuál es la probabili
+dad de que la misma persona seleccione las 4 bombillas defectuosas?
+\end_layout
+
+\begin_layout Enumerate
+Demuéstrese que, para cualquier entero positivo 
+\begin_inset Formula $n$
+\end_inset
+
+ y 
+\begin_inset Formula $k$
+\end_inset
+
+ (
+\begin_inset Formula $n>k),$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\binom{n}{k}+\binom{n}{k-1}=\binom{n+1}{k}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Demuéstrese que 
+\begin_inset Formula 
+\[
+\binom{n}{0}+\binom{n}{1}+\binom{n}{2}+\cdots+\binom{n}{n}=2^{n}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+El Senado de Estados Unidos está constituido por dos senado\SpecialChar \-
+res de cada uno
+ de los 50 estados,
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Si se selecciona aleatoriamente un comité de 8 senadores, ¿cuál es la probabilid
+ad de que contenga al menos uno de los dos senadores de un estado concreto?
+\end_layout
+
+\begin_layout Enumerate
+¿Cuál es la probabilidad de que un grupo de 50 senadores seleccionados aleatoria
+mente contenga un senador de cada estado? 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Supóngase que
+\begin_inset Formula $A$
+\end_inset
+
+ es un suceso tal que 
+\begin_inset Formula $P(A)=0$
+\end_inset
+
+ y que 
+\begin_inset Formula $B$
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+es cualquier otro suceso.
+ Demuéstrese que 
+\begin_inset Formula $A$
+\end_inset
+
+ y
+\begin_inset Formula $B$
+\end_inset
+
+ son sucesos independientes.
+\end_layout
+
+\begin_layout Enumerate
+Supóngase que una persona lanza tres veces dos dados equilibrados.
+ Determínese la probabilidad de que en cada uno de los tres lanzamientos
+ la suma de los dos números que aparecen sea 7.
+\end_layout
+
+\begin_layout Enumerate
+Supóngase que la probabilidad de que el sistema de control utilizado en
+ una nave espacial no funcione en un vuelo concreto es 0.001.
+ Supóngase además que la nave también tiene instalado un segundo sistema
+ de control idéntico, pero completamente independiente del primero, que
+ toma el control cuando el primero falla.
+ Determínese la probabilidad de que en un vuelo concreto la nave espacial
+ esté bajo control, ya sea del sistema original o del sistema duplicado.
+\end_layout
+
+\begin_layout Enumerate
+Supóngase que una lotería consta de 10 000 boletos y que otra lotería consta
+ de 5000.
+ Si una persona compra 100 boletos de cada lotería, ¿cuál es la probabilidad
+ de que gane al menos un primer premio?
+\end_layout
+
+\begin_layout Enumerate
+Dos estudiantes A y B están inscritos en un curso.
+ Si el estudiante A asiste a las clases el 80% de las veces y el estudiante
+ B el 60%, y si las ausencias de los dos estudiantes son independientes,
+ ¿cuál es la probabilidad de que al menos uno de los dos estudiantes esté
+ en clase un día concreto?
+\end_layout
+
+\begin_layout Enumerate
+Si se lanzan tres dados equilibrados, ¿cuál es la probabilidad de que los
+ tres números que aparecen sean iguales?
+\end_layout
+
+\begin_layout Enumerate
+Considérese un experimento en el cual se lanza una moneda equilibrada hasta
+ que aparece una cara por primera vez.
+ Si este experimento se repite tres veces, ¿cuál es la probabilidad de que
+ se necesite exactamente el mismo número de lanzamientos para cada una de
+ las tres repeticiones?
+\end_layout
+
+\begin_layout Enumerate
+Supóngase que 
+\begin_inset Formula $A$
+\end_inset
+
+, 
+\begin_inset Formula $B$
+\end_inset
+
+ y 
+\begin_inset Formula $C$
+\end_inset
+
+ son tres sucesos independientes tales que 
+\begin_inset Formula $P(A)=\frac{1}{4},\;P(B)=\frac{1}{3},\;$
+\end_inset
+
+y 
+\begin_inset Formula $P(C)=\frac{1}{2}$
+\end_inset
+
+ .
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Determínese la probabilidad de que ninguno de estos tres sucesos ocurra
+\end_layout
+
+\begin_layout Enumerate
+Determínese la probabilidad de que ocurra exactamente uno de estos tres
+ sucesos.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Supóngase que la probabilidad de que una partícula emitida por un material
+ radiactivo penetre en cierto campo es 0.01.
+ Si se emiten diez partículas,
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+¿cuál es la probabilidad de que exactamente una de ellas penetre en el campo?
+\end_layout
+
+\begin_layout Enumerate
+Si se emiten diez partículas, ¿cuál es la probabilidad de que al menos una
+ de ellas penetre en el campo?
+\end_layout
+
+\begin_layout Enumerate
+¿Cuántas partículas tienen que ser emitidas para que la probabilidad de
+ que al menos una partícula penetre en el campo sea al menos 0.8? 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+En la Serie Mundial de Béisbol, dos equipos A y B juegan una serie de partidos
+ uno contra otro y el primer equipo que gana un total de cuatro partidos
+ es el ganador de la Serie Mundial.
+ Si la probabilidad de que el equipo A gane un partido contra el equipo
+ B es 
+\begin_inset Formula $\frac{1}{3}$
+\end_inset
+
+, ¿cuál es la probabilidad de que el equipo A gane la Serie Mundial?
+\end_layout
+
+\begin_layout Enumerate
+15.
+ El Senado de Estados Unidos está constituido por dos senadores de cada
+ uno de los 50 estados, (a) Si se selecciona aleatoriamente un comité de
+ 8 senadores, ¿cuál es la probabilidad de que contenga al menos uno de los
+ dos senadores de un estado concreto? (b) ¿Cuál es la probabilidad de que
+ un grupo de 50 senadores seleccionados aleatoriamente contenga un senador
+ de cada estado?
+\end_layout
+
+\begin_layout Enumerate
+La probabilidad de que una persona nade es de 0.45 y la probabilidad de que
+ una persona cace es de 0.58.
+ Si la probabilidad de que una persona cace sabiendo que también caza es
+ 0.21, encuentre la probabilidad de que:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Cace y nade
+\end_layout
+
+\begin_layout Enumerate
+Cace si también nada
+\end_layout
+
+\begin_layout Enumerate
+Cace y no nade
+\end_layout
+
+\begin_layout Enumerate
+Cace o nade 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+La tabla adjunta muestra las frecuencias relativas para el daltonismo en
+ hombres y mujeres, donde H representa hombres, M mujeres, D daltónico y
+ ND no daltónico 
+\begin_inset Formula 
+\[
+\begin{tabular}{l|ll}
+  &  H  &  M\\
+\hline D  &  0.042  &  0.007\\
+ ND  &  0.485  &  0.466 
+\end{tabular}
+\]
+
+\end_inset
+
+Si se escoge a una persona al azar, use la tabla para determinar las probabilida
+des siguientes:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $P\left(H\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $P\left(H\cap D\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $P\left(D\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $P\left(H\cap ND\right)$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $P\left(E\right)=0.2$
+\end_inset
+
+ y 
+\begin_inset Formula $P\left(F\right)=0.3.$
+\end_inset
+
+ Responda si puede ser cierto en cada una de las preguntas dadas y si es
+ posible plantee un ejemplo.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+¿
+\begin_inset Formula $P\left(E\cup F\right)=0.5?$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+¿
+\begin_inset Formula $P\left(E\cup F\right)=0.7?$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+¿
+\begin_inset Formula $P\left(E\cup F\right)=0.4?$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+¿
+\begin_inset Formula $P\left(E\cap F\right)=0.2?$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+¿
+\begin_inset Formula $P\left(E\cap F\right)=0.3?$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+¿
+\begin_inset Formula $P\left(E\cap F\right)=0.1?$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+¿
+\begin_inset Formula $P\left(E\cap F\right)=0.4?$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Si cuatro hombres y cuatro mujeres se colocan en fila, ¿Cuál es la probabilidad
+ de que un arreglo aleatorio de los ocho individuos tenga
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+hombres y mujeres alternados?
+\end_layout
+
+\begin_layout Enumerate
+A los hombres todos juntos? 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+De un conteo de tarjetas numeradas dei 1 al 10000.
+ ¿Cuál es la probabilidad de que el número que te toque sea divisible exactament
+e por 5?
+\end_layout
+
+\begin_layout Enumerate
+Un especialista en alergias alega que el 50% de sus pacientes sufre de alergia
+ ¿Cuál es la probabilidad de que
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+de que 3 de sus siguientes cuatro pacientes sufran de alergia?
+\end_layout
+
+\begin_layout Enumerate
+Ninguno de los cuatro pacientes sufran de alergias? 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+De una caja que contiene 6 pelotas negras y 4 verdes, se sacan 3 en sucesión,
+ reemplazándose cada una en la caja antes de extraer la siguiente.
+ ¿Cuál es la probabilidad de que
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+las 3 sen del mismo color
+\end_layout
+
+\begin_layout Enumerate
+sea al menos una de cada color 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Un embarque de 12 televisores contiene 3 defectuosos.
+ ¿En cuantas formas puede un hotel comprar 5 y recibir al menos 2 de los
+ defectuosos?
+\end_layout
+
+\begin_layout Enumerate
+En una cierta ciudad, 40% de los votantes son Liberales y el 60% son conservador
+es; 70% de los republicanos y el 80% de los demócratas están a favor de
+ una de una consulta popular.
+ al seleccionar al azar un votante de la ciudad, ¿Cuál es la probabilidad
+ de qué está a favor 
+\begin_inset space \space{}
+\end_inset
+
+de la consulta ?
+\end_layout
+
+\begin_layout Enumerate
+¿Cuántas manos de bridge que contengan 4 espadas, 6 diamantes, 1 de bastos
+ y 2 de corazones son posibles?
+\end_layout
+
+\begin_layout Enumerate
+Una empresa industrial grande utiliza 3 hoteles locales para proporcionar
+ alojamiento a sus clientes durante la noche.
+ De pasadas experiencias se sabe que al 20% de ellos se les asigna habitación
+ en 
+\begin_inset space \space{}
+\end_inset
+
+el hotel de Santa Marta, el 50% en Cartagena y al 30% en Tolú.
+ Si existe una falla en el servicio de plomería en el 5% de la habitaciones
+ en Santa Marta , en el 4% en Cartagena y del 8% en Tolú.
+ ¿Cuál es la probabilidad de que
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+a un cliente se le asigne un cuarto con problemas en plomería ?
+\end_layout
+
+\begin_layout Enumerate
+a una persona con un problema en plomería se asigne el hotel en Cartagena?
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Un espacio muestral de 200 adultos se clasifica de acuerdo con su sexo y
+ nivel de educación 
+\begin_inset Formula 
+\[
+\begin{tabular}{|l|l|l|}
+\hline Educación  &  Hombre  &  Mujer\\
+\hline Primaria  &  38  &  45\\
+\hline Secundaria  &  28  &  50\\
+\hline Bachillerato  &  22  &  17
+\\\hline \end{tabular}
+\]
+
+\end_inset
+
+Si se selecciona aleatoriamente a una persona de ese grupo, encuentre la
+ probabilidad de que
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+no tenga grado de profesional dado de que sea mujer
+\end_layout
+
+\begin_layout Enumerate
+sea hombre dado que tiene educación superior 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Se lanzan un par de dados, si se sabe que uno de ellos resulta en un 4,
+ ¿cuál es la probabilidad de que
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+el otro caiga en 6
+\end_layout
+
+\begin_layout Enumerate
+el total de ambos sea 9 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Supongamos que se selecciona al azar un individuo de la pobla\SpecialChar \-
+ción de todos
+ los adultos hombres que en los Estados Unidos.
+ Sea a el evento en que el individuo seleccionado tenga una estatura de
+ más de 6 pies, y B el evento de que el individuo seleccionado sea un jugador
+ profesional de baloncesto.
+ ¿Cuál considera que sea mayor 
+\begin_inset Formula $P\left(B|A\right)$
+\end_inset
+
+ o 
+\begin_inset Formula $P\left(A|B\right)?.$
+\end_inset
+
+ ¿Por qué?
+\end_layout
+
+\begin_layout Enumerate
+Un circuito flexible se selecciona al azar de una corrida de producción
+ de 1000 circuitos.
+ Los defectos de manufactura se clasifican en tres diferentes tipos, denominados
+ A.
+ B y C.
+ Los defectos de tipo A ocurren el 2 por ciento de las veces, los del tipo
+ B, el 1 por ciento, y los de tipo C, el 1.5 por ciento.
+ Además, se sabe que el 0.5 por ciento tienen los defectos de tipo A y B,
+ el 0.6 por ciento, los defectos B y C, y el 0.4 por ciento presenta los defectos
+ B y C, en tanto que el 0.2 por ciento tiene los tres defectos.
+ ¿Cuál es la probabilidad de que el circuito flexible seleccionado tenga
+ al menos uno de los tres tipos de defectos?
+\end_layout
+
+\begin_layout Enumerate
+En un laboratorio de factores humanos, se miden tiempos de reacción, por
+ ejemplo, el tiempo que transcurre desde el instante en que se despliega
+ un número de posición en un tablero digital hasta que el sujeto presiona
+ un botón localizado en la posición indicada.
+ Participan dos sujetos, midiéndose el tiempo en segundos para cada individuo
+ 
+\begin_inset Formula $\left(t_{1},t_{2}\right).$
+\end_inset
+
+ ¿Cuál es el espacio muestral para este experimento? Presente los siguientes
+ eventos como subconjuntos y márquelos sobre un diagrama: 
+\begin_inset Formula 
+\[
+\left(\frac{t_{1}+t_{2}}{2}\right)\leq0.15,\;\max\left(t_{1},t_{2}\right)\leq0.15,\;\left|t_{1}-t_{2}\right|<0.6.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Durante un periodo de 24 horas se entrará a un procesamiento computarizado.
+ En un tiempo X y se saldrá en tiempo Y 
+\begin_inset Formula $\geq$
+\end_inset
+
+ X.
+ Considérense X y Y medido en horas en la linea del tiempo con el inicio
+ del periodo de 24 horas como el origen.
+ El experimento consiste en observar X y Y, (X, Y).
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Describa el espacio muestral 
+\begin_inset Formula $S$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Dibuje los siguientes eventos en el plano X, Y.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+El tiempo de utilización es una hora o menos
+\end_layout
+
+\begin_layout Enumerate
+El acceso es antes de 
+\begin_inset Formula $t_{1}$
+\end_inset
+
+ y la salida después de 
+\begin_inset Formula $t_{2}$
+\end_inset
+
+, donde 
+\begin_inset Formula $0\leq t_{1}\leq t_{2}\leq24$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+El tiempo de utilización es menor que el 20 por ciento del periodo.
+ 
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+Se prueban diodos de un lote uno a la vez y se marcan ya sea como defectuosos
+ o como no defectuosos.
+ Esto continúa hasta encontrar dos artículos defectuosos o cuando se han
+ probado cinco artículos.
+ Describa el espacio muestral para este experimento.
+\end_layout
+
+\begin_layout Enumerate
+Un conjunto tiene cuatro elementos 
+\begin_inset Formula $A=\{a,b,c,d\}$
+\end_inset
+
+.
+ Describa el conjunto partes de 
+\begin_inset Formula $A$
+\end_inset
+
+ .
+\end_layout
+
+\begin_layout Enumerate
+Describa el espacio muestral para cada uno de los siguientes experimentos:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Un lote de 120 tapas de baterías para celdas de marcapasos contiene varias
+ defectuosas debido a un problema con el material de barrera que se aplica
+ en el sistema de alimentación.
+ Se seleccionan tres tapas al azar (sin reemplazo) y se inspeccionan con
+ cuidado siguiendo una reducción.
+\end_layout
+
+\begin_layout Enumerate
+Una paleta de 10 piezas fundidas contiene una unidad defectuosa y nueve
+ en buen estado.
+ Se seleccionan cuatro piezas al azar (sin reemplazo) y se inspeccionan.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+El gerente de producción de cierta compañía está interesado en probar un
+ producto terminado, que se encuentra disponible en lotes de tamaño 50.
+ A él le gustaría volver a elaborar un lote si tiene la completa seguridad
+ de que el 10 por ciento de los artículos son defectuosos.
+ Decide seleccionar una muestra al azar de 10 artículos sin reemplazo y
+ volver a producir el lote si éste contiene uno o más artículos defectuosos.
+ ¿Este procedimiento parece razonable?
+\end_layout
+
+\begin_layout Enumerate
+Una firma de transporte tienen un contrato para enviar una carga de mercancías
+ de la ciudad W a la ciudad Z.
+ No hay rutas directas que enlacen W con Z, pero hay seis carreteras de
+ W a X y cinco de X a Z.
+ ¿Cuántas rutas en total deben considerarse?
+\end_layout
+
+\begin_layout Enumerate
+Un estado tienen un millón de vehículos registrados y está considerando
+ emplear placas de licencia con seis símbolos en los que los primeros tres
+ sean letras y los últimos tres, dígitos.
+ ¿Es éste esquema factible?
+\end_layout
+
+\begin_layout Enumerate
+El gerente de una pequeña planta desea determinar el número de maneras en
+ que puede asignar trabajadores al primer turno.
+ Cuenta con 15 hombres que pueden servir como operadores del equipo de producció
+n, 8 que pueden desempeñarse como personal de mantenimiento y 4 que pueden
+ ser supervisores.
+ Si el turno requiere 6 operadores, 2 trabajadores de mantenimiento, y 1
+ supervisor, ¿de cuántas maneras puede integrarse el primer turno?
+\end_layout
+
+\begin_layout Enumerate
+Un lote de producción tiene 100 unidades de las cuales 20 se sabe que están
+ defectuosas.
+ Una muestra aleatoria de 4 unidades se selecciona sin reemplazo.
+ ¿Cuál es la probabilidad de que la muestra no contenga más de 2 unidades
+ defectuosas?
+\end_layout
+
+\begin_layout Enumerate
+En la inspección de lotes de mercancías que están por recibirse, se emplea
+ la siguiente regla de inspección en lotes que contienen 300 unidades; se
+ selecciona una muestra al azar de 10 artículos.
+ Si no hay más que un artículo defectuoso en la muestra, se acepta el lote.
+ De otro modo se regresa al vendedor.
+ Si la fracción defectuosa en el lote original es 
+\begin_inset Formula $p^{\prime}$
+\end_inset
+
+, determinar la probabilidad de aceptar el lote como una función de 
+\begin_inset Formula $p^{\prime}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+En una planta de plásticos, 12 tubos vacían diferentes químicos en un tanque
+ de mezcla.
+ Cada tubo tienen una válvula de cinco posiciones que mide el flujo dentro
+ del tanque.
+ Un día, mientras se experimenta con diferentes mezclas, se obtiene una
+ solución que emite un gas venenoso, no habiéndose registrado los valores
+ en las válvulas.
+ ¿Cuál es la probabilidad de obtener esta misma solución cuando se experimenta
+ de nuevo de manera aleatoria?
+\end_layout
+
+\begin_layout Enumerate
+Ocho hombres y ocho mujeres con las mismas habilidades solicitan dos empleos.
+ Debido a que los dos nuevos empleados deben trabajar estrechamente, sus
+ personalidades deben ser compatibles.
+ Para lograr esto, el administrador de personal ha aplicado una prueba y
+ debe comparar las calificaciones para cada posibilidad.
+ ¿Cuántas comparaciones debe efectuar el administrador?
+\end_layout
+
+\begin_layout Enumerate
+En forma casual, un químico combinó dos sustancias de laboratorios que produjero
+n un producto conveniente.
+ Desafortunadamente, su asistente no registró los nombres de los ingredientes.
+ Hay cuarenta sustancias disponibles en el laboratorio.
+ Si las dos en cuestión deben encontrarse mediante experimentos sucesivos
+ de ensayo y error, ¿cuál es el número máximo de pruebas que pueden realizarse?
+\end_layout
+
+\begin_layout Enumerate
+Un prisionero político será enviado a Siberia o a los Urales.
+ Las probabilidades de que lo envíen a estos dos lugares son 0.6 y 0.4, respectiva
+mente.
+ Se sabe además que si un residente de Siberia se elige al azar hay una
+ probabilidad de 0.5 de que lleve un abrigo de piel, en tanto que la probabilidad
+ para lo mismos es de 0.7 en el caso de un residente de los Urales.
+ Al llegar al exilio, la primera persona que ve el prisionero no lleva un
+ abrigo de piel.
+ ¿Cuál es la probabilidad de que esté en Siberia?
+\end_layout
+
+\begin_layout Enumerate
+Se diseña un dispositivo de frenado para evitar que un automóvil patine
+ en el que incluye un.sistema electrónico e hidrá\SpecialChar \-
+ulico.
+ El sistema completo puede descomponerse en tres subsistemas en serie que
+ operan de manera independiente: un sistema electrónico, un sistema hidráulico
+ y un accionador mecánico.
+ En un frenado particular, las confiabilidades de estas unidades son aproximadam
+ente 0.995, 0.993 y 0.994, respectivamente.
+ Estime la confiabilidad del sistema.
+\end_layout
+
+\begin_layout Enumerate
+Dos bolas se extraen de una urna que contiene 
+\begin_inset Formula $m$
+\end_inset
+
+ bolas numeradas del 1 a 
+\begin_inset Formula $m$
+\end_inset
+
+.
+ Se conserva la primera bola si tiene el número 1, y se regresa en caso
+ contrario.
+ ¿Cuál es la probabilidad de que la segunda bola extraída tenga el número
+ 2?
+\end_layout
+
+\begin_layout Enumerate
+Se eligen dos dígitos al azar de los dígitos del 1 al 9 y la selección es
+ sin reemplazo (el mismo dígito no puede escogerse en ambas selecciones).
+ Si la suma de los dígitos es par, encuentre la probabilidad de que ambos
+ dígitos sean impares.
+\end_layout
+
+\begin_layout Enumerate
+En cierta universidad 20 por ciento de los hombre y 1 por ciento de las
+ mujeres miden más de dos metros de altura.
+ Asimismo, 40 por ciento de los estudiantes son mujeres.
+ Si se selecciona un estudiante al azar y se observa que mide más de dos
+ metros de altura, ¿Cuál es la probabilidad de que sea mujer?
+\end_layout
+
+\begin_layout Enumerate
+En un centro de maquinaria hay cuatro máquinas automáticas que producen
+ tornillos.
+ Un análisis de los registros de inspección anteriores produce los siguientes
+ datos: 
+\begin_inset Formula 
+\[
+\begin{tabular}{|l|l|l|}
+\hline \begin{tabular}{l}
+\\
+ Máquina 
+\end{tabular}  &  \begin{tabular}{l}
+Porcentaje de\\
+ \multicolumn{1}{c}{producción}
+\end{tabular}  &  \begin{tabular}{c}
+Porcentaje de\\
+ \multicolumn{1}{l}{defectos producidos}
+\end{tabular} \\
+\hline 1  &  15  &  4\\
+\hline 2  &  30  &  3\\
+\hline 3  &  20  &  5\\
+\hline 4  &  35  &  2
+\\\hline \end{tabular}
+\]
+
+\end_inset
+
+Las máquinas 2 y 4 son más nuevas y se les ha asignado más producción que
+ a las máquinas 1 y 3.
+ Suponga que la combinación de inventarios refleja los porcentajes de producción
+ indicados.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Si se elige un tornillo al azar del inventario, ¿cuál es la probabilidad
+ de que esté defectuoso?
+\end_layout
+
+\begin_layout Enumerate
+Si se elige un tornillo y se encuentra que está defectuoso, ¿cuál es la
+ probabilidad de que se haya producido en la máquina 3? 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Supóngase que 
+\begin_inset Formula $A\subset B$
+\end_inset
+
+.
+ Demuéstrese que 
+\begin_inset Formula $B^{\prime}\subset A^{\prime}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Para tres sucesos cualesquiera A, B y C, demuéstrese que 
+\begin_inset Formula 
+\[
+A(B\cup C)=(A\cap B)\cup(A\cap C).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Para dos sucesos cualesquiera A y B, demuéstrese que 
+\begin_inset Formula 
+\[
+(A\cup B)^{\prime}=A^{\prime}\cap B^{\prime}\;\text{y}\;(A\cap B)^{\prime}=A^{\prime}\cup B^{\prime}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+4.
+ Para cualquier conjunto de sucesos 
+\begin_inset Formula $A_{i}(i\in I)$
+\end_inset
+
+, demuéstrese que
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\left(\bigcup_{i\in I}A_{i}\right)^{\prime}=\bigcap_{i\in I}A_{i}^{\prime}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(\bigcap_{i\in I}A_{i}\right)^{\prime}=\bigcup_{i\in I}A_{i}^{\prime}$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+5.
+ Supóngase que se selecciona una carta de una baraja de veinte cartas que
+ contiene diez cartas rojas numeradas del 1 al 10 y diez cartas azules numeradas
+ del 1 al 10.
+ Sea A el suceso de seleccionar una carta con un número par, sea B el suceso
+ de seleccionar una carta azul y sea C el suceso de seleccionar una carta
+ con un número menor que 5.
+ Descríbanse el espacio muestral 
+\begin_inset Formula $S$
+\end_inset
+
+ y cada uno de los siguientes sucesos en palabras y en subconjuntos de 
+\begin_inset Formula $S$
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $A\cap B\cap C$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $B\cap C^{\prime.}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $A\cup B\cup C.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $A\cap(B\cup C).$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $A^{\prime}\cap B^{\prime}\cap C^{\prime}.$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Un estudiante seleccionado de una clase puede ser chico o chica.
+ Si la probabilidad de que un chico sea seleccionado es 0.3, ¿cuál es la
+ probabilidad de que sea seleccionada una chica?
+\end_layout
+
+\begin_layout Enumerate
+Se selecciona una bola de una urna que contiene bolas rojas, blancas, azules,
+ amarillas y verdes.
+ Si la probabilidad de seleccionar una bola roja es 
+\begin_inset Formula $\frac{1}{5}$
+\end_inset
+
+ y la de seleccionar una blanca es 
+\begin_inset Formula $\frac{2}{5}$
+\end_inset
+
+ ¿cuál es la probabilidad de seleccionar una bola azul, amarilla o verde?
+\end_layout
+
+\begin_layout Enumerate
+Si la probabilidad de que un estudiante A suspenda un cierto examen de estadísti
+ca es 0.5, la probabilidad de que un estudiante B suspenda el examen es 0.2
+ y la probabilidad de que ambos estudiantes A y B suspendan el examen es
+ 0.1,
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+¿cuál es la probabilidad de que al menos uno de estos dos estudiantes suspenda
+ el examen?
+\end_layout
+
+\begin_layout Enumerate
+¿cuál es la probabilidad de que ni el estudiante A ni el B suspendan el
+ examen?
+\end_layout
+
+\begin_layout Enumerate
+¿cuál es la probabilidad de que exactamente uno de los dos estudiantes suspenda
+ el examen? 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Considérense dos sucesos 
+\begin_inset Formula $A$
+\end_inset
+
+y 
+\begin_inset Formula $B$
+\end_inset
+
+ tales que 
+\begin_inset Formula $P(A)=\frac{1}{3}$
+\end_inset
+
+ y 
+\begin_inset Formula $P(B)=\frac{1}{2}$
+\end_inset
+
+.
+ Determínese el valor de 
+\begin_inset Formula $P(B\cap A^{\prime})$
+\end_inset
+
+ para cada una de las siguientes condiciones:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $A$
+\end_inset
+
+ y 
+\begin_inset Formula $B$
+\end_inset
+
+ son disjuntos
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $A\subset B$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $P(A\cap B)=\frac{1}{8}$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Si el 50% de las familias de cierta ciudad están suscritas al periódico
+ matinal, el 65% de las familias al periódico vespertino y el 85% al menos
+ a uno de los dos periódicos, ¿
+\begin_inset space \space{}
+\end_inset
+
+cuál es la proporción de familias que están suscritas a los dos periódicos?
+\end_layout
+
+\begin_layout Enumerate
+Considérense dos sucesos 
+\begin_inset Formula $A$
+\end_inset
+
+ y 
+\begin_inset Formula $B$
+\end_inset
+
+ con 
+\begin_inset Formula $P(A)=0.4$
+\end_inset
+
+ y 
+\begin_inset Formula $P(B)=$
+\end_inset
+
+ 
+\begin_inset Formula $0.7$
+\end_inset
+
+.
+ Determínense los posibles valores máximo y mínimo de 
+\begin_inset Formula $P(A\cap B)$
+\end_inset
+
+ y las condiciones en las cuales se consigue cada uno de estos valores.
+\end_layout
+
+\begin_layout Enumerate
+Demuéstrese que para dos sucesos 
+\begin_inset Formula $A$
+\end_inset
+
+ y 
+\begin_inset Formula $B$
+\end_inset
+
+ cualesquiera, la pro\SpecialChar \-
+babilidad de que exactamente uno de los dos sucesos
+ ocurra está dada por la expresión 
+\begin_inset Formula 
+\[
+P(A)+P(B)-2P(A\cap B).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Se selecciona un punto 
+\begin_inset Formula $(x,y)$
+\end_inset
+
+ del cuadrado 
+\begin_inset Formula $S$
+\end_inset
+
+ que contiene todos los puntos 
+\begin_inset Formula $(x,y)$
+\end_inset
+
+ tales que 
+\begin_inset Formula $0\leq x\leq1$
+\end_inset
+
+ y 
+\begin_inset Formula $0\leq y\leq1.$
+\end_inset
+
+ Supóngase que la probabilidad de que el punto seleccionado pertenezca a
+ cualquier subconjunto específico de 
+\begin_inset Formula $S$
+\end_inset
+
+ es igual al área de ese subconjunto.
+ Determínese la probabilidad de cada uno de los siguientes subconjuntos:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+el subconjunto de puntos tales que 
+\begin_inset Formula $(x-\frac{1}{2})^{2}+(y-\frac{1}{2})^{2}>\frac{1}{4}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+el subconjunto de puntos tales que 
+\begin_inset Formula $\frac{1}{2}<x+y<\frac{3}{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+el subconjunto de puntos tales que 
+\begin_inset Formula $y<1-x^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+el subconjunto de puntos tales que 
+\begin_inset Formula $x=y.$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $A_{1},A_{2},A_{3},\cdots$
+\end_inset
+
+ una serie numerable de eventos y sea 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $B_{1},B_{2},B_{3},\cdots$
+\end_inset
+
+otra serie numerable de eventos tal que 
+\begin_inset Formula 
+\[
+B_{1}=A_{1},\;B_{2}=A_{1}^{\prime}\cap A_{2},\;B_{3}=A_{1}^{\prime}\cap A_{2}^{\prime}\cap A_{3}...
+\]
+
+\end_inset
+
+Demuéstrese que
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $P(\bigcup_{i=1}^{\infty}A_{i})=\sum_{i=1}^{\infty}P\left(B_{i}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $P(\bigcup_{i=1}^{n}A_{i})=\sum_{i=1}^{n}P\left(B_{i}\right)\;$
+\end_inset
+
+para 
+\begin_inset Formula $n=1,2,3,...$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $A_{1},A_{2},A_{3},\cdots A_{n}$
+\end_inset
+
+ una serie cualquiera de eventos, demostrar que 
+\begin_inset Formula 
+\[
+P\left(\bigcup_{i=1}^{n}A_{i}\right)\leq\sum_{i=1}^{n}P\left(A_{i}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Supóngase que una urna contiene una carta azul y cuatro cartas rojas.
+ A, B, C y D.
+ Supóngase también que dos de estas cinco cartas se extraen al azar sin
+ reemplazo
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Si se sabe que se ha extraído la carta A, ¿cuál es la probabilidad de que
+ ambas cartas sean rojas?
+\end_layout
+
+\begin_layout Enumerate
+Si se sabe que se ha extraído una carta roja, ¿cuál es la probabilidad de
+ que ambas cartas sean rojas? 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+La probabilidad de que cualquier niño de una familia determinada tenga ojos
+ azules es 1/4, y esta característica es heredada por cada niño de la familia
+ independientemente de los demás.
+ Si hay cinco niños en la familia y se sabe que al menos uno de estos niños
+ tiene ojos azules,
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+¿cuál es la probabilidad de que al menos tres de los niños tengan ojos azules?
+\end_layout
+
+\begin_layout Enumerate
+Considérese la familia de cinco nios
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Si se sabe que el niño más pequeño de la familia tiene los ojos azules,
+ ¿cuál es la probabilidad de que al menos tres de los niños tengan ojos
+ azules?
+\end_layout
+
+\begin_layout Enumerate
+Explíquese por qué la respuesta es diferente de la respuesta de la parte
+ (a) 
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+Considérese la siguiente versión del juego de dados: El jugador lanza dos
+ dados.
+ SÍ la suma en el primer lanzamiento es 7 u 11, el jugador gana el juego.
+ Si la suma en el primer lanzamiento es 2, 3 ó 12, el jugador pierde.
+ Sin embargo, si la suma en el primer lanzamiento es 4, 5, 6, 8, 9 ó 10,
+ entonces se lanzan los dos dados una y otra vez hasta que la suma sea 7,
+ lío el valor original.
+ Si el valor original se obtiene por segunda vez antes de obtener 7 u 11,
+ entonces el jugador gana.
+ Si se obtiene un total de 7 o de 11 antes de obtener el valor original
+ por segunda vez, entonces el jugador pierde.
+ Determínese la probabilidad de que el jugador gane este juego.
+\end_layout
+
+\begin_layout Enumerate
+En una ciudad determinada, el 30% de las personas son conservadores, el
+ 50% son liberales y el 20% son independientes.
+ Los registros muestran que en unas elecciones concretas, vota\SpecialChar \-
+ron el 65%
+ de los conservadores, el 82% de los liberales y el 50% de los independientes.
+ Si se selecciona al azar una persona de la ciudad y se sabe que no votó
+ en las elecciones pasadas, ¿
+\begin_inset space \space{}
+\end_inset
+
+cuál es la probabilidad de que sea un liberal?
+\end_layout
+
+\begin_layout Enumerate
+Supóngase que cuando una máquina está correctamente ajustada, el 50% de
+ los artículos que produce son de alta calidad y el otro 50% son de calidad
+ media.
+ Supóngase, sin embargo, que la máquina está mal ajustada durante el 10%
+ del tiempo y que, en estas condiciones, el 25% de los artículos producidos
+ por ella son de alta calidad y el 75% de los artículos son de calidad media.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Supóngase que cinco artículos producidos por la máquina en un tiempo determinado
+ son seleccionados al azar e inspeccionados.
+ Si cuatro de estos artículos son de alta calidad y uno es de calidad media,
+ ¿cuál es la probabilidad de que la máquina estuviera correctamente ajustada
+ durante ese tiempo?
+\end_layout
+
+\begin_layout Enumerate
+Supóngase que se selecciona un artículo adicional, que fue producido por
+ la máquina al mismo tiempo que los otros cinco, y resulta ser de calidad
+ media.
+ ¿Cuál es la nueva probabilidad final de que la máquina estuviera correctamente
+ ajustada? 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Supóngase que una caja contiene cinco monedas y que la probabilidad de obtener
+ cara en un lanzamiento es distinta para cada moneda.
+ Sea 
+\begin_inset Formula $p_{i}$
+\end_inset
+
+ la probabilidad de obtener cara al lanzar la 
+\begin_inset Formula $i-\acute{e}sima$
+\end_inset
+
+ moneda 
+\begin_inset Formula $(i=1,...,5)$
+\end_inset
+
+ y Supóngase que 
+\begin_inset Formula $p_{1}=0$
+\end_inset
+
+, 
+\begin_inset Formula $p_{1}=\frac{1}{4}$
+\end_inset
+
+, 
+\begin_inset Formula $p_{3}=1/2$
+\end_inset
+
+, 
+\begin_inset Formula $p_{4}=3/4$
+\end_inset
+
+ y 
+\begin_inset Formula $p_{5}=1$
+\end_inset
+
+.
+ Si se selecciona una moneda de la caja al azar y que al lanzarla una vez
+ se obtiene una cara.
+ ¿Cuál es la probabilidad final de que se haya seleccionado la 
+\begin_inset Formula $i-\acute{e}sima$
+\end_inset
+
+ moneda 
+\begin_inset Formula $(i=1,...,5)$
+\end_inset
+
+? 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Flex Script
+status collapsed
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

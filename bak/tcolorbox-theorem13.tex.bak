@@ -1,0 +1,69 @@
+\documentclass{article}
+\usepackage[a5paper]{geometry}
+\usepackage{mwe}%load graphix,lipsum,...
+\usepackage{xcolor}
+\usepackage{caption}
+\usepackage{booktabs}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins}
+\tcbuselibrary{breakable}
+
+\newcounter{example}[section]
+\renewcommand\theexample{\thesection.\arabic{example}}
+
+\tcbset{examplebox/.style={%
+ title={Example~\refstepcounter{example}\theexample},
+ breakable,
+ leftrule=0pt,
+ arc=0pt,
+ colback=white,
+ colframe=cyan,
+ enhanced,
+ colbacktitle=white,
+ coltitle=cyan,
+ titlerule=0pt,
+ enlarge left by=-4mm,
+ width=\linewidth+4mm,
+ enlarge top by=2pt,
+ overlay unbroken={\draw[cyan,line width=2pt] (frame.north west)++(0,0.25mm) --++(4cm,0pt);
+                      \draw[white,line width=10mm] (frame.south west) --++(8cm,0pt) node (P) {};
+                      \fill[cyan] (P) rectangle ++(6pt,6pt) ;},%
+ overlay first={\draw[cyan,line width=2pt] (frame.north west)++(0,1pt) --++(4cm,0pt);},%
+ overlay last={\draw[white,line width=10mm] (frame.south west) --++(8cm,0pt) node (P) {};
+                       \fill[cyan] (P) rectangle ++(6pt,6pt) ;},%
+ }%
+}
+
+\newenvironment{example}{%
+  \tcolorbox[examplebox]}%
+ {\endtcolorbox}
+
+\begin{document}
+
+\section{Test Section}
+
+\begin{example}
+\lipsum[4]
+\begin{center}
+\captionof{table}{This is a table inside a \texttt{tcolorbox} environment}
+\begin{tabular}{ccc}
+\toprule
+column1a & column2a & column3a \\
+column1a & column2a & column3a \\
+column1a & column2a & column3a \\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{example}
+\lipsum*[2-3]
+\begin{example}
+\lipsum*[1-4]
+\begin{center}
+\includegraphics[width=6cm]{example-image-a}
+\captionof{figure}{This is a figure inside a \texttt{tcolorbox} environment}
+\end{center}
+\lipsum*[5-6]
+\end{example}
+\lipsum*[2]
+
+\end{document}

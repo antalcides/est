@@ -1,0 +1,33 @@
+\documentclass{article}
+\usepackage[many]{tcolorbox}
+\usepackage{lipsum}
+
+\newtcolorbox{mybox}[2][]{
+  enhanced,
+  arc=0pt,
+  outer arc=0pt,
+  minipage boxed title*=-1.95em,
+  title=#2,
+  fonttitle=\sffamily,
+  watermark opacity=0.25,
+  watermark stretch=1.00,
+  %watermark graphics=lichtspiel.jpg,
+  attach boxed title to bottom center={yshift=2pt},
+  boxed title style={
+    enhanced,
+    watermark opacity=0.75,
+    watermark stretch=1.00,
+    %watermark graphics=lichtspiel.jpg,
+    arc=0pt,
+    outer arc=0pt,
+  },
+  #1
+}
+
+\begin{document}
+
+\begin{mybox}{This is the title}
+\lipsum[4]
+\end{mybox}
+
+\end{document}

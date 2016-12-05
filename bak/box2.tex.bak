@@ -1,0 +1,48 @@
+% arara: pdflatex: {shell: yes}
+\documentclass{book}    
+\usepackage[left=1.00in, right=1.00in, top=1.00in, bottom=1.00in]{geometry}    
+
+\usepackage{amsmath}    
+\usepackage{tcolorbox}    
+\tcbuselibrary{minted,skins,breakable}    
+
+\usepackage{hyperref}       
+\hypersetup{ %    
+    pdfborder = {0 0 0},    
+    colorlinks=true,    
+}    
+
+\newtcblisting{pythoncode}[1][]{    
+  listing engine=minted,    
+  breakable,   
+  colback=blue,    
+  colframe=black!70,    
+  listing only,    
+  minted style=colorful,    
+  minted language=python,    
+  minted options={linenos=true,numbersep=3mm,texcl=true},    
+  left=5mm,enhanced,    
+  overlay={\begin{tcbclipinterior}\fill[black!25] (frame.south west)    
+            rectangle ([xshift=5mm]frame.north west);\end{tcbclipinterior}},
+            #1,
+}    
+
+\begin{document}    
+
+\section{Python example}    
+\begin{pythoncode}[colback=red!5!white,colframe=red!75!black,title=My nice heading]    
+# indent your Python code to put into an email    
+import glob    
+# glob supports Unix style pathname extensions    
+python_files = glob.glob('*.py')    
+for file_name in sorted(python_files):    
+    print '    ------' + file_name    
+
+    with open(file_name) as f:    
+        for line in f:    
+            print '    ' + line.rstrip()    
+
+    print    
+\end{pythoncode}    
+
+\end{document}    

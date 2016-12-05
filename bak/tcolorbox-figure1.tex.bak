@@ -1,0 +1,32 @@
+\documentclass{article}
+\usepackage[many]{tcolorbox}
+\usepackage{floatrow}
+\usepackage{caption}
+\usepackage{graphicx}
+
+\definecolor{captionbgcolor}{RGB}{103,143,150}
+
+\DeclareCaptionFormat{tcbcaption}{%
+  \begin{tcolorbox}[
+    colback=captionbgcolor,
+    arc=0pt,
+    outer arc=0pt,
+    boxrule=0pt,
+    colupper=white,
+    fontupper=\large\sffamily,
+    boxsep=0pt
+  ]
+  #1#2#3
+  \end{tcolorbox}%
+}
+\captionsetup{format=tcbcaption}
+
+\begin{document}
+
+\begin{figure}
+\ffigbox[\FBwidth]
+  {\includegraphics[width=.8\linewidth]{example-image}}
+  {\caption{how many factors are there in a set of 12?}}
+\end{figure}
+
+\end{document}

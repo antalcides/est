@@ -1,0 +1,78 @@
+\documentclass[10pt,a4paper,oneside,spanish]{article}
+\usepackage[spanish,es-nodecimaldot]{babel}
+\setlength{\parskip}{\medskipamount}
+\setlength{\parindent}{0pt}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
+\usepackage{units}
+\usepackage{endnotes}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+
+\usepackage{graphicx}
+\usepackage{color,xcolor}
+
+\usepackage[total={15cm,21cm},left=2cm,top=2cm]{geometry}
+
+\usepackage{tcolorbox}
+\tcbuselibrary{breakable,skins}
+
+\newcounter{exe}
+
+\newcommand{\titulo}{
+   \node[fill=blue!20,
+      rounded corners,
+      draw=black,
+      text=black,
+      line width=1pt,
+      inner sep=4pt,
+      anchor=west,
+      xshift=12pt]
+   at (frame.north west){\bfseries Ejercicio \stepcounter{exe}\theexe.};
+}
+
+\newtcolorbox{ejercicio}{
+   enhanced,
+   overlay unbroken and first={\titulo},
+   colframe=orange,
+   boxrule=1pt,
+   arc=3mm,
+   breakable,
+   top=15pt,
+   before=\vskip18pt,
+}
+
+
+\begin{document}
+\begin{ejercicio}
+A sample
+\end{ejercicio}
+\noindent
+%%%%%%%%%%%%%%%
+%%% INPUT:
+\begin{minipage}[t]{8ex}{\color{red}\bf
+\begin{verbatim}
+(%i1)
+\end{verbatim}
+}%  ------------ new line! ---------------------------------------------
+\end{minipage}
+\begin{minipage}[t]{\textwidth}{\color{blue}
+\begin{verbatim}
+divide(x^5-3*x^4+2*x^3-3*x^2+4*x+1,5*x^4-12*x^3+6*x^2-6*x+4,x);
+\end{verbatim}
+}%  ------------ new line! ---------------------------------------------
+\end{minipage}
+%%% OUTPUT:
+\definecolor{labelcolor}{RGB}{100,0,0}
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}\tt{($\!$\%o1)} }
+[\frac{5\,x-3}{25},-\frac{16\,{x}^{3}+27\,{x}^{2}-62\,x-37}{25}]
+\end{math}
+%%%%%%%%%%%%%%%
+\end{document}
